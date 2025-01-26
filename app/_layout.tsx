@@ -7,9 +7,40 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import TabTwoScreen from './(tabs)/explore';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+
+const Drawer = createDrawerNavigator();
+
+function TabsScreen() {
+  return (
+    <Stack>
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="+not-found" />
+    </Stack>
+  );
+}
+
+function TabsSecondScreen() {
+  return (
+    <Stack>
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="+not-found" />
+    </Stack>
+  );
+}
+
+function MyDrawer() {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen name="Home" component={TabsScreen} />
+      <Drawer.Screen name="Profile" component={TabsSecondScreen} />
+    </Drawer.Navigator>
+  );
+}
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -29,10 +60,7 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
+      <MyDrawer/>
       <StatusBar style="auto" />
     </ThemeProvider>
   );
