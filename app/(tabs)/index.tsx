@@ -1,4 +1,5 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { useRef } from 'react';
+import { Image, StyleSheet, Platform, Button } from 'react-native';
 import { Text, View, SectionList, StatusBar } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 
@@ -6,7 +7,7 @@ import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 // Sample data structure for Japanese words
 const DATA = [
   {
-    title: '基本词汇', // Section title in Japanese
+    title: 'titleA', // Section title in Japanese
     data: [
       { word: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
       { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
@@ -31,7 +32,57 @@ const DATA = [
     ],
   },
   {
-    title: '基本词汇', // Section title in Japanese
+    title: 'titleB', // Section title in Japanese
+    data: [
+      { word: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      // Add more words here...
+    ],
+  },
+  {
+    title: 'titleC', // Section title in Japanese
+    data: [
+      { word: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      // Add more words here...
+    ],
+  },
+  {
+    title: 'titleD', // Section title in Japanese
     data: [
       { word: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
       { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
@@ -59,10 +110,33 @@ const DATA = [
 ];
 
 export default function HomeScreen() {
+  const sectionListRef = useRef<SectionList<any>>(null);
+
+  const scrollToSection = (title: string) => {
+    const sectionIndex = DATA.findIndex((section) => section.title === title);
+    if (sectionIndex !== -1) {
+      sectionListRef.current?.scrollToLocation({
+        animated: true,
+        itemIndex: 0, // Scroll to the first item in the section
+        sectionIndex,
+      });
+    }
+  };
+
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
+
+     <View style={styles.buttonContainer}>
+          <Button title="Go to A" onPress={() => scrollToSection('titleA')} />
+          <Button title="Go to B" onPress={() => scrollToSection('titleB')} />
+          <Button title="Go to C" onPress={() => scrollToSection('titleC')} />
+          <Button title="Go to D" onPress={() => scrollToSection('titleD')} />
+        </View>
+
         <SectionList
+          ref={sectionListRef}
           sections={DATA}
           keyExtractor={(item, index) => item.word + index} // Unique key for each item
           renderItem={({ item }) => (
@@ -86,6 +160,11 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: StatusBar.currentHeight || 0,
     marginHorizontal: 16,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    margin: 10,
   },
   item: {
     backgroundColor: '#f9c2ff',
