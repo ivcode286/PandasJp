@@ -81,7 +81,7 @@ function MyTabs() {
         component={MyDrawer}
         options={{
           title: 'Drawer Menu',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color || 'white'} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="menu.fill" color={color || 'white'} />,
         }}
       />
       {/* 其他頁面作為 Tabs 子項 */}
