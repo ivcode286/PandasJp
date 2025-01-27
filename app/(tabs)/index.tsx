@@ -1,3 +1,4 @@
+import React from 'react';
 import { useRef } from 'react';
 import { Image, StyleSheet, Platform, Button } from 'react-native';
 import { Text, View, SectionList, StatusBar } from 'react-native';

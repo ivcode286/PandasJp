@@ -1,47 +1,69 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
-import 'react-native-reanimated';
-
+import { Text, StyleSheet } from 'react-native';
+import { useFonts } from 'expo-font';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 import React from 'react';
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 const Drawer = createDrawerNavigator();
+const Tabs = createBottomTabNavigator();
 
-function TabsScreen() {
-  return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="+not-found" />
-    </Stack>
-  );
+// 定义 Home 页面
+function HomeScreen() {
+  return <Text style={styles.screenText}>This is Home Screen</Text>;
 }
 
-function TabsSecondScreen() {
-  return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="+not-found" />
-    </Stack>
-  );
+// 定义 Explore 页面
+function ExploreScreen() {
+  return <Text style={styles.screenText}>This is Explore Screen</Text>;
 }
 
+// 定义 Profile 页面
+function ProfileScreen() {
+  return <Text style={styles.screenText}>This is Profile Screen</Text>;
+}
+
+// Drawer Navigator (嵌套更多页面)
 function MyDrawer() {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen name="Home" component={TabsScreen} />
-      <Drawer.Screen name="Profile" component={TabsSecondScreen} />
+      <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen name="Profile" component={ProfileScreen} />
     </Drawer.Navigator>
   );
 }
 
+// Bottom Tabs Navigator (作为根导航器)
+function MyTabs() {
+  return (
+    <Tabs.Navigator>
+      {/* Drawer Navigator 嵌套在 Tabs 内 */}
+      <Tabs.Screen
+        name="Drawer"
+        component={MyDrawer}
+        options={{
+          title: 'Drawer Menu',
+        }}
+      />
+      {/* 其他页面作为 Tabs 子项 */}
+      <Tabs.Screen
+        name="Explore"
+        component={ExploreScreen}
+        options={{
+          title: 'Explore',
+        }}
+      />
+    </Tabs.Navigator>
+  );
+}
+
+// 主 RootLayout
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
@@ -60,8 +82,17 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <MyDrawer/>
+      {/* 设置 Bottom Tabs Navigator 为核心 */}
+      <MyTabs />
       <StatusBar style="auto" />
     </ThemeProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  screenText: {
+    fontSize: 24,
+    textAlign: 'center',
+    marginTop: 50,
+  },
+});
