@@ -110,7 +110,7 @@ const DATA = [
   // More sections can be added
 ];
 
-export default function HomeScreen() {
+export default function WordScreen() {
   const sectionListRef = useRef<SectionList<any>>(null);
 
   const scrollToSection = (title: string) => {
