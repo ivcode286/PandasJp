@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   headerContainer: {
-    height: 40, // 為 header 設定固定高度
+    height: 40, // Set a fixed height for the header
     justifyContent: 'center',
     backgroundColor: '#fff',
   },
