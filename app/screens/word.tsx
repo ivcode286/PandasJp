@@ -110,26 +110,24 @@ const DATA = [
   // More sections can be added
 ];
 
+const sectionListRef = React.createRef<SectionList<any>>();
+
+export const scrollToSection = (title: string) => {
+  const sectionIndex = DATA.findIndex((section) => section.title === title);
+  if (sectionIndex !== -1) {
+    sectionListRef.current?.scrollToLocation({
+      animated: true,
+      itemIndex: 0,
+      sectionIndex,
+    });
+  }
+};
+
 export default function WordScreen() {
-  const sectionListRef = useRef<SectionList<any>>(null);
-
-  const scrollToSection = (title: string) => {
-    const sectionIndex = DATA.findIndex((section) => section.title === title);
-    if (sectionIndex !== -1) {
-      sectionListRef.current?.scrollToLocation({
-        animated: true,
-        itemIndex: 0, // Scroll to the first item in the section
-        sectionIndex,
-      });
-    }
-  };
-
-
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-
-     <View style={styles.buttonContainer}>
+        <View style={styles.buttonContainer}>
           <Button title="Go to A" onPress={() => scrollToSection('titleA')} />
           <Button title="Go to B" onPress={() => scrollToSection('titleB')} />
           <Button title="Go to C" onPress={() => scrollToSection('titleC')} />
@@ -139,7 +137,7 @@ export default function WordScreen() {
         <SectionList
           ref={sectionListRef}
           sections={DATA}
-          keyExtractor={(item, index) => item.word + index} // Unique key for each item
+          keyExtractor={(item, index) => item.word + index}
           renderItem={({ item }) => (
             <View style={styles.item}>
               <Text style={styles.word}>{item.word}</Text>

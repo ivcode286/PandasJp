@@ -50,7 +50,7 @@ export default function DrawerNavigator() {
   return (
     <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
       <Drawer.Screen name="Home" component={HomeScreen} options={{ title: 'Home' }} />
-      <Drawer.Screen name="Word" component={WordScreen} options={{ title: 'Word'  }} />
+      <Drawer.Screen name="Word" component={WordScreen} options={{ title: 'Word' }} />
     </Drawer.Navigator>
   );
 }
