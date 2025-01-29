@@ -13,11 +13,6 @@ interface CustomDrawerContentProps {
   navigation: any;
 }
 
-// Home Screen Component
-function HomeScreen() {
-  return <Text style={styles.screenText}>This is Home Screen</Text>;
-}
-
 // Custom DrawerItem Component
 const CustomDrawerItem: React.FC<CustomDrawerItemProps> = ({ label, onPress }) => (
   <DrawerItem
@@ -31,8 +26,8 @@ const CustomDrawerItem: React.FC<CustomDrawerItemProps> = ({ label, onPress }) =
 const CustomDrawerContent: React.FC<CustomDrawerContentProps> = (props) => (
   <DrawerContentScrollView {...props} contentContainerStyle={styles.drawerContent}>
     <View style={styles.drawerRow}>
-      <CustomDrawerItem label="Home" onPress={() => props.navigation.navigate('Home')} />
       <CustomDrawerItem label="Word" onPress={() => props.navigation.navigate('Word')} />
+      <CustomDrawerItem label="Home" onPress={() => props.navigation.navigate('Home')} />
       <CustomDrawerItem label="Option 3" onPress={() => alert('Option 3 pressed')} />
     </View>
     <View style={styles.drawerRow}>
@@ -46,11 +41,19 @@ const CustomDrawerContent: React.FC<CustomDrawerContentProps> = (props) => (
 // Drawer Navigator
 const Drawer = createDrawerNavigator();
 
-export default function DrawerNavigator() {
+function WordScreenWithDrawer() {
   return (
     <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
-      <Drawer.Screen name="Home" component={HomeScreen} options={{ title: 'Home' }} />
-      <Drawer.Screen name="Word" component={WordScreen} options={{ title: 'Word'  }} />
+      <Drawer.Screen name="WordMain" component={WordScreen} options={{ title: 'Word',headerShown: false }} />
+    </Drawer.Navigator>
+  );
+}
+
+export default function WordDrawerNavigator() {
+  return (
+    <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
+      <Drawer.Screen name="Word" component={WordScreenWithDrawer} options={{ title: 'Word' }} />
+      <Drawer.Screen name="Home" component={() => <Text style={styles.screenText}>This is Home Screen</Text>} options={{ title: 'Home' }} />
     </Drawer.Navigator>
   );
 }

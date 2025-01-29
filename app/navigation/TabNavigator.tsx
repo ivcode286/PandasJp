@@ -6,7 +6,7 @@ import { HapticTab } from '@/components/HapticTab';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import DrawerNavigator from './DrawerNavigator';
-import WordScreen from '../screens/word';
+import WordDrawerNavigator from './WordScreenWithDrawer';
 
 const Tabs = createBottomTabNavigator();
 
@@ -30,19 +30,19 @@ export default function MyTabs() {
       }}
     >
       <Tabs.Screen
+        name="Word"
+        component={WordDrawerNavigator}
+        options={{
+          title: 'Word',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="Drawer"
         component={DrawerNavigator}
         options={{
           title: 'Drawer Menu',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="menu.fill" color={color || 'white'} />,
-        }}
-      />
-      <Tabs.Screen
-        name="Word"
-        component={WordScreen}
-        options={{
-          title: 'Word',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />
     </Tabs.Navigator>
