@@ -1,6 +1,5 @@
-import React from 'react';
-import { StyleSheet, Button } from 'react-native';
-import { Text, View, SectionList, StatusBar } from 'react-native';
+import React, { useRef } from 'react';
+import { StyleSheet, Button, SectionList, Text, View, StatusBar } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 
 // Sample data structure for Japanese words
@@ -133,16 +132,21 @@ const DATA = [
   // More sections can be added
 ];
 
-const sectionListRef = React.createRef<SectionList<any>>();
+export const sectionListRef = React.createRef<SectionList<any>>();
 
 export const scrollToSection = (title: string) => {
-  const sectionIndex = DATA.findIndex((section) => section.title === title);
-  if (sectionIndex !== -1) {
-    sectionListRef.current?.scrollToLocation({
-      animated: true,
-      itemIndex: 0,
-      sectionIndex,
-    });
+  const SECTION_HEADER_HEIGHT = 40;
+  if (sectionListRef.current) {
+    const sectionIndex = DATA.findIndex((section) => section.title === title);
+    if (sectionIndex !== -1) {
+      sectionListRef.current.scrollToLocation({
+        animated: true,
+        itemIndex: 0,
+        sectionIndex,
+        viewOffset: SECTION_HEADER_HEIGHT,
+        viewPosition: 0,
+      });
+    }
   }
 };
 
@@ -150,15 +154,8 @@ export default function WordScreen() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <View style={styles.buttonContainer}>
-          <Button title="Go to A" onPress={() => scrollToSection('titleA')} />
-          <Button title="Go to B" onPress={() => scrollToSection('titleB')} />
-          <Button title="Go to C" onPress={() => scrollToSection('titleC')} />
-          <Button title="Go to D" onPress={() => scrollToSection('titleD')} />
-        </View>
-
         <SectionList
-          ref={sectionListRef}
+          ref={sectionListRef} // 使用全局的 ref
           sections={DATA}
           keyExtractor={(item, index) => item.word + index}
           renderItem={({ item }) => (
@@ -169,8 +166,11 @@ export default function WordScreen() {
             </View>
           )}
           renderSectionHeader={({ section: { title } }) => (
-            <Text style={styles.header}>{title}</Text>
+            <View style={styles.headerContainer}>
+              <Text style={styles.header}>{title}</Text>
+            </View>
           )}
+          stickySectionHeadersEnabled={false}
         />
       </SafeAreaView>
     </SafeAreaProvider>
@@ -192,13 +192,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#f9c2ff',
     padding: 20,
     marginVertical: 8,
-    borderRadius: 8, // Added rounded corners
+    borderRadius: 8,
+  },
+  headerContainer: {
+    height: 40, // 為 header 設定固定高度
+    justifyContent: 'center',
+    backgroundColor: '#fff',
   },
   header: {
     fontSize: 32,
-    backgroundColor: '#fff',
-    padding: 10, // Added padding for better spacing
-    fontWeight: 'bold', // Highlight section title
+    fontWeight: 'bold',
+    paddingLeft: 10,
   },
   word: {
     fontSize: 24,
@@ -206,10 +210,10 @@ const styles = StyleSheet.create({
   },
   reading: {
     fontSize: 18,
-    color: '#555', // Slightly dimmed color for reading
+    color: '#555',
   },
   meaning: {
     fontSize: 16,
-    color: '#777', // Dimmed color for meaning
+    color: '#777',
   },
 });
