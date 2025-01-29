@@ -9,10 +9,6 @@ interface CustomDrawerItemProps {
     onPress: () => void;
 }
 
-interface CustomDrawerContentProps {
-    navigation: any;
-}
-
 // Custom DrawerItem Component
 const CustomDrawerItem: React.FC<CustomDrawerItemProps & { navigation: any }> = ({ label, onPress, navigation }) => (
     <DrawerItem
@@ -22,8 +18,8 @@ const CustomDrawerItem: React.FC<CustomDrawerItemProps & { navigation: any }> = 
             </Text>
         )}
         onPress={() => {
-            navigation.closeDrawer(); // ✅ 先關閉 Drawer
-            setTimeout(() => onPress(), 300); // ✅ 延遲 300ms 確保畫面準備好後再滾動
+            navigation.closeDrawer(); // ✅ Close the drawer first
+            setTimeout(() => onPress(), 300); // ✅ Delay for 300ms to ensure the screen is ready before scrolling
         }}
         style={styles.drawerItem}
     />
@@ -85,13 +81,12 @@ const styles = StyleSheet.create({
         marginVertical: 10,
     },
     drawerItem: {
-        flex: 1, // 讓 DrawerItem 佔滿可用空間
+        flex: 1, // Make DrawerItem occupy the available space
         marginHorizontal: 2,
     },
     drawerItemLabel: {
         textAlign: 'center',
-        fontSize: 18, // 增大字體，避免字體裁切
-        minWidth: 40, // 確保文字區塊足夠寬
+        fontSize: 18, // Increase font size to prevent text clipping
+        minWidth: 40, // Ensure the text block is wide enough
     },
 });
-
