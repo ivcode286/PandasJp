@@ -26,14 +26,18 @@ const CustomDrawerItem: React.FC<CustomDrawerItemProps> = ({ label, onPress }) =
 const CustomDrawerContent: React.FC<CustomDrawerContentProps> = (props) => (
     <DrawerContentScrollView {...props} contentContainerStyle={styles.drawerContent}>
         <View style={styles.drawerRow}>
-            <CustomDrawerItem label="Word" onPress={() => props.navigation.navigate('Word')} />
-            <CustomDrawerItem label="Home" onPress={() => props.navigation.navigate('Home')} />
-            <CustomDrawerItem label="Option 3" onPress={() => alert('Option 3 pressed')} />
+            <CustomDrawerItem label="あ" onPress={() => scrollToSection('あ')} />
+            <CustomDrawerItem label="い" onPress={() => scrollToSection('い')} />
+            <CustomDrawerItem label="う" onPress={() => scrollToSection('う')} />
+            <CustomDrawerItem label="え" onPress={() => scrollToSection('え')} />
+            <CustomDrawerItem label="お" onPress={() => scrollToSection('お')} />   
         </View>
         <View style={styles.drawerRow}>
-            <CustomDrawerItem label="titleA" onPress={() => scrollToSection('titleA')} />
-            <CustomDrawerItem label="titleB" onPress={() => scrollToSection('titleB')} />
-            <CustomDrawerItem label="titleC" onPress={() => scrollToSection('titleC')} />
+            <CustomDrawerItem label="か" onPress={() => scrollToSection('か')} />
+            <CustomDrawerItem label="き" onPress={() => scrollToSection('き')} />
+            <CustomDrawerItem label="く" onPress={() => scrollToSection('く')} />
+            <CustomDrawerItem label="け" onPress={() => scrollToSection('け')} />
+            <CustomDrawerItem label="こ" onPress={() => scrollToSection('こ')} />
         </View>
     </DrawerContentScrollView>
 );

@@ -1,14 +1,12 @@
 import React from 'react';
-import { useRef } from 'react';
-import { Image, StyleSheet, Platform, Button } from 'react-native';
+import { StyleSheet, Button } from 'react-native';
 import { Text, View, SectionList, StatusBar } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
-
 
 // Sample data structure for Japanese words
 const DATA = [
   {
-    title: 'titleA', // Section title in Japanese
+    title: 'あ', // Section title in Japanese
     data: [
       { word: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
       { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
@@ -33,7 +31,7 @@ const DATA = [
     ],
   },
   {
-    title: 'titleB', // Section title in Japanese
+    title: 'い', // Section title in Japanese
     data: [
       { word: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
       { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
@@ -58,7 +56,7 @@ const DATA = [
     ],
   },
   {
-    title: 'titleC', // Section title in Japanese
+    title: 'う', // Section title in Japanese
     data: [
       { word: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
       { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
@@ -83,7 +81,32 @@ const DATA = [
     ],
   },
   {
-    title: 'titleD', // Section title in Japanese
+    title: 'え', // Section title in Japanese
+    data: [
+      { word: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
+      // Add more words here...
+    ],
+  },
+  {
+    title: 'お', // Section title in Japanese
     data: [
       { word: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
       { word: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
