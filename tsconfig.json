@@ -5,6 +5,8 @@
     "strict": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false, 
+    "target": "ES6",
     "paths": {
       "@/*": ["./*"]
     }
