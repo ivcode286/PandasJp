@@ -7,6 +7,7 @@ import TabBarBackground from '@/components/ui/TabBarBackground';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import DrawerNavigator from './DrawerNavigator';
 import WordDrawerNavigator from './WordScreenWithDrawer';
+import NotesScreen from '../screens/NotesScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -39,9 +40,9 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Drawer"
-        component={DrawerNavigator}
+        component={NotesScreen}
         options={{
-          title: 'Drawer Menu',
+          title: 'NotesScreen',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="menu.fill" color={color || 'white'} />,
         }}
       />

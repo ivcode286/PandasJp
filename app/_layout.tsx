@@ -8,7 +8,12 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 import React from 'react';
 import MyTabs from './navigation/TabNavigator';
 
+import Note from './database/model/Note';
+import { database, seedDatabase } from './database/database';
+
 SplashScreen.preventAutoHideAsync();
+
+
 
 // 主 RootLayout
 export default function RootLayout() {
@@ -16,6 +21,10 @@ export default function RootLayout() {
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
+
+  useEffect(() => {
+    seedDatabase();
+}, []);
 
   useEffect(() => {
     if (loaded) {
