@@ -1,8 +1,10 @@
 // screens/NotesScreen.tsx
+
+import { database } from '@/src/database';
+import Note from '@/src/database/model/Note';
 import React, { useEffect, useState } from 'react';
 import { View, Text, Button } from 'react-native';
-import { database } from '../database/database';
-import Note from '../database/model/Note';
+import { Collection } from '@nozbe/watermelondb';
 
 
 const NotesScreen = () => {
@@ -10,7 +12,8 @@ const NotesScreen = () => {
 
     useEffect(() => {
         const fetchNotes = async () => {
-            const notesCollection = database.get<Note>('notes');
+            //const notesCollection = database.get<Note>('notes');
+            const notesCollection = database.get('notes') as Collection<Note>;
             const allNotes = await notesCollection.query().fetch();
             setNotes(allNotes.slice(0, 2)); // 只取前2個數據
         };
