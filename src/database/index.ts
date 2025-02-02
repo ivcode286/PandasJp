@@ -3,12 +3,12 @@ import { Platform } from 'react-native';
 
 let dbModule;
 if (Platform.OS === 'web') {
-  dbModule = require('./database.web');
+  dbModule = require('./wordsDatabase.web');
   console.log('---------------!!!!!!!!!!!!!!!!!!!!!Using LokiJSAdapter!!!!!!!!!!!!!!!----------------');
 } else {
   console.log('---------------!!!!!!!!!!!!!!!!!!!!!Using SQLiteAdapter!!!!!!!!!!!!!!!----------------');
-  dbModule = require('./database.native');
+  dbModule = require('./wordsDatabase.native');
 }
 
-export const database = dbModule.database;
+export const wordsDatabase = dbModule.wordsDatabase;
 export const seedDatabase = dbModule.seedDatabase;

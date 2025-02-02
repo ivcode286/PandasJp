@@ -14,7 +14,13 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
    ```bash
     npx expo start
-   ```
+ 
+ -Run on expo web or expo go
+  npm start
+
+ -Run on Android by android device or android simular
+ eas build --platform android --profile development  ```
+
 
 In the output, you'll find options to open the app in a
 

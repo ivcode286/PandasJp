@@ -1,168 +1,94 @@
-import React, { useRef } from 'react';
-import { StyleSheet, Button, SectionList, Text, View, StatusBar } from 'react-native';
+// WordsScreen.tsx
+import { wordsDatabase } from '@/src/database';
+import Word from '@/src/database/models/Word';
+import Collection from '@nozbe/watermelondb/Collection';
+import React, { useEffect, useState } from 'react';
+import {
+  StyleSheet,
+  Button,
+  SectionList,
+  Text,
+  View,
+  StatusBar,
+  ListRenderItemInfo,
+} from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 
-// Sample data structure for Japanese words
-const DATA = [
-  {
-    title: 'あ', // Section title in Japanese
-    data: [
-      { words: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      // Add more words here...
-    ],
-  },
-  {
-    title: 'い', // Section title in Japanese
-    data: [
-      { words: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      // Add more words here...
-    ],
-  },
-  {
-    title: 'う', // Section title in Japanese
-    data: [
-      { words: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      // Add more words here...
-    ],
-  },
-  {
-    title: 'え', // Section title in Japanese
-    data: [
-      { words: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      // Add more words here...
-    ],
-  },
-  {
-    title: 'お', // Section title in Japanese
-    data: [
-      { words: 'こんにちは', reading: 'Konnichiwa', meaning: '你好' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      { words: 'さようなら', reading: 'Sayōnara', meaning: '再见' },
-      // Add more words here...
-    ],
-  }
-  // More sections can be added
-];
+// Import your WatermelonDB database and Word model
 
+// Create a ref for the SectionList so we can scroll to a specific section.
 export const sectionListRef = React.createRef<SectionList<any>>();
 
-export const scrollToSection = (title: string) => {
-  const SECTION_HEADER_HEIGHT = 40;
-  if (sectionListRef.current) {
-    const sectionIndex = DATA.findIndex((section) => section.title === title);
-    if (sectionIndex !== -1) {
-      sectionListRef.current.scrollToLocation({
-        animated: true,
-        itemIndex: 0,
-        sectionIndex,
-        viewOffset: SECTION_HEADER_HEIGHT,
-        viewPosition: 0,
-      });
+// Global variable to store sections for use in scrollToSection.
+export let globalSections: { title: string; data: Word[] }[] = [];
+
+// Helper function: Group words by their "letter" field to create SectionList data.
+const groupWordsByLetter = (words: Word[]) => {
+  const groups: { [letter: string]: Word[] } = {};
+  words.forEach(word => {
+    const letter = word.letter; // assuming word.letter holds the section title
+    if (!groups[letter]) {
+      groups[letter] = [];
     }
+    groups[letter].push(word);
+  });
+  const sections = Object.keys(groups)
+    .sort()
+    .map(letter => ({
+      title: letter,
+      data: groups[letter],
+    }));
+  return sections;
+};
+
+// Modified scrollToSection function that only needs a title.
+// It uses the globalSections variable for its sections.
+export const scrollToSection = (title: string): void => {
+  const SECTION_HEADER_HEIGHT = 40;
+  const sectionIndex = globalSections.findIndex(section => section.title === title);
+  if (sectionIndex !== -1 && sectionListRef.current) {
+    sectionListRef.current.scrollToLocation({
+      animated: true,
+      itemIndex: 0,
+      sectionIndex,
+      viewOffset: SECTION_HEADER_HEIGHT,
+      viewPosition: 0,
+    });
   }
 };
 
 export default function WordsScreen() {
+  const [sections, setSections] = useState<{ title: string; data: Word[] }[]>([]);
+
+  useEffect(() => {
+    const fetchWords = async () => {
+      try {
+        const wordsCollection = wordsDatabase.get('words') as Collection<Word>;
+        const allWords = await wordsCollection.query().fetch();
+        const groupedSections = groupWordsByLetter(allWords);
+        setSections(groupedSections);
+        // Update the global sections variable so scrollToSection can use it.
+        globalSections = groupedSections;
+      } catch (error) {
+        console.error('Error fetching words:', error);
+      }
+    };
+    fetchWords();
+  }, []);
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <SectionList
-          ref={sectionListRef} // 使用全局的 ref
-          sections={DATA}
-          keyExtractor={(item, index) => item.words + index}
-          renderItem={({ item }) => (
+          ref={sectionListRef}
+          sections={sections}
+          keyExtractor={(item, index) => item.id + index.toString()}
+          renderItem={({ item }: ListRenderItemInfo<Word>) => (
             <View style={styles.item}>
               <Text style={styles.words}>{item.words}</Text>
-              <Text style={styles.reading}>{item.reading}</Text>
-              <Text style={styles.meaning}>{item.meaning}</Text>
+              <Text style={styles.reading}>{item.pron}</Text>
+              <Text style={styles.meaning}>Meaning (CN): {item.meaning_cn}</Text>
+              <Text style={styles.meaning}>Meaning (ZH): {item.meaning_zh}</Text>
             </View>
           )}
           renderSectionHeader={({ section: { title } }) => (
@@ -172,6 +98,8 @@ export default function WordsScreen() {
           )}
           stickySectionHeadersEnabled={false}
         />
+        {/* Example button to scroll to a specific section */}
+        <Button title="Scroll to あ" onPress={() => scrollToSection('あ')} />
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -183,11 +111,6 @@ const styles = StyleSheet.create({
     paddingTop: StatusBar.currentHeight || 0,
     marginHorizontal: 16,
   },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    margin: 10,
-  },
   item: {
     backgroundColor: '#f9c2ff',
     padding: 20,
@@ -195,7 +118,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   headerContainer: {
-    height: 40, // Set a fixed height for the header
+    height: 40,
     justifyContent: 'center',
     backgroundColor: '#fff',
   },
