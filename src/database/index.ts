@@ -6,8 +6,8 @@ if (Platform.OS === 'web') {
   dbModule = require('./database.web');
   console.log('---------------!!!!!!!!!!!!!!!!!!!!!Using LokiJSAdapter!!!!!!!!!!!!!!!----------------');
 } else {
-  dbModule = require('./database.native');
   console.log('---------------!!!!!!!!!!!!!!!!!!!!!Using SQLiteAdapter!!!!!!!!!!!!!!!----------------');
+  dbModule = require('./database.native');
 }
 
 export const database = dbModule.database;
