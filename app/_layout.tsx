@@ -7,9 +7,9 @@ import { useFonts } from 'expo-font';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import React from 'react';
 import MyTabs from './navigation/TabNavigator';
+import { seedDatabase } from '@/src/database';
 
-import Note from './database/model/Note';
-import { database, seedDatabase } from './database/database';
+
 
 SplashScreen.preventAutoHideAsync();
 
@@ -52,3 +52,5 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
 });
+
+

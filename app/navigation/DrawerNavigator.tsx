@@ -1,7 +1,7 @@
 import React from 'react';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import { View, Text, StyleSheet } from 'react-native';
-import WordScreen from '../screens/word';
+import WordsScreen from '../screens/WordsSceen';
 
 // TypeScript interfaces for props
 interface CustomDrawerItemProps {
@@ -32,7 +32,7 @@ const CustomDrawerContent: React.FC<CustomDrawerContentProps> = (props) => (
   <DrawerContentScrollView {...props} contentContainerStyle={styles.drawerContent}>
     <View style={styles.drawerRow}>
       <CustomDrawerItem label="Home" onPress={() => props.navigation.navigate('Home')} />
-      <CustomDrawerItem label="Word" onPress={() => props.navigation.navigate('Word')} />
+      <CustomDrawerItem label="Words" onPress={() => props.navigation.navigate('Words')} />
       <CustomDrawerItem label="Option 3" onPress={() => alert('Option 3 pressed')} />
     </View>
     <View style={styles.drawerRow}>
@@ -50,7 +50,7 @@ export default function DrawerNavigator() {
   return (
     <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
       <Drawer.Screen name="Home" component={HomeScreen} options={{ title: 'Home' }} />
-      <Drawer.Screen name="Word" component={WordScreen} options={{ title: 'Word' }} />
+      <Drawer.Screen name="Words" component={WordsScreen} options={{ title: 'Words' }} />
     </Drawer.Navigator>
   );
 }

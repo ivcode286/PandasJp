@@ -1,7 +1,7 @@
 import React from 'react';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import { View, Text, StyleSheet } from 'react-native';
-import WordScreen, { scrollToSection } from '../screens/word';
+import WordsScreen, { scrollToSection } from '../screens/WordsSceen';
 
 // TypeScript interfaces for props
 interface CustomDrawerItemProps {
@@ -51,12 +51,12 @@ const Drawer = createDrawerNavigator();
 function WordScreenWithDrawer() {
     return (
         <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
-            <Drawer.Screen name="WordMain" component={WordScreen} options={{ title: 'Word', headerShown: false }} />
+            <Drawer.Screen name="WordMain" component={WordsScreen} options={{ title: 'Word', headerShown: false }} />
         </Drawer.Navigator>
     );
 }
 
-export default function WordDrawerNavigator() {
+export default function WordsDrawerNavigator() {
     return (
         <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
             <Drawer.Screen name="Word" component={WordScreenWithDrawer} options={{ title: 'Word' }} />
