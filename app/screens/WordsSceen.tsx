@@ -1,4 +1,3 @@
-// WordsScreen.tsx
 import { wordsDatabase } from '@/src/database';
 import Word from '@/src/database/models/Word';
 import Collection from '@nozbe/watermelondb/Collection';
@@ -14,48 +13,43 @@ import {
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 
-// Import your WatermelonDB database and Word model
-
-// Create a ref for the SectionList so we can scroll to a specific section.
 export const sectionListRef = React.createRef<SectionList<any>>();
 
-// Global variable to store sections for use in scrollToSection.
 export let globalSections: { title: string; data: Word[] }[] = [];
 
-// Helper function: Group words by their "letter" field to create SectionList data.
+const SECTION_HEADER_HEIGHT = 40;  // Fixed height for headers
+const ITEM_HEIGHT = 80;            // Fixed height for each word item
+
 const groupWordsByLetter = (words: Word[]) => {
   const groups: { [letter: string]: Word[] } = {};
   words.forEach(word => {
-    const letter = word.letter; // assuming word.letter holds the section title
+    const letter = word.letter;
     if (!groups[letter]) {
       groups[letter] = [];
     }
     groups[letter].push(word);
   });
-  const sections = Object.keys(groups)
+  return Object.keys(groups)
     .sort()
     .map(letter => ({
       title: letter,
       data: groups[letter],
     }));
-  return sections;
 };
 
-// Modified scrollToSection function that only needs a title.
-// It uses the globalSections variable for its sections.
 export const scrollToSection = (title: string): void => {
-  const SECTION_HEADER_HEIGHT = 40;
   const sectionIndex = globalSections.findIndex(section => section.title === title);
   if (sectionIndex !== -1 && sectionListRef.current) {
     sectionListRef.current.scrollToLocation({
       animated: true,
       itemIndex: 0,
       sectionIndex,
-      viewOffset: SECTION_HEADER_HEIGHT,
-      viewPosition: 0,
+      viewOffset: -SECTION_HEADER_HEIGHT,  // ⭐ 調整 offset 修正偏差
+      viewPosition: 0, // 保持 section 在頂部
     });
   }
 };
+
 
 export default function WordsScreen() {
   const [sections, setSections] = useState<{ title: string; data: Word[] }[]>([]);
@@ -67,7 +61,6 @@ export default function WordsScreen() {
         const allWords = await wordsCollection.query().fetch();
         const groupedSections = groupWordsByLetter(allWords);
         setSections(groupedSections);
-        // Update the global sections variable so scrollToSection can use it.
         globalSections = groupedSections;
       } catch (error) {
         console.error('Error fetching words:', error);
@@ -97,9 +90,30 @@ export default function WordsScreen() {
             </View>
           )}
           stickySectionHeadersEnabled={false}
+          getItemLayout={(data, index) => {
+            const sectionIndex = sections.findIndex(section =>
+              section.data.some(word => word.id === data?.[index]?.id)
+            );
+            const sectionOffset = sectionIndex * SECTION_HEADER_HEIGHT;
+            return {
+              length: ITEM_HEIGHT,
+              offset: sectionOffset + index * ITEM_HEIGHT,
+              index,
+            };
+          }}
+          onScrollToIndexFailed={(info) => {
+            console.warn('Scroll failed, retrying...', info);
+            setTimeout(() => {
+              sectionListRef.current?.scrollToLocation({
+                sectionIndex: info.highestMeasuredFrameIndex,
+                itemIndex: 0,
+                animated: true,
+                viewOffset: 0,
+                viewPosition: 0,
+              });
+            }, 100);
+          }}
         />
-        {/* Example button to scroll to a specific section */}
-        <Button title="Scroll to あ" onPress={() => scrollToSection('あ')} />
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -114,11 +128,11 @@ const styles = StyleSheet.create({
   item: {
     backgroundColor: '#f9c2ff',
     padding: 20,
-    marginVertical: 8,
+    height: ITEM_HEIGHT, // Fixed height
     borderRadius: 8,
   },
   headerContainer: {
-    height: 40,
+    height: SECTION_HEADER_HEIGHT, // Fixed height
     justifyContent: 'center',
     backgroundColor: '#fff',
   },
