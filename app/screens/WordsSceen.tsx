@@ -100,7 +100,8 @@ export default function WordsScreen() {
             </View>
           )}
           stickySectionHeadersEnabled={false}
-          getItemLayout={getItemLayout} // ✅ 使用最佳化的 getItemLayout
+          // @ts-ignore
+          getItemLayout={getItemLayout} // ✅ Optimzied getItemLayout
           onScrollToIndexFailed={(info) => {
             console.warn('Scroll failed, retrying...', info);
             setTimeout(() => {
