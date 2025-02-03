@@ -7,8 +7,15 @@ import { useFonts } from 'expo-font';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import React from 'react';
 import MyTabs from './navigation/TabNavigator';
+import { seedDatabaseFromJson } from '@/src/database';
+import jsonData from '../src/database/words.json';
+
+
+
 
 SplashScreen.preventAutoHideAsync();
+
+
 
 // 主 RootLayout
 export default function RootLayout() {
@@ -16,6 +23,11 @@ export default function RootLayout() {
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
+
+  useEffect(() => {
+    console.log('🟢 Running seedDatabaseFromJson...');
+    seedDatabaseFromJson(jsonData);
+}, []);
 
   useEffect(() => {
     if (loaded) {
@@ -43,3 +55,5 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
 });
+
+

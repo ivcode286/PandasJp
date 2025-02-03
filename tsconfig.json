@@ -3,10 +3,17 @@
   "compilerOptions": {
     "jsx": "react",
     "strict": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    "target": "ES2020",  // Updated to ES2020 for dynamic import support
+    "module": "ES2020",  // Required for `import()`
+    "moduleResolution": "node", // Ensures correct module imports
+    "resolveJsonModule": true, // Allows importing JSON files
+    "allowSyntheticDefaultImports": true, // Fixes module import issues
+    "skipLibCheck": true, // Prevents unnecessary TypeScript errors
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
   "include": [
