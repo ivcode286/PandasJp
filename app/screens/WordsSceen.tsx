@@ -55,7 +55,6 @@ export const scrollToSection = (title: string): void => {
       animated: true,
       itemIndex: 0,
       sectionIndex,
-      viewOffset: SECTION_HEADER_HEIGHT * -1, // 避免 header 被遮住
       viewPosition: 0,
     });
   }
