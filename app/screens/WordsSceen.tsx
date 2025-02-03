@@ -61,7 +61,6 @@ export const scrollToSection = (title: string): void => {
   }
 };
 
-// 📌 主組件
 export default function WordsScreen() {
   const [sections, setSections] = useState<{ title: string; data: Word[] }[]>([]);
 
@@ -89,9 +88,9 @@ export default function WordsScreen() {
           keyExtractor={(item, index) => item.id + index.toString()}
           renderItem={({ item }: ListRenderItemInfo<Word>) => (
             <View style={styles.item}>
-              <Text style={styles.words}>{item.words}</Text>
+              <Text style={styles.words}>{item.words} </Text>
               <Text style={styles.reading}>{item.pron}</Text>
-              <Text style={styles.meaning}>Meaning (ZH): {item.meaningZh}</Text>
+              <Text style={styles.meaning}>{item.meaningZh}</Text>
             </View>
           )}
           renderSectionHeader={({ section: { title } }) => (
@@ -120,7 +119,7 @@ export default function WordsScreen() {
   );
 }
 
-// 📌 樣式
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
