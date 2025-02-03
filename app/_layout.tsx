@@ -25,6 +25,7 @@ export default function RootLayout() {
   });
 
   useEffect(() => {
+    console.log('🟢 Running seedDatabaseFromJson...');
     seedDatabaseFromJson(jsonData);
 }, []);
 
