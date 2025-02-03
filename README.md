@@ -24,6 +24,9 @@ npm run android
 -build android
 eas build --platform android --profile development  
 
+eas build:list (download apk)
+adb install C://xxxxx.apk
+
 
 In the output, you'll find options to open the app in a
 
