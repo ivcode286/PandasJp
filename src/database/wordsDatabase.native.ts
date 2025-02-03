@@ -37,8 +37,8 @@ export const seedDatabaseFromJson = async (jsonData: any[]) => {
             word.letterOrder = item.letterOrder;
             word.letter = item.letter;
             word.type = item.type;
-            word.meaning_cn = item.meaning_cn;
-            word.meaning_zh = item.meaning_zh;
+            word.meaningCn = item.meaning_cn;
+            word.meaningZh = item.meaning_zh;
           });
         }
       });

@@ -14,6 +14,4 @@ export default class Word extends Model {
   @field('type') type!: string;
   @field('meaning_cn') meaningCn!: string;
   @field('meaning_zh') meaningZh!: string;
-  meaning_cn: ReactNode;
-  meaning_zh: ReactNode;
 }

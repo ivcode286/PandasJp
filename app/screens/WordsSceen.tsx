@@ -91,7 +91,7 @@ export default function WordsScreen() {
             <View style={styles.item}>
               <Text style={styles.words}>{item.words}</Text>
               <Text style={styles.reading}>{item.pron}</Text>
-              <Text style={styles.meaning}>Meaning (ZH): {item.meaning_zh}</Text>
+              <Text style={styles.meaning}>Meaning (ZH): {item.meaningZh}</Text>
             </View>
           )}
           renderSectionHeader={({ section: { title } }) => (
