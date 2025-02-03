@@ -21,7 +21,8 @@ export let globalSections: { title: string; data: Word[] }[] = [];
 
 // 固定 header 和 item 高度
 const SECTION_HEADER_HEIGHT = 40;
-const ITEM_HEIGHT = 80;
+const ITEM_HEIGHT = 140;
+const ITEM_MARGIN = 8;
 
 // 分組函數：按字母排序
 const groupWordsByLetter = (words: Word[]) => {
@@ -43,7 +44,7 @@ const groupWordsByLetter = (words: Word[]) => {
 
 // ✅ 使用 `react-native-section-list-get-item-layout` 來優化 getItemLayout
 const getItemLayout = sectionListGetItemLayout({
-  getItemHeight: () => ITEM_HEIGHT, // 固定 item 高度
+  getItemHeight: () => ITEM_HEIGHT+ ITEM_MARGIN, // 固定 item 高度
   getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT, // 固定 header 高度
 });
 
@@ -90,7 +91,6 @@ export default function WordsScreen() {
             <View style={styles.item}>
               <Text style={styles.words}>{item.words}</Text>
               <Text style={styles.reading}>{item.pron}</Text>
-              <Text style={styles.meaning}>Meaning (CN): {item.meaning_cn}</Text>
               <Text style={styles.meaning}>Meaning (ZH): {item.meaning_zh}</Text>
             </View>
           )}
@@ -132,6 +132,7 @@ const styles = StyleSheet.create({
     padding: 20,
     height: ITEM_HEIGHT, // 固定 item 高度
     borderRadius: 8,
+    marginBottom: ITEM_MARGIN, 
   },
   headerContainer: {
     height: SECTION_HEADER_HEIGHT, // 固定 header 高度
