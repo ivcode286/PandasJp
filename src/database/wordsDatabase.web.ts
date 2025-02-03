@@ -18,35 +18,28 @@ export const wordsDatabase = new Database({
 });
 
 // New seedDatabase function for web
-export const seedDatabase = async () => {
+export const seedDatabaseFromJson = async (jsonData: any[]) => {
   try {
     const wordsCollection = wordsDatabase.get<Word>('words');
     const allWords = await wordsCollection.query().fetch();
+
     if (allWords.length === 0) {
       await wordsDatabase.write(async () => {
-        await wordsCollection.create(word => {
-          word.wordId = 1;
-          word.words = '遭う';
-          word.pron = 'あい';
-          word.letterOrder = 1;
-          word.letter = 'あ';
-          word.type = '自五';
-          word.meaning_cn = '遇到';
-          word.meaning_zh = '遇到';
-        });
-        await wordsCollection.create(word => {
-          word.wordId = 2;
-          word.words = '遇う';
-          word.pron = 'あい';
-          word.letterOrder = 1;
-          word.letter = 'あ';
-          word.type = '自五';
-          word.meaning_cn = '遭遇';
-          word.meaning_zh = '遭遇';
-        });
+        for (const item of jsonData) {
+          await wordsCollection.create(word => {
+            word.wordId = item.wordId;
+            word.words = item.words;
+            word.pron = item.pron;
+            word.letterOrder = item.letterOrder;
+            word.letter = item.letter;
+            word.type = item.type;
+            word.meaning_cn = item.meaning_cn;
+            word.meaning_zh = item.meaning_zh;
+          });
+        }
       });
     }
   } catch (error) {
-    console.error('Error seeding words database (web):', error);
+    console.error('Error seeding words database (web) from JSON:', error);
   }
 };

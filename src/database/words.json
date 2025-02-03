@@ -1,0 +1,22 @@
+[
+  {
+    "wordId": 1,
+    "words": "遭う5678",
+    "pron": "あう",
+    "letterOrder": 1,
+    "letter": "あ",
+    "type": "自五",
+    "meaning_cn": "遇到",
+    "meaning_zh": "遇到"
+  },
+  {
+    "wordId": 2,
+    "words": "遇う",
+    "pron": "あう",
+    "letterOrder": 1,
+    "letter": "あ",
+    "type": "自五",
+    "meaning_cn": "遭遇",
+    "meaning_zh": "遭遇"
+  }
+]
