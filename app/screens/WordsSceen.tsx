@@ -4,7 +4,6 @@ import Collection from '@nozbe/watermelondb/Collection';
 import React, { useEffect, useState } from 'react';
 import {
   StyleSheet,
-  Button,
   SectionList,
   Text,
   View,
@@ -12,14 +11,19 @@ import {
   ListRenderItemInfo,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 
+// 創建 SectionList 參考
 export const sectionListRef = React.createRef<SectionList<any>>();
 
+// 全局 Sections 變數
 export let globalSections: { title: string; data: Word[] }[] = [];
 
-const SECTION_HEADER_HEIGHT = 40;  // Fixed height for headers
-const ITEM_HEIGHT = 80;            // Fixed height for each word item
+// 固定 header 和 item 高度
+const SECTION_HEADER_HEIGHT = 40;
+const ITEM_HEIGHT = 80;
 
+// 分組函數：按字母排序
 const groupWordsByLetter = (words: Word[]) => {
   const groups: { [letter: string]: Word[] } = {};
   words.forEach(word => {
@@ -37,6 +41,13 @@ const groupWordsByLetter = (words: Word[]) => {
     }));
 };
 
+// ✅ 使用 `react-native-section-list-get-item-layout` 來優化 getItemLayout
+const getItemLayout = sectionListGetItemLayout({
+  getItemHeight: () => ITEM_HEIGHT, // 固定 item 高度
+  getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT, // 固定 header 高度
+});
+
+// ✅ 改進 scrollToSection 確保滾動準確
 export const scrollToSection = (title: string): void => {
   const sectionIndex = globalSections.findIndex(section => section.title === title);
   if (sectionIndex !== -1 && sectionListRef.current) {
@@ -44,13 +55,13 @@ export const scrollToSection = (title: string): void => {
       animated: true,
       itemIndex: 0,
       sectionIndex,
-      viewOffset: -SECTION_HEADER_HEIGHT,  // ⭐ 調整 offset 修正偏差
-      viewPosition: 0, // 保持 section 在頂部
+      viewOffset: SECTION_HEADER_HEIGHT * -1, // 避免 header 被遮住
+      viewPosition: 0,
     });
   }
 };
 
-
+// 📌 主組件
 export default function WordsScreen() {
   const [sections, setSections] = useState<{ title: string; data: Word[] }[]>([]);
 
@@ -90,17 +101,7 @@ export default function WordsScreen() {
             </View>
           )}
           stickySectionHeadersEnabled={false}
-          getItemLayout={(data, index) => {
-            const sectionIndex = sections.findIndex(section =>
-              section.data.some(word => word.id === data?.[index]?.id)
-            );
-            const sectionOffset = sectionIndex * SECTION_HEADER_HEIGHT;
-            return {
-              length: ITEM_HEIGHT,
-              offset: sectionOffset + index * ITEM_HEIGHT,
-              index,
-            };
-          }}
+          getItemLayout={getItemLayout} // ✅ 使用最佳化的 getItemLayout
           onScrollToIndexFailed={(info) => {
             console.warn('Scroll failed, retrying...', info);
             setTimeout(() => {
@@ -119,6 +120,7 @@ export default function WordsScreen() {
   );
 }
 
+// 📌 樣式
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -128,11 +130,11 @@ const styles = StyleSheet.create({
   item: {
     backgroundColor: '#f9c2ff',
     padding: 20,
-    height: ITEM_HEIGHT, // Fixed height
+    height: ITEM_HEIGHT, // 固定 item 高度
     borderRadius: 8,
   },
   headerContainer: {
-    height: SECTION_HEADER_HEIGHT, // Fixed height
+    height: SECTION_HEADER_HEIGHT, // 固定 header 高度
     justifyContent: 'center',
     backgroundColor: '#fff',
   },
