@@ -14,7 +14,7 @@ interface CustomDrawerContentProps {
 }
 
 // Home Screen Component
-function HomeScreen() {
+function TestScreen() {
   return <Text style={styles.screenText}>This is Home Screen</Text>;
 }
 
@@ -49,7 +49,7 @@ const Drawer = createDrawerNavigator();
 export default function DrawerNavigator() {
   return (
     <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
-      <Drawer.Screen name="Home" component={HomeScreen} options={{ title: 'Home' }} />
+      <Drawer.Screen name="Test" component={TestScreen} options={{ title: 'Test' }} />
       <Drawer.Screen name="Words" component={WordsScreen} options={{ title: 'Words' }} />
     </Drawer.Navigator>
   );
