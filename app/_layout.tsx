@@ -12,7 +12,6 @@ import jsonData from '../src/database/words.json';
 
 
 
-
 SplashScreen.preventAutoHideAsync();
 
 
@@ -47,13 +46,4 @@ export default function RootLayout() {
     </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  screenText: {
-    fontSize: 24,
-    textAlign: 'center',
-    marginTop: 50,
-  },
-});
-
 

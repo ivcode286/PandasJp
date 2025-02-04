@@ -2,6 +2,7 @@ import React from 'react';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import { View, Text, StyleSheet } from 'react-native';
 import WordsScreen, { scrollToSection } from '../screens/WordsSceen';
+import HomeScreen from '../screens/HomeSceen';
 
 // TypeScript interfaces for props
 interface CustomDrawerItemProps {
@@ -111,7 +112,7 @@ export default function WordsDrawerNavigator() {
     return (
         <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
             <Drawer.Screen name="Word" component={WordScreenWithDrawer} options={{ title: 'Word' }} />
-            <Drawer.Screen name="Home" component={() => <Text style={styles.screenText}>This is Home Screen</Text>} options={{ title: 'Home' }} />
+            <Drawer.Screen name="Home" component={HomeScreen} />
         </Drawer.Navigator>
     );
 }

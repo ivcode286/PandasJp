@@ -8,6 +8,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import DrawerNavigator from './DrawerNavigator';
 import WordsDrawerNavigator from './WordsScreenWithDrawer';
 import WordsScreen from '../screens/WordsSceen';
+import HomeScreen from '../screens/HomeSceen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -40,10 +41,10 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Drawer"
-        component={WordsScreen}
+        component={HomeScreen}
         options={{
-          title: 'WordsScreen',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="menu.fill" color={color || 'white'} />,
+          title: 'HomeScreen',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color || 'white'} />,
         }}
       />
     </Tabs.Navigator>
