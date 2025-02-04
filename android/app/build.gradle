@@ -86,7 +86,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.pandasjp"
+    namespace "com.pandasbeginner.PandasJp"
     defaultConfig {
         applicationId 'com.pandasbeginner.PandasJp'
         minSdkVersion rootProject.ext.minSdkVersion

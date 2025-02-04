@@ -21,6 +21,14 @@ export const wordsDatabase = new Database({
   modelClasses: [Word],
 });
 
+
+// ✅ 確保 `global.wordsDatabase` 可用，防止 Garbage Collection 清除
+declare global {
+  var wordsDatabase: Database;
+}
+global.wordsDatabase = wordsDatabase; // ✅ 這樣 `global.wordsDatabase` 可以在整個專案中使用
+
+
 // New seedDatabase function for native
 export const seedDatabaseFromJson = async (jsonData: any[]) => {
   try {
@@ -47,3 +55,4 @@ export const seedDatabaseFromJson = async (jsonData: any[]) => {
     console.error('Error seeding words database (native) from JSON:', error);
   }
 };
+
