@@ -10,7 +10,7 @@ import Word from './models/Word';
 const adapter = new SQLiteAdapter({
   dbName: 'wordsDB', // This is the name of your native database
   schema: wordsSchema,
-  // Do not enable JSI for Expo
+  jsi: true, // ✅ 強制使用 JSI，避免 Bridgeless Mode 出錯
   onSetUpError: (error: any) => {
     console.error('SQLite Adapter Error (native):', error);
   },
