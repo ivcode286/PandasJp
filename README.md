@@ -21,11 +21,15 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
  -Run on Android by android simulator
 npm run android
 
--build android
+-build android by eas cloud
+build by eas cloud
 eas build --platform android --profile development  
 
-eas build:list (download apk)
-adb install C://xxxxx.apk
+-build andoird local and testing on android device
+(apk generated in android/app/build/outputs/apk/release/app-release.apk)
+cd android
+./gradlew assembleRelease              
+adb install android/app/build/outputs/apk/release/app-release.apk
 
 
 In the output, you'll find options to open the app in a
