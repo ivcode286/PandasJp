@@ -29,7 +29,7 @@ adb install C://xxxxx.apk
 npx expo start
 
 -run android in Custom Development Build (Managed Workflow +custom )
-expo run:android             -> 開ANDROID simulator 
+npx expo run:android          -> BUILD,able to install in ANDROID simulator 
 expo start --dev-client      -> vscode run server
 
 
@@ -70,4 +70,3 @@ Join our community of developers creating universal apps.
 
 使用 Expo 自帶的檢查工具來更新所有不符合版本的依賴：
 npx expo install --check
-npx expo install
