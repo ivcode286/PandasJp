@@ -21,6 +21,9 @@ export const wordsDatabase = new Database({
   modelClasses: [Word],
 });
 
+console.log('🔍 JSI SQLiteAdapter:', SQLiteAdapter.prototype);
+console.log('SQLiteAdapter available:', SQLiteAdapter);
+
 // New seedDatabase function for native
 export const seedDatabaseFromJson = async (jsonData: any[]) => {
   try {

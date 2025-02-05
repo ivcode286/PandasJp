@@ -30,7 +30,7 @@ npx expo start
 
 -run android in Custom Development Build (Managed Workflow +custom )
 npx expo run:android          -> BUILD,able to install in ANDROID simulator 
-expo start --dev-client      -> vscode run server
+npx expo start --dev-client      -> vscode run server
 
 
 In the output, you'll find options to open the app in a
