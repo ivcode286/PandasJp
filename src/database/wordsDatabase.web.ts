@@ -3,7 +3,7 @@ import { Database } from '@nozbe/watermelondb';
 import LokiJSAdapter from '@nozbe/watermelondb/adapters/lokijs';
 import wordsSchema from './wordsSchema';
 import Word from './models/Word';
-import { computeHash } from '@/app/utils/computeHash';
+import { computeHash } from '@/src/utils/computeHash';
 
 const adapter = new LokiJSAdapter({
   dbName: 'wordsDB', // This is the name of your web database
