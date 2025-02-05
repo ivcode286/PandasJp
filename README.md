@@ -28,8 +28,8 @@ eas build --platform android --profile development
 -build andoird local and testing on android device
 (apk generated in android/app/build/outputs/apk/release/app-release.apk)
 cd android
-./gradlew assembleRelease              
-adb install android/app/build/outputs/apk/release/app-release.apk
+./gradlew assembleRelease        
+adb install app/build/outputs/apk/release/app-release.apk
 
 
 In the output, you'll find options to open the app in a
