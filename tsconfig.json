@@ -14,7 +14,8 @@
     "skipLibCheck": true, // Prevents unnecessary TypeScript errors
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "types": ["node"]
   },
   "include": [
     "**/*.ts",
