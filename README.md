@@ -29,7 +29,8 @@ adb install C://xxxxx.apk
 npx expo start
 
 -run android in Custom Development Build (Managed Workflow +custom )
-expo run:android
+expo run:android             -> 開ANDROID simulator 
+expo start --dev-client      -> vscode run server
 
 
 In the output, you'll find options to open the app in a
