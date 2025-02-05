@@ -1,9 +1,10 @@
 # Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is an Expo project created with create-expo-app.
+This React Native app uses a Custom Development Build (Managed Workflow + support for native modules + local compilation).
+It reads and writes data using WatermelonDB and disables Bridgeless Mode by setting expo.jsEngine=jsc in build.gradle.
 
 ## Get started
-
 1. Install dependencies
 
    ```bash
@@ -12,25 +13,21 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 2. Start the app
 
-   ```bash
-    npx expo start
- 
- -Run on expo web or expo go
-  npm start
+   ```bash  Run on Web
+    npx expo start /npm start
 
- -Run on Android by android simulator
-npm run android
+## 
+   -run android locally by Custom Development Build (Managed Workflow +custom )
+   npx expo run:android                 **Build app and install in ANDROID simulator**
+   npx expo start --dev-client          **Run app,don't need to reinstall the APK/IPA every time,just restart the app to apply changes.** 
 
--build android
-eas build --platform android --profile development  
+   -build android on cloud
+   eas build --platform android --profile development  
+   eas build:list (download apk)
+   adb install C://xxxxx.apk
+   npx expo start
 
-eas build:list (download apk)
-adb install C://xxxxx.apk
-npx expo start
 
--run android in Custom Development Build (Managed Workflow +custom )
-npx expo run:android          -> BUILD,able to install in ANDROID simulator 
-npx expo start --dev-client      -> vscode run server
 
 
 In the output, you'll find options to open the app in a
@@ -67,6 +64,5 @@ Join our community of developers creating universal apps.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
 
 
-
-使用 Expo 自帶的檢查工具來更新所有不符合版本的依賴：
+Use Expo's built-in checking tool to update all outdated dependencies.
 npx expo install --check
