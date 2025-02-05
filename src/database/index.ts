@@ -12,4 +12,3 @@ if (Platform.OS === 'web') {
 
 export const wordsDatabase = dbModule.wordsDatabase;
 export const seedDatabaseFromJson = dbModule.seedDatabaseFromJson;
-export const getAllWords = dbModule.getAllWords;

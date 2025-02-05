@@ -6,12 +6,12 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
-    "target": "ES2020",  // Updated to ES2020 for dynamic import support
-    "module": "ES2020",  // Required for `import()`
-    "moduleResolution": "node", // Ensures correct module imports
-    "resolveJsonModule": true, // Allows importing JSON files
-    "allowSyntheticDefaultImports": true, // Fixes module import issues
-    "skipLibCheck": true, // Prevents unnecessary TypeScript errors
+    "target": "ES2020",  
+    "module": "ES2020",  
+    "moduleResolution": "node", 
+    "resolveJsonModule": true, 
+    "allowSyntheticDefaultImports": true, 
+    "skipLibCheck": true, 
     "paths": {
       "@/*": ["./*"]
     },
@@ -21,6 +21,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "src/global.d.ts"  // ✅ Correctly placed include
   ]
 }
