@@ -57,9 +57,9 @@ export const scrollToSection = (title: string): void => {
 };
 
 export default function WordsScreen() {
-  const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
   const { speak } = useTextToSpeech();
-
+  const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
+ 
   useEffect(() => {
     const loadWords = async () => {
       const words = await fetchWords();
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   speakerIcon: {
-    padding: 5,
+    padding: 1,
   },
 
 });

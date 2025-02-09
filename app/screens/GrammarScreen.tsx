@@ -1,8 +1,10 @@
+import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React, { useEffect, useState } from 'react';
-import { View, Text, SectionList, StyleSheet, StatusBar } from 'react-native';
+import { View, Text, SectionList, StyleSheet, StatusBar, TouchableOpacity } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import grammarData from '@/src/grammar_basic.json';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
+import { Ionicons } from '@expo/vector-icons';
 
 const SECTION_HEADER_HEIGHT = 70;
 const ITEM_MARGIN = 8;
@@ -13,7 +15,9 @@ const getItemLayout = sectionListGetItemLayout({
 });
 
 const GrammarScreen = () => {
+  const { speak } = useTextToSpeech();
   const [data, setData] = useState<typeof grammarData.chapters>([]);
+
 
   useEffect(() => {
     setData(grammarData.chapters);
@@ -39,7 +43,12 @@ const GrammarScreen = () => {
               <Text style={styles.description}>{item.description}</Text>
               {item.examples.map((example, index) => (
                 <View key={index} style={styles.exampleContainer}>
-                  <Text style={styles.sentence}>{example.sentence}</Text>
+                  <View style={styles.sentenceRow}>
+                    <Text style={styles.sentence}>{example.sentence}</Text>
+                    <TouchableOpacity onPress={() => speak(example.sentence)} style={styles.iconSpacing}>
+                      <Ionicons name="volume-high" size={24} color="black" />
+                    </TouchableOpacity>
+                  </View>
                   <Text style={styles.translation}>{example.translation}</Text>
                 </View>
               ))}
@@ -102,7 +111,13 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#666',
     flexWrap: 'wrap',
+  }, sentenceRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
+  iconSpacing: {
+    marginLeft: 8,
+  }
 });
 
 export default GrammarScreen;
