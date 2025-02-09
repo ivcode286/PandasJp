@@ -7,8 +7,7 @@ import { useFonts } from 'expo-font';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import React from 'react';
 import MyTabs from './navigation/TabNavigator';
-import { seedDatabaseFromJson } from '@/src/database';
-import jsonData from '../src/database/words.json';
+
 
 
 
@@ -23,10 +22,7 @@ export default function RootLayout() {
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
 
-  useEffect(() => {
-    console.log('🟢 Running seedDatabaseFromJson...');
-    seedDatabaseFromJson(jsonData);
-}, []);
+
 
   useEffect(() => {
     if (loaded) {

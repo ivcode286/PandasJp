@@ -1,6 +1,3 @@
-import { wordsDatabase } from '@/src/database';
-import Word from '@/src/database/models/Word';
-import Collection from '@nozbe/watermelondb/Collection';
 import React, { useEffect, useState } from 'react';
 import {
   StyleSheet,
@@ -8,25 +5,21 @@ import {
   Text,
   View,
   StatusBar,
-  ListRenderItemInfo,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
+import { fetchWords } from '@/app/utils/fetchWords'; 
 
-// 創建 SectionList 參考
 export const sectionListRef = React.createRef<SectionList<any>>();
 
-// 全局 Sections 變數
-export let globalSections: { title: string; data: Word[] }[] = [];
+export let globalSections: { title: string; data: any[] }[] = [];
 
-// 固定 header 和 item 高度
 const SECTION_HEADER_HEIGHT = 40;
 const ITEM_HEIGHT = 140;
 const ITEM_MARGIN = 8;
 
-// 分組函數：按字母排序
-const groupWordsByLetter = (words: Word[]) => {
-  const groups: { [letter: string]: Word[] } = {};
+const groupWordsByLetter = (words: any[]) => {
+  const groups: { [letter: string]: any[] } = {};
   words.forEach(word => {
     const letter = word.letter;
     if (!groups[letter]) {
@@ -42,13 +35,11 @@ const groupWordsByLetter = (words: Word[]) => {
     }));
 };
 
-// ✅ 使用 `react-native-section-list-get-item-layout` 來優化 getItemLayout
 const getItemLayout = sectionListGetItemLayout({
-  getItemHeight: () => ITEM_HEIGHT+ ITEM_MARGIN, // 固定 item 高度
-  getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT, // 固定 header 高度
+  getItemHeight: () => ITEM_HEIGHT + ITEM_MARGIN,
+  getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
 });
 
-// ✅ 改進 scrollToSection 確保滾動準確
 export const scrollToSection = (title: string): void => {
   const sectionIndex = globalSections.findIndex(section => section.title === title);
   if (sectionIndex !== -1 && sectionListRef.current) {
@@ -62,21 +53,16 @@ export const scrollToSection = (title: string): void => {
 };
 
 export default function WordsScreen() {
-  const [sections, setSections] = useState<{ title: string; data: Word[] }[]>([]);
+  const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
 
   useEffect(() => {
-    const fetchWords = async () => {
-      try {
-        const wordsCollection = wordsDatabase.get('words') as Collection<Word>;
-        const allWords = await wordsCollection.query().fetch();
-        const groupedSections = groupWordsByLetter(allWords);
-        setSections(groupedSections);
-        globalSections = groupedSections;
-      } catch (error) {
-        console.error('Error fetching words:', error);
-      }
+    const loadWords = async () => {
+      const words = await fetchWords();
+      const groupedSections = groupWordsByLetter(words);
+      setSections(groupedSections);
+      globalSections = groupedSections;
     };
-    fetchWords();
+    loadWords();
   }, []);
 
   return (
@@ -85,12 +71,12 @@ export default function WordsScreen() {
         <SectionList
           ref={sectionListRef}
           sections={sections}
-          keyExtractor={(item, index) => item.id + index.toString()}
-          renderItem={({ item }: ListRenderItemInfo<Word>) => (
+          keyExtractor={(item, index) => item.wordId + index.toString()}
+          renderItem={({ item }) => (
             <View style={styles.item}>
               <Text style={styles.words}>{item.words} </Text>
               <Text style={styles.reading}>{item.pron}</Text>
-              <Text style={styles.meaning}>{item.meaningZh}</Text>
+              <Text style={styles.meaning}>{item.meaning_zh}</Text>
             </View>
           )}
           renderSectionHeader={({ section: { title } }) => (
@@ -99,26 +85,12 @@ export default function WordsScreen() {
             </View>
           )}
           stickySectionHeadersEnabled={false}
-          // @ts-ignore
-          getItemLayout={getItemLayout} // ✅ Optimzied getItemLayout
-          onScrollToIndexFailed={(info) => {
-            console.warn('Scroll failed, retrying...', info);
-            setTimeout(() => {
-              sectionListRef.current?.scrollToLocation({
-                sectionIndex: info.highestMeasuredFrameIndex,
-                itemIndex: 0,
-                animated: true,
-                viewOffset: 0,
-                viewPosition: 0,
-              });
-            }, 100);
-          }}
+          getItemLayout={getItemLayout}
         />
       </SafeAreaView>
     </SafeAreaProvider>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -129,12 +101,12 @@ const styles = StyleSheet.create({
   item: {
     backgroundColor: '#f9c2ff',
     padding: 20,
-    height: ITEM_HEIGHT, // 固定 item 高度
+    height: ITEM_HEIGHT,
     borderRadius: 8,
     marginBottom: ITEM_MARGIN, 
   },
   headerContainer: {
-    height: SECTION_HEADER_HEIGHT, // 固定 header 高度
+    height: SECTION_HEADER_HEIGHT,
     justifyContent: 'center',
     backgroundColor: '#fff',
   },
