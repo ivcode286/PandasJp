@@ -1,4 +1,4 @@
-import wordsData from '@/assets/words.json';
+import wordsData from '@/src/words.json';
 
 export const fetchWords = async () => {
   try {
@@ -8,3 +8,5 @@ export const fetchWords = async () => {
     return [];
   }
 };
+
+

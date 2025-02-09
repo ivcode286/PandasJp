@@ -29,7 +29,6 @@ const CustomDrawerItem: React.FC<CustomDrawerItemProps & { navigation: any }> = 
 // Custom Drawer Content
 const CustomDrawerContent: React.FC<{ navigation: any }> = ({ navigation }) => (
     <DrawerContentScrollView contentContainerStyle={styles.drawerContent}>
-        <Text style={styles.gojuon}>Gojuon</Text>
         <View style={styles.drawerRow}>
             <CustomDrawerItem label="あ" onPress={() => scrollToSection('あ')} navigation={navigation} />
             <CustomDrawerItem label="い" onPress={() => scrollToSection('い')} navigation={navigation} />
