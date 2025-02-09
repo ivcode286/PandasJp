@@ -12,6 +12,8 @@ const MAPPING = {
   'house.fill': 'home',
   'paperplane.fill': 'send',
   'menu.fill': 'menu',
+  'subject.fill': 'subject',
+  'settings.fill': 'settings',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
 } as Partial<
@@ -21,7 +23,7 @@ const MAPPING = {
   >
 >;
 
-export type IconSymbolName = keyof typeof MAPPING|'menu.fill';
+export type IconSymbolName = keyof typeof MAPPING|'menu.fill'|'subject.fill'|'settings.fill';
 
 /**
  * An icon component that uses native SFSymbols on iOS, and MaterialIcons on Android and web. This ensures a consistent look across platforms, and optimal resource usage.

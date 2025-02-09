@@ -1,8 +1,8 @@
 import React from 'react';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import { View, Text, StyleSheet } from 'react-native';
-import WordsScreen, { scrollToSection } from '../screens/WordsSceen';
-import HomeScreen from '../screens/HomeSceen';
+import WordsScreen, { scrollToSection } from '../screens/WordsScreen';
+import HomeScreen from '../screens/HomeScreen';
 
 // TypeScript interfaces for props
 interface CustomDrawerItemProps {

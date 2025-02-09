@@ -7,8 +7,9 @@ import TabBarBackground from '@/components/ui/TabBarBackground';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import DrawerNavigator from './DrawerNavigator';
 import WordsDrawerNavigator from './WordsScreenWithDrawer';
-import WordsScreen from '../screens/WordsSceen';
-import HomeScreen from '../screens/HomeSceen';
+import WordsScreen from '../screens/WordsScreen';
+import HomeScreen from '../screens/HomeScreen';
+import GrammarScreen from '../screens/GrammarScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -39,12 +40,29 @@ export default function MyTabs() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />
+
       <Tabs.Screen
         name="Drawer"
         component={HomeScreen}
         options={{
-          title: 'HomeScreen',
+          title: 'Home',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color || 'white'} />,
+        }}
+      />
+      <Tabs.Screen
+        name="Grammar"
+        component={GrammarScreen}
+        options={{
+          title: 'GrammarScreen',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="subject.fill" color={color || 'white'} />,
+        }}
+      />
+      <Tabs.Screen
+        name="Settings"
+        component={GrammarScreen}
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="settings.fill" color={color || 'white'} />,
         }}
       />
     </Tabs.Navigator>
