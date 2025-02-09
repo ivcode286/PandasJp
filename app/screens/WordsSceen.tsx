@@ -1,4 +1,5 @@
 import useTextToSpeech from '@/hooks/useTextToSpeech';
+import { fetchWords } from '@/src/utils/fetchWords';
 import { Ionicons } from '@expo/vector-icons';
 import React, { useEffect, useState } from 'react';
 import {
@@ -11,7 +12,7 @@ import {
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
-import { fetchWords } from '@/app/utils/fetchWords'; 
+
 
 export const sectionListRef = React.createRef<SectionList<any>>();
 
@@ -62,12 +63,17 @@ export default function WordsScreen() {
   useEffect(() => {
     const loadWords = async () => {
       const words = await fetchWords();
+      if (!Array.isArray(words)) {
+        console.error("fetchWords did not return an array:", words);
+        return;
+      }
       const groupedSections = groupWordsByLetter(words);
       setSections(groupedSections);
       globalSections = groupedSections;
     };
     loadWords();
   }, []);
+  
 
   return (
     <SafeAreaProvider>
@@ -149,3 +155,5 @@ const styles = StyleSheet.create({
   },
 
 });
+
+

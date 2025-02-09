@@ -1,12 +1,10 @@
 import wordsData from '@/src/words.json';
 
-export const fetchWords = async () => {
+export const fetchWords = async (): Promise<any[]> => {
   try {
-    return wordsData; // 直接返回靜態 JSON 數據
+    return wordsData; 
   } catch (error) {
     console.error('Error fetching words:', error);
-    return [];
+    return []; 
   }
 };
-
-

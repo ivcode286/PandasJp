@@ -139,11 +139,5 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 18, // Increase font size to prevent text clipping
         minWidth: 40, // Ensure the text block is wide enough
-    },
-    gojuon:{
-        fontSize: 18,
-        textAlign: 'center',
-        marginTop: 10,
-        color: 'white',
     }
 });
