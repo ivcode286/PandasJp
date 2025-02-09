@@ -118,18 +118,13 @@ export default function WordsDrawerNavigator() {
 
 // Styles
 const styles = StyleSheet.create({
-    screenText: {
-        fontSize: 24,
-        textAlign: 'center',
-        marginTop: 50,
-    },
     drawerContent: {
         paddingHorizontal: 10,
     },
     drawerRow: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginVertical: 10,
+        marginVertical: 8,
     },
     drawerItem: {
         flex: 1, // Make DrawerItem occupy the available space
@@ -139,5 +134,5 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 18, // Increase font size to prevent text clipping
         minWidth: 40, // Ensure the text block is wide enough
-    }
+    },
 });
