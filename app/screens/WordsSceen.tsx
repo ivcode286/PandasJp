@@ -1,3 +1,5 @@
+import useTextToSpeech from '@/hooks/useTextToSpeech';
+import { Ionicons } from '@expo/vector-icons';
 import React, { useEffect, useState } from 'react';
 import {
   StyleSheet,
@@ -5,6 +7,7 @@ import {
   Text,
   View,
   StatusBar,
+  TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
@@ -54,6 +57,7 @@ export const scrollToSection = (title: string): void => {
 
 export default function WordsScreen() {
   const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
+  const { speak } = useTextToSpeech();
 
   useEffect(() => {
     const loadWords = async () => {
@@ -75,8 +79,13 @@ export default function WordsScreen() {
           renderItem={({ item }) => (
             <View style={styles.item}>
               <Text style={styles.words}>{item.words} </Text>
-              <Text style={styles.reading}>{item.pron}</Text>
               <Text style={styles.meaning}>{item.meaning_zh}</Text>
+              <View style={styles.row}>
+                <Text style={styles.reading}>{item.pron}</Text>
+                <TouchableOpacity onPress={() => speak(item.words)} style={styles.speakerIcon}>
+                  <Ionicons name="volume-high" size={24} color="black" />
+                </TouchableOpacity>
+              </View>
             </View>
           )}
           renderSectionHeader={({ section: { title } }) => (
@@ -85,6 +94,7 @@ export default function WordsScreen() {
             </View>
           )}
           stickySectionHeadersEnabled={false}
+          // @ts-ignore
           getItemLayout={getItemLayout}
         />
       </SafeAreaView>
@@ -103,7 +113,7 @@ const styles = StyleSheet.create({
     padding: 20,
     height: ITEM_HEIGHT,
     borderRadius: 8,
-    marginBottom: ITEM_MARGIN, 
+    marginBottom: ITEM_MARGIN,
   },
   headerContainer: {
     height: SECTION_HEADER_HEIGHT,
@@ -122,9 +132,20 @@ const styles = StyleSheet.create({
   reading: {
     fontSize: 18,
     color: '#555',
+    flex: 1, // Allows it to take remaining space
   },
   meaning: {
     fontSize: 16,
     color: '#777',
   },
+  row: {
+    flexDirection: "row", // Aligns meaning & icon in the same row
+    alignItems: "center", // Centers items vertically
+    justifyContent: "space-between", // Pushes them to opposite sides
+    marginTop: 5,
+  },
+  speakerIcon: {
+    padding: 5,
+  },
+
 });
