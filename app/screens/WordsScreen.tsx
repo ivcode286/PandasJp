@@ -102,6 +102,7 @@ export default function WordsScreen() {
           stickySectionHeadersEnabled={false}
           // @ts-ignore
           getItemLayout={getItemLayout}
+          contentContainerStyle={{ paddingBottom: 80 }}
         />
       </SafeAreaView>
     </SafeAreaProvider>

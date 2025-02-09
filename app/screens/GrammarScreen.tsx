@@ -48,6 +48,7 @@ const GrammarScreen = () => {
           stickySectionHeadersEnabled={false}
           // @ts-ignore
           getItemLayout={getItemLayout}
+          contentContainerStyle={{ paddingBottom: 80 }}  //prevent bottom tab hide section list end part
         />
       </SafeAreaView>
     </SafeAreaProvider>
