@@ -9,10 +9,8 @@ import { OpaqueColorValue, StyleProp, ViewStyle } from 'react-native';
 const MAPPING = {
   // See MaterialIcons here: https://icons.expo.fyi
   'house.fill': 'home',
-  'paperplane.fill': 'send',
-  'menu.fill': 'menu',
-  'character.square.fill': 'menu',
-  'pencil.line': 'subject',
+  'character.square.fill': 'abc',
+  'pencil.line': 'menu-book',
   'gearshape.fill': 'settings',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
