@@ -2,9 +2,11 @@ import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React, { useEffect, useState } from 'react';
 import { View, Text, SectionList, StyleSheet, StatusBar, TouchableOpacity } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
-import grammarData from '@/src/grammar_basic.json';
+import grammarData from '@/src/N5_BASIC_MULTI_LANG.json'; // 讀取多語言 JSON
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 import { Ionicons } from '@expo/vector-icons';
+
+const DEFAULT_LANGUAGE = 'zh-CN';   //"zh-TW","zh-CN","en"
 
 const SECTION_HEADER_HEIGHT = 70;
 const ITEM_MARGIN = 8;
@@ -16,21 +18,40 @@ const getItemLayout = sectionListGetItemLayout({
 
 const GrammarScreen = () => {
   const { speak } = useTextToSpeech();
-  const [data, setData] = useState<typeof grammarData.chapters>([]);
-
+  
+  const [data, setData] = useState<
+    {
+      title: string;
+      data: {
+        pattern: string;
+        description: string;
+        examples: { sentence: string; translation: string }[];
+      }[];
+    }[]
+  >([]);
 
   useEffect(() => {
-    setData(grammarData.chapters);
+    // 轉換 JSON 為符合 SectionList 格式
+    const transformedData = grammarData.chapters.map(chapter => ({
+      title: chapter.title[DEFAULT_LANGUAGE] || chapter.title['zh-TW'], // use default language，if no just fallback
+      data: chapter.sections.map(section => ({
+        pattern: section.pattern[DEFAULT_LANGUAGE] || section.pattern['zh-TW'],
+        description: section.description[DEFAULT_LANGUAGE] || section.description['zh-TW'],
+        examples: section.examples.map(example => ({
+          sentence: example.sentence[DEFAULT_LANGUAGE] || example.sentence['zh-TW'],
+          translation: example.translation[DEFAULT_LANGUAGE] || example.translation['zh-TW'],
+        })),
+      })),
+    }));
+
+    setData(transformedData);
   }, []);
 
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <SectionList
-          sections={data.map(chapter => ({
-            title: chapter.title,
-            data: chapter.sections,
-          }))}
+          sections={data}
           keyExtractor={(item, index) => item.pattern + index}
           renderSectionHeader={({ section: { title } }) => (
             <View style={styles.headerContainer}>
@@ -55,9 +76,8 @@ const GrammarScreen = () => {
             </View>
           )}
           stickySectionHeadersEnabled={false}
-          // @ts-ignore
           getItemLayout={getItemLayout}
-          contentContainerStyle={{ paddingBottom: 80 }}  //prevent bottom tab hide section list end part
+          contentContainerStyle={{ paddingBottom: 80 }}
         />
       </SafeAreaView>
     </SafeAreaProvider>
@@ -111,7 +131,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#666',
     flexWrap: 'wrap',
-  }, sentenceRow: {
+  },
+  sentenceRow: {
     flexDirection: 'row',
     alignItems: 'center',
   },
