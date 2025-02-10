@@ -37,7 +37,7 @@ export default function MyTabs() {
         component={WordsDrawerNavigator}
         options={{
           title: 'Words',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="character.square.fill" color={color} />,
         }}
       />
 
@@ -54,7 +54,7 @@ export default function MyTabs() {
         component={GrammarScreen}
         options={{
           title: 'GrammarScreen',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="subject.fill" color={color || 'white'} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="pencil.line" color={color || 'white'} />,
         }}
       />
       <Tabs.Screen
@@ -62,7 +62,7 @@ export default function MyTabs() {
         component={GrammarScreen}
         options={{
           title: 'Settings',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="settings.fill" color={color || 'white'} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color || 'white'} />,
         }}
       />
     </Tabs.Navigator>

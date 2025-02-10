@@ -8,12 +8,12 @@ import { OpaqueColorValue, StyleProp, ViewStyle } from 'react-native';
 // Add your SFSymbol to MaterialIcons mappings here.
 const MAPPING = {
   // See MaterialIcons here: https://icons.expo.fyi
-  // See SF Symbols in the SF Symbols app on Mac.
   'house.fill': 'home',
   'paperplane.fill': 'send',
   'menu.fill': 'menu',
-  'subject.fill': 'subject',
-  'settings.fill': 'settings',
+  'character.square.fill': 'menu',
+  'pencil.line': 'subject',
+  'gearshape.fill': 'settings',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
 } as Partial<
@@ -23,7 +23,7 @@ const MAPPING = {
   >
 >;
 
-export type IconSymbolName = keyof typeof MAPPING|'menu.fill'|'subject.fill'|'settings.fill';
+export type IconSymbolName = keyof typeof MAPPING|'menu.fill'|'pencil.line'|'settings.fill';
 
 /**
  * An icon component that uses native SFSymbols on iOS, and MaterialIcons on Android and web. This ensures a consistent look across platforms, and optimal resource usage.
