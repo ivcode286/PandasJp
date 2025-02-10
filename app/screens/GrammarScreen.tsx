@@ -9,7 +9,9 @@ import { Ionicons } from '@expo/vector-icons';
 const DEFAULT_LANGUAGE = 'zh-CN';   //"zh-TW","zh-CN","en"
 
 const SECTION_HEADER_HEIGHT = 70;
-const ITEM_MARGIN = 8;
+const ITEM_MARGIN = 12;   
+const TEXT_ROW_INTERVAL =20; 
+
 
 const getItemLayout = sectionListGetItemLayout({
   getItemHeight: (_, index) => 80 + ITEM_MARGIN * index,
@@ -70,7 +72,7 @@ const GrammarScreen = () => {
                       <Ionicons name="volume-high" size={24} color="black" />
                     </TouchableOpacity>
                   </View>
-                  <Text style={styles.translation}>{'       '+example.translation}</Text>
+                  <Text style={styles.translation}>{example.translation}</Text>
                 </View>
               ))}
             </View>
@@ -78,7 +80,7 @@ const GrammarScreen = () => {
           stickySectionHeadersEnabled={false}
            // @ts-ignore
           getItemLayout={getItemLayout}
-          contentContainerStyle={{ paddingBottom: 80 }}
+          contentContainerStyle={{ paddingBottom: 300 }}
         />
       </SafeAreaView>
     </SafeAreaProvider>
@@ -99,38 +101,39 @@ const styles = StyleSheet.create({
     minHeight: 100,
   },
   headerContainer: {
-    height: SECTION_HEADER_HEIGHT,
+    height: SECTION_HEADER_HEIGHT, // 調整 section 高度
     justifyContent: 'center',
     backgroundColor: '#fff',
-    paddingVertical: 15,
+    paddingVertical: 20, // 增加標題上下內邊距
   },
   header: {
-    fontSize: 26,
+    fontSize: 28, 
     fontWeight: 'bold',
-    paddingLeft: 10,
+    paddingLeft: 15, // 增加左邊距，讓標題更有層次
     flexWrap: 'wrap',
   },
   pattern: {
-    fontSize: 20,
+    fontSize: 24, // 原本 20 + 4
     fontWeight: 'bold',
     color: '#333',
     flexWrap: 'wrap',
   },
   description: {
-    fontSize: 16,
+    fontSize: 20, // 原本 16 + 4
     flexWrap: 'wrap',
+    color: '#1f9024',
   },
   exampleContainer: {
-    marginTop: 5,
+    marginTop: TEXT_ROW_INTERVAL,
   },
   sentence: {
-    fontSize: 16,
+    fontSize: 20, // 原本 16 + 4
     color: '#000',
     flex: 1, // 讓文字區塊填滿可用空間
     flexWrap: 'wrap', // 讓長句子換行
   },
   translation: {
-    fontSize: 14,
+    fontSize: 18, // 原本 14 + 4
     color: '#666',
     flexWrap: 'wrap',
   },
@@ -145,5 +148,6 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end', // 讓圖示靠右對齊
   }
 });
+
 
 export default GrammarScreen;
