@@ -70,7 +70,7 @@ const GrammarScreen = () => {
                       <Ionicons name="volume-high" size={24} color="black" />
                     </TouchableOpacity>
                   </View>
-                  <Text style={styles.translation}>{'     '+example.translation}</Text>
+                  <Text style={styles.translation}>{'       '+example.translation}</Text>
                 </View>
               ))}
             </View>
