@@ -102,7 +102,7 @@ const Drawer = createDrawerNavigator();
 function WordScreenWithDrawer() {
     return (
         <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
-            <Drawer.Screen name="WordMain" component={WordsScreen} options={{ title: 'Word', headerShown: false }} />
+            <Drawer.Screen name="WordMain" component={WordsScreen} options={{ title: 'Word', headerShown: true  }} />
         </Drawer.Navigator>
     );
 }
@@ -110,7 +110,7 @@ function WordScreenWithDrawer() {
 export default function WordsDrawerNavigator() {
     return (
         <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
-            <Drawer.Screen name="Word" component={WordScreenWithDrawer} options={{ title: 'Word' }} />
+            <Drawer.Screen name="Word" component={WordScreenWithDrawer} options={{ title: 'Word', headerShown: false }} />
             <Drawer.Screen name="Home" component={HomeScreen} />
         </Drawer.Navigator>
     );
