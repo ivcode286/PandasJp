@@ -126,7 +126,8 @@ const styles = StyleSheet.create({
   sentence: {
     fontSize: 16,
     color: '#000',
-    flexWrap: 'wrap',
+    flex: 1, // 讓文字區塊填滿可用空間
+    flexWrap: 'wrap', // 讓長句子換行
   },
   translation: {
     fontSize: 14,
@@ -136,9 +137,12 @@ const styles = StyleSheet.create({
   sentenceRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between', // 讓文字與圖示分開
+    width: '100%', // 讓 row 佔滿父容器
   },
   iconSpacing: {
     marginLeft: 8,
+    alignSelf: 'flex-end', // 讓圖示靠右對齊
   }
 });
 
