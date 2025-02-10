@@ -2,7 +2,7 @@ import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React, { useEffect, useState } from 'react';
 import { View, Text, SectionList, StyleSheet, StatusBar, TouchableOpacity } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
-import grammarData from '@/src/N5_BASIC_MULTI_LANG.json'; // 讀取多語言 JSON
+import grammarData from '@/src/N5_BASIC_NO_INDEX.json'; // 讀取多語言 JSON
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -70,12 +70,13 @@ const GrammarScreen = () => {
                       <Ionicons name="volume-high" size={24} color="black" />
                     </TouchableOpacity>
                   </View>
-                  <Text style={styles.translation}>{example.translation}</Text>
+                  <Text style={styles.translation}>{'     '+example.translation}</Text>
                 </View>
               ))}
             </View>
           )}
           stickySectionHeadersEnabled={false}
+           // @ts-ignore
           getItemLayout={getItemLayout}
           contentContainerStyle={{ paddingBottom: 80 }}
         />
