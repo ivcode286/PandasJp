@@ -108,7 +108,11 @@ function WordScreenWithDrawer() {
     const level = route.params?.level ?? 'N5'; // 確保 level 不為 undefined
 
     return (
-        <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
+        <Drawer.Navigator 
+        screenOptions={{
+            swipeEdgeWidth: 30,    // ✅ 限制 Drawer 手勢區域 (30px)
+        }}
+        drawerContent={(props) => <CustomDrawerContent {...props} /> }>
             <Drawer.Screen
                 name="WordsScreen"
                 component={WordsScreen}
@@ -121,7 +125,11 @@ function WordScreenWithDrawer() {
 
 export default function WordsDrawerNavigator() {
     return (
-        <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
+        <Drawer.Navigator 
+        screenOptions={{
+            swipeEdgeWidth: 40,    // ✅ 限制 Drawer 手勢區域 (30px)
+        }}
+        drawerContent={(props) => <CustomDrawerContent {...props} />}>
             <Drawer.Screen name="Word" component={WordScreenWithDrawer} options={{ title: 'Word', headerShown: false }} />
         </Drawer.Navigator>
     );

@@ -59,7 +59,7 @@ const learningPath = [
 const LearningPathScreen = () => {
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.header}>📌 Learning Path：從零開始到 JLPT N5</Text>
+      <Text style={styles.header}>📌 從零開始到 JLPT N5</Text>
       {learningPath.map((item, index) => (
         <View key={index} style={styles.card}>
           <Text style={styles.cardTitle}>{item.title} ({item.duration})</Text>

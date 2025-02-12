@@ -47,6 +47,7 @@ export default function MyTabs() {
         component={HomeScreen}
         options={{
           title: 'Home',
+          headerShown: true,
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color || 'white'} />,
         }}
       />
