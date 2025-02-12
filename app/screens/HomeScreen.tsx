@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { View, Text, FlatList, TouchableOpacity, ScrollView, StyleSheet, StatusBar } from "react-native";
+import React from "react";
+import { View, Text, ScrollView, StyleSheet, StatusBar } from "react-native";
 
 const learningPath = [
   {
@@ -57,32 +57,19 @@ const learningPath = [
 ];
 
 const LearningPathScreen = () => {
-  const [expanded, setExpanded] = useState<number | null>(null);
-
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.header}>📌 Learning Path：從零開始到 JLPT N5</Text>
-      <FlatList
-        data={learningPath}
-        keyExtractor={(item, index) => index.toString()}
-        renderItem={({ item, index }) => (
-          <View style={styles.card}>
-            <TouchableOpacity
-              style={styles.cardHeader}
-              onPress={() => setExpanded(expanded === index ? null : index)}
-            >
-              <Text style={styles.cardTitle}>{item.title} ({item.duration})</Text>
-            </TouchableOpacity>
-            {expanded === index && (
-              <View style={styles.cardContent}>
-                {item.content.map((point, idx) => (
-                  <Text key={idx} style={styles.cardText}>• {point}</Text>
-                ))}
-              </View>
-            )}
+      {learningPath.map((item, index) => (
+        <View key={index} style={styles.card}>
+          <Text style={styles.cardTitle}>{item.title} ({item.duration})</Text>
+          <View style={styles.cardContent}>
+            {item.content.map((point, idx) => (
+              <Text key={idx} style={styles.cardText}>• {point}</Text>
+            ))}
           </View>
-        )}
-      />
+        </View>
+      ))}
     </ScrollView>
   );
 };
@@ -92,13 +79,13 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: StatusBar.currentHeight || 0,
     marginHorizontal: 16,
-    //backgroundColor: "#fff",
   },
   header: {
     fontSize: 28,
     fontWeight: "bold",
     paddingLeft: 15,
     marginBottom: 20,
+    color: "#fff",
   },
   card: {
     backgroundColor: "#f9c2ff",
@@ -107,15 +94,11 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     minHeight: 100,
   },
-  cardHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
   cardTitle: {
     fontSize: 20,
     fontWeight: "bold",
     color: "#333",
+    marginBottom: 10,
   },
   cardContent: {
     marginTop: 10,
