@@ -11,6 +11,8 @@ import WordsScreen from '../screens/WordsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import GrammarScreen from '../screens/GrammarScreen';
 import HiraganaScreen from '../screens/basic/HiraganaScreen';
+import KatakanaScreen from '../screens/basic/KatakanaScreen';
+import KanaComparisonScreen from '../screens/basic/KanaComparisonScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -60,7 +62,7 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Settings"
-        component={HiraganaScreen}
+        component={KanaComparisonScreen}
         options={{
           title: 'Settings',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color || 'white'} />,
