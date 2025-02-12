@@ -5,14 +5,11 @@ import { Colors } from '@/constants/Colors';
 import { HapticTab } from '@/components/HapticTab';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import DrawerNavigator from './DrawerNavigator';
 import WordsDrawerNavigator from './WordsScreenWithDrawer';
-import WordsScreen from '../screens/WordsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import GrammarScreen from '../screens/GrammarScreen';
-import HiraganaScreen from '../screens/basic/HiraganaScreen';
-import KatakanaScreen from '../screens/basic/KatakanaScreen';
 import KanaComparisonScreen from '../screens/basic/KanaComparisonScreen';
+import WordsNavigator from './WordsNavigator';
 
 const Tabs = createBottomTabNavigator();
 
@@ -37,7 +34,8 @@ export default function MyTabs() {
     >
       <Tabs.Screen
         name="Words"
-        component={WordsDrawerNavigator}
+        //component={WordsDrawerNavigator}
+        component={WordsNavigator}   
         options={{
           title: 'Words',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="character.square.fill" color={color} />,
