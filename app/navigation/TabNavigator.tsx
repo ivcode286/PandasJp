@@ -10,6 +10,7 @@ import WordsDrawerNavigator from './WordsScreenWithDrawer';
 import WordsScreen from '../screens/WordsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import GrammarScreen from '../screens/GrammarScreen';
+import HiraganaScreen from '../screens/basic/HiraganaScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -59,7 +60,7 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Settings"
-        component={GrammarScreen}
+        component={HiraganaScreen}
         options={{
           title: 'Settings',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color || 'white'} />,
