@@ -111,7 +111,6 @@ export default function WordsDrawerNavigator() {
     return (
         <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
             <Drawer.Screen name="Word" component={WordScreenWithDrawer} options={{ title: 'Word', headerShown: false }} />
-            <Drawer.Screen name="Home" component={HomeScreen} />
         </Drawer.Navigator>
     );
 }
