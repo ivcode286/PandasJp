@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, ScrollView, useColorScheme, SafeAreaView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
-import { Ionicons } from '@expo/vector-icons';
 
 const HIRAGANA_LIST = [
   [['あ', 'a'], ['い', 'i'], ['う', 'u'], ['え', 'e'], ['お', 'o']],
@@ -24,21 +23,30 @@ const HiraganaScreen = () => {
   const { speak } = useTextToSpeech();
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: isDark ? '#1a1a1a' : '#fff' }}>
-      <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 80 }}>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 16, color: isDark ? '#fff' : '#000' }}>
-          平假名(按字讀音)
-        </Text>
+    <SafeAreaView style={{ flex: 1, backgroundColor: isDark ? '#1a1a1a' : '#fff', alignItems: 'center' }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', textAlign: 'center', marginVertical: 12, color: isDark ? '#fff' : '#000' }}>
+        平假名(按字讀音)
+      </Text>
+      <ScrollView contentContainerStyle={{ paddingBottom: 40 }}>
         {HIRAGANA_LIST.map((row, rowIndex) => (
-          <View key={rowIndex} style={{ flexDirection: 'row', justifyContent: 'center' }}>
+          <View key={rowIndex} style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
             {row.map(([char, romaji], charIndex) => (
               <TouchableOpacity
                 key={charIndex}
                 onPress={() => speak(char)}
-                style={{ width: 70, height: 80, alignItems: 'center', justifyContent: 'center', margin: 4, borderWidth: 1, borderColor: isDark ? '#fff' : '#000' }}
+                style={{
+                  width: 60,
+                  height: 55,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: 2,
+                  borderWidth: 1,
+                  borderColor: isDark ? '#fff' : '#000',
+                  borderRadius: 5
+                }}
               >
-                <Text style={{ fontSize: 32, fontWeight: '600', color: isDark ? '#fff' : '#000' }}>{char}</Text>
-                <Text style={{ fontSize: 16, color: isDark ? '#aaa' : '#555' }}>{romaji}</Text>
+                <Text style={{ fontSize: 24, fontWeight: '600', color: isDark ? '#fff' : '#000' }}>{char}</Text>
+                <Text style={{ fontSize: 12, color: isDark ? '#aaa' : '#555' }}>{romaji}</Text>
               </TouchableOpacity>
             ))}
           </View>

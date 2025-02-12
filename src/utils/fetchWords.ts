@@ -1,4 +1,4 @@
-import wordsData from '@/src/words.json';
+import wordsData from '../words.json';
 
 export const fetchWords = async (): Promise<any[]> => {
   try {

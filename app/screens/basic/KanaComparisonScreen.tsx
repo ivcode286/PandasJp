@@ -23,21 +23,32 @@ const KanaComparisonScreen = () => {
   const { speak } = useTextToSpeech();
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: isDark ? '#1a1a1a' : '#fff' }}>
-      <ScrollView contentContainerStyle={{ padding: 16, paddingBottom: 80 }}>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 16, color: isDark ? '#fff' : '#000' }}>
-          平假名 & 片假名 對照表
-        </Text>
+    <SafeAreaView style={{ flex: 1, backgroundColor: isDark ? '#1a1a1a' : '#fff', alignItems: 'center' }}>
+      <Text style={{ fontSize: 20, fontWeight: 'bold', textAlign: 'center', marginVertical: 12, color: isDark ? '#fff' : '#000' }}>
+        平假名 & 片假名 對照表
+      </Text>
+      <ScrollView contentContainerStyle={{ paddingBottom: 40 }}>
         {KANA_LIST.map((row, rowIndex) => (
-          <View key={rowIndex} style={{ flexDirection: 'row', justifyContent: 'center' }}>
+          <View key={rowIndex} style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
             {row.map(([hiragana, katakana, romaji], charIndex) => (
               <TouchableOpacity
                 key={charIndex}
                 onPress={() => speak(hiragana)}
-                style={{ width: 100, height: 80, alignItems: 'center', justifyContent: 'center', margin: 4, borderWidth: 1, borderColor: isDark ? '#fff' : '#000' }}
+                style={{
+                  width: 70,
+                  height: 60,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: 2,
+                  borderWidth: 1,
+                  borderColor: isDark ? '#fff' : '#000',
+                  borderRadius: 5
+                }}
               >
-                <Text style={{ fontSize: 28, fontWeight: '600', color: isDark ? '#fff' : '#000' }}>{hiragana}   {katakana}</Text>
-                <Text style={{ fontSize: 16, color: isDark ? '#aaa' : '#555' }}>{romaji}</Text>
+                <Text style={{ fontSize: 20, fontWeight: '600', color: isDark ? '#fff' : '#000' }}>
+                  {hiragana} {katakana}
+                </Text>
+                <Text style={{ fontSize: 12, color: isDark ? '#aaa' : '#555' }}>{romaji}</Text>
               </TouchableOpacity>
             ))}
           </View>

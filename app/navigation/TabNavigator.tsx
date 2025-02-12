@@ -10,6 +10,8 @@ import HomeScreen from '../screens/HomeScreen';
 import GrammarScreen from '../screens/GrammarScreen';
 import KanaComparisonScreen from '../screens/basic/KanaComparisonScreen';
 import WordsNavigator from './WordsNavigator';
+import HiraganaScreen from '../screens/basic/HiraganaScreen';
+import KatakanaScreen from '../screens/basic/KatakanaScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -46,7 +48,7 @@ export default function MyTabs() {
         name="Drawer"
         component={HomeScreen}
         options={{
-          title: 'Home',
+          title: 'Learning Path',
           headerShown: true,
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color || 'white'} />,
         }}
@@ -61,7 +63,7 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Settings"
-        component={KanaComparisonScreen}
+        component={KatakanaScreen }
         options={{
           title: 'Settings',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color || 'white'} />,
