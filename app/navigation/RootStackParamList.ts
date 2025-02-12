@@ -1,4 +1,4 @@
 export type RootStackParamList = {
     WordsMenu: undefined;
-    WordsWithDrawer: { level: string }; // ✅ 定義 WordsWithDrawer 並帶有 level 參數
+    Word: { level: string }; // ✅ 確保 Word 有 `level`
   };

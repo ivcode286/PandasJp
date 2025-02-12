@@ -59,7 +59,6 @@ export const scrollToSection = (title: string): void => {
 export default function WordsScreen() {
   const route = useRoute(); // ✅ 正確使用 `useRoute()`
   const { level } = route.params as { level: string }; // 取得 level 參數
-
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
 

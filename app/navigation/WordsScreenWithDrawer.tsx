@@ -5,31 +5,12 @@ import WordsScreen, { scrollToSection } from '../screens/WordsScreen';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import { RootStackParamList } from '../navigation/RootStackParamList';
 
-type WordsWithDrawerRouteProp = RouteProp<RootStackParamList, 'WordsWithDrawer'>; // ✅ 設定路由類型
+type WordsWithDrawerRouteProp = RouteProp<RootStackParamList, 'Word'>;
 
-// TypeScript interfaces for props
-interface CustomDrawerItemProps {
-    label: string;
-    onPress: () => void;
-}
+// Drawer Navigator
+const Drawer = createDrawerNavigator();
 
-// Custom DrawerItem Component
-const CustomDrawerItem: React.FC<CustomDrawerItemProps & { navigation: any }> = ({ label, onPress, navigation }) => (
-    <DrawerItem
-        label={({ color }) => (
-            <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
-                {label}
-            </Text>
-        )}
-        onPress={() => {
-            navigation.closeDrawer(); // ✅ Close the drawer first
-            setTimeout(() => onPress(), 300); // ✅ Delay for 300ms to ensure the screen is ready before scrolling
-        }}
-        style={styles.drawerItem}
-    />
-);
-
-// Custom Drawer Content
+// Drawer 自訂選單
 const CustomDrawerContent: React.FC<{ navigation: any }> = ({ navigation }) => (
     <DrawerContentScrollView contentContainerStyle={styles.drawerContent}>
         <View style={styles.drawerRow}>
@@ -39,101 +20,50 @@ const CustomDrawerContent: React.FC<{ navigation: any }> = ({ navigation }) => (
             <CustomDrawerItem label="え" onPress={() => scrollToSection('え')} navigation={navigation} />
             <CustomDrawerItem label="お" onPress={() => scrollToSection('お')} navigation={navigation} />
         </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="か" onPress={() => scrollToSection('か')} navigation={navigation} />
-            <CustomDrawerItem label="き" onPress={() => scrollToSection('き')} navigation={navigation} />
-            <CustomDrawerItem label="く" onPress={() => scrollToSection('く')} navigation={navigation} />
-            <CustomDrawerItem label="け" onPress={() => scrollToSection('け')} navigation={navigation} />
-            <CustomDrawerItem label="こ" onPress={() => scrollToSection('こ')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="さ" onPress={() => scrollToSection('さ')} navigation={navigation} />
-            <CustomDrawerItem label="し" onPress={() => scrollToSection('し')} navigation={navigation} />
-            <CustomDrawerItem label="す" onPress={() => scrollToSection('す')} navigation={navigation} />
-            <CustomDrawerItem label="せ" onPress={() => scrollToSection('せ')} navigation={navigation} />
-            <CustomDrawerItem label="そ" onPress={() => scrollToSection('そ')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="た" onPress={() => scrollToSection('た')} navigation={navigation} />
-            <CustomDrawerItem label="ち" onPress={() => scrollToSection('ち')} navigation={navigation} />
-            <CustomDrawerItem label="つ" onPress={() => scrollToSection('つ')} navigation={navigation} />
-            <CustomDrawerItem label="て" onPress={() => scrollToSection('て')} navigation={navigation} />
-            <CustomDrawerItem label="と" onPress={() => scrollToSection('と')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="な" onPress={() => scrollToSection('な')} navigation={navigation} />
-            <CustomDrawerItem label="に" onPress={() => scrollToSection('に')} navigation={navigation} />
-            <CustomDrawerItem label="ぬ" onPress={() => scrollToSection('ぬ')} navigation={navigation} />
-            <CustomDrawerItem label="ね" onPress={() => scrollToSection('ね')} navigation={navigation} />
-            <CustomDrawerItem label="の" onPress={() => scrollToSection('の')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="は" onPress={() => scrollToSection('は')} navigation={navigation} />
-            <CustomDrawerItem label="ひ" onPress={() => scrollToSection('ひ')} navigation={navigation} />
-            <CustomDrawerItem label="ふ" onPress={() => scrollToSection('ふ')} navigation={navigation} />
-            <CustomDrawerItem label="へ" onPress={() => scrollToSection('へ')} navigation={navigation} />
-            <CustomDrawerItem label="ほ" onPress={() => scrollToSection('ほ')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="ま" onPress={() => scrollToSection('ま')} navigation={navigation} />
-            <CustomDrawerItem label="み" onPress={() => scrollToSection('み')} navigation={navigation} />
-            <CustomDrawerItem label="む" onPress={() => scrollToSection('む')} navigation={navigation} />
-            <CustomDrawerItem label="め" onPress={() => scrollToSection('め')} navigation={navigation} />
-            <CustomDrawerItem label="も" onPress={() => scrollToSection('も')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="や" onPress={() => scrollToSection('や')} navigation={navigation} />
-            <CustomDrawerItem label="ゆ" onPress={() => scrollToSection('ゆ')} navigation={navigation} />
-            <CustomDrawerItem label="よ" onPress={() => scrollToSection('よ')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="ら" onPress={() => scrollToSection('ら')} navigation={navigation} />
-            <CustomDrawerItem label="り" onPress={() => scrollToSection('り')} navigation={navigation} />
-            <CustomDrawerItem label="る" onPress={() => scrollToSection('る')} navigation={navigation} />
-            <CustomDrawerItem label="れ" onPress={() => scrollToSection('れ')} navigation={navigation} />
-            <CustomDrawerItem label="ろ" onPress={() => scrollToSection('ろ')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="わ" onPress={() => scrollToSection('わ')} navigation={navigation} />
-        </View>
     </DrawerContentScrollView>
 );
 
-// Drawer Navigator
-const Drawer = createDrawerNavigator();
+// Drawer 按鈕項目
+const CustomDrawerItem: React.FC<{ label: string; onPress: () => void; navigation: any }> = ({ label, onPress, navigation }) => (
+    <DrawerItem
+        label={({ color }) => (
+            <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
+                {label}
+            </Text>
+        )}
+        onPress={() => {
+            navigation.closeDrawer();
+            setTimeout(() => onPress(), 300);
+        }}
+        style={styles.drawerItem}
+    />
+);
 
+// 主要的 Drawer 畫面
 function WordScreenWithDrawer() {
-
     const route = useRoute<WordsWithDrawerRouteProp>();
-    const level = route.params?.level ?? 'N5'; // 確保 level 不為 undefined
+    console.log('route:', JSON.stringify(route, null, 2));
+    console.log('route.params:', JSON.stringify(route.params, null, 2));
+
+    const level = route.params?.level ?? 'N5'; // ✅ 確保 level 不為 undefined
 
     return (
         <Drawer.Navigator 
-        screenOptions={{
-            swipeEdgeWidth: 40,    // ✅ 限制 Drawer 手勢區域 (30px)
-        }}
-        drawerContent={(props) => <CustomDrawerContent {...props} /> }>
+            screenOptions={{ swipeEdgeWidth: 40 }}
+            drawerContent={(props) => <CustomDrawerContent {...props} />}
+        >
             <Drawer.Screen
                 name="WordsScreen"
                 component={WordsScreen}
-                initialParams={{ level }} // 🔹 傳遞 level 給 WordsScreen
-                options={{ title: `${level} 單字`, headerShown: true }} // 🔹 更改標題顯示 Level
+                initialParams={{ level }} // ✅ 確保 WordsScreen 取得 level
+                options={{ title: `${level} 單字`, headerShown: true }}
             />
         </Drawer.Navigator>
     );
 }
 
-export default function WordsDrawerNavigator() {
-    return (
-        <Drawer.Navigator 
-        screenOptions={{
-            swipeEdgeWidth: 40,    // ✅ 限制 Drawer 手勢區域 (30px)
-        }}
-        drawerContent={(props) => <CustomDrawerContent {...props} />}>
-            <Drawer.Screen name="Word" component={WordScreenWithDrawer} options={{ title: 'Word', headerShown: false }} />
-        </Drawer.Navigator>
-    );
-}
+export default WordScreenWithDrawer; // ✅ 只導出 `WordScreenWithDrawer`
+
 
 // Styles
 const styles = StyleSheet.create({
