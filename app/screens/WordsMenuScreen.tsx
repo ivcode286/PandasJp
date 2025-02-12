@@ -4,7 +4,6 @@ import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation/RootStackParamList';
 
-
 type WordsMenuScreenNavigationProp = StackNavigationProp<RootStackParamList, 'WordsMenu'>;
 
 export default function WordsMenuScreen() {
@@ -14,14 +13,14 @@ export default function WordsMenuScreen() {
     <View style={styles.container}>
       <TouchableOpacity 
         style={styles.button} 
-        onPress={() => navigation.navigate('WordsN5')}
+        onPress={() => navigation.navigate('WordsWithDrawer', { level: 'N5' })}
       >
         <Text style={styles.buttonText}>N5</Text>
       </TouchableOpacity>
 
       <TouchableOpacity 
         style={styles.button} 
-        onPress={() => navigation.navigate('WordsN3N4')}
+        onPress={() => navigation.navigate('WordsWithDrawer', { level: 'N3-N4' })}
       >
         <Text style={styles.buttonText}>N3-N4</Text>
       </TouchableOpacity>

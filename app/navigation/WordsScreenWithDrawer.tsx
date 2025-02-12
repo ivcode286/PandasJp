@@ -2,7 +2,10 @@ import React from 'react';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import { View, Text, StyleSheet } from 'react-native';
 import WordsScreen, { scrollToSection } from '../screens/WordsScreen';
-import HomeScreen from '../screens/HomeScreen';
+import { RouteProp, useRoute } from '@react-navigation/native';
+import { RootStackParamList } from '../navigation/RootStackParamList';
+
+type WordsWithDrawerRouteProp = RouteProp<RootStackParamList, 'WordsWithDrawer'>; // ✅ 設定路由類型
 
 // TypeScript interfaces for props
 interface CustomDrawerItemProps {
@@ -100,9 +103,18 @@ const CustomDrawerContent: React.FC<{ navigation: any }> = ({ navigation }) => (
 const Drawer = createDrawerNavigator();
 
 function WordScreenWithDrawer() {
+
+    const route = useRoute<WordsWithDrawerRouteProp>();
+    const level = route.params?.level ?? 'N5'; // 確保 level 不為 undefined
+
     return (
         <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
-            <Drawer.Screen name="WordMain" component={WordsScreen} options={{ title: 'Word', headerShown: true  }} />
+            <Drawer.Screen
+                name="WordsScreen"
+                component={WordsScreen}
+                initialParams={{ level }} // 🔹 傳遞 level 給 WordsScreen
+                options={{ title: `Word - ${level}`, headerShown: true }} // 🔹 更改標題顯示 Level
+            />
         </Drawer.Navigator>
     );
 }

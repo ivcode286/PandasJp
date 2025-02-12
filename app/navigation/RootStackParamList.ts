@@ -1,7 +1,4 @@
-import { NavigatorScreenParams } from '@react-navigation/native';
-
 export type RootStackParamList = {
-  WordsMenu: undefined;
-  WordsN5: undefined;
-  WordsN3N4: undefined;
-};
+    WordsMenu: undefined;
+    WordsWithDrawer: { level: string }; // ✅ 定義 WordsWithDrawer 並帶有 level 參數
+  };

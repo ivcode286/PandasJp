@@ -1,3 +1,4 @@
+import { useRoute } from '@react-navigation/native'; // ✅ 確保 `useRoute()` 被正確導入
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 import { fetchWords } from '@/src/utils/fetchWords';
 import { Ionicons } from '@expo/vector-icons';
@@ -12,7 +13,6 @@ import {
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
-
 
 export const sectionListRef = React.createRef<SectionList<any>>();
 
@@ -57,8 +57,16 @@ export const scrollToSection = (title: string): void => {
 };
 
 export default function WordsScreen() {
+  const route = useRoute(); // ✅ 正確使用 `useRoute()`
+  const { level } = route.params as { level: string }; // 取得 level 參數
+
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
+
+  useEffect(() => {
+    console.log(`Current Level: ${level}`);
+    // 這裡可以根據 level 來載入不同的單字數據
+  }, [level]);
  
   useEffect(() => {
     const loadWords = async () => {
@@ -73,7 +81,6 @@ export default function WordsScreen() {
     };
     loadWords();
   }, []);
-  
 
   return (
     <SafeAreaProvider>
@@ -139,22 +146,19 @@ const styles = StyleSheet.create({
   reading: {
     fontSize: 18,
     color: '#555',
-    flex: 1, // Allows it to take remaining space
+    flex: 1,
   },
   meaning: {
     fontSize: 16,
     color: '#777',
   },
   row: {
-    flexDirection: "row", // Aligns meaning & icon in the same row
-    alignItems: "center", // Centers items vertically
-    justifyContent: "space-between", // Pushes them to opposite sides
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     marginTop: 5,
   },
   speakerIcon: {
     padding: 1,
   },
-
 });
-
-
