@@ -110,14 +110,14 @@ function WordScreenWithDrawer() {
     return (
         <Drawer.Navigator 
         screenOptions={{
-            swipeEdgeWidth: 30,    // ✅ 限制 Drawer 手勢區域 (30px)
+            swipeEdgeWidth: 40,    // ✅ 限制 Drawer 手勢區域 (30px)
         }}
         drawerContent={(props) => <CustomDrawerContent {...props} /> }>
             <Drawer.Screen
                 name="WordsScreen"
                 component={WordsScreen}
                 initialParams={{ level }} // 🔹 傳遞 level 給 WordsScreen
-                options={{ title: `Word - ${level}`, headerShown: true }} // 🔹 更改標題顯示 Level
+                options={{ title: `${level} 單字`, headerShown: true }} // 🔹 更改標題顯示 Level
             />
         </Drawer.Navigator>
     );
