@@ -8,8 +8,8 @@ import { RootStackParamList } from './RootStackParamList';
 
 type LevelType = 'N5' | 'N3-N4';
 
-const drawerData: Record<LevelType, string[][] | string[]> = {
-    'N5': [
+const drawerData: Record<LevelType, string[]> = {
+    N5: [
         '人', '職業', '家庭', '親屬', '別人家人', '動物', '鳥類', '兩棲類', '昆蟲',
         '水生動物', '場所', '設施', '商業場所', '交通', '自然', '數字', '助数詞',
         '日期', '一週', '時間', '金錢', '一般動作', '活動動詞', '購物動詞', '家務',
@@ -19,35 +19,34 @@ const drawerData: Record<LevelType, string[][] | string[]> = {
         '順序', '對比連接詞', '因果關係連接詞', '補充說明的連接詞', '假設連接詞',
         '轉話題連接詞', '主語助詞', '目的語助詞', '方位助詞', '起點助詞',
         '方式助詞', '選擇助詞', '強調助詞', '提示助詞'
-    ]
-    , 'N3-N4': [
-        ['あ', 'い', 'う', 'え', 'お'],
-        ['か', 'き', 'く', 'け', 'こ'],
-        ['さ', 'し', 'す', 'せ', 'そ'],
-        ['た', 'ち', 'つ', 'て', 'と'],
-        ['な', 'に', 'ぬ', 'ね', 'の'],
-        ['は', 'ひ', 'ふ', 'へ', 'ほ'],
-        ['ま', 'み', 'む', 'め', 'も'],
-        ['や', 'ゆ', 'よ'],
-        ['ら', 'り', 'る', 'れ', 'ろ'],
-        ['わ']
+    ],
+    'N3-N4': [
+        'あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ',
+        'さ', 'し', 'す', 'せ', 'そ', 'た', 'ち', 'つ', 'て', 'と',
+        'な', 'に', 'ぬ', 'ね', 'の', 'は', 'ひ', 'ふ', 'へ', 'ほ',
+        'ま', 'み', 'む', 'め', 'も', 'や', 'ゆ', 'よ', 'ら', 'り',
+        'る', 'れ', 'ろ', 'わ'
     ]
 };
 
 
+// **將 `N3-N4` 選項拆分為 5 個一組**
+const chunkArray = (array: string[], size: number): string[][] => {
+    return Array.from({ length: Math.ceil(array.length / size) }, (_, i) =>
+        array.slice(i * size, i * size + size)
+    );
+};
 
-
-// Custom Drawer Content
+// **動態的 Custom Drawer**
 const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ navigation, level }) => {
-    const items = drawerData[level]; 
+    const items = drawerData[level];
 
     return (
         <DrawerContentScrollView contentContainerStyle={styles.drawerContent}>
-            {level === 'N5' ? (
-                // **N5: 橫向排列**
-                items.map((row, index) => (
+            {level === 'N3-N4' ? (  // 🚀 **這裡確保 `N3-N4` 是每行 5 個**
+                chunkArray(items, 5).map((row, index) => (
                     <View key={index} style={styles.drawerRow}>
-                        {(row as string[]).map((label) => ( // ✅ 顯式轉換為 `string[]`
+                        {row.map((label) => (
                             <DrawerItem
                                 key={label}
                                 label={({ color }) => (
@@ -59,14 +58,14 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
                                     navigation.closeDrawer();
                                     setTimeout(() => scrollToSection(label), 300);
                                 }}
-                                style={styles.drawerItem}
+                                style={styles.drawerItem} // **橫向排列樣式**
                             />
                         ))}
                     </View>
                 ))
             ) : (
-                // **N3-N4: 垂直排列**
-                (items as string[]).map((label) => ( // ✅ 顯式轉換為 `string[]`
+                // **N5: 垂直排列**
+                items.map((label) => (
                     <DrawerItem
                         key={label}
                         label={({ color }) => (
@@ -78,7 +77,7 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
                             navigation.closeDrawer();
                             setTimeout(() => scrollToSection(label), 300);
                         }}
-                        style={styles.drawerItemVertical} // **不同樣式**
+                        style={styles.drawerItemVertical} // **單行排列樣式**
                     />
                 ))
             )}
