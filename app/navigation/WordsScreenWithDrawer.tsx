@@ -21,21 +21,60 @@ const drawerData: Record<LevelType, string[]> = {
         '方式助詞', '選擇助詞', '強調助詞', '提示助詞'
     ],
     'N3-N4': [
-        'あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ',
-        'さ', 'し', 'す', 'せ', 'そ', 'た', 'ち', 'つ', 'て', 'と',
-        'な', 'に', 'ぬ', 'ね', 'の', 'は', 'ひ', 'ふ', 'へ', 'ほ',
-        'ま', 'み', 'む', 'め', 'も', 'や', 'ゆ', 'よ', 'ら', 'り',
-        'る', 'れ', 'ろ', 'わ'
+        'あ', 'い', 'う', 'え', 'お',
+        'か', 'き', 'く', 'け', 'こ',
+        'さ', 'し', 'す', 'せ', 'そ',
+        'た', 'ち', 'つ', 'て', 'と',
+        'な', 'に', 'ぬ', 'ね', 'の',
+        'は', 'ひ', 'ふ', 'へ', 'ほ',
+        'ま', 'み', 'む', 'め', 'も',
+        'や', 'ゆ', 'よ', // **這一行是例外（3 個一行）**
+        'ら', 'り', 'る', 'れ', 'ろ',
+        'わ'  // **這一行是例外（單獨一行）**
     ]
 };
 
+// **將 `N3-N4` 按照特定規則拆分**
+const chunkArraySpecial = (array: string[]): string[][] => {
+    const result: string[][] = [];
+    let tempArray: string[] = [];
 
-// **將 `N3-N4` 選項拆分為 5 個一組**
-const chunkArray = (array: string[], size: number): string[][] => {
-    return Array.from({ length: Math.ceil(array.length / size) }, (_, i) =>
-        array.slice(i * size, i * size + size)
-    );
+    for (let i = 0; i < array.length; i++) {
+        const item = array[i];
+
+        // **處理 "や", "ゆ", "よ" 特例**
+        if (item === 'や') {
+            if (tempArray.length > 0) result.push(tempArray);
+            tempArray = ['や', 'ゆ', 'よ'];
+            result.push(tempArray);
+            tempArray = [];
+            i += 2; // **跳過 "ゆ" 和 "よ"**
+            continue;
+        }
+
+        // **處理 "わ" 特例**
+        if (item === 'わ') {
+            if (tempArray.length > 0) result.push(tempArray);
+            result.push([item]); // **單獨一行**
+            continue;
+        }
+
+        // **一般情況：每行 5 個**
+        tempArray.push(item);
+        if (tempArray.length === 5) {
+            result.push(tempArray);
+            tempArray = [];
+        }
+    }
+
+    // **處理最後剩下的**
+    if (tempArray.length > 0) {
+        result.push(tempArray);
+    }
+
+    return result;
 };
+
 
 // **動態的 Custom Drawer**
 const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ navigation, level }) => {
@@ -43,8 +82,9 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
 
     return (
         <DrawerContentScrollView contentContainerStyle={styles.drawerContent}>
-            {level === 'N3-N4' ? (  // 🚀 **這裡確保 `N3-N4` 是每行 5 個**
-                chunkArray(items, 5).map((row, index) => (
+            {level === 'N3-N4' ? (  
+                // **N3-N4: 特殊規則排列**
+                chunkArraySpecial(items).map((row, index) => (
                     <View key={index} style={styles.drawerRow}>
                         {row.map((label) => (
                             <DrawerItem
@@ -58,7 +98,7 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
                                     navigation.closeDrawer();
                                     setTimeout(() => scrollToSection(label), 300);
                                 }}
-                                style={styles.drawerItem} // **橫向排列樣式**
+                                style={styles.drawerItem}
                             />
                         ))}
                     </View>
@@ -77,7 +117,7 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
                             navigation.closeDrawer();
                             setTimeout(() => scrollToSection(label), 300);
                         }}
-                        style={styles.drawerItemVertical} // **單行排列樣式**
+                        style={styles.drawerItemVertical} 
                     />
                 ))
             )}
