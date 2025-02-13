@@ -123,17 +123,19 @@ function WordScreenWithDrawer() {
     );
 }
 
-export default function WordsDrawerNavigator() {
-    return (
-        <Drawer.Navigator 
-        screenOptions={{
-            swipeEdgeWidth: 40,    // ✅ 限制 Drawer 手勢區域 (30px)
-        }}
-        drawerContent={(props) => <CustomDrawerContent {...props} />}>
-            <Drawer.Screen name="Word" component={WordScreenWithDrawer} options={{ title: 'Word', headerShown: false }} />
-        </Drawer.Navigator>
-    );
-}
+export default WordScreenWithDrawer;
+
+// export default function WordsDrawerNavigator() {
+//     return (
+//         <Drawer.Navigator 
+//         screenOptions={{
+//             swipeEdgeWidth: 40,    // ✅ 限制 Drawer 手勢區域 (30px)
+//         }}
+//         drawerContent={(props) => <CustomDrawerContent {...props} />}>
+//             <Drawer.Screen name="Word" component={WordScreenWithDrawer} options={{ title: 'Word', headerShown: false }} />
+//         </Drawer.Navigator>
+//     );
+// }
 
 // Styles
 const styles = StyleSheet.create({
