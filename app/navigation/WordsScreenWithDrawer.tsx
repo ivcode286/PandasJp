@@ -81,8 +81,10 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
     const items = drawerData[level];
 
     return (
-        <DrawerContentScrollView contentContainerStyle={styles.drawerContent}>
-            {level === 'N3-N4' ? (  
+        <DrawerContentScrollView
+            contentContainerStyle={[styles.drawerContent, { paddingBottom: 80 }]} // ✅ **確保不被 `BottomTab` 擋住**
+        >
+            {level === 'N3-N4' ? (
                 // **N3-N4: 特殊規則排列**
                 chunkArraySpecial(items).map((row, index) => (
                     <View key={index} style={styles.drawerRow}>
@@ -117,7 +119,7 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
                             navigation.closeDrawer();
                             setTimeout(() => scrollToSection(label), 300);
                         }}
-                        style={styles.drawerItemVertical} 
+                        style={styles.drawerItemVertical}
                     />
                 ))
             )}

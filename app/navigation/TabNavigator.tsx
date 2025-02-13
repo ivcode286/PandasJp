@@ -32,8 +32,19 @@ export default function MyTabs() {
           paddingBottom: 10,
           position: 'absolute',
         },
+        tabBarShowLabel: false,
       }}
     >
+      
+      <Tabs.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          title: 'Learning Path',
+          headerShown: true,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color || 'white'} />,
+        }}
+      />
       <Tabs.Screen
         name="Words"
         //component={WordsDrawerNavigator}
@@ -41,16 +52,6 @@ export default function MyTabs() {
         options={{
           title: 'Words',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="character.square.fill" color={color} />,
-        }}
-      />
-
-      <Tabs.Screen
-        name="Drawer"
-        component={HomeScreen}
-        options={{
-          title: 'Learning Path',
-          headerShown: true,
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color || 'white'} />,
         }}
       />
       <Tabs.Screen
