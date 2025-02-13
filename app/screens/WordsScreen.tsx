@@ -65,12 +65,8 @@ export default function WordsScreen() {
 
   useEffect(() => {
     console.log(`Current Level: ${level}`);
-    // 這裡可以根據 level 來載入不同的單字數據
-  }, [level]);
- 
-  useEffect(() => {
     const loadWords = async () => {
-      const words = await fetchWords();
+      const words = await fetchWords(level);
       if (!Array.isArray(words)) {
         console.error("fetchWords did not return an array:", words);
         return;
@@ -80,8 +76,8 @@ export default function WordsScreen() {
       globalSections = groupedSections;
     };
     loadWords();
-  }, []);
-
+  }, [level]);
+ 
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
