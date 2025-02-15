@@ -91,7 +91,7 @@ export default function WordsScreen() {
               <Text style={styles.meaning}>{item.meaning_zh}</Text>
               <View style={styles.row}>
                 <Text style={styles.reading}>{item.pron}</Text>
-                <TouchableOpacity onPress={() => speak(item.words)} style={styles.speakerIcon}>
+                <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
                   <Ionicons name="volume-high" size={24} color="black" />
                 </TouchableOpacity>
               </View>

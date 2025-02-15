@@ -3,125 +3,153 @@ import { createDrawerNavigator, DrawerContentScrollView, DrawerItem } from '@rea
 import { View, Text, StyleSheet } from 'react-native';
 import WordsScreen, { scrollToSection } from '../screens/WordsScreen';
 import { RouteProp, useRoute } from '@react-navigation/native';
-import { RootStackParamList } from '../navigation/RootStackParamList';
+import { RootStackParamList } from './RootStackParamList';
 
-type WordsWithDrawerRouteProp = RouteProp<RootStackParamList, 'WordsWithDrawer'>; // ✅ 設定路由類型
 
-// TypeScript interfaces for props
-interface CustomDrawerItemProps {
-    label: string;
-    onPress: () => void;
-}
+type LevelType = 'N5' | 'N3-N4';
 
-// Custom DrawerItem Component
-const CustomDrawerItem: React.FC<CustomDrawerItemProps & { navigation: any }> = ({ label, onPress, navigation }) => (
-    <DrawerItem
-        label={({ color }) => (
-            <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
-                {label}
-            </Text>
-        )}
-        onPress={() => {
-            navigation.closeDrawer(); // ✅ Close the drawer first
-            setTimeout(() => onPress(), 300); // ✅ Delay for 300ms to ensure the screen is ready before scrolling
-        }}
-        style={styles.drawerItem}
-    />
-);
+const drawerData: Record<LevelType, string[]> = {
+    N5: [
+        '人', '職業', '家庭', '親屬', '別人家人', '動物', '鳥類', '兩棲類', '昆蟲',
+        '水生動物', '場所', '設施', '商業場所', '交通', '自然', '數字', '助数詞',
+        '日期', '一週', '時間', '金錢', '一般動作', '活動動詞', '購物動詞', '家務',
+        '日常動作', '學習與工作', '工作相關動詞', '感覺與情緒', '身體狀態',
+        '氣氛和狀態', '評價', 'い形容詞', 'な形容詞', '頻率副詞', '程度副詞',
+        '時間副詞', '先後順序', '人稱代名詞', '事物和方向', '疑問代名詞',
+        '順序', '對比連接詞', '因果關係連接詞', '補充說明的連接詞', '假設連接詞',
+        '轉話題連接詞', '主語助詞', '目的語助詞', '方位助詞', '起點助詞',
+        '方式助詞', '選擇助詞', '強調助詞', '提示助詞'
+    ],
+    'N3-N4': [
+        'あ', 'い', 'う', 'え', 'お',
+        'か', 'き', 'く', 'け', 'こ',
+        'さ', 'し', 'す', 'せ', 'そ',
+        'た', 'ち', 'つ', 'て', 'と',
+        'な', 'に', 'ぬ', 'ね', 'の',
+        'は', 'ひ', 'ふ', 'へ', 'ほ',
+        'ま', 'み', 'む', 'め', 'も',
+        'や', 'ゆ', 'よ', // **這一行是例外（3 個一行）**
+        'ら', 'り', 'る', 'れ', 'ろ',
+        'わ'  // **這一行是例外（單獨一行）**
+    ]
+};
 
-// Custom Drawer Content
-const CustomDrawerContent: React.FC<{ navigation: any }> = ({ navigation }) => (
-    <DrawerContentScrollView contentContainerStyle={styles.drawerContent}>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="あ" onPress={() => scrollToSection('あ')} navigation={navigation} />
-            <CustomDrawerItem label="い" onPress={() => scrollToSection('い')} navigation={navigation} />
-            <CustomDrawerItem label="う" onPress={() => scrollToSection('う')} navigation={navigation} />
-            <CustomDrawerItem label="え" onPress={() => scrollToSection('え')} navigation={navigation} />
-            <CustomDrawerItem label="お" onPress={() => scrollToSection('お')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="か" onPress={() => scrollToSection('か')} navigation={navigation} />
-            <CustomDrawerItem label="き" onPress={() => scrollToSection('き')} navigation={navigation} />
-            <CustomDrawerItem label="く" onPress={() => scrollToSection('く')} navigation={navigation} />
-            <CustomDrawerItem label="け" onPress={() => scrollToSection('け')} navigation={navigation} />
-            <CustomDrawerItem label="こ" onPress={() => scrollToSection('こ')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="さ" onPress={() => scrollToSection('さ')} navigation={navigation} />
-            <CustomDrawerItem label="し" onPress={() => scrollToSection('し')} navigation={navigation} />
-            <CustomDrawerItem label="す" onPress={() => scrollToSection('す')} navigation={navigation} />
-            <CustomDrawerItem label="せ" onPress={() => scrollToSection('せ')} navigation={navigation} />
-            <CustomDrawerItem label="そ" onPress={() => scrollToSection('そ')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="た" onPress={() => scrollToSection('た')} navigation={navigation} />
-            <CustomDrawerItem label="ち" onPress={() => scrollToSection('ち')} navigation={navigation} />
-            <CustomDrawerItem label="つ" onPress={() => scrollToSection('つ')} navigation={navigation} />
-            <CustomDrawerItem label="て" onPress={() => scrollToSection('て')} navigation={navigation} />
-            <CustomDrawerItem label="と" onPress={() => scrollToSection('と')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="な" onPress={() => scrollToSection('な')} navigation={navigation} />
-            <CustomDrawerItem label="に" onPress={() => scrollToSection('に')} navigation={navigation} />
-            <CustomDrawerItem label="ぬ" onPress={() => scrollToSection('ぬ')} navigation={navigation} />
-            <CustomDrawerItem label="ね" onPress={() => scrollToSection('ね')} navigation={navigation} />
-            <CustomDrawerItem label="の" onPress={() => scrollToSection('の')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="は" onPress={() => scrollToSection('は')} navigation={navigation} />
-            <CustomDrawerItem label="ひ" onPress={() => scrollToSection('ひ')} navigation={navigation} />
-            <CustomDrawerItem label="ふ" onPress={() => scrollToSection('ふ')} navigation={navigation} />
-            <CustomDrawerItem label="へ" onPress={() => scrollToSection('へ')} navigation={navigation} />
-            <CustomDrawerItem label="ほ" onPress={() => scrollToSection('ほ')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="ま" onPress={() => scrollToSection('ま')} navigation={navigation} />
-            <CustomDrawerItem label="み" onPress={() => scrollToSection('み')} navigation={navigation} />
-            <CustomDrawerItem label="む" onPress={() => scrollToSection('む')} navigation={navigation} />
-            <CustomDrawerItem label="め" onPress={() => scrollToSection('め')} navigation={navigation} />
-            <CustomDrawerItem label="も" onPress={() => scrollToSection('も')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="や" onPress={() => scrollToSection('や')} navigation={navigation} />
-            <CustomDrawerItem label="ゆ" onPress={() => scrollToSection('ゆ')} navigation={navigation} />
-            <CustomDrawerItem label="よ" onPress={() => scrollToSection('よ')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="ら" onPress={() => scrollToSection('ら')} navigation={navigation} />
-            <CustomDrawerItem label="り" onPress={() => scrollToSection('り')} navigation={navigation} />
-            <CustomDrawerItem label="る" onPress={() => scrollToSection('る')} navigation={navigation} />
-            <CustomDrawerItem label="れ" onPress={() => scrollToSection('れ')} navigation={navigation} />
-            <CustomDrawerItem label="ろ" onPress={() => scrollToSection('ろ')} navigation={navigation} />
-        </View>
-        <View style={styles.drawerRow}>
-            <CustomDrawerItem label="わ" onPress={() => scrollToSection('わ')} navigation={navigation} />
-        </View>
-    </DrawerContentScrollView>
-);
+// **將 `N3-N4` 按照特定規則拆分**
+const chunkArraySpecial = (array: string[]): string[][] => {
+    const result: string[][] = [];
+    let tempArray: string[] = [];
+
+    for (let i = 0; i < array.length; i++) {
+        const item = array[i];
+
+        // **處理 "や", "ゆ", "よ" 特例**
+        if (item === 'や') {
+            if (tempArray.length > 0) result.push(tempArray);
+            tempArray = ['や', 'ゆ', 'よ'];
+            result.push(tempArray);
+            tempArray = [];
+            i += 2; // **跳過 "ゆ" 和 "よ"**
+            continue;
+        }
+
+        // **處理 "わ" 特例**
+        if (item === 'わ') {
+            if (tempArray.length > 0) result.push(tempArray);
+            result.push([item]); // **單獨一行**
+            continue;
+        }
+
+        // **一般情況：每行 5 個**
+        tempArray.push(item);
+        if (tempArray.length === 5) {
+            result.push(tempArray);
+            tempArray = [];
+        }
+    }
+
+    // **處理最後剩下的**
+    if (tempArray.length > 0) {
+        result.push(tempArray);
+    }
+
+    return result;
+};
+
+
+// **動態的 Custom Drawer**
+const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ navigation, level }) => {
+    const items = drawerData[level];
+
+    return (
+        <DrawerContentScrollView
+            contentContainerStyle={[styles.drawerContent, { paddingBottom: 80 }]} // ✅ **確保不被 `BottomTab` 擋住**
+        >
+            {level === 'N3-N4' ? (
+                // **N3-N4: 特殊規則排列**
+                chunkArraySpecial(items).map((row, index) => (
+                    <View key={index} style={styles.drawerRow}>
+                        {row.map((label) => (
+                            <DrawerItem
+                                key={label}
+                                label={({ color }) => (
+                                    <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
+                                        {label}
+                                    </Text>
+                                )}
+                                onPress={() => {
+                                    navigation.closeDrawer();
+                                    setTimeout(() => scrollToSection(label), 300);
+                                }}
+                                style={styles.drawerItem}
+                            />
+                        ))}
+                    </View>
+                ))
+            ) : (
+                // **N5: 垂直排列**
+                items.map((label) => (
+                    <DrawerItem
+                        key={label}
+                        label={({ color }) => (
+                            <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
+                                {label}
+                            </Text>
+                        )}
+                        onPress={() => {
+                            navigation.closeDrawer();
+                            setTimeout(() => scrollToSection(label), 300);
+                        }}
+                        style={styles.drawerItemVertical}
+                    />
+                ))
+            )}
+        </DrawerContentScrollView>
+    );
+};
+
 
 // Drawer Navigator
 const Drawer = createDrawerNavigator();
 
 function WordScreenWithDrawer() {
-
-    const route = useRoute<WordsWithDrawerRouteProp>();
-    const level = route.params?.level ?? 'N5'; // 確保 level 不為 undefined
+    const route = useRoute<RouteProp<RootStackParamList, 'WordsWithDrawer'>>();
+    const level = (route.params?.level as LevelType) || 'N5'; // ✅ 顯式轉換為 `LevelType`
 
     return (
-        <Drawer.Navigator 
-        screenOptions={{
-            swipeEdgeWidth: 40,    // ✅ 限制 Drawer 手勢區域 (30px)
-        }}
-        drawerContent={(props) => <CustomDrawerContent {...props} /> }>
+        <Drawer.Navigator
+            screenOptions={{ swipeEdgeWidth: 40 }}  // ✅ 限制 Drawer 手勢區域 (40px)
+            drawerContent={(props) => <CustomDrawerContent {...props} level={level} />} // ✅ 傳入正確的類型
+        >
             <Drawer.Screen
                 name="WordsScreen"
                 component={WordsScreen}
-                initialParams={{ level }} // 🔹 傳遞 level 給 WordsScreen
-                options={{ title: `${level} 單字`, headerShown: true }} // 🔹 更改標題顯示 Level
+                initialParams={{ level }}         // 🔹 傳遞 level 給 WordsScreen
+                options={{ title: `${level} 單字`, headerShown: true }}
             />
         </Drawer.Navigator>
     );
 }
+
 
 export default WordScreenWithDrawer;
 
@@ -143,5 +171,12 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 18, // Increase font size to prevent text clipping
         minWidth: 40, // Ensure the text block is wide enough
+    },
+    drawerItemVertical: {  // ✅ **新增這個樣式**
+        width: '100%',  // **確保每個選項占滿整行**
+        marginVertical: 4,
+        paddingVertical: 8, // **增加行距讓它更清楚**
+        borderBottomWidth: 0.5,  // **增加分隔線**
+        borderBottomColor: '#ddd',
     },
 });
