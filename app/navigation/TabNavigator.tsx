@@ -12,6 +12,7 @@ import KanaComparisonScreen from '../screens/basic/KanaComparisonScreen';
 import WordsNavigator from './WordsNavigator';
 import HiraganaScreen from '../screens/basic/HiraganaScreen';
 import KatakanaScreen from '../screens/basic/KatakanaScreen';
+import PhoneticsScreen from '../screens/basic/PhoneticsScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -38,7 +39,7 @@ export default function MyTabs() {
       
       <Tabs.Screen
         name="Home"
-        component={HomeScreen}
+        component={PhoneticsScreen}
         options={{
           title: 'Learning Path',
           headerShown: true,
