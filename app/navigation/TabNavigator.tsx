@@ -60,7 +60,8 @@ export default function MyTabs() {
         name="Grammar"
         component={GrammarScreen}
         options={{
-          title: 'GrammarScreen',
+          title: 'N5常用句型',
+          headerShown: true,
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="pencil.line" color={color || 'white'} />,
         }}
       />

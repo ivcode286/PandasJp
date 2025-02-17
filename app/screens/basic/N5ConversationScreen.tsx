@@ -1,10 +1,50 @@
-import React, { useState } from 'react';
-import { View, Text, FlatList, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
+import React, { useState, useRef } from 'react';
+import { 
+  View, Text, FlatList, TouchableOpacity, StyleSheet, StatusBar, PanResponder, Animated, Platform
+} from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import conversations from '../../../src/n5_daily_conversations.json';
 
 const N5ConversationScreen = () => {
   const [selectedStory, setSelectedStory] = useState<number | null>(null);
+  
+  // 讓滑動有平滑動畫效果
+  const panX = useRef(new Animated.Value(0)).current;
+
+  // 只在 Mobile 啟用手勢返回
+  const panResponder = useRef(
+    Platform.OS !== 'web'
+      ? PanResponder.create({
+          onMoveShouldSetPanResponder: (_, gestureState) => {
+            return Math.abs(gestureState.dx) > 10; // 檢測是否橫向滑動
+          },
+          onPanResponderMove: (_, gestureState) => {
+            if (gestureState.dx > 0) {
+              panX.setValue(gestureState.dx); // 設定滑動的位移
+            }
+          },
+          onPanResponderRelease: (_, gestureState) => {
+            if (gestureState.dx > 100) {
+              // 當滑動距離超過 100px，觸發返回
+              Animated.timing(panX, {
+                toValue: 300, // 移出畫面
+                duration: 200,
+                useNativeDriver: true,
+              }).start(() => {
+                setSelectedStory(null);
+                panX.setValue(0); // 重置動畫
+              });
+            } else {
+              // 若滑動不足 100px，則還原
+              Animated.spring(panX, {
+                toValue: 0,
+                useNativeDriver: true,
+              }).start();
+            }
+          },
+        })
+      : null // Web 版不啟用手勢
+  ).current;
 
   return (
     <SafeAreaProvider>
@@ -25,7 +65,10 @@ const N5ConversationScreen = () => {
             )}
           />
         ) : (
-          <View style={styles.conversationContainer}>
+          <Animated.View 
+            style={[styles.conversationContainer, { transform: [{ translateX: panX }] }]}
+            {...(Platform.OS !== 'web' ? panResponder.panHandlers : {})} // Web 版不啟用手勢
+          >
             <TouchableOpacity onPress={() => setSelectedStory(null)} style={styles.backButton}>
               <Text style={styles.backButtonText}>← 返回</Text>
             </TouchableOpacity>
@@ -43,7 +86,7 @@ const N5ConversationScreen = () => {
                 </View>
               )}
             />
-          </View>
+          </Animated.View>
         )}
       </SafeAreaView>
     </SafeAreaProvider>
@@ -74,6 +117,7 @@ const styles = StyleSheet.create({
     fontSize: 18, // 與 translation 大小對齊
     color: '#1f9024',
     flexWrap: 'wrap',
+    marginBottom: 4,
   },
   conversationContainer: {
     flex: 1,
@@ -89,7 +133,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   conversationItem: {
-    backgroundColor: '#4FD93E', // 讓對話與 GrammarScreen 格式統一
+    backgroundColor: '#DBEFD9', // inner section
     padding: 16,
     borderRadius: 8,
     marginBottom: ITEM_MARGIN,
