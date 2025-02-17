@@ -1,57 +1,43 @@
 import React from "react";
-import { View, Text, ScrollView, StyleSheet, StatusBar } from "react-native";
+import { View, Text, ScrollView, StyleSheet, StatusBar, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+
+// 定義可用的 Screen 名稱
+type RootStackParamList = {
+  HiraganaScreen: undefined;
+  KatakanaScreen: undefined;
+  KanaComparisonScreen: undefined;
+  PhoneticsScreen: undefined;
+  GrammarScreen: undefined;
+  N5ConversationScreen: undefined;
+};
+
+type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList>;
 
 const learningPath = [
-  {
-    title: "🎯 第一階段：日語基礎（0 → N5 入門）",
-    content: [
-      "日語發音（50 音）",
-      "平假名",
-      "片假名",
-      "平假和片假對比",
-      "基本發音規則 & 長音、促音、拗音",
-      "日語的基本概念"
-    ]
-  },
-  {
-    title: "🎯 第二階段：單字",
-    content: [
-    "N5 常見單字",
-	  "N5 常見漢字"
-    ]
-  },
-  {
-    title: "🎯 第三階段：核心 N5 文法",
-    content: [
-      "最常用 49 個 N5 句型（核心課程）"
-    ]
-  },
-  {
-    title: "🎯 第四階段：閱讀訓練",
-    content: [
-      "簡單短篇文章（N5 級新聞 / 小故事）",
-      "日常對話（超市、學校、問路等）"
-    ]
-  },
-  {
-    title: "🎯 第五階段：模擬測驗 & 複習",
-    content: [
-      "JLPT N5 模擬試題"
-    ]
-  }
+  { title: "平假名", screen: "HiraganaScreen" },
+  { title: "片假名", screen: "KatakanaScreen" },
+  { title: "平假和片假對比", screen: "KanaComparisonScreen" },
+  { title: "基本發音規則 & 長音、促音、拗音", screen: "PhoneticsScreen" },
+  { title: "最常用 49 個 N5 句型（核心課程）", screen: "GrammarScreen" },
+  { title: "日常對話（超市、學校、問路等）", screen: "N5ConversationScreen" },
 ];
 
-const LearningPathScreen = () => {
+const HomeScreen = () => {
+  const navigation = useNavigation<HomeScreenNavigationProp>();
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.header}>📌 從零開始學基礎日文 N5</Text>
       {learningPath.map((item, index) => (
-        <View key={index} style={styles.card}>
-          <Text style={styles.cardTitle}>{item.title}</Text>
-          {item.content.map((point, idx) => (
-            <Text key={idx} style={styles.cardText}>• {point}</Text>
-          ))}
-        </View>
+        <TouchableOpacity
+          key={index}
+          style={styles.card}
+          onPress={() => navigation.navigate(item.screen as keyof RootStackParamList)}
+        >
+          <Text style={styles.cardText}>• {item.title}</Text>
+        </TouchableOpacity>
       ))}
     </ScrollView>
   );
@@ -73,13 +59,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#f9c2ff",
     padding: 16,
     borderRadius: 8,
-    marginBottom: 16, // 增加底部間距，讓內容更清楚
-  },
-  cardTitle: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "#333",
-    marginBottom: 10,
+    marginBottom: 16,
   },
   cardText: {
     fontSize: 18,
@@ -87,4 +67,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default LearningPathScreen;
+export default HomeScreen;

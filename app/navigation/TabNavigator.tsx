@@ -14,8 +14,29 @@ import HiraganaScreen from '../screens/basic/HiraganaScreen';
 import KatakanaScreen from '../screens/basic/KatakanaScreen';
 import PhoneticsScreen from '../screens/basic/PhoneticsScreen';
 import N5ConversationScreen from '../screens/basic/N5ConversationScreen';
+import { createStackNavigator } from '@react-navigation/stack';
 
 const Tabs = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+function HomeStack() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="HiraganaScreen" component={HiraganaScreen} />
+      <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} />
+      <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} />
+      <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} />
+      <Stack.Screen name="GrammarScreen" component={GrammarScreen} />
+      <Stack.Screen name="N5ConversationScreen" component={N5ConversationScreen} />
+    </Stack.Navigator>
+  );
+}
+
+
+
+
+
 
 export default function MyTabs() {
   const colorScheme = useColorScheme();
@@ -40,7 +61,7 @@ export default function MyTabs() {
       
       <Tabs.Screen
         name="Home"
-        component={HomeScreen}
+        component={HomeStack}
         options={{
           title: 'Learning Path',
           headerShown: true,
