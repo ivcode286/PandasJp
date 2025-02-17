@@ -1,12 +1,15 @@
+import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React, { useState, useRef } from 'react';
 import { 
   View, Text, FlatList, TouchableOpacity, StyleSheet, StatusBar, PanResponder, Animated, Platform
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import conversations from '../../../src/n5_daily_conversations.json';
+import { Ionicons } from '@expo/vector-icons';
 
 const N5ConversationScreen = () => {
   const [selectedStory, setSelectedStory] = useState<number | null>(null);
+  const { speak } = useTextToSpeech();
   
   // 讓滑動有平滑動畫效果
   const panX = useRef(new Animated.Value(0)).current;
@@ -15,13 +18,9 @@ const N5ConversationScreen = () => {
   const panResponder = useRef(
     Platform.OS !== 'web'
       ? PanResponder.create({
-          onMoveShouldSetPanResponder: (_, gestureState) => {
-            return Math.abs(gestureState.dx) > 10; // 檢測是否橫向滑動
-          },
+          onMoveShouldSetPanResponder: (_, gestureState) => Math.abs(gestureState.dx) > 10, // 檢測是否橫向滑動
           onPanResponderMove: (_, gestureState) => {
-            if (gestureState.dx > 0) {
-              panX.setValue(gestureState.dx); // 設定滑動的位移
-            }
+            if (gestureState.dx > 0) panX.setValue(gestureState.dx); // 設定滑動的位移
           },
           onPanResponderRelease: (_, gestureState) => {
             if (gestureState.dx > 100) {
@@ -80,9 +79,15 @@ const N5ConversationScreen = () => {
               contentContainerStyle={{ paddingBottom: 300 }} // 確保滾動到底部時不被擋住
               renderItem={({ item }) => (
                 <View style={styles.conversationItem}>
-                  <Text style={styles.speaker}>{item.speaker}：</Text>
-                  <Text style={styles.japanese}>{item.japanese}</Text>
-                  <Text style={styles.chinese}>{item.chinese}</Text>
+                  <View style={styles.textContainer}>
+                    <Text style={styles.speaker}>{item.speaker}：</Text>
+                    <Text style={styles.japanese}>{item.japanese}</Text>
+                    <Text style={styles.chinese}>{item.chinese}</Text>
+                  </View>
+                  {/* 右下角音量按鈕 */}
+                  <TouchableOpacity onPress={() => speak(item.japanese)} style={styles.iconSpacing}>
+                    <Ionicons name="volume-high" size={24} color="black" />
+                  </TouchableOpacity>
                 </View>
               )}
             />
@@ -137,6 +142,12 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 8,
     marginBottom: ITEM_MARGIN,
+    flexDirection: "row", // 水平排列
+    justifyContent: "space-between", // 文字與按鈕兩端對齊
+    alignItems: "center", // 垂直對齊
+  },
+  textContainer: {
+    flex: 1, // 讓文字區域自適應
   },
   speaker: {
     fontSize: 20, // 與 sentence 尺寸一致
@@ -153,6 +164,9 @@ const styles = StyleSheet.create({
     color: '#9F38A2',
     flexWrap: 'wrap',
   },
+  iconSpacing: {
+    padding: 10, // 讓按鈕更容易點擊
+  }
 });
 
 export default N5ConversationScreen;

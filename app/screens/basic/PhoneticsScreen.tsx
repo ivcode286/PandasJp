@@ -2,24 +2,31 @@ import React from "react";
 import { View, Text, FlatList, StyleSheet, useColorScheme } from "react-native";
 import HiraganaScreen from "./HiraganaScreen"; // 引用五十音圖
 
-const dakuonData = [
+// 定義各個資料項目的型別
+type DakuonItem = { row: string; a: string; i: string; u: string; e: string; o: string };
+type YouonItem = { combo: string; romaji: string; example: string };
+type SummaryItem = { key: string; text: string };
+
+// 定義聯合型別
+type DataItem = DakuonItem | YouonItem | SummaryItem;
+
+const dakuonData: DakuonItem[] = [
   { row: "か行", a: "が (ga)", i: "ぎ (gi)", u: "ぐ (gu)", e: "げ (ge)", o: "ご (go)" },
   { row: "さ行", a: "ざ (za)", i: "じ (ji)", u: "ず (zu)", e: "ぜ (ze)", o: "ぞ (zo)" },
   { row: "た行", a: "だ (da)", i: "ぢ (ji)", u: "づ (zu)", e: "で (de)", o: "ど (do)" },
-  { row: "は行", a: "ば (ba)", i: "び (bi)", u: "ぶ (bu)", e: "べ (be)", o: "ぼ (bo)" },
 ];
 
-const handakuonData = [
+const handakuonData: DakuonItem[] = [
   { row: "は行", a: "ぱ (pa)", i: "ぴ (pi)", u: "ぷ (pu)", e: "ぺ (pe)", o: "ぽ (po)" },
 ];
 
-const youonData = [
+const youonData: YouonItem[] = [
   { combo: "きゃ（キャ）", romaji: "kya", example: "キャベツ（捲心菜）" },
   { combo: "きゅ（キュ）", romaji: "kyu", example: "キュウリ（黃瓜）" },
   { combo: "きょ（キョ）", romaji: "kyo", example: "東京（とうきょう）" },
 ];
 
-const summaryData = [
+const summaryData: SummaryItem[] = [
   { key: "1", text: "清音（基礎發音）" },
   { key: "2", text: "濁音（が、ざ、だ等）" },
   { key: "3", text: "半濁音（ぱ、ぴ等）" },
@@ -55,11 +62,21 @@ const PhoneticsScreen = () => {
           {item.component ? (
             item.component
           ) : (
-            <FlatList
+            // 為 FlatList 指定聯合型別 DataItem
+            <FlatList<DataItem>
               data={item.data}
-              keyExtractor={(subItem) => subItem.row || subItem.combo || subItem.key}
+              keyExtractor={(subItem) =>
+                // 根據存在的屬性來提取 key
+                "row" in subItem
+                  ? subItem.row
+                  : "combo" in subItem
+                  ? subItem.combo
+                  : "key" in subItem
+                  ? subItem.key
+                  : ""
+              }
               renderItem={({ item: row }) =>
-                row.row ? (
+                "row" in row ? (
                   <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
                     <Text style={[styles.cellHeader, { color: colors.text }]}>{row.row}</Text>
                     <Text style={[styles.cell, { color: colors.text }]}>{row.a}</Text>
@@ -68,7 +85,7 @@ const PhoneticsScreen = () => {
                     <Text style={[styles.cell, { color: colors.text }]}>{row.e}</Text>
                     <Text style={[styles.cell, { color: colors.text }]}>{row.o}</Text>
                   </View>
-                ) : row.combo ? (
+                ) : "combo" in row ? (
                   <Text style={[styles.example, { color: colors.text }]}>
                     • {row.combo} ({row.romaji}) - {row.example}
                   </Text>
