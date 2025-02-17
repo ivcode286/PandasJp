@@ -13,6 +13,7 @@ import WordsNavigator from './WordsNavigator';
 import HiraganaScreen from '../screens/basic/HiraganaScreen';
 import KatakanaScreen from '../screens/basic/KatakanaScreen';
 import PhoneticsScreen from '../screens/basic/PhoneticsScreen';
+import N5ConversationScreen from '../screens/basic/N5ConversationScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -39,7 +40,7 @@ export default function MyTabs() {
       
       <Tabs.Screen
         name="Home"
-        component={PhoneticsScreen}
+        component={N5ConversationScreen}
         options={{
           title: 'Learning Path',
           headerShown: true,

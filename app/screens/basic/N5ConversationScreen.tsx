@@ -1,0 +1,114 @@
+import React, { useState } from 'react';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import conversations from '../../../src/n5_daily_conversations.json';
+
+const N5ConversationScreen = () => {
+  const [selectedStory, setSelectedStory] = useState<number | null>(null);
+
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        {selectedStory === null ? (
+          <FlatList
+            data={conversations}
+            keyExtractor={(item, index) => index.toString()}
+            contentContainerStyle={{ paddingBottom: 300 }} // 確保底部有足夠空間
+            renderItem={({ item, index }) => (
+              <TouchableOpacity 
+                style={styles.storyItem} 
+                onPress={() => setSelectedStory(index)}
+              >
+                <Text style={styles.storyTitle}>{item.title}</Text>
+                <Text style={styles.scene}>{item.scene}</Text>
+              </TouchableOpacity>
+            )}
+          />
+        ) : (
+          <View style={styles.conversationContainer}>
+            <TouchableOpacity onPress={() => setSelectedStory(null)} style={styles.backButton}>
+              <Text style={styles.backButtonText}>← 返回</Text>
+            </TouchableOpacity>
+            <Text style={styles.storyTitle}>{conversations[selectedStory].title}</Text>
+            <Text style={styles.scene}>{conversations[selectedStory].scene}</Text>
+            <FlatList
+              data={conversations[selectedStory].conversation}
+              keyExtractor={(item, index) => index.toString()}
+              contentContainerStyle={{ paddingBottom: 300 }} // 確保滾動到底部時不被擋住
+              renderItem={({ item }) => (
+                <View style={styles.conversationItem}>
+                  <Text style={styles.speaker}>{item.speaker}：</Text>
+                  <Text style={styles.japanese}>{item.japanese}</Text>
+                  <Text style={styles.chinese}>{item.chinese}</Text>
+                </View>
+              )}
+            />
+          </View>
+        )}
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+};
+
+const ITEM_MARGIN = 12; // 與 GrammarScreen 保持一致
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: StatusBar.currentHeight || 0,
+    marginHorizontal: 16,
+  },
+  storyItem: {
+    backgroundColor: '#f9c2ff', // 與 GrammarScreen 樣式統一
+    padding: 16,
+    borderRadius: 8,
+    marginBottom: ITEM_MARGIN,
+  },
+  storyTitle: {
+    fontSize: 24, // 與 pattern 字體大小對齊
+    fontWeight: 'bold',
+    color: '#9F38A2',
+    flexWrap: 'wrap',
+  },
+  scene: {
+    fontSize: 18, // 與 translation 大小對齊
+    color: '#1f9024',
+    flexWrap: 'wrap',
+  },
+  conversationContainer: {
+    flex: 1,
+    padding: 16,
+  },
+  backButton: {
+    padding: 8,
+    backgroundColor: '#ddd',
+    borderRadius: 4,
+    marginBottom: 12,
+  },
+  backButtonText: {
+    fontSize: 16,
+  },
+  conversationItem: {
+    backgroundColor: '#4FD93E', // 讓對話與 GrammarScreen 格式統一
+    padding: 16,
+    borderRadius: 8,
+    marginBottom: ITEM_MARGIN,
+  },
+  speaker: {
+    fontSize: 20, // 與 sentence 尺寸一致
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  japanese: {
+    fontSize: 20, // 與 GrammarScreen 的 sentence 字體一致
+    color: '#3842A2',
+    flexWrap: 'wrap',
+  },
+  chinese: {
+    fontSize: 18, // 與 GrammarScreen 的 translation 字體一致
+    color: '#9F38A2',
+    flexWrap: 'wrap',
+  },
+});
+
+export default N5ConversationScreen;

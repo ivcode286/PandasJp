@@ -39,7 +39,7 @@ const PhoneticsScreen = () => {
 
       {/* 五十音圖 */}
       <Text style={styles.sectionTitle}>1. 五十音圖與基本發音</Text>
-      <HiraganaScreen />
+      {/* <HiraganaScreen /> */}
 
       {/* 濁音 */}
       <Text style={styles.sectionTitle}>2. 濁音（だくおん）</Text>
