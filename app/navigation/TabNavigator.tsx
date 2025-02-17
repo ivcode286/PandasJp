@@ -40,7 +40,7 @@ export default function MyTabs() {
       
       <Tabs.Screen
         name="Home"
-        component={N5ConversationScreen}
+        component={HomeScreen}
         options={{
           title: 'Learning Path',
           headerShown: true,
