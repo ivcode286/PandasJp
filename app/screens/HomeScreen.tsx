@@ -14,21 +14,27 @@ const learningPath = [
     ]
   },
   {
-    title: "🎯 第二階段：核心 N5 文法",
+    title: "🎯 第二階段：單字",
+    content: [
+    "N5 常見單字",
+	  "N5 常見漢字"
+    ]
+  },
+  {
+    title: "🎯 第三階段：核心 N5 文法",
     content: [
       "最常用 49 個 N5 句型（核心課程）"
     ]
   },
   {
-    title: "🎯 第三階段：詞彙 & 閱讀訓練",
+    title: "🎯 第四階段：閱讀訓練",
     content: [
-      "N5 常見漢字 100-150 個",
       "簡單短篇文章（N5 級新聞 / 小故事）",
       "日常對話（超市、學校、問路等）"
     ]
   },
   {
-    title: "🎯 第四階段：模擬測驗 & 複習",
+    title: "🎯 第五階段：模擬測驗 & 複習",
     content: [
       "JLPT N5 模擬試題"
     ]
@@ -38,7 +44,7 @@ const learningPath = [
 const LearningPathScreen = () => {
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.header}>📌 Learning Path：從零開始學基礎日文 N5</Text>
+      <Text style={styles.header}>📌 從零開始學基礎日文 N5</Text>
       {learningPath.map((item, index) => (
         <View key={index} style={styles.card}>
           <Text style={styles.cardTitle}>{item.title}</Text>
