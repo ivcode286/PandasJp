@@ -67,7 +67,7 @@ const N5ConversationScreen = () => {
         ) : (
           <Animated.View 
             style={[styles.conversationContainer, { transform: [{ translateX: panX }] }]}
-            {...(Platform.OS !== 'web' ? panResponder.panHandlers : {})} // Web 版不啟用手勢
+            {...panResponder?.panHandlers} // Web 版不啟用手勢
           >
             <TouchableOpacity onPress={() => setSelectedStory(null)} style={styles.backButton}>
               <Text style={styles.backButtonText}>← 返回</Text>

@@ -27,7 +27,7 @@ const HiraganaScreen = () => {
       <Text style={{ fontSize: 20, fontWeight: 'bold', textAlign: 'center', marginVertical: 12, color: isDark ? '#fff' : '#000' }}>
         平假名(按字讀音)
       </Text>
-      <ScrollView contentContainerStyle={{ paddingBottom: 40 }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 80 }}>
         {HIRAGANA_LIST.map((row, rowIndex) => (
           <View key={rowIndex} style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
             {row.map(([char, romaji], charIndex) => (

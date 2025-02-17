@@ -88,7 +88,7 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Settings"
-        component={PhoneticsScreen}
+        component={N5ConversationScreen}
         options={{
           title: 'Settings',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color || 'white'} />,
