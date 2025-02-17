@@ -13,6 +13,8 @@ import WordsNavigator from './WordsNavigator';
 import HiraganaScreen from '../screens/basic/HiraganaScreen';
 import KatakanaScreen from '../screens/basic/KatakanaScreen';
 import PhoneticsScreen from '../screens/basic/PhoneticsScreen';
+import ConversationScreen from '../screens/ConversationScreen';
+import ConversationTabs from './ConversationTabs';
 
 const Tabs = createBottomTabNavigator();
 
@@ -36,7 +38,7 @@ export default function MyTabs() {
         tabBarShowLabel: false,
       }}
     >
-      
+
       <Tabs.Screen
         name="Home"
         component={PhoneticsScreen}
@@ -49,7 +51,7 @@ export default function MyTabs() {
       <Tabs.Screen
         name="Words"
         //component={WordsDrawerNavigator}
-        component={WordsNavigator}   
+        component={WordsNavigator}
         options={{
           title: 'Words',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="character.square.fill" color={color} />,
@@ -63,15 +65,24 @@ export default function MyTabs() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="pencil.line" color={color || 'white'} />,
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="Settings"
-        component={KatakanaScreen }
+        component={KatakanaScreen}
         options={{
           title: 'Settings',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color || 'white'} />,
         }}
-      />
+      /> */}
+  <Tabs.Screen
+          name="Conversation"
+          component={ConversationTabs} // ✅ Use ConversationTabs instead of ConversationScreen
+          options={{
+            title: 'Conversations',
+            tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color || 'white'} />,
+          }}
+        />
     </Tabs.Navigator>
+
   );
 }
 
