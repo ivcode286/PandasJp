@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  StyleSheet,
-  FlatList,
-  useColorScheme,
-} from "react-native";
+import { View, Text, FlatList, StyleSheet, useColorScheme } from "react-native";
 import HiraganaScreen from "./HiraganaScreen"; // 引用五十音圖
 
 const dakuonData = [
@@ -16,7 +9,9 @@ const dakuonData = [
   { row: "は行", a: "ば (ba)", i: "び (bi)", u: "ぶ (bu)", e: "べ (be)", o: "ぼ (bo)" },
 ];
 
-const handakuonData = [{ row: "は行", a: "ぱ (pa)", i: "ぴ (pi)", u: "ぷ (pu)", e: "ぺ (pe)", o: "ぽ (po)" }];
+const handakuonData = [
+  { row: "は行", a: "ぱ (pa)", i: "ぴ (pi)", u: "ぷ (pu)", e: "ぺ (pe)", o: "ぽ (po)" },
+];
 
 const youonData = [
   { combo: "きゃ（キャ）", romaji: "kya", example: "キャベツ（捲心菜）" },
@@ -44,92 +39,62 @@ const PhoneticsScreen = () => {
   };
 
   return (
-    <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
-      <Text style={[styles.header, { color: colors.text }]}>📌 日語 N5 基本發音規則</Text>
-
-      <Text style={[styles.sectionTitle, { color: colors.text }]}>1. 五十音圖與基本發音</Text>
-      <View style={{ minHeight: 400 }}>
-        <HiraganaScreen />
-      </View>
-
-      <Text style={[styles.sectionTitle, { color: colors.text }]}>2. 濁音（だくおん）</Text>
-      <FlatList
-        data={dakuonData}
-        keyExtractor={(item) => item.row}
-        renderItem={({ item }) => (
-          <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
-            <Text style={[styles.cellHeader, { color: colors.text }]}>{item.row}</Text>
-            <Text style={[styles.cell, { color: colors.text }]}>{item.a}</Text>
-            <Text style={[styles.cell, { color: colors.text }]}>{item.i}</Text>
-            <Text style={[styles.cell, { color: colors.text }]}>{item.u}</Text>
-            <Text style={[styles.cell, { color: colors.text }]}>{item.e}</Text>
-            <Text style={[styles.cell, { color: colors.text }]}>{item.o}</Text>
-          </View>
-        )}
-      />
-
-      <Text style={[styles.sectionTitle, { color: colors.text }]}>3. 半濁音（はんだくおん）</Text>
-      <FlatList
-        data={handakuonData}
-        keyExtractor={(item) => item.row}
-        renderItem={({ item }) => (
-          <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
-            <Text style={[styles.cellHeader, { color: colors.text }]}>{item.row}</Text>
-            <Text style={[styles.cell, { color: colors.text }]}>{item.a}</Text>
-            <Text style={[styles.cell, { color: colors.text }]}>{item.i}</Text>
-            <Text style={[styles.cell, { color: colors.text }]}>{item.u}</Text>
-            <Text style={[styles.cell, { color: colors.text }]}>{item.e}</Text>
-            <Text style={[styles.cell, { color: colors.text }]}>{item.o}</Text>
-          </View>
-        )}
-      />
-
-      <Text style={[styles.sectionTitle, { color: colors.text }]}>6. 拗音（ようおん）</Text>
-      <FlatList
-        data={youonData}
-        keyExtractor={(item) => item.combo}
-        renderItem={({ item }) => (
-          <Text style={[styles.example, { color: colors.text }]}>
-            • {item.combo} ({item.romaji}) - {item.example}
-          </Text>
-        )}
-      />
-
-      <Text style={[styles.sectionTitle, { color: colors.text }]}>總結</Text>
-      <Text style={[styles.paragraph, { color: colors.text }]}>
-        日語的發音規則雖然固定，但包含不同類型的變化，如：
-      </Text>
-      <FlatList
-        data={summaryData}
-        keyExtractor={(item) => item.key}
-        renderItem={({ item }) => (
-          <Text style={[styles.summaryItem, { color: colors.text }]}>• {item.text}</Text>
-        )}
-      />
-    </ScrollView>
+    <FlatList
+      data={[
+        { key: "1", title: "1. 五十音圖與基本發音", component: <HiraganaScreen /> },
+        { key: "2", title: "2. 濁音（だくおん）", data: dakuonData },
+        { key: "3", title: "3. 半濁音（はんだくおん）", data: handakuonData },
+        { key: "4", title: "6. 拗音（ようおん）", data: youonData },
+        { key: "5", title: "總結", data: summaryData },
+      ]}
+      keyExtractor={(item) => item.key}
+      contentContainerStyle={[styles.container, { backgroundColor: colors.background }]}
+      renderItem={({ item }) => (
+        <View style={styles.section}>
+          <Text style={[styles.sectionTitle, { color: colors.text }]}>{item.title}</Text>
+          {item.component ? (
+            item.component
+          ) : (
+            <FlatList
+              data={item.data}
+              keyExtractor={(subItem) => subItem.row || subItem.combo || subItem.key}
+              renderItem={({ item: row }) =>
+                row.row ? (
+                  <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
+                    <Text style={[styles.cellHeader, { color: colors.text }]}>{row.row}</Text>
+                    <Text style={[styles.cell, { color: colors.text }]}>{row.a}</Text>
+                    <Text style={[styles.cell, { color: colors.text }]}>{row.i}</Text>
+                    <Text style={[styles.cell, { color: colors.text }]}>{row.u}</Text>
+                    <Text style={[styles.cell, { color: colors.text }]}>{row.e}</Text>
+                    <Text style={[styles.cell, { color: colors.text }]}>{row.o}</Text>
+                  </View>
+                ) : row.combo ? (
+                  <Text style={[styles.example, { color: colors.text }]}>
+                    • {row.combo} ({row.romaji}) - {row.example}
+                  </Text>
+                ) : (
+                  <Text style={[styles.summaryItem, { color: colors.text }]}>• {row.text}</Text>
+                )
+              }
+            />
+          )}
+        </View>
+      )}
+    />
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     padding: 16,
-    paddingBottom: 80
+    paddingBottom: 80,
   },
-  header: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 16,
+  section: {
+    marginBottom: 20,
   },
   sectionTitle: {
     fontSize: 20,
     fontWeight: "bold",
-    marginTop: 20,
-    marginBottom: 10,
-  },
-  paragraph: {
-    fontSize: 16,
-    lineHeight: 24,
     marginBottom: 10,
   },
   tableRow: {
