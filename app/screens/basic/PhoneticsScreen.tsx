@@ -5,8 +5,10 @@ import {
   FlatList,
   StyleSheet,
   useColorScheme,
+  TouchableOpacity,
 } from "react-native";
 import HiraganaScreen from "./HiraganaScreen"; // 引用五十音圖
+import useTextToSpeech from "../../../hooks/useTextToSpeech"; // 引入 useTextToSpeech hook
 
 // 定義各個資料項目的型別
 type DakuonItem = {
@@ -24,15 +26,20 @@ type YouonItem = {
 };
 type SummaryItem = { key: string; text: string };
 
-// helper: 解析含有 "(羅馬音)" 格式的文字，並將日文和羅馬音分開顯示
-const renderKanaCell = (text: string, colors: { text: string; border: string }) => {
-  // 檢查是否含有 " ("
+// helper: 解析含有 "(羅馬音)" 格式的文字，並將日文和羅馬音分開顯示，
+// 並在有羅馬音時，按下 CELL 讀出日文
+const renderKanaCell = (
+  text: string,
+  colors: { text: string; border: string },
+  speak: (text: string) => void
+) => {
   if (text.includes(" (")) {
     const parts = text.split(" (");
     const kana = parts[0].trim();
     const romaji = parts[1].replace(")", "").trim();
     return (
-      <View
+      <TouchableOpacity
+        onPress={() => speak(kana)} // 讀出日文部分
         style={[
           styles.cell,
           styles.borderCell,
@@ -41,7 +48,7 @@ const renderKanaCell = (text: string, colors: { text: string; border: string }) 
       >
         <Text style={{ color: colors.text }}>{kana}</Text>
         <Text style={{ color: colors.text, fontSize: 12 }}>{romaji}</Text>
-      </View>
+      </TouchableOpacity>
     );
   } else {
     return (
@@ -58,13 +65,16 @@ const renderKanaCell = (text: string, colors: { text: string; border: string }) 
   }
 };
 
-// helper: 用於拗音，顯示 combo 與 romaji（分為兩行）
+// helper: 用於拗音，顯示 combo 與 romaji（分為兩行），
+// 按下時讀出日文（即 combo 部分）
 const renderYouonComboCell = (
   combo: string,
   romaji: string,
-  colors: { text: string; border: string }
+  colors: { text: string; border: string },
+  speak: (text: string) => void
 ) => (
-  <View
+  <TouchableOpacity
+    onPress={() => speak(combo)} // 讀出日文部分
     style={[
       styles.cell,
       styles.borderCell,
@@ -73,7 +83,7 @@ const renderYouonComboCell = (
   >
     <Text style={{ color: colors.text }}>{combo}</Text>
     <Text style={{ color: colors.text, fontSize: 12 }}>{romaji}</Text>
-  </View>
+  </TouchableOpacity>
 );
 
 const dakuonData: DakuonItem[] = [
@@ -105,12 +115,14 @@ const PhoneticsScreen = () => {
   const theme = useColorScheme();
   const isDark = theme === "dark";
 
-  // 使用第一個方法，將框線固定為白色
+  // 固定使用白色框線
   const colors = {
     background: isDark ? "#121212" : "#FFFFFF",
     text: isDark ? "#E0E0E0" : "#333333",
     border: "#FFFFFF",
   };
+
+  const { speak } = useTextToSpeech();
 
   // Outer list 各 section 資料
   const sections = [
@@ -134,54 +146,68 @@ const PhoneticsScreen = () => {
           ) : (
             <>
               {item.key === "2" ? (
-                // 濁音：每個 CELL 加上框線，並拆分日文和羅馬音
+                // 濁音：每個 CELL 加上框線，並拆分日文和羅馬音，按下 CELL 時讀出日文
                 <FlatList<DakuonItem>
                   data={item.data as DakuonItem[]}
                   keyExtractor={(row) => row.row}
                   renderItem={({ item: row }) => (
                     <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
-                      {renderKanaCell(row.row, colors)}
-                      {renderKanaCell(row.a, colors)}
-                      {renderKanaCell(row.i, colors)}
-                      {renderKanaCell(row.u, colors)}
-                      {renderKanaCell(row.e, colors)}
-                      {renderKanaCell(row.o, colors)}
+                      {renderKanaCell(row.row, colors, speak)}
+                      {renderKanaCell(row.a, colors, speak)}
+                      {renderKanaCell(row.i, colors, speak)}
+                      {renderKanaCell(row.u, colors, speak)}
+                      {renderKanaCell(row.e, colors, speak)}
+                      {renderKanaCell(row.o, colors, speak)}
                     </View>
                   )}
                 />
               ) : item.key === "3" ? (
-                // 半濁音：同樣每個 CELL 加上框線，並拆分日文和羅馬音
+                // 半濁音：同樣每個 CELL 加上框線，並拆分日文和羅馬音，按下 CELL 時讀出日文
                 <FlatList<DakuonItem>
                   data={item.data as DakuonItem[]}
                   keyExtractor={(row) => row.row}
                   renderItem={({ item: row }) => (
                     <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
-                      {renderKanaCell(row.row, colors)}
-                      {renderKanaCell(row.a, colors)}
-                      {renderKanaCell(row.i, colors)}
-                      {renderKanaCell(row.u, colors)}
-                      {renderKanaCell(row.e, colors)}
-                      {renderKanaCell(row.o, colors)}
+                      {renderKanaCell(row.row, colors, speak)}
+                      {renderKanaCell(row.a, colors, speak)}
+                      {renderKanaCell(row.i, colors, speak)}
+                      {renderKanaCell(row.u, colors, speak)}
+                      {renderKanaCell(row.e, colors, speak)}
+                      {renderKanaCell(row.o, colors, speak)}
                     </View>
                   )}
                 />
               ) : item.key === "4" ? (
-                // 拗音：分成兩個 CELL 呈現，第一個 CELL 顯示 combo 與 romaji，第二個 CELL 顯示 example（兩個 CELL 都加框線）
+                // 拗音：分成兩個 CELL 呈現
                 <FlatList<YouonItem>
                   data={item.data as YouonItem[]}
                   keyExtractor={(row) => row.combo}
                   renderItem={({ item: row }) => (
                     <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
-                      {renderYouonComboCell(row.combo, row.romaji, colors)}
-                      <View
+                      {renderYouonComboCell(row.combo, row.romaji, colors, speak)}
+                      {/* 將 example cell 用 TouchableOpacity 包覆，
+                          當按下時取出括號前的日文部分讀出 */}
+                      <TouchableOpacity
+                        onPress={() => {
+                          const spokenText = row.example.includes("（")
+                            ? row.example.split("（")[0].trim()
+                            : row.example;
+                          speak(spokenText);
+                        }}
                         style={[
                           styles.cell,
                           styles.borderCell,
-                          { flex: 3, padding: 4, justifyContent: "center", alignItems: "center", borderColor: colors.border },
+                          {
+                            flex: 3,
+                            padding: 4,
+                            justifyContent: "center",
+                            alignItems: "center",
+                            borderColor: colors.border,
+                          },
                         ]}
                       >
                         <Text style={{ color: colors.text }}>{row.example}</Text>
-                      </View>
+                      </TouchableOpacity>
                     </View>
                   )}
                 />
