@@ -1,14 +1,80 @@
 import React from "react";
-import { View, Text, FlatList, StyleSheet, useColorScheme } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  useColorScheme,
+} from "react-native";
 import HiraganaScreen from "./HiraganaScreen"; // 引用五十音圖
 
 // 定義各個資料項目的型別
-type DakuonItem = { row: string; a: string; i: string; u: string; e: string; o: string };
-type YouonItem = { combo: string; romaji: string; example: string };
+type DakuonItem = {
+  row: string;
+  a: string;
+  i: string;
+  u: string;
+  e: string;
+  o: string;
+};
+type YouonItem = {
+  combo: string;
+  romaji: string;
+  example: string;
+};
 type SummaryItem = { key: string; text: string };
 
-// 定義聯合型別
-type DataItem = DakuonItem | YouonItem | SummaryItem;
+// helper: 解析含有 "(羅馬音)" 格式的文字，並將日文和羅馬音分開顯示
+const renderKanaCell = (text: string, colors: { text: string; border: string }) => {
+  // 檢查是否含有 " ("
+  if (text.includes(" (")) {
+    const parts = text.split(" (");
+    const kana = parts[0].trim();
+    const romaji = parts[1].replace(")", "").trim();
+    return (
+      <View
+        style={[
+          styles.cell,
+          styles.borderCell,
+          { alignItems: "center", padding: 4, borderColor: colors.border },
+        ]}
+      >
+        <Text style={{ color: colors.text }}>{kana}</Text>
+        <Text style={{ color: colors.text, fontSize: 12 }}>{romaji}</Text>
+      </View>
+    );
+  } else {
+    return (
+      <View
+        style={[
+          styles.cell,
+          styles.borderCell,
+          { alignItems: "center", padding: 4, borderColor: colors.border },
+        ]}
+      >
+        <Text style={{ color: colors.text }}>{text}</Text>
+      </View>
+    );
+  }
+};
+
+// helper: 用於拗音，顯示 combo 與 romaji（分為兩行）
+const renderYouonComboCell = (
+  combo: string,
+  romaji: string,
+  colors: { text: string; border: string }
+) => (
+  <View
+    style={[
+      styles.cell,
+      styles.borderCell,
+      { alignItems: "center", padding: 4, flex: 2, borderColor: colors.border },
+    ]}
+  >
+    <Text style={{ color: colors.text }}>{combo}</Text>
+    <Text style={{ color: colors.text, fontSize: 12 }}>{romaji}</Text>
+  </View>
+);
 
 const dakuonData: DakuonItem[] = [
   { row: "か行", a: "が (ga)", i: "ぎ (gi)", u: "ぐ (gu)", e: "げ (ge)", o: "ご (go)" },
@@ -39,21 +105,25 @@ const PhoneticsScreen = () => {
   const theme = useColorScheme();
   const isDark = theme === "dark";
 
+  // 使用第一個方法，將框線固定為白色
   const colors = {
     background: isDark ? "#121212" : "#FFFFFF",
     text: isDark ? "#E0E0E0" : "#333333",
-    border: isDark ? "#333333" : "#CCCCCC",
+    border: "#FFFFFF",
   };
+
+  // Outer list 各 section 資料
+  const sections = [
+    { key: "1", title: "1. 五十音圖與基本發音", component: <HiraganaScreen /> },
+    { key: "2", title: "2. 濁音（だくおん）", data: dakuonData },
+    { key: "3", title: "3. 半濁音（はんだくおん）", data: handakuonData },
+    { key: "4", title: "4. 拗音（ようおん）", data: youonData },
+    { key: "5", title: "總結", data: summaryData },
+  ];
 
   return (
     <FlatList
-      data={[
-        { key: "1", title: "1. 五十音圖與基本發音", component: <HiraganaScreen /> },
-        { key: "2", title: "2. 濁音（だくおん）", data: dakuonData },
-        { key: "3", title: "3. 半濁音（はんだくおん）", data: handakuonData },
-        { key: "4", title: "6. 拗音（ようおん）", data: youonData },
-        { key: "5", title: "總結", data: summaryData },
-      ]}
+      data={sections}
       keyExtractor={(item) => item.key}
       contentContainerStyle={[styles.container, { backgroundColor: colors.background }]}
       renderItem={({ item }) => (
@@ -62,38 +132,74 @@ const PhoneticsScreen = () => {
           {item.component ? (
             item.component
           ) : (
-            // 為 FlatList 指定聯合型別 DataItem
-            <FlatList<DataItem>
-              data={item.data}
-              keyExtractor={(subItem) =>
-                // 根據存在的屬性來提取 key
-                "row" in subItem
-                  ? subItem.row
-                  : "combo" in subItem
-                  ? subItem.combo
-                  : "key" in subItem
-                  ? subItem.key
-                  : ""
-              }
-              renderItem={({ item: row }) =>
-                "row" in row ? (
-                  <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
-                    <Text style={[styles.cellHeader, { color: colors.text }]}>{row.row}</Text>
-                    <Text style={[styles.cell, { color: colors.text }]}>{row.a}</Text>
-                    <Text style={[styles.cell, { color: colors.text }]}>{row.i}</Text>
-                    <Text style={[styles.cell, { color: colors.text }]}>{row.u}</Text>
-                    <Text style={[styles.cell, { color: colors.text }]}>{row.e}</Text>
-                    <Text style={[styles.cell, { color: colors.text }]}>{row.o}</Text>
-                  </View>
-                ) : "combo" in row ? (
-                  <Text style={[styles.example, { color: colors.text }]}>
-                    • {row.combo} ({row.romaji}) - {row.example}
-                  </Text>
-                ) : (
-                  <Text style={[styles.summaryItem, { color: colors.text }]}>• {row.text}</Text>
-                )
-              }
-            />
+            <>
+              {item.key === "2" ? (
+                // 濁音：每個 CELL 加上框線，並拆分日文和羅馬音
+                <FlatList<DakuonItem>
+                  data={item.data as DakuonItem[]}
+                  keyExtractor={(row) => row.row}
+                  renderItem={({ item: row }) => (
+                    <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
+                      {renderKanaCell(row.row, colors)}
+                      {renderKanaCell(row.a, colors)}
+                      {renderKanaCell(row.i, colors)}
+                      {renderKanaCell(row.u, colors)}
+                      {renderKanaCell(row.e, colors)}
+                      {renderKanaCell(row.o, colors)}
+                    </View>
+                  )}
+                />
+              ) : item.key === "3" ? (
+                // 半濁音：同樣每個 CELL 加上框線，並拆分日文和羅馬音
+                <FlatList<DakuonItem>
+                  data={item.data as DakuonItem[]}
+                  keyExtractor={(row) => row.row}
+                  renderItem={({ item: row }) => (
+                    <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
+                      {renderKanaCell(row.row, colors)}
+                      {renderKanaCell(row.a, colors)}
+                      {renderKanaCell(row.i, colors)}
+                      {renderKanaCell(row.u, colors)}
+                      {renderKanaCell(row.e, colors)}
+                      {renderKanaCell(row.o, colors)}
+                    </View>
+                  )}
+                />
+              ) : item.key === "4" ? (
+                // 拗音：分成兩個 CELL 呈現，第一個 CELL 顯示 combo 與 romaji，第二個 CELL 顯示 example（兩個 CELL 都加框線）
+                <FlatList<YouonItem>
+                  data={item.data as YouonItem[]}
+                  keyExtractor={(row) => row.combo}
+                  renderItem={({ item: row }) => (
+                    <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
+                      {renderYouonComboCell(row.combo, row.romaji, colors)}
+                      <View
+                        style={[
+                          styles.cell,
+                          styles.borderCell,
+                          { flex: 3, padding: 4, justifyContent: "center", alignItems: "center", borderColor: colors.border },
+                        ]}
+                      >
+                        <Text style={{ color: colors.text }}>{row.example}</Text>
+                      </View>
+                    </View>
+                  )}
+                />
+              ) : item.key === "5" ? (
+                // 總結：不加框線的呈現
+                <FlatList<SummaryItem>
+                  data={item.data as SummaryItem[]}
+                  keyExtractor={(row) => row.key}
+                  renderItem={({ item: row }) => (
+                    <View style={[styles.tableRow, { borderBottomColor: colors.border, paddingVertical: 4 }]}>
+                      <View style={[styles.fullCell, { padding: 4 }]}>
+                        <Text style={{ color: colors.text }}>• {row.text}</Text>
+                      </View>
+                    </View>
+                  )}
+                />
+              ) : null}
+            </>
           )}
         </View>
       )}
@@ -117,28 +223,20 @@ const styles = StyleSheet.create({
   tableRow: {
     flexDirection: "row",
     paddingVertical: 8,
-    borderBottomWidth: 1,
   },
-  cellHeader: {
-    fontSize: 16,
-    fontWeight: "bold",
-    width: 80,
-    textAlign: "center",
-  },
+  // 原有 cell 樣式（在 dakuonData 等使用）
   cell: {
     fontSize: 16,
     width: 60,
     textAlign: "center",
   },
-  example: {
-    fontSize: 16,
-    marginLeft: 10,
-    marginBottom: 5,
+  // 用於加框線的 cell（只定義了 borderWidth，borderColor 由 inline 指定）
+  borderCell: {
+    borderWidth: 1,
   },
-  summaryItem: {
-    fontSize: 16,
-    marginLeft: 10,
-    marginBottom: 5,
+  // 用於 summaryData 的 full width cell（不加框線）
+  fullCell: {
+    flex: 1,
   },
 });
 
