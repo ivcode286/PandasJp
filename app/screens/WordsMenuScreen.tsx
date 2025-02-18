@@ -45,13 +45,13 @@ export default function WordsMenuScreen() {
         />
       </Pressable>
 
-      {/* N3-N4 按鈕（圖片） */}
+      {/* N4-N3 按鈕（圖片） */}
       <Pressable 
         onPressIn={() => handlePressIn(scaleAnimN3N4)} 
-        onPressOut={() => handlePressOut(scaleAnimN3N4, 'N3-N4')}
+        onPressOut={() => handlePressOut(scaleAnimN3N4, 'N4-N3')}
       >
         <Animated.Image 
-          source={require('../../assets/images/n3_n4.png')} 
+          source={require('../../assets/images/n4_n3.png')} 
           style={[styles.image, { transform: [{ scale: scaleAnimN3N4 }] }]}
         />
       </Pressable>

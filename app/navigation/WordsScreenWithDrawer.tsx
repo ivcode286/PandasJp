@@ -6,7 +6,7 @@ import { RouteProp, useRoute } from '@react-navigation/native';
 import { RootStackParamList } from './RootStackParamList';
 
 
-type LevelType = 'N5' | 'N3-N4';
+type LevelType = 'N5' | 'N4-N3';
 
 const drawerData: Record<LevelType, string[]> = {
     N5: [
@@ -20,7 +20,7 @@ const drawerData: Record<LevelType, string[]> = {
         '轉話題連接詞', '主語助詞', '目的語助詞', '方位助詞', '起點助詞',
         '方式助詞', '選擇助詞', '強調助詞', '提示助詞'
     ],
-    'N3-N4': [
+    'N4-N3': [
         'あ', 'い', 'う', 'え', 'お',
         'か', 'き', 'く', 'け', 'こ',
         'さ', 'し', 'す', 'せ', 'そ',
@@ -34,7 +34,7 @@ const drawerData: Record<LevelType, string[]> = {
     ]
 };
 
-// **將 `N3-N4` 按照特定規則拆分**
+// **將 `N4-N3` 按照特定規則拆分**
 const chunkArraySpecial = (array: string[]): string[][] => {
     const result: string[][] = [];
     let tempArray: string[] = [];
@@ -84,8 +84,8 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
         <DrawerContentScrollView
             contentContainerStyle={[styles.drawerContent, { paddingBottom: 80 }]} // ✅ **確保不被 `BottomTab` 擋住**
         >
-            {level === 'N3-N4' ? (
-                // **N3-N4: 特殊規則排列**
+            {level === 'N4-N3' ? (
+                // **N4-N3: 特殊規則排列**
                 chunkArraySpecial(items).map((row, index) => (
                     <View key={index} style={styles.drawerRow}>
                         {row.map((label) => (
