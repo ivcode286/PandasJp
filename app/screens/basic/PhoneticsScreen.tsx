@@ -253,7 +253,7 @@ const styles = StyleSheet.create({
   // 原有 cell 樣式（在 dakuonData 等使用）
   cell: {
     fontSize: 16,
-    width: 60,
+    width: 56,
     textAlign: "center",
   },
   // 用於加框線的 cell（只定義了 borderWidth，borderColor 由 inline 指定）
