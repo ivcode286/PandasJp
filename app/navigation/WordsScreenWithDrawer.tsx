@@ -144,7 +144,7 @@ function WordScreenWithDrawer() {
 
     return (
         <Drawer.Navigator
-            screenOptions={{ swipeEdgeWidth: 150 , drawerPosition: 'right', }}  // ✅ 限制 Drawer 手勢區域 (px), ✅ Drawer 從右側滑出
+            screenOptions={{ swipeEdgeWidth: 150 , drawerPosition: 'right', drawerType: 'front'}}  // ✅ 限制 Drawer 手勢區域 (px), ✅ Drawer 從右側滑出
             drawerContent={(props) => <CustomDrawerContent {...props} level={level} />} // ✅ 傳入正確的類型
         >
        <Drawer.Screen
