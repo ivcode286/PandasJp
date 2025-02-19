@@ -9,6 +9,7 @@ export type RootStackParamList = {
   ShortReadingN5Screen: undefined;
   N5ConversationScreen: undefined;
   WordsMenuScreen: undefined;
+  StoryStack: undefined; 
 
   // 需要帶 { level: string } 的畫面
   WordsWithDrawer: {

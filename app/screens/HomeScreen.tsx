@@ -24,7 +24,7 @@ type NonParamScreen = {
     | "PhoneticsScreen"
     | "N5ConceptsScreen"
     | "GrammarScreen"
-    | "ShortReadingN5Screen"
+    | "StoryStack"
     | "N5ConversationScreen";
 };
 
@@ -42,11 +42,11 @@ const menuItems: MenuItem[] = [
   { title: "片假名", screen: "KatakanaScreen" },
   { title: "平假和片假對比", screen: "KanaComparisonScreen" },
   { title: "基本發音規則 & 長音、促音、拗音", screen: "PhoneticsScreen" },
-  { title: "日語的基本概念", screen: "N5ConceptsScreen" },
   { title: "N5 常用單字", screen: "WordsWithDrawer", specialLevel: "N5" },
   { title: "N5 常見漢字", screen: "WordsWithDrawer", specialLevel: "N5_KANJI" },
+  { title: "日語的基本概念", screen: "N5ConceptsScreen" },
   { title: "最常用 49 個 N5 句型（核心課程）", screen: "GrammarScreen" },
-  { title: "N5簡單短篇文章", screen: "ShortReadingN5Screen" },
+  { title: "N5簡單短篇文章", screen: "StoryStack" },
   { title: "N5日常對話", screen: "N5ConversationScreen" },
 ];
 

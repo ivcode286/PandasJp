@@ -35,8 +35,10 @@ function HomeStack() {
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} />
       <Stack.Screen name="N5ConversationScreen" component={N5ConversationScreen} />
 
-      {/* 新增這條 */}
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} />
+
+      {/* 將原本只在 Tabs.Screen 用的 StoryStack 改為 HomeStack 也能使用 */}
+      <Stack.Screen name="StoryStack" component={StoryStack} />
     </Stack.Navigator>
   );
 }
