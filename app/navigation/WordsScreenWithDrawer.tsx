@@ -144,7 +144,7 @@ function WordScreenWithDrawer() {
 
     return (
         <Drawer.Navigator
-            screenOptions={{ swipeEdgeWidth: 40 , drawerPosition: 'right', }}  // ✅ 限制 Drawer 手勢區域 (40px), ✅ Drawer 從右側滑出
+            screenOptions={{ swipeEdgeWidth: 150 , drawerPosition: 'right', }}  // ✅ 限制 Drawer 手勢區域 (px), ✅ Drawer 從右側滑出
             drawerContent={(props) => <CustomDrawerContent {...props} level={level} />} // ✅ 傳入正確的類型
         >
        <Drawer.Screen
@@ -153,7 +153,15 @@ function WordScreenWithDrawer() {
         initialParams={{ level }} 
         options={({ navigation }) => ({
             title: `${level} 單字`,
-            headerLeft: () => null, // 移除左側預設按鈕
+            headerTitleAlign: 'center',
+            headerLeft: () => (
+                <TouchableOpacity
+                    onPress={() => navigation.goBack()} 
+                    style={{ paddingLeft: 16 }}
+                >
+                    <Ionicons name="arrow-back" size={24} color="white" />
+                </TouchableOpacity>
+            ),
             headerRight: () => (
                 <TouchableOpacity
                     onPress={() => navigation.toggleDrawer()} // ✅ 使用 `toggleDrawer()`
