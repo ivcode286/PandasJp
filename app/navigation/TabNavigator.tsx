@@ -17,6 +17,7 @@ import N5ConversationScreen from '../screens/basic/N5ConversationScreen';
 import { createStackNavigator } from '@react-navigation/stack';
 import N5StoryMenu from '../screens/basic/N5StoryMenu';
 import N5StoryScreen from '../screens/basic/N5StoryScreen';
+import WordsScreenWithDrawer from './WordsScreenWithDrawer';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -31,6 +32,9 @@ function HomeStack() {
       <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} />
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} />
       <Stack.Screen name="N5ConversationScreen" component={N5ConversationScreen} />
+
+      {/* 新增這條 */}
+      <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} />
     </Stack.Navigator>
   );
 }
@@ -99,6 +103,7 @@ export default function MyTabs() {
         component={StoryStack}
         options={{
           title: 'Settings',
+          headerShown: true,
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color || 'white'} />,
         }}
       />
