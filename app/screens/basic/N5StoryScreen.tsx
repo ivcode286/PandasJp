@@ -46,36 +46,49 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: 'white',
-    paddingBottom: 80
+    backgroundColor: '#121212', // 深色背景
+    paddingBottom: 80,
   },
   title: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
+    color: '#ffffff', // 亮白色標題
   },
   chapterContainer: {
     marginBottom: 20,
+    backgroundColor: '#1e1e1e', // 深灰色區塊
+    padding: 15,
+    borderRadius: 10, // 圓角
   },
   chapterTitle: {
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,
+    color: '#ffcc00', // 亮黃色，突出章節標題
   },
   sentenceContainer: {
-    marginBottom: 5,
+    marginBottom: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    backgroundColor: '#292929', // 更深的灰色塊
+    borderRadius: 8, // 圓角
   },
   sentence: {
     fontSize: 16,
+    color: '#ffffff', // 亮白色
+    lineHeight: 24, // 增加行距，讓閱讀更舒適
   },
   translation: {
     fontSize: 14,
-    color: 'gray',
+    color: '#b0b0b0', // 灰色，區分日文與翻譯
+    marginTop: 4,
+    lineHeight: 22,
   },
   errorText: {
     fontSize: 18,
-    color: 'red',
+    color: '#ff5555', // 紅色錯誤訊息
     textAlign: 'center',
     marginTop: 20,
   },
