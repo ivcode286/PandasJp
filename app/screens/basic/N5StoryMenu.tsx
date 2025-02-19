@@ -6,26 +6,24 @@ import {
   TouchableOpacity, 
   StyleSheet, 
   Image, 
-  Platform
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import storiesData from '../../../src/n5_story.json';
+import { getImage } from '../../../src/utils/imageLoader'; // ✅ 匯入圖片載入函數
 
-// Define the StackParamList so that TypeScript knows
-// that N5StoryScreen needs a 'storyTitle' parameter.
+// 定義 StackParamList 讓 TypeScript 知道需要傳入 storyTitle
 type StackParamList = {
   N5StoryScreen: { storyTitle: string };
 };
 
-const COVERPAGE_CARD_WIDTH=400;
+const COVERPAGE_CARD_WIDTH = 400;
 
 export default function N5StoryMenu() {
-  // Use navigation hook for navigating to details screen
   const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5StoryScreen'>>();
+
   return (
     <View style={styles.container}>
-      
       <FlatList
         data={storiesData.stories}
         keyExtractor={(item) => item.title}
@@ -34,13 +32,8 @@ export default function N5StoryMenu() {
             style={styles.cardContainer}
             onPress={() => navigation.navigate('N5StoryScreen', { storyTitle: item.title })}
           >
-            {/* 
-              Display cover image.
-              You can replace `require` with your own image source path.
-              E.g. require('../../../assets/images/' + item.imageName)
-            */}
             <Image 
-              source={require('../../../assets/images/stories_cover/cover_example.jpg')}
+              source={getImage(item.imageName)} // ✅ 根據 `imageName` 載入不同圖片
               style={styles.coverImage}
             />
             <View style={styles.textContainer}>
@@ -61,8 +54,8 @@ const styles = StyleSheet.create({
     paddingBottom: 80,
   },
   cardContainer: {
-    width: COVERPAGE_CARD_WIDTH, // 🔥 確保所有卡片寬度一致
-    alignSelf: 'center', // 🔥 讓卡片在 Web 和 Mobile 置中
+    width: COVERPAGE_CARD_WIDTH,
+    alignSelf: 'center',
     backgroundColor: '#ffffff',
     borderRadius: 12,
     marginVertical: 10,
@@ -87,7 +80,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: '#333',
     textAlign: 'center',
-    flexWrap: 'wrap', // 🔥 避免過長的文字撐開卡片
-    maxWidth: '90%', // 🔥 限制最大寬度
+    flexWrap: 'wrap',
+    maxWidth: '90%',
   },
 });

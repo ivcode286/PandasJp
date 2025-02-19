@@ -2,6 +2,7 @@
   "stories": [
     {
       "title": "桃子姫（ももこひめ）の大冒険",
+      "imageName": "momoko.jpg",
       "story": [
         {
           "chapter": "第一章：桃子姫の誕生",
@@ -195,6 +196,7 @@
     },
     {
       "title": "魔法少女小光（まほうしょうじょ ひかり）と仲間（なかま）たち！",
+      "imageName": "magical_shoujo.jpg",
       "story": [
         {
           "chapter": "第一章：小光的魔法",
