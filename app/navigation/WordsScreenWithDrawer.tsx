@@ -6,7 +6,7 @@ import { RouteProp, useRoute } from '@react-navigation/native';
 import { RootStackParamList } from './RootStackParamList';
 
 
-type LevelType = 'N5' | 'N4_N3';
+type LevelType = 'N5' | 'N4_N3' | 'N5_KANJI';
 
 const drawerData: Record<LevelType, string[]> = {
     N5: [
@@ -31,6 +31,9 @@ const drawerData: Record<LevelType, string[]> = {
         'や', 'ゆ', 'よ', // **這一行是例外（3 個一行）**
         'ら', 'り', 'る', 'れ', 'ろ',
         'わ'  // **這一行是例外（單獨一行）**
+    ],
+    'N5_KANJI': [
+        '數字', '時間', '方位', '人', '自然', '事物'
     ]
 };
 
@@ -106,7 +109,7 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
                     ))}
                 </View>
             ));
-        } else if (level === 'N5') {
+        } else {
             // **N5: 垂直排列**
             return items.map((label) => (
                 <DrawerItem
@@ -123,10 +126,7 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
                     style={styles.drawerItemVertical}
                 />
             ));
-        } else {
-            // 若不是 N4_N3 或 N5，則不顯示任何內容
-            return null;
-        }
+        } 
     })()}
 </DrawerContentScrollView>
 

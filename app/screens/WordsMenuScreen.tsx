@@ -12,6 +12,7 @@ export default function WordsMenuScreen() {
 
   // 建立動畫縮放的數值
   const scaleAnimN5 = useRef(new Animated.Value(1)).current;
+  const scaleAnimN5Kanji = useRef(new Animated.Value(1)).current;
   const scaleAnimN3N4 = useRef(new Animated.Value(1)).current;
 
   // 按下時縮小
@@ -47,12 +48,12 @@ export default function WordsMenuScreen() {
       </Pressable>
          {/* N5-Kanji */}
          <Pressable 
-        onPressIn={() => handlePressIn(scaleAnimN3N4)} 
-        onPressOut={() => handlePressOut(scaleAnimN3N4, LEVELS.N5_KANJI)}
+        onPressIn={() => handlePressIn(scaleAnimN5Kanji)} 
+        onPressOut={() => handlePressOut(scaleAnimN5Kanji, LEVELS.N5_KANJI)}
       >
         <Animated.Image 
           source={require('../../assets/images/n5_kanji.png')} 
-          style={[styles.image, { transform: [{ scale: scaleAnimN3N4 }] }]}
+          style={[styles.image, { transform: [{ scale: scaleAnimN5Kanji }] }]}
         />
       </Pressable>
 
