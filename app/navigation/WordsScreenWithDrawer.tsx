@@ -82,48 +82,54 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
 
     return (
         <DrawerContentScrollView
-            contentContainerStyle={[styles.drawerContent, { paddingBottom: 80 }]} // ✅ **確保不被 `BottomTab` 擋住**
-        >
-            {level === 'N4-N3' ? (
-                // **N4-N3: 特殊規則排列**
-                chunkArraySpecial(items).map((row, index) => (
-                    <View key={index} style={styles.drawerRow}>
-                        {row.map((label) => (
-                            <DrawerItem
-                                key={label}
-                                label={({ color }) => (
-                                    <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
-                                        {label}
-                                    </Text>
-                                )}
-                                onPress={() => {
-                                    navigation.closeDrawer();
-                                    setTimeout(() => scrollToSection(label), 300);
-                                }}
-                                style={styles.drawerItem}
-                            />
-                        ))}
-                    </View>
-                ))
-            ) : (
-                // **N5: 垂直排列**
-                items.map((label) => (
-                    <DrawerItem
-                        key={label}
-                        label={({ color }) => (
-                            <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
-                                {label}
-                            </Text>
-                        )}
-                        onPress={() => {
-                            navigation.closeDrawer();
-                            setTimeout(() => scrollToSection(label), 300);
-                        }}
-                        style={styles.drawerItemVertical}
-                    />
-                ))
-            )}
-        </DrawerContentScrollView>
+    contentContainerStyle={[styles.drawerContent, { paddingBottom: 80 }]} // ✅ **確保不被 `BottomTab` 擋住**
+>
+    {(() => {
+        if (level === 'N4-N3') {
+            // **N4-N3: 特殊規則排列**
+            return chunkArraySpecial(items).map((row, index) => (
+                <View key={index} style={styles.drawerRow}>
+                    {row.map((label) => (
+                        <DrawerItem
+                            key={label}
+                            label={({ color }) => (
+                                <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
+                                    {label}
+                                </Text>
+                            )}
+                            onPress={() => {
+                                navigation.closeDrawer();
+                                setTimeout(() => scrollToSection(label), 300);
+                            }}
+                            style={styles.drawerItem}
+                        />
+                    ))}
+                </View>
+            ));
+        } else if (level === 'N5') {
+            // **N5: 垂直排列**
+            return items.map((label) => (
+                <DrawerItem
+                    key={label}
+                    label={({ color }) => (
+                        <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
+                            {label}
+                        </Text>
+                    )}
+                    onPress={() => {
+                        navigation.closeDrawer();
+                        setTimeout(() => scrollToSection(label), 300);
+                    }}
+                    style={styles.drawerItemVertical}
+                />
+            ));
+        } else {
+            // 若不是 N4-N3 或 N5，則不顯示任何內容
+            return null;
+        }
+    })()}
+</DrawerContentScrollView>
+
     );
 };
 

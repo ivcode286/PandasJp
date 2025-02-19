@@ -3,6 +3,7 @@ import { View, Image, Pressable, Animated, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation/RootStackParamList';
+import { LEVELS } from '@/src/utils/constants';
 
 type WordsMenuScreenNavigationProp = StackNavigationProp<RootStackParamList, 'WordsMenu'>;
 
@@ -37,18 +38,28 @@ export default function WordsMenuScreen() {
       {/* N5 按鈕（圖片） */}
       <Pressable 
         onPressIn={() => handlePressIn(scaleAnimN5)} 
-        onPressOut={() => handlePressOut(scaleAnimN5, 'N5')}
+        onPressOut={() => handlePressOut(scaleAnimN5, LEVELS.N5)}
       >
         <Animated.Image 
           source={require('../../assets/images/n5.png')} 
           style={[styles.image, { transform: [{ scale: scaleAnimN5 }] }]}
         />
       </Pressable>
+         {/* N5-Kanji */}
+         <Pressable 
+        onPressIn={() => handlePressIn(scaleAnimN3N4)} 
+        onPressOut={() => handlePressOut(scaleAnimN3N4, LEVELS.N5_KANJI)}
+      >
+        <Animated.Image 
+          source={require('../../assets/images/n5_kanji.png')} 
+          style={[styles.image, { transform: [{ scale: scaleAnimN3N4 }] }]}
+        />
+      </Pressable>
 
       {/* N4-N3 按鈕（圖片） */}
       <Pressable 
         onPressIn={() => handlePressIn(scaleAnimN3N4)} 
-        onPressOut={() => handlePressOut(scaleAnimN3N4, 'N4-N3')}
+        onPressOut={() => handlePressOut(scaleAnimN3N4, LEVELS.N4_N3)}
       >
         <Animated.Image 
           source={require('../../assets/images/n4_n3.png')} 
