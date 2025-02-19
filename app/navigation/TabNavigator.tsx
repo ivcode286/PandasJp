@@ -18,6 +18,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import N5StoryMenu from '../screens/basic/N5StoryMenu';
 import N5StoryScreen from '../screens/basic/N5StoryScreen';
 import WordsScreenWithDrawer from './WordsScreenWithDrawer';
+import N5ConceptsScreen from '../screens/basic/N5ConceptsScreen';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -30,6 +31,7 @@ function HomeStack() {
       <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} />
       <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} />
       <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} />
+      <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} />
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} />
       <Stack.Screen name="N5ConversationScreen" component={N5ConversationScreen} />
 

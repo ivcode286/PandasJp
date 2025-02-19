@@ -4,7 +4,7 @@ export type RootStackParamList = {
   KatakanaScreen: undefined;
   KanaComparisonScreen: undefined;
   PhoneticsScreen: undefined;
-  JapaneseConceptsScreen: undefined;
+  N5ConceptsScreen: undefined;
   GrammarScreen: undefined;
   ShortReadingN5Screen: undefined;
   N5ConversationScreen: undefined;

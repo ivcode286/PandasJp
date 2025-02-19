@@ -21,7 +21,7 @@ type NonParamScreen = {
     | "KatakanaScreen"
     | "KanaComparisonScreen"
     | "PhoneticsScreen"
-    | "JapaneseConceptsScreen"
+    | "N5ConceptsScreen"
     | "GrammarScreen"
     | "ShortReadingN5Screen"
     | "N5ConversationScreen";
@@ -51,10 +51,10 @@ const menuItems: MenuItem[] = [
   { title: "片假名", screen: "KatakanaScreen" },
   { title: "平假和片假對比", screen: "KanaComparisonScreen" },
   { title: "基本發音規則 & 長音、促音、拗音", screen: "PhoneticsScreen" },
-  { title: "日語的基本概念", screen: "JapaneseConceptsScreen" },
-  // 帶 level: 'N5'
+  { title: "日語的基本概念", screen: "N5ConceptsScreen" },
+  // pass level: 'N5'
   { title: "N5 常用單字", screen: "WordsWithDrawer", specialLevel: "N5" },
-  // 帶 level: 'N5_KANJI'
+  // pass level: 'N5_KANJI'
   { title: "N5 常見漢字", screen: "WordsWithDrawer", specialLevel: "N5_KANJI" },
   { title: "最常用 49 個 N5 句型（核心課程）", screen: "GrammarScreen" },
   { title: "N5簡單短篇文章", screen: "ShortReadingN5Screen" },
@@ -79,7 +79,7 @@ export default function HomeScreen() {
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.header}>📌 從零開始學基礎日文 N5</Text>
+      <Text style={styles.header}>📌 從零開始學基礎日語 N5</Text>
       {menuItems.map((item, idx) => (
         <TouchableOpacity
           key={idx}
