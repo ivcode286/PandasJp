@@ -56,7 +56,7 @@ export default function WordsMenuScreen() {
         />
       </Pressable>
 
-      {/* N4-N3 按鈕（圖片） */}
+      {/* N4_N3 按鈕（圖片） */}
       <Pressable 
         onPressIn={() => handlePressIn(scaleAnimN3N4)} 
         onPressOut={() => handlePressOut(scaleAnimN3N4, LEVELS.N4_N3)}
