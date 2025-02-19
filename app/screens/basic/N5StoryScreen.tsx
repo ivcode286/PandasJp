@@ -1,7 +1,9 @@
+import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import storiesData from '../../../src/n5_story.json';
+import { Ionicons } from '@expo/vector-icons';
 
 // 定義 StackParamList
 type StackParamList = {
@@ -15,6 +17,7 @@ export default function N5StoryScreen() {
   const route = useRoute<StoryScreenRouteProp>();
   const storyTitle = route.params?.storyTitle;
   const story = storiesData.stories.find((s) => s.title === storyTitle);
+  const { speak } = useTextToSpeech(); // ✅ 使用 Text-to-Speech
 
   if (!story) {
     return (
@@ -32,7 +35,12 @@ export default function N5StoryScreen() {
           <Text style={styles.chapterTitle}>{chapter.chapter}</Text>
           {chapter.content.map((line, index) => (
             <View key={index} style={styles.sentenceContainer}>
-              <Text style={styles.sentence}>{line.sentence}</Text>
+              <View style={styles.sentenceRow}>
+                <Text style={styles.sentence}>{line.sentence}</Text>
+                <TouchableOpacity onPress={() => speak(line.sentence ?? "")} style={styles.iconSpacing}>
+                  <Ionicons name="volume-high" size={24} color="#ffcc00" />
+                </TouchableOpacity>
+              </View>
               <Text style={styles.translation}>{line.translation}</Text>
             </View>
           ))}
@@ -46,7 +54,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#121212', // 深色背景
+    backgroundColor: '#121212', // 深色模式背景
     paddingBottom: 80,
   },
   title: {
@@ -54,41 +62,51 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
-    color: '#ffffff', // 亮白色標題
+    color: '#ffffff',
   },
   chapterContainer: {
     marginBottom: 20,
-    backgroundColor: '#1e1e1e', // 深灰色區塊
+    backgroundColor: '#1e1e1e',
     padding: 15,
-    borderRadius: 10, // 圓角
+    borderRadius: 10,
   },
   chapterTitle: {
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,
-    color: '#ffcc00', // 亮黃色，突出章節標題
+    color: '#ffcc00',
   },
   sentenceContainer: {
     marginBottom: 8,
     paddingVertical: 10,
     paddingHorizontal: 15,
-    backgroundColor: '#292929', // 更深的灰色塊
-    borderRadius: 8, // 圓角
+    backgroundColor: '#292929',
+    borderRadius: 8,
+  },
+  sentenceRow: {
+    flexDirection: 'row', // 🔥 讓句子與按鈕同一行
+    alignItems: 'center',
+    justifyContent: 'space-between', // 🔥 讓按鈕靠右
   },
   sentence: {
     fontSize: 16,
-    color: '#ffffff', // 亮白色
-    lineHeight: 24, // 增加行距，讓閱讀更舒適
+    color: '#ffffff',
+    lineHeight: 24,
+    flexShrink: 1, // 🔥 讓文字不會超出
   },
   translation: {
     fontSize: 14,
-    color: '#b0b0b0', // 灰色，區分日文與翻譯
+    color: '#b0b0b0',
     marginTop: 4,
     lineHeight: 22,
   },
+  iconSpacing: {
+    marginLeft: 10,
+    padding: 5, // 🔥 讓按鈕更好點擊
+  },
   errorText: {
     fontSize: 18,
-    color: '#ff5555', // 紅色錯誤訊息
+    color: '#ff5555',
     textAlign: 'center',
     marginTop: 20,
   },

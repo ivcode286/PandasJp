@@ -5,7 +5,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation/RootStackParamList';
 import { LEVELS } from '@/src/utils/constants';
 
-type WordsMenuScreenNavigationProp = StackNavigationProp<RootStackParamList, 'WordsMenu'>;
+type WordsMenuScreenNavigationProp = StackNavigationProp<RootStackParamList, 'WordsMenuScreen'>;
 
 export default function WordsMenuScreen() {
   const navigation = useNavigation<WordsMenuScreenNavigationProp>();
