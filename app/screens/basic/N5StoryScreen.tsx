@@ -1,9 +1,10 @@
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import storiesData from '../../../src/n5_story.json';
 import { Ionicons } from '@expo/vector-icons';
+import { getImage } from '../../../src/utils/imageLoader'; // ✅ 匯入圖片載入函數
 
 // 定義 StackParamList
 type StackParamList = {
@@ -29,6 +30,10 @@ export default function N5StoryScreen() {
 
   return (
     <ScrollView style={styles.container}>
+      {/* 顯示封面圖片 */}
+      <View style={styles.coverContainer}>
+        <Image source={getImage(story.imageName)} style={styles.coverImage} />
+      </View>
       <Text style={styles.title}>{storyTitle}</Text>
       {story.story.map((chapter, chapterIndex) => (
         <View key={chapterIndex} style={styles.chapterContainer}>
@@ -46,6 +51,8 @@ export default function N5StoryScreen() {
           ))}
         </View>
       ))}
+
+
     </ScrollView>
   );
 }
@@ -84,15 +91,15 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   sentenceRow: {
-    flexDirection: 'row', // 🔥 讓句子與按鈕同一行
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between', // 🔥 讓按鈕靠右
+    justifyContent: 'space-between',
   },
   sentence: {
     fontSize: 16,
     color: '#ffffff',
     lineHeight: 24,
-    flexShrink: 1, // 🔥 讓文字不會超出
+    flexShrink: 1,
   },
   translation: {
     fontSize: 14,
@@ -102,12 +109,30 @@ const styles = StyleSheet.create({
   },
   iconSpacing: {
     marginLeft: 10,
-    padding: 5, // 🔥 讓按鈕更好點擊
+    padding: 5,
   },
   errorText: {
     fontSize: 18,
     color: '#ff5555',
     textAlign: 'center',
     marginTop: 20,
+  },
+
+  // ✅ 新增封面圖片樣式
+  coverContainer: {
+    marginTop: 30,
+    alignItems: 'center',
+  },
+  coverTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#ffcc00',
+    marginBottom: 10,
+  },
+  coverImage: {
+    width: 400, // ✅ 設定寬度
+    height: 400, // ✅ 設定高度，確保比例
+    resizeMode: 'cover',
+    borderRadius: 12,
   },
 });
