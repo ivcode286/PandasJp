@@ -1,9 +1,10 @@
 import React from 'react';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import WordsScreen, { scrollToSection } from '../screens/WordsScreen';
 import { RouteProp, useRoute } from '@react-navigation/native';
 import { RootStackParamList } from './RootStackParamList';
+import { Ionicons } from '@expo/vector-icons';
 
 
 type LevelType = 'N5' | 'N4_N3' | 'N5_KANJI';
@@ -143,15 +144,26 @@ function WordScreenWithDrawer() {
 
     return (
         <Drawer.Navigator
-            screenOptions={{ swipeEdgeWidth: 40 }}  // ✅ 限制 Drawer 手勢區域 (40px)
+            screenOptions={{ swipeEdgeWidth: 40 , drawerPosition: 'right', }}  // ✅ 限制 Drawer 手勢區域 (40px), ✅ Drawer 從右側滑出
             drawerContent={(props) => <CustomDrawerContent {...props} level={level} />} // ✅ 傳入正確的類型
         >
-            <Drawer.Screen
-                name="WordsScreen"
-                component={WordsScreen}
-                initialParams={{ level }}         // 🔹 傳遞 level 給 WordsScreen
-                options={{ title: `${level} 單字`, headerShown: true }}
-            />
+       <Drawer.Screen
+        name="WordsScreen"
+        component={WordsScreen}
+        initialParams={{ level }} 
+        options={({ navigation }) => ({
+            title: `${level} 單字`,
+            headerLeft: () => null, // 移除左側預設按鈕
+            headerRight: () => (
+                <TouchableOpacity
+                    onPress={() => navigation.toggleDrawer()} // ✅ 使用 `toggleDrawer()`
+                    style={{ paddingRight: 16 }}
+                >
+                    <Ionicons name="menu" size={24} color="white"/>
+                </TouchableOpacity>
+            ),
+        })}
+    />
         </Drawer.Navigator>
     );
 }
