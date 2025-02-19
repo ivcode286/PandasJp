@@ -153,7 +153,6 @@ function WordScreenWithDrawer() {
         initialParams={{ level }} 
         options={({ navigation }) => ({
             title: `${level} 單字`,
-            headerTitleAlign: 'center',
             headerLeft: () => (
                 <TouchableOpacity
                     onPress={() => navigation.goBack()} 
