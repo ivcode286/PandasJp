@@ -15,6 +15,8 @@ import KatakanaScreen from '../screens/basic/KatakanaScreen';
 import PhoneticsScreen from '../screens/basic/PhoneticsScreen';
 import N5ConversationScreen from '../screens/basic/N5ConversationScreen';
 import { createStackNavigator } from '@react-navigation/stack';
+import N5StoryMenu from '../screens/basic/N5StoryMenu';
+import N5StoryScreen from '../screens/basic/N5StoryScreen';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -33,8 +35,14 @@ function HomeStack() {
   );
 }
 
-
-
+function StoryStack() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} />
+      <Stack.Screen name="N5StoryScreen" component={N5StoryScreen} />
+    </Stack.Navigator>
+  );
+}
 
 
 
@@ -88,7 +96,7 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Settings"
-        component={N5ConversationScreen}
+        component={StoryStack}
         options={{
           title: 'Settings',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color || 'white'} />,
