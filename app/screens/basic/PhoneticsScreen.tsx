@@ -281,38 +281,37 @@ const PhoneticsScreen = () => {
               </>
             )}
             {item.key === "5" && (
-              <FlatList<LongVowelItem>
-                data={item.data as LongVowelItem[]}
+              <FlatList
+                data={[
+                  { type: "あ行", mark: "あ → ああ", example: "おかあさん（母親）" },
+                  { type: "い行", mark: "い → いい", example: "にいさん（哥哥）" },
+                  { type: "う行", mark: "う → うう", example: "くうこう（機場）" },
+                  { type: "え行", mark: "え → えい", example: "せんせい（老師）" },
+                  { type: "お行", mark: "お → おう", example: "おとうさん（父親）" },
+                ]}
                 keyExtractor={(row) => row.type}
                 renderItem={({ item: row }) => (
                   <View style={[styles.tableRow, { borderBottomColor: colors.border }]}>
-                    <View
-                      style={[
-                        styles.cell,
-                        styles.borderCell,
-                        { flex: 1, padding: 4, borderColor: colors.border, alignItems: "center" },
-                      ]}
+                    <TouchableOpacity
+                      onPress={() => speak(row.type)}
+                      style={[styles.cell, styles.borderCell, { flex: 1, padding: 4, borderColor: colors.border, alignItems: "center" }]}
                     >
                       <Text style={{ color: colors.text }}>{row.type}</Text>
-                    </View>
-                    <View
-                      style={[
-                        styles.cell,
-                        styles.borderCell,
-                        { flex: 2, padding: 4, borderColor: colors.border, alignItems: "center" },
-                      ]}
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                      onPress={() => speak(row.mark.split(" → ")[1])}   //お → おう  ,speak  おう 
+                      style={[styles.cell, styles.borderCell, { flex: 2, padding: 4, borderColor: colors.border, alignItems: "center" }]}
                     >
                       <Text style={{ color: colors.text }}>{row.mark}</Text>
-                    </View>
-                    <View
-                      style={[
-                        styles.cell,
-                        styles.borderCell,
-                        { flex: 3, padding: 4, borderColor: colors.border, alignItems: "center" },
-                      ]}
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                      onPress={() => speak(row.example.split("（")[0])}
+                      style={[styles.cell, styles.borderCell, { flex: 3, padding: 4, borderColor: colors.border, alignItems: "center" }]}
                     >
                       <Text style={{ color: colors.text }}>{row.example}</Text>
-                    </View>
+                    </TouchableOpacity>
                   </View>
                 )}
               />
