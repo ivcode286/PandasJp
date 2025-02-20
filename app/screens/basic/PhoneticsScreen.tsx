@@ -7,7 +7,7 @@ import {
   useColorScheme,
   TouchableOpacity,
 } from "react-native";
-import HiraganaScreen from "./HiraganaScreen"; // 引用五十音圖
+import { HiraganaTable } from "./HiraganaScreen"; // 引用五十音圖
 import useTextToSpeech from "../../../hooks/useTextToSpeech";
 
 // 定義各個資料項目的型別
@@ -153,7 +153,7 @@ const sections: SectionItem[] = [
     title: "1. 五十音圖與基本發音",
     description:
       "日語的基本發音由 清音、濁音、半濁音、拗音、促音、長音 組成。\n\n📌 2.1 清音\n清音是最基礎的發音，不帶任何特殊符號（濁點゛或半濁點゜）的五十音假名。所有日語五十音的基本形態都屬於清音。\n\n例如：\nか (ka), さ (sa), た (ta), は (ha)\nあ (a), い (i), う (u), え (e), お (o)（元音也是清音）\n\n點擊下方「五十音圖」可進入詳情。",
-    component: <HiraganaScreen />,
+    component: <HiraganaTable />,
   },
   {
     key: "2",
