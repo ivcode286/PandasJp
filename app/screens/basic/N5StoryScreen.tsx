@@ -42,7 +42,16 @@ export default function N5StoryScreen() {
             <View key={index} style={styles.sentenceContainer}>
               <View style={styles.sentenceRow}>
                 <Text style={styles.sentence}>{line.sentence}</Text>
-                <TouchableOpacity onPress={() => speak(line.sentence ?? "")} style={styles.iconSpacing}>
+                <TouchableOpacity
+                  onPress={() => {
+                    // 移除「角色名稱：」，只保留對話內容
+                    const spokenText = line.sentence.includes("：")
+                      ? line.sentence.split("：")[1].trim()
+                      : line.sentence;
+                    speak(spokenText);
+                  }}
+                  style={styles.iconSpacing}
+                >
                   <Ionicons name="volume-high" size={24} color="#ffcc00" />
                 </TouchableOpacity>
               </View>
