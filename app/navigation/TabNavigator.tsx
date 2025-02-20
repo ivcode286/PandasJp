@@ -23,9 +23,10 @@ import N5ConceptsScreen from '../screens/basic/N5ConceptsScreen';
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
+//Without cardStyle: { flex: 1 },Web app cannot scroll when headerShown: false in Tabs.Screen
 function HomeStack() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Navigator screenOptions={{ headerShown: false, cardStyle: { flex: 1 } }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="HiraganaScreen" component={HiraganaScreen} />
       <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} />
@@ -74,20 +75,20 @@ export default function MyTabs() {
         tabBarShowLabel: false,
       }}
     >
-      
+
       <Tabs.Screen
         name="Home"
         component={HomeStack}
         options={{
           title: 'Learning Path',
-          headerShown: true,
+          headerShown: false,
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color || 'white'} />,
         }}
       />
       <Tabs.Screen
         name="Words"
         //component={WordsDrawerNavigator}
-        component={WordsNavigator}   
+        component={WordsNavigator}
         options={{
           title: 'Words',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="character.square.fill" color={color} />,
