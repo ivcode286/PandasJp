@@ -26,20 +26,20 @@ const Stack = createStackNavigator();
 //Without cardStyle: { flex: 1 },Web app cannot scroll when headerShown: false in Tabs.Screen
 function HomeStack() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false, cardStyle: { flex: 1 } }}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="HiraganaScreen" component={HiraganaScreen} />
+    <Stack.Navigator screenOptions={{ headerShown: true, cardStyle: { flex: 1 } }}>
+      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }}/>
+      <Stack.Screen name="HiraganaScreen" component={HiraganaScreen} options={{ headerTitle: 'Home 的標題' }} />
       <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} />
-      <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} />
+      <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} options={{ headerTitle: '123 的標題' }}/>
       <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} />
       <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} />
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} />
       <Stack.Screen name="N5ConversationScreen" component={N5ConversationScreen} />
 
-      <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} />
+      <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }}/>
 
       {/* 將原本只在 Tabs.Screen 用的 StoryStack 改為 HomeStack 也能使用 */}
-      <Stack.Screen name="StoryStack" component={StoryStack} />
+      <Stack.Screen name="StoryStack" component={StoryStack }  options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }
