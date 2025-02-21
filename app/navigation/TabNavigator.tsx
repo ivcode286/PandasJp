@@ -39,7 +39,7 @@ function HomeStack() {
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }}/>
 
       {/* 將原本只在 Tabs.Screen 用的 StoryStack 改為 HomeStack 也能使用 */}
-      <Stack.Screen name="StoryStack" component={StoryStack }  options={{ headerShown: false }} />
+      <Stack.Screen name="StoryStack" component={StoryStack }/>
     </Stack.Navigator>
   );
 }

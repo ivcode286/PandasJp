@@ -86,14 +86,33 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
 
     return (
         <DrawerContentScrollView
-    contentContainerStyle={[styles.drawerContent, { paddingBottom: 80 }]} // ✅ **確保不被 `BottomTab` 擋住**
->
-    {(() => {
-        if (level === 'N4_N3') {
-            // **N4_N3: 特殊規則排列**
-            return chunkArraySpecial(items).map((row, index) => (
-                <View key={index} style={styles.drawerRow}>
-                    {row.map((label) => (
+            contentContainerStyle={[styles.drawerContent, { paddingBottom: 80 }]} // ✅ **確保不被 `BottomTab` 擋住**
+        >
+            {(() => {
+                if (level === 'N4_N3') {
+                    // **N4_N3: 特殊規則排列**
+                    return chunkArraySpecial(items).map((row, index) => (
+                        <View key={index} style={styles.drawerRow}>
+                            {row.map((label) => (
+                                <DrawerItem
+                                    key={label}
+                                    label={({ color }) => (
+                                        <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
+                                            {label}
+                                        </Text>
+                                    )}
+                                    onPress={() => {
+                                        navigation.closeDrawer();
+                                        setTimeout(() => scrollToSection(label), 300);
+                                    }}
+                                    style={styles.drawerItem}
+                                />
+                            ))}
+                        </View>
+                    ));
+                } else {
+                    // **N5: 垂直排列**
+                    return items.map((label) => (
                         <DrawerItem
                             key={label}
                             label={({ color }) => (
@@ -105,31 +124,12 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
                                 navigation.closeDrawer();
                                 setTimeout(() => scrollToSection(label), 300);
                             }}
-                            style={styles.drawerItem}
+                            style={styles.drawerItemVertical}
                         />
-                    ))}
-                </View>
-            ));
-        } else {
-            // **N5: 垂直排列**
-            return items.map((label) => (
-                <DrawerItem
-                    key={label}
-                    label={({ color }) => (
-                        <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
-                            {label}
-                        </Text>
-                    )}
-                    onPress={() => {
-                        navigation.closeDrawer();
-                        setTimeout(() => scrollToSection(label), 300);
-                    }}
-                    style={styles.drawerItemVertical}
-                />
-            ));
-        } 
-    })()}
-</DrawerContentScrollView>
+                    ));
+                }
+            })()}
+        </DrawerContentScrollView>
 
     );
 };
@@ -144,34 +144,34 @@ function WordScreenWithDrawer() {
 
     return (
         <Drawer.Navigator
-            screenOptions={{ swipeEdgeWidth: 150 , drawerPosition: 'right', drawerType: 'front'}}  // ✅ 限制 Drawer 手勢區域 (px), ✅ Drawer 從右側滑出
+            screenOptions={{ swipeEdgeWidth: 150, drawerPosition: 'right', drawerType: 'front' }}  // ✅ 限制 Drawer 手勢區域 (px), ✅ Drawer 從右側滑出
             drawerContent={(props) => <CustomDrawerContent {...props} level={level} />} // ✅ 傳入正確的類型
         >
-       <Drawer.Screen
-        name="WordsScreen"
-        component={WordsScreen}
-        initialParams={{ level }} 
-        options={({ navigation }) => ({
-            title: `${level} 單字`,
-            headerTitleAlign: 'center',
-            headerLeft: () => (
-                <TouchableOpacity
-                    onPress={() => navigation.goBack()} 
-                    style={{ paddingLeft: 16 }}
-                >
-                    <Ionicons name="arrow-back" size={24} color="white" />
-                </TouchableOpacity>
-            ),
-            headerRight: () => (
-                <TouchableOpacity
-                    onPress={() => navigation.toggleDrawer()} // ✅ 使用 `toggleDrawer()`
-                    style={{ paddingRight: 16 }}
-                >
-                    <Ionicons name="menu" size={24} color="white"/>
-                </TouchableOpacity>
-            ),
-        })}
-    />
+            <Drawer.Screen
+                name="WordsScreen"
+                component={WordsScreen}
+                initialParams={{ level }}
+                options={({ navigation }) => ({
+                    title: `${level} 單字`,
+                    //headerTitleAlign: 'center',
+                    headerLeft: () => (
+                        <TouchableOpacity
+                            onPress={() => navigation.goBack()}
+                            style={{ paddingLeft: 16 }}
+                        >
+                            <Ionicons name="arrow-back" size={24} color="white" />
+                        </TouchableOpacity>
+                    ),
+                    headerRight: () => (
+                        <TouchableOpacity
+                            onPress={() => navigation.toggleDrawer()} // ✅ 使用 `toggleDrawer()`
+                            style={{ paddingRight: 16 }}
+                        >
+                            <Ionicons name="menu" size={24} color="white" />
+                        </TouchableOpacity>
+                    ),
+                })}
+            />
         </Drawer.Navigator>
     );
 }

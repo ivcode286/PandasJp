@@ -95,6 +95,7 @@ const KatakanaScreen = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
+    paddingBottom: 80,
   },
   subTitle: {
     fontSize: 18,
