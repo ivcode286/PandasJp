@@ -67,7 +67,7 @@ export default function HomeScreen() {
         <ScrollView
           contentContainerStyle={styles.scrollContent} // ← contentContainerStyle 在此設定
         >
-          <Text style={styles.header}>📌 從零開始學基礎日語 N5</Text>
+          <Text style={styles.header}>📌 從零開始學初級日語 N5</Text>
           {menuItems.map((item, idx) => (
             <TouchableOpacity
               key={idx}
