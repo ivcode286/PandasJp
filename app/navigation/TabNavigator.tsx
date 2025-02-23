@@ -19,6 +19,7 @@ import N5StoryMenu from '../screens/basic/N5StoryMenu';
 import N5StoryScreen from '../screens/basic/N5StoryScreen';
 import WordsScreenWithDrawer from './WordsScreenWithDrawer';
 import N5ConceptsScreen from '../screens/basic/N5ConceptsScreen';
+import N5ConversationMenu from '../screens/basic/N5ConversationMenu';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -34,12 +35,13 @@ function HomeStack() {
       <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} />
       <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} />
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} />
-      <Stack.Screen name="N5ConversationScreen" component={N5ConversationScreen} options={{ headerShown: false }}/>
+     
 
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }}/>
 
       {/* 將原本只在 Tabs.Screen 用的 StoryStack 改為 HomeStack 也能使用 */}
       <Stack.Screen name="StoryStack" component={StoryStack }/>
+      <Stack.Screen name="ConversationStack" component={ConversationStack}/>
     </Stack.Navigator>
   );
 }
@@ -52,6 +54,16 @@ function StoryStack() {
     </Stack.Navigator>
   );
 }
+
+function ConversationStack() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="N5ConversationMenu" component={N5ConversationMenu} />
+      <Stack.Screen name="N5ConversationScreen" component={N5ConversationScreen} />
+    </Stack.Navigator>
+  );
+}
+
 
 
 
@@ -96,7 +108,7 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Grammar"
-        component={GrammarScreen}
+        component={ConversationStack}
         options={{
           title: 'N5常用句型',
           headerShown: false,

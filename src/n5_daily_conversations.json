@@ -1,6 +1,7 @@
 [
     {
-        "title": "小故事 1：在便利店買東西",
+        "title": "在便利店買東西",
+        "imageName": "momoko.jpg",
         "scene": "熊貓（学生）在日本的便利商店買零食。",
         "conversation": [
             {
@@ -51,7 +52,8 @@
         ]
     },
     {
-        "title": "小故事 2：在餐廳點餐",
+        "title": "在餐廳點餐",
+        "imageName": "momoko.jpg",
         "scene": "小花（學生）和朋友在日本的餐廳吃飯。",
         "conversation": [
             {
@@ -106,7 +108,8 @@
             }
         ]
     },{
-        "title": "小故事 3：在車站問路",
+        "title": "在車站問路",
+        "imageName": "momoko.jpg",
         "scene": "熊貓（觀光客）在東京的車站找不到出口，向日本人詢問。",
         "conversation": [
             {
@@ -142,7 +145,8 @@
         ]
     },
     {
-        "title": "小故事 4：在咖啡店點飲料",
+        "title": "在咖啡店點飲料",
+        "imageName": "momoko.jpg",
         "scene": "熊貓🐼 和小花🌸 在咖啡店點飲料。",
         "conversation": [
             {
@@ -192,7 +196,8 @@
             }
         ]
     },    {
-        "title": "小故事 5：買衣服",
+        "title": "買衣服",
+        "imageName": "momoko.jpg",
         "scene": "芽依🌿 和莉莉🌼 在服飾店試穿衣服。",
         "conversation": [
             {
@@ -253,7 +258,8 @@
         ]
     },
     {
-        "title": "小故事 6：約朋友去公園",
+        "title": "約朋友去公園",
+        "imageName": "momoko.jpg",
         "scene": "熊貓🐼 給芽依🌿 打電話，約她一起去公園。",
         "conversation": [
             {
@@ -303,7 +309,8 @@
             }
         ]
     }, {
-        "title": "小故事 7：去超市買東西",
+        "title": "去超市買東西",
+        "imageName": "momoko.jpg",
         "scene": "小花🌸 和芽依🌿 一起去超市買食材。",
         "conversation": [
             {
@@ -354,7 +361,8 @@
         ]
     },
     {
-        "title": "小故事 8：在學校聊興趣",
+        "title": "在學校聊興趣",
+        "imageName": "momoko.jpg",
         "scene": "熊貓🐼 和輝夜🌙 在學校聊彼此的興趣。",
         "conversation": [
             {
@@ -395,7 +403,8 @@
         ]
     },
     {
-        "title": "小故事 9：在書店選書",
+        "title": "在書店選書",
+        "imageName": "momoko.jpg",
         "scene": "莉莉🌼 和小花🌸 在書店選購書籍。",
         "conversation": [
             {
@@ -446,7 +455,8 @@
         ]
     },
     {
-        "title": "小故事 10：計劃週末的活動",
+        "title": "計劃週末的活動",
+        "imageName": "momoko.jpg",
         "scene": "熊貓🐼、莉莉🌼 和芽依🌿 在計劃週末的活動。",
         "conversation": [
             {

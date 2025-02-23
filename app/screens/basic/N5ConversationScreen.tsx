@@ -1,172 +1,111 @@
 import useTextToSpeech from '@/hooks/useTextToSpeech';
-import React, { useState, useRef } from 'react';
-import { 
-  View, Text, FlatList, TouchableOpacity, StyleSheet, StatusBar, PanResponder, Animated, Platform
-} from 'react-native';
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import React from 'react';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
+import { useRoute, RouteProp } from '@react-navigation/native';
 import conversations from '../../../src/n5_daily_conversations.json';
 import { Ionicons } from '@expo/vector-icons';
+import { getImage } from '../../../src/utils/imageLoader';
 
-const N5ConversationScreen = () => {
-  const [selectedStory, setSelectedStory] = useState<number | null>(null);
-  const { speak } = useTextToSpeech();
-  
-  // 讓滑動有平滑動畫效果
-  const panX = useRef(new Animated.Value(0)).current;
-
-  // 只在 Mobile 啟用手勢返回
-  const panResponder = useRef(
-    Platform.OS !== 'web'
-      ? PanResponder.create({
-          onMoveShouldSetPanResponder: (_, gestureState) => Math.abs(gestureState.dx) > 10, // 檢測是否橫向滑動
-          onPanResponderMove: (_, gestureState) => {
-            if (gestureState.dx > 0) panX.setValue(gestureState.dx); // 設定滑動的位移
-          },
-          onPanResponderRelease: (_, gestureState) => {
-            if (gestureState.dx > 100) {
-              // 當滑動距離超過 100px，觸發返回
-              Animated.timing(panX, {
-                toValue: 300, // 移出畫面
-                duration: 200,
-                useNativeDriver: true,
-              }).start(() => {
-                setSelectedStory(null);
-                panX.setValue(0); // 重置動畫
-              });
-            } else {
-              // 若滑動不足 100px，則還原
-              Animated.spring(panX, {
-                toValue: 0,
-                useNativeDriver: true,
-              }).start();
-            }
-          },
-        })
-      : null // Web 版不啟用手勢
-  ).current;
-
-  return (
-    <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
-        {selectedStory === null ? (
-          <FlatList
-            data={conversations}
-            keyExtractor={(item, index) => index.toString()}
-            contentContainerStyle={{ paddingTop:10,paddingBottom: 300 }} // 確保底部有足夠空間
-            renderItem={({ item, index }) => (
-              <TouchableOpacity 
-                style={styles.storyItem} 
-                onPress={() => setSelectedStory(index)}
-              >
-                <Text style={styles.storyTitle}>{item.title}</Text>
-                <Text style={styles.scene}>{item.scene}</Text>
-              </TouchableOpacity>
-            )}
-          />
-        ) : (
-          <Animated.View 
-            style={[styles.conversationContainer, { transform: [{ translateX: panX }] }]}
-            {...panResponder?.panHandlers} // Web 版不啟用手勢
-          >
-            <TouchableOpacity onPress={() => setSelectedStory(null)} style={styles.backButton}>
-              <Text style={styles.backButtonText}>← 返回</Text>
-            </TouchableOpacity>
-            <Text style={styles.storyTitle}>{conversations[selectedStory].title}</Text>
-            <Text style={styles.scene}>{conversations[selectedStory].scene}</Text>
-            <FlatList
-              data={conversations[selectedStory].conversation}
-              keyExtractor={(item, index) => index.toString()}
-              contentContainerStyle={{ paddingBottom: 300 }} // 確保滾動到底部時不被擋住
-              renderItem={({ item }) => (
-                <View style={styles.conversationItem}>
-                  <View style={styles.textContainer}>
-                    <Text style={styles.speaker}>{item.speaker}：</Text>
-                    <Text style={styles.japanese}>{item.japanese}</Text>
-                    <Text style={styles.chinese}>{item.chinese}</Text>
-                  </View>
-                  {/* 右下角音量按鈕 */}
-                  <TouchableOpacity onPress={() => speak(item.japanese)} style={styles.iconSpacing}>
-                    <Ionicons name="volume-high" size={24} color="black" />
-                  </TouchableOpacity>
-                </View>
-              )}
-            />
-          </Animated.View>
-        )}
-      </SafeAreaView>
-    </SafeAreaProvider>
-  );
+// 定義 StackParamList
+type StackParamList = {
+  N5ConversationScreen: { conversationTitle: string };
 };
 
-const ITEM_MARGIN = 12; // 與 GrammarScreen 保持一致
+type ConversationScreenRouteProp = RouteProp<StackParamList, 'N5ConversationScreen'>;
+
+export default function N5ConversationScreen() {
+  const route = useRoute<ConversationScreenRouteProp>();
+  const conversationTitle = route.params?.conversationTitle;
+  const conversation = conversations.find((c) => c.title === conversationTitle);
+  const { speak } = useTextToSpeech();
+
+  if (!conversation) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.errorText}>Conversation not found.</Text>
+      </View>
+    );
+  }
+
+  return (
+    <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 80 }}>
+      <View style={styles.coverContainer}>
+        <Image source={getImage(conversation.imageName)} style={styles.coverImage} />
+      </View>
+      <Text style={styles.title}>{conversationTitle}</Text>
+      {conversation.conversation.map((line, index) => (
+        <View key={index} style={styles.sentenceContainer}>
+          <View style={styles.sentenceRow}>
+            <Text style={styles.sentence}>{line.speaker}: {line.japanese}</Text>
+            <TouchableOpacity
+              onPress={() => speak(line.japanese)}
+              style={styles.iconSpacing}
+            >
+              <Ionicons name="volume-high" size={24} color="#ffcc00" />
+            </TouchableOpacity>
+          </View>
+          <Text style={styles.translation}>{line.chinese}</Text>
+        </View>
+      ))}
+    </ScrollView>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight || 0,
-    marginHorizontal: 16,
+    padding: 20,
+    backgroundColor: '#121212',
   },
-  storyItem: {
-    backgroundColor: '#f9c2ff', // 與 GrammarScreen 樣式統一
-    padding: 16,
-    borderRadius: 8,
-    marginBottom: ITEM_MARGIN,
-  },
-  storyTitle: {
-    fontSize: 24, // 與 pattern 字體大小對齊
+  title: {
+    fontSize: 24,
     fontWeight: 'bold',
-    color: '#9F38A2',
-    flexWrap: 'wrap',
+    marginBottom: 20,
+    textAlign: 'center',
+    color: '#ffffff',
   },
-  scene: {
-    fontSize: 18, // 與 translation 大小對齊
-    color: '#1f9024',
-    flexWrap: 'wrap',
-    marginBottom: 4,
+  sentenceContainer: {
+    marginBottom: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    backgroundColor: '#292929',
+    borderRadius: 8,
   },
-  conversationContainer: {
-    flex: 1,
-    padding: 16,
+  sentenceRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
-  backButton: {
-    padding: 8,
-    backgroundColor: '#ddd',
-    borderRadius: 4,
-    marginBottom: 12,
-  },
-  backButtonText: {
+  sentence: {
     fontSize: 16,
+    color: '#ffffff',
+    lineHeight: 24,
+    flexShrink: 1,
   },
-  conversationItem: {
-    backgroundColor: '#DBEFD9', // inner section
-    padding: 16,
-    borderRadius: 8,
-    marginBottom: ITEM_MARGIN,
-    flexDirection: "row", // 水平排列
-    justifyContent: "space-between", // 文字與按鈕兩端對齊
-    alignItems: "center", // 垂直對齊
-  },
-  textContainer: {
-    flex: 1, // 讓文字區域自適應
-  },
-  speaker: {
-    fontSize: 20, // 與 sentence 尺寸一致
-    fontWeight: 'bold',
-    color: '#000',
-  },
-  japanese: {
-    fontSize: 20, // 與 GrammarScreen 的 sentence 字體一致
-    color: '#3842A2',
-    flexWrap: 'wrap',
-  },
-  chinese: {
-    fontSize: 18, // 與 GrammarScreen 的 translation 字體一致
-    color: '#9F38A2',
-    flexWrap: 'wrap',
+  translation: {
+    fontSize: 14,
+    color: '#b0b0b0',
+    marginTop: 4,
+    lineHeight: 22,
   },
   iconSpacing: {
-    padding: 10, // 讓按鈕更容易點擊
-  }
+    marginLeft: 10,
+    padding: 5,
+  },
+  errorText: {
+    fontSize: 18,
+    color: '#ff5555',
+    textAlign: 'center',
+    marginTop: 20,
+  },
+  coverContainer: {
+    marginTop: 0,
+    alignItems: 'center',
+  },
+  coverImage: {
+    width: 400,
+    height: 400,
+    resizeMode: 'cover',
+    borderRadius: 12,
+  },
 });
-
-export default N5ConversationScreen;
