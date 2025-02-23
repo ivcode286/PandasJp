@@ -1,72 +1,54 @@
-import React, { useRef } from 'react';
-import { View, Image, Pressable, Animated, StyleSheet } from 'react-native';
+import React from 'react';
+import { 
+  View, 
+  Text, 
+  FlatList, 
+  TouchableOpacity, 
+  StyleSheet, 
+  Image, 
+} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../navigation/RootStackParamList';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { LEVELS } from '@/src/utils/constants';
 
-type WordsMenuScreenNavigationProp = StackNavigationProp<RootStackParamList, 'WordsMenuScreen'>;
+// 定義 StackParamList 讓 TypeScript 知道需要傳入 storyTitle
+type StackParamList = {
+  N5StoryScreen: { storyTitle: string };
+  WordsWithDrawer: { level: string };
+};
 
-export default function WordsMenuScreen() {
-  const navigation = useNavigation<WordsMenuScreenNavigationProp>();
+const COVERPAGE_CARD_WIDTH = 360;
 
-  // 建立動畫縮放的數值
-  const scaleAnimN5 = useRef(new Animated.Value(1)).current;
-  const scaleAnimN5Kanji = useRef(new Animated.Value(1)).current;
-  const scaleAnimN3N4 = useRef(new Animated.Value(1)).current;
+const menuData = [
+  { title: LEVELS.N5, image: require('../../assets/images/n5.jpg') },
+  { title: LEVELS.N5_KANJI, image: require('../../assets/images/n5.jpg') },
+  { title: LEVELS.N4_N3, image: require('../../assets/images/n5.jpg') },
+];
 
-  // 按下時縮小
-  const handlePressIn = (anim: Animated.Value) => {
-    Animated.spring(anim, {
-      toValue: 0.9, // 縮小 10%
-      useNativeDriver: true,
-    }).start();
-  };
-
-  // 放開時恢復大小 + 導航
-  const handlePressOut = (anim: Animated.Value, level: string) => {
-    Animated.spring(anim, {
-      toValue: 1, // 回到正常大小
-      friction: 3, // 增加彈性效果
-      useNativeDriver: true,
-    }).start(() => {
-      navigation.navigate('WordsWithDrawer', { level });
-    });
-  };
+export default function N5StoryMenu() {
+  const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5StoryScreen' | 'WordsWithDrawer'>>();
 
   return (
     <View style={styles.container}>
-      {/* N5 按鈕（圖片） */}
-      <Pressable 
-        onPressIn={() => handlePressIn(scaleAnimN5)} 
-        onPressOut={() => handlePressOut(scaleAnimN5, LEVELS.N5)}
-      >
-        <Animated.Image 
-          source={require('../../assets/images/n5.png')} 
-          style={[styles.image, { transform: [{ scale: scaleAnimN5 }] }]}
-        />
-      </Pressable>
-         {/* N5-Kanji */}
-         <Pressable 
-        onPressIn={() => handlePressIn(scaleAnimN5Kanji)} 
-        onPressOut={() => handlePressOut(scaleAnimN5Kanji, LEVELS.N5_KANJI)}
-      >
-        <Animated.Image 
-          source={require('../../assets/images/n5_kanji.png')} 
-          style={[styles.image, { transform: [{ scale: scaleAnimN5Kanji }] }]}
-        />
-      </Pressable>
-
-      {/* N4_N3 按鈕（圖片） */}
-      <Pressable 
-        onPressIn={() => handlePressIn(scaleAnimN3N4)} 
-        onPressOut={() => handlePressOut(scaleAnimN3N4, LEVELS.N4_N3)}
-      >
-        <Animated.Image 
-          source={require('../../assets/images/n4_n3.png')} 
-          style={[styles.image, { transform: [{ scale: scaleAnimN3N4 }] }]}
-        />
-      </Pressable>
+      <FlatList
+        data={menuData}
+        keyExtractor={(item) => item.title}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={styles.cardContainer}
+            onPress={() => navigation.navigate('WordsWithDrawer', { level: item.title })}
+            activeOpacity={0.7} // ✅ 讓點擊效果更平滑
+          >
+            <Image 
+              source={item.image} // ✅ 直接載入靜態圖片
+              style={styles.coverImage}
+            />
+            <View style={styles.textContainer}>
+              <Text style={styles.storyText}>{item.title}</Text>
+            </View>
+          </TouchableOpacity>
+        )}
+      />
     </View>
   );
 }
@@ -74,13 +56,38 @@ export default function WordsMenuScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    padding: 20,
+    backgroundColor: '#121212', // ✅ 深色背景
+    paddingBottom: 80,
+  },
+  cardContainer: {
+    width: COVERPAGE_CARD_WIDTH,
+    alignSelf: 'center',
+    backgroundColor: '#fff', // ✅ 深色卡片背景
+    borderRadius: 15,
+    marginVertical: 12,
+    overflow: 'hidden',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  coverImage: {
+    width: '100%',
+    resizeMode: 'cover',
+    height: 350,
+  },
+  textContainer: {
+    padding: 15,
     alignItems: 'center',
   },
-  image: {
-    width: 400,  // 設定圖片寬度
-    height: 250, // 設定圖片高度
-    marginVertical: 12, // 增加間距
-    resizeMode: 'cover', // 讓圖片填滿, // 讓圖片保持比例
+  storyText: {
+    fontSize: 18,
+    fontWeight: '500',
+    color: '#333',
+    textAlign: 'center',
+    flexWrap: 'wrap',
+    maxWidth: '90%',
   },
 });
