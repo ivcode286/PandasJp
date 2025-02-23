@@ -4,3 +4,5 @@ export const LEVELS = {
     N4_N3: 'N4_N3',
   };
   
+
+  export  const COVERPAGE_CARD_WIDTH = 360;

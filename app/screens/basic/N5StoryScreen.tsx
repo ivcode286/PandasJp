@@ -29,7 +29,7 @@ export default function N5StoryScreen() {
   }
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 80 }}>
       {/* 顯示封面圖片 */}
       <View style={styles.coverContainer}>
         <Image source={getImage(story.imageName)} style={styles.coverImage} />
@@ -71,10 +71,9 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: '#121212', // 深色模式背景
-    paddingBottom: 80,
   },
   title: {
-    fontSize: 26,
+    fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
@@ -129,7 +128,7 @@ const styles = StyleSheet.create({
 
   // ✅ 新增封面圖片樣式
   coverContainer: {
-    marginTop: 30,
+    marginTop: 0,
     alignItems: 'center',
   },
   coverTitle: {

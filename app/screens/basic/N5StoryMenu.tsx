@@ -11,13 +11,13 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import storiesData from '../../../src/n5_story.json';
 import { getImage } from '../../../src/utils/imageLoader'; // ✅ 匯入圖片載入函數
+import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
 // 定義 StackParamList 讓 TypeScript 知道需要傳入 storyTitle
 type StackParamList = {
   N5StoryScreen: { storyTitle: string };
 };
 
-const COVERPAGE_CARD_WIDTH = 400;
 
 export default function N5StoryMenu() {
   const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5StoryScreen'>>();

@@ -9,7 +9,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 export default function WordsNavigator() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Navigator screenOptions={{ headerShown: false, cardStyle: { flex: 1 }}} >
       <Stack.Screen name="WordsMenuScreen" component={WordsMenuScreen} />
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer}  
       options={{
