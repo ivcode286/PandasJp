@@ -52,7 +52,7 @@ const N5ConversationScreen = () => {
           <FlatList
             data={conversations}
             keyExtractor={(item, index) => index.toString()}
-            contentContainerStyle={{ paddingBottom: 300 }} // 確保底部有足夠空間
+            contentContainerStyle={{ paddingTop:10,paddingBottom: 300 }} // 確保底部有足夠空間
             renderItem={({ item, index }) => (
               <TouchableOpacity 
                 style={styles.storyItem} 

@@ -34,7 +34,7 @@ function HomeStack() {
       <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} />
       <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} />
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} />
-      <Stack.Screen name="N5ConversationScreen" component={N5ConversationScreen} />
+      <Stack.Screen name="N5ConversationScreen" component={N5ConversationScreen} options={{ headerShown: false }}/>
 
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }}/>
 
