@@ -12,10 +12,6 @@ export type RootStackParamList = {
   StoryStack: undefined; 
   ConversationStack: undefined; 
 
-
-
-  
-
   // 需要帶 { level: string } 的畫面
   WordsWithDrawer: {
     level: string; 

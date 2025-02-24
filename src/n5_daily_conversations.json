@@ -1,7 +1,7 @@
 [
     {
         "title": "在便利店買東西",
-        "imageName": "momoko.jpg",
+        "imageName": "convenience_shopping.jpg",
         "scene": "熊貓（学生）在日本的便利商店買零食。",
         "conversation": [
             {
@@ -53,7 +53,7 @@
     },
     {
         "title": "在餐廳點餐",
-        "imageName": "momoko.jpg",
+        "imageName": "restaurant_dining.jpg",
         "scene": "小花（學生）和朋友在日本的餐廳吃飯。",
         "conversation": [
             {
@@ -109,7 +109,7 @@
         ]
     },{
         "title": "在車站問路",
-        "imageName": "momoko.jpg",
+        "imageName": "station_help.jpg",
         "scene": "熊貓（觀光客）在東京的車站找不到出口，向日本人詢問。",
         "conversation": [
             {
@@ -146,7 +146,7 @@
     },
     {
         "title": "在咖啡店點飲料",
-        "imageName": "momoko.jpg",
+        "imageName": "cafe_order.jpg",
         "scene": "熊貓🐼 和小花🌸 在咖啡店點飲料。",
         "conversation": [
             {
@@ -197,7 +197,7 @@
         ]
     },    {
         "title": "買衣服",
-        "imageName": "momoko.jpg",
+        "imageName": "clothing_store.jpg",
         "scene": "芽依🌿 和莉莉🌼 在服飾店試穿衣服。",
         "conversation": [
             {
@@ -259,7 +259,7 @@
     },
     {
         "title": "約朋友去公園",
-        "imageName": "momoko.jpg",
+        "imageName": "phone_call.jpg",
         "scene": "熊貓🐼 給芽依🌿 打電話，約她一起去公園。",
         "conversation": [
             {
@@ -310,7 +310,7 @@
         ]
     }, {
         "title": "去超市買東西",
-        "imageName": "momoko.jpg",
+        "imageName": "supermarket_shopping.jpg",
         "scene": "小花🌸 和芽依🌿 一起去超市買食材。",
         "conversation": [
             {
@@ -362,7 +362,7 @@
     },
     {
         "title": "在學校聊興趣",
-        "imageName": "momoko.jpg",
+        "imageName": "school_chat.jpg",
         "scene": "熊貓🐼 和輝夜🌙 在學校聊彼此的興趣。",
         "conversation": [
             {
@@ -404,7 +404,7 @@
     },
     {
         "title": "在書店選書",
-        "imageName": "momoko.jpg",
+        "imageName": "bookstore_shopping.jpg",
         "scene": "莉莉🌼 和小花🌸 在書店選購書籍。",
         "conversation": [
             {
@@ -456,7 +456,7 @@
     },
     {
         "title": "計劃週末的活動",
-        "imageName": "momoko.jpg",
+        "imageName": "weekend_plan.jpg",
         "scene": "熊貓🐼、莉莉🌼 和芽依🌿 在計劃週末的活動。",
         "conversation": [
             {
