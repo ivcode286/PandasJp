@@ -46,8 +46,8 @@ const menuItems: MenuItem[] = [
   { title: "N5 常見漢字", screen: "WordsWithDrawer", specialLevel: "N5_KANJI" },
   { title: "日語的基本概念", screen: "N5ConceptsScreen" },
   { title: "最常用 49 個 N5 句型（核心課程）", screen: "GrammarScreen" },
-  { title: "N5簡單短篇文章", screen: "StoryStack" },
   { title: "N5日常對話", screen: "ConversationStack" },
+  { title: "N5短篇故事", screen: "StoryStack" },
 ];
 
 export default function HomeScreen() {

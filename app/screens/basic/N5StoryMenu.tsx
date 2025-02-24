@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  View, 
-  Text, 
-  FlatList, 
-  TouchableOpacity, 
-  StyleSheet, 
-  Image, 
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  StyleSheet,
+  Image,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -32,7 +32,7 @@ export default function N5StoryMenu() {
             style={styles.cardContainer}
             onPress={() => navigation.navigate('N5StoryScreen', { storyTitle: item.title })}
           >
-            <Image 
+            <Image
               source={getImage(item.imageName)} // ✅ 根據 `imageName` 載入不同圖片
               style={styles.coverImage}
             />
