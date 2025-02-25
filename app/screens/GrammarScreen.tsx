@@ -1,17 +1,19 @@
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React, { useEffect, useState } from 'react';
-import { View, Text, SectionList, StyleSheet, StatusBar, TouchableOpacity } from 'react-native';
+import { View, Text, SectionList, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
-import grammarData from '@/src/n5_basic_grammar.json'; // 讀取多語言 JSON
+import { useRoute, RouteProp } from '@react-navigation/native';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 import { Ionicons } from '@expo/vector-icons';
 
-const DEFAULT_LANGUAGE = 'zh-CN';   //"zh-TW","zh-CN","en"
+// 定義路由參數
+type StackParamList = {
+  GrammarScreen: { level: string };
+};
+type GrammarScreenRouteProp = RouteProp<StackParamList, 'GrammarScreen'>;
 
 const SECTION_HEADER_HEIGHT = 70;
-const ITEM_MARGIN = 12;   
-const TEXT_ROW_INTERVAL =20; 
-
+const ITEM_MARGIN = 12;
 
 const getItemLayout = sectionListGetItemLayout({
   getItemHeight: (_, index) => 80 + ITEM_MARGIN * index,
@@ -20,34 +22,34 @@ const getItemLayout = sectionListGetItemLayout({
 
 const GrammarScreen = () => {
   const { speak } = useTextToSpeech();
-  
-  const [data, setData] = useState<
-    {
-      title: string;
-      data: {
-        pattern: string;
-        description: string;
-        examples: { sentence: string; translation: string }[];
-      }[];
-    }[]
-  >([]);
+  const route = useRoute<GrammarScreenRouteProp>();
+  const level = route.params?.level; // 獲取傳遞的 level 參數
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    // 轉換 JSON 為符合 SectionList 格式
-    const transformedData = grammarData.chapters.map(chapter => ({
-      title: chapter.title[DEFAULT_LANGUAGE] || chapter.title['zh-TW'], // use default language，if no just fallback
-      data: chapter.sections.map(section => ({
-        pattern: section.pattern[DEFAULT_LANGUAGE] || section.pattern['zh-TW'],
-        description: section.description[DEFAULT_LANGUAGE] || section.description['zh-TW'],
-        examples: section.examples.map(example => ({
-          sentence: example.sentence[DEFAULT_LANGUAGE] || example.sentence['zh-TW'],
-          translation: example.translation[DEFAULT_LANGUAGE] || example.translation['zh-TW'],
-        })),
-      })),
-    }));
+    // 動態載入 JSON
+    const loadGrammarData = async () => {
+      const json = level === 'n5_advance' 
+        ? require('@/src/n5_advance_grammar.json')
+        : require('@/src/n5_basic_grammar.json');
 
-    setData(transformedData);
-  }, []);
+      const transformedData = json.chapters.map(chapter => ({
+        title: chapter.title['zh-TW'],
+        data: chapter.sections.map(section => ({
+          pattern: section.pattern['zh-TW'],
+          description: section.description['zh-TW'],
+          examples: section.examples.map(example => ({
+            sentence: example.sentence['zh-TW'],
+            translation: example.translation['zh-TW'],
+          })),
+        })),
+      }));
+
+      setData(transformedData);
+    };
+
+    loadGrammarData();
+  }, [level]);
 
   return (
     <SafeAreaProvider>
@@ -69,7 +71,7 @@ const GrammarScreen = () => {
                   <View style={styles.sentenceRow}>
                     <Text style={styles.sentence}>{example.sentence}</Text>
                     <TouchableOpacity onPress={() => speak(example.sentence)} style={styles.iconSpacing}>
-                      <Ionicons name="volume-high" size={24} color="black" />
+                      <Ionicons name="volume-high" size={24} color="white" />
                     </TouchableOpacity>
                   </View>
                   <Text style={styles.translation}>{example.translation}</Text>
@@ -78,7 +80,6 @@ const GrammarScreen = () => {
             </View>
           )}
           stickySectionHeadersEnabled={false}
-           // @ts-ignore
           getItemLayout={getItemLayout}
           contentContainerStyle={{ paddingBottom: 300 }}
         />
@@ -90,64 +91,57 @@ const GrammarScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight || 0,
-    marginHorizontal: 16,
+    padding: 16,
+    backgroundColor: '#121212',
   },
   item: {
-    backgroundColor: '#f9c2ff',
+    backgroundColor: '#1e1e1e',
     padding: 16,
     borderRadius: 8,
     marginBottom: ITEM_MARGIN,
-    minHeight: 100,
   },
   headerContainer: {
-    height: SECTION_HEADER_HEIGHT, // 調整 section 高度
+    height: SECTION_HEADER_HEIGHT,
     justifyContent: 'center',
-    backgroundColor: '#fff',
-    paddingVertical: 20, // 增加標題上下內邊距
+    backgroundColor: '#2a2a2a',
+    paddingVertical: 15,
+    paddingLeft: 15,
   },
   header: {
-    fontSize: 28, 
+    fontSize: 22,
     fontWeight: 'bold',
-    paddingLeft: 15, // 增加左邊距，讓標題更有層次
-    flexWrap: 'wrap',
+    color: '#ffcc00',
   },
   pattern: {
-    fontSize: 24, // 原本 20 + 4
+    fontSize: 20,
     fontWeight: 'bold',
-    color: '#333',
-    flexWrap: 'wrap',
+    color: '#ffffff',
   },
   description: {
-    fontSize: 20, // 原本 16 + 4
-    flexWrap: 'wrap',
-    color: '#1f9024',
+    fontSize: 18,
+    color: '#b0b0b0',
   },
   exampleContainer: {
-    marginTop: TEXT_ROW_INTERVAL,
-  },
-  sentence: {
-    fontSize: 20, // 原本 16 + 4
-    color: '#000',
-    flex: 1, // 讓文字區塊填滿可用空間
-    flexWrap: 'wrap', // 讓長句子換行
-  },
-  translation: {
-    fontSize: 18, // 原本 14 + 4
-    color: '#666',
-    flexWrap: 'wrap',
+    marginTop: 10,
   },
   sentenceRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between', // 讓文字與圖示分開
-    width: '100%', // 讓 row 佔滿父容器
+    justifyContent: 'space-between',
+  },
+  sentence: {
+    fontSize: 18,
+    color: '#ffffff',
+    flexShrink: 1,
+  },
+  translation: {
+    fontSize: 16,
+    color: '#b0b0b0',
+    marginTop: 4,
   },
   iconSpacing: {
-    marginLeft: 8,
-    alignSelf: 'flex-end', // 讓圖示靠右對齊
-  }
+    marginLeft: 10,
+  },
 });
-
 
 export default GrammarScreen;

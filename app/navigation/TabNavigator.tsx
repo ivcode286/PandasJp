@@ -20,6 +20,7 @@ import N5StoryScreen from '../screens/basic/N5StoryScreen';
 import WordsScreenWithDrawer from './WordsScreenWithDrawer';
 import N5ConceptsScreen from '../screens/basic/N5ConceptsScreen';
 import N5ConversationMenu from '../screens/basic/N5ConversationMenu';
+import GrammarMenu from '../screens/basic/GrammarMenu';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -63,6 +64,16 @@ function ConversationStack() {
     </Stack.Navigator>
   );
 }
+
+function GrammarStack() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="GrammarMenu" component={GrammarMenu} />
+      <Stack.Screen name="GrammarScreen" component={GrammarScreen} />
+    </Stack.Navigator>
+  );
+}
+
 
 
 
@@ -108,10 +119,10 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Grammar"
-        component={ConversationStack}
+        component={GrammarStack}
         options={{
           title: 'N5常用句型',
-          headerShown: false,
+          headerShown: true,
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="pencil.line" color={color || 'white'} />,
         }}
       />
