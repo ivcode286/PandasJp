@@ -35,6 +35,7 @@ export const KatakanaTable = () => {
 
   return (
     <View style={{ padding: 10, alignSelf: "flex-start" }}>
+      <Text style={[styles.subTitle, { color: colors.text }]}>按字發音</Text>
       {KATAKANA_LIST.map((row, rowIndex) => (
         <View key={rowIndex} style={{ flexDirection: "row", justifyContent: row.length < 5 ? "center" : "flex-start" }}>
           {row.map(([char, romaji], charIndex) => (

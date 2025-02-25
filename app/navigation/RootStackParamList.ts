@@ -5,9 +5,8 @@ export type RootStackParamList = {
   KanaComparisonScreen: undefined;
   PhoneticsScreen: undefined;
   N5ConceptsScreen: undefined;
+  GrammarConceptsScreen: undefined; // 新增：用來呈現 N5 日語基礎文法概念的畫面
   GrammarScreen: undefined;
-  ShortReadingN5Screen: undefined;
-
   WordsMenuScreen: undefined;
   StoryStack: undefined; 
   ConversationStack: undefined; 

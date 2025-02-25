@@ -35,6 +35,7 @@ export const HiraganaTable = () => {
 
   return (
     <View style={{ padding: 10, alignSelf: "flex-start" }}>
+      <Text style={[styles.subTitle, { color: colors.text }]}>按字發音</Text>
       {HIRAGANA_LIST.map((row, rowIndex) => (
         <View key={rowIndex} style={{ flexDirection: "row", justifyContent: row.length < 5 ? "center" : "flex-start" }}>
           {row.map(([char, romaji], charIndex) => (
@@ -74,7 +75,6 @@ const HiraganaScreen = () => {
   return (
     <ScrollView style={[styles.container, { backgroundColor: colors.background }]}> 
       <Text style={[styles.headerTitle, { color: colors.text }]}>平假名（ひらがな）與片假名（カタカナ）介紹</Text>
-      
       <Text style={[styles.subTitle, { color: colors.text }]}>1. 平假名（ひらがな, Hiragana）</Text>
       <Text style={[styles.description, { color: colors.text }]}>平假名是一種圓滑柔和的日文字母，主要用於：</Text>
       <Text style={[styles.listItem, { color: colors.text }]}>• 原生日語詞彙</Text>

@@ -22,6 +22,7 @@ import N5ConceptsScreen from '../screens/basic/N5ConceptsScreen';
 import N5ConversationMenu from '../screens/basic/N5ConversationMenu';
 import GrammarMenu from '../screens/basic/GrammarMenu';
 import GrammarConceptsScreen from '../screens/basic/GrammarConecptsScreen';
+import GrammarConecptsScreen from '../screens/basic/GrammarConecptsScreen';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -36,6 +37,7 @@ function HomeStack() {
       <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} options={{ headerTitle: '123 的標題' }}/>
       <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} />
       <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} />
+      <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} />
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} />
      
 
