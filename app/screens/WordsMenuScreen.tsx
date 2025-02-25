@@ -17,12 +17,10 @@ type StackParamList = {
   WordsWithDrawer: { level: string };
 };
 
-
-
 const menuData = [
-  { title: LEVELS.N5, image: require('../../assets/images/n5.jpg') },
-  { title: LEVELS.N5_KANJI, image: require('../../assets/images/n5_kanji.jpg') },
-  { title: LEVELS.N4_N3, image: require('../../assets/images/n4_n3.jpg') },
+  { title: 'N5', image: require('../../assets/images/n5.jpg') },
+  { title: 'N5漢字', image: require('../../assets/images/n5_kanji.jpg') },
+  { title: 'N4-N3', image: require('../../assets/images/n4_n3.jpg') },
 ];
 
 export default function N5StoryMenu() {

@@ -7,10 +7,10 @@ import { RootStackParamList } from './RootStackParamList';
 import { Ionicons } from '@expo/vector-icons';
 
 
-type LevelType = 'N5' | 'N4_N3' | 'N5_KANJI';
+type LevelType = 'N5' | 'N4-N3' | 'N5漢字';
 
 const drawerData: Record<LevelType, string[]> = {
-    N5: [
+    'N5': [
         '人', '職業', '家庭', '親屬', '別人家人', '動物', '鳥類', '兩棲類', '昆蟲',
         '水生動物', '場所', '設施', '商業場所', '交通', '自然', '數字', '助数詞',
         '日期', '一週', '時間', '金錢', '一般動作', '活動動詞', '購物動詞', '家務',
@@ -21,7 +21,7 @@ const drawerData: Record<LevelType, string[]> = {
         '轉話題連接詞', '主語助詞', '目的語助詞', '方位助詞', '起點助詞',
         '方式助詞', '選擇助詞', '強調助詞', '提示助詞'
     ],
-    'N4_N3': [
+    'N4-N3': [
         'あ', 'い', 'う', 'え', 'お',
         'か', 'き', 'く', 'け', 'こ',
         'さ', 'し', 'す', 'せ', 'そ',
@@ -33,7 +33,7 @@ const drawerData: Record<LevelType, string[]> = {
         'ら', 'り', 'る', 'れ', 'ろ',
         'わ'  // **這一行是例外（單獨一行）**
     ],
-    'N5_KANJI': [
+    'N5漢字': [
         '數字', '時間', '方位', '人', '自然', '事物'
     ]
 };
@@ -89,7 +89,7 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({ 
             contentContainerStyle={[styles.drawerContent, { paddingBottom: 80 }]} // ✅ **確保不被 `BottomTab` 擋住**
         >
             {(() => {
-                if (level === 'N4_N3') {
+                if (level === 'N4-N3') {
                     // **N4_N3: 特殊規則排列**
                     return chunkArraySpecial(items).map((row, index) => (
                         <View key={index} style={styles.drawerRow}>
@@ -152,7 +152,7 @@ function WordScreenWithDrawer() {
                 component={WordsScreen}
                 initialParams={{ level }}
                 options={({ navigation }) => ({
-                    title: `${level} 單字`,
+                    title: `${level}`,
                     //headerTitleAlign: 'center',
                     headerLeft: () => (
                         <TouchableOpacity
