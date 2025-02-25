@@ -20,25 +20,64 @@ const getItemLayout = sectionListGetItemLayout({
   getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
 });
 
-const GrammarScreen = () => {
+// 定義 JSON 資料的型別
+interface Example {
+  sentence: { 'zh-TW': string; 'zh-CN': string; en: string };
+  translation: { 'zh-TW': string; 'zh-CN': string; en: string };
+}
+
+interface Section {
+  pattern: { 'zh-TW': string; 'zh-CN': string; en: string };
+  description: { 'zh-TW': string; 'zh-CN': string; en: string };
+  examples: Example[];
+}
+
+interface Chapter {
+  title: { 'zh-TW': string; 'zh-CN': string; en: string };
+  sections: Section[];
+}
+
+interface GrammarData {
+  chapters: Chapter[];
+}
+
+// 定義轉換後用於 SectionList 的資料型別
+interface TransformedSection {
+  pattern: string;
+  description: string;
+  examples: {
+    sentence: string;
+    translation: string;
+  }[];
+}
+
+interface TransformedChapter {
+  title: string;
+  data: TransformedSection[];
+}
+
+const GrammarScreen: React.FC = () => {
   const { speak } = useTextToSpeech();
   const route = useRoute<GrammarScreenRouteProp>();
   const level = route.params?.level; // 獲取傳遞的 level 參數
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<TransformedChapter[]>([]);
 
   useEffect(() => {
     // 動態載入 JSON
     const loadGrammarData = async () => {
-      const json = level === 'n5_advance' 
+      const json = level === 'n5_advance'
         ? require('@/src/n5_advance_grammar.json')
         : require('@/src/n5_basic_grammar.json');
+      
+      // 斷言 json 為 GrammarData 型別
+      const grammarData = json as GrammarData;
 
-      const transformedData = json.chapters.map(chapter => ({
+      const transformedData: TransformedChapter[] = grammarData.chapters.map((chapter: Chapter) => ({
         title: chapter.title['zh-TW'],
-        data: chapter.sections.map(section => ({
+        data: chapter.sections.map((section: Section) => ({
           pattern: section.pattern['zh-TW'],
           description: section.description['zh-TW'],
-          examples: section.examples.map(example => ({
+          examples: section.examples.map((example: Example) => ({
             sentence: example.sentence['zh-TW'],
             translation: example.translation['zh-TW'],
           })),
@@ -80,6 +119,7 @@ const GrammarScreen = () => {
             </View>
           )}
           stickySectionHeadersEnabled={false}
+          // @ts-ignore
           getItemLayout={getItemLayout}
           contentContainerStyle={{ paddingBottom: 300 }}
         />

@@ -6,7 +6,7 @@ interface TableProps {
   data: string[][];
 }
 
-const N5GrammarScreen: React.FC = () => {
+const GrammarConecptsScreen: React.FC = () => {
   const isDark = useColorScheme() === 'dark';
   const styles = getStyles(isDark);
   const tableStyles = getTableStyles(isDark);
@@ -205,4 +205,4 @@ const getTableStyles = (isDark: boolean) =>
     },
   });
 
-export default N5GrammarScreen;
+export default GrammarConecptsScreen;
