@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { LEVELS } from '@/src/utils/constants';
 
 type StackParamList = {
   GrammarScreen: { level: string };
@@ -14,14 +15,14 @@ export default function GrammarMenu() {
     <View style={styles.container}>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('GrammarScreen', { level: 'n5_basic' })}
+        onPress={() => navigation.navigate('GrammarScreen', { level: LEVELS.N5_BASIC_GRAMMAR })}
       >
         <Text style={styles.buttonText}>📘 N5 基本文法</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('GrammarScreen', { level: 'n5_advance' })}
+        onPress={() => navigation.navigate('GrammarScreen', { level: LEVELS.N5_ADVANCE_GRAMMAR })}
       >
         <Text style={styles.buttonText}>📙 N5 進階文法</Text>
       </TouchableOpacity>
