@@ -1,4 +1,4 @@
-// src/screens/GrammarConecptsScreen.tsx
+// src/screens/GrammarConceptsScreen.tsx
 import React from 'react';
 import { ScrollView, View, Text, StyleSheet, useColorScheme, Button } from 'react-native';
 import { useTranslation } from 'react-i18next';
@@ -8,7 +8,7 @@ interface TableProps {
   data: string[][];
 }
 
-const GrammarConecptsScreen: React.FC = () => {
+const GrammarConceptsScreen: React.FC = () => {
   const isDark = useColorScheme() === 'dark';
   const styles = getStyles(isDark);
   const tableStyles = getTableStyles(isDark);
@@ -169,4 +169,4 @@ const getTableStyles = (isDark: boolean) =>
     },
   });
 
-export default GrammarConecptsScreen;
+export default GrammarConceptsScreen;

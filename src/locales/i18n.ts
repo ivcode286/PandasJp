@@ -1,9 +1,9 @@
 // src/config/i18n.ts
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import grammarConceptsZhTW from "../locales/zh-TW/GrammarConecptsScreen"; // 注意檔案名稱
+import grammarConceptsZhTW from "../locales/zh-TW/GrammarConceptsScreen"; // 注意檔案名稱
 import homeZhTW from "../locales/zh-TW/HomeScreen";
-import grammarConceptsZhCN from "../locales/zh-CN/GrammarConecptsScreen";
+import grammarConceptsZhCN from "../locales/zh-CN/GrammarConceptsScreen";
 import homeZhCN from "../locales/zh-CN/HomeScreen";
 import { Translation } from "../types/translation";
 

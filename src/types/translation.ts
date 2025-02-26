@@ -9,7 +9,7 @@ export interface Section {
     paragraphs?: string[];
   }
   
-  export interface GrammarTranslation {
+  export interface GrammarConceptsTranslation {
     title: string;
     intro: string;
     sections: {
@@ -36,6 +36,6 @@ export interface Section {
   }
   
   export interface Translation {
-    grammar: GrammarTranslation;
+    grammarConecepts: GrammarConceptsTranslation;
     home: HomeTranslation;
   }
