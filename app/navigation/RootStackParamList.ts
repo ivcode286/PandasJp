@@ -6,7 +6,7 @@ export type RootStackParamList = {
   PhoneticsScreen: undefined;
   N5ConceptsScreen: undefined;
   GrammarConceptsScreen: undefined; // 新增：用來呈現 N5 日語基礎文法概念的畫面
-  GrammarScreen: undefined;
+  GrammarScreen: { level: string }; 
   WordsMenuScreen: undefined;
   StoryStack: undefined; 
   ConversationStack: undefined; 

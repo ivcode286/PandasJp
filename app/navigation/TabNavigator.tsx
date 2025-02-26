@@ -31,24 +31,44 @@ const Stack = createStackNavigator();
 function HomeStack() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: true, cardStyle: { flex: 1 } }}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }}/>
-      <Stack.Screen name="HiraganaScreen" component={HiraganaScreen} options={{ headerTitle: 'Home 的標題' }} />
-      <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} />
-      <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} options={{ headerTitle: '123 的標題' }}/>
-      <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} />
-      <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} />
-      <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} />
-      <Stack.Screen name="GrammarScreen" component={GrammarScreen} />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false,headerTitle: 'ホームページ'}}/>
+      <Stack.Screen name="HiraganaScreen" component={HiraganaScreen} options={{ headerTitle: 'ひらがな' }} />
+      <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} options={{ headerTitle: 'カタカナ' }}/>
+      <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} options={{ headerTitle: 'ひらがなとカタカナの比較' }}/>
+      <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} options={{ headerTitle: '基本発音規則 & 長音、促音、拗音' }}/>
+      <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} options={{ headerTitle: '日本語の基本概念' }} />
+      <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} options={{ headerTitle: 'N5 日本語基礎文法の概念' }} />
+      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5 文法' }}/>
      
 
-      <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }}/>
+      <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false}}/>
 
       {/* 將原本只在 Tabs.Screen 用的 StoryStack 改為 HomeStack 也能使用 */}
-      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: true }}/>
-      <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true }}/>
+      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: true ,headerTitle: 'N5 短編物語'}}/>
+      <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true ,headerTitle: 'N5 日常会話'}}/>
     </Stack.Navigator>
   );
 }
+
+
+/*
+const menuItems: MenuItem[] = [
+  { title: "ひらがな", screen: "HiraganaScreen" },
+  { title: "カタカナ", screen: "KatakanaScreen" },
+  { title: "ひらがなとカタカナの比較", screen: "KanaComparisonScreen" },
+  { title: "基本発音規則 & 長音、促音、拗音", screen: "PhoneticsScreen" },
+  { title: "N5 よく使う単語", screen: "WordsWithDrawer", specialLevel: LEVELS.N5 },
+  { title: "N5 よく使う漢字", screen: "WordsWithDrawer", specialLevel: LEVELS.N5_KANJI },
+  { title: "日本語の基本概念", screen: "N5ConceptsScreen" },
+  { title: "N5 日本語基礎文法の概念", screen: "GrammarConceptsScreen" },
+  { title: "最もよく使われる49のN5文型（コアコース）", screen: "GrammarScreen", specialLevel: LEVELS.N5_BASIC_GRAMMAR },
+  { title: "上級文法", screen: "GrammarScreen", specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
+  { title: "N5 日常会話", screen: "ConversationStack" },
+  { title: "N5 短編物語", screen: "StoryStack" },
+];
+
+*/
+
 
 function StoryStack() {
   return (
@@ -122,7 +142,7 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Grammar"
-        component={GrammarConceptsScreen}
+        component={GrammarStack}
         options={{
           title: 'N5常用句型',
           headerShown: true,

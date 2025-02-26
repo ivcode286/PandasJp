@@ -5,6 +5,7 @@ import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 import { Ionicons } from '@expo/vector-icons';
+import { LEVELS } from '@/src/utils/constants';
 
 // 定義路由參數
 type StackParamList = {
@@ -65,10 +66,12 @@ const GrammarScreen: React.FC = () => {
   useEffect(() => {
     // 動態載入 JSON
     const loadGrammarData = async () => {
-      const json = level === 'n5_advance'
+      const json = level === LEVELS.N5_ADVANCE_GRAMMAR
         ? require('@/src/n5_advance_grammar.json')
         : require('@/src/n5_basic_grammar.json');
       
+        console.log('const json = level === LEVELS.N5_ADVANCE_GRAMMAR:'+level === LEVELS.N5_ADVANCE_GRAMMAR);
+        console.log('level:'+level );
       // 斷言 json 為 GrammarData 型別
       const grammarData = json as GrammarData;
 

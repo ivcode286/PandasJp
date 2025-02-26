@@ -19,19 +19,19 @@ type MenuItemBase = {
 
 type NonParamScreen = {
   screen:
-    | "HiraganaScreen"
-    | "KatakanaScreen"
-    | "KanaComparisonScreen"
-    | "PhoneticsScreen"
-    | "N5ConceptsScreen"
-    | "GrammarConceptsScreen"
-    | "StoryStack"
-    | "ConversationStack"
-    ;
+  | "HiraganaScreen"
+  | "KatakanaScreen"
+  | "KanaComparisonScreen"
+  | "PhoneticsScreen"
+  | "N5ConceptsScreen"
+  | "GrammarConceptsScreen"
+  | "StoryStack"
+  | "ConversationStack"
+  ;
 };
 
 type ParamScreen = {
-  screen: "WordsWithDrawer"| "GrammarScreen";
+  screen: "WordsWithDrawer" | "GrammarScreen";
   specialLevel: string;
 };
 
@@ -47,9 +47,9 @@ const menuItems: MenuItem[] = [
   { title: "N5 常用單字", screen: "WordsWithDrawer", specialLevel: LEVELS.N5 },
   { title: "N5 常見漢字", screen: "WordsWithDrawer", specialLevel: LEVELS.N5_KANJI },
   { title: "日語的基本概念", screen: "N5ConceptsScreen" },
-  { title: "N5 日語基礎文法概念", screen: "GrammarConceptsScreen"},
+  { title: "N5 日語基礎文法概念", screen: "GrammarConceptsScreen" },
   { title: "最常用 49 個 N5 句型（核心課程）", screen: "GrammarScreen", specialLevel: LEVELS.N5_BASIC_GRAMMAR },
-  { title: "進階文法", screen: "GrammarScreen", specialLevel:LEVELS.N5_ADVANCE_GRAMMAR },
+  { title: "進階文法", screen: "GrammarScreen", specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
   { title: "N5日常對話", screen: "ConversationStack" },
   { title: "N5短篇故事", screen: "StoryStack" },
 ];
@@ -58,8 +58,8 @@ export default function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
   const handlePress = (item: MenuItem) => {
-    if (item.screen === "WordsWithDrawer") {
-      navigation.navigate("WordsWithDrawer", { level: item.specialLevel });
+    if (item.screen === "WordsWithDrawer" || item.screen === "GrammarScreen") {
+      navigation.navigate(item.screen, { level: item.specialLevel });
     } else {
       navigation.navigate(item.screen);
     }
