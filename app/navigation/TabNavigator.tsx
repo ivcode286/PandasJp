@@ -51,25 +51,6 @@ function HomeStack() {
 }
 
 
-/*
-const menuItems: MenuItem[] = [
-  { title: "ひらがな", screen: "HiraganaScreen" },
-  { title: "カタカナ", screen: "KatakanaScreen" },
-  { title: "ひらがなとカタカナの比較", screen: "KanaComparisonScreen" },
-  { title: "基本発音規則 & 長音、促音、拗音", screen: "PhoneticsScreen" },
-  { title: "N5 よく使う単語", screen: "WordsWithDrawer", specialLevel: LEVELS.N5 },
-  { title: "N5 よく使う漢字", screen: "WordsWithDrawer", specialLevel: LEVELS.N5_KANJI },
-  { title: "日本語の基本概念", screen: "N5ConceptsScreen" },
-  { title: "N5 日本語基礎文法の概念", screen: "GrammarConceptsScreen" },
-  { title: "最もよく使われる49のN5文型（コアコース）", screen: "GrammarScreen", specialLevel: LEVELS.N5_BASIC_GRAMMAR },
-  { title: "上級文法", screen: "GrammarScreen", specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
-  { title: "N5 日常会話", screen: "ConversationStack" },
-  { title: "N5 短編物語", screen: "StoryStack" },
-];
-
-*/
-
-
 function StoryStack() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
@@ -90,9 +71,9 @@ function ConversationStack() {
 
 function GrammarStack() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="GrammarMenu" component={GrammarMenu} />
-      <Stack.Screen name="GrammarScreen" component={GrammarScreen} />
+    <Stack.Navigator screenOptions={{ headerShown: true, cardStyle: { flex: 1 } }}>
+      <Stack.Screen name="GrammarMenu" component={GrammarMenu} options={{ headerTitle: 'N5文法メニュー' }}/>
+      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5文法' }}/>
     </Stack.Navigator>
   );
 }
@@ -144,8 +125,8 @@ export default function MyTabs() {
         name="Grammar"
         component={GrammarStack}
         options={{
-          title: 'N5文法',
-          headerShown: true,
+          title: '',
+          headerShown: false,
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="pencil.line" color={color || 'white'} />,
         }}
       />

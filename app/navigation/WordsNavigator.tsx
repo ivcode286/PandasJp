@@ -9,12 +9,13 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 export default function WordsNavigator() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false, cardStyle: { flex: 1 }}} >
-      <Stack.Screen name="WordsMenuScreen" component={WordsMenuScreen} />
+    <Stack.Navigator screenOptions={{ headerShown: true, cardStyle: { flex: 1 }}} >
+      <Stack.Screen name="WordsMenuScreen" component={WordsMenuScreen} options={{ headerShown: true ,headerTitle: '単語'}}/>
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer}  
       options={{
+        headerShown: false ,
         gestureResponseDistance: 250 }}  //increade back gesture area
       /> 
     </Stack.Navigator>
   );
-}
+}  
