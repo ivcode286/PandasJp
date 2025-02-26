@@ -45,18 +45,18 @@ export default function HomeScreen() {
   const { t } = useTranslation(); // ⬅️ 使用翻譯
 
   const menuItems: MenuItem[] = [
-    { title: t("menu.hiragana"), screen: "HiraganaScreen" },
-    { title: t("menu.katakana"), screen: "KatakanaScreen" },
-    { title: t("menu.kana_comparison"), screen: "KanaComparisonScreen" },
-    { title: t("menu.phonetics"), screen: "PhoneticsScreen" },
-    { title: t("menu.words_n5"), screen: "WordsWithDrawer", specialLevel: LEVELS.N5 },
-    { title: t("menu.kanji_n5"), screen: "WordsWithDrawer", specialLevel: LEVELS.N5_KANJI },
-    { title: t("menu.n5_concepts"), screen: "N5ConceptsScreen" },
-    { title: t("menu.grammar_concepts"), screen: "GrammarConceptsScreen" },
-    { title: t("menu.n5_basic_grammar"), screen: "GrammarScreen", specialLevel: LEVELS.N5_BASIC_GRAMMAR },
-    { title: t("menu.n5_advance_grammar"), screen: "GrammarScreen", specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
-    { title: t("menu.conversation"), screen: "ConversationStack" },
-    { title: t("menu.story"), screen: "StoryStack" },
+    { title: "平假名", screen: "HiraganaScreen" },
+    { title: "片假名", screen: "KatakanaScreen" },
+    { title: "平假和片假對比", screen: "KanaComparisonScreen" },
+    { title: "基本發音規則 & 長音、促音、拗音", screen: "PhoneticsScreen" },
+    { title: "N5 常用單字", screen: "WordsWithDrawer", specialLevel: LEVELS.N5 },
+    { title: "N5 常見漢字", screen: "WordsWithDrawer", specialLevel: LEVELS.N5_KANJI },
+    { title: "日語的基本概念", screen: "N5ConceptsScreen" },
+    { title: "N5 日語基礎文法概念", screen: "GrammarConceptsScreen" },
+    { title: "最常用 49 個 N5 句型（核心課程）", screen: "GrammarScreen", specialLevel: LEVELS.N5_BASIC_GRAMMAR },
+    { title: "進階文法", screen: "GrammarScreen", specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
+    { title: "N5日常對話", screen: "ConversationStack" },
+    { title: "N5短篇故事", screen: "StoryStack" },
   ];
 
   const handlePress = (item: MenuItem) => {
