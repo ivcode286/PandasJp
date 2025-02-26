@@ -48,8 +48,18 @@ export interface HiraganaTranslation {
   };
 }
 
+export interface KatakanaTranslation {
+  table: {
+    title: string;
+  };
+  sections: {
+    [key: string]: Section;
+  };
+}
+
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
-  hiragana: HiraganaTranslation; // New
+  hiragana: HiraganaTranslation;
+  katakana: KatakanaTranslation; // New
 }

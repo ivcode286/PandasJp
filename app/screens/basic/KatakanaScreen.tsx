@@ -7,12 +7,14 @@ import {
   useColorScheme,
   TouchableOpacity,
 } from "react-native";
+import { useTranslation } from "react-i18next";
 import useTextToSpeech from "@/hooks/useTextToSpeech";
 
 export const KatakanaTable = () => {
   const theme = useColorScheme();
   const isDark = theme === "dark";
   const { speak } = useTextToSpeech();
+  const { t } = useTranslation("katakana");
 
   const colors = {
     background: isDark ? "#121212" : "#FFFFFF",
@@ -30,14 +32,22 @@ export const KatakanaTable = () => {
     [["マ", "ma"], ["ミ", "mi"], ["ム", "mu"], ["メ", "me"], ["モ", "mo"]],
     [["ヤ", "ya"], ["ユ", "yu"], ["ヨ", "yo"]],
     [["ラ", "ra"], ["リ", "ri"], ["ル", "ru"], ["レ", "re"], ["ロ", "ro"]],
-    [["ワ", "wa"], ["ヲ", "wo"], ["ン", "n"]]
+    [["ワ", "wa"], ["ヲ", "wo"], ["ン", "n"]],
   ];
 
   return (
     <View style={{ padding: 10, alignSelf: "flex-start" }}>
-      <Text style={[styles.subTitle, { color: colors.text }]}>按字發音</Text>
+      <Text style={[styles.subTitle, { color: colors.text }]}>
+        {t("table.title")}
+      </Text>
       {KATAKANA_LIST.map((row, rowIndex) => (
-        <View key={rowIndex} style={{ flexDirection: "row", justifyContent: row.length < 5 ? "center" : "flex-start" }}>
+        <View
+          key={rowIndex}
+          style={{
+            flexDirection: "row",
+            justifyContent: row.length < 5 ? "center" : "flex-start",
+          }}
+        >
           {row.map(([char, romaji], charIndex) => (
             <TouchableOpacity
               key={charIndex}
@@ -53,8 +63,14 @@ export const KatakanaTable = () => {
                 borderRadius: 5,
               }}
             >
-              <Text style={{ fontSize: 24, fontWeight: "600", color: colors.text }}>{char}</Text>
-              <Text style={{ fontSize: 12, color: colors.text }}>{romaji}</Text>
+              <Text
+                style={{ fontSize: 24, fontWeight: "600", color: colors.text }}
+              >
+                {char}
+              </Text>
+              <Text style={{ fontSize: 12, color: colors.text }}>
+                {romaji}
+              </Text>
             </TouchableOpacity>
           ))}
         </View>
@@ -66,6 +82,7 @@ export const KatakanaTable = () => {
 const KatakanaScreen = () => {
   const theme = useColorScheme();
   const isDark = theme === "dark";
+  const { t } = useTranslation("katakana");
 
   const colors = {
     background: isDark ? "#121212" : "#FFFFFF",
@@ -73,21 +90,37 @@ const KatakanaScreen = () => {
   };
 
   return (
-    <ScrollView style={[styles.container, { backgroundColor: colors.background }]}> 
-      <Text style={[styles.subTitle, { color: colors.text }]}>2. 片假名（カタカナ, Katakana）</Text>
-      <Text style={[styles.description, { color: colors.text }]}>片假名是一種較方正的日文字母，主要用於：</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• 外來語（如「コンピューター」computer、「ホテル」hotel）</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• 擬聲詞（如「ドキドキ」心跳聲、「ガタン」電車聲）</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• 動植物名稱（如「パンダ」熊貓、「トマト」番茄）</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• 某些強調字（如廣告、標題）</Text>
+    <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
+      <Text style={[styles.subTitle, { color: colors.text }]}>
+        {t("sections.katakana.title")}
+      </Text>
+      <Text style={[styles.description, { color: colors.text }]}>
+        {t("sections.katakana.intro")}
+      </Text>
+      {t("sections.katakana.uses", { returnObjects: true }).map((item, idx) => (
+        <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
+          • {item}
+        </Text>
+      ))}
 
-      <Text style={[styles.subTitle, { color: colors.text }]}>📌 特點</Text>
-      <Text style={[styles.description, { color: colors.text }]}>• 片假名與平假名擁有相同的發音對應關係，但筆劃較 直線剛硬，視覺上更有 現代感。</Text>
-      <Text style={[styles.description, { color: colors.text }]}>• 用於外來語時，會搭配長音符號（ー），如「コーヒー（咖啡）」、「タクシー（計程車）」。</Text>
-      
-      <Text style={[styles.subTitle, { color: colors.text }]}>📌 例子</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• ア（a）、イ（i）、ウ（u）、エ（e）、オ（o）</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• カ（ka）、キ（ki）、ク（ku）、ケ（ke）、コ（ko）</Text>
+      <Text style={[styles.subTitle, { color: colors.text }]}>
+        {t("sections.features.title")}
+      </Text>
+      {t("sections.features.points", { returnObjects: true }).map((item, idx) => (
+        <Text key={idx} style={[styles.description, { color: colors.text }]}>
+          • {item}
+        </Text>
+      ))}
+
+      <Text style={[styles.subTitle, { color: colors.text }]}>
+        {t("sections.examples.title")}
+      </Text>
+      {t("sections.examples.items", { returnObjects: true }).map((item, idx) => (
+        <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
+          • {item}
+        </Text>
+      ))}
+
       <KatakanaTable />
     </ScrollView>
   );
@@ -112,7 +145,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 20,
     marginBottom: 4,
-  }
+  },
 });
 
 export default KatakanaScreen;

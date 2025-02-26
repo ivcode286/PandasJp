@@ -2,22 +2,26 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import grammarConceptsZhTW from "../locales/zh-TW/GrammarConceptsScreen";
 import homeZhTW from "../locales/zh-TW/HomeScreen";
-import hiraganaZhTW from "../locales/zh-TW/HiraganaScreen"; // New
+import hiraganaZhTW from "../locales/zh-TW/HiraganaScreen";
+import katakanaZhTW from "../locales/zh-TW/KatakanaScreen"; // New
 import grammarConceptsZhCN from "../locales/zh-CN/GrammarConceptsScreen";
 import homeZhCN from "../locales/zh-CN/HomeScreen";
-import hiraganaZhCN from "../locales/zh-CN/HiraganaScreen"; // New
+import hiraganaZhCN from "../locales/zh-CN/HiraganaScreen";
+import katakanaZhCN from "../locales/zh-CN/KatakanaScreen"; // New
 import { Translation } from "../types/translation";
 
 const resources = {
   "zh-TW": {
     grammarConcepts: grammarConceptsZhTW,
     home: homeZhTW,
-    hiragana: hiraganaZhTW, // New
+    hiragana: hiraganaZhTW,
+    katakana: katakanaZhTW, // New
   },
   "zh-CN": {
     grammarConcepts: grammarConceptsZhCN,
     home: homeZhCN,
-    hiragana: hiraganaZhCN, // New
+    hiragana: hiraganaZhCN,
+    katakana: katakanaZhCN, // New
   },
 };
 
@@ -27,7 +31,7 @@ i18n.use(initReactI18next).init({
   fallbackLng: "zh-TW",
   interpolation: { escapeValue: false },
   defaultNS: "home",
-  ns: ["grammarConcepts", "home", "hiragana"], // Updated
+  ns: ["grammarConcepts", "home", "hiragana", "katakana"], // Updated
 });
 
 declare module "i18next" {
@@ -36,7 +40,8 @@ declare module "i18next" {
     resources: {
       grammarConcepts: Translation["grammarConcepts"];
       home: Translation["home"];
-      hiragana: Translation["hiragana"]; // New
+      hiragana: Translation["hiragana"];
+      katakana: Translation["katakana"]; // New
     };
     returnObjects: true;
   }
@@ -52,8 +57,13 @@ declare module "i18next" {
     // Home namespace
     (key: "translation.title" | `translation.menu.${string}`, options?: any): string;
 
-    // Hiragana namespace (new)
+    // Hiragana namespace
     (key: "title" | "table.title", options?: any): string;
+    (key: `sections.${string}.title` | `sections.${string}.intro`, options?: any): string;
+    (key: `sections.${string}.uses` | `sections.${string}.points` | `sections.${string}.items`, options: { returnObjects: true }): string[];
+
+    // Katakana namespace (new)
+    (key: "table.title", options?: any): string;
     (key: `sections.${string}.title` | `sections.${string}.intro`, options?: any): string;
     (key: `sections.${string}.uses` | `sections.${string}.points` | `sections.${string}.items`, options: { returnObjects: true }): string[];
   }
