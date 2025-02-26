@@ -94,13 +94,13 @@ const GrammarConecptsScreen: React.FC = () => {
 
       {/* 例句 - 保留原有內容 */}
       <Text style={styles.sectionTitle}>{t('sections.examples.title')}</Text>
-      {t('sections.examples.paragraphs', { returnObjects: true }).map((para, idx) => (
+      {(t('sections.examples.paragraphs', { returnObjects: true }) as string[]).map((para, idx) => (
         <Text key={idx} style={styles.paragraph}>{para}</Text>
       ))}
 
       {/* 總結 - 保留原有內容 */}
       <Text style={styles.sectionTitle}>{t('sections.summary.title')}</Text>
-      {t('sections.summary.paragraphs', { returnObjects: true }).map((para, idx) => (
+      {(t('sections.summary.paragraphs', { returnObjects: true }) as string[]).map((para, idx) => (
         <Text key={idx} style={styles.paragraph}>{para}</Text>
       ))}
     </ScrollView>
