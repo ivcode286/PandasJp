@@ -12,9 +12,8 @@ const GrammarConecptsScreen: React.FC = () => {
   const isDark = useColorScheme() === 'dark';
   const styles = getStyles(isDark);
   const tableStyles = getTableStyles(isDark);
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('grammarConcepts');
 
-  // Table Component - 保留原有內容
   const Table: React.FC<TableProps> = ({ header, data }) => (
     <View style={tableStyles.tableContainer}>
       <View style={tableStyles.tableRow}>
@@ -38,76 +37,78 @@ const GrammarConecptsScreen: React.FC = () => {
 
   return (
     <ScrollView style={styles.container}>
-      {/* 標題與說明 - 保留原有內容 */}
-      <Text style={styles.title}>{t('title')}</Text>
-      <Text style={styles.paragraph}>{t('intro')}</Text>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="繁體中文"
+          onPress={() => i18n.changeLanguage('zh-TW')}
+          color={i18n.language === 'zh-TW' ? '#007AFF' : '#888'}
+        />
+        <Button
+          title="简体中文"
+          onPress={() => i18n.changeLanguage('zh-CN')}
+          color={i18n.language === 'zh-CN' ? '#007AFF' : '#888'}
+        />
+      </View>
 
-      {/* Section 1: 動詞的基本形態 - 保留原有內容 */}
-      <Text style={styles.sectionTitle}>{t('sections.section1.title')}</Text>
-      <Text style={styles.paragraph}>{t('sections.section1.paragraph')}</Text>
+      <Text style={styles.title}>{t('translation.title')}</Text>
+      <Text style={styles.paragraph}>{t('translation.intro')}</Text>
+
+      <Text style={styles.sectionTitle}>{t('translation.sections.section1.title')}</Text>
+      <Text style={styles.paragraph}>{t('translation.sections.section1.paragraph')}</Text>
       <Table
-        header={t('sections.section1.table.header', { returnObjects: true })}
-        data={t('sections.section1.table.data', { returnObjects: true })}
+        header={t('translation.sections.section1.table.header', { returnObjects: true })}
+        data={t('translation.sections.section1.table.data', { returnObjects: true })}
       />
 
-      {/* Section 2: 日語動詞的三大類型 - 保留原有內容 */}
-      <Text style={styles.sectionTitle}>{t('sections.section2.title')}</Text>
+      <Text style={styles.sectionTitle}>{t('translation.sections.section2.title')}</Text>
       <Table
-        header={t('sections.section2.table.header', { returnObjects: true })}
-        data={t('sections.section2.table.data', { returnObjects: true })}
+        header={t('translation.sections.section2.table.header', { returnObjects: true })}
+        data={t('translation.sections.section2.table.data', { returnObjects: true })}
       />
 
-      {/* Section 3: 動詞變化對照表 - 保留原有內容 */}
-      <Text style={styles.sectionTitle}>{t('sections.section3.title')}</Text>
+      <Text style={styles.sectionTitle}>{t('translation.sections.section3.title')}</Text>
       <Table
-        header={t('sections.section3.table.header', { returnObjects: true })}
-        data={t('sections.section3.table.data', { returnObjects: true })}
+        header={t('translation.sections.section3.table.header', { returnObjects: true })}
+        data={t('translation.sections.section3.table.data', { returnObjects: true })}
       />
 
-      {/* Section 4: 形容詞的分類 - 保留原有內容 */}
-      <Text style={styles.sectionTitle}>{t('sections.section4.title')}</Text>
+      <Text style={styles.sectionTitle}>{t('translation.sections.section4.title')}</Text>
       <Table
-        header={t('sections.section4.table.header', { returnObjects: true })}
-        data={t('sections.section4.table.data', { returnObjects: true })}
+        header={t('translation.sections.section4.table.header', { returnObjects: true })}
+        data={t('translation.sections.section4.table.data', { returnObjects: true })}
       />
 
-      {/* Section 5: 動詞普通形 & 形容詞普通形 - 保留原有內容 */}
-      <Text style={styles.sectionTitle}>{t('sections.section5.title')}</Text>
+      <Text style={styles.sectionTitle}>{t('translation.sections.section5.title')}</Text>
       <Table
-        header={t('sections.section5.table.header', { returnObjects: true })}
-        data={t('sections.section5.table.data', { returnObjects: true })}
+        header={t('translation.sections.section5.table.header', { returnObjects: true })}
+        data={t('translation.sections.section5.table.data', { returnObjects: true })}
       />
 
-      {/* Section 6: 動詞的「て形」 - 保留原有內容 */}
-      <Text style={styles.sectionTitle}>{t('sections.section6.title')}</Text>
+      <Text style={styles.sectionTitle}>{t('translation.sections.section6.title')}</Text>
       <Table
-        header={t('sections.section6.table.header', { returnObjects: true })}
-        data={t('sections.section6.table.data', { returnObjects: true })}
+        header={t('translation.sections.section6.table.header', { returnObjects: true })}
+        data={t('translation.sections.section6.table.data', { returnObjects: true })}
       />
 
-      {/* Section 7: 「ば形」— 表示「如果」 - 保留原有內容 */}
-      <Text style={styles.sectionTitle}>{t('sections.section7.title')}</Text>
+      <Text style={styles.sectionTitle}>{t('translation.sections.section7.title')}</Text>
       <Table
-        header={t('sections.section7.table.header', { returnObjects: true })}
-        data={t('sections.section7.table.data', { returnObjects: true })}
+        header={t('translation.sections.section7.table.header', { returnObjects: true })}
+        data={t('translation.sections.section7.table.data', { returnObjects: true })}
       />
 
-      {/* 例句 - 保留原有內容 */}
-      <Text style={styles.sectionTitle}>{t('sections.examples.title')}</Text>
-      {(t('sections.examples.paragraphs', { returnObjects: true }) as string[]).map((para, idx) => (
+      <Text style={styles.sectionTitle}>{t('translation.sections.examples.title')}</Text>
+      {t('translation.sections.examples.paragraphs', { returnObjects: true }).map((para, idx) => (
         <Text key={idx} style={styles.paragraph}>{para}</Text>
       ))}
 
-      {/* 總結 - 保留原有內容 */}
-      <Text style={styles.sectionTitle}>{t('sections.summary.title')}</Text>
-      {(t('sections.summary.paragraphs', { returnObjects: true }) as string[]).map((para, idx) => (
+      <Text style={styles.sectionTitle}>{t('translation.sections.summary.title')}</Text>
+      {t('translation.sections.summary.paragraphs', { returnObjects: true }).map((para, idx) => (
         <Text key={idx} style={styles.paragraph}>{para}</Text>
       ))}
     </ScrollView>
   );
 };
 
-// 保留原有樣式函數
 const getStyles = (isDark: boolean) =>
   StyleSheet.create({
     container: {
@@ -115,6 +116,11 @@ const getStyles = (isDark: boolean) =>
       backgroundColor: isDark ? '#000' : '#fff',
       padding: 16,
       paddingBottom: 80,
+    },
+    buttonContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      marginBottom: 16,
     },
     title: {
       fontSize: 24,
@@ -137,7 +143,6 @@ const getStyles = (isDark: boolean) =>
     },
   });
 
-// 保留原有表格樣式函數
 const getTableStyles = (isDark: boolean) =>
   StyleSheet.create({
     tableContainer: {

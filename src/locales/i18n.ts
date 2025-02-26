@@ -1,34 +1,21 @@
 // src/config/i18n.ts
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import zhTW from "../locales/zh-TW";
-import zhCN from "../locales/zh-CN";
-
-
-// src/types/translation.ts
-export interface Section {
-  title: string;
-  paragraph?: string;
-  table?: {
-    header: string[];
-    data: string[][];
-  };
-  paragraphs?: string[];
-}
-
-export interface Translation {
-  title: string;
-  intro: string;
-  sections: {
-    [key: string]: Section;
-  };
-}
-
-
+import grammarConceptsZhTW from "../locales/zh-TW/GrammarConecptsScreen"; // 注意檔案名稱
+import homeZhTW from "../locales/zh-TW/HomeScreen";
+import grammarConceptsZhCN from "../locales/zh-CN/GrammarConecptsScreen";
+import homeZhCN from "../locales/zh-CN/HomeScreen";
+import { Translation } from "../types/translation";
 
 const resources = {
-  "zh-TW": zhTW,
-  "zh-CN": zhCN,
+  "zh-TW": {
+    grammarConcepts: grammarConceptsZhTW,
+    home: homeZhTW,
+  },
+  "zh-CN": {
+    grammarConcepts: grammarConceptsZhCN,
+    home: homeZhCN,
+  },
 };
 
 i18n.use(initReactI18next).init({
@@ -36,15 +23,30 @@ i18n.use(initReactI18next).init({
   lng: "zh-CN",
   fallbackLng: "zh-TW",
   interpolation: { escapeValue: false },
+  defaultNS: "home",
+  ns: ["grammarConcepts", "home"],
 });
 
-// 告訴 i18next 使用我們的 Translation 介面
 declare module "i18next" {
   interface CustomTypeOptions {
-    defaultNS: "translation";
+    defaultNS: "home";
     resources: {
-      translation: Translation;
+      grammarConcepts: Translation["grammar"];
+      home: Translation["home"];
     };
+    returnObjects: true;
+  }
+
+  interface TFunction {
+    // 為 grammarConcepts 命名空間定義返回類型
+    (key: "translation.title" | "translation.intro", options?: any): string;
+    (key: `translation.sections.${string}.title` | `translation.sections.${string}.paragraph`, options?: any): string;
+    (key: `translation.sections.${string}.table.header`, options: { returnObjects: true }): string[];
+    (key: `translation.sections.${string}.table.data`, options: { returnObjects: true }): string[][];
+    (key: `translation.sections.${string}.paragraphs`, options: { returnObjects: true }): string[];
+
+    // 為 home 命名空間定義返回類型
+    (key: "translation.title" | `translation.menu.${string}`, options?: any): string;
   }
 }
 
