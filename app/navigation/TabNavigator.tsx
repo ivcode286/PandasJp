@@ -144,7 +144,7 @@ export default function MyTabs() {
         name="Grammar"
         component={GrammarStack}
         options={{
-          title: 'N5常用句型',
+          title: 'N5文法',
           headerShown: true,
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="pencil.line" color={color || 'white'} />,
         }}
