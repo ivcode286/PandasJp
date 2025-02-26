@@ -3,11 +3,13 @@ import { initReactI18next } from "react-i18next";
 import grammarConceptsZhTW from "../locales/zh-TW/GrammarConceptsScreen";
 import homeZhTW from "../locales/zh-TW/HomeScreen";
 import hiraganaZhTW from "../locales/zh-TW/HiraganaScreen";
-import katakanaZhTW from "../locales/zh-TW/KatakanaScreen"; // New
+import katakanaZhTW from "../locales/zh-TW/KatakanaScreen";
+import phoneticsZhTW from "../locales/zh-TW/PhoneticsScreen";
 import grammarConceptsZhCN from "../locales/zh-CN/GrammarConceptsScreen";
 import homeZhCN from "../locales/zh-CN/HomeScreen";
 import hiraganaZhCN from "../locales/zh-CN/HiraganaScreen";
-import katakanaZhCN from "../locales/zh-CN/KatakanaScreen"; // New
+import katakanaZhCN from "../locales/zh-CN/KatakanaScreen";
+import phoneticsZhCN from "../locales/zh-CN/PhoneticsScreen";
 import { Translation } from "../types/translation";
 
 const resources = {
@@ -15,13 +17,15 @@ const resources = {
     grammarConcepts: grammarConceptsZhTW,
     home: homeZhTW,
     hiragana: hiraganaZhTW,
-    katakana: katakanaZhTW, // New
+    katakana: katakanaZhTW,
+    phonetics: phoneticsZhTW,
   },
   "zh-CN": {
     grammarConcepts: grammarConceptsZhCN,
     home: homeZhCN,
     hiragana: hiraganaZhCN,
-    katakana: katakanaZhCN, // New
+    katakana: katakanaZhCN,
+    phonetics: phoneticsZhCN,
   },
 };
 
@@ -31,7 +35,7 @@ i18n.use(initReactI18next).init({
   fallbackLng: "zh-TW",
   interpolation: { escapeValue: false },
   defaultNS: "home",
-  ns: ["grammarConcepts", "home", "hiragana", "katakana"], // Updated
+  ns: ["grammarConcepts", "home", "hiragana", "katakana", "phonetics"],
 });
 
 declare module "i18next" {
@@ -41,7 +45,8 @@ declare module "i18next" {
       grammarConcepts: Translation["grammarConcepts"];
       home: Translation["home"];
       hiragana: Translation["hiragana"];
-      katakana: Translation["katakana"]; // New
+      katakana: Translation["katakana"];
+      phonetics: Translation["phonetics"];
     };
     returnObjects: true;
   }
@@ -62,10 +67,18 @@ declare module "i18next" {
     (key: `sections.${string}.title` | `sections.${string}.intro`, options?: any): string;
     (key: `sections.${string}.uses` | `sections.${string}.points` | `sections.${string}.items`, options: { returnObjects: true }): string[];
 
-    // Katakana namespace (new)
+    // Katakana namespace
     (key: "table.title", options?: any): string;
     (key: `sections.${string}.title` | `sections.${string}.intro`, options?: any): string;
     (key: `sections.${string}.uses` | `sections.${string}.points` | `sections.${string}.items`, options: { returnObjects: true }): string[];
+
+    // Phonetics namespace
+    (key: "intro", options?: any): string;
+    (key: `sections.${string}.title` | `sections.${string}.description` | `sections.${string}.extra`, options?: any): string;
+    (key: `sections.dakuon.data` | `sections.handakuon.data`, options: { returnObjects: true }): DakuonItem[];
+    (key: `sections.youon.data`, options: { returnObjects: true }): YouonItem[];
+    (key: `sections.chouon.data`, options: { returnObjects: true }): LongVowelItem[];
+    (key: `sections.summary.items`, options: { returnObjects: true }): string[];
   }
 }
 

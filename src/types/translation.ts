@@ -2,6 +2,8 @@ export interface Section {
   title: string;
   paragraph?: string;
   intro?: string;
+  description?: string;
+  extra?: string;
   table?: {
     header: string[];
     data: string[][];
@@ -57,9 +59,66 @@ export interface KatakanaTranslation {
   };
 }
 
+export interface PhoneticsTranslation {
+  intro: string;
+  sections: {
+    sei: Section;
+    dakuon: {
+      title: string;
+      description: string;
+      data: {
+        row: string;
+        a: string;
+        i: string;
+        u: string;
+        e: string;
+        o: string;
+      }[];
+      extra: string;
+    };
+    handakuon: {
+      title: string;
+      description: string;
+      data: {
+        row: string;
+        a: string;
+        i: string;
+        u: string;
+        e: string;
+        o: string;
+      }[];
+      extra: string;
+    };
+    sokuon: Section;
+    chouon: {
+      title: string;
+      description: string;
+      data: {
+        type: string;
+        mark: string;
+        example: string;
+      }[];
+    };
+    youon: {
+      title: string;
+      description: string;
+      data: {
+        combo: string;
+        romaji: string;
+        example: string;
+      }[];
+    };
+    summary: {
+      title: string;
+      items: string[];
+    };
+  };
+}
+
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
   hiragana: HiraganaTranslation;
-  katakana: KatakanaTranslation; // New
+  katakana: KatakanaTranslation;
+  phonetics: PhoneticsTranslation;
 }
