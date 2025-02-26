@@ -1,3 +1,4 @@
+import { useRoute } from '@react-navigation/native'; // ✅ 確保 `useRoute()` 被正確導入
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 import { fetchWords } from '@/src/utils/fetchWords';
 import { Ionicons } from '@expo/vector-icons';
@@ -12,7 +13,6 @@ import {
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
-
 
 export const sectionListRef = React.createRef<SectionList<any>>();
 
@@ -57,12 +57,16 @@ export const scrollToSection = (title: string): void => {
 };
 
 export default function WordsScreen() {
-  const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
+  const route = useRoute(); // ✅ 正確使用 `useRoute()`
+  const { level } = route.params as { level: string }; // 取得 level 參數
+
   const { speak } = useTextToSpeech();
+  const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
 
   useEffect(() => {
+    console.log(`Current Level: ${level}`);
     const loadWords = async () => {
-      const words = await fetchWords();
+      const words = await fetchWords(level);
       if (!Array.isArray(words)) {
         console.error("fetchWords did not return an array:", words);
         return;
@@ -72,9 +76,8 @@ export default function WordsScreen() {
       globalSections = groupedSections;
     };
     loadWords();
-  }, []);
-  
-
+  }, [level]);
+ 
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -88,8 +91,8 @@ export default function WordsScreen() {
               <Text style={styles.meaning}>{item.meaning_zh}</Text>
               <View style={styles.row}>
                 <Text style={styles.reading}>{item.pron}</Text>
-                <TouchableOpacity onPress={() => speak(item.words)} style={styles.speakerIcon}>
-                  <Ionicons name="volume-high" size={24} color="black" />
+                <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
+                  <Ionicons name="volume-high" size={24} color="#ffcc00" />
                 </TouchableOpacity>
               </View>
             </View>
@@ -102,6 +105,7 @@ export default function WordsScreen() {
           stickySectionHeadersEnabled={false}
           // @ts-ignore
           getItemLayout={getItemLayout}
+          contentContainerStyle={{ paddingBottom: 80 }}
         />
       </SafeAreaView>
     </SafeAreaProvider>
@@ -113,9 +117,10 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: StatusBar.currentHeight || 0,
     marginHorizontal: 16,
+    backgroundColor: '#121212',
   },
   item: {
-    backgroundColor: '#f9c2ff',
+    backgroundColor: '#1e1e1e',
     padding: 20,
     height: ITEM_HEIGHT,
     borderRadius: 8,
@@ -124,36 +129,35 @@ const styles = StyleSheet.create({
   headerContainer: {
     height: SECTION_HEADER_HEIGHT,
     justifyContent: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#2a2a2a',
   },
   header: {
     fontSize: 32,
     fontWeight: 'bold',
     paddingLeft: 10,
+    color: '#ffcc00',
   },
   words: {
     fontSize: 24,
     fontWeight: 'bold',
+    color: '#ffffff',
   },
   reading: {
     fontSize: 18,
-    color: '#555',
-    flex: 1, // Allows it to take remaining space
+    color: '#ffffff',
+    flex: 1,
   },
   meaning: {
     fontSize: 16,
-    color: '#777',
+    color: '#b0b0b0',
   },
   row: {
-    flexDirection: "row", // Aligns meaning & icon in the same row
-    alignItems: "center", // Centers items vertically
-    justifyContent: "space-between", // Pushes them to opposite sides
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     marginTop: 5,
   },
   speakerIcon: {
-    padding: 5,
+    padding: 1,
   },
-
 });
-
-
