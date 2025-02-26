@@ -70,8 +70,6 @@ const GrammarScreen: React.FC = () => {
         ? require('@/src/n5_advance_grammar.json')
         : require('@/src/n5_basic_grammar.json');
       
-        console.log('const json = level === LEVELS.N5_ADVANCE_GRAMMAR:'+level === LEVELS.N5_ADVANCE_GRAMMAR);
-        console.log('level:'+level );
       // 斷言 json 為 GrammarData 型別
       const grammarData = json as GrammarData;
 
@@ -113,7 +111,7 @@ const GrammarScreen: React.FC = () => {
                   <View style={styles.sentenceRow}>
                     <Text style={styles.sentence}>{example.sentence}</Text>
                     <TouchableOpacity onPress={() => speak(example.sentence)} style={styles.iconSpacing}>
-                      <Ionicons name="volume-high" size={24} color="white" />
+                      <Ionicons name="volume-high" size={24} color="#ffcc00" />
                     </TouchableOpacity>
                   </View>
                   <Text style={styles.translation}>{example.translation}</Text>

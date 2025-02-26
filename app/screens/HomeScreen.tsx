@@ -90,15 +90,13 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "black",
+    backgroundColor: "#121212", // 與 N5StoryScreen 一致的深色背景
   },
   container: {
     flex: 1,
-    // 這裡的 paddingTop 可以留著，或依需要移除
+    padding: 20,
     paddingTop: StatusBar.currentHeight || 0,
-    marginHorizontal: 16,
   },
-  // 在 contentContainerStyle 裡加入 paddingBottom: 300
   scrollContent: {
     paddingBottom: 80,
   },
@@ -106,16 +104,16 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     marginVertical: 20,
-    color: "#fff",
+    color: "#ffffff", // 白色文字
   },
   card: {
-    backgroundColor: "#f9c2ff",
+    backgroundColor: "#1e1e1e", // 使用深色模式下的卡片背景色
     padding: 16,
     borderRadius: 8,
     marginBottom: 16,
   },
   cardText: {
     fontSize: 18,
-    color: "#000",
+    color: "#ffffff", // 卡片文字改為白色
   },
 });

@@ -92,7 +92,7 @@ export default function WordsScreen() {
               <View style={styles.row}>
                 <Text style={styles.reading}>{item.pron}</Text>
                 <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
-                  <Ionicons name="volume-high" size={24} color="black" />
+                  <Ionicons name="volume-high" size={24} color="#ffcc00" />
                 </TouchableOpacity>
               </View>
             </View>
@@ -117,9 +117,10 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: StatusBar.currentHeight || 0,
     marginHorizontal: 16,
+    backgroundColor: '#121212',
   },
   item: {
-    backgroundColor: '#f9c2ff',
+    backgroundColor: '#1e1e1e',
     padding: 20,
     height: ITEM_HEIGHT,
     borderRadius: 8,
@@ -128,25 +129,27 @@ const styles = StyleSheet.create({
   headerContainer: {
     height: SECTION_HEADER_HEIGHT,
     justifyContent: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#2a2a2a',
   },
   header: {
     fontSize: 32,
     fontWeight: 'bold',
     paddingLeft: 10,
+    color: '#ffcc00',
   },
   words: {
     fontSize: 24,
     fontWeight: 'bold',
+    color: '#ffffff',
   },
   reading: {
     fontSize: 18,
-    color: '#555',
+    color: '#ffffff',
     flex: 1,
   },
   meaning: {
     fontSize: 16,
-    color: '#777',
+    color: '#b0b0b0',
   },
   row: {
     flexDirection: "row",
