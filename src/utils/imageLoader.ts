@@ -9,6 +9,8 @@ const imageMap: Record<string, any> = {
   'overlord_food.jpg': require('../../assets/images/stories_cover/overlord_food.jpg'),
   'girl_hospital_visit.jpg': require('../../assets/images/stories_cover/girl_hospital_visit.jpg'),
   'colinb_witch.jpg': require('../../assets/images/stories_cover/colinb_witch.jpg'),
+  'panda_cat_lake.jpg': require('../../assets/images/stories_cover/panda_cat_lake.jpg'),
+  
 
   //conversation images
   'convenience_shopping.jpg': require('../../assets/images/stories_cover/convenience_shopping.jpg'),
