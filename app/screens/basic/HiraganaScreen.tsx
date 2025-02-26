@@ -7,6 +7,7 @@ import {
   useColorScheme,
   TouchableOpacity,
 } from "react-native";
+import { useTranslation } from "react-i18next";
 import useTextToSpeech from "@/hooks/useTextToSpeech";
 
 export const HiraganaTable = () => {
@@ -30,14 +31,24 @@ export const HiraganaTable = () => {
     [["ま", "ma"], ["み", "mi"], ["む", "mu"], ["め", "me"], ["も", "mo"]],
     [["や", "ya"], ["ゆ", "yu"], ["よ", "yo"]],
     [["ら", "ra"], ["り", "ri"], ["る", "ru"], ["れ", "re"], ["ろ", "ro"]],
-    [["わ", "wa"], ["を", "wo"], ["ん", "n"]]
+    [["わ", "wa"], ["を", "wo"], ["ん", "n"]],
   ];
+
+  const { t } = useTranslation("hiragana");
 
   return (
     <View style={{ padding: 10, alignSelf: "flex-start" }}>
-      <Text style={[styles.subTitle, { color: colors.text }]}>按字發音</Text>
+      <Text style={[styles.subTitle, { color: colors.text }]}>
+        {t("table.title")}
+      </Text>
       {HIRAGANA_LIST.map((row, rowIndex) => (
-        <View key={rowIndex} style={{ flexDirection: "row", justifyContent: row.length < 5 ? "center" : "flex-start" }}>
+        <View
+          key={rowIndex}
+          style={{
+            flexDirection: "row",
+            justifyContent: row.length < 5 ? "center" : "flex-start",
+          }}
+        >
           {row.map(([char, romaji], charIndex) => (
             <TouchableOpacity
               key={charIndex}
@@ -53,8 +64,14 @@ export const HiraganaTable = () => {
                 borderRadius: 5,
               }}
             >
-              <Text style={{ fontSize: 24, fontWeight: "600", color: colors.text }}>{char}</Text>
-              <Text style={{ fontSize: 12, color: colors.text }}>{romaji}</Text>
+              <Text
+                style={{ fontSize: 24, fontWeight: "600", color: colors.text }}
+              >
+                {char}
+              </Text>
+              <Text style={{ fontSize: 12, color: colors.text }}>
+                {romaji}
+              </Text>
             </TouchableOpacity>
           ))}
         </View>
@@ -66,6 +83,7 @@ export const HiraganaTable = () => {
 const HiraganaScreen = () => {
   const theme = useColorScheme();
   const isDark = theme === "dark";
+  const { t } = useTranslation("hiragana");
 
   const colors = {
     background: isDark ? "#121212" : "#FFFFFF",
@@ -73,23 +91,40 @@ const HiraganaScreen = () => {
   };
 
   return (
-    <ScrollView style={[styles.container, { backgroundColor: colors.background }]}> 
-      <Text style={[styles.headerTitle, { color: colors.text }]}>平假名（ひらがな）與片假名（カタカナ）介紹</Text>
-      <Text style={[styles.subTitle, { color: colors.text }]}>1. 平假名（ひらがな, Hiragana）</Text>
-      <Text style={[styles.description, { color: colors.text }]}>平假名是一種圓滑柔和的日文字母，主要用於：</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• 原生日語詞彙</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• 助詞（如「の」、「が」）</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• 動詞、形容詞的變化（如「たべる」→「たべました」）</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• 輔助讀音（如振假名，ふりがな）</Text>
+    <ScrollView style={[styles.container, { backgroundColor: colors.background }]}>
+      <Text style={[styles.headerTitle, { color: colors.text }]}>
+        {t("title")}
+      </Text>
+      <Text style={[styles.subTitle, { color: colors.text }]}>
+        {t("sections.hiragana.title")}
+      </Text>
+      <Text style={[styles.description, { color: colors.text }]}>
+        {t("sections.hiragana.intro")}
+      </Text>
+      {t("sections.hiragana.uses", { returnObjects: true }).map((item, idx) => (
+        <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
+          • {item}
+        </Text>
+      ))}
 
-      <Text style={[styles.subTitle, { color: colors.text }]}>📌 特點</Text>
-      <Text style={[styles.description, { color: colors.text }]}>• 共有 46 個基本音節（あ、い、う、え、お...），再加上濁音、半濁音、拗音等變化。</Text>
-      <Text style={[styles.description, { color: colors.text }]}>• 主要用於 書寫日本固有詞彙與語法結構，如：「さくら（櫻花）」、「すし（壽司）」。</Text>
-      <Text style={[styles.description, { color: colors.text }]}>• 字體較 圓滑流暢，適合手寫。</Text>
-      
-      <Text style={[styles.subTitle, { color: colors.text }]}>📌 例子</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• あ（a）、い（i）、う（u）、え（e）、お（o）</Text>
-      <Text style={[styles.listItem, { color: colors.text }]}>• た（ta）、ち（chi）、つ（tsu）、て（te）、と（to）</Text>
+      <Text style={[styles.subTitle, { color: colors.text }]}>
+        {t("sections.features.title")}
+      </Text>
+      {t("sections.features.points", { returnObjects: true }).map((item, idx) => (
+        <Text key={idx} style={[styles.description, { color: colors.text }]}>
+          • {item}
+        </Text>
+      ))}
+
+      <Text style={[styles.subTitle, { color: colors.text }]}>
+        {t("sections.examples.title")}
+      </Text>
+      {t("sections.examples.items", { returnObjects: true }).map((item, idx) => (
+        <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
+          • {item}
+        </Text>
+      ))}
+
       <HiraganaTable />
     </ScrollView>
   );
@@ -119,7 +154,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 20,
     marginBottom: 4,
-  }
+  },
 });
 
 export default HiraganaScreen;
