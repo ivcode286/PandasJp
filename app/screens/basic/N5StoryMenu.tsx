@@ -1,23 +1,15 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
-  StyleSheet,
-  Image,
-} from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import storiesData from '../../../src/n5_story.json';
-import { getImage } from '../../../src/utils/imageLoader'; // ✅ 匯入圖片載入函數
+import { storiesData } from '../../../src/locales/zh-TW/N5StoryScreen'; 
+import { getImage } from '../../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
-// 定義 StackParamList 讓 TypeScript 知道需要傳入 storyTitle
+// 定義 StackParamList
 type StackParamList = {
   N5StoryScreen: { storyTitle: string };
 };
-
 
 export default function N5StoryMenu() {
   const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5StoryScreen'>>();
@@ -25,7 +17,7 @@ export default function N5StoryMenu() {
   return (
     <View style={styles.container}>
       <FlatList
-        data={storiesData.stories}
+        data={storiesData}
         keyExtractor={(item) => item.title}
         renderItem={({ item }) => (
           <TouchableOpacity
@@ -33,7 +25,7 @@ export default function N5StoryMenu() {
             onPress={() => navigation.navigate('N5StoryScreen', { storyTitle: item.title })}
           >
             <Image
-              source={getImage(item.imageName)} // ✅ 根據 `imageName` 載入不同圖片
+              source={getImage(item.imageName)}
               style={styles.coverImage}
             />
             <View style={styles.textContainer}>

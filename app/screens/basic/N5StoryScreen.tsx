@@ -2,9 +2,9 @@ import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
-import storiesData from '../../../src/n5_story.json';
 import { Ionicons } from '@expo/vector-icons';
-import { getImage } from '../../../src/utils/imageLoader'; // ✅ 匯入圖片載入函數
+import { getImage } from '../../../src/utils/imageLoader';
+import { storiesData } from '../../../src/locales/zh-TW/N5StoryScreen'; // 從 N5StoryScreen.ts 匯入資料
 
 // 定義 StackParamList
 type StackParamList = {
@@ -17,8 +17,8 @@ type StoryScreenRouteProp = RouteProp<StackParamList, 'N5StoryScreen'>;
 export default function N5StoryScreen() {
   const route = useRoute<StoryScreenRouteProp>();
   const storyTitle = route.params?.storyTitle;
-  const story = storiesData.stories.find((s) => s.title === storyTitle);
-  const { speak } = useTextToSpeech(); // ✅ 使用 Text-to-Speech
+  const story = storiesData.find((s) => s.title === storyTitle);
+  const { speak } = useTextToSpeech();
 
   if (!story) {
     return (
@@ -30,7 +30,6 @@ export default function N5StoryScreen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 80 }}>
-      {/* 顯示封面圖片 */}
       <View style={styles.coverContainer}>
         <Image source={getImage(story.imageName)} style={styles.coverImage} />
       </View>
@@ -44,7 +43,6 @@ export default function N5StoryScreen() {
                 <Text style={styles.sentence}>{line.sentence}</Text>
                 <TouchableOpacity
                   onPress={() => {
-                    // 移除「角色名稱：」，只保留對話內容
                     const spokenText = line.sentence.includes("：")
                       ? line.sentence.split("：")[1].trim()
                       : line.sentence;
@@ -60,8 +58,6 @@ export default function N5StoryScreen() {
           ))}
         </View>
       ))}
-
-
     </ScrollView>
   );
 }
@@ -70,7 +66,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#121212', // 深色模式背景
+    backgroundColor: '#121212',
   },
   title: {
     fontSize: 24,
@@ -125,21 +121,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 20,
   },
-
-  // ✅ 新增封面圖片樣式
   coverContainer: {
     marginTop: 0,
     alignItems: 'center',
   },
-  coverTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#ffcc00',
-    marginBottom: 10,
-  },
   coverImage: {
-    width: 400, // ✅ 設定寬度
-    height: 400, // ✅ 設定高度，確保比例
+    width: 400,
+    height: 400,
     resizeMode: 'cover',
     borderRadius: 12,
   },
