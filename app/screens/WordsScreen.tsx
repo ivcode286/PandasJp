@@ -24,20 +24,30 @@ const ITEM_HEIGHT = 140;
 const ITEM_MARGIN = 8;
 
 const groupWordsByLetter = (words: any[]) => {
-  const groups: { [letter: string]: any[] } = {};
+  const groups: { [letter: string]: { order: number; words: any[] } } = {};
+  
+  // 分組並記錄 letterOrder
   words.forEach(word => {
     const letter = word.letter;
     if (!groups[letter]) {
-      groups[letter] = [];
+      groups[letter] = {
+        order: word.letterOrder, // 使用第一個單詞的 letterOrder
+        words: [],
+      };
     }
-    groups[letter].push(word);
+    groups[letter].words.push(word);
   });
-  return Object.keys(groups)
-    .sort()
-    .map(letter => ({
+
+  // 按 letterOrder 排序 section，並在每個 section 內按 wordId 排序單詞
+  const sortedGroups = Object.entries(groups)
+    .map(([letter, { order, words }]) => ({
       title: letter,
-      data: groups[letter],
-    }));
+      data: words.sort((a, b) => a.wordId - b.wordId), // 按 wordId 排序單詞
+      letterOrder: order, // 保留 letterOrder 用於排序
+    }))
+    .sort((a, b) => a.letterOrder - b.letterOrder); // 按 letterOrder 排序 section
+
+  return sortedGroups;
 };
 
 const getItemLayout = sectionListGetItemLayout({
@@ -84,7 +94,7 @@ export default function WordsScreen() {
 
       const transformedWords = words.map(word => ({
         ...word,
-        meaning_zh: word.meaning, // 直接使用 meaning，不用 i18n.language
+        meaning_zh: word.meaning, // 直接使用 meaning
       }));
 
       const groupedSections = groupWordsByLetter(transformedWords);
@@ -93,7 +103,7 @@ export default function WordsScreen() {
     };
 
     loadWords();
-  }, [level, t]); // 移除 i18n.language 依賴
+  }, [level, t]);
 
   return (
     <SafeAreaProvider>
@@ -105,7 +115,7 @@ export default function WordsScreen() {
           renderItem={({ item }) => (
             <View style={styles.item}>
               <Text style={styles.words}>{item.words}</Text>
-              <Text style={styles.meaning}>{item.meaning_zh || '無翻譯'}</Text> {/* 防止空值 */}
+              <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
               <View style={styles.row}>
                 <Text style={styles.reading}>{item.pron}</Text>
                 <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
@@ -116,7 +126,7 @@ export default function WordsScreen() {
           )}
           renderSectionHeader={({ section: { title } }) => (
             <View style={styles.headerContainer}>
-              <Text style={styles.header}>{title || '無標題'}</Text> {/* 防止空值 */}
+              <Text style={styles.header}>{title || 'No Header'}</Text>
             </View>
           )}
           stickySectionHeadersEnabled={false}
