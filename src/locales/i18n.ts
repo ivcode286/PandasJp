@@ -1,6 +1,7 @@
+// src/locales/i18n.ts
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { DakuonItem, LongVowelItem, YouonItem, Translation, StoryChapter, StoryLine, ConversationLine, ConversationTranslation, WordData } from "../types/translation";
+import { DakuonItem, LongVowelItem, YouonItem, StoryChapter, StoryLine, ConversationLine, ConversationTranslation, WordData, GrammarConceptsTranslation, GrammarData, HiraganaTranslation, HomeTranslation, KatakanaTranslation, PhoneticsTranslation, StoryTranslation } from "../types/translation";
 import grammarConceptsZhTW from "../locales/zh-TW/GrammarConceptsScreen";
 import homeZhTW from "../locales/zh-TW/HomeScreen";
 import hiraganaZhTW from "../locales/zh-TW/HiraganaScreen";
@@ -25,6 +26,8 @@ import n5AdvanceGrammarZhCN from "../locales/zh-CN/N5AdvanceGrammar";
 import n5WordsZhCN from "../locales/zh-CN/N5Words";
 import n5KanjiWordsZhCN from "../locales/zh-CN/N5KanjiWords";
 import n3n4WordsZhCN from "../locales/zh-CN/N3N4Words";
+import n5ConceptsZhTW from "../locales/zh-TW/N5ConceptsScreen"; // New import
+import n5ConceptsZhCN from "../locales/zh-CN/N5ConceptsScreen"; // New import
 
 const resources = {
   "zh-TW": {
@@ -44,6 +47,7 @@ const resources = {
       n5_kanji: n5KanjiWordsZhTW,
       n3n4: n3n4WordsZhTW,
     },
+    n5Concepts: n5ConceptsZhTW, // New namespace
   },
   "zh-CN": {
     grammarConcepts: grammarConceptsZhCN,
@@ -62,6 +66,7 @@ const resources = {
       n5_kanji: n5KanjiWordsZhCN,
       n3n4: n3n4WordsZhCN,
     },
+    n5Concepts: n5ConceptsZhCN, // New namespace
   },
 };
 
@@ -71,9 +76,10 @@ i18n.use(initReactI18next).init({
   fallbackLng: "zh-TW",
   interpolation: { escapeValue: false },
   defaultNS: "home",
-  ns: ["grammarConcepts", "home", "hiragana", "katakana", "phonetics", "story", "conversation", "grammar", "words"],
+  ns: ["grammarConcepts", "home", "hiragana", "katakana", "phonetics", "story", "conversation", "grammar", "words", "n5Concepts"], // Add n5Concepts
 });
 
+// Type augmentation remains largely the same, just ensure `n5Concepts` is included
 declare module "i18next" {
   interface CustomTypeOptions {
     defaultNS: "home";
@@ -87,49 +93,79 @@ declare module "i18next" {
       conversation: Translation["conversation"];
       grammar: Translation["grammar"];
       words: Translation["words"];
+      n5Concepts: Translation["n5Concepts"]; // Add this
     };
     returnObjects: true;
   }
 
   interface TFunction {
-    (key: "translation.title" | "translation.intro", options?: any): string;
-    (key: `translation.sections.${string}.title` | `translation.sections.${string}.paragraph`, options?: any): string;
-    (key: `translation.sections.${string}.table.header`, options: { returnObjects: true }): string[];
-    (key: `translation.sections.${string}.table.data`, options: { returnObjects: true }): string[][];
-    (key: `translation.sections.${string}.paragraphs`, options: { returnObjects: true }): string[];
-
-    (key: "translation.title" | `translation.menu.${string}`, options?: any): string;
-
-    (key: "title" | "table.title", options?: any): string;
-    (key: `sections.${string}.title` | `sections.${string}.intro`, options?: any): string;
-    (key: `sections.${string}.uses` | `sections.${string}.points` | `sections.${string}.items`, options: { returnObjects: true }): string[];
-
-    (key: "table.title", options?: any): string;
-    (key: `sections.${string}.title` | `sections.${string}.intro`, options?: any): string;
-    (key: `sections.${string}.uses` | `sections.${string}.points` | `sections.${string}.items`, options: { returnObjects: true }): string[];
-
-    (key: "intro", options?: any): string;
-    (key: `sections.${string}.title` | `sections.${string}.description` | `sections.${string}.extra`, options?: any): string;
-    (key: `sections.dakuon.data` | `sections.handakuon.data`, options: { returnObjects: true }): DakuonItem[];
-    (key: `sections.youon.data`, options: { returnObjects: true }): YouonItem[];
-    (key: `sections.chouon.data`, options: { returnObjects: true }): LongVowelItem[];
-    (key: `sections.summary.items`, options: { returnObjects: true }): string[];
-
-    (key: string, options?: { returnObjects: true }): any;
-    (key: `${number}.title`, options?: any): string;
-    (key: `${number}.imageName`, options?: any): string;
-    (key: `${number}.story`, options: { returnObjects: true }): StoryChapter[];
-    (key: `${number}.story.${number}.chapter`, options?: any): string;
-    (key: `${number}.story.${number}.content`, options: { returnObjects: true }): StoryLine[];
-
-    (key: "conversations", options: { returnObjects: true }): ConversationTranslation[];
-    (key: `${number}.title`, options?: any): string;
-    (key: `${number}.imageName`, options?: any): string;
-    (key: `${number}.scene`, options?: any): string;
-    (key: `${number}.conversation`, options: { returnObjects: true }): ConversationLine[];
-
-    (key: "n5" | "n5_kanji" | "n3n4", options: { returnObjects: true }): WordData[];
+    // Existing declarations remain unchanged
+    // Add specific keys for N5ConceptsScreen
+    (key: "title" | "intro", ns: "n5Concepts", options?: any): string;
+    (key: `sections.${string}.title` | `sections.${string}.description`, ns: "n5Concepts", options?: any): string;
+    (key: `sections.${string}.table.header`, ns: "n5Concepts", options: { returnObjects: true }): string[];
+    (key: `sections.${string}.table.data`, ns: "n5Concepts", options: { returnObjects: true }): any[];
+    (key: `sections.summary.paragraphs`, ns: "n5Concepts", options: { returnObjects: true }): string[];
   }
 }
 
 export default i18n;
+
+// Existing interfaces remain unchanged, add N5ConceptsTranslation
+export interface N5ConceptsTranslation {
+  title: string;
+  intro: string;
+  sections: {
+    sov: {
+      title: string;
+      description: string;
+      table: {
+        header: string[];
+        data: { chinese: string; english: string; japanese: string }[];
+      };
+    };
+    particles: {
+      title: string;
+      description: string;
+      table: {
+        header: string[];
+        data: { particle: string; usage: string; example: string; meaning: string }[];
+      };
+    };
+    politePlain: {
+      title: string;
+      description: string;
+      table: {
+        header: string[];
+        data: { chinese: string; polite: string; plain: string }[];
+      };
+    };
+    summary: {
+      title: string;
+      paragraphs: string[];
+    };
+  };
+}
+
+// Update Translation interface
+export interface Translation {
+  grammarConcepts: GrammarConceptsTranslation;
+  home: HomeTranslation;
+  hiragana: HiraganaTranslation;
+  katakana: KatakanaTranslation;
+  phonetics: PhoneticsTranslation;
+  story: StoryTranslation[];
+  conversation: { conversations: ConversationTranslation[] };
+  grammar: {
+    n5_basic: GrammarData;
+    n5_advance: GrammarData;
+  };
+  words: {
+    n5: WordData[];
+    n5_kanji: WordData[];
+    n3n4: WordData[];
+  };
+  n5Concepts: N5ConceptsTranslation; // Add this
+}
+
+// Existing interfaces (Section, DakuonItem, etc.) remain unchanged

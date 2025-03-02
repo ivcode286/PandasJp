@@ -1,156 +1,159 @@
-import useTextToSpeech from '@/hooks/useTextToSpeech';
-import React, { useEffect, useState } from 'react';
-import { View, Text, SectionList, StyleSheet, TouchableOpacity } from 'react-native';
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
-import { useRoute, RouteProp } from '@react-navigation/native';
-import { useTranslation } from 'react-i18next';
-import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
-import { Ionicons } from '@expo/vector-icons';
-import { LEVELS } from '@/src/utils/constants';
+// N5ConceptsScreen.tsx
+import React from "react";
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  useColorScheme,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useTranslation } from "react-i18next";
 
-type StackParamList = {
-  GrammarScreen: { level: string };
-};
+const sections = [
+  { key: "sov", sectionKey: "sov" },
+  { key: "particles", sectionKey: "particles" },
+  { key: "politePlain", sectionKey: "politePlain" },
+  { key: "summary", sectionKey: "summary" },
+];
 
-type GrammarScreenRouteProp = RouteProp<StackParamList, 'GrammarScreen'>;
+export default function N5ConceptsScreen() {
+  const { t } = useTranslation("n5Concepts");
+  const theme = useColorScheme();
+  const isDark = theme === "dark";
 
-interface TransformedSection {
-  pattern: string;
-  description: string;
-  examples: { sentence: string; translation: string }[];
-}
-
-interface TransformedChapter {
-  title: string;
-  data: TransformedSection[];
-}
-
-const SECTION_HEADER_HEIGHT = 70;
-const ITEM_MARGIN = 12;
-
-const getItemLayout = sectionListGetItemLayout({
-  getItemHeight: (_, index) => 80 + ITEM_MARGIN * index,
-  getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
-});
-
-const GrammarScreen: React.FC = () => {
-  const { speak } = useTextToSpeech();
-  const route = useRoute<GrammarScreenRouteProp>();
-  const { t, i18n } = useTranslation('grammar');
-  const level = route.params?.level;
-  const [data, setData] = useState<TransformedChapter[]>([]);
-
-  useEffect(() => {
-    const namespace = level === LEVELS.N5_ADVANCE_GRAMMAR ? 'n5_advance' : 'n5_basic';
-    const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
-
-    const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => ({
-      title: chapter.title[i18n.language],
-      data: chapter.sections.map((section: any) => ({
-        pattern: section.pattern[i18n.language],
-        description: section.description[i18n.language],
-        examples: section.examples.map((example: any) => ({
-          sentence: example.sentence[i18n.language],
-          translation: example.translation[i18n.language],
-        })),
-      })),
-    }));
-
-    setData(transformedData);
-  }, [level, i18n.language, t]);
+  const colors = {
+    background: isDark ? "#121212" : "#FFFFFF",
+    text: isDark ? "#E0E0E0" : "#333333",
+    border: isDark ? "#555" : "#ccc",
+  };
 
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
-        <SectionList
-          sections={data}
-          keyExtractor={(item, index) => item.pattern + index}
-          renderSectionHeader={({ section: { title } }) => (
-            <View style={styles.headerContainer}>
-              <Text style={styles.header}>{title}</Text>
-            </View>
-          )}
-          renderItem={({ item }) => (
-            <View style={styles.item}>
-              <Text style={styles.pattern}>{item.pattern}</Text>
-              <Text style={styles.description}>{item.description}</Text>
-              {item.examples.map((example, index) => (
-                <View key={index} style={styles.exampleContainer}>
-                  <View style={styles.sentenceRow}>
-                    <Text style={styles.sentence}>{example.sentence}</Text>
-                    <TouchableOpacity onPress={() => speak(example.sentence)} style={styles.iconSpacing}>
-                      <Ionicons name="volume-high" size={24} color="#ffcc00" />
-                    </TouchableOpacity>
-                  </View>
-                  <Text style={styles.translation}>{example.translation}</Text>
-                </View>
-              ))}
-            </View>
-          )}
-          stickySectionHeadersEnabled={false}
-          // @ts-ignore
-          getItemLayout={getItemLayout}
-          contentContainerStyle={{ paddingBottom: 300 }}
-        />
-      </SafeAreaView>
-    </SafeAreaProvider>
-  );
-};
+    <SafeAreaView
+      style={[styles.container, { backgroundColor: colors.background }]}
+    >
+      <FlatList
+        data={sections}
+        keyExtractor={(item) => item.key}
+        renderItem={({ item }) => (
+          <View style={styles.section}>
+            <Text style={[styles.sectionTitle, { color: colors.text }]}>
+              {t(`sections.${item.sectionKey}.title`)}
+            </Text>
 
+            {/* Description */}
+            {item.sectionKey !== "summary" && (
+              <Text style={[styles.description, { color: colors.text }]}>
+                {t(`sections.${item.sectionKey}.description`)}
+              </Text>
+            )}
+
+            {/* Table Rendering */}
+            {(item.sectionKey === "sov" ||
+              item.sectionKey === "particles" ||
+              item.sectionKey === "politePlain") && (
+              <>
+                <View
+                  style={[styles.tableHeaderRow, { borderColor: colors.border }]}
+                >
+                  {t(`sections.${item.sectionKey}.table.header`, {
+                    returnObjects: true,
+                  }).map((header, index) => (
+                    <Text
+                      key={index}
+                      style={[styles.tableHeaderCell, { color: colors.text }]}
+                    >
+                      {header}
+                    </Text>
+                  ))}
+                </View>
+                {t(`sections.${item.sectionKey}.table.data`, {
+                  returnObjects: true,
+                }).map((row, index) => (
+                  <View
+                    key={index}
+                    style={[styles.tableRow, { borderColor: colors.border }]}
+                  >
+                    {Object.values(row).map((cell, cellIndex) => (
+                      <Text
+                        key={cellIndex}
+                        style={[styles.tableCell, { color: colors.text }]}
+                      >
+                        {cell}
+                      </Text>
+                    ))}
+                  </View>
+                ))}
+              </>
+            )}
+
+            {/* Summary Paragraphs */}
+            {item.sectionKey === "summary" && (
+              <>
+                {t("sections.summary.paragraphs", { returnObjects: true }).map(
+                  (paragraph, index) => (
+                    <Text
+                      key={index}
+                      style={[
+                        styles.description,
+                        { color: colors.text, marginBottom: 4 },
+                      ]}
+                    >
+                      {paragraph}
+                    </Text>
+                  )
+                )}
+              </>
+            )}
+          </View>
+        )}
+      />
+    </SafeAreaView>
+  );
+}
+
+// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#121212',
+    paddingBottom: 80,
   },
-  item: {
-    backgroundColor: '#1e1e1e',
-    padding: 16,
-    borderRadius: 8,
-    marginBottom: ITEM_MARGIN,
+  section: {
+    marginBottom: 20,
   },
-  headerContainer: {
-    height: SECTION_HEADER_HEIGHT,
-    justifyContent: 'center',
-    backgroundColor: '#2a2a2a',
-    paddingVertical: 15,
-    paddingLeft: 15,
-  },
-  header: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    color: '#ffcc00',
-  },
-  pattern: {
+  sectionTitle: {
     fontSize: 20,
-    fontWeight: 'bold',
-    color: '#ffffff',
+    fontWeight: "bold",
+    marginBottom: 10,
   },
   description: {
-    fontSize: 18,
-    color: '#b0b0b0',
-  },
-  exampleContainer: {
-    marginTop: 10,
-  },
-  sentenceRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  sentence: {
-    fontSize: 18,
-    color: '#ffffff',
-    flexShrink: 1,
-  },
-  translation: {
     fontSize: 16,
-    color: '#b0b0b0',
-    marginTop: 4,
+    lineHeight: 22,
+    marginBottom: 8,
   },
-  iconSpacing: {
-    marginLeft: 10,
+  tableHeaderRow: {
+    flexDirection: "row",
+    borderWidth: 1,
+    borderColor: "#ccc",
+    backgroundColor: "#444",
+  },
+  tableHeaderCell: {
+    flex: 1,
+    color: "#fff",
+    fontWeight: "bold",
+    padding: 8,
+    textAlign: "center",
+  },
+  tableRow: {
+    flexDirection: "row",
+    borderWidth: 1,
+    borderTopWidth: 0,
+  },
+  tableCell: {
+    flex: 1,
+    fontSize: 14,
+    padding: 8,
+    textAlign: "center",
   },
 });
-
-export default GrammarScreen;

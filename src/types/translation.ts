@@ -1,3 +1,4 @@
+// types/translation.ts
 export interface Section {
   title: string;
   paragraph?: string;
@@ -143,6 +144,42 @@ export interface PhoneticsTranslation {
   };
 }
 
+// Add N5ConceptsTranslation
+export interface N5ConceptsTranslation {
+  title: string;
+  intro: string;
+  sections: {
+    sov: {
+      title: string;
+      description: string;
+      table: {
+        header: string[];
+        data: { chinese: string; english: string; japanese: string }[];
+      };
+    };
+    particles: {
+      title: string;
+      description: string;
+      table: {
+        header: string[];
+        data: { particle: string; usage: string; example: string; meaning: string }[];
+      };
+    };
+    politePlain: {
+      title: string;
+      description: string;
+      table: {
+        header: string[];
+        data: { chinese: string; polite: string; plain: string }[];
+      };
+    };
+    summary: {
+      title: string;
+      paragraphs: string[];
+    };
+  };
+}
+
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
@@ -160,4 +197,5 @@ export interface Translation {
     n5_kanji: WordData[];
     n3n4: WordData[];
   };
+  n5Concepts: N5ConceptsTranslation; // Add this
 }
