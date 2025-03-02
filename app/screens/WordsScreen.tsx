@@ -1,6 +1,5 @@
-import { useRoute } from '@react-navigation/native'; // ✅ 確保 `useRoute()` 被正確導入
+import { useRoute } from '@react-navigation/native';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
-import { fetchWords } from '@/src/utils/fetchWords';
 import { Ionicons } from '@expo/vector-icons';
 import React, { useEffect, useState } from 'react';
 import {
@@ -12,7 +11,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
+import { LEVELS } from '@/src/utils/constants';
 
 export const sectionListRef = React.createRef<SectionList<any>>();
 
@@ -57,27 +58,43 @@ export const scrollToSection = (title: string): void => {
 };
 
 export default function WordsScreen() {
-  const route = useRoute(); // ✅ 正確使用 `useRoute()`
-  const { level } = route.params as { level: string }; // 取得 level 參數
-
+  const route = useRoute();
+  const { t, i18n } = useTranslation('words');
+  const { level } = route.params as { level: string };
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
 
   useEffect(() => {
     console.log(`Current Level: ${level}`);
-    const loadWords = async () => {
-      const words = await fetchWords(level);
+    const loadWords = () => {
+      let key: string;
+      if (level === LEVELS.N5) {
+        key = 'n5';
+      } else if (level === LEVELS.N5_KANJI) {
+        key = 'n5_kanji';
+      } else {
+        key = 'n3n4';
+      }
+
+      const words = t(key, { returnObjects: true });
       if (!Array.isArray(words)) {
-        console.error("fetchWords did not return an array:", words);
+        console.error(`t('${key}') did not return an array:`, words);
         return;
       }
-      const groupedSections = groupWordsByLetter(words);
+
+      const transformedWords = words.map(word => ({
+        ...word,
+        meaning_zh: word.meaning[i18n.language],
+      }));
+
+      const groupedSections = groupWordsByLetter(transformedWords);
       setSections(groupedSections);
       globalSections = groupedSections;
     };
+
     loadWords();
-  }, [level]);
- 
+  }, [level, i18n.language, t]);
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -87,7 +104,7 @@ export default function WordsScreen() {
           keyExtractor={(item, index) => item.wordId + index.toString()}
           renderItem={({ item }) => (
             <View style={styles.item}>
-              <Text style={styles.words}>{item.words} </Text>
+              <Text style={styles.words}>{item.words}</Text>
               <Text style={styles.meaning}>{item.meaning_zh}</Text>
               <View style={styles.row}>
                 <Text style={styles.reading}>{item.pron}</Text>

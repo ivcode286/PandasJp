@@ -7,6 +7,8 @@ import { useFonts } from 'expo-font';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import React from 'react';
 import MyTabs from './navigation/TabNavigator';
+import "../src/locales/i18n";
+
 
 
 

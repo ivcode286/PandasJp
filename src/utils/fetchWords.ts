@@ -1,18 +1,14 @@
-import n3n4WordsData from '../words.json';
-import n5WordsData from '../n5_words.json';
-import n5KanjiWordsData from '../n5_kanji.json';
 import { LEVELS } from './constants';
+import { useTranslation } from 'react-i18next';
 
-export const fetchWords = async (level: string) => {
+export const fetchWords = (level: string, t: any) => {
   try {
     if (level === LEVELS.N5) {
-      return n5WordsData;
-    }
-    else if (level === LEVELS.N5_KANJI) {
-      return n5KanjiWordsData;
-    }
-    else {
-      return n3n4WordsData;
+      return t('words.n5', { returnObjects: true });
+    } else if (level === LEVELS.N5_KANJI) {
+      return t('words.n5_kanji', { returnObjects: true });
+    } else {
+      return t('words.n3n4', { returnObjects: true });
     }
   } catch (error) {
     console.error('Error loading words:', error);

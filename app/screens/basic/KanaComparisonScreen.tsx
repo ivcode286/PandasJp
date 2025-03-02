@@ -25,7 +25,7 @@ const KanaComparisonScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: isDark ? '#1a1a1a' : '#fff', alignItems: 'center' }}>
       <Text style={{ fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginVertical: 10, color: isDark ? '#fff' : '#000' }}>
-        平假名 & 片假名 對照表
+        平假名 & 片假名
       </Text>
       <ScrollView contentContainerStyle={{ paddingBottom: 60 }}>
         {KANA_LIST.map((row, rowIndex) => (

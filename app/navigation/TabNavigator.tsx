@@ -21,8 +21,8 @@ import WordsScreenWithDrawer from './WordsScreenWithDrawer';
 import N5ConceptsScreen from '../screens/basic/N5ConceptsScreen';
 import N5ConversationMenu from '../screens/basic/N5ConversationMenu';
 import GrammarMenu from '../screens/basic/GrammarMenu';
-import GrammarConceptsScreen from '../screens/basic/GrammarConecptsScreen';
-import GrammarConecptsScreen from '../screens/basic/GrammarConecptsScreen';
+import GrammarConceptsScreen from '../screens/basic/GrammarConceptsScreen';
+
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();

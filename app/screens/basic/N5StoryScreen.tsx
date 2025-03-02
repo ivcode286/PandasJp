@@ -2,23 +2,31 @@ import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
-import storiesData from '../../../src/n5_story.json';
 import { Ionicons } from '@expo/vector-icons';
-import { getImage } from '../../../src/utils/imageLoader'; // ✅ 匯入圖片載入函數
+import { getImage } from '../../../src/utils/imageLoader';
+import { useTranslation } from 'react-i18next';
 
-// 定義 StackParamList
+// Define StackParamList
 type StackParamList = {
   N5StoryScreen: { storyTitle: string };
 };
 
-// 使用 RouteProp 讓 TypeScript 正確推導 `route.params`
 type StoryScreenRouteProp = RouteProp<StackParamList, 'N5StoryScreen'>;
 
 export default function N5StoryScreen() {
   const route = useRoute<StoryScreenRouteProp>();
+  const { t } = useTranslation('story'); // Use the "story" namespace
+  const { speak } = useTextToSpeech();
+
+  // Fetch all stories from the "stories" key
+  const stories = t('stories', { returnObjects: true }) as Array<{
+    title: string;
+    imageName: string;
+    story: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
+  }>;
+
   const storyTitle = route.params?.storyTitle;
-  const story = storiesData.stories.find((s) => s.title === storyTitle);
-  const { speak } = useTextToSpeech(); // ✅ 使用 Text-to-Speech
+  const story = stories.find((s) => s.title === storyTitle);
 
   if (!story) {
     return (
@@ -30,11 +38,10 @@ export default function N5StoryScreen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 80 }}>
-      {/* 顯示封面圖片 */}
       <View style={styles.coverContainer}>
         <Image source={getImage(story.imageName)} style={styles.coverImage} />
       </View>
-      <Text style={styles.title}>{storyTitle}</Text>
+      <Text style={styles.title}>{story.title}</Text>
       {story.story.map((chapter, chapterIndex) => (
         <View key={chapterIndex} style={styles.chapterContainer}>
           <Text style={styles.chapterTitle}>{chapter.chapter}</Text>
@@ -44,9 +51,8 @@ export default function N5StoryScreen() {
                 <Text style={styles.sentence}>{line.sentence}</Text>
                 <TouchableOpacity
                   onPress={() => {
-                    // 移除「角色名稱：」，只保留對話內容
-                    const spokenText = line.sentence.includes("：")
-                      ? line.sentence.split("：")[1].trim()
+                    const spokenText = line.sentence.includes('：')
+                      ? line.sentence.split('：')[1].trim()
                       : line.sentence;
                     speak(spokenText);
                   }}
@@ -60,17 +66,16 @@ export default function N5StoryScreen() {
           ))}
         </View>
       ))}
-
-
     </ScrollView>
   );
 }
 
+// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#121212', // 深色模式背景
+    backgroundColor: '#121212',
   },
   title: {
     fontSize: 24,
@@ -125,21 +130,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 20,
   },
-
-  // ✅ 新增封面圖片樣式
   coverContainer: {
     marginTop: 0,
     alignItems: 'center',
   },
-  coverTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#ffcc00',
-    marginBottom: 10,
-  },
   coverImage: {
-    width: 400, // ✅ 設定寬度
-    height: 400, // ✅ 設定高度，確保比例
+    width: 400,
+    height: 400,
     resizeMode: 'cover',
     borderRadius: 12,
   },
