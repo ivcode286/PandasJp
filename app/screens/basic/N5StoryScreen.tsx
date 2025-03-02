@@ -4,21 +4,29 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'rea
 import { useRoute, RouteProp } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { getImage } from '../../../src/utils/imageLoader';
-import { storiesData } from '../../../src/locales/zh-TW/N5StoryScreen'; // 從 N5StoryScreen.ts 匯入資料
+import { useTranslation } from 'react-i18next';
 
-// 定義 StackParamList
+// Define StackParamList
 type StackParamList = {
   N5StoryScreen: { storyTitle: string };
 };
 
-// 使用 RouteProp 讓 TypeScript 正確推導 `route.params`
 type StoryScreenRouteProp = RouteProp<StackParamList, 'N5StoryScreen'>;
 
 export default function N5StoryScreen() {
   const route = useRoute<StoryScreenRouteProp>();
-  const storyTitle = route.params?.storyTitle;
-  const story = storiesData.find((s) => s.title === storyTitle);
+  const { t } = useTranslation('story'); // Use the "story" namespace
   const { speak } = useTextToSpeech();
+
+  // Fetch all stories from the "stories" key
+  const stories = t('stories', { returnObjects: true }) as Array<{
+    title: string;
+    imageName: string;
+    story: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
+  }>;
+
+  const storyTitle = route.params?.storyTitle;
+  const story = stories.find((s) => s.title === storyTitle);
 
   if (!story) {
     return (
@@ -33,7 +41,7 @@ export default function N5StoryScreen() {
       <View style={styles.coverContainer}>
         <Image source={getImage(story.imageName)} style={styles.coverImage} />
       </View>
-      <Text style={styles.title}>{storyTitle}</Text>
+      <Text style={styles.title}>{story.title}</Text>
       {story.story.map((chapter, chapterIndex) => (
         <View key={chapterIndex} style={styles.chapterContainer}>
           <Text style={styles.chapterTitle}>{chapter.chapter}</Text>
@@ -43,8 +51,8 @@ export default function N5StoryScreen() {
                 <Text style={styles.sentence}>{line.sentence}</Text>
                 <TouchableOpacity
                   onPress={() => {
-                    const spokenText = line.sentence.includes("：")
-                      ? line.sentence.split("：")[1].trim()
+                    const spokenText = line.sentence.includes('：')
+                      ? line.sentence.split('：')[1].trim()
                       : line.sentence;
                     speak(spokenText);
                   }}
@@ -62,6 +70,7 @@ export default function N5StoryScreen() {
   );
 }
 
+// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,

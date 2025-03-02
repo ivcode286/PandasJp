@@ -15,7 +15,6 @@ export interface Section {
   items?: string[];
 }
 
-// Define DakuonItem (for dakuon and handakuon data)
 export type DakuonItem = {
   row: string;
   a: string;
@@ -25,26 +24,40 @@ export type DakuonItem = {
   o: string;
 };
 
-// Define LongVowelItem (for chouon data)
 export type LongVowelItem = {
   type: string;
   mark: string;
   example: string;
 };
 
-// Define YouonItem (for youon data)
 export type YouonItem = {
   combo: string;
   romaji: string;
   example: string;
 };
 
+// Define story-related types
+export interface StoryLine {
+  sentence: string;
+  translation: string;
+}
+
+export interface StoryChapter {
+  chapter: string;
+  content: StoryLine[];
+}
+
+export interface StoryTranslation {
+  title: string;
+  imageName: string;
+  story: StoryChapter[];
+}
+
+// Existing interfaces
 export interface GrammarConceptsTranslation {
   title: string;
   intro: string;
-  sections: {
-    [key: string]: Section;
-  };
+  sections: { [key: string]: Section };
 }
 
 export interface HomeTranslation {
@@ -67,61 +80,34 @@ export interface HomeTranslation {
 
 export interface HiraganaTranslation {
   title: string;
-  table: {
-    title: string;
-  };
-  sections: {
-    [key: string]: Section;
-  };
+  table: { title: string };
+  sections: { [key: string]: Section };
 }
 
 export interface KatakanaTranslation {
-  table: {
-    title: string;
-  };
-  sections: {
-    [key: string]: Section;
-  };
+  table: { title: string };
+  sections: { [key: string]: Section };
 }
 
 export interface PhoneticsTranslation {
   intro: string;
   sections: {
     sei: Section;
-    dakuon: {
-      title: string;
-      description: string;
-      data: DakuonItem[]; // Use DakuonItem here
-      extra: string;
-    };
-    handakuon: {
-      title: string;
-      description: string;
-      data: DakuonItem[]; // Use DakuonItem here
-      extra: string;
-    };
+    dakuon: { title: string; description: string; data: DakuonItem[]; extra: string };
+    handakuon: { title: string; description: string; data: DakuonItem[]; extra: string };
     sokuon: Section;
-    chouon: {
-      title: string;
-      description: string;
-      data: LongVowelItem[]; // Use LongVowelItem here
-    };
-    youon: {
-      title: string;
-      description: string;
-      data: YouonItem[]; // Use YouonItem here
-    };
-    summary: {
-      title: string;
-      items: string[];
-    };
+    chouon: { title: string; description: string; data: LongVowelItem[] };
+    youon: { title: string; description: string; data: YouonItem[] };
+    summary: { title: string; items: string[] };
   };
 }
 
+// Add StoryTranslation to the Translation interface
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
   hiragana: HiraganaTranslation;
   katakana: KatakanaTranslation;
   phonetics: PhoneticsTranslation;
+  story: StoryTranslation[];
 }
