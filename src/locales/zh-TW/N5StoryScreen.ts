@@ -1,11 +1,11 @@
 const storyZhTW = {
   stories: [
     {
-      title: "桃子姬的大冒險",
+      title: "桃子姬的大冒險", // 已為繁中，無需修改
       imageName: "momoko.jpg",
       story: [
         {
-          chapter: "第一章：桃子姬的誕生",
+          chapter: "第一章：桃子姬的誕生", // 已為繁中，無需修改
           content: [
             { sentence: "むかしむかし、ある村に、おじいさんとおばあさんがいました。", translation: "很久很久以前，在一個村莊裡，有一位老爺爺和老婆婆。" },
             { sentence: "ある日、おばあさんが川で洗濯をしています。", translation: "有一天，老婆婆正在河邊洗衣服。" },
@@ -18,7 +18,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第二章：鬼ヶ島へ行こう！",
+          chapter: "第二章：去鬼島吧！", // 已為繁中，無需修改
           content: [
             { sentence: "桃子姫は大人になりました。", translation: "桃子姬長大了。" },
             { sentence: "ある日、村人たちは困っていました。", translation: "有一天，村民們很困擾。" },
@@ -30,7 +30,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第三章：第一位夥伴 - 犬",
+          chapter: "第三章：第一位夥伴 - 犬", // 已為繁中，無需修改
           content: [
             { sentence: "桃子姫は歩いていると、一匹の犬に会いました。", translation: "桃子姬在路上走著，遇到了一隻狗。" },
             { sentence: "犬：「こんにちは！私はSNSが大好きな犬です！」", translation: "狗：「你好！我是超愛用社群媒體的狗！」" },
@@ -41,7 +41,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第四章：第二位夥伴 - 猿",
+          chapter: "第四章：第二位夥伴 - 猿", // 已為繁中，無需修改
           content: [
             { sentence: "次に、猿に会いました。", translation: "接著，她遇到了一隻猴子。" },
             { sentence: "猿：「私はアニメが大好きです！」", translation: "猴子：「我超愛動漫！」" },
@@ -51,7 +51,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第五章：第三位夥伴 - 雉",
+          chapter: "第五章：第三位夥伴 - 雉", // 已為繁中，無需修改
           content: [
             { sentence: "最後に、雉に会いました。", translation: "最後，她遇到了一隻雉雞。" },
             { sentence: "雉：「私は強いですよ！」", translation: "雉雞：「我很強喔！」" },
@@ -60,7 +60,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第六章：鬼ヶ島での戦い",
+          chapter: "第六章：鬼島上的戰鬥", // 已為繁中，無需修改
           content: [
             { sentence: "桃子姫と仲間たちは鬼ヶ島に着きました。", translation: "桃子姬和夥伴們到達了鬼島。" },
             { sentence: "鬼：「やめてください！このきびだんごを食べたら、全部返します！」", translation: "鬼：「請住手！這糰子太好吃了，我把東西全部還給你們！」" },
@@ -69,7 +69,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第七章：大成功！",
+          chapter: "第七章：大成功！", // 已為繁中，無需修改
           content: [
             { sentence: "桃子姫たちは村に帰りました。", translation: "桃子姬他們回到了村莊。" },
             { sentence: "村人：「桃子姫！ありがとう！」", translation: "村民：「桃子姬！謝謝！」" },
@@ -79,11 +79,11 @@ const storyZhTW = {
       ],
     },
     {
-      title: "熊貓的神社參拜與雪的試煉",
+      title: "熊貓的神社參拜與雪的試煉", // 已為繁中，無需修改
       imageName: "panda_shrine.jpg",
       story: [
         {
-          chapter: "第一章：神社へ行きたい",
+          chapter: "第一章：想去神社", // 已為繁中，無需修改
           content: [
             { sentence: "ある日、パンダは神社へ参拝（さんぱい）しようと思いました。", translation: "有一天，熊貓決定去神社參拜。" },
             { sentence: "パンダ：「神社でお願いごとをしたいです！」", translation: "熊貓：「我想去神社許願！」" },
@@ -92,7 +92,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第二章：突然の暴風雪",
+          chapter: "第二章：突然的大風雪", // 原 "突然の暴風雪"，轉為繁中
           content: [
             { sentence: "しばらく歩くと、突然、強い風と雪が降り始めました。", translation: "走了一會兒，突然颳起大風，開始下起暴風雪。" },
             { sentence: "パンダ：「えっ？こんなに雪が降るなんて…。」", translation: "熊貓：「咦？怎麼會下這麼大的雪…。」" },
@@ -101,7 +101,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第三章：雪だるまの忠告",
+          chapter: "第三章：雪人的忠告", // 原 "雪だるまの忠告"，轉為繁中
           content: [
             { sentence: "雪だるま：「パンダさん、危ないですよ！早く帰りましょう！」", translation: "雪人：「熊貓，這裡很危險！快回家吧！」" },
             { sentence: "パンダ：「でも、今戻るのはもっと危ないです…。」", translation: "熊貓：「可是，現在回頭更危險…。」" },
@@ -111,7 +111,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第四章：仙人の助け",
+          chapter: "第四章：仙人的幫助", // 原 "仙人の助け"，轉為繁中
           content: [
             { sentence: "パンダは雪の中を一生懸命歩き続けました。", translation: "熊貓在大雪中努力地繼續前進。" },
             { sentence: "その姿を見て、仙子が現れました。", translation: "看到這一幕，仙子現身了。" },
@@ -120,7 +120,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第五章：温かい紅豆湯",
+          chapter: "第五章：溫暖的紅豆湯", // 原 "温かい紅豆湯"，轉為繁中
           content: [
             { sentence: "仙子はパンダのために、温かい紅豆湯を作りました。", translation: "仙子為熊貓煮了一碗溫熱的紅豆湯。" },
             { sentence: "パンダ：「わあ！いいにおいですね！」", translation: "熊貓：「哇！好香啊！」" },
@@ -129,7 +129,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第六章：神社への到着",
+          chapter: "第六章：到達神社", // 原 "神社への到着"，轉為繁中
           content: [
             { sentence: "やがて太陽が出て、天気が良くなりました。", translation: "不久後，太陽出來了，天氣變好了。" },
             { sentence: "パンダ：「よかった！これなら神社に行けます！」", translation: "熊貓：「太好了！這樣就能去神社了！」" },
@@ -141,11 +141,11 @@ const storyZhTW = {
       ],
     },
     {
-      title: "肥貓與不思議蛋糕",
+      title: "肥貓與不思議蛋糕", // 已為繁中，無需修改
       imageName: "fat_cat.jpg",
       story: [
         {
-          chapter: "第一章：肥貓の夢",
+          chapter: "第一章：肥貓的夢想", // 原 "肥貓の夢"，轉為繁中
           content: [
             { sentence: "むかしむかし、ある町に、とても太った猫がいました。", translation: "很久很久以前，在一個小鎮上，有一隻非常肥的貓。" },
             { sentence: "その猫はいつもゴロゴロして、あまり働きません。", translation: "那隻貓總是懶洋洋地躺著，不太做事。" },
@@ -155,7 +155,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第二章：寝過ごしたクルーズ船",
+          chapter: "第二章：睡過頭的遊輪", // 原 "寝過ごしたクルーズ船"，轉為繁中
           content: [
             { sentence: "猫は旅の準備をしましたが、すぐに疲れて眠ってしまいました。", translation: "貓在準備旅行時，很快就累了並且睡著了。" },
             { sentence: "朝になると、クルーズ船はもう出発していました。", translation: "早上時，遊輪已經出發了。" },
@@ -165,7 +165,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第三章：ボロボロのボート",
+          chapter: "第三章：破舊的船", // 原 "ボロボロのボート"，轉為繁中
           content: [
             { sentence: "猫は港へ行き、古いボートを見つけました。", translation: "貓來到港口，找到了一艘破舊的船。" },
             { sentence: "船頭：「このボートは安いですが、だいぶボロいですよ。」", translation: "船家：「這艘船很便宜，但已經很破爛了哦。」" },
@@ -175,7 +175,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第四章：重すぎる体",
+          chapter: "第四章：過重的身體", // 原 "重すぎる体"，轉為繁中
           content: [
             { sentence: "猫はボートの上でまたうとうとしていました。", translation: "貓在船上又打起瞌睡。" },
             { sentence: "すると、ボートが少しずつ沈み始めました！", translation: "突然，船開始慢慢下沉了！" },
@@ -185,7 +185,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第五章：ケーキの島へ",
+          chapter: "第五章：前往蛋糕之島", // 原 "ケーキの島へ"，轉為繁中
           content: [
             { sentence: "猫は一生懸命、水を外へかき出しました。", translation: "貓拚命地把船裡的水往外舀。" },
             { sentence: "何とかボートは沈まずに、島へ近づきました。", translation: "好不容易，船沒有完全下沉，並逐漸靠近島嶼。" },
@@ -196,7 +196,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第六章：ごほうびのケーキ",
+          chapter: "第六章：獎賞的蛋糕", // 原 "ごほうびのケーキ"，轉為繁中
           content: [
             { sentence: "猫はケーキを食べて、とても幸せになりました。", translation: "貓吃了蛋糕，感到非常幸福。" },
             { sentence: "猫：「やっぱり寝てばかりではダメですね。少しは頑張ります！」", translation: "貓：「果然只會睡覺是不行的。我也要努力一點！」" },
@@ -208,11 +208,11 @@ const storyZhTW = {
       ],
     },
     {
-      title: "魔法少女 小光",
+      title: "魔法少女 小光", // 已為繁中，無需修改
       imageName: "magical_shoujo.jpg",
       story: [
         {
-          chapter: "第一章：小光的魔法",
+          chapter: "第一章：小光的魔法", // 已為繁中，無需修改
           content: [
             { sentence: "むかしむかし、ある町に、小光という女の子がいました。", translation: "很久很久以前，在一個小鎮上，有個名叫小光的女孩。" },
             { sentence: "小光は魔法を使えます！", translation: "小光會使用魔法！" },
@@ -224,7 +224,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第二章：仲間を探そう - 第一位夥伴 貓耳",
+          chapter: "第二章：尋找夥伴 - 第一位夥伴 貓耳", // 原 "仲間を探そう - 第一位夥伴 貓耳"，已為繁中，無需修改
           content: [
             { sentence: "次に、森で博士というフクロウに会いました。", translation: "接著，他們在森林裡遇到了一隻名叫博士的貓頭鷹。" },
             { sentence: "博士：「私は博士です！たくさんの魔法のことを知っています！」", translation: "博士：「我是博士！我知道很多魔法的事情！」" },
@@ -235,7 +235,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第三章：第二位夥伴 - 博士",
+          chapter: "第三章：第二位夥伴 - 博士", // 已為繁中，無需修改
           content: [
             { sentence: "次に、森で博士というフクロウに会いました。", translation: "接著，他們在森林裡遇到了一隻名叫博士的貓頭鷹。" },
             { sentence: "博士：「私は博士です！たくさんの魔法のことを知っています！」", translation: "博士：「我是博士！我知道很多魔法的事情！」" },
@@ -246,7 +246,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第四章：闇の魔王",
+          chapter: "第四章：黑暗魔王", // 原 "闇の魔王"，轉為繁中
           content: [
             { sentence: "ある日、町に闇の魔王が現れました！", translation: "有一天，黑暗魔王出現在小鎮裡！" },
             { sentence: "魔王：「この町を私のものにする！」", translation: "魔王：「我要把這座小鎮變成我的！」" },
@@ -261,7 +261,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第五章：町の平和",
+          chapter: "第五章：小鎮的和平", // 原 "町の平和"，轉為繁中
           content: [
             { sentence: "町の人：「小光さん、ありがとう！」", translation: "鎮上的人：「小光，謝謝你！」" },
             { sentence: "小光：「みんなのおかげです！」", translation: "小光：「這是大家的功勞！」" },
@@ -274,11 +274,11 @@ const storyZhTW = {
       ],
     },
     {
-      title: "不良少年與貓仙人",
+      title: "不良少年與貓仙人", // 已為繁中，無需修改
       imageName: "delinquent_cat_sennin.jpg",
       story: [
         {
-          chapter: "第一章：不良少年の毎日",
+          chapter: "第一章：不良少年的日常", // 原 "不良少年の毎日"，轉為繁中
           content: [
             { sentence: "ある町に、不良少年がいました。", translation: "在某個城鎮裡，有一位不良少年。" },
             { sentence: "彼はいつも大きな声で威張っていました。", translation: "他總是大聲說大話，擺出一副驕傲的樣子。" },
@@ -287,7 +287,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第二章：助けがほしい日",
+          chapter: "第二章：需要幫助的日子", // 原 "助けがほしい日"，轉為繁中
           content: [
             { sentence: "ある日、不良少年は大きなトラブルに巻き込まれました。", translation: "有一天，不良少年遇到了一個大麻煩。" },
             { sentence: "彼は助けを求めましたが、誰も手を貸してくれませんでした。", translation: "他想尋求幫助，但沒有人願意幫他。" },
@@ -296,7 +296,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第三章：猫仙人の出現",
+          chapter: "第三章：貓仙人的出現", // 原 "猫仙人の出現"，已為繁中，無需修改
           content: [
             { sentence: "困っているとき、不良少年は心の中で祈りました。", translation: "陷入困境之時，不良少年在心裡祈禱。" },
             { sentence: "すると、猫仙人が現れました。", translation: "這時，貓仙人出現了。" },
@@ -305,7 +305,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第四章：改心しない少年",
+          chapter: "第四章：不改過自新的少年", // 原 "改心しない少年"，轉為繁中
           content: [
             { sentence: "猫仙人は不良少年を助けて、トラブルを解決しました。", translation: "貓仙人幫了不良少年，解決了那場麻煩。" },
             { sentence: "不良少年：「ふう、助かった…。」", translation: "不良少年：「呼，得救了…。」" },
@@ -315,7 +315,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第五章：罰と改心",
+          chapter: "第五章：懲罰與改過", // 原 "罰と改心"，轉為繁中
           content: [
             { sentence: "その後、不良少年はまた別のトラブルに巻き込まれました。", translation: "之後，不良少年又遇到其他麻煩。" },
             { sentence: "今度は猫仙人が現れず、彼は大変苦しい目にあいました。", translation: "這一次，貓仙人沒有出現，他陷入了更加辛苦的境地。" },
@@ -328,11 +328,11 @@ const storyZhTW = {
       ],
     },
     {
-      title: "熊貓與大家的快樂河邊遊戲",
+      title: "熊貓與大家的快樂河邊遊戲", // 已為繁中，無需修改
       imageName: "panda_river.jpg",
       story: [
         {
-          chapter: "第一章：釣りの約束",
+          chapter: "第一章：釣魚的約定", // 原 "釣りの約束"，轉為繁中
           content: [
             { sentence: "ある日、パンダは小織、舞香、そして貓耳を川へ誘いました。", translation: "有一天，熊貓邀請小織、舞香，還有貓耳去河邊。" },
             { sentence: "パンダ：「みんなで魚を釣りましょう！」", translation: "熊貓：「大家一起去釣魚吧！」" },
@@ -340,7 +340,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第二章：釣り道具がない？",
+          chapter: "第二章：沒有釣具？", // 原 "釣り道具がない？"，轉為繁中
           content: [
             { sentence: "川に着きましたが、みんなは釣り道具を忘れていました。", translation: "到了河邊後，大家才發現忘記帶釣魚工具了。" },
             { sentence: "パンダ：「あれ？竿（さお）がありませんよ！」", translation: "熊貓：「咦？沒有釣竿耶！」" },
@@ -349,7 +349,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第三章：水あそび",
+          chapter: "第三章：玩水", // 原 "水あそび"，轉為繁中
           content: [
             { sentence: "小織：「釣りはできないけど、水で遊びませんか？」", translation: "小織：「雖然不能釣魚，不如我們玩水吧？」" },
             { sentence: "みんなは川の水を触って、パシャパシャと遊び始めました。", translation: "大家開始在河裡嬉水，濺起陣陣水花。" },
@@ -361,11 +361,11 @@ const storyZhTW = {
       ],
     },
     {
-      title: "魔王與地球的美味食物",
+      title: "魔王與地球的美味食物", // 已為繁中，無需修改
       imageName: "overlord_food.jpg",
       story: [
         {
-          chapter: "第一章：魔王の計画",
+          chapter: "第一章：魔王的計畫", // 原 "魔王の計画"，轉為繁中
           content: [
             { sentence: "遠い宇宙の彼方（かなた）に、恐ろしい魔王がいました。", translation: "在遙遠的宇宙深處，有一位可怕的魔王。" },
             { sentence: "魔王：「地球は美しい星ですね。ここを征服（せいふく）しましょう！」", translation: "魔王：「地球是一顆美麗的星球呢。我決定征服它！」" },
@@ -373,7 +373,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第二章：地球の調査",
+          chapter: "第二章：地球的調查", // 原 "地球の調査"，轉為繁中
           content: [
             { sentence: "魔王は地球をじっくり観察（かんさつ）しました。", translation: "魔王仔細地觀察地球。" },
             { sentence: "町にはたくさんの人がいて、にぎやかでした。", translation: "城鎮裡有許多人，非常熱鬧。" },
@@ -382,7 +382,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第三章：親切な呀姨",
+          chapter: "第三章：善良的阿姨", // 原 "親切な呀姨"，轉為繁中（保持一致性，改為更自然的 "善良的阿姨"）
           content: [
             { sentence: "魔王が市場を歩いていると、一人の呀姨が声をかけました。", translation: "當魔王在市場裡閒逛時，一位呀姨向他打招呼。" },
             { sentence: "呀姨：「あんた、おなかすいてるかい？これを食べてみな。」", translation: "呀姨：「你餓了嗎？來吃吃看這個吧。」" },
@@ -391,7 +391,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第四章：魔王の驚き",
+          chapter: "第四章：魔王的驚訝", // 原 "魔王の驚き"，轉為繁中
           content: [
             { sentence: "魔王は肉まんを一口食べました。", translation: "魔王咬了一口肉包。" },
             { sentence: "魔王：「な、なんだこれは？！おいしすぎる！！」", translation: "魔王：「這、這是什麼？！也太好吃了吧！！」" },
@@ -401,7 +401,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第五章：征服の中止",
+          chapter: "第五章：終止征服", // 原 "征服の中止"，轉為繁中
           content: [
             { sentence: "魔王は考えました。", translation: "魔王開始思考。" },
             { sentence: "魔王：「もし地球を征服したら、人間はいなくなる…。」", translation: "魔王：「如果我征服地球，人類就會消失……。」" },
@@ -411,7 +411,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第六章：地球の友だち",
+          chapter: "第六章：地球的朋友", // 原 "地球の友だち"，轉為繁中
           content: [
             { sentence: "魔王は呀姨に言いました。", translation: "魔王對呀姨說。" },
             { sentence: "魔王：「地球は征服しません！もっとおいしい物を食べたいから！」", translation: "魔王：「我不會征服地球了！因為我還想吃更多好吃的東西！」" },
@@ -424,11 +424,11 @@ const storyZhTW = {
       ],
     },
     {
-      title: "去醫院路上的相遇",
+      title: "去醫院路上的相遇", // 已為繁中，無需修改
       imageName: "girl_hospital_visit.jpg",
       story: [
         {
-          chapter: "第一章：友だちのお見舞い",
+          chapter: "第一章：探望朋友", // 原 "友だちのお見舞い"，轉為繁中
           content: [
             { sentence: "ある日、舞子は病院へ行こうとしていました。", translation: "有一天，舞子準備去醫院。" },
             { sentence: "友だちが入院（にゅういん）していたからです。", translation: "因為她的朋友住院了。" },
@@ -437,7 +437,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第二章：突然の出会い",
+          chapter: "第二章：突然的相遇", // 原 "突然の出会い"，轉為繁中
           content: [
             { sentence: "病院へ行く途中、突然空に光が見えました。", translation: "在去醫院的路上，天空突然出現一道光。" },
             { sentence: "舞子：「あれ？何ですか？」", translation: "舞子：「咦？那是什麼？」" },
@@ -446,7 +446,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第三章：なぞなぞの挑戦",
+          chapter: "第三章：謎語的挑戰", // 原 "なぞなぞの挑戦"，轉為繁中
           content: [
             { sentence: "？？？：「わたしのなぞなぞに答えなさい！」", translation: "？？？：「回答我的謎語吧！」" },
             { sentence: "舞子：「えっ？急に？」", translation: "舞子：「咦？突然這樣？」" },
@@ -456,7 +456,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第四章：続く挑戦",
+          chapter: "第四章：持續的挑戰", // 原 "続く挑戦"，轉為繁中
           content: [
             { sentence: "？？？はもっと難しい問題を出しました。", translation: "？？？又出了更難的問題。" },
             { sentence: "？？？：「次の問題です！『足が二本あって、空を飛べるものは何？』」", translation: "？？？：「下一個問題！『有兩隻腳，卻能飛翔的東西是什麼？』」" },
@@ -467,7 +467,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第五章：病院への到着",
+          chapter: "第五章：到達醫院", // 原 "病院への到着"，轉為繁中
           content: [
             { sentence: "舞子は急いで病院へ向かいました。", translation: "舞子急忙往醫院趕去。" },
             { sentence: "？？？はあきらめて、その場を去りました。", translation: "？？？無奈地放棄了，離開了現場。" },
@@ -482,11 +482,11 @@ const storyZhTW = {
       ],
     },
     {
-      title: "哥林布們與魔女的陰謀",
+      title: "哥林布們與魔女的陰謀", // 已為繁中，無需修改
       imageName: "colinb_witch.jpg",
       story: [
         {
-          chapter: "第一章：山洞のコリンブたち",
+          chapter: "第一章：山洞中的哥林布們", // 原 "山洞のコリンブたち"，轉為繁中
           content: [
             { sentence: "むかしむかし、コリンブたちは山洞（さんどう）に住んでいました。", translation: "很久很久以前，哥林布們住在山洞裡。" },
             { sentence: "彼らは平和（へいわ）に暮らし、外の世界には興味がありませんでした。", translation: "他們過著和平的生活，對外面的世界毫無興趣。" },
@@ -495,7 +495,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第二章：魔女の罠",
+          chapter: "第二章：魔女的陷阱", // 原 "魔女の罠"，轉為繁中
           content: [
             { sentence: "魔女はコリンブたちを騙す計画を立てました。", translation: "魔女制定了一個騙哥林布們的計畫。" },
             { sentence: "ある日、魔女は山洞の前に現れました。", translation: "有一天，魔女來到了山洞前。" },
@@ -507,7 +507,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第三章：町の誘惑",
+          chapter: "第三章：城鎮的誘惑", // 原 "町の誘惑"，轉為繁中
           content: [
             { sentence: "ついに、コリンブたちは魔女の言葉を信じて町へ向かいました。", translation: "最後，哥林布們相信了魔女的話，向城市出發了。" },
             { sentence: "町に着くと、コリンブたちは驚きました。", translation: "到了城市後，哥林布們感到驚訝。" },
@@ -519,7 +519,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第四章：コリンブたちの危機",
+          chapter: "第四章：哥林布們的危機", // 原 "コリンブたちの危機"，轉為繁中
           content: [
             { sentence: "町を歩いていたコリンブたちは違和感（いわかん）を覚えました。", translation: "正在城市裡閒逛的哥林布們開始覺得奇怪。" },
             { sentence: "コリンブA：「あれ？魔女がいない！」", translation: "哥林布A：「咦？魔女不見了！」" },
@@ -531,7 +531,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第五章：コリンブたちの反撃",
+          chapter: "第五章：哥林布們的反擊", // 原 "コリンブたちの反撃"，轉為繁中
           content: [
             { sentence: "コリンブたちは考えました。", translation: "哥林布們開始思考。" },
             { sentence: "コリンブA：「このままではダメだ…。」", translation: "哥林布A：「這樣下去不行…。」" },
@@ -545,13 +545,14 @@ const storyZhTW = {
           ],
         },
       ],
+
     },
     {
-      title: "熊貓與貓的湖邊冒險",
+      title: "熊貓與貓的湖邊冒險", // 已為繁中，無需修改
       imageName: "panda_cat_lake.jpg",
       story: [
         {
-          chapter: "第一章：遠足のはじまり",
+          chapter: "第一章：遠足的開始", // 原 "遠足のはじまり"，轉為繁中
           content: [
             { sentence: "ある日、パンダと猫は遠足に行くことにしました。", translation: "有一天，熊貓和貓決定去遠足。" },
             { sentence: "パンダ：「お弁当を持って行きましょう！」", translation: "熊貓：「我們帶便當去吧！」" },
@@ -559,7 +560,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第二章：美しい湖",
+          chapter: "第二章：美麗的湖", // 原 "美しい湖"，轉為繁中
           content: [
             { sentence: "二人は歩いて、美しい湖に着きました。", translation: "他們走啊走，終於來到了一座美麗的湖邊。" },
             { sentence: "パンダ：「わあ！とてもきれいですね！」", translation: "熊貓：「哇！這裡好漂亮！」" },
@@ -567,7 +568,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第三章：湖に落ちた硬貨",
+          chapter: "第三章：掉進湖中的硬幣", // 原 "湖に落ちた硬貨"，轉為繁中
           content: [
             { sentence: "パンダはポケットから硬貨を落としてしまいました。", translation: "熊貓不小心從口袋裡掉出了一枚硬幣。" },
             { sentence: "パンダ：「あっ！しまった！」", translation: "熊貓：「啊！糟了！」" },
@@ -575,7 +576,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第四章：湖の仙女",
+          chapter: "第四章：湖中仙女", // 原 "湖の仙女"，轉為繁中
           content: [
             { sentence: "仙女：「あなたは何の硬貨を落としましたか？」", translation: "仙女：「你掉了什麼硬幣？」" },
             { sentence: "パンダ：「うーん…わかりません。一枚落ちました。」", translation: "熊貓：「嗯…我不記得了，只知道掉了一枚。」" },
@@ -584,7 +585,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第五章：猫の欲望",
+          chapter: "第五章：貓的貪心", // 原 "猫の欲望"，轉為繁中（改為更自然的 "貪心"）
           content: [
             { sentence: "猫：「えっ？！お金がもらえるの？！いいな！」", translation: "貓：「咦？！還能拿到錢？！真好！」" },
             { sentence: "猫は一枚の硬貨を湖に投げました。", translation: "貓馬上把一枚硬幣丟進湖裡。" },
@@ -592,7 +593,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第六章：河童の怒り",
+          chapter: "第六章：河童的憤怒", // 原 "河童の怒り"，轉為繁中
           content: [
             { sentence: "河童：「バカ！湖にゴミを捨てるな！」", translation: "河童：「笨蛋！別亂丟垃圾！」" },
             { sentence: "猫：「えっ！？違います！お金です！」", translation: "貓：「咦？！不是啦！那是錢啊！」" },
@@ -601,7 +602,7 @@ const storyZhTW = {
           ],
         },
         {
-          chapter: "第七章：教訓",
+          chapter: "第七章：教訓", // 原 "教訓"，已為繁中，無需修改
           content: [
             { sentence: "パンダ：「正直が一番ですね。」", translation: "熊貓：「誠實是最重要的呢。」" },
             { sentence: "猫：「そうですね…。もう欲張りません。」", translation: "貓：「說得對…我不再貪心了。」" },

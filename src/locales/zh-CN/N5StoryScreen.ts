@@ -18,7 +18,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第二章：鬼岛へ行こう！",
+          chapter: "第二章：去鬼岛吧！",
           content: [
             { sentence: "桃子姫は大人になりました。", translation: "桃子姬长大了。" },
             { sentence: "ある日、村人たちは困っていました。", translation: "有一天，村民们很困扰。" },
@@ -60,7 +60,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第六章：鬼岛での戦い",
+          chapter: "第六章：鬼岛上的战斗",
           content: [
             { sentence: "桃子姫と仲間たちは鬼ヶ島に着きました。", translation: "桃子姬和伙伴们到达了鬼岛。" },
             { sentence: "鬼：「やめてください！このきびだんごを食べたら、全部返します！」", translation: "鬼：「请住手！这团子太好吃了，我把东西全部还给你们！」" },
@@ -79,11 +79,11 @@ const storyZhCN = {
       ],
     },
     {
-      title: "熊猫的神社参拜和雪的试炼",
+      title: "熊猫的神社参拜与雪的试炼",
       imageName: "panda_shrine.jpg",
       story: [
         {
-          chapter: "第一章：神社へ行きたい",
+          chapter: "第一章：想去神社",
           content: [
             { sentence: "ある日、パンダは神社へ参拝（さんぱい）しようと思いました。", translation: "有一天，熊猫决定去神社参拜。" },
             { sentence: "パンダ：「神社でお願いごとをしたいです！」", translation: "熊猫：「我想去神社许愿！」" },
@@ -92,7 +92,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第二章：突然的暴风雪",
+          chapter: "第二章：突然的大风雪",
           content: [
             { sentence: "しばらく歩くと、突然、強い風と雪が降り始めました。", translation: "走了一会儿，突然刮起大风，开始下起暴风雪。" },
             { sentence: "パンダ：「えっ？こんなに雪が降るなんて…。」", translation: "熊猫：「咦？怎么会下这么大的雪…。」" },
@@ -129,7 +129,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第六章：神社への到达",
+          chapter: "第六章：到达神社",
           content: [
             { sentence: "やがて太陽が出て、天気が良くなりました。", translation: "不久后，太阳出来了，天气变好了。" },
             { sentence: "パンダ：「よかった！これなら神社に行けます！」", translation: "熊猫：「太好了！这样就能去神社了！」" },
@@ -145,7 +145,7 @@ const storyZhCN = {
       imageName: "fat_cat.jpg",
       story: [
         {
-          chapter: "第一章：肥猫の夢",
+          chapter: "第一章：肥猫的梦想",
           content: [
             { sentence: "むかしむかし、ある町に、とても太った猫がいました。", translation: "很久很久以前，在一个小镇上，有一只非常肥的猫。" },
             { sentence: "その猫はいつもゴロゴロして、あまり働きません。", translation: "那只猫总是懒洋洋地躺着，不太做事。" },
@@ -165,7 +165,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第三章：破烂的船",
+          chapter: "第三章：破旧的船",
           content: [
             { sentence: "猫は港へ行き、古いボートを見つけました。", translation: "猫来到港口，找到了一艘破旧的船。" },
             { sentence: "船頭：「このボートは安いですが、だいぶボロいですよ。」", translation: "船家：「这艘船很便宜，但已经很破烂了哦。」" },
@@ -175,7 +175,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第四章：太重的身体",
+          chapter: "第四章：过重的身体",
           content: [
             { sentence: "猫はボートの上でまたうとうとしていました。", translation: "猫在船上又打起瞌睡。" },
             { sentence: "すると、ボートが少しずつ沈み始めました！", translation: "突然，船开始慢慢下沉了！" },
@@ -185,7 +185,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第五章：蛋糕之岛",
+          chapter: "第五章：前往蛋糕之岛",
           content: [
             { sentence: "猫は一生懸命、水を外へかき出しました。", translation: "猫拼命地把船里的水往外舀。" },
             { sentence: "何とかボートは沈まずに、島へ近づきました。", translation: "好不容易，船没有完全下沉，并逐渐靠近岛屿。" },
@@ -196,7 +196,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第六章：奖励的蛋糕",
+          chapter: "第六章：奖赏的蛋糕",
           content: [
             { sentence: "猫はケーキを食べて、とても幸せになりました。", translation: "猫吃了蛋糕，感到非常幸福。" },
             { sentence: "猫：「やっぱり寝てばかりではダメですね。少しは頑張ります！」", translation: "猫：「果然只会睡觉是不行的。我也要努力一点！」" },
@@ -328,65 +328,34 @@ const storyZhCN = {
       ],
     },
     {
-      title: "熊猫和大家的欢乐河边游",
+      title: "熊猫与大家的快乐河边游戏",
       imageName: "panda_river.jpg",
       story: [
         {
-          chapter: "第一章：远足的开始",
+          chapter: "第一章：钓鱼的约定",
           content: [
-            { sentence: "ある日、パンダと猫は遠足に行くことにしました。", translation: "有一天，熊猫和猫决定去远足。" },
-            { sentence: "パンダ：「お弁当を持って行きましょう！」", translation: "熊猫：「我们带便当去吧！」" },
-            { sentence: "猫：「楽しみですね！」", translation: "猫：「好期待呢！」" },
+            { sentence: "ある日、パンダは小織、舞香、そして貓耳を川へ誘いました。", translation: "有一天，熊猫邀请小织、舞香，还有猫耳去河边。" },
+            { sentence: "パンダ：「みんなで魚を釣りましょう！」", translation: "熊猫：「大家一起去钓鱼吧！」" },
+            { sentence: "小織、舞香、貓耳：「はい！楽しそうですね！」", translation: "小织、舞香、猫耳：「好啊！感觉很有趣呢！」" },
           ],
         },
         {
-          chapter: "第二章：美丽的湖",
+          chapter: "第二章：没有钓具？",
           content: [
-            { sentence: "二人は歩いて、美しい湖に着きました。", translation: "他们走啊走，终于来到了一座美丽的湖边。" },
-            { sentence: "パンダ：「わあ！とてもきれいですね！」", translation: "熊猫：「哇！这里好漂亮！」" },
-            { sentence: "猫：「水がキラキラしています！」", translation: "猫：「湖水闪闪发光呢！」" },
+            { sentence: "川に着きましたが、みんなは釣り道具を忘れていました。", translation: "到了河边后，大家才发现忘记带钓鱼工具了。" },
+            { sentence: "パンダ：「あれ？竿（さお）がありませんよ！」", translation: "熊猫：「咦？没有钓竿耶！」" },
+            { sentence: "舞香：「どうしましょう…魚を釣れませんね。」", translation: "舞香：「该怎么办…这样不能钓鱼了。」" },
+            { sentence: "貓耳：「せっかく来たのに…残念です。」", translation: "猫耳：「好不容易来了…真可惜。」" },
           ],
         },
         {
-          chapter: "第三章：掉进湖里的硬币",
+          chapter: "第三章：玩水",
           content: [
-            { sentence: "パンダはポケットから硬貨を落としてしまいました。", translation: "熊猫不小心从口袋里掉出了一枚硬币。" },
-            { sentence: "パンダ：「あっ！しまった！」", translation: "熊猫：「啊！糟了！」" },
-            { sentence: "すると、湖から光が出て、一人の人が現れました。", translation: "突然，湖面发出光芒，一个人从湖中走了出来。" },
-          ],
-        },
-        {
-          chapter: "第四章：湖中的仙女",
-          content: [
-            { sentence: "仙女：「あなたは何の硬貨を落としましたか？」", translation: "仙女：「你掉了什么硬币？」" },
-            { sentence: "パンダ：「うーん…わかりません。一枚落ちました。」", translation: "熊猫：「嗯…我不记得了，只知道掉了一枚。」" },
-            { sentence: "仙女：「あなたは正直ですね。ご褒美（ごほうび）をあげましょう！」", translation: "仙女：「你很诚实呢！我要奖励你！」" },
-            { sentence: "仙女はパンダに十枚の硬貨をあげました。", translation: "仙女送给熊猫十枚硬币。" },
-          ],
-        },
-        {
-          chapter: "第五章：猫的欲望",
-          content: [
-            { sentence: "猫：「えっ？！お金がもらえるの？！いいな！」", translation: "猫：「咦？！还能拿到钱？！真好！」" },
-            { sentence: "猫は一枚の硬貨を湖に投げました。", translation: "猫马上把一枚硬币丢进湖里。" },
-            { sentence: "すると、今度は河童（かっぱ）が湖から出てきました。", translation: "这次，从湖里走出来的不是仙女，而是河童！" },
-          ],
-        },
-        {
-          chapter: "第六章：河童的愤怒",
-          content: [
-            { sentence: "河童：「バカ！湖にゴミを捨てるな！」", translation: "河童：「笨蛋！别乱丢垃圾！」" },
-            { sentence: "猫：「えっ！？違います！お金です！」", translation: "猫：「咦？！不是啦！那是钱啊！」" },
-            { sentence: "河童は猫の頭にキュウリを投げました。", translation: "河童直接拿起一条青瓜，丢到猫的头上。" },
-            { sentence: "猫：「いたい！もうしません！」", translation: "猫：「好痛！我不敢了！」" },
-          ],
-        },
-        {
-          chapter: "第七章：教训",
-          content: [
-            { sentence: "パンダ：「正直が一番ですね。」", translation: "熊猫：「诚实是最重要的呢。」" },
-            { sentence: "猫：「そうですね…。もう欲張りません。」", translation: "猫：「说得对…我不再贪心了。」" },
-            { sentence: "二人は笑いながら家に帰りました。", translation: "两人笑着，一起回家了。" },
+            { sentence: "小織：「釣りはできないけど、水で遊びませんか？」", translation: "小织：「虽然不能钓鱼，不如我们玩水吧？」" },
+            { sentence: "みんなは川の水を触って、パシャパシャと遊び始めました。", translation: "大家开始在河里嬉水，溅起阵阵水花。" },
+            { sentence: "パンダ：「涼しくて、気持ちいいです！」", translation: "熊猫：「好凉快，感觉真舒服！」" },
+            { sentence: "舞香：「釣りより楽しいかもしれません！」", translation: "舞香：「说不定比钓鱼还更好玩呢！」" },
+            { sentence: "貓耳：「みんな一緒だと、何でも楽しいですね！」", translation: "猫耳：「大家一起的话，做什么都很开心呢！」" },
           ],
         },
       ],
@@ -432,11 +401,11 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第五章：放弃征服",
+          chapter: "第五章：终止征服",
           content: [
             { sentence: "魔王は考えました。", translation: "魔王开始思考。" },
             { sentence: "魔王：「もし地球を征服したら、人間はいなくなる…。」", translation: "魔王：「如果我征服地球，人类就会消失……。」" },
-            { sentence: "魔王：「人間がいなくなったら、誰がこの食べ物を作るのか？」", translation: "魔王：「如果没有人，那这些美食该谁来做？」" },
+            { sentence: "魔王：「人間がいなくなったら、誰がこの食べ物を作るのか？」", translation: "魔王：「如果没有人类，那这些美食该谁来做？」" },
             { sentence: "魔王：「それは困ります！！」", translation: "魔王：「那可不行！！」" },
             { sentence: "こうして、魔王は征服をやめることにしました。", translation: "于是，魔王决定放弃征服地球。" },
           ],
@@ -455,7 +424,7 @@ const storyZhCN = {
       ],
     },
     {
-      title: "去医院路上的偶遇",
+      title: "去医院路上的相遇",
       imageName: "girl_hospital_visit.jpg",
       story: [
         {
@@ -498,7 +467,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第五章：抵达医院",
+          chapter: "第五章：到达医院",
           content: [
             { sentence: "舞子は急いで病院へ向かいました。", translation: "舞子急忙往医院赶去。" },
             { sentence: "？？？はあきらめて、その場を去りました。", translation: "？？？无奈地放弃了，离开了现场。" },
@@ -517,7 +486,7 @@ const storyZhCN = {
       imageName: "colinb_witch.jpg",
       story: [
         {
-          chapter: "第一章：山洞的哥林布们",
+          chapter: "第一章：山洞中的哥林布们",
           content: [
             { sentence: "むかしむかし、コリンブたちは山洞（さんどう）に住んでいました。", translation: "很久很久以前，哥林布们住在山洞里。" },
             { sentence: "彼らは平和（へいわ）に暮らし、外の世界には興味がありませんでした。", translation: "他们过着和平的生活，对外面的世界毫无兴趣。" },
@@ -526,7 +495,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第二章：魔女的圈套",
+          chapter: "第二章：魔女的陷阱",
           content: [
             { sentence: "魔女はコリンブたちを騙す計画を立てました。", translation: "魔女制定了一个骗哥林布们的计划。" },
             { sentence: "ある日、魔女は山洞の前に現れました。", translation: "有一天，魔女来到了山洞前。" },
@@ -538,7 +507,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第三章：城市的诱惑",
+          chapter: "第三章：城镇的诱惑",
           content: [
             { sentence: "ついに、コリンブたちは魔女の言葉を信じて町へ向かいました。", translation: "最后，哥林布们相信了魔女的话，向城市出发了。" },
             { sentence: "町に着くと、コリンブたちは驚きました。", translation: "到了城市后，哥林布们感到惊讶。" },
@@ -598,7 +567,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第三章：掉进湖里的硬币",
+          chapter: "第三章：掉进湖中的硬币",
           content: [
             { sentence: "パンダはポケットから硬貨を落としてしまいました。", translation: "熊猫不小心从口袋里掉出了一枚硬币。" },
             { sentence: "パンダ：「あっ！しまった！」", translation: "熊猫：「啊！糟了！」" },
@@ -606,7 +575,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第四章：湖中的仙女",
+          chapter: "第四章：湖中仙女",
           content: [
             { sentence: "仙女：「あなたは何の硬貨を落としましたか？」", translation: "仙女：「你掉了什么硬币？」" },
             { sentence: "パンダ：「うーん…わかりません。一枚落ちました。」", translation: "熊猫：「嗯…我不记得了，只知道掉了一枚。」" },
@@ -615,7 +584,7 @@ const storyZhCN = {
           ],
         },
         {
-          chapter: "第五章：猫的欲望",
+          chapter: "第五章：猫的贪心",
           content: [
             { sentence: "猫：「えっ？！お金がもらえるの？！いいな！」", translation: "猫：「咦？！还能拿到钱？！真好！」" },
             { sentence: "猫は一枚の硬貨を湖に投げました。", translation: "猫马上把一枚硬币丢进湖里。" },
@@ -627,7 +596,7 @@ const storyZhCN = {
           content: [
             { sentence: "河童：「バカ！湖にゴミを捨てるな！」", translation: "河童：「笨蛋！别乱丢垃圾！」" },
             { sentence: "猫：「えっ！？違います！お金です！」", translation: "猫：「咦？！不是啦！那是钱啊！」" },
-            { sentence: "河童は猫の頭にキュウリを投げました。", translation: "河童直接拿起一条青瓜，丢到猫的头上。" },
+            { sentence: "河童は猫の頭にキュウリを投げました。", translation: "河童直接拿起一条黄瓜，丢到猫的头上。" },
             { sentence: "猫：「いたい！もうしません！」", translation: "猫：「好痛！我不敢了！」" },
           ],
         },
