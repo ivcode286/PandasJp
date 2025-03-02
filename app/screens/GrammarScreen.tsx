@@ -36,7 +36,7 @@ const getItemLayout = sectionListGetItemLayout({
 const GrammarScreen: React.FC = () => {
   const { speak } = useTextToSpeech();
   const route = useRoute<GrammarScreenRouteProp>();
-  const { t, i18n } = useTranslation('grammar');
+  const { t } = useTranslation('grammar');
   const level = route.params?.level;
   const [data, setData] = useState<TransformedChapter[]>([]);
 
@@ -45,19 +45,19 @@ const GrammarScreen: React.FC = () => {
     const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
 
     const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => ({
-      title: chapter.title[i18n.language],
+      title: chapter.title, // 直接取值
       data: chapter.sections.map((section: any) => ({
-        pattern: section.pattern[i18n.language],
-        description: section.description[i18n.language],
+        pattern: section.pattern, // 直接取值
+        description: section.description, // 直接取值
         examples: section.examples.map((example: any) => ({
-          sentence: example.sentence[i18n.language],
-          translation: example.translation[i18n.language],
+          sentence: example.sentence, // 直接取值
+          translation: example.translation, // 直接取值
         })),
       })),
     }));
 
     setData(transformedData);
-  }, [level, i18n.language, t]);
+  }, [level, t]); // 移除 i18n.language 依賴
 
   return (
     <SafeAreaProvider>
@@ -67,22 +67,22 @@ const GrammarScreen: React.FC = () => {
           keyExtractor={(item, index) => item.pattern + index}
           renderSectionHeader={({ section: { title } }) => (
             <View style={styles.headerContainer}>
-              <Text style={styles.header}>{title}</Text>
+              <Text style={styles.header}>{title || '無標題'}</Text> {/* 防止空值 */}
             </View>
           )}
           renderItem={({ item }) => (
             <View style={styles.item}>
-              <Text style={styles.pattern}>{item.pattern}</Text>
-              <Text style={styles.description}>{item.description}</Text>
+              <Text style={styles.pattern}>{item.pattern || '無句型'}</Text> {/* 防止空值 */}
+              <Text style={styles.description}>{item.description || '無描述'}</Text> {/* 防止空值 */}
               {item.examples.map((example, index) => (
                 <View key={index} style={styles.exampleContainer}>
                   <View style={styles.sentenceRow}>
-                    <Text style={styles.sentence}>{example.sentence}</Text>
-                    <TouchableOpacity onPress={() => speak(example.sentence)} style={styles.iconSpacing}>
+                    <Text style={styles.sentence}>{example.sentence || '無例句'}</Text> {/* 防止空值 */}
+                    <TouchableOpacity onPress={() => speak(example.sentence || '')} style={styles.iconSpacing}>
                       <Ionicons name="volume-high" size={24} color="#ffcc00" />
                     </TouchableOpacity>
                   </View>
-                  <Text style={styles.translation}>{example.translation}</Text>
+                  <Text style={styles.translation}>{example.translation || '無翻譯'}</Text> {/* 防止空值 */}
                 </View>
               ))}
             </View>

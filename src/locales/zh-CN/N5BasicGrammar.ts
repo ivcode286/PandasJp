@@ -1,18 +1,23 @@
 import { GrammarData } from "../../types/translation";
 
-const n5BasicGrammarZhCN: GrammarData = {
+const n5AdvanceGrammarZhCN: GrammarData = {
   chapters: [
     {
-      title: { "zh-TW": "介紹 & 敘述", "zh-CN": "介绍 & 叙述", "en": "Introduction & Description" },
+      title: "📌 进阶文法",
       sections: [
         {
-          pattern: { "zh-TW": "1. 名詞1 + は + 名詞2 + です / ではありません（A 是 B / A 不是 B)", "zh-CN": "1. 名词1 + は + 名词2 + です / ではありません（A 是 B / A 不是 B)", "en": "1. Noun1 + は + Noun2 + です / ではありません (A is B / A is not B)" },
-          meaning: { "zh-TW": "", "zh-CN": "", "en": "" },
-          description: { "zh-TW": "📌 句型說明 這是日語最基本的句型，表示「A 是 B」或「A 不是 B」。", "zh-CN": "📌 句型说明 这是日语最基本的句型，表示「A 是 B」或「A 不是 B」。", "en": "📌 Pattern Explanation: This is the most basic Japanese sentence pattern, meaning 'A is B' or 'A is not B'." },
+          pattern: "50. ～ませんか（要不要一起做～？）",
+          meaning: "用来邀请对方一起做某事，语气较为礼貌。",
+          description: "📌 句型说明\n动词ます形去掉「ます」 + ませんか",
           examples: [
-            { sentence: { "zh-TW": "🔹 私は学生です。", "zh-CN": "🔹 我是学生。", "en": "🔹 I am a student." }, translation: { "zh-TW": "（我是學生。）", "zh-CN": "（我是学生。）", "en": "(I am a student.)" } },
-            { sentence: { "zh-TW": "🔹 これは日本の車です。", "zh-CN": "🔹 这是日本的车。", "en": "🔹 This is a Japanese car." }, translation: { "zh-TW": "（這是日本的車。）", "zh-CN": "（这是日本的车。）", "en": "(This is a Japanese car.)" } },
-            { sentence: { "zh-TW": "🔹 彼は先生ではありません。", "zh-CN": "🔹 他不是老师。", "en": "🔹 He is not a teacher." }, translation: { "zh-TW": "（他不是老師。）", "zh-CN": "（他不是老师。）", "en": "(He is not a teacher.)" } },
+            { 
+              sentence: "🔹一起去看电影（えいが）吗？", 
+              translation: "要不要一起看电影呢？" 
+            },
+            { 
+              sentence: "🔹今晚（こんばん）一起吃饭（ごはん）吗？", 
+              translation: "要不要今晚一起吃饭呢？" 
+            },
           ],
         },
         // 其他 sections 依此類推
@@ -22,4 +27,4 @@ const n5BasicGrammarZhCN: GrammarData = {
   ],
 };
 
-export default n5BasicGrammarZhCN;
+export default n5AdvanceGrammarZhCN;

@@ -24,7 +24,7 @@ import n5AdvanceGrammarZhTW from "../locales/zh-TW/N5AdvanceGrammar";
 import n5WordsZhTW from "../locales/zh-TW/N5Words";
 import n5KanjiWordsZhTW from "../locales/zh-TW/N5KanjiWords";
 import n3n4WordsZhTW from "../locales/zh-TW/N3N4Words";
-import grammarConceptsZhCN from "../locales/zh-CN/N5ConceptsScreen"; // Updated import
+import grammarConceptsZhCN from "../locales/zh-CN/N5ConceptsScreen";
 import homeZhCN from "../locales/zh-CN/HomeScreen";
 import hiraganaZhCN from "../locales/zh-CN/HiraganaScreen";
 import katakanaZhCN from "../locales/zh-CN/KatakanaScreen";
@@ -57,7 +57,7 @@ const resources = {
     },
   },
   "zh-CN": {
-    grammarConcepts: grammarConceptsZhCN, // Updated to use N5ConceptsScreen
+    grammarConcepts: grammarConceptsZhCN,
     home: homeZhCN,
     hiragana: hiraganaZhCN,
     katakana: katakanaZhCN,
