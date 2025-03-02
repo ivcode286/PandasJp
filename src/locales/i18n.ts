@@ -1,6 +1,17 @@
+//src/locales/i18n.ts
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { DakuonItem, LongVowelItem, YouonItem, Translation, StoryChapter, StoryLine, ConversationLine, ConversationTranslation, WordData } from "../types/translation";
+import {
+  DakuonItem,
+  LongVowelItem,
+  YouonItem,
+  Translation,
+  StoryChapter,
+  StoryLine,
+  ConversationLine,
+  ConversationTranslation,
+  WordData,
+} from "../types/translation";
 import grammarConceptsZhTW from "../locales/zh-TW/GrammarConceptsScreen";
 import homeZhTW from "../locales/zh-TW/HomeScreen";
 import hiraganaZhTW from "../locales/zh-TW/HiraganaScreen";
@@ -13,7 +24,7 @@ import n5AdvanceGrammarZhTW from "../locales/zh-TW/N5AdvanceGrammar";
 import n5WordsZhTW from "../locales/zh-TW/N5Words";
 import n5KanjiWordsZhTW from "../locales/zh-TW/N5KanjiWords";
 import n3n4WordsZhTW from "../locales/zh-TW/N3N4Words";
-import grammarConceptsZhCN from "../locales/zh-CN/GrammarConceptsScreen";
+import grammarConceptsZhCN from "../locales/zh-CN/N5ConceptsScreen"; // Updated import
 import homeZhCN from "../locales/zh-CN/HomeScreen";
 import hiraganaZhCN from "../locales/zh-CN/HiraganaScreen";
 import katakanaZhCN from "../locales/zh-CN/KatakanaScreen";
@@ -46,7 +57,7 @@ const resources = {
     },
   },
   "zh-CN": {
-    grammarConcepts: grammarConceptsZhCN,
+    grammarConcepts: grammarConceptsZhCN, // Updated to use N5ConceptsScreen
     home: homeZhCN,
     hiragana: hiraganaZhCN,
     katakana: katakanaZhCN,
