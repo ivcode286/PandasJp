@@ -1,5 +1,7 @@
+// src/locales/i18n.ts
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import { DakuonItem, LongVowelItem, YouonItem, Translation } from "../types/translation"; // Import from translation.ts
 import grammarConceptsZhTW from "../locales/zh-TW/GrammarConceptsScreen";
 import homeZhTW from "../locales/zh-TW/HomeScreen";
 import hiraganaZhTW from "../locales/zh-TW/HiraganaScreen";
@@ -10,7 +12,6 @@ import homeZhCN from "../locales/zh-CN/HomeScreen";
 import hiraganaZhCN from "../locales/zh-CN/HiraganaScreen";
 import katakanaZhCN from "../locales/zh-CN/KatakanaScreen";
 import phoneticsZhCN from "../locales/zh-CN/PhoneticsScreen";
-import { Translation } from "../types/translation";
 
 const resources = {
   "zh-TW": {

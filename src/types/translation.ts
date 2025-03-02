@@ -1,3 +1,4 @@
+// src/types/translation.ts
 export interface Section {
   title: string;
   paragraph?: string;
@@ -13,6 +14,30 @@ export interface Section {
   points?: string[];
   items?: string[];
 }
+
+// Define DakuonItem (for dakuon and handakuon data)
+export type DakuonItem = {
+  row: string;
+  a: string;
+  i: string;
+  u: string;
+  e: string;
+  o: string;
+};
+
+// Define LongVowelItem (for chouon data)
+export type LongVowelItem = {
+  type: string;
+  mark: string;
+  example: string;
+};
+
+// Define YouonItem (for youon data)
+export type YouonItem = {
+  combo: string;
+  romaji: string;
+  example: string;
+};
 
 export interface GrammarConceptsTranslation {
   title: string;
@@ -66,47 +91,25 @@ export interface PhoneticsTranslation {
     dakuon: {
       title: string;
       description: string;
-      data: {
-        row: string;
-        a: string;
-        i: string;
-        u: string;
-        e: string;
-        o: string;
-      }[];
+      data: DakuonItem[]; // Use DakuonItem here
       extra: string;
     };
     handakuon: {
       title: string;
       description: string;
-      data: {
-        row: string;
-        a: string;
-        i: string;
-        u: string;
-        e: string;
-        o: string;
-      }[];
+      data: DakuonItem[]; // Use DakuonItem here
       extra: string;
     };
     sokuon: Section;
     chouon: {
       title: string;
       description: string;
-      data: {
-        type: string;
-        mark: string;
-        example: string;
-      }[];
+      data: LongVowelItem[]; // Use LongVowelItem here
     };
     youon: {
       title: string;
       description: string;
-      data: {
-        combo: string;
-        romaji: string;
-        example: string;
-      }[];
+      data: YouonItem[]; // Use YouonItem here
     };
     summary: {
       title: string;
