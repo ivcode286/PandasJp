@@ -51,6 +51,40 @@ export interface StoryTranslation {
   story: StoryChapter[];
 }
 
+export interface ConversationLine {
+  speaker: string;
+  japanese: string;
+  chinese: string;
+}
+
+export interface ConversationTranslation {
+  title: string;
+  imageName: string;
+  scene: string;
+  conversation: ConversationLine[];
+}
+
+export interface GrammarExample {
+  sentence: { "zh-TW": string; "zh-CN": string; en: string };
+  translation: { "zh-TW": string; "zh-CN": string; en: string };
+}
+
+export interface GrammarSection {
+  pattern: { "zh-TW": string; "zh-CN": string; en: string };
+  meaning: { "zh-TW": string; "zh-CN": string; en: string };
+  description: { "zh-TW": string; "zh-CN": string; en: string };
+  examples: GrammarExample[];
+}
+
+export interface GrammarChapter {
+  title: { "zh-TW": string; "zh-CN": string; en: string };
+  sections: GrammarSection[];
+}
+
+export interface GrammarData {
+  chapters: GrammarChapter[];
+}
+
 export interface GrammarConceptsTranslation {
   title: string;
   intro: string;
@@ -99,19 +133,6 @@ export interface PhoneticsTranslation {
   };
 }
 
-export interface ConversationLine {
-  speaker: string;
-  japanese: string;
-  chinese: string;
-}
-
-export interface ConversationTranslation {
-  title: string;
-  imageName: string;
-  scene: string;
-  conversation: ConversationLine[];
-}
-
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
@@ -119,5 +140,9 @@ export interface Translation {
   katakana: KatakanaTranslation;
   phonetics: PhoneticsTranslation;
   story: StoryTranslation[];
-  conversation: { conversations: ConversationTranslation[] }; // 修正為物件結構
+  conversation: { conversations: ConversationTranslation[] };
+  grammar: {
+    n5_basic: GrammarData;
+    n5_advance: GrammarData;
+  };
 }

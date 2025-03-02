@@ -3,15 +3,27 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, SectionList, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useRoute, RouteProp } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 import { Ionicons } from '@expo/vector-icons';
 import { LEVELS } from '@/src/utils/constants';
 
-// 定義路由參數
 type StackParamList = {
   GrammarScreen: { level: string };
 };
+
 type GrammarScreenRouteProp = RouteProp<StackParamList, 'GrammarScreen'>;
+
+interface TransformedSection {
+  pattern: string;
+  description: string;
+  examples: { sentence: string; translation: string }[];
+}
+
+interface TransformedChapter {
+  title: string;
+  data: TransformedSection[];
+}
 
 const SECTION_HEADER_HEIGHT = 70;
 const ITEM_MARGIN = 12;
@@ -21,75 +33,31 @@ const getItemLayout = sectionListGetItemLayout({
   getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
 });
 
-// 定義 JSON 資料的型別
-interface Example {
-  sentence: { 'zh-TW': string; 'zh-CN': string; en: string };
-  translation: { 'zh-TW': string; 'zh-CN': string; en: string };
-}
-
-interface Section {
-  pattern: { 'zh-TW': string; 'zh-CN': string; en: string };
-  description: { 'zh-TW': string; 'zh-CN': string; en: string };
-  examples: Example[];
-}
-
-interface Chapter {
-  title: { 'zh-TW': string; 'zh-CN': string; en: string };
-  sections: Section[];
-}
-
-interface GrammarData {
-  chapters: Chapter[];
-}
-
-// 定義轉換後用於 SectionList 的資料型別
-interface TransformedSection {
-  pattern: string;
-  description: string;
-  examples: {
-    sentence: string;
-    translation: string;
-  }[];
-}
-
-interface TransformedChapter {
-  title: string;
-  data: TransformedSection[];
-}
-
 const GrammarScreen: React.FC = () => {
   const { speak } = useTextToSpeech();
   const route = useRoute<GrammarScreenRouteProp>();
-  const level = route.params?.level; // 獲取傳遞的 level 參數
+  const { t, i18n } = useTranslation('grammar');
+  const level = route.params?.level;
   const [data, setData] = useState<TransformedChapter[]>([]);
 
   useEffect(() => {
-    // 動態載入 JSON
-    const loadGrammarData = async () => {
-      const json = level === LEVELS.N5_ADVANCE_GRAMMAR
-        ? require('@/src/n5_advance_grammar.json')
-        : require('@/src/n5_basic_grammar.json');
-      
-      // 斷言 json 為 GrammarData 型別
-      const grammarData = json as GrammarData;
+    const namespace = level === LEVELS.N5_ADVANCE_GRAMMAR ? 'n5_advance' : 'n5_basic';
+    const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
 
-      const transformedData: TransformedChapter[] = grammarData.chapters.map((chapter: Chapter) => ({
-        title: chapter.title['zh-TW'],
-        data: chapter.sections.map((section: Section) => ({
-          pattern: section.pattern['zh-TW'],
-          description: section.description['zh-TW'],
-          examples: section.examples.map((example: Example) => ({
-            sentence: example.sentence['zh-TW'],
-            translation: example.translation['zh-TW'],
-          })),
+    const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => ({
+      title: chapter.title[i18n.language],
+      data: chapter.sections.map((section: any) => ({
+        pattern: section.pattern[i18n.language],
+        description: section.description[i18n.language],
+        examples: section.examples.map((example: any) => ({
+          sentence: example.sentence[i18n.language],
+          translation: example.translation[i18n.language],
         })),
-      }));
+      })),
+    }));
 
-      setData(transformedData);
-    };
-
-    loadGrammarData();
-  }, [level]);
+    setData(transformedData);
+  }, [level, i18n.language, t]);
 
   return (
     <SafeAreaProvider>

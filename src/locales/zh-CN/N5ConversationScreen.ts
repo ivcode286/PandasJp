@@ -1,5 +1,3 @@
-import { ConversationTranslation } from "../../types/translation";
-
 const conversationZhCN = {
   conversations: [
     {

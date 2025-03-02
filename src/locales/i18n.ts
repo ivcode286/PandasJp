@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { DakuonItem, LongVowelItem, YouonItem, Translation, StoryChapter, StoryLine, ConversationLine, ConversationTranslation } from "../types/translation";
+import { DakuonItem, LongVowelItem, YouonItem, Translation, StoryChapter, StoryLine, ConversationLine } from "../types/translation";
 import grammarConceptsZhTW from "../locales/zh-TW/GrammarConceptsScreen";
 import homeZhTW from "../locales/zh-TW/HomeScreen";
 import hiraganaZhTW from "../locales/zh-TW/HiraganaScreen";
@@ -8,6 +8,8 @@ import katakanaZhTW from "../locales/zh-TW/KatakanaScreen";
 import phoneticsZhTW from "../locales/zh-TW/PhoneticsScreen";
 import storyZhTW from "../locales/zh-TW/N5StoryScreen";
 import conversationZhTW from "../locales/zh-TW/N5ConversationScreen";
+import n5BasicGrammarZhTW from "../locales/zh-TW/N5BasicGrammar";
+import n5AdvanceGrammarZhTW from "../locales/zh-TW/N5AdvanceGrammar";
 import grammarConceptsZhCN from "../locales/zh-CN/GrammarConceptsScreen";
 import homeZhCN from "../locales/zh-CN/HomeScreen";
 import hiraganaZhCN from "../locales/zh-CN/HiraganaScreen";
@@ -15,6 +17,8 @@ import katakanaZhCN from "../locales/zh-CN/KatakanaScreen";
 import phoneticsZhCN from "../locales/zh-CN/PhoneticsScreen";
 import storyZhCN from "../locales/zh-CN/N5StoryScreen";
 import conversationZhCN from "../locales/zh-CN/N5ConversationScreen";
+import n5BasicGrammarZhCN from "../locales/zh-CN/N5BasicGrammar";
+import n5AdvanceGrammarZhCN from "../locales/zh-CN/N5AdvanceGrammar";
 
 const resources = {
   "zh-TW": {
@@ -25,6 +29,10 @@ const resources = {
     phonetics: phoneticsZhTW,
     story: storyZhTW,
     conversation: conversationZhTW,
+    grammar: {
+      n5_basic: n5BasicGrammarZhTW,
+      n5_advance: n5AdvanceGrammarZhTW,
+    },
   },
   "zh-CN": {
     grammarConcepts: grammarConceptsZhCN,
@@ -34,6 +42,10 @@ const resources = {
     phonetics: phoneticsZhCN,
     story: storyZhCN,
     conversation: conversationZhCN,
+    grammar: {
+      n5_basic: n5BasicGrammarZhCN,
+      n5_advance: n5AdvanceGrammarZhCN,
+    },
   },
 };
 
@@ -43,7 +55,7 @@ i18n.use(initReactI18next).init({
   fallbackLng: "zh-TW",
   interpolation: { escapeValue: false },
   defaultNS: "home",
-  ns: ["grammarConcepts", "home", "hiragana", "katakana", "phonetics", "story", "conversation"],
+  ns: ["grammarConcepts", "home", "hiragana", "katakana", "phonetics", "story", "conversation", "grammar"],
 });
 
 declare module "i18next" {
@@ -57,6 +69,7 @@ declare module "i18next" {
       phonetics: Translation["phonetics"];
       story: Translation["story"];
       conversation: Translation["conversation"];
+      grammar: Translation["grammar"];
     };
     returnObjects: true;
   }
@@ -97,6 +110,8 @@ declare module "i18next" {
     (key: `${number}.imageName`, options?: any): string;
     (key: `${number}.scene`, options?: any): string;
     (key: `${number}.conversation`, options: { returnObjects: true }): ConversationLine[];
+
+    (key: "chapters", options: { returnObjects: true }): any;
   }
 }
 
