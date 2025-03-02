@@ -2,11 +2,10 @@ import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
-import conversations from '../../../src/n5_daily_conversations.json';
+import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { getImage } from '../../../src/utils/imageLoader';
 
-// 定義 StackParamList
 type StackParamList = {
   N5ConversationScreen: { conversationTitle: string };
 };
@@ -14,10 +13,18 @@ type StackParamList = {
 type ConversationScreenRouteProp = RouteProp<StackParamList, 'N5ConversationScreen'>;
 
 export default function N5ConversationScreen() {
+  const { t } = useTranslation('conversation');
   const route = useRoute<ConversationScreenRouteProp>();
   const conversationTitle = route.params?.conversationTitle;
-  const conversation = conversations.find((c) => c.title === conversationTitle);
   const { speak } = useTextToSpeech();
+
+  const conversations = t('conversations', { returnObjects: true }) as Array<{
+    title: string;
+    imageName: string;
+    scene: string;
+    conversation: Array<{ speaker: string; japanese: string; chinese: string }>;
+  }>;
+  const conversation = conversations.find((c) => c.title === conversationTitle);
 
   if (!conversation) {
     return (
@@ -33,14 +40,11 @@ export default function N5ConversationScreen() {
         <Image source={getImage(conversation.imageName)} style={styles.coverImage} />
       </View>
       <Text style={styles.title}>{conversationTitle}</Text>
-      {conversation.conversation.map((line, index) => (
+      {conversation.conversation.map((line, index: number) => (
         <View key={index} style={styles.sentenceContainer}>
           <View style={styles.sentenceRow}>
             <Text style={styles.sentence}>{line.speaker}: {line.japanese}</Text>
-            <TouchableOpacity
-              onPress={() => speak(line.japanese)}
-              style={styles.iconSpacing}
-            >
+            <TouchableOpacity onPress={() => speak(line.japanese)} style={styles.iconSpacing}>
               <Ionicons name="volume-high" size={24} color="#ffcc00" />
             </TouchableOpacity>
           </View>

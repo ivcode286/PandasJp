@@ -102,7 +102,20 @@ export interface PhoneticsTranslation {
   };
 }
 
-// Add StoryTranslation to the Translation interface
+export interface ConversationLine {
+  speaker: string;
+  japanese: string;
+  chinese: string;
+}
+
+export interface ConversationTranslation {
+  title: string;
+  imageName: string;
+  scene: string;
+  conversation: ConversationLine[];
+}
+
+// Update the Translation interface
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
@@ -110,4 +123,5 @@ export interface Translation {
   katakana: KatakanaTranslation;
   phonetics: PhoneticsTranslation;
   story: StoryTranslation[];
+  conversation: ConversationTranslation[]; // Add conversation namespace
 }

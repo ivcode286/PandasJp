@@ -9,43 +9,46 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import conversations from '../../../src/n5_daily_conversations.json';
-import { getImage } from '../../../src/utils/imageLoader'; // ✅ 圖片載入函數
+import { useTranslation } from 'react-i18next';
+import { getImage } from '../../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
-// ✅ 讓 `StackParamList` 與 `N5StoryMenu.tsx` 結構相同
 type StackParamList = {
-    N5ConversationScreen: { conversationTitle: string };
-  };
-  
-  export default function N5ConversationMenu() {
-    const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5ConversationScreen'>>();
-  
-    return (
-      <View style={styles.container}>
-        <FlatList
-          data={conversations}
-          keyExtractor={(item) => item.title}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-              style={styles.cardContainer}
-              onPress={() => 
-                navigation.navigate("N5ConversationScreen", { conversationTitle: item.title }) // ✅ 修正導航方式
-              }
-            >
-              <Image 
-                source={getImage(item.imageName)} // ✅ 根據 `imageName` 載入對應圖片
-                style={styles.coverImage}
-              />
-              <View style={styles.textContainer}>
-                <Text style={styles.conversationText}>{item.title}</Text>
-              </View>
-            </TouchableOpacity>
-          )}
-        />
-      </View>
-    );
-  }
+  N5ConversationScreen: { conversationTitle: string };
+};
+
+export default function N5ConversationMenu() {
+  const { t } = useTranslation('conversation');
+  const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5ConversationScreen'>>();
+
+  const conversations = t('conversations', { returnObjects: true }) as Array<{
+    title: string;
+    imageName: string;
+    scene: string;
+    conversation: Array<{ speaker: string; japanese: string; chinese: string }>;
+  }>;
+  console.log('Conversations:', conversations);
+
+  return (
+    <View style={styles.container}>
+      <FlatList
+        data={conversations}
+        keyExtractor={(item) => item.title}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            style={styles.cardContainer}
+            onPress={() => navigation.navigate("N5ConversationScreen", { conversationTitle: item.title })}
+          >
+            <Image source={getImage(item.imageName)} style={styles.coverImage} />
+            <View style={styles.textContainer}>
+              <Text style={styles.conversationText}>{item.title}</Text>
+            </View>
+          </TouchableOpacity>
+        )}
+      />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
