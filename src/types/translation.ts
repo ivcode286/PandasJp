@@ -1,4 +1,3 @@
-// src/types/translation.ts
 export interface Section {
   title: string;
   paragraph?: string;
@@ -36,7 +35,6 @@ export type YouonItem = {
   example: string;
 };
 
-// Define story-related types
 export interface StoryLine {
   sentence: string;
   translation: string;
@@ -53,7 +51,6 @@ export interface StoryTranslation {
   story: StoryChapter[];
 }
 
-// Existing interfaces
 export interface GrammarConceptsTranslation {
   title: string;
   intro: string;
@@ -115,7 +112,6 @@ export interface ConversationTranslation {
   conversation: ConversationLine[];
 }
 
-// Update the Translation interface
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
@@ -123,5 +119,5 @@ export interface Translation {
   katakana: KatakanaTranslation;
   phonetics: PhoneticsTranslation;
   story: StoryTranslation[];
-  conversation: ConversationTranslation[]; // Add conversation namespace
+  conversation: { conversations: ConversationTranslation[] }; // 修正為物件結構
 }

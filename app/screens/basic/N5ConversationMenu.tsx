@@ -1,17 +1,11 @@
 import React from 'react';
-import { 
-  View, 
-  Text, 
-  FlatList, 
-  TouchableOpacity, 
-  StyleSheet, 
-  Image, 
-} from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { getImage } from '../../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
+import { ConversationTranslation } from '../../../src/types/translation';
 
 type StackParamList = {
   N5ConversationScreen: { conversationTitle: string };
@@ -21,12 +15,7 @@ export default function N5ConversationMenu() {
   const { t } = useTranslation('conversation');
   const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5ConversationScreen'>>();
 
-  const conversations = t('conversations', { returnObjects: true }) as Array<{
-    title: string;
-    imageName: string;
-    scene: string;
-    conversation: Array<{ speaker: string; japanese: string; chinese: string }>;
-  }>;
+  const conversations = t('conversations', { returnObjects: true }) as ConversationTranslation[];
   console.log('Conversations:', conversations);
 
   return (

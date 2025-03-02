@@ -5,6 +5,7 @@ import { useRoute, RouteProp } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import { Ionicons } from '@expo/vector-icons';
 import { getImage } from '../../../src/utils/imageLoader';
+import { ConversationTranslation } from '../../../src/types/translation';
 
 type StackParamList = {
   N5ConversationScreen: { conversationTitle: string };
@@ -18,12 +19,7 @@ export default function N5ConversationScreen() {
   const conversationTitle = route.params?.conversationTitle;
   const { speak } = useTextToSpeech();
 
-  const conversations = t('conversations', { returnObjects: true }) as Array<{
-    title: string;
-    imageName: string;
-    scene: string;
-    conversation: Array<{ speaker: string; japanese: string; chinese: string }>;
-  }>;
+  const conversations = t('conversations', { returnObjects: true }) as ConversationTranslation[];
   const conversation = conversations.find((c) => c.title === conversationTitle);
 
   if (!conversation) {
