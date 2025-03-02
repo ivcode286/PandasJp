@@ -1,6 +1,6 @@
 import { GrammarData } from "../../types/translation";
 
-const n5AdvanceGrammarZhCN: GrammarData = {
+const n5AdvanceGrammarZhTW: GrammarData = {
   chapters: [
     {
       title: "📌 进阶文法",
@@ -27,4 +27,4 @@ const n5AdvanceGrammarZhCN: GrammarData = {
   ],
 };
 
-export default n5AdvanceGrammarZhCN;
+export default n5AdvanceGrammarZhTW;
