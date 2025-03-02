@@ -59,7 +59,7 @@ export const scrollToSection = (title: string): void => {
 
 export default function WordsScreen() {
   const route = useRoute();
-  const { t, i18n } = useTranslation('words');
+  const { t } = useTranslation('words');
   const { level } = route.params as { level: string };
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
@@ -84,7 +84,7 @@ export default function WordsScreen() {
 
       const transformedWords = words.map(word => ({
         ...word,
-        meaning_zh: word.meaning[i18n.language],
+        meaning_zh: word.meaning, // 直接使用 meaning，不用 i18n.language
       }));
 
       const groupedSections = groupWordsByLetter(transformedWords);
@@ -93,7 +93,7 @@ export default function WordsScreen() {
     };
 
     loadWords();
-  }, [level, i18n.language, t]);
+  }, [level, t]); // 移除 i18n.language 依賴
 
   return (
     <SafeAreaProvider>
@@ -105,7 +105,7 @@ export default function WordsScreen() {
           renderItem={({ item }) => (
             <View style={styles.item}>
               <Text style={styles.words}>{item.words}</Text>
-              <Text style={styles.meaning}>{item.meaning_zh}</Text>
+              <Text style={styles.meaning}>{item.meaning_zh || '無翻譯'}</Text> {/* 防止空值 */}
               <View style={styles.row}>
                 <Text style={styles.reading}>{item.pron}</Text>
                 <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
@@ -116,7 +116,7 @@ export default function WordsScreen() {
           )}
           renderSectionHeader={({ section: { title } }) => (
             <View style={styles.headerContainer}>
-              <Text style={styles.header}>{title}</Text>
+              <Text style={styles.header}>{title || '無標題'}</Text> {/* 防止空值 */}
             </View>
           )}
           stickySectionHeadersEnabled={false}

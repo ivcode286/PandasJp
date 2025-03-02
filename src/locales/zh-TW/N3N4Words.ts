@@ -1,7 +1,6 @@
 import { WordData } from "../../types/translation";
 
-const n3n4WordsZhTW: WordData[] = [
-  // 根據 words.json 的內容填入，假設格式相同
+const n3n4WordsZhCN: WordData[] = [
   {
     wordId: 1,
     words: "一",
@@ -9,9 +8,9 @@ const n3n4WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "數字",
     type: "數字",
-    meaning: { "zh-TW": "一", "zh-CN": "一", "en": "One" },
+    meaning: "一", // 移除多語言對象，只保留單一值（簡中）
   },
   // 添加其他單詞
 ];
 
-export default n3n4WordsZhTW;
+export default n3n4WordsZhCN;

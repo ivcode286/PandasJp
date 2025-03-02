@@ -1,6 +1,6 @@
 import { WordData } from "../../types/translation";
 
-const n5WordsZhTW: WordData[] = [
+const n3n4WordsZhCN: WordData[] = [
   {
     wordId: 1,
     words: "一",
@@ -8,27 +8,9 @@ const n5WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "數字",
     type: "數字",
-    meaning: { "zh-TW": "一", "zh-CN": "一", "en": "One" },
+    meaning: "一", // 移除多語言對象，只保留單一值（簡中）
   },
-  {
-    wordId: 2,
-    words: "二",
-    pron: "ふた(つ)",
-    letterOrder: 1,
-    letter: "數字",
-    type: "數字",
-    meaning: { "zh-TW": "二", "zh-CN": "二", "en": "Two" },
-  },
-  {
-    wordId: 3,
-    words: "三",
-    pron: "みっ(つ)",
-    letterOrder: 1,
-    letter: "數字",
-    type: "數字",
-    meaning: { "zh-TW": "三", "zh-CN": "三", "en": "Three" },
-  },
-  // 添加其他單詞，完整轉換 n5_words.json 的內容
+  // 添加其他單詞
 ];
 
-export default n5WordsZhTW;
+export default n3n4WordsZhCN;
