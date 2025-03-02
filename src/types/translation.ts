@@ -85,6 +85,16 @@ export interface GrammarData {
   chapters: GrammarChapter[];
 }
 
+export interface WordData {
+  wordId: number;
+  words: string;
+  pron: string;
+  letterOrder: number;
+  letter: string;
+  type: string;
+  meaning: { "zh-TW": string; "zh-CN": string; "en": string };
+}
+
 export interface GrammarConceptsTranslation {
   title: string;
   intro: string;
@@ -144,5 +154,10 @@ export interface Translation {
   grammar: {
     n5_basic: GrammarData;
     n5_advance: GrammarData;
+  };
+  words: {
+    n5: WordData[];
+    n5_kanji: WordData[];
+    n3n4: WordData[];
   };
 }
