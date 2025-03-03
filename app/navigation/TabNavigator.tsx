@@ -22,6 +22,8 @@ import N5ConceptsScreen from '../screens/basic/N5ConceptsScreen';
 import N5ConversationMenu from '../screens/basic/N5ConversationMenu';
 import GrammarMenu from '../screens/basic/GrammarMenu';
 import GrammarConceptsScreen from '../screens/basic/GrammarConceptsScreen';
+import { Settings } from 'react-native';
+import SettingsScreen from '../screens/SettingsScreen';
 
 
 const Tabs = createBottomTabNavigator();
@@ -53,9 +55,9 @@ function HomeStack() {
 
 function StoryStack() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} />
-      <Stack.Screen name="N5StoryScreen" component={N5StoryScreen} />
+    <Stack.Navigator screenOptions={{ headerShown: true, cardStyle: { flex: 1 } }}>
+      <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} options={{ headerTitle: 'N5 物語メニュー' }}/>
+      <Stack.Screen name="N5StoryScreen" component={N5StoryScreen} options={{ headerTitle: 'N5 の物語' }}/>
     </Stack.Navigator>
   );
 }
@@ -122,8 +124,8 @@ export default function MyTabs() {
         }}
       />
       <Tabs.Screen
-        name="Grammar"
-        component={GrammarStack}
+        name="Story"
+        component={StoryStack}
         options={{
           title: '',
           headerShown: false,
@@ -132,7 +134,7 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Settings"
-        component={StoryStack}
+        component={SettingsScreen}
         options={{
           title: 'Settings',
           headerShown: true,

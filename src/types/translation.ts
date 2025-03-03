@@ -1,3 +1,4 @@
+// src/types/translation.ts
 export interface Section {
   title: string;
   paragraph?: string;
@@ -65,19 +66,19 @@ export interface ConversationTranslation {
 }
 
 export interface GrammarExample {
-  sentence: { "zh-TW": string; "zh-CN": string; en: string };
-  translation: { "zh-TW": string; "zh-CN": string; en: string };
+  sentence: string;
+  translation: string;
 }
 
 export interface GrammarSection {
-  pattern: { "zh-TW": string; "zh-CN": string; en: string };
-  meaning: { "zh-TW": string; "zh-CN": string; en: string };
-  description: { "zh-TW": string; "zh-CN": string; en: string };
+  pattern: string;
+  meaning: string;
+  description: string;
   examples: GrammarExample[];
 }
 
 export interface GrammarChapter {
-  title: { "zh-TW": string; "zh-CN": string; en: string };
+  title: string;
   sections: GrammarSection[];
 }
 
@@ -92,7 +93,7 @@ export interface WordData {
   letterOrder: number;
   letter: string;
   type: string;
-  meaning: { "zh-TW": string; "zh-CN": string; "en": string };
+  meaning: string;
 }
 
 export interface GrammarConceptsTranslation {
@@ -143,6 +144,23 @@ export interface PhoneticsTranslation {
   };
 }
 
+export interface CommonTranslation {
+  drawer: {
+    N5: string[];
+    "N4-N3": string[];
+    "N5-KANJI": string[];
+  };
+}
+
+export interface SettingsTranslation {
+  title: string;
+  languageSection: string;
+  languages: {
+    traditionalChinese: string;
+    simplifiedChinese: string;
+  };
+}
+
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
@@ -160,4 +178,6 @@ export interface Translation {
     n5_kanji: WordData[];
     n3n4: WordData[];
   };
+  common: CommonTranslation;
+  settings: SettingsTranslation; 
 }

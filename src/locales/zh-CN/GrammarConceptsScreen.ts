@@ -1,5 +1,4 @@
-// src/locales/zh-CN.ts
-const zhCN = {
+const grammarConceptsZhCN = {
   translation: {
     title: "📌 N5 日语基础文法概念",
     intro: "💡 这些概念是 N5 初学者必须掌握的基本知识，能够帮助理解日语句型和变化！",
@@ -110,4 +109,4 @@ const zhCN = {
   },
 };
 
-export default zhCN;
+export default grammarConceptsZhCN;

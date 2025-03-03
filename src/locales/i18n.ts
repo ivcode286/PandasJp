@@ -1,4 +1,4 @@
-//src/locales/i18n.ts
+// src/locales/i18n.ts
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import {
@@ -13,6 +13,7 @@ import {
   WordData,
 } from "../types/translation";
 import grammarConceptsZhTW from "../locales/zh-TW/GrammarConceptsScreen";
+import n5ConceptsZhTW from "../locales/zh-TW/N5ConceptsScreen";
 import homeZhTW from "../locales/zh-TW/HomeScreen";
 import hiraganaZhTW from "../locales/zh-TW/HiraganaScreen";
 import katakanaZhTW from "../locales/zh-TW/KatakanaScreen";
@@ -24,7 +25,10 @@ import n5AdvanceGrammarZhTW from "../locales/zh-TW/N5AdvanceGrammar";
 import n5WordsZhTW from "../locales/zh-TW/N5Words";
 import n5KanjiWordsZhTW from "../locales/zh-TW/N5KanjiWords";
 import n3n4WordsZhTW from "../locales/zh-TW/N3N4Words";
-import grammarConceptsZhCN from "../locales/zh-CN/N5ConceptsScreen"; // Updated import
+import commonZhTW from "../locales/zh-TW/Common";
+import settingsZhTW from "../locales/zh-TW/SettingsScreen"; // 新增
+import grammarConceptsZhCN from "../locales/zh-CN/GrammarConceptsScreen";
+import n5ConceptsZhCN from "../locales/zh-CN/N5ConceptsScreen";
 import homeZhCN from "../locales/zh-CN/HomeScreen";
 import hiraganaZhCN from "../locales/zh-CN/HiraganaScreen";
 import katakanaZhCN from "../locales/zh-CN/KatakanaScreen";
@@ -36,10 +40,13 @@ import n5AdvanceGrammarZhCN from "../locales/zh-CN/N5AdvanceGrammar";
 import n5WordsZhCN from "../locales/zh-CN/N5Words";
 import n5KanjiWordsZhCN from "../locales/zh-CN/N5KanjiWords";
 import n3n4WordsZhCN from "../locales/zh-CN/N3N4Words";
+import commonZhCN from "../locales/zh-CN/Common";
+import settingsZhCN from "../locales/zh-CN/SettingsScreen"; // 新增
 
 const resources = {
   "zh-TW": {
     grammarConcepts: grammarConceptsZhTW,
+    n5Concepts: n5ConceptsZhTW,
     home: homeZhTW,
     hiragana: hiraganaZhTW,
     katakana: katakanaZhTW,
@@ -55,9 +62,12 @@ const resources = {
       n5_kanji: n5KanjiWordsZhTW,
       n3n4: n3n4WordsZhTW,
     },
+    common: commonZhTW,
+    settings: settingsZhTW, // 新增
   },
   "zh-CN": {
-    grammarConcepts: grammarConceptsZhCN, // Updated to use N5ConceptsScreen
+    grammarConcepts: grammarConceptsZhCN,
+    n5Concepts: n5ConceptsZhCN,
     home: homeZhCN,
     hiragana: hiraganaZhCN,
     katakana: katakanaZhCN,
@@ -73,6 +83,8 @@ const resources = {
       n5_kanji: n5KanjiWordsZhCN,
       n3n4: n3n4WordsZhCN,
     },
+    common: commonZhCN,
+    settings: settingsZhCN, // 新增
   },
 };
 
@@ -82,7 +94,24 @@ i18n.use(initReactI18next).init({
   fallbackLng: "zh-TW",
   interpolation: { escapeValue: false },
   defaultNS: "home",
-  ns: ["grammarConcepts", "home", "hiragana", "katakana", "phonetics", "story", "conversation", "grammar", "words"],
+  ns: [
+    "grammarConcepts",
+    "n5Concepts",
+    "home",
+    "hiragana",
+    "katakana",
+    "phonetics",
+    "story",
+    "conversation",
+    "grammar",
+    "words",
+    "common",
+    "settings", // 新增
+  ],
+});
+
+i18n.on("languageChanged", (lng) => {
+  console.log("Language changed to:", lng);
 });
 
 declare module "i18next" {
@@ -90,6 +119,7 @@ declare module "i18next" {
     defaultNS: "home";
     resources: {
       grammarConcepts: Translation["grammarConcepts"];
+      n5Concepts: Translation["grammarConcepts"];
       home: Translation["home"];
       hiragana: Translation["hiragana"];
       katakana: Translation["katakana"];
@@ -98,6 +128,17 @@ declare module "i18next" {
       conversation: Translation["conversation"];
       grammar: Translation["grammar"];
       words: Translation["words"];
+      common: Translation["common"];
+      settings: {
+        translation: {
+          title: string;
+          languageSection: string;
+          languages: {
+            traditionalChinese: string;
+            simplifiedChinese: string;
+          };
+        };
+      }; 
     };
     returnObjects: true;
   }
@@ -108,6 +149,12 @@ declare module "i18next" {
     (key: `translation.sections.${string}.table.header`, options: { returnObjects: true }): string[];
     (key: `translation.sections.${string}.table.data`, options: { returnObjects: true }): string[][];
     (key: `translation.sections.${string}.paragraphs`, options: { returnObjects: true }): string[];
+
+    (key: "title" | "intro", options?: any): string;
+    (key: `sections.${string}.title` | `sections.${string}.description`, options?: any): string;
+    (key: `sections.${string}.table.header`, options: { returnObjects: true }): string[];
+    (key: `sections.${string}.table.data`, options: { returnObjects: true }): string[][];
+    (key: `sections.${string}.paragraphs`, options: { returnObjects: true }): string[];
 
     (key: "translation.title" | `translation.menu.${string}`, options?: any): string;
 
@@ -140,6 +187,15 @@ declare module "i18next" {
     (key: `${number}.conversation`, options: { returnObjects: true }): ConversationLine[];
 
     (key: "n5" | "n5_kanji" | "n3n4", options: { returnObjects: true }): WordData[];
+
+    // Common namespace keys
+    (key: `drawer.N5`, ns: "common", options: { returnObjects: true }): string[];
+    (key: `drawer.N4-N3`, ns: "common", options: { returnObjects: true }): string[];
+    (key: `drawer.N5-KANJI`, ns: "common", options: { returnObjects: true }): string[];
+
+    //settings 
+    (key: "translation.title" | "translation.languageSection", options?: any): string;
+    (key: `translation.languages.${string}`, options?: any): string;
   }
 }
 

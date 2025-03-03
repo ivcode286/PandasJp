@@ -1,5 +1,4 @@
-// src/locales/zh-TW.ts
-const zhTW = {
+const grammarConceptsZhTW = {
   translation: {
     title: "📌 N5 日語基礎文法概念",
     intro: "💡 這些概念是 N5 初學者必須掌握的基本知識，能夠幫助理解日語句型和變化！",
@@ -110,4 +109,4 @@ const zhTW = {
   },
 };
 
-export default zhTW;
+export default grammarConceptsZhTW;
