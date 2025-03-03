@@ -13,6 +13,7 @@ import {
   WordData,
 } from "../types/translation";
 import grammarConceptsZhTW from "../locales/zh-TW/GrammarConceptsScreen";
+import n5ConceptsZhTW from "../locales/zh-TW/N5ConceptsScreen";
 import homeZhTW from "../locales/zh-TW/HomeScreen";
 import hiraganaZhTW from "../locales/zh-TW/HiraganaScreen";
 import katakanaZhTW from "../locales/zh-TW/KatakanaScreen";
@@ -25,7 +26,8 @@ import n5WordsZhTW from "../locales/zh-TW/N5Words";
 import n5KanjiWordsZhTW from "../locales/zh-TW/N5KanjiWords";
 import n3n4WordsZhTW from "../locales/zh-TW/N3N4Words";
 import commonZhTW from "../locales/zh-TW/Common";
-import grammarConceptsZhCN from "../locales/zh-CN/N5ConceptsScreen";
+import grammarConceptsZhCN from "../locales/zh-CN/GrammarConceptsScreen";
+import n5ConceptsZhCN from "../locales/zh-CN/N5ConceptsScreen";
 import homeZhCN from "../locales/zh-CN/HomeScreen";
 import hiraganaZhCN from "../locales/zh-CN/HiraganaScreen";
 import katakanaZhCN from "../locales/zh-CN/KatakanaScreen";
@@ -42,6 +44,7 @@ import commonZhCN from "../locales/zh-CN/Common";
 const resources = {
   "zh-TW": {
     grammarConcepts: grammarConceptsZhTW,
+    n5Concepts: n5ConceptsZhTW,
     home: homeZhTW,
     hiragana: hiraganaZhTW,
     katakana: katakanaZhTW,
@@ -61,6 +64,7 @@ const resources = {
   },
   "zh-CN": {
     grammarConcepts: grammarConceptsZhCN,
+    n5Concepts: n5ConceptsZhCN,
     home: homeZhCN,
     hiragana: hiraganaZhCN,
     katakana: katakanaZhCN,
@@ -88,6 +92,7 @@ i18n.use(initReactI18next).init({
   defaultNS: "home",
   ns: [
     "grammarConcepts",
+    "n5Concepts",
     "home",
     "hiragana",
     "katakana",
@@ -98,6 +103,7 @@ i18n.use(initReactI18next).init({
     "words",
     "common",
   ],
+  debug: true, // 开启调试日志
 });
 
 declare module "i18next" {
@@ -105,6 +111,7 @@ declare module "i18next" {
     defaultNS: "home";
     resources: {
       grammarConcepts: Translation["grammarConcepts"];
+      n5Concepts: Translation["grammarConcepts"]; // 添加 n5Concepts
       home: Translation["home"];
       hiragana: Translation["hiragana"];
       katakana: Translation["katakana"];
@@ -124,6 +131,12 @@ declare module "i18next" {
     (key: `translation.sections.${string}.table.header`, options: { returnObjects: true }): string[];
     (key: `translation.sections.${string}.table.data`, options: { returnObjects: true }): string[][];
     (key: `translation.sections.${string}.paragraphs`, options: { returnObjects: true }): string[];
+
+    (key: "title" | "intro", options?: any): string;
+    (key: `sections.${string}.title` | `sections.${string}.description`, options?: any): string;
+    (key: `sections.${string}.table.header`, options: { returnObjects: true }): string[];
+    (key: `sections.${string}.table.data`, options: { returnObjects: true }): string[][];
+    (key: `sections.${string}.paragraphs`, options: { returnObjects: true }): string[];
 
     (key: "translation.title" | `translation.menu.${string}`, options?: any): string;
 

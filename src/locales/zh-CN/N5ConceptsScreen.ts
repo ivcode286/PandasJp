@@ -1,6 +1,6 @@
 import { GrammarConceptsTranslation } from "../../types/translation";
 
-const grammarConceptsZhCN: GrammarConceptsTranslation = {
+const n5ConceptsZhCN: GrammarConceptsTranslation = {
   title: "N5日语基本概念",
   intro: "以下是学习日语N5级别时需要掌握的基本概念，涵盖语序、助词和语体等内容！",
   sections: {
@@ -54,4 +54,4 @@ const grammarConceptsZhCN: GrammarConceptsTranslation = {
   },
 };
 
-export default grammarConceptsZhCN;
+export default n5ConceptsZhCN;

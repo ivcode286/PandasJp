@@ -1,4 +1,3 @@
-// src/locales/zh-TW/GrammarConceptsScreen.ts
 const grammarConceptsZhTW = {
   translation: {
     title: "📌 N5 日語基礎文法概念",

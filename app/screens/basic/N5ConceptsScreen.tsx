@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 
 export default function N5ConceptsScreen() {
-  const { t } = useTranslation("grammarConcepts");
+  const { t } = useTranslation("n5Concepts"); // 使用 n5Concepts 命名空间
   const theme = useColorScheme();
   const isDark = theme === "dark";
 
@@ -32,7 +32,7 @@ export default function N5ConceptsScreen() {
               {item.title}
             </Text>
 
-            {/* 1️⃣ 日語語序 */}
+            {/* 1️⃣ 日语语序 */}
             {item.key === "1" && (
               <>
                 <Text style={[styles.description, { color: colors.text }]}>
@@ -61,7 +61,7 @@ export default function N5ConceptsScreen() {
               </>
             )}
 
-            {/* 2️⃣ 助詞 */}
+            {/* 2️⃣ 助词 */}
             {item.key === "2" && (
               <>
                 <Text style={[styles.description, { color: colors.text }]}>
@@ -90,7 +90,7 @@ export default function N5ConceptsScreen() {
               </>
             )}
 
-            {/* 3️⃣ 敬語 vs. 普通體 */}
+            {/* 3️⃣ 敬语 vs. 普通体 */}
             {item.key === "3" && (
               <>
                 <Text style={[styles.description, { color: colors.text }]}>
@@ -119,7 +119,7 @@ export default function N5ConceptsScreen() {
               </>
             )}
 
-            {/* 4️⃣ 總結 */}
+            {/* 4️⃣ 总结 */}
             {item.key === "4" && (
               <>
                 {(t("sections.4.paragraphs", { returnObjects: true }) as string[]).map(
@@ -141,7 +141,6 @@ export default function N5ConceptsScreen() {
   );
 }
 
-// ===== Styles =====
 const styles = StyleSheet.create({
   container: {
     flex: 1,
