@@ -1,32 +1,33 @@
-// This file is a fallback for using MaterialIcons on Android and web.
-
+import { Platform, View, StyleProp, ViewStyle } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { SymbolWeight } from 'expo-symbols';
+import { MdHome, MdEdit, MdSettings, MdAbc, MdArrowForward, MdMenu } from 'react-icons/md';
+import { FaCode } from 'react-icons/fa';
 import React from 'react';
-import { OpaqueColorValue, StyleProp, ViewStyle } from 'react-native';
+import { OpaqueColorValue } from 'react-native';
 
-// Add your SFSymbol to MaterialIcons mappings here.
+// Define the mapping of icon names to MaterialIcons names for mobile
 const MAPPING = {
-  // See MaterialIcons here: https://icons.expo.fyi
   'house.fill': 'home',
   'character.square.fill': 'abc',
   'pencil.line': 'menu-book',
   'gearshape.fill': 'settings',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
-} as Partial<
-  Record<
-    import('expo-symbols').SymbolViewProps['name'],
-    React.ComponentProps<typeof MaterialIcons>['name']
-  >
->;
+  'menu.fill': 'menu',
+  'settings.fill': 'settings',
+} as const;
 
-export type IconSymbolName = keyof typeof MAPPING|'menu.fill'|'pencil.line'|'settings.fill';
+// Define the allowed icon names as a TypeScript type
+export type IconSymbolName = keyof typeof MAPPING | 'menu.fill' | 'pencil.line' | 'settings.fill';
 
 /**
- * An icon component that uses native SFSymbols on iOS, and MaterialIcons on Android and web. This ensures a consistent look across platforms, and optimal resource usage.
- *
- * Icon `name`s are based on SFSymbols and require manual mapping to MaterialIcons.
+ * An icon component that renders MaterialIcons on mobile (iOS/Android) and SVG icons from react-icons on web.
+ * On web, the SVG icon is wrapped in a View to apply styles consistently across platforms, avoiding type mismatches.
+ * 
+ * @param name - The name of the icon to display.
+ * @param size - The size of the icon (default: 24).
+ * @param color - The color of the icon.
+ * @param style - Optional styles to apply to the icon container (React Native ViewStyle).
  */
 export function IconSymbol({
   name,
@@ -38,10 +39,41 @@ export function IconSymbol({
   size?: number;
   color: string | OpaqueColorValue;
   style?: StyleProp<ViewStyle>;
-  weight?: SymbolWeight;
 }) {
-  //@ts-ignore
-  return <MaterialIcons color={color} size={size} name={MAPPING[name]} style={style} />;
+  if (Platform.OS === 'web') {
+    // Web platform: Use SVG icons from react-icons, wrapped in a View for styling
+    const svgIcon = (() => {
+      switch (name) {
+        case 'house.fill':
+          return <MdHome color={color as string} size={size} />;
+        case 'character.square.fill':
+          return <MdAbc color={color as string} size={size} />;
+        case 'pencil.line':
+          return <MdEdit color={color as string} size={size} />;
+        case 'gearshape.fill':
+          return <MdSettings color={color as string} size={size} />;
+        case 'chevron.left.forwardslash.chevron.right':
+          return <FaCode color={color as string} size={size} />;
+        case 'chevron.right':
+          return <MdArrowForward color={color as string} size={size} />;
+        case 'menu.fill':
+          return <MdMenu color={color as string} size={size} />;
+        case 'settings.fill':
+          return <MdSettings color={color as string} size={size} />;
+        default:
+          console.warn(`No SVG icon found for ${name}`);
+          return null;
+      }
+    })();
+
+    // Wrap the SVG icon in a View to apply the style and set dimensions
+    return (
+      <View style={[style, { width: size, height: size }]}>
+        {svgIcon}
+      </View>
+    );
+  } else {
+    // Mobile platform (iOS/Android): Use MaterialIcons
+    return <MaterialIcons name={MAPPING[name]} size={size} color={color}  />;
+  }
 }
-
-
