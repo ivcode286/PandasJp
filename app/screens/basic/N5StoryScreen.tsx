@@ -5,6 +5,7 @@ import { useRoute, RouteProp } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { getImage } from '../../../src/utils/imageLoader';
 import { useTranslation } from 'react-i18next';
+import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 // Define StackParamList
 type StackParamList = {
@@ -58,7 +59,7 @@ export default function N5StoryScreen() {
                   }}
                   style={styles.iconSpacing}
                 >
-                  <Ionicons name="volume-high" size={24} color="#ffcc00" />
+                  <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
                 </TouchableOpacity>
               </View>
               <Text style={styles.translation}>{line.translation}</Text>

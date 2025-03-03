@@ -5,8 +5,8 @@ import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
-import { Ionicons } from '@expo/vector-icons';
 import { LEVELS } from '@/src/utils/constants';
+import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 type StackParamList = {
   GrammarScreen: { level: string };
@@ -79,7 +79,7 @@ const GrammarScreen: React.FC = () => {
                   <View style={styles.sentenceRow}>
                     <Text style={styles.sentence}>{example.sentence || '無例句'}</Text> {/* 防止空值 */}
                     <TouchableOpacity onPress={() => speak(example.sentence || '')} style={styles.iconSpacing}>
-                      <Ionicons name="volume-high" size={24} color="#ffcc00" />
+                      <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
                     </TouchableOpacity>
                   </View>
                   <Text style={styles.translation}>{example.translation || '無翻譯'}</Text> {/* 防止空值 */}

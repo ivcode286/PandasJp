@@ -8,8 +8,8 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import WordsScreen, { scrollToSection } from "../screens/WordsScreen";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { RootStackParamList } from "./RootStackParamList";
-import { Ionicons } from "@expo/vector-icons";
 import { useTranslation } from "react-i18next";
+import { IoniconsWeb } from "@/components/ui/IoniconsWeb";
 
 type LevelType = "N5" | "N4-N3" | "N5-KANJI";
 
@@ -147,7 +147,7 @@ function WordScreenWithDrawer() {
               onPress={() => navigation.goBack()}
               style={{ paddingLeft: 16 }}
             >
-              <Ionicons name="arrow-back" size={24} color="white" />
+              <IoniconsWeb name="arrow-back" size={24} color="white" />
             </TouchableOpacity>
           ),
           headerRight: () => (
@@ -155,7 +155,7 @@ function WordScreenWithDrawer() {
               onPress={() => navigation.toggleDrawer()} // ✅ 使用 `toggleDrawer()`
               style={{ paddingRight: 16 }}
             >
-              <Ionicons name="menu" size={24} color="white" />
+              <IoniconsWeb name="menu" size={24} color="white" />
             </TouchableOpacity>
           ),
         })}

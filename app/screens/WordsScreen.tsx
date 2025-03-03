@@ -1,6 +1,5 @@
 import { useRoute } from '@react-navigation/native';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
-import { Ionicons } from '@expo/vector-icons';
 import React, { useEffect, useState } from 'react';
 import {
   StyleSheet,
@@ -14,6 +13,7 @@ import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 import { LEVELS } from '@/src/utils/constants';
+import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 export const sectionListRef = React.createRef<SectionList<any>>();
 
@@ -119,7 +119,7 @@ export default function WordsScreen() {
               <View style={styles.row}>
                 <Text style={styles.reading}>{item.pron}</Text>
                 <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
-                  <Ionicons name="volume-high" size={24} color="#ffcc00" />
+                  <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
                 </TouchableOpacity>
               </View>
             </View>

@@ -3,9 +3,9 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
-import { Ionicons } from '@expo/vector-icons';
 import { getImage } from '../../../src/utils/imageLoader';
 import { ConversationTranslation } from '../../../src/types/translation';
+import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 type StackParamList = {
   N5ConversationScreen: { conversationTitle: string };
@@ -41,7 +41,7 @@ export default function N5ConversationScreen() {
           <View style={styles.sentenceRow}>
             <Text style={styles.sentence}>{line.speaker}: {line.japanese}</Text>
             <TouchableOpacity onPress={() => speak(line.japanese)} style={styles.iconSpacing}>
-              <Ionicons name="volume-high" size={24} color="#ffcc00" />
+              <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
             </TouchableOpacity>
           </View>
           <Text style={styles.translation}>{line.chinese}</Text>
