@@ -21,6 +21,8 @@ import N5ConversationMenu from '../screens/basic/N5ConversationMenu';
 import GrammarMenu from '../screens/basic/GrammarMenu';
 import GrammarConceptsScreen from '../screens/basic/GrammarConceptsScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import { TouchableOpacity } from 'react-native';
+import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 
 const Tabs = createBottomTabNavigator();
@@ -29,22 +31,32 @@ const Stack = createStackNavigator();
 //Without cardStyle: { flex: 1 },Web app cannot scroll when headerShown: false in Tabs.Screen
 function HomeStack() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: true, cardStyle: { flex: 1 } }}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false,headerTitle: 'ホームページ'}}/>
+    <Stack.Navigator screenOptions={{
+      headerShown: true, cardStyle: { flex: 1 },
+      headerLeft: ({ onPress }) => (
+        <TouchableOpacity
+          onPress={onPress}
+          style={{ marginLeft: 10 }}
+        >
+          <IoniconsWeb name="arrow-back" size={24} color="white" />
+        </TouchableOpacity>
+      ),
+    }}>
+      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false, headerTitle: 'ホームページ' }} />
       <Stack.Screen name="HiraganaScreen" component={HiraganaScreen} options={{ headerTitle: 'ひらがな' }} />
-      <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} options={{ headerTitle: 'カタカナ' }}/>
-      <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} options={{ headerTitle: 'ひらがなとカタカナの比較' }}/>
-      <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} options={{ headerTitle: '基本発音規則 & 長音、促音、拗音' }}/>
+      <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} options={{ headerTitle: 'カタカナ' }} />
+      <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} options={{ headerTitle: 'ひらがなとカタカナの比較' }} />
+      <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} options={{ headerTitle: '基本発音規則 & 長音、促音、拗音' }} />
       <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} options={{ headerTitle: '日本語の基本概念' }} />
       <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} options={{ headerTitle: 'N5 日本語基礎文法の概念' }} />
-      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5 文法' }}/>
-     
+      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5 文法' }} />
 
-      <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false}}/>
+
+      <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }} />
 
       {/* 將原本只在 Tabs.Screen 用的 StoryStack 改為 HomeStack 也能使用 */}
-      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: false ,headerTitle: 'N5 短編物語'}}/>
-      <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true ,headerTitle: 'N5 日常会話'}}/>
+      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: false, headerTitle: 'N5 短編物語' }} />
+      <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true, headerTitle: 'N5 日常会話' }} />
     </Stack.Navigator>
   );
 }
@@ -52,9 +64,19 @@ function HomeStack() {
 
 function StoryStack() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: true, cardStyle: { flex: 1 } }}>
-      <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} options={{ headerTitle: 'N5 物語メニュー' }}/>
-      <Stack.Screen name="N5StoryScreen" component={N5StoryScreen} options={{ headerTitle: 'N5 の物語' }}/>
+    <Stack.Navigator screenOptions={{
+      headerShown: true, cardStyle: { flex: 1 },
+      headerLeft: ({ onPress }) => (
+        <TouchableOpacity
+          onPress={onPress}
+          style={{ marginLeft: 10 }}
+        >
+          <IoniconsWeb name="arrow-back" size={24} color="white" />
+        </TouchableOpacity>
+      ),
+    }}>
+      <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} options={{ headerTitle: 'N5 物語メニュー' }} />
+      <Stack.Screen name="N5StoryScreen" component={N5StoryScreen} options={{ headerTitle: 'N5 の物語' }} />
     </Stack.Navigator>
   );
 }
@@ -71,8 +93,8 @@ function ConversationStack() {
 function GrammarStack() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: true, cardStyle: { flex: 1 } }}>
-      <Stack.Screen name="GrammarMenu" component={GrammarMenu} options={{ headerTitle: 'N5文法メニュー' }}/>
-      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5文法' }}/>
+      <Stack.Screen name="GrammarMenu" component={GrammarMenu} options={{ headerTitle: 'N5文法メニュー' }} />
+      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5文法' }} />
     </Stack.Navigator>
   );
 }
@@ -87,8 +109,8 @@ export default function MyTabs() {
   return (
     <Tabs.Navigator
       screenOptions={{
-        tabBarActiveTintColor: '#1E88E5', // 活動圖標顏色：亮藍色
-        tabBarInactiveTintColor: '#BDBDBD', // 非活動圖標顏色：淺灰色
+        tabBarActiveTintColor: '#1E88E5', // active：light blue
+        tabBarInactiveTintColor: '#BDBDBD', // inactive:grey
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,

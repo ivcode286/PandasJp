@@ -2,7 +2,6 @@ import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
 import { getImage } from '../../../src/utils/imageLoader';
 import { useTranslation } from 'react-i18next';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
