@@ -1,4 +1,4 @@
-//src/locales/i18n.ts
+// src/locales/i18n.ts
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import {
@@ -24,6 +24,7 @@ import n5AdvanceGrammarZhTW from "../locales/zh-TW/N5AdvanceGrammar";
 import n5WordsZhTW from "../locales/zh-TW/N5Words";
 import n5KanjiWordsZhTW from "../locales/zh-TW/N5KanjiWords";
 import n3n4WordsZhTW from "../locales/zh-TW/N3N4Words";
+import commonZhTW from "../locales/zh-TW/Common";
 import grammarConceptsZhCN from "../locales/zh-CN/N5ConceptsScreen";
 import homeZhCN from "../locales/zh-CN/HomeScreen";
 import hiraganaZhCN from "../locales/zh-CN/HiraganaScreen";
@@ -36,6 +37,7 @@ import n5AdvanceGrammarZhCN from "../locales/zh-CN/N5AdvanceGrammar";
 import n5WordsZhCN from "../locales/zh-CN/N5Words";
 import n5KanjiWordsZhCN from "../locales/zh-CN/N5KanjiWords";
 import n3n4WordsZhCN from "../locales/zh-CN/N3N4Words";
+import commonZhCN from "../locales/zh-CN/Common";
 
 const resources = {
   "zh-TW": {
@@ -55,6 +57,7 @@ const resources = {
       n5_kanji: n5KanjiWordsZhTW,
       n3n4: n3n4WordsZhTW,
     },
+    common: commonZhTW,
   },
   "zh-CN": {
     grammarConcepts: grammarConceptsZhCN,
@@ -73,6 +76,7 @@ const resources = {
       n5_kanji: n5KanjiWordsZhCN,
       n3n4: n3n4WordsZhCN,
     },
+    common: commonZhCN,
   },
 };
 
@@ -82,7 +86,18 @@ i18n.use(initReactI18next).init({
   fallbackLng: "zh-TW",
   interpolation: { escapeValue: false },
   defaultNS: "home",
-  ns: ["grammarConcepts", "home", "hiragana", "katakana", "phonetics", "story", "conversation", "grammar", "words"],
+  ns: [
+    "grammarConcepts",
+    "home",
+    "hiragana",
+    "katakana",
+    "phonetics",
+    "story",
+    "conversation",
+    "grammar",
+    "words",
+    "common",
+  ],
 });
 
 declare module "i18next" {
@@ -98,6 +113,7 @@ declare module "i18next" {
       conversation: Translation["conversation"];
       grammar: Translation["grammar"];
       words: Translation["words"];
+      common: Translation["common"];
     };
     returnObjects: true;
   }
@@ -140,6 +156,11 @@ declare module "i18next" {
     (key: `${number}.conversation`, options: { returnObjects: true }): ConversationLine[];
 
     (key: "n5" | "n5_kanji" | "n3n4", options: { returnObjects: true }): WordData[];
+
+    // Common namespace keys
+    (key: `drawer.N5`, ns: "common", options: { returnObjects: true }): string[];
+    (key: `drawer.N4-N3`, ns: "common", options: { returnObjects: true }): string[];
+    (key: `drawer.N5-KANJI`, ns: "common", options: { returnObjects: true }): string[];
   }
 }
 

@@ -1,4 +1,4 @@
-//src/types/translation.ts
+// src/types/translation.ts
 export interface Section {
   title: string;
   paragraph?: string;
@@ -144,6 +144,14 @@ export interface PhoneticsTranslation {
   };
 }
 
+export interface CommonTranslation {
+  drawer: {
+    N5: string[];
+    "N4-N3": string[];
+    "N5-KANJI": string[];
+  };
+}
+
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
@@ -161,4 +169,5 @@ export interface Translation {
     n5_kanji: WordData[];
     n3n4: WordData[];
   };
+  common: CommonTranslation;
 }
