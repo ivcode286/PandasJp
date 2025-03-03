@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, View, Text, StyleSheet, useColorScheme, Button } from "react-native";
+import { ScrollView, View, Text, StyleSheet, useColorScheme } from "react-native";
 import { useTranslation } from "react-i18next";
 
 interface TableProps {
@@ -11,7 +11,7 @@ const GrammarConceptsScreen: React.FC = () => {
   const isDark = useColorScheme() === "dark";
   const styles = getStyles(isDark);
   const tableStyles = getTableStyles(isDark);
-  const { t, i18n } = useTranslation("grammarConcepts");
+  const { t } = useTranslation("grammarConcepts");
 
   const Table: React.FC<TableProps> = ({ header, data }) => (
     <View style={tableStyles.tableContainer}>
@@ -36,19 +36,6 @@ const GrammarConceptsScreen: React.FC = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.buttonContainer}>
-        <Button
-          title="繁體中文"
-          onPress={() => i18n.changeLanguage("zh-TW")}
-          color={i18n.language === "zh-TW" ? "#007AFF" : "#888"}
-        />
-        <Button
-          title="简体中文"
-          onPress={() => i18n.changeLanguage("zh-CN")}
-          color={i18n.language === "zh-CN" ? "#007AFF" : "#888"}
-        />
-      </View>
-
       <Text style={styles.title}>{t("translation.title")}</Text>
       <Text style={styles.paragraph}>{t("translation.intro")}</Text>
 
@@ -115,11 +102,6 @@ const getStyles = (isDark: boolean) =>
       backgroundColor: isDark ? "#000" : "#fff",
       padding: 16,
       paddingBottom: 80,
-    },
-    buttonContainer: {
-      flexDirection: "row",
-      justifyContent: "space-around",
-      marginBottom: 16,
     },
     title: {
       fontSize: 24,

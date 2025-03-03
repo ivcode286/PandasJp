@@ -103,7 +103,7 @@ i18n.use(initReactI18next).init({
     "words",
     "common",
   ],
-  debug: true, // 开启调试日志
+  debug: true, // debug mode
 });
 
 declare module "i18next" {
@@ -111,7 +111,7 @@ declare module "i18next" {
     defaultNS: "home";
     resources: {
       grammarConcepts: Translation["grammarConcepts"];
-      n5Concepts: Translation["grammarConcepts"]; // 添加 n5Concepts
+      n5Concepts: Translation["grammarConcepts"]; 
       home: Translation["home"];
       hiragana: Translation["hiragana"];
       katakana: Translation["katakana"];
