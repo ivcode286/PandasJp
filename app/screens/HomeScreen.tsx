@@ -1,4 +1,3 @@
-// src/screens/HomeScreen.tsx
 import React from "react";
 import {
   View,
@@ -45,21 +44,21 @@ type HomeScreenNavigationProp = StackNavigationProp<
 
 export default function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
-  const { t, i18n } = useTranslation('home');
+  const { t, i18n } = useTranslation("home");
 
   const menuItems: MenuItem[] = [
-    { title: t('menu.hiragana'), screen: "HiraganaScreen" },
-    { title: t('menu.katakana'), screen: "KatakanaScreen" },
-    { title: t('menu.kana_comparison'), screen: "KanaComparisonScreen" },
-    { title: t('menu.phonetics'), screen: "PhoneticsScreen" },
-    { title: t('menu.words_n5'), screen: "WordsWithDrawer", specialLevel: LEVELS.N5 },
-    { title: t('menu.kanji_n5'), screen: "WordsWithDrawer", specialLevel: LEVELS.N5_KANJI },
-    { title: t('menu.n5_concepts'), screen: "N5ConceptsScreen" },
-    { title: t('menu.grammar_concepts'), screen: "GrammarConceptsScreen" },
-    { title: t('menu.n5_basic_grammar'), screen: "GrammarScreen", specialLevel: LEVELS.N5_BASIC_GRAMMAR },
-    { title: t('menu.n5_advance_grammar'), screen: "GrammarScreen", specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
-    { title: t('menu.conversation'), screen: "ConversationStack" },
-    { title: t('menu.story'), screen: "StoryStack" },
+    { title: t("menu.hiragana"), screen: "HiraganaScreen" },
+    { title: t("menu.katakana"), screen: "KatakanaScreen" },
+    { title: t("menu.kana_comparison"), screen: "KanaComparisonScreen" },
+    { title: t("menu.phonetics"), screen: "PhoneticsScreen" },
+    { title: t("menu.words_n5"), screen: "WordsWithDrawer", specialLevel: LEVELS.N5 },
+    { title: t("menu.kanji_n5"), screen: "WordsWithDrawer", specialLevel: LEVELS.N5_KANJI },
+    { title: t("menu.n5_concepts"), screen: "N5ConceptsScreen" },
+    { title: t("menu.grammar_concepts"), screen: "GrammarConceptsScreen" },
+    { title: t("menu.n5_basic_grammar"), screen: "GrammarScreen", specialLevel: LEVELS.N5_BASIC_GRAMMAR },
+    { title: t("menu.n5_advance_grammar"), screen: "GrammarScreen", specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
+    { title: t("menu.conversation"), screen: "ConversationStack" },
+    { title: t("menu.story"), screen: "StoryStack" },
   ];
 
   const handlePress = (item: MenuItem) => {
@@ -70,11 +69,41 @@ export default function HomeScreen() {
     }
   };
 
+  // 切换语言的函数
+  const changeLanguage = (lang: "zh-TW" | "zh-CN") => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.scrollContent}>
-          <Text style={styles.header}>{t("title")}</Text>
+          <View style={styles.headerContainer}>
+            <Text style={styles.header}>{t("title")}</Text>
+            <View style={styles.languageContainer}>
+              <TouchableOpacity onPress={() => changeLanguage("zh-TW")}>
+                <Text
+                  style={[
+                    styles.languageText,
+                    i18n.language === "zh-TW" && styles.languageTextSelected,
+                  ]}
+                >
+                  繁
+                </Text>
+              </TouchableOpacity>
+              <Text style={styles.languageDivider}> | </Text>
+              <TouchableOpacity onPress={() => changeLanguage("zh-CN")}>
+                <Text
+                  style={[
+                    styles.languageText,
+                    i18n.language === "zh-CN" && styles.languageTextSelected,
+                  ]}
+                >
+                  簡
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
           {menuItems.map((item, idx) => (
             <TouchableOpacity
               key={idx}
@@ -103,10 +132,32 @@ const styles = StyleSheet.create({
   scrollContent: {
     paddingBottom: 80,
   },
+  headerContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginVertical: 20,
+  },
   header: {
     fontSize: 24,
     fontWeight: "bold",
-    marginVertical: 20,
+    color: "#ffffff",
+  },
+  languageContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  languageText: {
+    fontSize: 16,
+    color: "#ffffff",
+    paddingHorizontal: 4,
+  },
+  languageTextSelected: {
+    color: "#1E88E5", // highlight current language
+    fontWeight: "bold",
+  },
+  languageDivider: {
+    fontSize: 16,
     color: "#ffffff",
   },
   card: {

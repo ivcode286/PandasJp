@@ -108,7 +108,6 @@ i18n.use(initReactI18next).init({
     "common",
     "settings", // 新增
   ],
-  debug: true,
 });
 
 i18n.on("languageChanged", (lng) => {
