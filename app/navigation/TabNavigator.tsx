@@ -1,11 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import React from 'react';
-import { Colors } from '@/constants/Colors';
 import { HapticTab } from '@/components/HapticTab';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import WordsDrawerNavigator from './WordsScreenWithDrawer';
 import HomeScreen from '../screens/HomeScreen';
 import GrammarScreen from '../screens/GrammarScreen';
 import KanaComparisonScreen from '../screens/basic/KanaComparisonScreen';
@@ -22,7 +20,6 @@ import N5ConceptsScreen from '../screens/basic/N5ConceptsScreen';
 import N5ConversationMenu from '../screens/basic/N5ConversationMenu';
 import GrammarMenu from '../screens/basic/GrammarMenu';
 import GrammarConceptsScreen from '../screens/basic/GrammarConceptsScreen';
-import { Settings } from 'react-native';
 import SettingsScreen from '../screens/SettingsScreen';
 
 
@@ -90,7 +87,8 @@ export default function MyTabs() {
   return (
     <Tabs.Navigator
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: '#1E88E5', // 活動圖標顏色：亮藍色
+        tabBarInactiveTintColor: '#BDBDBD', // 非活動圖標顏色：淺灰色
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
