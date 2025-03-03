@@ -26,6 +26,7 @@ import n5WordsZhTW from "../locales/zh-TW/N5Words";
 import n5KanjiWordsZhTW from "../locales/zh-TW/N5KanjiWords";
 import n3n4WordsZhTW from "../locales/zh-TW/N3N4Words";
 import commonZhTW from "../locales/zh-TW/Common";
+import settingsZhTW from "../locales/zh-TW/SettingsScreen"; // 新增
 import grammarConceptsZhCN from "../locales/zh-CN/GrammarConceptsScreen";
 import n5ConceptsZhCN from "../locales/zh-CN/N5ConceptsScreen";
 import homeZhCN from "../locales/zh-CN/HomeScreen";
@@ -40,6 +41,7 @@ import n5WordsZhCN from "../locales/zh-CN/N5Words";
 import n5KanjiWordsZhCN from "../locales/zh-CN/N5KanjiWords";
 import n3n4WordsZhCN from "../locales/zh-CN/N3N4Words";
 import commonZhCN from "../locales/zh-CN/Common";
+import settingsZhCN from "../locales/zh-CN/SettingsScreen"; // 新增
 
 const resources = {
   "zh-TW": {
@@ -61,6 +63,7 @@ const resources = {
       n3n4: n3n4WordsZhTW,
     },
     common: commonZhTW,
+    settings: settingsZhTW, // 新增
   },
   "zh-CN": {
     grammarConcepts: grammarConceptsZhCN,
@@ -81,6 +84,7 @@ const resources = {
       n3n4: n3n4WordsZhCN,
     },
     common: commonZhCN,
+    settings: settingsZhCN, // 新增
   },
 };
 
@@ -102,8 +106,13 @@ i18n.use(initReactI18next).init({
     "grammar",
     "words",
     "common",
+    "settings", // 新增
   ],
-  debug: true, // debug mode
+  debug: true,
+});
+
+i18n.on("languageChanged", (lng) => {
+  console.log("Language changed to:", lng);
 });
 
 declare module "i18next" {
@@ -111,7 +120,7 @@ declare module "i18next" {
     defaultNS: "home";
     resources: {
       grammarConcepts: Translation["grammarConcepts"];
-      n5Concepts: Translation["grammarConcepts"]; 
+      n5Concepts: Translation["grammarConcepts"];
       home: Translation["home"];
       hiragana: Translation["hiragana"];
       katakana: Translation["katakana"];
@@ -121,6 +130,16 @@ declare module "i18next" {
       grammar: Translation["grammar"];
       words: Translation["words"];
       common: Translation["common"];
+      settings: {
+        translation: {
+          title: string;
+          languageSection: string;
+          languages: {
+            traditionalChinese: string;
+            simplifiedChinese: string;
+          };
+        };
+      }; 
     };
     returnObjects: true;
   }
@@ -174,6 +193,10 @@ declare module "i18next" {
     (key: `drawer.N5`, ns: "common", options: { returnObjects: true }): string[];
     (key: `drawer.N4-N3`, ns: "common", options: { returnObjects: true }): string[];
     (key: `drawer.N5-KANJI`, ns: "common", options: { returnObjects: true }): string[];
+
+    //settings 
+    (key: "translation.title" | "translation.languageSection", options?: any): string;
+    (key: `translation.languages.${string}`, options?: any): string;
   }
 }
 

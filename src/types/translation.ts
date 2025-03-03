@@ -152,6 +152,15 @@ export interface CommonTranslation {
   };
 }
 
+export interface SettingsTranslation {
+  title: string;
+  languageSection: string;
+  languages: {
+    traditionalChinese: string;
+    simplifiedChinese: string;
+  };
+}
+
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
@@ -170,4 +179,5 @@ export interface Translation {
     n3n4: WordData[];
   };
   common: CommonTranslation;
+  settings: SettingsTranslation; 
 }

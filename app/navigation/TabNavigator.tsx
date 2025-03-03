@@ -22,6 +22,8 @@ import N5ConceptsScreen from '../screens/basic/N5ConceptsScreen';
 import N5ConversationMenu from '../screens/basic/N5ConversationMenu';
 import GrammarMenu from '../screens/basic/GrammarMenu';
 import GrammarConceptsScreen from '../screens/basic/GrammarConceptsScreen';
+import { Settings } from 'react-native';
+import SettingsScreen from '../screens/SettingsScreen';
 
 
 const Tabs = createBottomTabNavigator();
@@ -132,7 +134,7 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Settings"
-        component={StoryStack}
+        component={SettingsScreen}
         options={{
           title: 'Settings',
           headerShown: true,
