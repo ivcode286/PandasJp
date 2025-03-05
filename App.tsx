@@ -5,6 +5,8 @@ import MyTabs from './app/navigation/TabNavigator';
 import { StatusBar } from 'expo-status-bar';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
+import './src/locales/i18n';
+
 
 export default function App() {
   const [loaded] = useFonts({
