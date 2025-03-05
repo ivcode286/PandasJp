@@ -7,17 +7,17 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
 
 export default function App() {
-  // const [loaded] = useFonts({
-  //   SpaceMono: require('./assets/fonts/SpaceMono-Regular.ttf'),
-  // });
+  const [loaded] = useFonts({
+    SpaceMono: require('./assets/fonts/SpaceMono-Regular.ttf'),
+  });
 
-  // useEffect(() => {
-  //   if (loaded) {
-  //     SplashScreen.hideAsync();
-  //   }
-  // }, [loaded]);
+  useEffect(() => {
+    if (loaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded]);
 
-  // if (!loaded) return null;
+  if (!loaded) return null;
 
   return (
     <NavigationContainer theme={DarkTheme}>
