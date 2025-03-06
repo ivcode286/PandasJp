@@ -1,5 +1,6 @@
 export type RootStackParamList = {
   // 不需參數的畫面
+  HomeScreen: undefined; // 添加這一行
   HiraganaScreen: undefined;
   KatakanaScreen: undefined;
   KanaComparisonScreen: undefined;

@@ -1,4 +1,5 @@
-import React from "react";
+// screens/HomeScreen.tsx
+import React from 'react';
 import {
   View,
   ScrollView,
@@ -6,14 +7,14 @@ import {
   Text,
   TouchableOpacity,
   StatusBar,
-} from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { RootStackParamList } from "../navigation/RootStackParamList";
-import { LEVELS } from "../../src/utils/constants";
-import { useTranslation } from "react-i18next";
-import { changeLanguage } from "@/src/utils/languageService";
+} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { RootStackParamList } from '../navigation/RootStackParamList';
+import { LEVELS } from '../../src/utils/constants';
+import { useTranslation } from 'react-i18next';
+import { changeLanguage } from '@/src/utils/languageService';
 
 type MenuItemBase = {
   title: string;
@@ -21,79 +22,75 @@ type MenuItemBase = {
 
 type NonParamScreen = {
   screen:
-    | "HiraganaScreen"
-    | "KatakanaScreen"
-    | "KanaComparisonScreen"
-    | "PhoneticsScreen"
-    | "N5ConceptsScreen"
-    | "GrammarConceptsScreen"
-    | "StoryStack"
-    | "ConversationStack";
+    | 'HiraganaScreen'
+    | 'KatakanaScreen'
+    | 'KanaComparisonScreen'
+    | 'PhoneticsScreen'
+    | 'N5ConceptsScreen'
+    | 'GrammarConceptsScreen'
+    | 'StoryStack'
+    | 'ConversationStack';
 };
 
 type ParamScreen = {
-  screen: "WordsWithDrawer" | "GrammarScreen";
+  screen: 'WordsWithDrawer' | 'GrammarScreen';
   specialLevel: string;
 };
 
 type MenuItem = MenuItemBase & (NonParamScreen | ParamScreen);
 
-type HomeScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  "HiraganaScreen"
->;
+type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'HomeScreen'>;
 
 export default function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
-  const { t, i18n } = useTranslation("home");
+  const { t, i18n } = useTranslation('home');
 
   const menuItems: MenuItem[] = [
-    { title: t("menu.hiragana"), screen: "HiraganaScreen" },
-    { title: t("menu.katakana"), screen: "KatakanaScreen" },
-    { title: t("menu.kana_comparison"), screen: "KanaComparisonScreen" },
-    { title: t("menu.phonetics"), screen: "PhoneticsScreen" },
-    { title: t("menu.words_n5"), screen: "WordsWithDrawer", specialLevel: LEVELS.N5 },
-    { title: t("menu.kanji_n5"), screen: "WordsWithDrawer", specialLevel: LEVELS.N5_KANJI },
-    { title: t("menu.n5_concepts"), screen: "N5ConceptsScreen" },
-    { title: t("menu.grammar_concepts"), screen: "GrammarConceptsScreen" },
-    { title: t("menu.n5_basic_grammar"), screen: "GrammarScreen", specialLevel: LEVELS.N5_BASIC_GRAMMAR },
-    { title: t("menu.n5_advance_grammar"), screen: "GrammarScreen", specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
-    { title: t("menu.conversation"), screen: "ConversationStack" },
-    { title: t("menu.story"), screen: "StoryStack" },
+    { title: t('menu.hiragana'), screen: 'HiraganaScreen' },
+    { title: t('menu.katakana'), screen: 'KatakanaScreen' },
+    { title: t('menu.kana_comparison'), screen: 'KanaComparisonScreen' },
+    { title: t('menu.phonetics'), screen: 'PhoneticsScreen' },
+    { title: t('menu.words_n5'), screen: 'WordsWithDrawer', specialLevel: LEVELS.N5 },
+    { title: t('menu.kanji_n5'), screen: 'WordsWithDrawer', specialLevel: LEVELS.N5_KANJI },
+    { title: t('menu.n5_concepts'), screen: 'N5ConceptsScreen' },
+    { title: t('menu.grammar_concepts'), screen: 'GrammarConceptsScreen' },
+    { title: t('menu.n5_basic_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_BASIC_GRAMMAR },
+    { title: t('menu.n5_advance_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
+    { title: t('menu.conversation'), screen: 'ConversationStack' },
+    { title: t('menu.story'), screen: 'StoryStack' },
   ];
 
   const handlePress = (item: MenuItem) => {
-    if (item.screen === "WordsWithDrawer" || item.screen === "GrammarScreen") {
+    if (item.screen === 'WordsWithDrawer' || item.screen === 'GrammarScreen') {
       navigation.navigate(item.screen, { level: item.specialLevel });
     } else {
       navigation.navigate(item.screen);
     }
   };
 
-
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.scrollContent}>
           <View style={styles.headerContainer}>
-            <Text style={styles.header}>{t("title")}</Text>
+            <Text style={styles.header}>{t('title')}</Text>
             <View style={styles.languageContainer}>
-              <TouchableOpacity onPress={() => changeLanguage("zh-TW")}>
+              <TouchableOpacity onPress={() => changeLanguage('zh-TW')}>
                 <Text
                   style={[
                     styles.languageText,
-                    i18n.language === "zh-TW" && styles.languageTextSelected,
+                    i18n.language === 'zh-TW' && styles.languageTextSelected,
                   ]}
                 >
                   繁
                 </Text>
               </TouchableOpacity>
               <Text style={styles.languageDivider}> | </Text>
-              <TouchableOpacity onPress={() => changeLanguage("zh-CN")}>
+              <TouchableOpacity onPress={() => changeLanguage('zh-CN')}>
                 <Text
                   style={[
                     styles.languageText,
-                    i18n.language === "zh-CN" && styles.languageTextSelected,
+                    i18n.language === 'zh-CN' && styles.languageTextSelected,
                   ]}
                 >
                   簡
@@ -102,11 +99,7 @@ export default function HomeScreen() {
             </View>
           </View>
           {menuItems.map((item, idx) => (
-            <TouchableOpacity
-              key={idx}
-              style={styles.card}
-              onPress={() => handlePress(item)}
-            >
+            <TouchableOpacity key={idx} style={styles.card} onPress={() => handlePress(item)}>
               <Text style={styles.cardText}>• {item.title}</Text>
             </TouchableOpacity>
           ))}
@@ -119,7 +112,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#121212",
+    backgroundColor: '#121212',
   },
   container: {
     flex: 1,
@@ -130,41 +123,41 @@ const styles = StyleSheet.create({
     paddingBottom: 80,
   },
   headerContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     marginVertical: 20,
   },
   header: {
     fontSize: 24,
-    fontWeight: "bold",
-    color: "#ffffff",
+    fontWeight: 'bold',
+    color: '#ffffff',
   },
   languageContainer: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   languageText: {
     fontSize: 16,
-    color: "#ffffff",
+    color: '#ffffff',
     paddingHorizontal: 4,
   },
   languageTextSelected: {
-    color: "#1E88E5", // highlight current language
-    fontWeight: "bold",
+    color: '#1E88E5',
+    fontWeight: 'bold',
   },
   languageDivider: {
     fontSize: 16,
-    color: "#ffffff",
+    color: '#ffffff',
   },
   card: {
-    backgroundColor: "#1e1e1e",
+    backgroundColor: '#1e1e1e',
     padding: 16,
     borderRadius: 8,
     marginBottom: 16,
   },
   cardText: {
     fontSize: 18,
-    color: "#ffffff",
+    color: '#ffffff',
   },
 });

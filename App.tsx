@@ -7,7 +7,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import i18n from './src/locales/i18n';
-import './src/locales/i18n';
+import linking from './src/utils/linkingConfig';
 
 const LANGUAGE_KEY = 'app_language';
 
@@ -16,18 +16,18 @@ export default function App() {
     SpaceMono: require('./assets/fonts/SpaceMono-Regular.ttf'),
   });
 
-  // 新增狀態以確保語言載入完成
   const [langLoaded, setLangLoaded] = useState(false);
 
   useEffect(() => {
     async function loadLanguage() {
       try {
         const savedLang = await AsyncStorage.getItem(LANGUAGE_KEY);
-        if (savedLang) {
-          await i18n.changeLanguage(savedLang);
-        }
+        const initialLang = savedLang || 'zh-CN'; // 默認語言
+        await i18n.changeLanguage(initialLang);
+        await AsyncStorage.setItem(LANGUAGE_KEY, initialLang);
       } catch (error) {
         console.error('讀取語言失敗:', error);
+        await i18n.changeLanguage('zh-CN');
       } finally {
         setLangLoaded(true);
       }
@@ -44,7 +44,20 @@ export default function App() {
   if (!loaded || !langLoaded) return null;
 
   return (
-    <NavigationContainer theme={DarkTheme}>
+    <NavigationContainer
+      theme={DarkTheme}
+      linking={linking}
+      initialState={{
+        routes: [
+          {
+            name: 'Home',
+            state: {
+              routes: [{ name: 'HomeScreen' }],
+            },
+          },
+        ],
+      }}
+    >
       <MyTabs />
       <StatusBar style="auto" />
     </NavigationContainer>

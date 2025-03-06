@@ -1,3 +1,4 @@
+// navigation/TabNavigator.tsx
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import React from 'react';
@@ -24,25 +25,23 @@ import SettingsScreen from '../screens/SettingsScreen';
 import { TouchableOpacity } from 'react-native';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
-
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-//Without cardStyle: { flex: 1 },Web app cannot scroll when headerShown: false in Tabs.Screen
 function HomeStack() {
   return (
-    <Stack.Navigator screenOptions={{
-      headerShown: true, cardStyle: { flex: 1 },
-      headerLeft: ({ onPress }) => (
-        <TouchableOpacity
-          onPress={onPress}
-          style={{ marginLeft: 10 }}
-        >
-          <IoniconsWeb name="arrow-back" size={24} color="white" />
-        </TouchableOpacity>
-      ),
-    }}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false, headerTitle: 'ホームページ' }} />
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: true,
+        cardStyle: { flex: 1 },
+        headerLeft: ({ onPress }) => (
+          <TouchableOpacity onPress={onPress} style={{ marginLeft: 10 }}>
+            <IoniconsWeb name="arrow-back" size={24} color="white" />
+          </TouchableOpacity>
+        ),
+      }}
+    >
+      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
       <Stack.Screen name="HiraganaScreen" component={HiraganaScreen} options={{ headerTitle: 'ひらがな' }} />
       <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} options={{ headerTitle: 'カタカナ' }} />
       <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} options={{ headerTitle: 'ひらがなとカタカナの比較' }} />
@@ -50,31 +49,26 @@ function HomeStack() {
       <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} options={{ headerTitle: '日本語の基本概念' }} />
       <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} options={{ headerTitle: 'N5 日本語基礎文法の概念' }} />
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5 文法' }} />
-
-
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }} />
-
-      {/* 將原本只在 Tabs.Screen 用的 StoryStack 改為 HomeStack 也能使用 */}
-      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: false, headerTitle: 'N5 短編物語' }} />
+      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: false }} />
       <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true, headerTitle: 'N5 日常会話' }} />
     </Stack.Navigator>
   );
 }
 
-
 function StoryStack() {
   return (
-    <Stack.Navigator screenOptions={{
-      headerShown: true, cardStyle: { flex: 1 },
-      headerLeft: ({ onPress }) => (
-        <TouchableOpacity
-          onPress={onPress}
-          style={{ marginLeft: 10 }}
-        >
-          <IoniconsWeb name="arrow-back" size={24} color="white" />
-        </TouchableOpacity>
-      ),
-    }}>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: true,
+        cardStyle: { flex: 1 },
+        headerLeft: ({ onPress }) => (
+          <TouchableOpacity onPress={onPress} style={{ marginLeft: 10 }}>
+            <IoniconsWeb name="arrow-back" size={24} color="white" />
+          </TouchableOpacity>
+        ),
+      }}
+    >
       <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} options={{ headerTitle: 'N5 物語メニュー' }} />
       <Stack.Screen name="N5StoryScreen" component={N5StoryScreen} options={{ headerTitle: 'N5 の物語' }} />
     </Stack.Navigator>
@@ -99,18 +93,14 @@ function GrammarStack() {
   );
 }
 
-
-
-
-
 export default function MyTabs() {
   const colorScheme = useColorScheme();
 
   return (
     <Tabs.Navigator
       screenOptions={{
-        tabBarActiveTintColor: '#1E88E5', // active：light blue
-        tabBarInactiveTintColor: '#BDBDBD', // inactive:grey
+        tabBarActiveTintColor: '#1E88E5',
+        tabBarInactiveTintColor: '#BDBDBD',
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
@@ -124,19 +114,16 @@ export default function MyTabs() {
         tabBarShowLabel: false,
       }}
     >
-
       <Tabs.Screen
         name="Home"
         component={HomeStack}
         options={{
           title: 'Learning Path',
-          headerShown: false,
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color || 'white'} />,
         }}
       />
       <Tabs.Screen
         name="Words"
-        //component={WordsDrawerNavigator}
         component={WordsNavigator}
         options={{
           title: 'Words',
@@ -147,8 +134,7 @@ export default function MyTabs() {
         name="Story"
         component={StoryStack}
         options={{
-          title: '',
-          headerShown: false,
+          title: 'Story',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="pencil.line" color={color || 'white'} />,
         }}
       />
@@ -164,5 +150,3 @@ export default function MyTabs() {
     </Tabs.Navigator>
   );
 }
-
-
