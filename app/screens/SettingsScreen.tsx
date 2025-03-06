@@ -1,15 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, useColorScheme, TouchableOpacity, ScrollView } from "react-native";
 import { useTranslation } from "react-i18next";
+import { changeLanguage } from "../../src/utils/languageService";
 
 const SettingsScreen: React.FC = () => {
   const isDark = useColorScheme() === "dark";
   const styles = getStyles(isDark);
   const { t, i18n } = useTranslation("settings");
-
-  const changeLanguage = (lang: "zh-TW" | "zh-CN") => {
-    i18n.changeLanguage(lang);
-  };
 
   return (
     <ScrollView style={styles.container}>
