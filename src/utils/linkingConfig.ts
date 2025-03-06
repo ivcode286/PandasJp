@@ -35,23 +35,23 @@ const linking = {
     console.log('getPathFromState state:', state);
     let path = defaultGetPathFromState(state, options);
     if (path.startsWith('/')) {
-      path = path.slice(1); // 移除開頭斜線
+      path = path.slice(1);
     }
 
-    const segments = path.split('/').filter(Boolean); // 分割並過濾空段
+    const segments = path.split('/').filter(Boolean);
 
-    // 從導航狀態中提取語言（如果有的話）
-    let lang = i18n.language ? i18n.language.toUpperCase() : 'ZH-CN'; // 默認語言
+    // 從導航狀態中提取語言
+    let lang = i18n.language ? i18n.language.toUpperCase() : 'ZH-CN';
     if (state.routes && state.routes[0]?.params) {
       const params = state.routes[0].params as { lang?: string };
       if (params.lang && (params.lang.toUpperCase() === 'ZH-TW' || params.lang.toUpperCase() === 'ZH-CN')) {
-        lang = params.lang.toUpperCase(); // 使用導航狀態中的語言
+        lang = params.lang.toUpperCase();
       }
     }
 
-    // 過濾掉無效段（包括 undefined 和語言代碼重複）
+    // 過濾掉所有語言代碼，只保留路由部分
     const cleanedSegments = segments.filter(
-      seg => seg && seg !== 'undefined' && seg.toUpperCase() !== lang
+      seg => seg.toUpperCase() !== 'ZH-TW' && seg.toUpperCase() !== 'ZH-CN' && seg !== 'undefined'
     );
 
     // 移除重複的路徑段
@@ -64,34 +64,32 @@ const linking = {
 
     // 如果沒有有效路徑，默認為 Home/HomeScreen
     const finalPath = uniqueSegments.length > 0 ? uniqueSegments.join('/') : 'Home/HomeScreen';
-    console.log('Generated path:', `/${lang}/${finalPath}`);
-    return `/${lang}/${finalPath}`;
+    const generatedPath = `/${lang}/${finalPath}`;
+    console.log('Generated path:', generatedPath);
+    return generatedPath;
   },
   async getStateFromPath(path, options) {
     console.log('getStateFromPath path:', path);
-    const segments = path.split('/').filter(Boolean); // 分割並過濾空段
-    let lang = i18n.language ? i18n.language.toUpperCase() : 'ZH-CN'; // 當前語言
+    const segments = path.split('/').filter(Boolean);
+    let lang = i18n.language ? i18n.language.toUpperCase() : 'ZH-CN';
 
-    // 檢查 URL 中的語言代碼並同步更新
     if (segments[0]?.toUpperCase() === 'ZH-TW' || segments[0]?.toUpperCase() === 'ZH-CN') {
-      const newLang = segments.shift()!.toLowerCase(); // 提取語言代碼並轉為小寫（如 zh-tw）
-      if (newLang !== i18n.language) {
-        // 如果 URL 中的語言與當前語言不同，更新語言
-        await changeLanguage(newLang as 'zh-TW' | 'zh-CN');
+      const urlLang = segments.shift()!.toLowerCase();
+      if (urlLang !== i18n.language) {
+        console.log('Syncing language to URL lang:', urlLang);
+        await changeLanguage(urlLang as 'zh-TW' | 'zh-CN');
       }
-      lang = newLang.toUpperCase();
+      lang = urlLang.toUpperCase();
+    } else {
+      console.log('No language in URL, using current lang:', lang);
     }
 
-    const newPath = segments.filter(seg => seg !== 'undefined').join('/') || 'Home/HomeScreen'; // 過濾 undefined
+    const newPath = segments.filter(seg => seg !== 'undefined').join('/') || 'Home/HomeScreen';
     const state = defaultGetStateFromPath(newPath, options);
 
-    // 在狀態中添加語言參數
     if (state && state.routes && state.routes[0]) {
       state.routes[0].params = { ...state.routes[0].params, lang: lang.toLowerCase() };
-    }
-
-    // 確保返回有效的導航狀態
-    if (!state) {
+    } else {
       return {
         routes: [
           {
@@ -104,6 +102,7 @@ const linking = {
         ],
       };
     }
+
     console.log('Generated state:', state);
     return state;
   },

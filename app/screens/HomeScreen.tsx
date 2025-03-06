@@ -45,17 +45,26 @@ export default function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
   const { t, i18n } = useTranslation('home');
 
-  // 監聽語言變化，強制重新渲染
   useEffect(() => {
     const handleLanguageChange = (lng: string) => {
       console.log('HomeScreen detected language change to:', lng);
-      // 不需要額外操作，因為 useTranslation 會自動觸發重新渲染
     };
     i18n.on('languageChanged', handleLanguageChange);
     return () => {
       i18n.off('languageChanged', handleLanguageChange);
     };
   }, [i18n]);
+
+  const handleLanguageChange = async (lang: 'zh-TW' | 'zh-CN') => {
+    console.log('Changing language to:', lang);
+    await changeLanguage(lang);
+    console.log('Navigating with new lang:', lang);
+    // 更新頂層 'Home' 路由的參數，並重新導航到 HomeScreen
+    navigation.navigate('Home', {
+      screen: 'HomeScreen',
+      params: { lang },
+    });
+  };
 
   const menuItems: MenuItem[] = [
     { title: t('menu.hiragana'), screen: 'HiraganaScreen' },
@@ -87,7 +96,7 @@ export default function HomeScreen() {
           <View style={styles.headerContainer}>
             <Text style={styles.header}>{t('title')}</Text>
             <View style={styles.languageContainer}>
-              <TouchableOpacity onPress={() => changeLanguage('zh-TW')}>
+              <TouchableOpacity onPress={() => handleLanguageChange('zh-TW')}>
                 <Text
                   style={[
                     styles.languageText,
@@ -98,7 +107,7 @@ export default function HomeScreen() {
                 </Text>
               </TouchableOpacity>
               <Text style={styles.languageDivider}> | </Text>
-              <TouchableOpacity onPress={() => changeLanguage('zh-CN')}>
+              <TouchableOpacity onPress={() => handleLanguageChange('zh-CN')}>
                 <Text
                   style={[
                     styles.languageText,
