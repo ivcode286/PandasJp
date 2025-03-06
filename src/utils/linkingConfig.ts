@@ -40,7 +40,7 @@ const linking = {
 
     const segments = path.split('/').filter(Boolean);
 
-    // 從導航狀態中提取語言
+    // 從導航狀態中提取語言，優先使用 state.params.lang
     let lang = i18n.language ? i18n.language.toUpperCase() : 'ZH-CN';
     if (state.routes && state.routes[0]?.params) {
       const params = state.routes[0].params as { lang?: string };
@@ -48,6 +48,7 @@ const linking = {
         lang = params.lang.toUpperCase();
       }
     }
+    console.log('Language used for path:', lang, 'i18n.language:', i18n.language);
 
     // 過濾掉所有語言代碼，只保留路由部分
     const cleanedSegments = segments.filter(
@@ -85,7 +86,7 @@ const linking = {
     }
 
     const newPath = segments.filter(seg => seg !== 'undefined').join('/') || 'Home/HomeScreen';
-    const state = defaultGetStateFromPath(newPath, options);
+    const state = defaultGetPathFromState(newPath, options);
 
     if (state && state.routes && state.routes[0]) {
       state.routes[0].params = { ...state.routes[0].params, lang: lang.toLowerCase() };
