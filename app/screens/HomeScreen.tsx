@@ -13,6 +13,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { RootStackParamList } from "../navigation/RootStackParamList";
 import { LEVELS } from "../../src/utils/constants";
 import { useTranslation } from "react-i18next";
+import { changeLanguage } from "@/src/utils/languageService";
 
 type MenuItemBase = {
   title: string;
@@ -69,10 +70,6 @@ export default function HomeScreen() {
     }
   };
 
-  // 切换语言的函数
-  const changeLanguage = (lang: "zh-TW" | "zh-CN") => {
-    i18n.changeLanguage(lang);
-  };
 
   return (
     <SafeAreaView style={styles.safeArea}>
