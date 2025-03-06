@@ -51,6 +51,7 @@ export default function App() {
         routes: [
           {
             name: 'Home',
+            params: { lang: i18n.language || 'zh-CN' }, // 添加初始語言參數
             state: {
               routes: [{ name: 'HomeScreen' }],
             },

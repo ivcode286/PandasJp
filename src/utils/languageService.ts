@@ -1,3 +1,4 @@
+// src/utils/languageService.ts
 import i18n from '../locales/i18n';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -8,6 +9,6 @@ export const changeLanguage = async (lang: 'zh-TW' | 'zh-CN'): Promise<void> => 
     await i18n.changeLanguage(lang);
     await AsyncStorage.setItem(LANGUAGE_KEY, lang);
   } catch (error) {
-    console.error('更改語言失敗:', error);
+    console.error('change language failed:', error);
   }
 };

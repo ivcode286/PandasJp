@@ -1,5 +1,5 @@
 // screens/HomeScreen.tsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   View,
   ScrollView,
@@ -44,6 +44,18 @@ type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'HomeScr
 export default function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
   const { t, i18n } = useTranslation('home');
+
+  // 監聽語言變化，強制重新渲染
+  useEffect(() => {
+    const handleLanguageChange = (lng: string) => {
+      console.log('HomeScreen detected language change to:', lng);
+      // 不需要額外操作，因為 useTranslation 會自動觸發重新渲染
+    };
+    i18n.on('languageChanged', handleLanguageChange);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, [i18n]);
 
   const menuItems: MenuItem[] = [
     { title: t('menu.hiragana'), screen: 'HiraganaScreen' },
