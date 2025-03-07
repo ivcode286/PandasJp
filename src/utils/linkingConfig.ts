@@ -33,7 +33,6 @@ const linking = {
       Settings: ':lang/Settings',
     },
   },
-  // Type the `state` parameter as NavigationState or PartialState<NavigationState>
   getPathFromState(state: NavigationState | PartialState<NavigationState>, options?: any): string {
     console.log('getPathFromState state:', state);
     let path = defaultGetPathFromState(state, options);
@@ -72,8 +71,7 @@ const linking = {
     console.log('Generated path:', generatedPath);
     return generatedPath;
   },
-  // Type the `path` parameter as string
-  async getStateFromPath(path: string, options?: any): Promise<NavigationState | PartialState<NavigationState>> {
+  getStateFromPath(path: string, options?: any): PartialState<NavigationState> {
     console.log('getStateFromPath path:', path);
     const segments = path.split('/').filter(Boolean);
     let lang = i18n.language ? i18n.language.toUpperCase() : 'ZH-CN';
@@ -82,7 +80,10 @@ const linking = {
       const urlLang = segments.shift()!.toLowerCase();
       if (urlLang !== i18n.language) {
         console.log('Syncing language to URL lang:', urlLang);
-        await changeLanguage(urlLang as 'zh-TW' | 'zh-CN');
+        // Handle language change as a side effect
+        changeLanguage(urlLang as 'zh-TW' | 'zh-CN').catch(err =>
+          console.error('Failed to change language:', err)
+        );
       }
       lang = urlLang.toUpperCase();
     } else {
@@ -93,23 +94,32 @@ const linking = {
     const state = defaultGetStateFromPath(newPath, options);
 
     if (state && state.routes && state.routes[0]) {
-      state.routes[0].params = { ...state.routes[0].params, lang: lang.toLowerCase() };
-    } else {
+      // Create a new route object with updated params instead of mutating the original
+      const updatedRoute = {
+        ...state.routes[0],
+        params: {
+          ...state.routes[0].params,
+          lang: lang.toLowerCase(),
+        },
+      };
       return {
-        routes: [
-          {
-            name: 'Home',
-            params: { lang: lang.toLowerCase() },
-            state: {
-              routes: [{ name: 'HomeScreen' }],
-            },
-          },
-        ],
+        ...state,
+        routes: [updatedRoute, ...state.routes.slice(1)],
       };
     }
 
-    console.log('Generated state:', state);
-    return state;
+    // Fallback state
+    return {
+      routes: [
+        {
+          name: 'Home',
+          params: { lang: lang.toLowerCase() },
+          state: {
+            routes: [{ name: 'HomeScreen' }],
+          },
+        },
+      ],
+    };
   },
 };
 
