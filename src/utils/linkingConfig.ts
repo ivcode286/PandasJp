@@ -7,9 +7,8 @@ import {
 import i18n from '../locales/i18n';
 import { changeLanguage } from './languageService';
 
-// Define the linking configuration
 const linking = {
-  prefixes: ['http://localhost:8081'],
+  prefixes: ['http://localhost:8081', 'https://pandasapps.com'], // Add both prefixes
   config: {
     screens: {
       Home: {
@@ -94,7 +93,6 @@ const linking = {
     const state = defaultGetStateFromPath(newPath, options);
 
     if (state && state.routes && state.routes[0]) {
-      // Create a new route object with updated params instead of mutating the original
       const updatedRoute = {
         ...state.routes[0],
         params: {
