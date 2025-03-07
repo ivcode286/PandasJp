@@ -1,12 +1,37 @@
 import React from "react";
-import { View, Text, StyleSheet, useColorScheme, TouchableOpacity, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  useColorScheme,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "../../src/utils/languageService";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParamList } from "../navigation/RootStackParamList"; // Adjust the path as needed
+
+// Define navigation prop type
+type SettingsScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  "Settings"
+>;
 
 const SettingsScreen: React.FC = () => {
   const isDark = useColorScheme() === "dark";
   const styles = getStyles(isDark);
   const { t, i18n } = useTranslation("settings");
+  const navigation = useNavigation<SettingsScreenNavigationProp>();
+
+  const handleLanguageChange = async (lang: "zh-TW" | "zh-CN") => {
+    console.log("Changing language to:", lang);
+    await changeLanguage(lang);
+    console.log("Navigating with new lang:", lang);
+    // Update the navigation state with the new language
+    navigation.navigate("Settings", { lang });
+  };
 
   return (
     <ScrollView style={styles.container}>
@@ -19,7 +44,7 @@ const SettingsScreen: React.FC = () => {
             styles.optionButton,
             i18n.language === "zh-TW" && styles.optionButtonSelected,
           ]}
-          onPress={() => changeLanguage("zh-TW")}
+          onPress={() => handleLanguageChange("zh-TW")}
         >
           <Text
             style={[
@@ -35,7 +60,7 @@ const SettingsScreen: React.FC = () => {
             styles.optionButton,
             i18n.language === "zh-CN" && styles.optionButtonSelected,
           ]}
-          onPress={() => changeLanguage("zh-CN")}
+          onPress={() => handleLanguageChange("zh-CN")}
         >
           <Text
             style={[

@@ -20,4 +20,6 @@ export type RootStackParamList = {
   WordsWithDrawer: {
     level: string; 
   };
+
+  Settings: { lang?: "zh-TW" | "zh-CN" }; // Add this line
 };
