@@ -1,11 +1,13 @@
-// src/utils/linkingConfig.ts
 import {
   getPathFromState as defaultGetPathFromState,
   getStateFromPath as defaultGetStateFromPath,
+  NavigationState,
+  PartialState,
 } from '@react-navigation/native';
 import i18n from '../locales/i18n';
 import { changeLanguage } from './languageService';
 
+// Define the linking configuration
 const linking = {
   prefixes: ['http://localhost:8081'],
   config: {
@@ -31,7 +33,8 @@ const linking = {
       Settings: ':lang/Settings',
     },
   },
-  getPathFromState(state, options) {
+  // Type the `state` parameter as NavigationState or PartialState<NavigationState>
+  getPathFromState(state: NavigationState | PartialState<NavigationState>, options?: any): string {
     console.log('getPathFromState state:', state);
     let path = defaultGetPathFromState(state, options);
     if (path.startsWith('/')) {
@@ -40,7 +43,7 @@ const linking = {
 
     const segments = path.split('/').filter(Boolean);
 
-    // 從導航狀態中提取語言，優先使用 state.params.lang
+    // Extract language from navigation state, default to i18n.language
     let lang = i18n.language ? i18n.language.toUpperCase() : 'ZH-CN';
     if (state.routes && state.routes[0]?.params) {
       const params = state.routes[0].params as { lang?: string };
@@ -50,12 +53,12 @@ const linking = {
     }
     console.log('Language used for path:', lang, 'i18n.language:', i18n.language);
 
-    // 過濾掉所有語言代碼，只保留路由部分
+    // Filter out language codes and undefined segments
     const cleanedSegments = segments.filter(
       seg => seg.toUpperCase() !== 'ZH-TW' && seg.toUpperCase() !== 'ZH-CN' && seg !== 'undefined'
     );
 
-    // 移除重複的路徑段
+    // Remove duplicate path segments
     const uniqueSegments: string[] = [];
     for (const seg of cleanedSegments) {
       if (uniqueSegments.length === 0 || uniqueSegments[uniqueSegments.length - 1] !== seg) {
@@ -63,13 +66,14 @@ const linking = {
       }
     }
 
-    // 如果沒有有效路徑，默認為 Home/HomeScreen
+    // Default to Home/HomeScreen if no valid path
     const finalPath = uniqueSegments.length > 0 ? uniqueSegments.join('/') : 'Home/HomeScreen';
     const generatedPath = `/${lang}/${finalPath}`;
     console.log('Generated path:', generatedPath);
     return generatedPath;
   },
-  async getStateFromPath(path, options) {
+  // Type the `path` parameter as string
+  async getStateFromPath(path: string, options?: any): Promise<NavigationState | PartialState<NavigationState>> {
     console.log('getStateFromPath path:', path);
     const segments = path.split('/').filter(Boolean);
     let lang = i18n.language ? i18n.language.toUpperCase() : 'ZH-CN';
@@ -86,7 +90,7 @@ const linking = {
     }
 
     const newPath = segments.filter(seg => seg !== 'undefined').join('/') || 'Home/HomeScreen';
-    const state = defaultGetPathFromState(newPath, options);
+    const state = defaultGetStateFromPath(newPath, options);
 
     if (state && state.routes && state.routes[0]) {
       state.routes[0].params = { ...state.routes[0].params, lang: lang.toLowerCase() };
