@@ -1,6 +1,10 @@
+export type HomeStackParamList = {
+  HomeScreen: { lang?: 'zh-TW' | 'zh-CN' };
+};
+
 export type RootStackParamList = {
-  // 不需參數的畫面
-  HomeScreen: undefined; // 添加這一行
+  Home: { screen: keyof HomeStackParamList; params?: { lang: 'zh-TW' | 'zh-CN' } };
+  HomeScreen: undefined; // If HomeScreen is still accessible directly
   HiraganaScreen: undefined;
   KatakanaScreen: undefined;
   KanaComparisonScreen: undefined;
