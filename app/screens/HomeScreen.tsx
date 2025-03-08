@@ -103,7 +103,7 @@ export default function HomeScreen() {
                     i18n.language === 'zh-TW' && styles.languageTextSelected,
                   ]}
                 >
-                  繁
+                  {t('language.traditional_chinese')}       
                 </Text>
               </TouchableOpacity>
               <Text style={styles.languageDivider}> | </Text>
@@ -114,7 +114,7 @@ export default function HomeScreen() {
                     i18n.language === 'zh-CN' && styles.languageTextSelected,
                   ]}
                 >
-                  簡
+                   {t('language.simple_chinese')} 
                 </Text>
               </TouchableOpacity>
             </View>

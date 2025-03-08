@@ -14,6 +14,10 @@ const homeZhCN = {
       conversation: "N5日常对话",
       story: "N5短篇故事",
     },
+    language:{
+      traditional_chinese: "繁",
+      simple_chinese: "简"
+    }
   };
   
   export default homeZhCN;

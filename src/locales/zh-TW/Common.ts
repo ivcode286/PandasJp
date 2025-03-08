@@ -1,31 +1,5 @@
 // src/locales/zh-TW/Common.ts
 const commonZhTW = {
-  titles: {
-    appName: "日語學習",
-    welcome: "歡迎",
-    settings: "設定",
-    about: "關於",
-    home: "首頁",
-  },
-  messages: {
-    loading: "載入中...",
-    error: "發生錯誤，請稍後再試。",
-    success: "操作成功！",
-    noData: "暫無資料",
-    confirm: "確認",
-    cancel: "取消",
-  },
-  buttons: {
-    submit: "提交",
-    back: "返回",
-    next: "下一步",
-    retry: "重試",
-  },
-  labels: {
-    username: "用戶名",
-    password: "密碼",
-    language: "語言",
-  },
   drawer: {
     N5: [
       "人",

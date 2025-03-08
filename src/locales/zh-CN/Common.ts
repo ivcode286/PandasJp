@@ -1,31 +1,5 @@
 // src/locales/zh-CN/Common.ts
 const commonZhCN = {
-    titles: {
-      appName: "日语学习",
-      welcome: "欢迎",
-      settings: "设置",
-      about: "关于",
-      home: "首页",
-    },
-    messages: {
-      loading: "加载中...",
-      error: "发生错误，请稍后再试。",
-      success: "操作成功！",
-      noData: "暂无数据",
-      confirm: "确认",
-      cancel: "取消",
-    },
-    buttons: {
-      submit: "提交",
-      back: "返回",
-      next: "下一步",
-      retry: "重试",
-    },
-    labels: {
-      username: "用户名",
-      password: "密码",
-      language: "语言",
-    },
     drawer: {
       N5: [
         "人",
