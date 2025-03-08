@@ -12,24 +12,24 @@ const linking = {
   config: {
     screens: {
       Home: {
-        path: ":lang/Home",
+        path: ":lang/home", // Keep lowercase "home" as the parent path
         screens: {
-          HomeScreen: "HomeScreen",
-          HiraganaScreen: "HiraganaScreen",
-          KatakanaScreen: "KatakanaScreen",
-          KanaComparisonScreen: "KanaComparisonScreen",
-          PhoneticsScreen: "PhoneticsScreen",
-          N5ConceptsScreen: "N5ConceptsScreen",
-          GrammarConceptsScreen: "GrammarConceptsScreen",
-          GrammarScreen: "GrammarScreen/:level",
-          WordsWithDrawer: "WordsWithDrawer/:level",
-          StoryStack: "StoryStack",
-          ConversationStack: "ConversationStack",
+          HomeScreen: "", // Default subpath is empty, maps directly to /home
+          HiraganaScreen: "hiragana", 
+          KatakanaScreen: "katakana", 
+          KanaComparisonScreen: "kana-comparison", 
+          PhoneticsScreen: "phonetics", 
+          N5ConceptsScreen: "n5-concepts", 
+          GrammarConceptsScreen: "grammar-concepts",
+          GrammarScreen: "grammar/:level", 
+          WordsWithDrawer: "words-with-drawer/:level", 
+          StoryStack: "story-stack", 
+          ConversationStack: "conversation-stack", 
         },
       },
-      Words: ":lang/Words",
-      Story: ":lang/Story",
-      Settings: ":lang/Settings",
+      Words: ":lang/words", 
+      Story: ":lang/story", 
+      Settings: ":lang/settings", 
     },
   },
   getPathFromState(state: NavigationState | PartialState<NavigationState>, options?: any): string {
@@ -41,33 +41,29 @@ const linking = {
 
     const segments = path.split("/").filter(Boolean);
 
-    // Use i18n.language as the primary source of truth, converting to uppercase
-    let lang = i18n.language ? i18n.language.toUpperCase() : "ZH-CN";
+    // Use i18n.language as the language source, keep lowercase and retain hyphen
+    let lang = i18n.language ? i18n.language.toLowerCase() : "zh-cn";
 
-    // Check params only if state is valid and has routes
+    // Check the language in route parameters
     if (state.routes && state.routes[0]) {
       let params: { lang?: string } | undefined;
-
-      // Handle tab navigator case with proper type guard
       if (state.type === "tab" && typeof state.index === "number" && state.routes[state.index]) {
-        // Use the active tab's params if available
         params = state.routes[state.index].params as { lang?: string };
       } else {
-        // Use the root route's params for non-tab states or if index is undefined
         params = state.routes[0].params as { lang?: string };
       }
 
-      if (params?.lang && (params.lang.toUpperCase() === "ZH-TW" || params.lang.toUpperCase() === "ZH-CN")) {
-        lang = params.lang.toUpperCase();
+      if (params?.lang && (params.lang.toLowerCase() === "zh-tw" || params.lang.toLowerCase() === "zh-cn")) {
+        lang = params.lang.toLowerCase();
       }
     }
 
     console.log("Language used for path:", lang, "i18n.language:", i18n.language, "State params:", state.routes?.[0]?.params);
 
-    // Filter out language codes and undefined segments
-    const cleanedSegments = segments.filter(
-      (seg) => seg.toUpperCase() !== "ZH-TW" && seg.toUpperCase() !== "ZH-CN" && seg !== "undefined"
-    );
+    // Filter out language codes and undefined segments, and convert all segments to lowercase
+    const cleanedSegments = segments
+      .filter((seg) => seg.toLowerCase() !== "zh-tw" && seg.toLowerCase() !== "zh-cn" && seg !== "undefined")
+      .map((seg) => seg.toLowerCase());
 
     // Remove duplicate path segments
     const uniqueSegments: string[] = [];
@@ -77,8 +73,8 @@ const linking = {
       }
     }
 
-    // Default to Home/HomeScreen if no valid path
-    const finalPath = uniqueSegments.length > 0 ? uniqueSegments.join("/") : "Home/HomeScreen";
+    // If no valid path exists, default to "home" (empty subpath for HomeScreen)
+    const finalPath = uniqueSegments.length > 0 ? uniqueSegments.join("/") : "home";
     const generatedPath = `/${lang}/${finalPath}`;
     console.log("Generated path:", generatedPath);
     return generatedPath;
@@ -86,9 +82,9 @@ const linking = {
   getStateFromPath(path: string, options?: any): PartialState<NavigationState> {
     console.log("getStateFromPath path:", path);
     const segments = path.split("/").filter(Boolean);
-    let lang = i18n.language ? i18n.language.toUpperCase() : "ZH-CN";
+    let lang = i18n.language ? i18n.language.toLowerCase() : "zh-cn";
 
-    if (segments[0]?.toUpperCase() === "ZH-TW" || segments[0]?.toUpperCase() === "ZH-CN") {
+    if (segments[0]?.toLowerCase() === "zh-tw" || segments[0]?.toLowerCase() === "zh-cn") {
       const urlLang = segments.shift()!.toLowerCase();
       if (urlLang !== i18n.language) {
         console.log("Syncing language to URL lang:", urlLang);
@@ -96,12 +92,12 @@ const linking = {
           console.error("Failed to change language:", err)
         );
       }
-      lang = urlLang.toUpperCase();
+      lang = urlLang;
     } else {
       console.log("No language in URL, using current lang:", lang);
     }
 
-    const newPath = segments.filter((seg) => seg !== "undefined").join("/") || "Home/HomeScreen";
+    const newPath = segments.filter((seg) => seg !== "undefined").join("/") || "home";
     const state = defaultGetStateFromPath(newPath, options);
 
     if (state && state.routes && state.routes[0]) {
@@ -109,7 +105,7 @@ const linking = {
         ...state.routes[0],
         params: {
           ...state.routes[0].params,
-          lang: lang.toLowerCase(),
+          lang: lang,
         },
       };
       return {
@@ -122,7 +118,7 @@ const linking = {
       routes: [
         {
           name: "Home",
-          params: { lang: lang.toLowerCase() },
+          params: { lang: lang },
           state: {
             routes: [{ name: "HomeScreen" }],
           },
