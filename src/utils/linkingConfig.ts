@@ -12,68 +12,62 @@ const linking = {
   config: {
     screens: {
       Home: {
-        path: ":lang/home", // Keep lowercase "home" as the parent path
+        path: ":lang/home",
         screens: {
-          HomeScreen: "", // Default subpath is empty, maps directly to /home
-          HiraganaScreen: "hiragana", 
-          KatakanaScreen: "katakana", 
-          KanaComparisonScreen: "kana-comparison", 
-          PhoneticsScreen: "phonetics", 
-          N5ConceptsScreen: "n5-concepts", 
+          HomeScreen: "",
+          HiraganaScreen: "hiragana",
+          KatakanaScreen: "katakana",
+          KanaComparisonScreen: "kana-comparison",
+          PhoneticsScreen: "phonetics",
+          N5ConceptsScreen: "n5-concepts",
           GrammarConceptsScreen: "grammar-concepts",
-          GrammarScreen: "grammar/:level", 
-          WordsWithDrawer: "words-with-drawer/:level", 
-          StoryStack: "story-stack", 
-          ConversationStack: "conversation-stack", 
+          GrammarScreen: "grammar/:level",
+          WordsWithDrawer: "words-with-drawer/:level",
+          StoryStack: {
+            path: "story-stack",
+            screens: {
+              N5StoryMenu: "",
+              N5StoryScreen: "n5storyscreen",
+            },
+          },
+          ConversationStack: "conversation-stack",
         },
       },
-      Words: ":lang/words", 
-      Story: ":lang/story", 
-      Settings: ":lang/settings", 
+      Words: ":lang/words",
+      Story: ":lang/story",
+      Settings: ":lang/settings",
     },
   },
   getPathFromState(state: NavigationState | PartialState<NavigationState>, options?: any): string {
-    console.log("getPathFromState state:", state);
-    let path = defaultGetPathFromState(state, options);
+    let path = defaultGetPathFromState(state, { ...options, ...linking.config });
     if (path.startsWith("/")) {
       path = path.slice(1);
     }
 
     const segments = path.split("/").filter(Boolean);
-
-    // Use i18n.language as the language source, keep lowercase and retain hyphen
     let lang = i18n.language ? i18n.language.toLowerCase() : "zh-cn";
 
-    // Check the language in route parameters
     if (state.routes && state.routes[0]) {
-      let params: { lang?: string } | undefined;
+      let params = state.routes[0].params;
       if (state.type === "tab" && typeof state.index === "number" && state.routes[state.index]) {
-        params = state.routes[state.index].params as { lang?: string };
-      } else {
-        params = state.routes[0].params as { lang?: string };
+        params = state.routes[state.index].params;
       }
-
-      if (params?.lang && (params.lang.toLowerCase() === "zh-tw" || params.lang.toLowerCase() === "zh-cn")) {
+      if (params?.lang && ["zh-tw", "zh-cn"].includes(params.lang.toLowerCase())) {
         lang = params.lang.toLowerCase();
       }
     }
 
-    console.log("Language used for path:", lang, "i18n.language:", i18n.language, "State params:", state.routes?.[0]?.params);
-
-    // Filter out language codes and undefined segments, and convert all segments to lowercase
     const cleanedSegments = segments
       .filter((seg) => seg.toLowerCase() !== "zh-tw" && seg.toLowerCase() !== "zh-cn" && seg !== "undefined")
       .map((seg) => seg.toLowerCase());
 
-    // Remove duplicate path segments
-    const uniqueSegments: string[] = [];
+    const uniqueSegments = [];
     for (const seg of cleanedSegments) {
       if (uniqueSegments.length === 0 || uniqueSegments[uniqueSegments.length - 1] !== seg) {
         uniqueSegments.push(seg);
       }
     }
 
-    // If no valid path exists, default to "home" (empty subpath for HomeScreen)
     const finalPath = uniqueSegments.length > 0 ? uniqueSegments.join("/") : "home";
     const generatedPath = `/${lang}/${finalPath}`;
     console.log("Generated path:", generatedPath);
@@ -81,44 +75,159 @@ const linking = {
   },
   getStateFromPath(path: string, options?: any): PartialState<NavigationState> {
     console.log("getStateFromPath path:", path);
-    const segments = path.split("/").filter(Boolean);
+    const [pathWithoutQuery, queryString] = path.split("?");
+    const segments = pathWithoutQuery.split("/").filter(Boolean);
     let lang = i18n.language ? i18n.language.toLowerCase() : "zh-cn";
 
     if (segments[0]?.toLowerCase() === "zh-tw" || segments[0]?.toLowerCase() === "zh-cn") {
-      const urlLang = segments.shift()!.toLowerCase();
-      if (urlLang !== i18n.language) {
-        console.log("Syncing language to URL lang:", urlLang);
-        changeLanguage(urlLang as "zh-TW" | "zh-CN").catch((err) =>
+      lang = segments.shift()!.toLowerCase();
+      if (lang !== i18n.language) {
+        console.log("Syncing language to URL lang:", lang);
+        changeLanguage(lang as "zh-TW" | "zh-CN").catch((err) =>
           console.error("Failed to change language:", err)
         );
       }
-      lang = urlLang;
-    } else {
-      console.log("No language in URL, using current lang:", lang);
     }
 
-    const newPath = segments.filter((seg) => seg !== "undefined").join("/") || "home";
-    const state = defaultGetStateFromPath(newPath, options);
+    const newPath = segments.join("/") || "home";
+    console.log("newPath:", newPath);
+
+    // 手動解析路由
+    const homeScreens = linking.config.screens.Home.screens;
+    const topLevelRoute = segments[0]?.toLowerCase();
+    let state;
+
+    if (topLevelRoute === "home") {
+      const subRoute = segments[1]?.toLowerCase() || "";
+      // 查找匹配的屏幕名稱
+      const screenName = Object.keys(homeScreens).find(
+        (key) => homeScreens[key] === subRoute || (subRoute === "" && homeScreens[key] === "")
+      );
+
+      if (screenName) {
+        state = {
+          routes: [
+            {
+              name: "Home",
+              state: {
+                routes: [{ name: screenName }],
+              },
+            },
+          ],
+        };
+      } else if (subRoute === "grammar" && segments[2]) {
+        state = {
+          routes: [
+            {
+              name: "Home",
+              state: {
+                routes: [
+                  {
+                    name: "GrammarScreen",
+                    params: { level: segments[2].toLowerCase() },
+                  },
+                ],
+              },
+            },
+          ],
+        };
+      } else if (subRoute === "words-with-drawer" && segments[2]) {
+        state = {
+          routes: [
+            {
+              name: "Home",
+              state: {
+                routes: [
+                  {
+                    name: "WordsWithDrawer",
+                    params: { level: segments[2].toLowerCase() },
+                  },
+                ],
+              },
+            },
+          ],
+        };
+      } else if (subRoute === "story-stack") {
+        const storySubRoute = segments[2]?.toLowerCase() || "";
+        const storyScreenName = Object.keys(homeScreens.StoryStack.screens).find(
+          (key) => homeScreens.StoryStack.screens[key] === storySubRoute || (storySubRoute === "" && homeScreens.StoryStack.screens[key] === "")
+        );
+        state = {
+          routes: [
+            {
+              name: "Home",
+              state: {
+                routes: [
+                  {
+                    name: "StoryStack",
+                    state: {
+                      routes: [{ name: storyScreenName || "N5StoryMenu" }],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        };
+      } else if (subRoute === "conversation-stack") {
+        state = {
+          routes: [
+            {
+              name: "Home",
+              state: {
+                routes: [{ name: "ConversationStack" }],
+              },
+            },
+          ],
+        };
+      }
+    } else if (linking.config.screens[topLevelRoute]) {
+      state = {
+        routes: [
+          {
+            name: topLevelRoute.charAt(0).toUpperCase() + topLevelRoute.slice(1),
+          },
+        ],
+      };
+    }
+
+    // 如果 state 未定義，嘗試 defaultGetStateFromPath
+    if (!state) {
+      state = defaultGetStateFromPath(newPath, { ...options, ...linking.config });
+    }
+
+    console.log("Parsed state:", JSON.stringify(state, null, 2));
+
+    const params = {};
+    if (queryString) {
+      queryString.split("&").forEach(pair => {
+        const [key, value] = pair.split("=");
+        params[key] = decodeURIComponent(value);
+      });
+    }
 
     if (state && state.routes && state.routes[0]) {
       const updatedRoute = {
         ...state.routes[0],
         params: {
           ...state.routes[0].params,
-          lang: lang,
+          lang,
+          ...params,
         },
       };
+      console.log("Returning updated state:", JSON.stringify({ ...state, routes: [updatedRoute, ...state.routes.slice(1)] }, null, 2));
       return {
         ...state,
         routes: [updatedRoute, ...state.routes.slice(1)],
       };
     }
 
+    console.error("Failed to parse state for path:", path);
     return {
       routes: [
         {
           name: "Home",
-          params: { lang: lang },
+          params: { lang },
           state: {
             routes: [{ name: "HomeScreen" }],
           },
