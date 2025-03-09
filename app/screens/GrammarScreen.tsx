@@ -39,59 +39,104 @@ const GrammarScreen: React.FC = () => {
   const { t } = useTranslation('grammar');
   const level = route.params?.level;
   const [data, setData] = useState<TransformedChapter[]>([]);
+  const [isLoading, setIsLoading] = useState(true); // Add loading state for better UX
 
   useEffect(() => {
+    setIsLoading(true); // Set loading state to true when fetching data
+
     const namespace = level === LEVELS.N5_ADVANCE_GRAMMAR ? 'n5_advance' : 'n5_basic';
     const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
 
+    // Defensive check: Ensure grammarData is valid and an array
+    if (!grammarData || !Array.isArray(grammarData)) {
+      console.error('Grammar data is invalid or empty:', grammarData);
+      setData([]);
+      setIsLoading(false);
+      return;
+    }
+
+    // Transform the data into the required format
     const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => ({
-      title: chapter.title, // 直接取值
-      data: chapter.sections.map((section: any) => ({
-        pattern: section.pattern, // 直接取值
-        description: section.description, // 直接取值
-        examples: section.examples.map((example: any) => ({
-          sentence: example.sentence, // 直接取值
-          translation: example.translation, // 直接取值
+      title: chapter?.title || 'Unnamed Chapter', // Fallback for missing title
+      data: (chapter?.sections || []).map((section: any) => ({
+        pattern: section?.pattern || 'No Pattern', // Fallback for missing pattern
+        description: section?.description || 'No Description', // Fallback for missing description
+        examples: (section?.examples || []).map((example: any) => ({
+          sentence: example?.sentence || 'No Sentence', // Fallback for missing sentence
+          translation: example?.translation || 'No Translation', // Fallback for missing translation
         })),
       })),
     }));
 
+    // Size check for debugging (runs only in development mode)
+    if (__DEV__) {
+      const grammarDataSectionsCount = grammarData.reduce(
+        (total, chapter) => total + (chapter?.sections?.length || 0),
+        0
+      );
+      const transformedDataSectionsCount = transformedData.reduce(
+        (total, chapter) => total + (chapter.data?.length || 0),
+        0
+      );
+
+      if (grammarDataSectionsCount !== transformedDataSectionsCount) {
+        console.warn(
+          `Data size mismatch! Expected ${grammarDataSectionsCount} sections, got ${transformedDataSectionsCount}`
+        );
+      } else {
+        console.log(`Data size matched: ${grammarDataSectionsCount} sections`);
+      }
+    }
+
     setData(transformedData);
-  }, [level, t]); // 移除 i18n.language 依賴
+    setIsLoading(false); // Set loading to false after data is processed
+  }, [level, t]);
 
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <SectionList
-          sections={data}
-          keyExtractor={(item, index) => item.pattern + index}
-          renderSectionHeader={({ section: { title } }) => (
-            <View style={styles.headerContainer}>
-              <Text style={styles.header}>{title || '無標題'}</Text> {/* 防止空值 */}
-            </View>
-          )}
-          renderItem={({ item }) => (
-            <View style={styles.item}>
-              <Text style={styles.pattern}>{item.pattern || '無句型'}</Text> {/* 防止空值 */}
-              <Text style={styles.description}>{item.description || '無描述'}</Text> {/* 防止空值 */}
-              {item.examples.map((example, index) => (
-                <View key={index} style={styles.exampleContainer}>
-                  <View style={styles.sentenceRow}>
-                    <Text style={styles.sentence}>{example.sentence || '無例句'}</Text> {/* 防止空值 */}
-                    <TouchableOpacity onPress={() => speak(example.sentence || '')} style={styles.iconSpacing}>
-                      <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
-                    </TouchableOpacity>
+        {isLoading ? (
+          // Show loading message while data is being fetched
+          <Text style={styles.header}>Loading...</Text>
+        ) : data.length === 0 ? (
+          // Show message if no data is available
+          <Text style={styles.header}>No data available</Text>
+        ) : (
+          // Render the SectionList with transformed data
+          <SectionList
+            sections={data}
+            keyExtractor={(item, index) => item.pattern + index}
+            renderSectionHeader={({ section: { title } }) => (
+              <View style={styles.headerContainer}>
+                <Text style={styles.header}>{title || 'No Title'}</Text>
+              </View>
+            )}
+            renderItem={({ item }) => (
+              <View style={styles.item}>
+                <Text style={styles.pattern}>{item.pattern}</Text>
+                <Text style={styles.description}>{item.description}</Text>
+                {item.examples.map((example, index) => (
+                  <View key={index} style={styles.exampleContainer}>
+                    <View style={styles.sentenceRow}>
+                      <Text style={styles.sentence}>{example.sentence}</Text>
+                      <TouchableOpacity
+                        onPress={() => speak(example.sentence)}
+                        style={styles.iconSpacing}
+                      >
+                        <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                      </TouchableOpacity>
+                    </View>
+                    <Text style={styles.translation}>{example.translation}</Text>
                   </View>
-                  <Text style={styles.translation}>{example.translation || '無翻譯'}</Text> {/* 防止空值 */}
-                </View>
-              ))}
-            </View>
-          )}
-          stickySectionHeadersEnabled={false}
-          // @ts-ignore
-          getItemLayout={getItemLayout}
-          contentContainerStyle={{ paddingBottom: 300 }}
-        />
+                ))}
+              </View>
+            )}
+            stickySectionHeadersEnabled={false}
+            // @ts-ignore
+            getItemLayout={getItemLayout}
+            contentContainerStyle={{ paddingBottom: 300 }}
+          />
+        )}
       </SafeAreaView>
     </SafeAreaProvider>
   );
