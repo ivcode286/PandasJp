@@ -7,6 +7,47 @@ import {
 import i18n from "../locales/i18n";
 import { changeLanguage } from "./languageService";
 
+// 定義參數類型
+interface RouteParams {
+  lang?: string;
+  level?: string;
+  storytitle?: string;
+  conversationtitle?: string;
+  [key: string]: any;
+}
+
+// 定義 screens 配置的類型
+interface ScreenConfig {
+  path: string;
+  screens?: { [key: string]: string | ScreenConfig };
+}
+
+interface HomeScreensConfig {
+  HomeScreen: string;
+  HiraganaScreen: string;
+  KatakanaScreen: string;
+  KanaComparisonScreen: string;
+  PhoneticsScreen: string;
+  N5ConceptsScreen: string;
+  GrammarConceptsScreen: string;
+  GrammarScreen: string;
+  WordsWithDrawer: ScreenConfig;
+  StoryStack: ScreenConfig;
+  ConversationStack: ScreenConfig;
+}
+
+interface WordsScreensConfig {
+  WordsMenuScreen: string;
+  WordsWithDrawer: string; // Words Tab 下的 WordsWithDrawer 不含子 screens
+}
+
+interface LinkingConfig {
+  Home: ScreenConfig & { screens: HomeScreensConfig };
+  Words: ScreenConfig & { screens: WordsScreensConfig };
+  Story: string;
+  Settings: string;
+}
+
 const linking = {
   prefixes: ["http://localhost:8081", "https://pandasapps.com"],
   config: {
@@ -53,7 +94,7 @@ const linking = {
       },
       Story: ":lang/story",
       Settings: ":lang/settings",
-    },
+    } as LinkingConfig,
   },
   getPathFromState(state: NavigationState | PartialState<NavigationState>, options?: any): string {
     let path = defaultGetPathFromState(state, { ...options, ...linking.config });
@@ -65,9 +106,9 @@ const linking = {
     let lang = i18n.language ? i18n.language.toLowerCase() : "zh-cn";
 
     if (state.routes && state.routes[0]) {
-      let params = state.routes[0].params;
+      let params: RouteParams | undefined = state.routes[0].params as RouteParams;
       if (state.type === "tab" && typeof state.index === "number" && state.routes[state.index]) {
-        params = state.routes[state.index].params;
+        params = state.routes[state.index].params as RouteParams;
       }
       if (params?.lang && ["zh-tw", "zh-cn"].includes(params.lang.toLowerCase())) {
         lang = params.lang.toLowerCase();
@@ -78,7 +119,7 @@ const linking = {
       .filter((seg) => seg.toLowerCase() !== "zh-tw" && seg.toLowerCase() !== "zh-cn" && seg !== "undefined")
       .map((seg) => seg.toLowerCase());
 
-    const uniqueSegments = [];
+    const uniqueSegments: string[] = [];
     for (const seg of cleanedSegments) {
       if (uniqueSegments.length === 0 || uniqueSegments[uniqueSegments.length - 1] !== seg) {
         uniqueSegments.push(seg);
@@ -109,15 +150,19 @@ const linking = {
     const newPath = segments.join("/") || "home";
     console.log("newPath:", newPath);
 
-    const homeScreens = linking.config.screens.Home.screens;
-    const wordsScreens = linking.config.screens.Words.screens;
+    const screens = linking.config.screens;
+    const homeScreens = screens.Home.screens;
+    const wordsScreens = screens.Words.screens;
     const topLevelRoute = segments[0]?.toLowerCase();
     let state;
 
     if (topLevelRoute === "home") {
       const subRoute = segments[1]?.toLowerCase() || "";
       const screenName = Object.keys(homeScreens).find(
-        (key) => homeScreens[key] === subRoute || (subRoute === "" && homeScreens[key] === "")
+        (key) => {
+          const value = homeScreens[key as keyof HomeScreensConfig];
+          return typeof value === "string" && (value === subRoute || (subRoute === "" && value === ""));
+        }
       );
 
       if (screenName) {
@@ -153,8 +198,8 @@ const linking = {
         };
       } else if (subRoute === "words-with-drawer" && segments[2]) {
         const wordsSubRoute = segments[3]?.toLowerCase() || "";
-        const wordsScreenName = Object.keys(homeScreens.WordsWithDrawer.screens).find(
-          (key) => homeScreens.WordsWithDrawer.screens[key] === wordsSubRoute
+        const wordsScreenName = Object.keys(homeScreens.WordsWithDrawer.screens || {}).find(
+          (key) => homeScreens.WordsWithDrawer.screens![key] === wordsSubRoute
         );
         state = {
           routes: [
@@ -186,8 +231,8 @@ const linking = {
         };
       } else if (subRoute === "story-stack") {
         const storySubRoute = segments[2]?.toLowerCase() || "";
-        const storyScreenName = Object.keys(homeScreens.StoryStack.screens).find(
-          (key) => homeScreens.StoryStack.screens[key] === storySubRoute || (storySubRoute === "" && homeScreens.StoryStack.screens[key] === "")
+        const storyScreenName = Object.keys(homeScreens.StoryStack.screens || {}).find(
+          (key) => homeScreens.StoryStack.screens![key] === storySubRoute || (storySubRoute === "" && homeScreens.StoryStack.screens![key] === "")
         );
         state = {
           routes: [
@@ -214,8 +259,8 @@ const linking = {
         };
       } else if (subRoute === "conversation-stack") {
         const convSubRoute = segments[2]?.toLowerCase() || "";
-        const convScreenName = Object.keys(homeScreens.ConversationStack.screens).find(
-          (key) => homeScreens.ConversationStack.screens[key] === convSubRoute || (convSubRoute === "" && homeScreens.ConversationStack.screens[key] === "")
+        const convScreenName = Object.keys(homeScreens.ConversationStack.screens || {}).find(
+          (key) => homeScreens.ConversationStack.screens![key] === convSubRoute || (convSubRoute === "" && homeScreens.ConversationStack.screens![key] === "")
         );
         state = {
           routes: [
@@ -244,7 +289,10 @@ const linking = {
     } else if (topLevelRoute === "words") {
       const subRoute = segments[1]?.toLowerCase() || "";
       const screenName = Object.keys(wordsScreens).find(
-        (key) => wordsScreens[key] === subRoute || (subRoute === "" && wordsScreens[key] === "")
+        (key) => {
+          const value = wordsScreens[key as keyof WordsScreensConfig];
+          return typeof value === "string" && (value === subRoute || (subRoute === "" && value === ""));
+        }
       );
       if (screenName) {
         state = {
@@ -278,7 +326,7 @@ const linking = {
           ],
         };
       }
-    } else if (linking.config.screens[topLevelRoute]) {
+    } else if (topLevelRoute && linking.config.screens[topLevelRoute as keyof LinkingConfig]) {
       state = {
         routes: [
           {
@@ -294,7 +342,7 @@ const linking = {
 
     console.log("Parsed狀態:", JSON.stringify(state, null, 2));
 
-    const params = {};
+    const params: RouteParams = {};
     if (queryString && !state?.routes[0]?.state?.routes[1]?.state?.routes[0]?.params) {
       queryString.split("&").forEach(pair => {
         const [key, value] = pair.split("=");
