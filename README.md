@@ -1,8 +1,5 @@
 # Welcome to your Expo app 👋
 This is an Expo project created with create-expo-app.
-This React Native app uses a Custom Development Build (Managed Workflow + support for native modules + local compilation).
-It reads and writes data using WatermelonDB and disables Bridgeless Mode by setting expo.jsEngine=jsc in build.gradle.
-
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
@@ -20,6 +17,12 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
  
  -Run on expo web or expo go
   npm start
+
+
+--- 
+Web Producton build in local
+(i)npx expo start --clear          (clears Metro Bundler’s cache error like: Unable to resolve module ./app/navigation/TabNavigator from App.tsx)
+(ii)npx expo export --platform web
 
 
 ----

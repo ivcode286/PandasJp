@@ -1,4 +1,4 @@
-// navigation/TabNavigator.tsx
+//app/navigation/TabNavigator.tsx
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import React from 'react';
