@@ -1,171 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Home Stack -->
-  <url>
-    <loc>https://pandasapps.com/zh-tw/home</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <!-- 靜態路由：首頁和主要功能頁面 -->
   <url>
     <loc>https://pandasapps.com/zh-cn/home</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/hiragana</loc>
+    <loc>https://pandasapps.com/zh-tw/home</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/home/hiragana</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/katakana</loc>
+    <loc>https://pandasapps.com/zh-tw/home/hiragana</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/home/katakana</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/kana-comparison</loc>
+    <loc>https://pandasapps.com/zh-tw/home/katakana</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/home/kana-comparison</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/phonetics</loc>
+    <loc>https://pandasapps.com/zh-tw/home/kana-comparison</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/home/phonetics</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/n5-concepts</loc>
+    <loc>https://pandasapps.com/zh-tw/home/phonetics</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/home/n5-concepts</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/grammar-concepts</loc>
+    <loc>https://pandasapps.com/zh-tw/home/n5-concepts</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/home/grammar-concepts</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- GrammarScreen with levels -->
-  <url>
-    <loc>https://pandasapps.com/zh-tw/home/grammar/n5_basic_grammar</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pandasapps.com/zh-cn/home/grammar/n5_basic_grammar</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pandasapps.com/zh-tw/home/grammar/n5_advance_grammar</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pandasapps.com/zh-cn/home/grammar/n5_advance_grammar</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- WordsWithDrawer with levels -->
-  <url>
-    <loc>https://pandasapps.com/zh-tw/home/words-with-drawer/n5</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pandasapps.com/zh-cn/home/words-with-drawer/n5</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pandasapps.com/zh-tw/home/words-with-drawer/n5-kanji</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pandasapps.com/zh-cn/home/words-with-drawer/n5-kanji</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pandasapps.com/zh-tw/home/words-with-drawer/n4-n3</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pandasapps.com/zh-cn/home/words-with-drawer/n4-n3</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Story Stack -->
-  <url>
-    <loc>https://pandasapps.com/zh-tw/home/story-stack</loc>
-    <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/grammar-concepts</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 文法頁面：動態等級 -->
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/grammar/n5_basic</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/grammar/n5_basic</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/grammar/n5_advance</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/grammar/n5_advance</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 單詞頁面：動態等級 -->
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/words-with-drawer/n5/wordsscreen</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/words-with-drawer/n5/wordsscreen</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/words-with-drawer/n5-kanji/wordsscreen</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/words-with-drawer/n5-kanji/wordsscreen</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/words-with-drawer/n4-n3/wordsscreen</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/words-with-drawer/n4-n3/wordsscreen</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 故事頁面：動態標題 -->
   <url>
     <loc>https://pandasapps.com/zh-cn/home/story-stack</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- N5StoryScreen with story titles -->
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=桃子姬的大冒險</loc>
+    <loc>https://pandasapps.com/zh-tw/home/story-stack</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/home/story-stack/n5storyscreen?storytitle=桃子姬的大冒险</loc>
@@ -174,7 +170,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=熊貓的神社參拜與雪的試煉</loc>
+    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=桃子姬的大冒險</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -186,7 +182,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=肥貓與不思議蛋糕</loc>
+    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=熊貓的神社參拜與雪的試煉</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -198,7 +194,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=魔法少女 小光</loc>
+    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=肥貓與不思議蛋糕</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -210,7 +206,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=不良少年與貓仙人</loc>
+    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=魔法少女 小光</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -222,7 +218,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=熊貓與大家的快樂河邊遊戲</loc>
+    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=不良少年與貓仙人</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -234,7 +230,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=魔王與地球的美味食物</loc>
+    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=熊貓與大家的快樂河邊遊戲</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -246,7 +242,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=去醫院路上的相遇</loc>
+    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=魔王與地球的美味食物</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -258,7 +254,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=哥林布們與魔女的陰謀</loc>
+    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=去醫院路上的相遇</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -270,7 +266,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=熊貓與貓的湖邊冒險</loc>
+    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=哥林布們與魔女的陰謀</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -281,69 +277,222 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Conversation Stack -->
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/conversation-stack</loc>
+    <loc>https://pandasapps.com/zh-tw/home/story-stack/n5storyscreen?storytitle=熊貓與貓的湖邊冒險</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- 對話頁面：動態標題 -->
   <url>
     <loc>https://pandasapps.com/zh-cn/home/conversation-stack</loc>
     <lastmod>2025-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/conversation-stack</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?conversationtitle=在便利店买东西</loc>
+    <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- N5ConversationScreen with example titles -->
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?title=在便利店買東西</loc>
+    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?conversationtitle=在便利店買東西</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?title=在便利店买东西</loc>
+    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?conversationtitle=在学校聊兴趣</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?title=在學校聊興趣</loc>
+    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?conversationtitle=在學校聊興趣</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?title=在学校聊兴趣</loc>
+    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?conversationtitle=在餐厅点餐</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  <!-- Add more conversation titles as needed -->
-  <!-- Words Tab -->
   <url>
-    <loc>https://pandasapps.com/zh-tw/words</loc>
+    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?conversationtitle=在餐廳點餐</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?conversationtitle=在车站问路</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?conversationtitle=在車站問路</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?conversationtitle=在咖啡店点饮料</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?conversationtitle=在咖啡店點飲料</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?conversationtitle=买衣服</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?conversationtitle=買衣服</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?conversationtitle=约朋友去公园</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?conversationtitle=約朋友去公園</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?conversationtitle=去超市买东西</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?conversationtitle=去超市買東西</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?conversationtitle=在书店选书</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?conversationtitle=在書店選書</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/conversation-stack/n5conversationscreen?conversationtitle=计划周末的活动</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/conversation-stack/n5conversationscreen?conversationtitle=計劃週末的活動</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Words Tab 路由 -->
   <url>
     <loc>https://pandasapps.com/zh-cn/words</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- Settings Tab -->
   <url>
-    <loc>https://pandasapps.com/zh-tw/settings</loc>
+    <loc>https://pandasapps.com/zh-tw/words</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/words/words-with-drawer/n5</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/words/words-with-drawer/n5</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/words/words-with-drawer/n5-kanji</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/words/words-with-drawer/n5-kanji</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/words/words-with-drawer/n4-n3</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/words/words-with-drawer/n4-n3</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Story Tab 路由 -->
+  <url>
+    <loc>https://pandasapps.com/zh-cn/story</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/story</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Settings 路由 -->
   <url>
     <loc>https://pandasapps.com/zh-cn/settings</loc>
     <lastmod>2025-03-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/settings</loc>
+    <lastmod>2025-03-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 </urlset>
