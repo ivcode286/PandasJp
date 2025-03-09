@@ -1,4 +1,3 @@
-// src/locales/i18n.ts
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import {
@@ -108,95 +107,11 @@ i18n.use(initReactI18next).init({
     'common',
     'settings',
   ],
+  returnObjects: true, // 全局啟用 returnObjects
 });
 
 i18n.on('languageChanged', (lng) => {
   console.log('Language changed to:', lng);
 });
-
-declare module 'i18next' {
-  interface CustomTypeOptions {
-    defaultNS: 'home';
-    resources: {
-      grammarConcepts: Translation['grammarConcepts'];
-      n5Concepts: Translation['grammarConcepts'];
-      home: Translation['home'];
-      hiragana: Translation['hiragana'];
-      katakana: Translation['katakana'];
-      phonetics: Translation['phonetics'];
-      story: Translation['story'];
-      conversation: Translation['conversation'];
-      grammar: Translation['grammar'];
-      words: Translation['words'];
-      common: Translation['common'];
-      settings: {
-        translation: {
-          title: string;
-          languageSection: string;
-          languages: {
-            traditionalChinese: string;
-            simplifiedChinese: string;
-          };
-        };
-      };
-    };
-    returnObjects: true;
-  }
-
-  interface TFunction {
-    (key: 'translation.title' | 'translation.intro', options?: any): string;
-    (key: `translation.sections.${string}.title` | `translation.sections.${string}.paragraph`, options?: any): string;
-    (key: `translation.sections.${string}.table.header`, options: { returnObjects: true }): string[];
-    (key: `translation.sections.${string}.table.data`, options: { returnObjects: true }): string[][];
-    (key: `translation.sections.${string}.paragraphs`, options: { returnObjects: true }): string[];
-
-    (key: 'title' | 'intro', options?: any): string;
-    (key: `sections.${string}.title` | `sections.${string}.description`, options?: any): string;
-    (key: `sections.${string}.table.header`, options: { returnObjects: true }): string[];
-    (key: `sections.${string}.table.data`, options: { returnObjects: true }): string[][];
-    (key: `sections.${string}.paragraphs`, options: { returnObjects: true }): string[];
-
-    (key: 'translation.title' | `translation.menu.${string}`, options?: any): string;
-
-    (key: 'title' | 'table.title', options?: any): string;
-    (key: `sections.${string}.title` | `sections.${string}.intro`, options?: any): string;
-    (key: `sections.${string}.uses` | `sections.${string}.points` | `sections.${string}.items`, options: { returnObjects: true }): string[];
-
-    (key: 'table.title', options?: any): string;
-    (key: `sections.${string}.title` | `sections.${string}.intro`, options?: any): string;
-    (key: `sections.${string}.uses` | `sections.${string}.points` | `sections.${string}.items`, options: { returnObjects: true }): string[];
-
-    (key: 'intro', options?: any): string;
-    (key: `sections.${string}.title` | `sections.${string}.description` | `sections.${string}.extra`, options?: any): string;
-    (key: `sections.dakuon.data` | `sections.handakuon.data`, options: { returnObjects: true }): DakuonItem[];
-    (key: `sections.youon.data`, options: { returnObjects: true }): YouonItem[];
-    (key: `sections.chouon.data`, options: { returnObjects: true }): LongVowelItem[];
-    (key: `sections.summary.items`, options: { returnObjects: true }): string[];
-
-    (key: string, options?: { returnObjects: true }): any;
-    (key: `${number}.title`, options?: any): string;
-    (key: `${number}.imageName`, options?: any): string;
-    (key: `${number}.story`, options: { returnObjects: true }): StoryChapter[];
-    (key: `${number}.story.${number}.chapter`, options?: any): string;
-    (key: `${number}.story.${number}.content`, options: { returnObjects: true }): StoryLine[];
-
-    (key: 'conversations', options: { returnObjects: true }): ConversationTranslation[];
-    (key: `${number}.title`, options?: any): string;
-    (key: `${number}.imageName`, options?: any): string;
-    (key: `${number}.scene`, options?: any): string;
-    (key: `${number}.conversation`, options: { returnObjects: true }): ConversationLine[];
-
-    (key: 'n5' | 'n5_kanji' | 'n3n4', options: { returnObjects: true }): WordData[];
-
-    // Common namespace keys
-    (key: `drawer.N5`, ns: 'common', options: { returnObjects: true }): string[];
-    (key: `drawer.N4-N3`, ns: 'common', options: { returnObjects: true }): string[];
-    (key: `drawer.N5-KANJI`, ns: 'common', options: { returnObjects: true }): string[];
-
-    // settings
-    (key: 'translation.title' | 'translation.languageSection', options?: any): string;
-    (key: `translation.languages.${string}`, options?: any): string;
-  }
-}
 
 export default i18n;

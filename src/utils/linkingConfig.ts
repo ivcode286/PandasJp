@@ -22,7 +22,12 @@ const linking = {
           N5ConceptsScreen: "n5-concepts",
           GrammarConceptsScreen: "grammar-concepts",
           GrammarScreen: "grammar/:level",
-          WordsWithDrawer: "words-with-drawer/:level",
+          WordsWithDrawer: {
+            path: "words-with-drawer/:level",
+            screens: {
+              WordsScreen: "wordsscreen",
+            },
+          },
           StoryStack: {
             path: "story-stack",
             screens: {
@@ -30,10 +35,22 @@ const linking = {
               N5StoryScreen: "n5storyscreen",
             },
           },
-          ConversationStack: "conversation-stack",
+          ConversationStack: {
+            path: "conversation-stack",
+            screens: {
+              N5ConversationMenu: "",
+              N5ConversationScreen: "n5conversationscreen",
+            },
+          },
         },
       },
-      Words: ":lang/words",
+      Words: {
+        path: ":lang/words",
+        screens: {
+          WordsMenuScreen: "",
+          WordsWithDrawer: "words-with-drawer/:level",
+        },
+      },
       Story: ":lang/story",
       Settings: ":lang/settings",
     },
@@ -92,14 +109,13 @@ const linking = {
     const newPath = segments.join("/") || "home";
     console.log("newPath:", newPath);
 
-    // 手動解析路由
     const homeScreens = linking.config.screens.Home.screens;
+    const wordsScreens = linking.config.screens.Words.screens;
     const topLevelRoute = segments[0]?.toLowerCase();
     let state;
 
     if (topLevelRoute === "home") {
       const subRoute = segments[1]?.toLowerCase() || "";
-      // 查找匹配的屏幕名稱
       const screenName = Object.keys(homeScreens).find(
         (key) => homeScreens[key] === subRoute || (subRoute === "" && homeScreens[key] === "")
       );
@@ -110,7 +126,10 @@ const linking = {
             {
               name: "Home",
               state: {
-                routes: [{ name: screenName }],
+                routes: [
+                  { name: "HomeScreen" },
+                  { name: screenName },
+                ],
               },
             },
           ],
@@ -122,6 +141,7 @@ const linking = {
               name: "Home",
               state: {
                 routes: [
+                  { name: "HomeScreen" },
                   {
                     name: "GrammarScreen",
                     params: { level: segments[2].toLowerCase() },
@@ -132,15 +152,32 @@ const linking = {
           ],
         };
       } else if (subRoute === "words-with-drawer" && segments[2]) {
+        const wordsSubRoute = segments[3]?.toLowerCase() || "";
+        const wordsScreenName = Object.keys(homeScreens.WordsWithDrawer.screens).find(
+          (key) => homeScreens.WordsWithDrawer.screens[key] === wordsSubRoute
+        );
         state = {
           routes: [
             {
               name: "Home",
               state: {
                 routes: [
+                  { name: "HomeScreen" },
                   {
                     name: "WordsWithDrawer",
                     params: { level: segments[2].toLowerCase() },
+                    ...(wordsScreenName
+                      ? {
+                          state: {
+                            routes: [
+                              {
+                                name: wordsScreenName,
+                                ...(queryString ? { params: { level: decodeURIComponent(queryString.split("=")[1]) } } : {}),
+                              },
+                            ],
+                          },
+                        }
+                      : {}),
                   },
                 ],
               },
@@ -158,10 +195,16 @@ const linking = {
               name: "Home",
               state: {
                 routes: [
+                  { name: "HomeScreen" },
                   {
                     name: "StoryStack",
                     state: {
-                      routes: [{ name: storyScreenName || "N5StoryMenu" }],
+                      routes: [
+                        {
+                          name: storyScreenName || "N5StoryMenu",
+                          ...(storySubRoute === "n5storyscreen" && queryString ? { params: { storytitle: decodeURIComponent(queryString.split("=")[1]) } } : {}),
+                        },
+                      ],
                     },
                   },
                 ],
@@ -170,12 +213,66 @@ const linking = {
           ],
         };
       } else if (subRoute === "conversation-stack") {
+        const convSubRoute = segments[2]?.toLowerCase() || "";
+        const convScreenName = Object.keys(homeScreens.ConversationStack.screens).find(
+          (key) => homeScreens.ConversationStack.screens[key] === convSubRoute || (convSubRoute === "" && homeScreens.ConversationStack.screens[key] === "")
+        );
         state = {
           routes: [
             {
               name: "Home",
               state: {
-                routes: [{ name: "ConversationStack" }],
+                routes: [
+                  { name: "HomeScreen" },
+                  {
+                    name: "ConversationStack",
+                    state: {
+                      routes: [
+                        {
+                          name: convScreenName || "N5ConversationMenu",
+                          ...(convSubRoute === "n5conversationscreen" && queryString ? { params: { conversationtitle: decodeURIComponent(queryString.split("=")[1]) } } : {}),
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        };
+      }
+    } else if (topLevelRoute === "words") {
+      const subRoute = segments[1]?.toLowerCase() || "";
+      const screenName = Object.keys(wordsScreens).find(
+        (key) => wordsScreens[key] === subRoute || (subRoute === "" && wordsScreens[key] === "")
+      );
+      if (screenName) {
+        state = {
+          routes: [
+            {
+              name: "Words",
+              state: {
+                routes: [
+                  { name: "WordsMenuScreen" },
+                  ...(screenName !== "WordsMenuScreen" ? [{ name: screenName }] : []),
+                ],
+              },
+            },
+          ],
+        };
+      } else if (subRoute === "words-with-drawer" && segments[2]) {
+        state = {
+          routes: [
+            {
+              name: "Words",
+              state: {
+                routes: [
+                  { name: "WordsMenuScreen" },
+                  {
+                    name: "WordsWithDrawer",
+                    params: { level: segments[2].toLowerCase() },
+                  },
+                ],
               },
             },
           ],
@@ -191,15 +288,14 @@ const linking = {
       };
     }
 
-    // 如果 state 未定義，嘗試 defaultGetStateFromPath
     if (!state) {
       state = defaultGetStateFromPath(newPath, { ...options, ...linking.config });
     }
 
-    console.log("Parsed state:", JSON.stringify(state, null, 2));
+    console.log("Parsed狀態:", JSON.stringify(state, null, 2));
 
     const params = {};
-    if (queryString) {
+    if (queryString && !state?.routes[0]?.state?.routes[1]?.state?.routes[0]?.params) {
       queryString.split("&").forEach(pair => {
         const [key, value] = pair.split("=");
         params[key] = decodeURIComponent(value);
