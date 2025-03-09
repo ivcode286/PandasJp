@@ -1,4 +1,3 @@
-// App.tsx
 import React, { useEffect, useState } from 'react';
 import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 import MyTabs from './app/navigation/TabNavigator';
@@ -22,11 +21,10 @@ export default function App() {
     async function loadLanguage() {
       try {
         const savedLang = await AsyncStorage.getItem(LANGUAGE_KEY);
-        const urlPath = window.location.pathname; // 獲取當前 URL 路徑
+        const urlPath = window.location.pathname;
         const urlLangMatch = urlPath.match(/^\/(ZH-TW|ZH-CN)/i);
         const urlLang = urlLangMatch ? urlLangMatch[1].toLowerCase() : null;
         
-        // 優先使用 URL 中的語言，否則使用 AsyncStorage 或默認值
         const initialLang = urlLang || savedLang || 'zh-CN';
         console.log('URL lang:', urlLang, 'Saved lang:', savedLang, 'Initial lang:', initialLang);
         
@@ -51,21 +49,7 @@ export default function App() {
   if (!loaded || !langLoaded) return null;
 
   return (
-    <NavigationContainer
-      theme={DarkTheme}
-      linking={linking}
-      initialState={{
-        routes: [
-          {
-            name: 'Home',
-            params: { lang: i18n.language || 'zh-CN' },
-            state: {
-              routes: [{ name: 'HomeScreen' }],
-            },
-          },
-        ],
-      }}
-    >
+    <NavigationContainer theme={DarkTheme} linking={linking}>
       <MyTabs />
       <StatusBar style="auto" />
     </NavigationContainer>
