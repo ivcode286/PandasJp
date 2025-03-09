@@ -1,16 +1,5 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import {
-  DakuonItem,
-  LongVowelItem,
-  YouonItem,
-  Translation,
-  StoryChapter,
-  StoryLine,
-  ConversationLine,
-  ConversationTranslation,
-  WordData,
-} from '../types/translation';
 import grammarConceptsZhTW from '../locales/zh-TW/GrammarConceptsScreen';
 import n5ConceptsZhTW from '../locales/zh-TW/N5ConceptsScreen';
 import homeZhTW from '../locales/zh-TW/HomeScreen';
