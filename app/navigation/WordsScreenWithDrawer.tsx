@@ -54,7 +54,7 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({
   level,
 }) => {
   const { t } = useTranslation("common");
-  const rawItems = t(`drawer.${level.toLowerCase()}`, { returnObjects: true }); // 確保 level 小寫
+  const rawItems = t(`drawer.${level.toUpperCase()}`, { returnObjects: true });
   const items = Array.isArray(rawItems) ? rawItems : []; // 確保 items 是數組
 
   console.log(`Translation key: drawer.${level.toLowerCase()}, items:`, rawItems); // 調試翻譯數據
