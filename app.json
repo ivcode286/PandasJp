@@ -8,11 +8,14 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "owner": "pandasappsgobal",  
+    "owner": "pandasappsgobal",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.pandasapps.PandasJp",
-      "buildNumber": "1"
+      "buildNumber": "1",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
