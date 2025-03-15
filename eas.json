@@ -14,7 +14,7 @@
     "production": {
       "autoIncrement": true,
       "ios": {
-        "prebuildCommand": "chmod +x ./node_modules/.bin/expo && npx expo prebuild ios"
+        "prebuildCommand": "chmod +x ./node_modules/.bin/expo && npx expo prebuild"
       }
     }
   },
