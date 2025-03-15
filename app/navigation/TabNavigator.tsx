@@ -135,7 +135,7 @@ export default function MyTabs() {
         component={StoryStack}
         options={{
           title: 'Story',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="pencil.line" color={color || 'white'} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="book.fill" color={color || 'white'} />,
         }}
       />
       <Tabs.Screen
