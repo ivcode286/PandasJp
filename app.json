@@ -11,7 +11,7 @@
     "owner": "pandasappsgobal",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.pandasapps.PandasJp",
+      "bundleIdentifier": "com.pandasapps.pandasjp",
       "buildNumber": "1",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.pandasapps.PandasJp"
+      "package": "com.pandasapps.pandasjp"
     },
     "web": {
       "bundler": "metro",
