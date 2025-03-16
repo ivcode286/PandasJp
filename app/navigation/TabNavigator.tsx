@@ -86,7 +86,7 @@ function ConversationStack() {
 function GrammarStack() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: true, cardStyle: { flex: 1 } }}>
-      <Stack.Screen name="GrammarMenu" component={GrammarMenu} options={{ headerTitle: 'N5文法メニュー' }} />
+      <Stack.Screen name="GrammarMenu" component={GrammarMenu} options={{ headerTitle: 'N5文法Menu' }} />
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5文法' }} />
     </Stack.Navigator>
   );
@@ -99,11 +99,6 @@ function SettingsStack() {
       screenOptions={{
         headerShown: true,
         cardStyle: { flex: 1 },
-        headerLeft: ({ onPress }) => (
-          <TouchableOpacity onPress={onPress} style={{ marginLeft: 10 }}>
-            <IoniconsWeb name="arrow-back" size={24} color="white" />
-          </TouchableOpacity>
-        ),
       }}
     >
       <Stack.Screen name="Settings" component={SettingsScreen} options={{ headerTitle: t('translation.title') }} />

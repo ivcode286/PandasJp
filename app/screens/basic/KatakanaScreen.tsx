@@ -91,7 +91,7 @@ const KatakanaScreen = () => {
 
   return (
     <ScrollView style={[styles.container, { backgroundColor: colors.background }]}
-    contentContainerStyle={{ paddingBottom: 80 + 20 }} 
+    contentContainerStyle={{ paddingBottom: 80 }} 
     >
       <Text style={[styles.subTitle, { color: colors.text }]}>
         {t("sections.katakana.title")}

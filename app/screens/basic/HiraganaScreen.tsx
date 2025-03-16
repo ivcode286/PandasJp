@@ -92,7 +92,7 @@ const HiraganaScreen = () => {
 
   return (
     <ScrollView style={[styles.container, { backgroundColor: colors.background }]}
-    contentContainerStyle={{ paddingBottom: 80 + 20 }} 
+    contentContainerStyle={{ paddingBottom: 80 }} 
     >
       <Text style={[styles.headerTitle, { color: colors.text }]}>
         {t("title")}

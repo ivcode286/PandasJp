@@ -22,7 +22,8 @@ const PrivacyPolicyScreen = () => {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: isDarkMode ? '#121212' : '#ffffff' }}>
-      <ScrollView contentContainerStyle={{ padding: 20 }}>
+      <ScrollView contentContainerStyle={{ padding: 20,paddingBottom: 80 }} 
+      >
         <Text style={dynamicStyles.headerTitle}>Privacy Policy</Text>
         <Text style={dynamicStyles.dateText}>Effective Date: March 16, 2025 (Hong Kong Time)</Text>
 
