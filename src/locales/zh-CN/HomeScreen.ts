@@ -9,7 +9,7 @@ const homeZhCN = {
       kanji_n5: "常用N5汉字",
       n5_concepts: "日语的基本概念",
       grammar_concepts: "N5 日语基础文法概念",
-      n5_basic_grammar: "最常用 49 个 N5文法（核心课程）",
+      n5_basic_grammar: "最常用 49 个 N5文法",
       n5_advance_grammar: "进阶N5文法",
       conversation: "N5日常对话",
       story: "N5短篇故事",
