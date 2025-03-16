@@ -34,65 +34,67 @@ const GrammarConceptsScreen: React.FC = () => {
     </View>
   );
 
+  // Helper function to safely map paragraphs
+  const renderParagraphs = (key: string) => {
+    const paragraphs = t(key, { returnObjects: true });
+    return Array.isArray(paragraphs) ? paragraphs.map((para, idx) => (
+      <Text key={idx} style={styles.paragraph}>{para}</Text>
+    )) : null; // Fallback to null if not an array
+  };
+
   return (
-    <ScrollView style={styles.container} 
-    contentContainerStyle={{ paddingBottom: 80 }}
-    >
+    <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 80 }}>
       <Text style={styles.title}>{t("translation.title")}</Text>
       <Text style={styles.paragraph}>{t("translation.intro")}</Text>
 
       <Text style={styles.sectionTitle}>{t("translation.sections.section1.title")}</Text>
       <Text style={styles.paragraph}>{t("translation.sections.section1.paragraph")}</Text>
       <Table
-        header={t("translation.sections.section1.table.header", { returnObjects: true })}
-        data={t("translation.sections.section1.table.data", { returnObjects: true })}
+        header={t("translation.sections.section1.table.header", { returnObjects: true }) as string[]}
+        data={t("translation.sections.section1.table.data", { returnObjects: true }) as string[][]}
       />
 
       <Text style={styles.sectionTitle}>{t("translation.sections.section2.title")}</Text>
       <Table
-        header={t("translation.sections.section2.table.header", { returnObjects: true })}
-        data={t("translation.sections.section2.table.data", { returnObjects: true })}
+        header={t("translation.sections.section2.table.header", { returnObjects: true }) as string[]}
+        data={t("translation.sections.section2.table.data", { returnObjects: true }) as string[][]}
       />
 
       <Text style={styles.sectionTitle}>{t("translation.sections.section3.title")}</Text>
       <Table
-        header={t("translation.sections.section3.table.header", { returnObjects: true })}
-        data={t("translation.sections.section3.table.data", { returnObjects: true })}
+        header={t("translation.sections.section3.table.header", { returnObjects: true }) as string[]}
+        data={t("translation.sections.section3.table.data", { returnObjects: true }) as string[][]}
       />
 
       <Text style={styles.sectionTitle}>{t("translation.sections.section4.title")}</Text>
       <Table
-        header={t("translation.sections.section4.table.header", { returnObjects: true })}
-        data={t("translation.sections.section4.table.data", { returnObjects: true })}
+        header={t("translation.sections.section4.table.header", { returnObjects: true }) as string[]}
+        data={t("translation.sections.section4.table.data", { returnObjects: true }) as string[][]}
       />
 
       <Text style={styles.sectionTitle}>{t("translation.sections.section5.title")}</Text>
       <Table
-        header={t("translation.sections.section5.table.header", { returnObjects: true })}
-        data={t("translation.sections.section5.table.data", { returnObjects: true })}
+        header={t("translation.sections.section5.table.header", { returnObjects: true }) as string[]}
+        data={t("translation.sections.section5.table.data", { returnObjects: true }) as string[][]}
       />
 
       <Text style={styles.sectionTitle}>{t("translation.sections.section6.title")}</Text>
       <Table
-        header={t("translation.sections.section6.table.header", { returnObjects: true })}
-        data={t("translation.sections.section6.table.data", { returnObjects: true })}
+        header={t("translation.sections.section6.table.header", { returnObjects: true }) as string[]}
+        data={t("translation.sections.section6.table.data", { returnObjects: true }) as string[][]}
       />
 
       <Text style={styles.sectionTitle}>{t("translation.sections.section7.title")}</Text>
       <Table
-        header={t("translation.sections.section7.table.header", { returnObjects: true })}
-        data={t("translation.sections.section7.table.data", { returnObjects: true })}
+        header={t("translation.sections.section7.table.header", { returnObjects: true }) as string[]}
+        data={t("translation.sections.section7.table.data", { returnObjects: true }) as string[][]}
       />
 
       <Text style={styles.sectionTitle}>{t("translation.sections.examples.title")}</Text>
-      {t("translation.sections.examples.paragraphs", { returnObjects: true }).map((para, idx) => (
-        <Text key={idx} style={styles.paragraph}>{para}</Text>
-      ))}
+      {renderParagraphs("translation.sections.examples.paragraphs")}
 
       <Text style={styles.sectionTitle}>{t("translation.sections.summary.title")}</Text>
-      {t("translation.sections.summary.paragraphs", { returnObjects: true }).map((para, idx) => (
-        <Text key={idx} style={styles.paragraph}>{para}</Text>
-      ))}
+      {renderParagraphs("translation.sections.summary.paragraphs")}
     </ScrollView>
   );
 };
