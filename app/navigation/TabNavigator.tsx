@@ -59,17 +59,12 @@ function HomeStack() {
 }
 
 function StoryStack() {
-  const { t, i18n } = useTranslation('home');
+  const { t } = useTranslation('home');
   return (
     <Stack.Navigator
       screenOptions={{
         headerShown: true,
         cardStyle: { flex: 1 },
-        headerLeft: ({ onPress }) => (
-          <TouchableOpacity onPress={onPress} style={{ marginLeft: 10 }}>
-            <IoniconsWeb name="arrow-back" size={24} color="white" />
-          </TouchableOpacity>
-        ),
       }}
     >
       <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} options={{ headerTitle:  t('menu.story') }} />
