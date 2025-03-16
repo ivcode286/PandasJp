@@ -11,9 +11,8 @@ import { useTranslation } from "react-i18next";
 import { changeLanguage } from "../../src/utils/languageService";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { RootStackParamList } from "../navigation/RootStackParamList"; // Adjust the path as needed
+import { RootStackParamList } from "../navigation/RootStackParamList"; // Adjust the path
 
-// Define navigation prop type
 type SettingsScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
   "Settings"
@@ -29,8 +28,11 @@ const SettingsScreen: React.FC = () => {
     console.log("Changing language to:", lang);
     await changeLanguage(lang);
     console.log("Navigating with new lang:", lang);
-    // Update the navigation state with the new language
     navigation.navigate("Settings", { lang });
+  };
+
+  const handlePrivacyPolicy = () => {
+    navigation.navigate("PrivacyPolicy"); // This should now type-check
   };
 
   return (
@@ -70,6 +72,16 @@ const SettingsScreen: React.FC = () => {
           >
             {t("translation.languages.simplifiedChinese")}
           </Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Privacy Policy</Text>
+        <TouchableOpacity
+          style={styles.optionButton}
+          onPress={handlePrivacyPolicy}
+        >
+          <Text style={styles.optionText}>Privacy Policy</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

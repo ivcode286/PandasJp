@@ -25,6 +25,7 @@ import SettingsScreen from '../screens/SettingsScreen';
 import { TouchableOpacity } from 'react-native';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import { useTranslation } from 'react-i18next';
+import PrivacyPolicyScreen from '../screens/basic/PrivacyPolicyScreen';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -91,6 +92,26 @@ function GrammarStack() {
   );
 }
 
+function SettingsStack() {
+  const { t } = useTranslation('settings');
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: true,
+        cardStyle: { flex: 1 },
+        headerLeft: ({ onPress }) => (
+          <TouchableOpacity onPress={onPress} style={{ marginLeft: 10 }}>
+            <IoniconsWeb name="arrow-back" size={24} color="white" />
+          </TouchableOpacity>
+        ),
+      }}
+    >
+      <Stack.Screen name="Settings" component={SettingsScreen} options={{ headerTitle: t('translation.title') }} />
+      <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicyScreen} options={{ headerTitle: 'Privacy Policy' }} />
+    </Stack.Navigator>
+  );
+}
+
 export default function MyTabs() {
   const colorScheme = useColorScheme();
 
@@ -138,10 +159,9 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Settings"
-        component={SettingsScreen}
+        component={SettingsStack}
         options={{
           title: 'Settings',
-          headerShown: true,
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color || 'white'} />,
         }}
       />

@@ -22,4 +22,5 @@ export type RootStackParamList = {
   };
 
   Settings: { lang?: "zh-TW" | "zh-CN" }; // Add this line
+  PrivacyPolicy: undefined;
 };
