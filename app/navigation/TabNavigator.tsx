@@ -24,11 +24,13 @@ import GrammarConceptsScreen from '../screens/basic/GrammarConceptsScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import { TouchableOpacity } from 'react-native';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
+import { useTranslation } from 'react-i18next';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 function HomeStack() {
+  const { t, i18n } = useTranslation('home');
   return (
     <Stack.Navigator
       screenOptions={{
@@ -42,21 +44,22 @@ function HomeStack() {
       }}
     >
       <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="HiraganaScreen" component={HiraganaScreen} options={{ headerTitle: 'ひらがな' }} />
-      <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} options={{ headerTitle: 'カタカナ' }} />
-      <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} options={{ headerTitle: 'ひらがなとカタカナの比較' }} />
-      <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} options={{ headerTitle: '基本発音規則 & 長音、促音、拗音' }} />
-      <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} options={{ headerTitle: '日本語の基本概念' }} />
-      <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} options={{ headerTitle: 'N5 日本語基礎文法の概念' }} />
-      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5 文法' }} />
+      <Stack.Screen name="HiraganaScreen" component={HiraganaScreen} options={{ headerTitle: t('menu.hiragana') }} />
+      <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} options={{ headerTitle: t('menu.katakana') }} />
+      <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} options={{ headerTitle: t('menu.kana_comparison') }} />
+      <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} options={{ headerTitle: t('menu.phonetics') }} />
+      <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} options={{ headerTitle:  t('menu.n5_concepts') }} />
+      <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} options={{ headerTitle: t('menu.grammar_concepts') }} />
+      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: t('menu.n5_basic_grammar') }} />
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }} />
       <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: false }} />
-      <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true, headerTitle: 'N5 日常会話' }} />
+      <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true, headerTitle:  t('menu.conversation') }} />
     </Stack.Navigator>
   );
 }
 
 function StoryStack() {
+  const { t, i18n } = useTranslation('home');
   return (
     <Stack.Navigator
       screenOptions={{
@@ -69,8 +72,8 @@ function StoryStack() {
         ),
       }}
     >
-      <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} options={{ headerTitle: 'N5 物語メニュー' }} />
-      <Stack.Screen name="N5StoryScreen" component={N5StoryScreen} options={{ headerTitle: 'N5 の物語' }} />
+      <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} options={{ headerTitle:  t('menu.story') }} />
+      <Stack.Screen name="N5StoryScreen" component={N5StoryScreen} options={{ headerTitle:  t('menu.story') }} />
     </Stack.Navigator>
   );
 }
