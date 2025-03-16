@@ -11,16 +11,16 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { COVERPAGE_CARD_WIDTH, LEVELS } from '@/src/utils/constants';
 
-// 定義 StackParamList 讓 TypeScript 知道需要傳入 storyTitle
+// Define StackParamList for TypeScript
 type StackParamList = {
   N5StoryScreen: { storyTitle: string };
   WordsWithDrawer: { level: string };
 };
 
 const menuData = [
-  { title: 'N5', image: require('../../assets/images/n5.jpg') },
-  { title: 'N5-KANJI', image: require('../../assets/images/n5_kanji.jpg') },
-  { title: 'N4-N3', image: require('../../assets/images/n4_n3.jpg') },
+  { title: 'N5單字', level: 'N5', image: require('../../assets/images/n5.jpg') },
+  { title: 'N5漢字', level: 'N5-KANJI', image: require('../../assets/images/n5_kanji.jpg') },
+  { title: 'N4-N3單字', level: 'N4-N3', image: require('../../assets/images/n4_n3.jpg') },
 ];
 
 export default function N5StoryMenu() {
@@ -34,15 +34,15 @@ export default function N5StoryMenu() {
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.cardContainer}
-            onPress={() => navigation.navigate('WordsWithDrawer', { level: item.title })}
-            activeOpacity={0.7} // ✅ 讓點擊效果更平滑
+            onPress={() => navigation.navigate('WordsWithDrawer', { level: item.level })} // Use item.level here
+            activeOpacity={0.7}
           >
             <Image 
-              source={item.image} // ✅ 直接載入靜態圖片
+              source={item.image}
               style={styles.coverImage}
             />
             <View style={styles.textContainer}>
-              <Text style={styles.storyText}>{item.title}</Text>
+              <Text style={styles.storyText}>{item.title}</Text> {/* Display item.title */}
             </View>
           </TouchableOpacity>
         )}
@@ -55,13 +55,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#121212', // ✅ 深色背景
+    backgroundColor: '#121212',
     paddingBottom: 80,
   },
   cardContainer: {
     width: COVERPAGE_CARD_WIDTH,
     alignSelf: 'center',
-    backgroundColor: '#fff', // ✅ 深色卡片背景
+    backgroundColor: '#fff',
     borderRadius: 15,
     marginVertical: 12,
     overflow: 'hidden',
