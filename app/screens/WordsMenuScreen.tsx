@@ -9,7 +9,8 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { COVERPAGE_CARD_WIDTH, LEVELS } from '@/src/utils/constants';
+import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
+import { useTranslation } from 'react-i18next';
 
 // Define StackParamList for TypeScript
 type StackParamList = {
@@ -17,24 +18,26 @@ type StackParamList = {
   WordsWithDrawer: { level: string };
 };
 
+// Define menuData with translation keys
 const menuData = [
-  { title: 'N5單字', level: 'N5', image: require('../../assets/images/n5.jpg') },
-  { title: 'N5漢字', level: 'N5-KANJI', image: require('../../assets/images/n5_kanji.jpg') },
-  { title: 'N4-N3單字', level: 'N4-N3', image: require('../../assets/images/n4_n3.jpg') },
+  { title: 'levels.N5', level: 'N5', image: require('../../assets/images/n5.jpg') },
+  { title: 'levels.N5-KANJI', level: 'N5-KANJI', image: require('../../assets/images/n5_kanji.jpg') },
+  { title: 'levels.N4-N3', level: 'N4-N3', image: require('../../assets/images/n4_n3.jpg') },
 ];
 
 export default function N5StoryMenu() {
   const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5StoryScreen' | 'WordsWithDrawer'>>();
+  const { t } = useTranslation('common'); // Call hook inside component
 
   return (
     <View style={styles.container}>
       <FlatList
         data={menuData}
-        keyExtractor={(item) => item.title}
+        keyExtractor={(item) => item.level} // Use level as key since title is now a key
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.cardContainer}
-            onPress={() => navigation.navigate('WordsWithDrawer', { level: item.level })} // Use item.level here
+            onPress={() => navigation.navigate('WordsWithDrawer', { level: item.level })}
             activeOpacity={0.7}
           >
             <Image 
@@ -42,7 +45,7 @@ export default function N5StoryMenu() {
               style={styles.coverImage}
             />
             <View style={styles.textContainer}>
-              <Text style={styles.storyText}>{item.title}</Text> {/* Display item.title */}
+              <Text style={styles.storyText}>{t(item.title)}</Text> {/* Translate here */}
             </View>
           </TouchableOpacity>
         )}
