@@ -35,7 +35,9 @@ const GrammarConceptsScreen: React.FC = () => {
   );
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} 
+    contentContainerStyle={{ paddingBottom: 80 }}
+    >
       <Text style={styles.title}>{t("translation.title")}</Text>
       <Text style={styles.paragraph}>{t("translation.intro")}</Text>
 
@@ -101,7 +103,6 @@ const getStyles = (isDark: boolean) =>
       flex: 1,
       backgroundColor: isDark ? "#000" : "#fff",
       padding: 16,
-      paddingBottom: 80,
     },
     title: {
       fontSize: 24,
