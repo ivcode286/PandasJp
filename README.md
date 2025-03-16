@@ -25,6 +25,17 @@ Web Producton build in local
 (ii)npx expo export --platform web
 
 
+---
+IOS BUILD
+npx eas build --platform ios --profile production
+
+submit to testflight
+npx eas submit --platform ios --latest
+
+or build auto submit
+npx eas build --platform ios --profile production --auto-submit
+
+
 ----
 custom development build/bareflow
 

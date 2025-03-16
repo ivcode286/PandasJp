@@ -72,6 +72,11 @@ const commonZhCN = {
       ],
       "N5-KANJI": ["数字", "时间", "方位", "人", "自然", "事物"],
     },
+    levels: {
+      N5: "N5单字",
+      "N5-KANJI": "N5汉字",
+      "N4-N3": "N4-N3单字",
+    }
   };
   
   export default commonZhCN;

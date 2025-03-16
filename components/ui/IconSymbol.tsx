@@ -1,6 +1,6 @@
 import { Platform, View, StyleProp, ViewStyle } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { MdHome, MdEdit, MdSettings, MdAbc, MdArrowForward, MdMenu } from 'react-icons/md';
+import { MdHome, MdEdit, MdSettings, MdAbc, MdArrowForward, MdMenu, MdBook } from 'react-icons/md';
 import { FaCode } from 'react-icons/fa';
 import React from 'react';
 import { OpaqueColorValue } from 'react-native';
@@ -15,6 +15,7 @@ const MAPPING = {
   'chevron.right': 'chevron-right',
   'menu.fill': 'menu',
   'settings.fill': 'settings',
+  'book.fill': 'book',
 } as const;
 
 // Define the allowed icon names as a TypeScript type
@@ -60,6 +61,8 @@ export function IconSymbol({
           return <MdMenu color={color as string} size={size} />;
         case 'settings.fill':
           return <MdSettings color={color as string} size={size} />;
+        case 'book.fill':
+          return <MdBook color={color as string} size={size} />;
         default:
           console.warn(`No SVG icon found for ${name}`);
           return null;

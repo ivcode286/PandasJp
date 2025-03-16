@@ -9,40 +9,43 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { COVERPAGE_CARD_WIDTH, LEVELS } from '@/src/utils/constants';
+import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
+import { useTranslation } from 'react-i18next';
 
-// 定義 StackParamList 讓 TypeScript 知道需要傳入 storyTitle
+// Define StackParamList for TypeScript
 type StackParamList = {
   N5StoryScreen: { storyTitle: string };
   WordsWithDrawer: { level: string };
 };
 
+// Define menuData with translation keys
 const menuData = [
-  { title: 'N5', image: require('../../assets/images/n5.jpg') },
-  { title: 'N5-KANJI', image: require('../../assets/images/n5_kanji.jpg') },
-  { title: 'N4-N3', image: require('../../assets/images/n4_n3.jpg') },
+  { title: 'levels.N5', level: 'N5', image: require('../../assets/images/n5.jpg') },
+  { title: 'levels.N5-KANJI', level: 'N5-KANJI', image: require('../../assets/images/n5_kanji.jpg') },
+  { title: 'levels.N4-N3', level: 'N4-N3', image: require('../../assets/images/n4_n3.jpg') },
 ];
 
 export default function N5StoryMenu() {
   const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5StoryScreen' | 'WordsWithDrawer'>>();
+  const { t } = useTranslation('common'); // Call hook inside component
 
   return (
     <View style={styles.container}>
       <FlatList
         data={menuData}
-        keyExtractor={(item) => item.title}
+        keyExtractor={(item) => item.level} // Use level as key since title is now a key
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.cardContainer}
-            onPress={() => navigation.navigate('WordsWithDrawer', { level: item.title })}
-            activeOpacity={0.7} // ✅ 讓點擊效果更平滑
+            onPress={() => navigation.navigate('WordsWithDrawer', { level: item.level })}
+            activeOpacity={0.7}
           >
             <Image 
-              source={item.image} // ✅ 直接載入靜態圖片
+              source={item.image}
               style={styles.coverImage}
             />
             <View style={styles.textContainer}>
-              <Text style={styles.storyText}>{item.title}</Text>
+              <Text style={styles.storyText}>{t(item.title)}</Text> {/* Translate here */}
             </View>
           </TouchableOpacity>
         )}
@@ -55,13 +58,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#121212', // ✅ 深色背景
+    backgroundColor: '#121212',
     paddingBottom: 80,
   },
   cardContainer: {
     width: COVERPAGE_CARD_WIDTH,
     alignSelf: 'center',
-    backgroundColor: '#fff', // ✅ 深色卡片背景
+    backgroundColor: '#fff',
     borderRadius: 15,
     marginVertical: 12,
     overflow: 'hidden',

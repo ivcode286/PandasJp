@@ -121,7 +121,7 @@ function WordScreenWithDrawer() {
   return (
     <Drawer.Navigator
       screenOptions={{
-        swipeEdgeWidth: 150,
+        swipeEdgeWidth: 300,
         drawerPosition: "right",
         drawerType: "front",
       }}
