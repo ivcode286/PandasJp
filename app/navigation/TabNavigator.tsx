@@ -53,7 +53,7 @@ function HomeStack() {
       <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} options={{ headerTitle: t('menu.grammar_concepts') }} />
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5文法' }} />
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }} />
-      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerTitle: t('menu.story') }} />
+      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: false }}  />
       <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true, headerTitle:  t('menu.conversation') }} />
     </Stack.Navigator>
   );
