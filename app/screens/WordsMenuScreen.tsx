@@ -21,8 +21,8 @@ type StackParamList = {
 // Define menuData with translation keys
 const menuData = [
   { title: 'levels.N5', level: 'N5', image: require('../../assets/images/n5.jpg') },
-  { title: 'levels.N5-KANJI', level: 'N5-KANJI', image: require('../../assets/images/n5_kanji.jpg') },
-  { title: 'levels.N4-N3', level: 'N4-N3', image: require('../../assets/images/n4_n3.jpg') },
+  { title: 'levels.N5-KANJI', level: 'N5-KANJI', image: require('../../assets/images/n5-kanji.jpg') },
+  { title: 'levels.N4-N3', level: 'N4-N3', image: require('../../assets/images/n4-n3.jpg') },
 ];
 
 export default function N5StoryMenu() {

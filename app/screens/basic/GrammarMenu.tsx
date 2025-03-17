@@ -17,8 +17,8 @@ type StackParamList = {
 };
 
 const menuData = [
-  { title: 'N5 基本文法', image: require('../../../assets/images/n5_basic_grammar.jpg'), level: LEVELS.N5_BASIC_GRAMMAR },
-  { title: 'N5 上級文法', image: require('../../../assets/images/n5_advance_grammar.jpg'), level: LEVELS.N5_ADVANCE_GRAMMAR },
+  { title: 'N5 基本文法', image: require('../../../assets/images/n5-basic-grammar.jpg'), level: LEVELS.N5_BASIC_GRAMMAR },
+  { title: 'N5 上級文法', image: require('../../../assets/images/n5-advance-grammar.jpg'), level: LEVELS.N5_ADVANCE_GRAMMAR },
 ];
 
 export default function GrammarMenu() {

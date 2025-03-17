@@ -80,7 +80,7 @@ const storyZhTW = {
     },
     {
       title: "熊貓的神社參拜與雪的試煉", // 已為繁中，無需修改
-      imageName: "panda_shrine.jpg",
+      imageName: "panda-shrine.jpg",
       story: [
         {
           chapter: "第一章：想去神社", // 已為繁中，無需修改
@@ -142,7 +142,7 @@ const storyZhTW = {
     },
     {
       title: "肥貓與不思議蛋糕", // 已為繁中，無需修改
-      imageName: "fat_cat.jpg",
+      imageName: "fat-cat.jpg",
       story: [
         {
           chapter: "第一章：肥貓的夢想", // 原 "肥貓の夢"，轉為繁中
@@ -209,7 +209,7 @@ const storyZhTW = {
     },
     {
       title: "魔法少女 小光", // 已為繁中，無需修改
-      imageName: "magical_shoujo.jpg",
+      imageName: "magical-shoujo.jpg",
       story: [
         {
           chapter: "第一章：小光的魔法", // 已為繁中，無需修改
@@ -275,7 +275,7 @@ const storyZhTW = {
     },
     {
       title: "不良少年與貓仙人", // 已為繁中，無需修改
-      imageName: "delinquent_cat_sennin.jpg",
+      imageName: "delinquent-cat-sennin.jpg",
       story: [
         {
           chapter: "第一章：不良少年的日常", // 原 "不良少年の毎日"，轉為繁中
@@ -329,7 +329,7 @@ const storyZhTW = {
     },
     {
       title: "熊貓與大家的快樂河邊遊戲", // 已為繁中，無需修改
-      imageName: "panda_river.jpg",
+      imageName: "panda-river.jpg",
       story: [
         {
           chapter: "第一章：釣魚的約定", // 原 "釣りの約束"，轉為繁中
@@ -362,7 +362,7 @@ const storyZhTW = {
     },
     {
       title: "魔王與地球的美味食物", // 已為繁中，無需修改
-      imageName: "overlord_food.jpg",
+      imageName: "overlord-food.jpg",
       story: [
         {
           chapter: "第一章：魔王的計畫", // 原 "魔王の計画"，轉為繁中
@@ -425,7 +425,7 @@ const storyZhTW = {
     },
     {
       title: "去醫院路上的相遇", // 已為繁中，無需修改
-      imageName: "girl_hospital_visit.jpg",
+      imageName: "girl-hospital-visit.jpg",
       story: [
         {
           chapter: "第一章：探望朋友", // 原 "友だちのお見舞い"，轉為繁中
@@ -483,7 +483,7 @@ const storyZhTW = {
     },
     {
       title: "哥林布們與魔女的陰謀", // 已為繁中，無需修改
-      imageName: "colinb_witch.jpg",
+      imageName: "colinb-witch.jpg",
       story: [
         {
           chapter: "第一章：山洞中的哥林布們", // 原 "山洞のコリンブたち"，轉為繁中
@@ -549,7 +549,7 @@ const storyZhTW = {
     },
     {
       title: "熊貓與貓的湖邊冒險", // 已為繁中，無需修改
-      imageName: "panda_cat_lake.jpg",
+      imageName: "panda-cat-lake.jpg",
       story: [
         {
           chapter: "第一章：遠足的開始", // 原 "遠足のはじまり"，轉為繁中

@@ -80,7 +80,7 @@ const storyZhCN = {
     },
     {
       title: "熊猫的神社参拜与雪的试炼",
-      imageName: "panda_shrine.jpg",
+      imageName: "panda-shrine.jpg",
       story: [
         {
           chapter: "第一章：想去神社",
@@ -142,7 +142,7 @@ const storyZhCN = {
     },
     {
       title: "肥猫与神奇蛋糕",
-      imageName: "fat_cat.jpg",
+      imageName: "fat-cat.jpg",
       story: [
         {
           chapter: "第一章：肥猫的梦想",
@@ -209,7 +209,7 @@ const storyZhCN = {
     },
     {
       title: "魔法少女 小光",
-      imageName: "magical_shoujo.jpg",
+      imageName: "magical-shoujo.jpg",
       story: [
         {
           chapter: "第一章：小光的魔法",
@@ -275,7 +275,7 @@ const storyZhCN = {
     },
     {
       title: "不良少年与猫仙人",
-      imageName: "delinquent_cat_sennin.jpg",
+      imageName: "delinquent-cat-sennin.jpg",
       story: [
         {
           chapter: "第一章：不良少年的日常",
@@ -329,7 +329,7 @@ const storyZhCN = {
     },
     {
       title: "熊猫与大家的快乐河边游戏",
-      imageName: "panda_river.jpg",
+      imageName: "panda-river.jpg",
       story: [
         {
           chapter: "第一章：钓鱼的约定",
@@ -362,7 +362,7 @@ const storyZhCN = {
     },
     {
       title: "魔王与地球的美味食物",
-      imageName: "overlord_food.jpg",
+      imageName: "overlord-food.jpg",
       story: [
         {
           chapter: "第一章：魔王的计划",
@@ -425,7 +425,7 @@ const storyZhCN = {
     },
     {
       title: "去医院路上的相遇",
-      imageName: "girl_hospital_visit.jpg",
+      imageName: "girl-hospital-visit.jpg",
       story: [
         {
           chapter: "第一章：探望朋友",
@@ -483,7 +483,7 @@ const storyZhCN = {
     },
     {
       title: "哥林布们与魔女的阴谋",
-      imageName: "colinb_witch.jpg",
+      imageName: "colinb-witch.jpg",
       story: [
         {
           chapter: "第一章：山洞中的哥林布们",
@@ -548,7 +548,7 @@ const storyZhCN = {
     },
     {
       title: "熊猫与猫的湖边冒险",
-      imageName: "panda_cat_lake.jpg",
+      imageName: "panda-cat-lake.jpg",
       story: [
         {
           chapter: "第一章：远足的开始",

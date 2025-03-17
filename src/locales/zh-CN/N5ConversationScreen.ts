@@ -4,7 +4,7 @@ const conversationZhCN: { conversations: ConversationTranslation[] } = {
   conversations: [
     {
       title: "在便利店买东西",
-      imageName: "convenience_shopping.jpg",
+      imageName: "convenience-shopping.jpg",
       scene: "熊猫在日本的便利商店买零食。",
       conversation: [
         { speaker: "熊猫", japanese: "すみません、これはいくらですか？", chinese: "不好意思，这个多少钱？" },
@@ -20,7 +20,7 @@ const conversationZhCN: { conversations: ConversationTranslation[] } = {
     },
     {
       title: "在学校聊兴趣",
-      imageName: "school_chat.jpg",
+      imageName: "school-chat.jpg",
       scene: "熊猫🐼 和辉夜🌙 在学校聊彼此的兴趣。",
       conversation: [
         { speaker: "辉夜", japanese: "熊貓くんの趣味（しゅみ）は何ですか？", chinese: "熊猫，你的兴趣是什么？" },
@@ -34,7 +34,7 @@ const conversationZhCN: { conversations: ConversationTranslation[] } = {
     },
     {
       title: "在餐厅点餐",
-      imageName: "restaurant_dining.jpg",
+      imageName: "restaurant-dining.jpg",
       scene: "小花（学生）和朋友在日本的餐厅吃饭。",
       conversation: [
         { speaker: "店员", japanese: "いらっしゃいませ！何名様（なんめいさま）ですか？", chinese: "欢迎光临！请问几位？" },
@@ -51,7 +51,7 @@ const conversationZhCN: { conversations: ConversationTranslation[] } = {
     },
     {
       title: "在车站问路",
-      imageName: "station_help.jpg",
+      imageName: "station-help.jpg",
       scene: "熊猫（观光客）在东京的车站找不到出口，向日本人询问。",
       conversation: [
         { speaker: "熊猫", japanese: "すみません、新宿駅（しんじゅくえき）へ行きたいのですが……。", chinese: "不好意思，我想去新宿站……。" },
@@ -64,7 +64,7 @@ const conversationZhCN: { conversations: ConversationTranslation[] } = {
     },
     {
       title: "在咖啡店点饮料",
-      imageName: "cafe_order.jpg",
+      imageName: "cafe-order.jpg",
       scene: "熊猫🐼 和小花🌸 在咖啡店点饮料。",
       conversation: [
         { speaker: "店员", japanese: "いらっしゃいませ！ご注文（ちゅうもん）はお決まりですか？", chinese: "欢迎光临！请问决定好要点什么了吗？" },
@@ -80,7 +80,7 @@ const conversationZhCN: { conversations: ConversationTranslation[] } = {
     },
     {
       title: "买衣服",
-      imageName: "clothing_store.jpg",
+      imageName: "clothing-store.jpg",
       scene: "芽依🌿 和莉莉🌼 在服饰店试穿衣服。",
       conversation: [
         { speaker: "店员", japanese: "いらっしゃいませ！何かお探しですか？", chinese: "欢迎光临！请问在找什么吗？" },
@@ -98,7 +98,7 @@ const conversationZhCN: { conversations: ConversationTranslation[] } = {
     },
     {
       title: "约朋友去公园",
-      imageName: "phone_call.jpg",
+      imageName: "phone-call.jpg",
       scene: "熊猫🐼 给芽依🌿 打电话，约她一起去公园。",
       conversation: [
         { speaker: "熊猫", japanese: "もしもし、芽依ちゃん？", chinese: "喂，芽依？" },
@@ -114,7 +114,7 @@ const conversationZhCN: { conversations: ConversationTranslation[] } = {
     },
     {
       title: "去超市买东西",
-      imageName: "supermarket_shopping.jpg",
+      imageName: "supermarket-shopping.jpg",
       scene: "小花🌸 和芽依🌿 一起去超市买食材。",
       conversation: [
         { speaker: "小花", japanese: "芽依ちゃん、今日（きょう）の晩ごはんは何を作りますか？", chinese: "芽依，今天晚餐要做什么呢？" },
@@ -130,7 +130,7 @@ const conversationZhCN: { conversations: ConversationTranslation[] } = {
     },
     {
       title: "在书店选书",
-      imageName: "bookstore_shopping.jpg",
+      imageName: "bookstore-shopping.jpg",
       scene: "莉莉🌼 和小花🌸 在书店选购书籍。",
       conversation: [
         { speaker: "莉莉", japanese: "小花ちゃん、本屋（ほんや）に行きませんか？", chinese: "小花，我们去书店吧？" },
@@ -146,7 +146,7 @@ const conversationZhCN: { conversations: ConversationTranslation[] } = {
     },
     {
       title: "计划周末的活动",
-      imageName: "weekend_plan.jpg",
+      imageName: "weekend-plan.jpg",
       scene: "熊猫🐼、莉莉🌼 和芽依🌿 在计划周末的活动。",
       conversation: [
         { speaker: "熊猫", japanese: "今週（こんしゅう）の土曜日（どようび）、何をしますか？", chinese: "这周六要做什么呢？" },
