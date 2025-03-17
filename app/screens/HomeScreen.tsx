@@ -84,6 +84,8 @@ export default function HomeScreen() {
   const handlePress = (item: MenuItem) => {
     if (item.screen === 'WordsWithDrawer' || item.screen === 'GrammarScreen') {
       navigation.navigate(item.screen, { level: item.specialLevel });
+    } else if (item.screen === 'StoryStack') {
+      navigation.navigate('StoryStack', { screen: 'N5StoryMenu' });
     } else {
       navigation.navigate(item.screen);
     }

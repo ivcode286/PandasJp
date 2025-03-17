@@ -53,7 +53,7 @@ function HomeStack() {
       <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} options={{ headerTitle: t('menu.grammar_concepts') }} />
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5文法' }} />
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }} />
-      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: false }} />
+      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerTitle: t('menu.story') }} />
       <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true, headerTitle:  t('menu.conversation') }} />
     </Stack.Navigator>
   );
@@ -64,12 +64,16 @@ function StoryStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: true,
+        headerShown: false, 
         cardStyle: { flex: 1 },
       }}
     >
-      <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} options={{ headerTitle:  'Menu' }} />
-      <Stack.Screen name="N5StoryScreen" component={N5StoryScreen} options={{ headerTitle:  t('menu.story') }} />
+      <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} />
+      <Stack.Screen
+        name="N5StoryScreen"
+        component={N5StoryScreen}
+        options={{ headerTitle: t('menu.story'), headerShown: true }}
+      />
     </Stack.Navigator>
   );
 }
