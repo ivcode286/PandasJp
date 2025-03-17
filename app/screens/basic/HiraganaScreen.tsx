@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { useTranslation } from "react-i18next";
 import useTextToSpeech from "@/hooks/useTextToSpeech";
+import { HiraganaTranslation } from "../../../src/types/translation"; 
 
 export const HiraganaTable = () => {
   const theme = useColorScheme();
@@ -21,7 +22,7 @@ export const HiraganaTable = () => {
     border: isDark ? "#FFFFFF" : "#000000",
   };
 
-  const HIRAGANA_LIST = [
+  const HIRAGANA_LIST: [string, string][][] = [
     [["あ", "a"], ["い", "i"], ["う", "u"], ["え", "e"], ["お", "o"]],
     [["か", "ka"], ["き", "ki"], ["く", "ku"], ["け", "ke"], ["こ", "ko"]],
     [["さ", "sa"], ["し", "shi"], ["す", "su"], ["せ", "se"], ["そ", "so"]],
@@ -34,7 +35,7 @@ export const HiraganaTable = () => {
     [["わ", "wa"], ["を", "wo"], ["ん", "n"]],
   ];
 
-  const { t } = useTranslation("hiragana");
+  const { t } = useTranslation<"hiragana">("hiragana");
 
   return (
     <View style={{ padding: 10, alignSelf: "flex-start" }}>
@@ -83,49 +84,59 @@ export const HiraganaTable = () => {
 const HiraganaScreen = () => {
   const theme = useColorScheme();
   const isDark = theme === "dark";
-  const { t } = useTranslation("hiragana");
+  const { t } = useTranslation<"hiragana">("hiragana");
 
   const colors = {
     background: isDark ? "#121212" : "#FFFFFF",
     text: isDark ? "#E0E0E0" : "#333333",
   };
 
+  // Type the translation function with HiraganaTranslation
+  const typedT = t as (key: keyof HiraganaTranslation | string, options?: any) => any;
+
   return (
-    <ScrollView style={[styles.container, { backgroundColor: colors.background }]}
-    contentContainerStyle={{ paddingBottom: 80 }} 
+    <ScrollView
+      style={[styles.container, { backgroundColor: colors.background }]}
+      contentContainerStyle={{ paddingBottom: 80 }}
     >
       <Text style={[styles.headerTitle, { color: colors.text }]}>
-        {t("title")}
+        {typedT("title")}
       </Text>
       <Text style={[styles.subTitle, { color: colors.text }]}>
-        {t("sections.hiragana.title")}
+        {typedT("sections.hiragana.title")}
       </Text>
       <Text style={[styles.description, { color: colors.text }]}>
-        {t("sections.hiragana.intro")}
+        {typedT("sections.hiragana.intro")}
       </Text>
-      {t("sections.hiragana.uses", { returnObjects: true }).map((item, idx) => (
-        <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
-          • {item}
-        </Text>
-      ))}
+      {typedT("sections.hiragana.uses", { returnObjects: true }).map(
+        (item: string, idx: number) => (
+          <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
+            • {item}
+          </Text>
+        )
+      )}
 
       <Text style={[styles.subTitle, { color: colors.text }]}>
-        {t("sections.features.title")}
+        {typedT("sections.features.title")}
       </Text>
-      {t("sections.features.points", { returnObjects: true }).map((item, idx) => (
-        <Text key={idx} style={[styles.description, { color: colors.text }]}>
-          • {item}
-        </Text>
-      ))}
+      {typedT("sections.features.points", { returnObjects: true }).map(
+        (item: string, idx: number) => (
+          <Text key={idx} style={[styles.description, { color: colors.text }]}>
+            • {item}
+          </Text>
+        )
+      )}
 
       <Text style={[styles.subTitle, { color: colors.text }]}>
-        {t("sections.examples.title")}
+        {typedT("sections.examples.title")}
       </Text>
-      {t("sections.examples.items", { returnObjects: true }).map((item, idx) => (
-        <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
-          • {item}
-        </Text>
-      ))}
+      {typedT("sections.examples.items", { returnObjects: true }).map(
+        (item: string, idx: number) => (
+          <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
+            • {item}
+          </Text>
+        )
+      )}
 
       <HiraganaTable />
     </ScrollView>

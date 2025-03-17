@@ -9,12 +9,13 @@ import {
 } from "react-native";
 import { useTranslation } from "react-i18next";
 import useTextToSpeech from "@/hooks/useTextToSpeech";
+import { KatakanaTranslation } from "../../../src/types/translation";
 
 export const KatakanaTable = () => {
   const theme = useColorScheme();
   const isDark = theme === "dark";
   const { speak } = useTextToSpeech();
-  const { t } = useTranslation("katakana");
+  const { t } = useTranslation<"katakana">("katakana");
 
   const colors = {
     background: isDark ? "#121212" : "#FFFFFF",
@@ -22,7 +23,7 @@ export const KatakanaTable = () => {
     border: isDark ? "#FFFFFF" : "#000000",
   };
 
-  const KATAKANA_LIST = [
+  const KATAKANA_LIST: [string, string][][] = [
     [["ア", "a"], ["イ", "i"], ["ウ", "u"], ["エ", "e"], ["オ", "o"]],
     [["カ", "ka"], ["キ", "ki"], ["ク", "ku"], ["ケ", "ke"], ["コ", "ko"]],
     [["サ", "sa"], ["シ", "shi"], ["ス", "su"], ["セ", "se"], ["ソ", "so"]],
@@ -82,46 +83,56 @@ export const KatakanaTable = () => {
 const KatakanaScreen = () => {
   const theme = useColorScheme();
   const isDark = theme === "dark";
-  const { t } = useTranslation("katakana");
+  const { t } = useTranslation<"katakana">("katakana");
 
   const colors = {
     background: isDark ? "#121212" : "#FFFFFF",
     text: isDark ? "#E0E0E0" : "#333333",
   };
 
+  // Type the translation function with KatakanaTranslation
+  const typedT = t as (key: keyof KatakanaTranslation | string, options?: any) => any;
+
   return (
-    <ScrollView style={[styles.container, { backgroundColor: colors.background }]}
-    contentContainerStyle={{ paddingBottom: 80 }} 
+    <ScrollView
+      style={[styles.container, { backgroundColor: colors.background }]}
+      contentContainerStyle={{ paddingBottom: 80 }}
     >
       <Text style={[styles.subTitle, { color: colors.text }]}>
-        {t("sections.katakana.title")}
+        {typedT("sections.katakana.title")}
       </Text>
       <Text style={[styles.description, { color: colors.text }]}>
-        {t("sections.katakana.intro")}
+        {typedT("sections.katakana.intro")}
       </Text>
-      {t("sections.katakana.uses", { returnObjects: true }).map((item, idx) => (
-        <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
-          • {item}
-        </Text>
-      ))}
+      {typedT("sections.katakana.uses", { returnObjects: true }).map(
+        (item: string, idx: number) => (
+          <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
+            • {item}
+          </Text>
+        )
+      )}
 
       <Text style={[styles.subTitle, { color: colors.text }]}>
-        {t("sections.features.title")}
+        {typedT("sections.features.title")}
       </Text>
-      {t("sections.features.points", { returnObjects: true }).map((item, idx) => (
-        <Text key={idx} style={[styles.description, { color: colors.text }]}>
-          • {item}
-        </Text>
-      ))}
+      {typedT("sections.features.points", { returnObjects: true }).map(
+        (item: string, idx: number) => (
+          <Text key={idx} style={[styles.description, { color: colors.text }]}>
+            • {item}
+          </Text>
+        )
+      )}
 
       <Text style={[styles.subTitle, { color: colors.text }]}>
-        {t("sections.examples.title")}
+        {typedT("sections.examples.title")}
       </Text>
-      {t("sections.examples.items", { returnObjects: true }).map((item, idx) => (
-        <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
-          • {item}
-        </Text>
-      ))}
+      {typedT("sections.examples.items", { returnObjects: true }).map(
+        (item: string, idx: number) => (
+          <Text key={idx} style={[styles.listItem, { color: colors.text }]}>
+            • {item}
+          </Text>
+        )
+      )}
 
       <KatakanaTable />
     </ScrollView>
