@@ -161,6 +161,14 @@ export interface SettingsTranslation {
   };
 }
 
+export interface AppPromptTranslation {
+  title: string;
+  message: string;
+  download: string;
+  open: string;
+  cancel: string;
+}
+
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
@@ -179,5 +187,6 @@ export interface Translation {
     n3n4: WordData[];
   };
   common: CommonTranslation;
-  settings: SettingsTranslation; 
+  settings: SettingsTranslation;
+  appPrompt: AppPromptTranslation; 
 }

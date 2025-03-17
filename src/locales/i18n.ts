@@ -1,3 +1,4 @@
+// src/locales/i18n.ts
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import grammarConceptsZhTW from '../locales/zh-TW/GrammarConceptsScreen';
@@ -15,6 +16,7 @@ import n5KanjiWordsZhTW from '../locales/zh-TW/N5KanjiWords';
 import n3n4WordsZhTW from '../locales/zh-TW/N3N4Words';
 import commonZhTW from '../locales/zh-TW/Common';
 import settingsZhTW from '../locales/zh-TW/SettingsScreen';
+import appPromptZhTW from '../locales/zh-TW/appPrompt'; 
 import grammarConceptsZhCN from '../locales/zh-CN/GrammarConceptsScreen';
 import n5ConceptsZhCN from '../locales/zh-CN/N5ConceptsScreen';
 import homeZhCN from '../locales/zh-CN/HomeScreen';
@@ -30,6 +32,7 @@ import n5KanjiWordsZhCN from '../locales/zh-CN/N5KanjiWords';
 import n3n4WordsZhCN from '../locales/zh-CN/N3N4Words';
 import commonZhCN from '../locales/zh-CN/Common';
 import settingsZhCN from '../locales/zh-CN/SettingsScreen';
+import appPromptZhCN from '../locales/zh-CN/appPrompt'; 
 
 const resources = {
   'zh-TW': {
@@ -52,6 +55,7 @@ const resources = {
     },
     common: commonZhTW,
     settings: settingsZhTW,
+    appPrompt: appPromptZhTW, // 添加 appPrompt 命名空間
   },
   'zh-CN': {
     grammarConcepts: grammarConceptsZhCN,
@@ -73,6 +77,7 @@ const resources = {
     },
     common: commonZhCN,
     settings: settingsZhCN,
+    appPrompt: appPromptZhCN, // 添加 appPrompt 命名空間
   },
 };
 
@@ -95,6 +100,7 @@ i18n.use(initReactI18next).init({
     'words',
     'common',
     'settings',
+    'appPrompt', // 添加 appPrompt 到命名空間列表
   ],
   returnObjects: true, // 全局啟用 returnObjects
 });
