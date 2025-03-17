@@ -8,7 +8,7 @@ import { ConversationTranslation } from '../../../src/types/translation';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 type StackParamList = {
-  N5ConversationScreen: { conversationTitle: string };
+  N5ConversationScreen: { conversationId: string }; // Changed to conversationId
 };
 
 type ConversationScreenRouteProp = RouteProp<StackParamList, 'N5ConversationScreen'>;
@@ -16,11 +16,14 @@ type ConversationScreenRouteProp = RouteProp<StackParamList, 'N5ConversationScre
 export default function N5ConversationScreen() {
   const { t } = useTranslation('conversation');
   const route = useRoute<ConversationScreenRouteProp>();
-  const conversationTitle = route.params?.conversationTitle;
+  const conversationId = route.params?.conversationId; // Changed to conversationId
   const { speak } = useTextToSpeech();
 
   const conversations = t('conversations', { returnObjects: true }) as ConversationTranslation[];
-  const conversation = conversations.find((c) => c.title === conversationTitle);
+  console.log("conversationId:", conversationId);
+  console.log("conversations:", JSON.stringify(conversations, null, 2));
+
+  const conversation = conversations.find((c) => c.imageName.replace('.jpg', '') === conversationId); // Match by imageName
 
   if (!conversation) {
     return (
@@ -35,7 +38,7 @@ export default function N5ConversationScreen() {
       <View style={styles.coverContainer}>
         <Image source={getImage(conversation.imageName)} style={styles.coverImage} />
       </View>
-      <Text style={styles.title}>{conversationTitle}</Text>
+      <Text style={styles.title}>{conversation.title}</Text>
       {conversation.conversation.map((line, index: number) => (
         <View key={index} style={styles.sentenceContainer}>
           <View style={styles.sentenceRow}>

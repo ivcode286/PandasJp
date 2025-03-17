@@ -7,16 +7,14 @@ import {
 import i18n from "../locales/i18n";
 import { changeLanguage } from "./languageService";
 
-// 定義參數類型
 interface RouteParams {
   lang?: string;
   level?: string;
-  storytitle?: string;
-  conversationtitle?: string;
+  storyId?: string;
+  conversationId?: string; // Changed to conversationId
   [key: string]: any;
 }
 
-// 定義 screens 配置的類型
 interface ScreenConfig {
   path: string;
   screens?: { [key: string]: string | ScreenConfig };
@@ -38,13 +36,18 @@ interface HomeScreensConfig {
 
 interface WordsScreensConfig {
   WordsMenuScreen: string;
-  WordsWithDrawer: string; // Words Tab 下的 WordsWithDrawer 不含子 screens
+  WordsWithDrawer: string;
+}
+
+interface StoryScreensConfig {
+  N5StoryMenu: string;
+  N5StoryScreen: string;
 }
 
 interface LinkingConfig {
   Home: ScreenConfig & { screens: HomeScreensConfig };
   Words: ScreenConfig & { screens: WordsScreensConfig };
-  Story: string;
+  Story: ScreenConfig & { screens: StoryScreensConfig };
   Settings: string;
 }
 
@@ -92,7 +95,13 @@ const linking = {
           WordsWithDrawer: "words-with-drawer/:level",
         },
       },
-      Story: ":lang/story",
+      Story: {
+        path: ":lang/story",
+        screens: {
+          N5StoryMenu: "",
+          N5StoryScreen: "n5storyscreen",
+        },
+      },
       Settings: ":lang/settings",
     } as LinkingConfig,
   },
@@ -153,6 +162,7 @@ const linking = {
     const screens = linking.config.screens;
     const homeScreens = screens.Home.screens;
     const wordsScreens = screens.Words.screens;
+    const storyScreens = screens.Story.screens;
     const topLevelRoute = segments[0]?.toLowerCase();
     let state;
 
@@ -247,7 +257,7 @@ const linking = {
                       routes: [
                         {
                           name: storyScreenName || "N5StoryMenu",
-                          ...(storySubRoute === "n5storyscreen" && queryString ? { params: { storytitle: decodeURIComponent(queryString.split("=")[1]) } } : {}),
+                          ...(storySubRoute === "n5storyscreen" && queryString ? { params: { storyId: decodeURIComponent(queryString.split("=")[1]) } } : {}),
                         },
                       ],
                     },
@@ -275,7 +285,7 @@ const linking = {
                       routes: [
                         {
                           name: convScreenName || "N5ConversationMenu",
-                          ...(convSubRoute === "n5conversationscreen" && queryString ? { params: { conversationtitle: decodeURIComponent(queryString.split("=")[1]) } } : {}),
+                          ...(convSubRoute === "n5conversationscreen" && queryString ? { params: { conversationId: decodeURIComponent(queryString.split("=")[1]) } } : {}), // Changed to conversationId
                         },
                       ],
                     },
@@ -285,6 +295,7 @@ const linking = {
             },
           ],
         };
+        console.log("Conversation route state:", JSON.stringify(state, null, 2));
       }
     } else if (topLevelRoute === "words") {
       const subRoute = segments[1]?.toLowerCase() || "";
@@ -326,6 +337,29 @@ const linking = {
           ],
         };
       }
+    } else if (topLevelRoute === "story") {
+      const subRoute = segments[1]?.toLowerCase() || "";
+      const screenName = Object.keys(storyScreens).find(
+        (key) => storyScreens[key] === subRoute || (subRoute === "" && storyScreens[key] === "")
+      );
+      state = {
+        routes: [
+          {
+            name: "Story",
+            state: {
+              routes: [
+                {
+                  name: screenName || "N5StoryMenu",
+                  ...(subRoute === "n5storyscreen" && queryString
+                    ? { params: { storyId: decodeURIComponent(queryString.split("=")[1]) } }
+                    : {}),
+                },
+              ],
+            },
+          },
+        ],
+      };
+      console.log("Story route state:", JSON.stringify(state, null, 2));
     } else if (topLevelRoute && linking.config.screens[topLevelRoute as keyof LinkingConfig]) {
       state = {
         routes: [
@@ -343,8 +377,8 @@ const linking = {
     console.log("Parsed狀態:", JSON.stringify(state, null, 2));
 
     const params: RouteParams = {};
-    if (queryString && !state?.routes[0]?.state?.routes[1]?.state?.routes[0]?.params) {
-      queryString.split("&").forEach(pair => {
+    if (queryString && !state?.routes[0]?.state?.routes[0]?.params) {
+      queryString.split("&").forEach((pair) => {
         const [key, value] = pair.split("=");
         params[key] = decodeURIComponent(value);
       });

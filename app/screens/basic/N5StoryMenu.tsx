@@ -6,27 +6,25 @@ import { useTranslation } from 'react-i18next';
 import { getImage } from '../../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
-// Define StackParamList
 type StackParamList = {
-  N5StoryScreen: { storyTitle: string };
+  N5StoryScreen: { storyId: string }; // Updated to storyId
 };
 
 export default function N5StoryMenu() {
   const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5StoryScreen'>>();
-  const { t } = useTranslation('story'); // Use the "story" namespace
+  const { t } = useTranslation('story');
 
-  // Fetch the stories array dynamically
   const stories = t('stories', { returnObjects: true }) as Array<{ title: string; imageName: string }>;
 
   return (
     <View style={styles.container}>
       <FlatList
         data={stories}
-        keyExtractor={(item) => item.title}
+        keyExtractor={(item) => item.imageName} // Use imageName as key
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.cardContainer}
-            onPress={() => navigation.navigate('N5StoryScreen', { storyTitle: item.title })}
+            onPress={() => navigation.navigate('N5StoryScreen', { storyId: item.imageName.replace('.jpg', '') })} // Pass storyId
           >
             <Image source={getImage(item.imageName)} style={styles.coverImage} />
             <View style={styles.textContainer}>
@@ -39,7 +37,6 @@ export default function N5StoryMenu() {
   );
 }
 
-// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,

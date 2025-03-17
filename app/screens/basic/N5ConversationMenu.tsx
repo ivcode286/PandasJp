@@ -8,7 +8,7 @@ import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 import { ConversationTranslation } from '../../../src/types/translation';
 
 type StackParamList = {
-  N5ConversationScreen: { conversationTitle: string };
+  N5ConversationScreen: { conversationId: string }; // Changed to conversationId
 };
 
 export default function N5ConversationMenu() {
@@ -16,17 +16,17 @@ export default function N5ConversationMenu() {
   const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5ConversationScreen'>>();
 
   const conversations = t('conversations', { returnObjects: true }) as ConversationTranslation[];
-  console.log('Conversations:', conversations);
+  console.log('Conversations:', JSON.stringify(conversations, null, 2));
 
   return (
     <View style={styles.container}>
       <FlatList
         data={conversations}
-        keyExtractor={(item) => item.title}
+        keyExtractor={(item) => item.imageName} // Use imageName as key
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.cardContainer}
-            onPress={() => navigation.navigate("N5ConversationScreen", { conversationTitle: item.title })}
+            onPress={() => navigation.navigate("N5ConversationScreen", { conversationId: item.imageName.replace('.jpg', '') })} // Pass conversationId
           >
             <Image source={getImage(item.imageName)} style={styles.coverImage} />
             <View style={styles.textContainer}>

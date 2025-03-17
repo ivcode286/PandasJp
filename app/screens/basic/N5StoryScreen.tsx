@@ -6,27 +6,29 @@ import { getImage } from '../../../src/utils/imageLoader';
 import { useTranslation } from 'react-i18next';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
-// Define StackParamList
 type StackParamList = {
-  N5StoryScreen: { storyTitle: string };
+  N5StoryScreen: { storyId: string }; // Use storyId instead of storyTitle
 };
 
 type StoryScreenRouteProp = RouteProp<StackParamList, 'N5StoryScreen'>;
 
 export default function N5StoryScreen() {
   const route = useRoute<StoryScreenRouteProp>();
-  const { t } = useTranslation('story'); // Use the "story" namespace
+  const { t } = useTranslation('story');
   const { speak } = useTextToSpeech();
 
-  // Fetch all stories from the "stories" key
   const stories = t('stories', { returnObjects: true }) as Array<{
     title: string;
     imageName: string;
     story: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
   }>;
 
-  const storyTitle = route.params?.storyTitle;
-  const story = stories.find((s) => s.title === storyTitle);
+  const storyId = route.params?.storyId; // Get storyId from route params
+  console.log("storyId:", storyId);
+  console.log("stories:", JSON.stringify(stories, null, 2));
+
+  // Match by imageName (strip .jpg for comparison)
+  const story = stories.find((s) => s.imageName.replace('.jpg', '') === storyId);
 
   if (!story) {
     return (
@@ -70,7 +72,6 @@ export default function N5StoryScreen() {
   );
 }
 
-// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,
