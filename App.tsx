@@ -19,6 +19,7 @@ export default function App() {
   const [langLoaded, setLangLoaded] = useState(false);
 
   useEffect(() => {
+    console.log("🚀 Running checkForUpdates()");
     checkForUpdates(); 
   }, []);
 

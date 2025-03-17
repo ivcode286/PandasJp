@@ -48,6 +48,10 @@ eas build --platform android --profile development
 eas build:list (download apk)
 adb install C://xxxxx.apk
 
+----
+test expo update Noti
+1.npx eas build --profile preview --platform ios
+2.TestFlight check update alert
 
 In the output, you'll find options to open the app in a
 

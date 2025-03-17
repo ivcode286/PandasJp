@@ -1,47 +1,37 @@
 import { Alert } from 'react-native';
 import * as Updates from 'expo-updates';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useTranslation } from 'react-i18next';
-
-const LAST_UPDATE_CHECK_KEY = 'last_update_check';
 
 /**
- * Checks for app updates only on Saturdays
+ * Check for app updates and show an alert if an update is available
  */
 export async function checkForUpdates() {
   try {
-    const { t } = useTranslation("common");
-    const lastCheckDate = await AsyncStorage.getItem(LAST_UPDATE_CHECK_KEY);
-    const today = new Date();
-
-    // If last check was today, do not check again
-    if (lastCheckDate === today.toDateString()) {
-      console.log("Update check already performed today.");
-      return;
-    }
-
-    // Perform update check
+    console.log("🔍 Checking for updates...");
     const update = await Updates.checkForUpdateAsync();
+
     if (update.isAvailable) {
+      console.log("⚠️ New update available!");
+
       Alert.alert(
-        t('appUpdate.updateAlertTitle'),
-        t('appUpdate.updateAlertMessage'),
+        "Update Available", 
+        "A new version is available. Would you like to update now?", 
         [
-          { text: t('appUpdate.updateAlertLater'), style: "cancel" },
+          { text: "Later", style: "cancel" },
           {
-            text: t('appUpdate.updateAlertNow'),
+            text: "Update Now",
             onPress: async () => {
+              console.log("⏳ Fetching update...");
               await Updates.fetchUpdateAsync();
-              await Updates.reloadAsync(); // Reload app to apply the update
+              console.log("🔄 Reloading app...");
+              await Updates.reloadAsync();
             },
           },
         ]
       );
+    } else {
+      console.log("✅ No updates available.");
     }
-
-    // Store today's date as last check date
-    await AsyncStorage.setItem(LAST_UPDATE_CHECK_KEY, today.toDateString());
   } catch (error) {
-    console.error("Error checking for updates:", error);
+    console.error("❌ Error checking for updates:", error);
   }
 }

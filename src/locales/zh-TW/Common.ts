@@ -76,12 +76,6 @@ const commonZhTW = {
     N5: "N5單字",
     "N5-KANJI": "N5漢字",
     "N4-N3": "N4-N3單字",
-  },
-  appUpdate: {
-    updateAlertTitle: "更新提示",
-    updateAlertMessage: "有新的版本可用，是否立即更新？",
-    updateAlertLater: "稍後",
-    updateAlertNow: "更新",
   }
 };
 
