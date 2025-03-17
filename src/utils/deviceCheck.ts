@@ -17,7 +17,7 @@ export const checkIOSDevice = (): boolean => {
     const userAgent = window.navigator.userAgent.toLowerCase();
     const isIOS = /iphone|ipad|ipod/.test(userAgent);
     const hostname = window.location.hostname;
-    const validDomains = ['pandasapps.com', 'localhost', '53663903.pandasjp.pages.dev'];
+    const validDomains = ['pandasapps.com', 'localhost'];
     const isValidDomain = validDomains.includes(hostname) || hostname.startsWith('192.168.');
     console.log('UserAgent:', userAgent);
     console.log('isIOS:', isIOS);
@@ -32,25 +32,13 @@ export const handleIOSPrompt = async (): Promise<void> => {
   console.log('Starting handleIOSPrompt');
   
   if (Platform.OS === 'web') {
-    // 使用冒號分隔命名空間和鍵
     const message = `${i18n.t('appPrompt:title')}\n${i18n.t('appPrompt:message')}`;
     const shouldDownload = window.confirm(message);
     if (shouldDownload) {
-      console.log('Redirecting to App Store');
-      window.location.href = APP_STORE_URL;
+      console.log('Redirecting to App Store:', APP_STORE_URL);
+      window.location.assign(APP_STORE_URL); 
     } else {
       console.log('User cancelled');
-    }
-    
-    try {
-      const canOpen = await Linking.canOpenURL(APP_SCHEME);
-      console.log('Can open pandasapps://:', canOpen);
-      if (canOpen) {
-        console.log('Attempting to open pandasapps://');
-        await Linking.openURL(APP_SCHEME);
-      }
-    } catch (error) {
-      console.log('Failed to handle pandasapps://:', error);
     }
   } else {
     const canOpen: boolean = await Linking.canOpenURL(APP_SCHEME);
@@ -60,7 +48,7 @@ export const handleIOSPrompt = async (): Promise<void> => {
       {
         text: i18n.t('appPrompt:download'),
         onPress: () => {
-          console.log('Opening App Store');
+          console.log('Opening App Store:', APP_STORE_URL);
           Linking.openURL(APP_STORE_URL);
         },
       },
