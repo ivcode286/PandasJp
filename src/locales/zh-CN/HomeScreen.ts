@@ -14,6 +14,9 @@ const homeZhCN = {
       conversation: "N5日常对话",
       story: "N5短篇故事",
     },
+    headerTitle: {
+      story:"N5故事选单"
+    },
     language:{
       traditional_chinese: "繁",
       simple_chinese: "简"

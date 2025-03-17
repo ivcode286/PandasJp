@@ -1,3 +1,5 @@
+import { Header } from "@react-navigation/stack";
+
 const homeZhTW = {
     title: "📌 從零開始學初級日語 N5",
     menu: {
@@ -13,6 +15,9 @@ const homeZhTW = {
       n5_advance_grammar: "進階N5文法",
       conversation: "N5日常對話",
       story: "N5短篇故事",
+    },
+    headerTitle: {
+      story:"N5故事選單"
     },
     language:{
       traditional_chinese: "繁",

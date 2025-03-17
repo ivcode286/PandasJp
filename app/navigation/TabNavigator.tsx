@@ -64,6 +64,28 @@ function StoryStack() {
   return (
     <Stack.Navigator
       screenOptions={{
+        headerShown: true, 
+        cardStyle: { flex: 1 },
+      }}
+    >
+      <Stack.Screen name="N5StoryMenu" 
+      component={N5StoryMenu} 
+      options={{ headerTitle: t('headerTitle.story'), headerShown: true}}
+      />
+      <Stack.Screen
+        name="N5StoryScreen"
+        component={N5StoryScreen}
+        options={{ headerTitle: t('menu.story'), headerShown: true}}
+      />
+    </Stack.Navigator>
+  );
+}
+
+function TabStoryStack() {
+  const { t } = useTranslation('home');
+  return (
+    <Stack.Navigator
+      screenOptions={{
         headerShown: false, 
         cardStyle: { flex: 1 },
       }}
@@ -150,7 +172,7 @@ export default function MyTabs() {
       />
       <Tabs.Screen
         name="Story"
-        component={StoryStack}
+        component={TabStoryStack}
         options={{
           title: 'Story',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="book.fill" color={color || 'white'} />,
