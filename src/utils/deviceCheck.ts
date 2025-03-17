@@ -32,8 +32,8 @@ export const handleIOSPrompt = async (): Promise<void> => {
   console.log('Starting handleIOSPrompt');
   
   if (Platform.OS === 'web') {
-    // 在 Web 上，強制顯示提示，因為無法真正打開應用
-    const message = `${i18n.t('appPrompt.title')}\n${i18n.t('appPrompt.message')}`;
+    // 使用冒號分隔命名空間和鍵
+    const message = `${i18n.t('appPrompt:title')}\n${i18n.t('appPrompt:message')}`;
     const shouldDownload = window.confirm(message);
     if (shouldDownload) {
       console.log('Redirecting to App Store');
@@ -42,7 +42,6 @@ export const handleIOSPrompt = async (): Promise<void> => {
       console.log('User cancelled');
     }
     
-    // 嘗試打開 scheme（僅供測試日誌）
     try {
       const canOpen = await Linking.canOpenURL(APP_SCHEME);
       console.log('Can open pandasapps://:', canOpen);
@@ -59,21 +58,21 @@ export const handleIOSPrompt = async (): Promise<void> => {
     
     const buttons: AlertButton[] = [
       {
-        text: i18n.t('appPrompt.download'),
+        text: i18n.t('appPrompt:download'),
         onPress: () => {
           console.log('Opening App Store');
           Linking.openURL(APP_STORE_URL);
         },
       },
       ...(canOpen ? [{
-        text: i18n.t('appPrompt.open'),
+        text: i18n.t('appPrompt:open'),
         onPress: () => {
           console.log('Opening pandasapps://');
           Linking.openURL(APP_SCHEME);
         },
       }] : []),
       {
-        text: i18n.t('appPrompt.cancel'),
+        text: i18n.t('appPrompt:cancel'),
         style: 'cancel',
         onPress: () => console.log('Cancelled'),
       },
@@ -81,8 +80,8 @@ export const handleIOSPrompt = async (): Promise<void> => {
 
     console.log('Showing Alert');
     Alert.alert(
-      i18n.t('appPrompt.title'),
-      i18n.t('appPrompt.message'),
+      i18n.t('appPrompt:title'),
+      i18n.t('appPrompt:message'),
       buttons
     );
   }
