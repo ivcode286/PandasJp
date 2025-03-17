@@ -88,25 +88,25 @@
 
   <!-- 文法頁面：動態等級 -->
   <url>
-    <loc>https://pandasapps.com/zh-cn/home/grammar/n5_basic</loc>
+    <loc>https://pandasapps.com/zh-cn/home/grammar/n5-basic</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/grammar/n5_basic</loc>
+    <loc>https://pandasapps.com/zh-tw/home/grammar/n5-basic</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-cn/home/grammar/n5_advance</loc>
+    <loc>https://pandasapps.com/zh-cn/home/grammar/n5-advance</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/home/grammar/n5_advance</loc>
+    <loc>https://pandasapps.com/zh-tw/home/grammar/n5-advance</loc>
     <lastmod>2025-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
