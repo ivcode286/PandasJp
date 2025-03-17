@@ -76,6 +76,12 @@ const commonZhCN = {
       N5: "N5单字",
       "N5-KANJI": "N5汉字",
       "N4-N3": "N4-N3单字",
+    },
+    appUpdate: {
+      updateAlertTitle: "更新提示",
+      updateAlertMessage: "有新的版本可用，是否立即更新？",
+      updateAlertLater: "稍后",
+      updateAlertNow: "更新",
     }
   };
   

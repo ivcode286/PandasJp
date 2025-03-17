@@ -7,6 +7,7 @@ import { useFonts } from 'expo-font';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import i18n from './src/locales/i18n';
 import linking from './src/utils/linkingConfig';
+import { checkForUpdates } from './src/utils/checkUpdates';
 
 const LANGUAGE_KEY = 'app_language';
 
@@ -16,6 +17,10 @@ export default function App() {
   });
 
   const [langLoaded, setLangLoaded] = useState(false);
+
+  useEffect(() => {
+    checkForUpdates(); 
+  }, []);
 
   useEffect(() => {
     async function loadLanguage() {
