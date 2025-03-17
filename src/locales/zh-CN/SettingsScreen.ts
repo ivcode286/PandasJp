@@ -1,6 +1,6 @@
 const settingsZhCN = {
     translation: {
-      title: "设置",
+      title: "熊猫日语设定",
       languageSection: "语言",
       languages: {
         traditionalChinese: "繁体中文",
