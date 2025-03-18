@@ -16,7 +16,7 @@ import n5KanjiWordsZhTW from '../locales/zh-TW/N5KanjiWords';
 import n3n4WordsZhTW from '../locales/zh-TW/N3N4Words';
 import commonZhTW from '../locales/zh-TW/Common';
 import settingsZhTW from '../locales/zh-TW/SettingsScreen';
-import appPromptZhTW from '../locales/zh-TW/AppPrompt';   
+import appPromptZhTW from './zh-TW/ApplicationPrompt';   
 import grammarConceptsZhCN from '../locales/zh-CN/GrammarConceptsScreen';
 import n5ConceptsZhCN from '../locales/zh-CN/N5ConceptsScreen';
 import homeZhCN from '../locales/zh-CN/HomeScreen';
@@ -32,7 +32,7 @@ import n5KanjiWordsZhCN from '../locales/zh-CN/N5KanjiWords';
 import n3n4WordsZhCN from '../locales/zh-CN/N3N4Words';
 import commonZhCN from '../locales/zh-CN/Common';
 import settingsZhCN from '../locales/zh-CN/SettingsScreen';
-import appPromptZhCN from '../locales/zh-CN/AppPrompt';
+import appPromptZhCN from './zh-CN/ApplicationPrompt';
 
 const resources = {
   'zh-TW': {
