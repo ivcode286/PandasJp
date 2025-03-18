@@ -3,7 +3,19 @@ import { Alert, Platform, Linking } from 'react-native';
 import Constants from 'expo-constants';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/%E7%86%8A%E8%B2%93%E6%97%A5%E8%AA%9E%E5%AD%B8%E7%BF%92/id6743336983';
-const LATEST_NATIVE_VERSION = '1.1.0'; // Hardcode，假設的最新原生版本
+const DEFAULT_VERSION = '1.1.0'; 
+
+// 從 Cloudflare Worker API 獲取最新版本
+const getLatestVersion = async (): Promise<string> => {
+  try {
+    const response = await fetch('https://version-api.pandasappsglobal.workers.dev/');
+    const data = await response.json();
+    return data.version;
+  } catch (error) {
+    console.error('Error fetching latest version:', error);
+    return Constants.expoConfig?.version || DEFAULT_VERSION; // 使用 DEFAULT_VERSION 作為回退
+  }
+};
 
 export const checkForUpdates = async (): Promise<void> => {
   // 僅在原生環境檢查更新，Web 環境跳過
@@ -13,8 +25,9 @@ export const checkForUpdates = async (): Promise<void> => {
   }
 
   try {
-    // 動態從 app.json 獲取當前版本號
-    const CURRENT_APP_VERSION = Constants.expoConfig?.version || '1.1.0';
+    // 動態從 app.json 獲取當前版本號，失敗時使用 DEFAULT_VERSION
+    const CURRENT_APP_VERSION = Constants.expoConfig?.version || DEFAULT_VERSION;
+    const LATEST_NATIVE_VERSION = await getLatestVersion();
 
     console.log('Current version:', CURRENT_APP_VERSION);
     console.log('Latest native version:', LATEST_NATIVE_VERSION);
