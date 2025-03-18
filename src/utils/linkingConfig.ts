@@ -11,7 +11,8 @@ interface RouteParams {
   lang?: string;
   level?: string;
   storyId?: string;
-  conversationId?: string; // Changed to conversationId
+  conversationId?: string;
+  namespace?: string; // 明確添加 namespace
   [key: string]: any;
 }
 
@@ -166,6 +167,20 @@ const linking = {
     const topLevelRoute = segments[0]?.toLowerCase();
     let state;
 
+    // 解析查詢參數的輔助函數
+    const parseQueryParams = (query: string | undefined): { [key: string]: string } => {
+      const params: { [key: string]: string } = {};
+      if (query) {
+        query.split("&").forEach((pair) => {
+          const [key, value] = pair.split("=");
+          if (key && value) {
+            params[key] = decodeURIComponent(value);
+          }
+        });
+      }
+      return params;
+    };
+
     if (topLevelRoute === "home") {
       const subRoute = segments[1]?.toLowerCase() || "";
       const screenName = Object.keys(homeScreens).find(
@@ -227,7 +242,7 @@ const linking = {
                             routes: [
                               {
                                 name: wordsScreenName,
-                                ...(queryString ? { params: { level: decodeURIComponent(queryString.split("=")[1]) } } : {}),
+                                ...(queryString ? { params: parseQueryParams(queryString) } : {}),
                               },
                             ],
                           },
@@ -244,6 +259,7 @@ const linking = {
         const storyScreenName = Object.keys(homeScreens.StoryStack.screens || {}).find(
           (key) => homeScreens.StoryStack.screens![key] === storySubRoute || (storySubRoute === "" && homeScreens.StoryStack.screens![key] === "")
         );
+        const queryParams = parseQueryParams(queryString);
         state = {
           routes: [
             {
@@ -257,7 +273,7 @@ const linking = {
                       routes: [
                         {
                           name: storyScreenName || "N5StoryMenu",
-                          ...(storySubRoute === "n5storyscreen" && queryString ? { params: { storyId: decodeURIComponent(queryString.split("=")[1]) } } : {}),
+                          ...(storySubRoute === "n5storyscreen" && Object.keys(queryParams).length > 0 ? { params: queryParams } : {}),
                         },
                       ],
                     },
@@ -272,6 +288,7 @@ const linking = {
         const convScreenName = Object.keys(homeScreens.ConversationStack.screens || {}).find(
           (key) => homeScreens.ConversationStack.screens![key] === convSubRoute || (convSubRoute === "" && homeScreens.ConversationStack.screens![key] === "")
         );
+        const queryParams = parseQueryParams(queryString);
         state = {
           routes: [
             {
@@ -285,7 +302,7 @@ const linking = {
                       routes: [
                         {
                           name: convScreenName || "N5ConversationMenu",
-                          ...(convSubRoute === "n5conversationscreen" && queryString ? { params: { conversationId: decodeURIComponent(queryString.split("=")[1]) } } : {}), // Changed to conversationId
+                          ...(convSubRoute === "n5conversationscreen" && Object.keys(queryParams).length > 0 ? { params: queryParams } : {}),
                         },
                       ],
                     },
@@ -320,6 +337,7 @@ const linking = {
           ],
         };
       } else if (subRoute === "words-with-drawer" && segments[2]) {
+        const queryParams = parseQueryParams(queryString);
         state = {
           routes: [
             {
@@ -329,7 +347,7 @@ const linking = {
                   { name: "WordsMenuScreen" },
                   {
                     name: "WordsWithDrawer",
-                    params: { level: segments[2].toLowerCase() },
+                    params: { level: segments[2].toLowerCase(), ...queryParams },
                   },
                 ],
               },
@@ -342,6 +360,7 @@ const linking = {
       const screenName = Object.keys(storyScreens).find(
         (key) => storyScreens[key] === subRoute || (subRoute === "" && storyScreens[key] === "")
       );
+      const queryParams = parseQueryParams(queryString);
       state = {
         routes: [
           {
@@ -350,9 +369,7 @@ const linking = {
               routes: [
                 {
                   name: screenName || "N5StoryMenu",
-                  ...(subRoute === "n5storyscreen" && queryString
-                    ? { params: { storyId: decodeURIComponent(queryString.split("=")[1]) } }
-                    : {}),
+                  ...(subRoute === "n5storyscreen" && Object.keys(queryParams).length > 0 ? { params: queryParams } : {}),
                 },
               ],
             },
@@ -376,14 +393,7 @@ const linking = {
 
     console.log("Parsed狀態:", JSON.stringify(state, null, 2));
 
-    const params: RouteParams = {};
-    if (queryString && !state?.routes[0]?.state?.routes[0]?.params) {
-      queryString.split("&").forEach((pair) => {
-        const [key, value] = pair.split("=");
-        params[key] = decodeURIComponent(value);
-      });
-    }
-
+    const params = parseQueryParams(queryString);
     if (state && state.routes && state.routes[0]) {
       const updatedRoute = {
         ...state.routes[0],
