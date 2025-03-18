@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 type StackParamList = {
-  N5StoryScreen: { storyid: string; namespace: string }; // 使用 storyid 而非 storyId
+  N5StoryScreen: { storyId: string; namespace: string }; // 統一使用 storyId
 };
 
 type StoryScreenRouteProp = RouteProp<StackParamList, 'N5StoryScreen'>;
@@ -17,18 +17,18 @@ export default function N5StoryScreen() {
   const { t } = useTranslation();
   const { speak } = useTextToSpeech();
 
-  const { storyid, namespace = 'story' } = route.params; // 使用 storyid
-  console.log("Received params:", { storyid, namespace }); // 添加日誌檢查參數
+  const { storyId, namespace = 'story' } = route.params; // 使用 storyId
+  console.log("Received params:", { storyId, namespace });
 
   const stories = t(`${namespace}:stories`, { returnObjects: true }) as Array<{
     title: string;
     imageName: string;
     story: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
   }>;
-  console.log("Loaded stories:", stories); // 添加日誌檢查數據
+  console.log("Loaded stories:", stories);
 
-  const story = stories.find((s) => s.imageName.replace('.jpg', '') === storyid);
-  console.log("Found story:", story); // 添加日誌檢查匹配結果
+  const story = stories.find((s) => s.imageName.replace('.jpg', '') === storyId); // 使用 storyId
+  console.log("Found story:", story);
 
   if (!story) {
     return (
@@ -72,7 +72,6 @@ export default function N5StoryScreen() {
   );
 }
 
-// 樣式保持不變
 const styles = StyleSheet.create({
   container: {
     flex: 1,

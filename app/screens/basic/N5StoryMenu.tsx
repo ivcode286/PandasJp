@@ -1,4 +1,3 @@
-// N5StoryMenu.tsx
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
@@ -8,7 +7,7 @@ import { getImage } from '../../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
 type StackParamList = {
-  N5StoryScreen: { storyId: string; namespace: string }; // 新增 namespace 參數
+  N5StoryScreen: { storyId: string; namespace: string }; // 統一使用 storyId
 };
 
 type StoryMenuRouteProp = RouteProp<{ N5StoryMenu: { namespace?: string } }, 'N5StoryMenu'>;
@@ -18,7 +17,6 @@ export default function N5StoryMenu() {
   const route = useRoute<StoryMenuRouteProp>();
   const { t } = useTranslation();
 
-  // 從路由參數中獲取 namespace，默認為 'story'
   const namespace = route.params?.namespace || 'story';
   const stories = t(`${namespace}:stories`, { returnObjects: true }) as Array<{ title: string; imageName: string }>;
 
@@ -32,8 +30,8 @@ export default function N5StoryMenu() {
             style={styles.cardContainer}
             onPress={() =>
               navigation.navigate('N5StoryScreen', {
-                storyId: item.imageName.replace('.jpg', ''),
-                namespace, // 傳遞 namespace
+                storyId: item.imageName.replace('.jpg', ''), // 使用 storyId
+                namespace,
               })
             }
           >
