@@ -34,6 +34,7 @@ import n3n4WordsZhCN from '../locales/zh-CN/N3N4Words';
 import commonZhCN from '../locales/zh-CN/Common';
 import settingsZhCN from '../locales/zh-CN/SettingsScreen';
 import appPromptZhCN from './zh-CN/ApplicationPrompt';
+import story2ZhCN from './zh-CN/N5Chat';
 
 const resources = {
   'zh-TW': {
@@ -67,6 +68,7 @@ const resources = {
     katakana: katakanaZhCN,
     phonetics: phoneticsZhCN,
     story: storyZhCN,
+    story2: story2ZhCN,
     conversation: conversationZhCN,
     grammar: {
       n5_basic: n5BasicGrammarZhCN,
@@ -79,7 +81,7 @@ const resources = {
     },
     common: commonZhCN,
     settings: settingsZhCN,
-    appPrompt: appPromptZhCN, // 添加 appPrompt 命名空間
+    appPrompt: appPromptZhCN, 
   },
 };
 
@@ -103,7 +105,7 @@ i18n.use(initReactI18next).init({
     'words',
     'common',
     'settings',
-    'appPrompt', // 添加 appPrompt 到命名空間列表
+    'appPrompt', 
   ],
   returnObjects: true, // 全局啟用 returnObjects
 });
