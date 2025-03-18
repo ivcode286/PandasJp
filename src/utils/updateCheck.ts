@@ -3,7 +3,7 @@ import { Alert, Platform, Linking } from 'react-native';
 import Constants from 'expo-constants';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/%E7%86%8A%E8%B2%93%E6%97%A5%E8%AA%9E%E5%AD%B8%E7%BF%92/id6743336983';
-const LATEST_NATIVE_VERSION = '1.1.0'; // 硬編碼，假設的最新原生版本
+const LATEST_NATIVE_VERSION = '1.1.0'; // Hardcode，假設的最新原生版本
 
 export const checkForUpdates = async (): Promise<void> => {
   // 僅在原生環境檢查更新，Web 環境跳過
@@ -14,7 +14,7 @@ export const checkForUpdates = async (): Promise<void> => {
 
   try {
     // 動態從 app.json 獲取當前版本號
-    const CURRENT_APP_VERSION = Constants.expoConfig?.version || '1.0.0';
+    const CURRENT_APP_VERSION = Constants.expoConfig?.version || '1.1.0';
 
     console.log('Current version:', CURRENT_APP_VERSION);
     console.log('Latest native version:', LATEST_NATIVE_VERSION);

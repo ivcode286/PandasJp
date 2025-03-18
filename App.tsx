@@ -9,6 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import i18n from './src/locales/i18n';
 import linking from './src/utils/linkingConfig';
 import { checkIOSDevice, handleIOSPrompt } from './src/utils/deviceCheck';
+import { checkForUpdates } from './src/utils/updateCheck'; 
 
 interface FontTypes {
   SpaceMono: string;
@@ -37,8 +38,11 @@ export default function App(): JSX.Element | null {
         await i18n.changeLanguage(initialLang);
         await AsyncStorage.setItem(LANGUAGE_KEY, initialLang);
 
-        // 無條件調用 handleIOSPrompt，讓 deviceCheck.ts 決定行為
+        // 檢查 iOS 設備並處理提示（Web 環境）
         await handleIOSPrompt();
+
+        // 檢查更新（原生環境）
+        await checkForUpdates();
         
       } catch (error) {
         console.error('讀取語言失敗:', error);
