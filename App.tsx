@@ -10,7 +10,6 @@ import i18n from './src/locales/i18n';
 import linking from './src/utils/linkingConfig';
 import { checkIOSDevice, handleIOSPrompt } from './src/utils/deviceCheck';
 
-// 定義字體類型
 interface FontTypes {
   SpaceMono: string;
 }
@@ -23,7 +22,6 @@ export default function App(): JSX.Element | null {
   });
 
   const [langLoaded, setLangLoaded] = useState<boolean>(false);
-  const [isIOSWeb, setIsIOSWeb] = useState<boolean>(false);
 
   useEffect(() => {
     async function loadLanguage(): Promise<void> {
@@ -39,10 +37,8 @@ export default function App(): JSX.Element | null {
         await i18n.changeLanguage(initialLang);
         await AsyncStorage.setItem(LANGUAGE_KEY, initialLang);
 
-        if (checkIOSDevice()) {
-          setIsIOSWeb(true);
-          await handleIOSPrompt();
-        }
+        // 無條件調用 handleIOSPrompt，讓 deviceCheck.ts 決定行為
+        await handleIOSPrompt();
         
       } catch (error) {
         console.error('讀取語言失敗:', error);
