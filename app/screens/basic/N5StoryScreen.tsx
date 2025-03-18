@@ -1,3 +1,4 @@
+// N5StoryScreen.tsx
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
@@ -7,27 +8,23 @@ import { useTranslation } from 'react-i18next';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 type StackParamList = {
-  N5StoryScreen: { storyId: string }; // Use storyId instead of storyTitle
+  N5StoryScreen: { storyId: string; namespace: string }; // 新增 namespace 參數
 };
 
 type StoryScreenRouteProp = RouteProp<StackParamList, 'N5StoryScreen'>;
 
 export default function N5StoryScreen() {
   const route = useRoute<StoryScreenRouteProp>();
-  const { t } = useTranslation('story');
+  const { t } = useTranslation();
   const { speak } = useTextToSpeech();
 
-  const stories = t('stories', { returnObjects: true }) as Array<{
+  const { storyId, namespace = 'story' } = route.params; // 默認使用 'story' 命名空間
+  const stories = t(`${namespace}:stories`, { returnObjects: true }) as Array<{
     title: string;
     imageName: string;
     story: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
   }>;
 
-  const storyId = route.params?.storyId; // Get storyId from route params
-  console.log("storyId:", storyId);
-  console.log("stories:", JSON.stringify(stories, null, 2));
-
-  // Match by imageName (strip .jpg for comparison)
   const story = stories.find((s) => s.imageName.replace('.jpg', '') === storyId);
 
   if (!story) {

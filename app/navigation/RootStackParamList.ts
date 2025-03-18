@@ -13,7 +13,7 @@ export type RootStackParamList = {
   GrammarConceptsScreen: undefined; // 新增：用來呈現 N5 日語基礎文法概念的畫面
   GrammarScreen: { level: string }; 
   WordsMenuScreen: undefined;
-  StoryStack: { screen: 'N5StoryMenu' } | { screen: 'N5StoryScreen'; params: { storyTitle: string } } | undefined;
+  StoryStack: { screen: 'N5StoryMenu'; params: { namespace: string } };
   ConversationStack: undefined; 
 
   // 需要帶 { level: string } 的畫面

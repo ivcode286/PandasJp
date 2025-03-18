@@ -8,6 +8,7 @@ import hiraganaZhTW from '../locales/zh-TW/HiraganaScreen';
 import katakanaZhTW from '../locales/zh-TW/KatakanaScreen';
 import phoneticsZhTW from '../locales/zh-TW/PhoneticsScreen';
 import storyZhTW from '../locales/zh-TW/N5StoryScreen';
+import story2ZhTW from '../locales/zh-TW/N5Chat';
 import conversationZhTW from '../locales/zh-TW/N5ConversationScreen';
 import n5BasicGrammarZhTW from '../locales/zh-TW/N5BasicGrammar';
 import n5AdvanceGrammarZhTW from '../locales/zh-TW/N5AdvanceGrammar';
@@ -43,6 +44,7 @@ const resources = {
     katakana: katakanaZhTW,
     phonetics: phoneticsZhTW,
     story: storyZhTW,
+    story2: story2ZhTW,
     conversation: conversationZhTW,
     grammar: {
       n5_basic: n5BasicGrammarZhTW,
@@ -95,6 +97,7 @@ i18n.use(initReactI18next).init({
     'katakana',
     'phonetics',
     'story',
+    'story2',
     'conversation',
     'grammar',
     'words',

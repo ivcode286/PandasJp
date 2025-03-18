@@ -1,30 +1,41 @@
+// N5StoryMenu.tsx
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
 import { getImage } from '../../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
 type StackParamList = {
-  N5StoryScreen: { storyId: string }; // Updated to storyId
+  N5StoryScreen: { storyId: string; namespace: string }; // 新增 namespace 參數
 };
+
+type StoryMenuRouteProp = RouteProp<{ N5StoryMenu: { namespace?: string } }, 'N5StoryMenu'>;
 
 export default function N5StoryMenu() {
   const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5StoryScreen'>>();
-  const { t } = useTranslation('story');
+  const route = useRoute<StoryMenuRouteProp>();
+  const { t } = useTranslation();
 
-  const stories = t('stories', { returnObjects: true }) as Array<{ title: string; imageName: string }>;
+  // 從路由參數中獲取 namespace，默認為 'story'
+  const namespace = route.params?.namespace || 'story';
+  const stories = t(`${namespace}:stories`, { returnObjects: true }) as Array<{ title: string; imageName: string }>;
 
   return (
     <View style={styles.container}>
       <FlatList
         data={stories}
-        keyExtractor={(item) => item.imageName} // Use imageName as key
+        keyExtractor={(item) => item.imageName}
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.cardContainer}
-            onPress={() => navigation.navigate('N5StoryScreen', { storyId: item.imageName.replace('.jpg', '') })} // Pass storyId
+            onPress={() =>
+              navigation.navigate('N5StoryScreen', {
+                storyId: item.imageName.replace('.jpg', ''),
+                namespace, // 傳遞 namespace
+              })
+            }
           >
             <Image source={getImage(item.imageName)} style={styles.coverImage} />
             <View style={styles.textContainer}>

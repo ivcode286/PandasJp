@@ -64,18 +64,20 @@ function StoryStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: true, 
+        headerShown: true,
         cardStyle: { flex: 1 },
       }}
     >
-      <Stack.Screen name="N5StoryMenu" 
-      component={N5StoryMenu} 
-      options={{ headerTitle: t('headerTitle.story'), headerShown: true}}
+      <Stack.Screen
+        name="N5StoryMenu"
+        component={N5StoryMenu}
+        initialParams={{ namespace: 'story' }} // 指定默認數據來源
+        options={{ headerTitle: t('headerTitle.story'), headerShown: true }}
       />
       <Stack.Screen
         name="N5StoryScreen"
         component={N5StoryScreen}
-        options={{ headerTitle: t('menu.story'), headerShown: true}}
+        options={{ headerTitle: t('menu.story'), headerShown: true }}
       />
     </Stack.Navigator>
   );
@@ -86,11 +88,15 @@ function TabStoryStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false, 
+        headerShown: false,
         cardStyle: { flex: 1 },
       }}
     >
-      <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} />
+      <Stack.Screen
+        name="N5StoryMenu"
+        component={N5StoryMenu}
+        initialParams={{ namespace: 'story' }} // 指定默認數據來源
+      />
       <Stack.Screen
         name="N5StoryScreen"
         component={N5StoryScreen}

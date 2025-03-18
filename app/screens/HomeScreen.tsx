@@ -39,6 +39,7 @@ type ParamScreen = {
 
 type MenuItem = MenuItemBase & (NonParamScreen | ParamScreen);
 
+
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'HomeScreen'>;
 
 export default function HomeScreen() {
@@ -78,14 +79,15 @@ export default function HomeScreen() {
     { title: t('menu.n5_basic_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_BASIC_GRAMMAR },
     { title: t('menu.n5_advance_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
     { title: t('menu.conversation'), screen: 'ConversationStack' },
-    { title: t('menu.story'), screen: 'StoryStack' },
+    { title: t('menu.story'), screen: 'StoryStack', namespace: 'story' }, // 原有故事
+    { title: t('menu.story2'), screen: 'StoryStack', namespace: 'story2' }, // 新增的故事來源
   ];
 
   const handlePress = (item: MenuItem) => {
-    if (item.screen === 'WordsWithDrawer' || item.screen === 'GrammarScreen') {
+    if (item.screen === 'StoryStack') {
+      navigation.navigate('StoryStack', { screen: 'N5StoryMenu', params: { namespace: item.namespace } });
+    } else if (item.screen === 'WordsWithDrawer' || item.screen === 'GrammarScreen') {
       navigation.navigate(item.screen, { level: item.specialLevel });
-    } else if (item.screen === 'StoryStack') {
-      navigation.navigate('StoryStack', { screen: 'N5StoryMenu' });
     } else {
       navigation.navigate(item.screen);
     }
