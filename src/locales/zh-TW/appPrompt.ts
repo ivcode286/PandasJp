@@ -1,4 +1,4 @@
-// /locales/zh-TW/appPrompt.ts
+// /locales/zh-TW/AppPrompt.ts
 import { AppPromptTranslation } from '../../types/translation';
 
 const appPromptZhTW: AppPromptTranslation = {

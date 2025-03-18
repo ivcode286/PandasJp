@@ -32,15 +32,26 @@ export const handleIOSPrompt = async (): Promise<void> => {
   console.log('Starting handleIOSPrompt');
   
   if (Platform.OS === 'web') {
-    const message = `${i18n.t('appPrompt:title')}\n${i18n.t('appPrompt:message')}`;
-    const shouldDownload = window.confirm(message);
-    if (shouldDownload) {
-      console.log('Redirecting to App Store:', APP_STORE_URL);
-      window.location.assign(APP_STORE_URL); 
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    const isIOS = /iphone|ipad|ipod/.test(userAgent);
+
+    if (isIOS) {
+      // iOS 設備：直接跳轉到 App Store，不顯示提示
+      console.log('iOS device detected, redirecting to App Store:', APP_STORE_URL);
+      window.location.assign(APP_STORE_URL);
     } else {
-      console.log('User cancelled');
+      // 非 iOS 設備（例如 Chrome）：顯示提示後跳轉
+      const message = `${i18n.t('appPrompt:title')}\n${i18n.t('appPrompt:message')}`;
+      const shouldDownload = window.confirm(message);
+      if (shouldDownload) {
+        console.log('Redirecting to App Store:', APP_STORE_URL);
+        window.location.assign(APP_STORE_URL);
+      } else {
+        console.log('User cancelled');
+      }
     }
   } else {
+    // 原生環境：保持不變
     const canOpen: boolean = await Linking.canOpenURL(APP_SCHEME);
     console.log('Can open pandasapps://:', canOpen);
     
