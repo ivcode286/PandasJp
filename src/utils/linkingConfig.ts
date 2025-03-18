@@ -11,7 +11,6 @@ interface RouteParams {
   lang?: string;
   level?: string;
   storyId?: string;
-  conversationId?: string;
   namespace?: string;
   [key: string]: any;
 }
@@ -32,7 +31,6 @@ interface HomeScreensConfig {
   GrammarScreen: string;
   WordsWithDrawer: ScreenConfig;
   StoryStack: ScreenConfig;
-  ConversationStack: ScreenConfig;
 }
 
 interface WordsScreensConfig {
@@ -78,13 +76,6 @@ const linking = {
             screens: {
               N5StoryMenu: '',
               N5StoryScreen: 'n5storyscreen/:storyId',
-            },
-          },
-          ConversationStack: {
-            path: 'conversation-stack',
-            screens: {
-              N5ConversationMenu: '',
-              N5ConversationScreen: 'n5conversationscreen',
             },
           },
         },
@@ -315,39 +306,6 @@ const linking = {
             ],
           };
         }
-      } else if (subRoute === 'conversation-stack') {
-        const convSubRoute = segments[2]?.toLowerCase() || '';
-        const convScreenName = Object.keys(homeScreens.ConversationStack.screens || {}).find(
-          (key) =>
-            homeScreens.ConversationStack.screens![key] === convSubRoute ||
-            (convSubRoute === '' && homeScreens.ConversationStack.screens![key] === '')
-        );
-        const queryParams = parseQueryParams(queryString);
-        state = {
-          routes: [
-            {
-              name: 'Home',
-              state: {
-                routes: [
-                  { name: 'HomeScreen' },
-                  {
-                    name: 'ConversationStack',
-                    state: {
-                      routes: [
-                        {
-                          name: convScreenName || 'N5ConversationMenu',
-                          ...(convSubRoute === 'n5conversationscreen' && Object.keys(queryParams).length > 0
-                            ? { params: queryParams }
-                            : {}),
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        };
       }
     } else if (topLevelRoute === 'words') {
       const subRoute = segments[1]?.toLowerCase() || '';
@@ -471,4 +429,3 @@ const linking = {
 };
 
 export default linking;
-
