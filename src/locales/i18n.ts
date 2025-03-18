@@ -8,8 +8,7 @@ import hiraganaZhTW from '../locales/zh-TW/HiraganaScreen';
 import katakanaZhTW from '../locales/zh-TW/KatakanaScreen';
 import phoneticsZhTW from '../locales/zh-TW/PhoneticsScreen';
 import storyZhTW from '../locales/zh-TW/N5StoryScreen';
-import story2ZhTW from '../locales/zh-TW/N5Chat';
-import conversationZhTW from '../locales/zh-TW/N5ConversationScreen';
+import n5ChatZhTW from '../locales/zh-TW/N5Chat';
 import n5BasicGrammarZhTW from '../locales/zh-TW/N5BasicGrammar';
 import n5AdvanceGrammarZhTW from '../locales/zh-TW/N5AdvanceGrammar';
 import n5WordsZhTW from '../locales/zh-TW/N5Words';
@@ -25,7 +24,6 @@ import hiraganaZhCN from '../locales/zh-CN/HiraganaScreen';
 import katakanaZhCN from '../locales/zh-CN/KatakanaScreen';
 import phoneticsZhCN from '../locales/zh-CN/PhoneticsScreen';
 import storyZhCN from '../locales/zh-CN/N5StoryScreen';
-import conversationZhCN from '../locales/zh-CN/N5ConversationScreen';
 import n5BasicGrammarZhCN from '../locales/zh-CN/N5BasicGrammar';
 import n5AdvanceGrammarZhCN from '../locales/zh-CN/N5AdvanceGrammar';
 import n5WordsZhCN from '../locales/zh-CN/N5Words';
@@ -34,7 +32,7 @@ import n3n4WordsZhCN from '../locales/zh-CN/N3N4Words';
 import commonZhCN from '../locales/zh-CN/Common';
 import settingsZhCN from '../locales/zh-CN/SettingsScreen';
 import appPromptZhCN from './zh-CN/ApplicationPrompt';
-import story2ZhCN from './zh-CN/N5Chat';
+import n5ChatZhCN from './zh-CN/N5Chat';
 
 const resources = {
   'zh-TW': {
@@ -45,8 +43,7 @@ const resources = {
     katakana: katakanaZhTW,
     phonetics: phoneticsZhTW,
     story: storyZhTW,
-    story2: story2ZhTW,
-    conversation: conversationZhTW,
+    n5Chat: n5ChatZhTW,
     grammar: {
       n5_basic: n5BasicGrammarZhTW,
       n5_advance: n5AdvanceGrammarZhTW,
@@ -68,8 +65,7 @@ const resources = {
     katakana: katakanaZhCN,
     phonetics: phoneticsZhCN,
     story: storyZhCN,
-    story2: story2ZhCN,
-    conversation: conversationZhCN,
+    n5Chat: n5ChatZhCN,
     grammar: {
       n5_basic: n5BasicGrammarZhCN,
       n5_advance: n5AdvanceGrammarZhCN,

@@ -176,7 +176,6 @@ export interface Translation {
   katakana: KatakanaTranslation;
   phonetics: PhoneticsTranslation;
   story: StoryTranslation[];
-  conversation: { conversations: ConversationTranslation[] };
   grammar: {
     n5_basic: GrammarData;
     n5_advance: GrammarData;

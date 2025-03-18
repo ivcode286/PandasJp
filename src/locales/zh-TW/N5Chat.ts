@@ -1,4 +1,4 @@
-const story2ZhTW = {
+const n5ChatZhTW = {
     stories: [
       {
         title: "在便利店買東西",
@@ -200,4 +200,4 @@ const story2ZhTW = {
     ],
   };
   
-  export default story2ZhTW;
+  export default n5ChatZhTW;

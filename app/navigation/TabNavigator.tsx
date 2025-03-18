@@ -77,7 +77,7 @@ function StoryStack() {
       <Stack.Screen
         name="N5StoryScreen"
         component={N5StoryScreen}
-        options={{ headerTitle: t('menu.story'), headerShown: true }}
+        options={{ headerTitle: '', headerShown: true }}
       />
     </Stack.Navigator>
   );
