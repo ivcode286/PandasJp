@@ -7,7 +7,7 @@ import { getImage } from '../../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
 type StackParamList = {
-  N5StoryScreen: { storyId: string; namespace: string }; // 統一使用 storyId
+  N5StoryScreen: { storyId: string; namespace: string };
 };
 
 type StoryMenuRouteProp = RouteProp<{ N5StoryMenu: { namespace?: string } }, 'N5StoryMenu'>;
@@ -17,7 +17,7 @@ export default function N5StoryMenu() {
   const route = useRoute<StoryMenuRouteProp>();
   const { t } = useTranslation();
 
-  const namespace = route.params?.namespace || 'story';
+  const namespace = (route.params?.namespace || 'story').toLowerCase(); // 規範化為小寫
   const stories = t(`${namespace}:stories`, { returnObjects: true }) as Array<{ title: string; imageName: string }>;
 
   return (
@@ -30,7 +30,7 @@ export default function N5StoryMenu() {
             style={styles.cardContainer}
             onPress={() =>
               navigation.navigate('N5StoryScreen', {
-                storyId: item.imageName.replace('.jpg', ''), // 使用 storyId
+                storyId: item.imageName.replace('.jpg', ''),
                 namespace,
               })
             }

@@ -1,4 +1,3 @@
-// src/locales/i18n.ts
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import grammarConceptsZhTW from '../locales/zh-TW/GrammarConceptsScreen';
@@ -16,7 +15,7 @@ import n5KanjiWordsZhTW from '../locales/zh-TW/N5KanjiWords';
 import n3n4WordsZhTW from '../locales/zh-TW/N3N4Words';
 import commonZhTW from '../locales/zh-TW/Common';
 import settingsZhTW from '../locales/zh-TW/SettingsScreen';
-import appPromptZhTW from './zh-TW/ApplicationPrompt';   
+import appPromptZhTW from './zh-TW/ApplicationPrompt';
 import grammarConceptsZhCN from '../locales/zh-CN/GrammarConceptsScreen';
 import n5ConceptsZhCN from '../locales/zh-CN/N5ConceptsScreen';
 import homeZhCN from '../locales/zh-CN/HomeScreen';
@@ -43,7 +42,7 @@ const resources = {
     katakana: katakanaZhTW,
     phonetics: phoneticsZhTW,
     story: storyZhTW,
-    n5Chat: n5ChatZhTW,
+    n5chat: n5ChatZhTW, // 統一小寫
     grammar: {
       n5_basic: n5BasicGrammarZhTW,
       n5_advance: n5AdvanceGrammarZhTW,
@@ -55,7 +54,7 @@ const resources = {
     },
     common: commonZhTW,
     settings: settingsZhTW,
-    appPrompt: appPromptZhTW, // 添加 appPrompt 命名空間
+    appPrompt: appPromptZhTW,
   },
   'zh-CN': {
     grammarConcepts: grammarConceptsZhCN,
@@ -65,7 +64,7 @@ const resources = {
     katakana: katakanaZhCN,
     phonetics: phoneticsZhCN,
     story: storyZhCN,
-    n5Chat: n5ChatZhCN,
+    n5chat: n5ChatZhCN, // 統一小寫
     grammar: {
       n5_basic: n5BasicGrammarZhCN,
       n5_advance: n5AdvanceGrammarZhCN,
@@ -77,9 +76,11 @@ const resources = {
     },
     common: commonZhCN,
     settings: settingsZhCN,
-    appPrompt: appPromptZhCN, 
+    appPrompt: appPromptZhCN,
   },
 };
+
+console.log('n5ChatZhTW resource:', n5ChatZhTW); // 確認資源內容
 
 i18n.use(initReactI18next).init({
   resources,
@@ -95,15 +96,15 @@ i18n.use(initReactI18next).init({
     'katakana',
     'phonetics',
     'story',
-    'n5Chat',
+    'n5chat', // 統一小寫
     'conversation',
     'grammar',
     'words',
     'common',
     'settings',
-    'appPrompt', 
+    'appPrompt',
   ],
-  returnObjects: true, // 全局啟用 returnObjects
+  returnObjects: true,
 });
 
 i18n.on('languageChanged', (lng) => {

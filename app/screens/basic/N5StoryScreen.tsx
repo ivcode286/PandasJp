@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 type StackParamList = {
-  N5StoryScreen: { storyId: string; namespace: string }; // 統一使用 storyId
+  N5StoryScreen: { storyId: string; namespace: string };
 };
 
 type StoryScreenRouteProp = RouteProp<StackParamList, 'N5StoryScreen'>;
@@ -17,23 +17,37 @@ export default function N5StoryScreen() {
   const { t } = useTranslation();
   const { speak } = useTextToSpeech();
 
-  const { storyId, namespace = 'story' } = route.params; // 使用 storyId
+  const { storyId, namespace = 'story' } = route.params;
   console.log("Received params:", { storyId, namespace });
 
-  const stories = t(`${namespace}:stories`, { returnObjects: true }) as Array<{
-    title: string;
-    imageName: string;
-    story: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
-  }>;
+  const storiesRaw = t(`${namespace}:stories`, { returnObjects: true });
+  console.log("Raw translation data:", storiesRaw);
+
+  // 確保 stories 是陣列，若不是則提供錯誤訊息
+  const stories = Array.isArray(storiesRaw)
+    ? (storiesRaw as Array<{
+        title: string;
+        imageName: string;
+        story: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
+      }>)
+    : [];
   console.log("Loaded stories:", stories);
 
-  const story = stories.find((s) => s.imageName.replace('.jpg', '') === storyId); // 使用 storyId
+  const story = stories.find((s) => s.imageName.replace('.jpg', '') === storyId);
   console.log("Found story:", story);
+
+  if (!stories.length) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.errorText}>No stories available for namespace: {namespace}</Text>
+      </View>
+    );
+  }
 
   if (!story) {
     return (
       <View style={styles.container}>
-        <Text style={styles.errorText}>Story not found.</Text>
+        <Text style={styles.errorText}>Story not found for ID: {storyId}</Text>
       </View>
     );
   }

@@ -32,7 +32,7 @@ type NonParamScreen = {
 
 type StoryScreen = {
   screen: 'StoryStack';
-  namespace?: string; // Optional namespace for StoryStack
+  namespace?: string;
 };
 
 type ParamScreen = {
@@ -79,9 +79,8 @@ export default function HomeScreen() {
     { title: t('menu.grammar_concepts'), screen: 'GrammarConceptsScreen' },
     { title: t('menu.n5_basic_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_BASIC_GRAMMAR },
     { title: t('menu.n5_advance_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
-    { title: t('menu.n5_chat'), screen: 'StoryStack', namespace: 'n5Chat' }, // namespace is the source refer to i18n.ts source
-    { title: t('menu.story'), screen: 'StoryStack', namespace: 'story' }, 
-
+    { title: t('menu.n5_chat'), screen: 'StoryStack', namespace: 'n5chat' }, // 統一小寫
+    { title: t('menu.story'), screen: 'StoryStack', namespace: 'story' },
   ];
 
   const handlePress = (item: MenuItem) => {

@@ -262,7 +262,7 @@ const linking = {
       } else if (subRoute === 'story-stack') {
         const storySubRoute = segments[2]?.toLowerCase() || '';
         const queryParams = parseQueryParams(queryString);
-        const storyIdFromPath = segments[3]; // 從路徑中提取 storyId
+        const storyIdFromPath = segments[3];
         if (storySubRoute === 'n5storyscreen') {
           state = {
             routes: [
@@ -471,3 +471,4 @@ const linking = {
 };
 
 export default linking;
+
