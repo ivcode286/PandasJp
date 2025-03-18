@@ -34,13 +34,9 @@ export const handleIOSPrompt = async (): Promise<void> => {
   if (Platform.OS === 'web') {
     const userAgent = window.navigator.userAgent.toLowerCase();
     const isIOS = /iphone|ipad|ipod/.test(userAgent);
-
+    
     if (isIOS) {
-      // iOS 設備：直接跳轉到 App Store，不顯示提示
-      console.log('iOS device detected, redirecting to App Store:', APP_STORE_URL);
-      window.location.assign(APP_STORE_URL);
-    } else {
-      // 非 iOS 設備（例如 Chrome）：顯示提示後跳轉
+      // iOS 設備：顯示提示並可跳轉
       const message = `${i18n.t('appPrompt:title')}\n${i18n.t('appPrompt:message')}`;
       const shouldDownload = window.confirm(message);
       if (shouldDownload) {
@@ -49,6 +45,10 @@ export const handleIOSPrompt = async (): Promise<void> => {
       } else {
         console.log('User cancelled');
       }
+    } else {
+      // 非 iOS 設備（例如 Android）：不顯示提示，不跳轉
+      console.log('Non-iOS device detected, no redirect');
+      return;
     }
   } else {
     // 原生環境：保持不變
