@@ -95,7 +95,7 @@ i18n.use(initReactI18next).init({
     'katakana',
     'phonetics',
     'story',
-    'story2',
+    'n5Chat',
     'conversation',
     'grammar',
     'words',
