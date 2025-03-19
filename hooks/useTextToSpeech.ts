@@ -6,9 +6,10 @@ const removeEmojis = (text: string): string => {
   return text.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, "");
 };
 
-// 移除所有講話人名稱（格式為「名稱：」）
+// 移除所有講話人名稱（支援全形「：」和半形「:」）
 const removeSpeakerNames = (text: string): string => {
-  return text.replace(/[^：]+：/g, "");
+  // 匹配任何非冒號字符後跟著全形「：」或半形「:」
+  return text.replace(/[^：:]+[：:]/g, "");
 };
 
 const useTextToSpeech = () => {
@@ -18,7 +19,8 @@ const useTextToSpeech = () => {
     // 先移除 emoji，再移除講話人名稱
     let sanitizedText = removeEmojis(text);
     sanitizedText = removeSpeakerNames(sanitizedText);
-    console.log("Sanitized text:", sanitizedText);
+    console.log("Original text:", text); // 顯示原始文字
+    console.log("Sanitized text:", sanitizedText); // 顯示處理後的文字
 
     if (Platform.OS === "web") {
       if ("speechSynthesis" in window) {
