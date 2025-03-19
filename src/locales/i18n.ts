@@ -96,7 +96,7 @@ i18n.use(initReactI18next).init({
     'katakana',
     'phonetics',
     'story',
-    'n5chat', // 統一小寫
+    'n5chat', // all lower case in url for story
     'conversation',
     'grammar',
     'words',
