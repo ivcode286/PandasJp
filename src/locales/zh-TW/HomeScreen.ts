@@ -13,11 +13,11 @@ const homeZhTW = {
       grammar_concepts: "N5日語基礎文法概念",
       n5_basic_grammar: "最常用N5文法",
       n5_advance_grammar: "進階N5文法",
-      conversation: "N5日常對話",
+      n5_chat: "N5日常對話",
       story: "N5短篇故事",
     },
     headerTitle: {
-      story:"N5故事選單"
+      story:"選單"
     },
     language:{
       traditional_chinese: "繁",

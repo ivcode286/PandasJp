@@ -1,4 +1,3 @@
-// screens/HomeScreen.tsx
 import React, { useEffect } from 'react';
 import {
   View,
@@ -28,8 +27,12 @@ type NonParamScreen = {
     | 'PhoneticsScreen'
     | 'N5ConceptsScreen'
     | 'GrammarConceptsScreen'
-    | 'StoryStack'
     | 'ConversationStack';
+};
+
+type StoryScreen = {
+  screen: 'StoryStack';
+  namespace?: string;
 };
 
 type ParamScreen = {
@@ -37,7 +40,7 @@ type ParamScreen = {
   specialLevel: string;
 };
 
-type MenuItem = MenuItemBase & (NonParamScreen | ParamScreen);
+type MenuItem = MenuItemBase & (NonParamScreen | ParamScreen | StoryScreen);
 
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'HomeScreen'>;
 
@@ -59,7 +62,6 @@ export default function HomeScreen() {
     console.log('Changing language to:', lang);
     await changeLanguage(lang);
     console.log('Navigating with new lang:', lang);
-    // 更新頂層 'Home' 路由的參數，並重新導航到 HomeScreen
     navigation.navigate('Home', {
       screen: 'HomeScreen',
       params: { lang },
@@ -77,15 +79,18 @@ export default function HomeScreen() {
     { title: t('menu.grammar_concepts'), screen: 'GrammarConceptsScreen' },
     { title: t('menu.n5_basic_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_BASIC_GRAMMAR },
     { title: t('menu.n5_advance_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
-    { title: t('menu.conversation'), screen: 'ConversationStack' },
-    { title: t('menu.story'), screen: 'StoryStack' },
+    { title: t('menu.n5_chat'), screen: 'StoryStack', namespace: 'n5chat' }, // 統一小寫
+    { title: t('menu.story'), screen: 'StoryStack', namespace: 'story' },
   ];
 
   const handlePress = (item: MenuItem) => {
-    if (item.screen === 'WordsWithDrawer' || item.screen === 'GrammarScreen') {
+    if (item.screen === 'StoryStack') {
+      navigation.navigate('StoryStack', {
+        screen: 'N5StoryMenu',
+        params: { namespace: 'namespace' in item ? item.namespace : undefined },
+      });
+    } else if (item.screen === 'WordsWithDrawer' || item.screen === 'GrammarScreen') {
       navigation.navigate(item.screen, { level: item.specialLevel });
-    } else if (item.screen === 'StoryStack') {
-      navigation.navigate('StoryStack', { screen: 'N5StoryMenu' });
     } else {
       navigation.navigate(item.screen);
     }
@@ -105,7 +110,7 @@ export default function HomeScreen() {
                     i18n.language === 'zh-TW' && styles.languageTextSelected,
                   ]}
                 >
-                  {t('language.traditional_chinese')}       
+                  {t('language.traditional_chinese')}
                 </Text>
               </TouchableOpacity>
               <Text style={styles.languageDivider}> | </Text>
@@ -116,7 +121,7 @@ export default function HomeScreen() {
                     i18n.language === 'zh-CN' && styles.languageTextSelected,
                   ]}
                 >
-                   {t('language.simple_chinese')} 
+                  {t('language.simple_chinese')}
                 </Text>
               </TouchableOpacity>
             </View>

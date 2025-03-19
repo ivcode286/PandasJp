@@ -3,15 +3,15 @@ import {
   getStateFromPath as defaultGetStateFromPath,
   NavigationState,
   PartialState,
-} from "@react-navigation/native";
-import i18n from "../locales/i18n";
-import { changeLanguage } from "./languageService";
+} from '@react-navigation/native';
+import i18n from '../locales/i18n';
+import { changeLanguage } from './languageService';
 
 interface RouteParams {
   lang?: string;
   level?: string;
   storyId?: string;
-  conversationId?: string; // Changed to conversationId
+  namespace?: string;
   [key: string]: any;
 }
 
@@ -31,7 +31,6 @@ interface HomeScreensConfig {
   GrammarScreen: string;
   WordsWithDrawer: ScreenConfig;
   StoryStack: ScreenConfig;
-  ConversationStack: ScreenConfig;
 }
 
 interface WordsScreensConfig {
@@ -52,80 +51,87 @@ interface LinkingConfig {
 }
 
 const linking = {
-  prefixes: ["http://localhost:8081", "https://pandasapps.com"],
+  prefixes: ['http://localhost:8081', 'https://pandasapps.com'],
   config: {
     screens: {
       Home: {
-        path: ":lang/home",
+        path: ':lang/home',
         screens: {
-          HomeScreen: "",
-          HiraganaScreen: "hiragana",
-          KatakanaScreen: "katakana",
-          KanaComparisonScreen: "kana-comparison",
-          PhoneticsScreen: "phonetics",
-          N5ConceptsScreen: "n5-concepts",
-          GrammarConceptsScreen: "grammar-concepts",
-          GrammarScreen: "grammar/:level",
+          HomeScreen: '',
+          HiraganaScreen: 'hiragana',
+          KatakanaScreen: 'katakana',
+          KanaComparisonScreen: 'kana-comparison',
+          PhoneticsScreen: 'phonetics',
+          N5ConceptsScreen: 'n5-concepts',
+          GrammarConceptsScreen: 'grammar-concepts',
+          GrammarScreen: 'grammar/:level',
           WordsWithDrawer: {
-            path: "words-with-drawer/:level",
+            path: 'words-with-drawer/:level',
             screens: {
-              WordsScreen: "wordsscreen",
+              WordsScreen: 'wordsscreen',
             },
           },
           StoryStack: {
-            path: "story-stack",
+            path: 'story-stack',
             screens: {
-              N5StoryMenu: "",
-              N5StoryScreen: "n5storyscreen",
-            },
-          },
-          ConversationStack: {
-            path: "conversation-stack",
-            screens: {
-              N5ConversationMenu: "",
-              N5ConversationScreen: "n5conversationscreen",
+              N5StoryMenu: '',
+              N5StoryScreen: 'n5storyscreen/:storyId',
             },
           },
         },
       },
       Words: {
-        path: ":lang/words",
+        path: ':lang/words',
         screens: {
-          WordsMenuScreen: "",
-          WordsWithDrawer: "words-with-drawer/:level",
+          WordsMenuScreen: '',
+          WordsWithDrawer: 'words-with-drawer/:level',
         },
       },
       Story: {
-        path: ":lang/story",
+        path: ':lang/story',
         screens: {
-          N5StoryMenu: "",
-          N5StoryScreen: "n5storyscreen",
+          N5StoryMenu: '',
+          N5StoryScreen: 'n5storyscreen/:storyId',
         },
       },
-      Settings: ":lang/settings",
+      Settings: ':lang/settings',
     } as LinkingConfig,
   },
   getPathFromState(state: NavigationState | PartialState<NavigationState>, options?: any): string {
     let path = defaultGetPathFromState(state, { ...options, ...linking.config });
-    if (path.startsWith("/")) {
+    if (path.startsWith('/')) {
       path = path.slice(1);
     }
 
-    const segments = path.split("/").filter(Boolean);
-    let lang = i18n.language ? i18n.language.toLowerCase() : "zh-cn";
+    const segments = path.split('/').filter(Boolean);
+    let lang = i18n.language ? i18n.language.toLowerCase() : 'zh-cn';
 
     if (state.routes && state.routes[0]) {
       let params: RouteParams | undefined = state.routes[0].params as RouteParams;
-      if (state.type === "tab" && typeof state.index === "number" && state.routes[state.index]) {
+      if (state.type === 'tab' && typeof state.index === 'number' && state.routes[state.index]) {
         params = state.routes[state.index].params as RouteParams;
       }
-      if (params?.lang && ["zh-tw", "zh-cn"].includes(params.lang.toLowerCase())) {
+      if (params?.lang && ['zh-tw', 'zh-cn'].includes(params.lang.toLowerCase())) {
         lang = params.lang.toLowerCase();
+      }
+      if (params?.storyId || params?.namespace) {
+        const nestedRoute = state.routes[0].state?.routes[1]?.state?.routes[0];
+        if (nestedRoute?.name === 'N5StoryScreen') {
+          path = `${segments[0]}/story-stack/n5storyscreen/${params.storyId}`;
+          if (params.namespace) {
+            path += `?namespace=${encodeURIComponent(params.namespace)}`;
+          }
+        } else {
+          let query = '';
+          if (params.storyId) query += `storyId=${encodeURIComponent(params.storyId)}`;
+          if (params.namespace) query += `${query ? '&' : ''}namespace=${encodeURIComponent(params.namespace)}`;
+          if (query) path += `?${query}`;
+        }
       }
     }
 
     const cleanedSegments = segments
-      .filter((seg) => seg.toLowerCase() !== "zh-tw" && seg.toLowerCase() !== "zh-cn" && seg !== "undefined")
+      .filter((seg) => seg.toLowerCase() !== 'zh-tw' && seg.toLowerCase() !== 'zh-cn' && seg !== 'undefined')
       .map((seg) => seg.toLowerCase());
 
     const uniqueSegments: string[] = [];
@@ -135,29 +141,29 @@ const linking = {
       }
     }
 
-    const finalPath = uniqueSegments.length > 0 ? uniqueSegments.join("/") : "home";
+    const finalPath = uniqueSegments.length > 0 ? uniqueSegments.join('/') : 'home';
     const generatedPath = `/${lang}/${finalPath}`;
-    console.log("Generated path:", generatedPath);
+    console.log('Generated path:', generatedPath);
     return generatedPath;
   },
   getStateFromPath(path: string, options?: any): PartialState<NavigationState> {
-    console.log("getStateFromPath path:", path);
-    const [pathWithoutQuery, queryString] = path.split("?");
-    const segments = pathWithoutQuery.split("/").filter(Boolean);
-    let lang = i18n.language ? i18n.language.toLowerCase() : "zh-cn";
+    console.log('getStateFromPath path:', path);
+    const [pathWithoutQuery, queryString] = path.split('?');
+    const segments = pathWithoutQuery.split('/').filter(Boolean);
+    let lang = i18n.language ? i18n.language.toLowerCase() : 'zh-cn';
 
-    if (segments[0]?.toLowerCase() === "zh-tw" || segments[0]?.toLowerCase() === "zh-cn") {
+    if (segments[0]?.toLowerCase() === 'zh-tw' || segments[0]?.toLowerCase() === 'zh-cn') {
       lang = segments.shift()!.toLowerCase();
       if (lang !== i18n.language) {
-        console.log("Syncing language to URL lang:", lang);
-        changeLanguage(lang as "zh-TW" | "zh-CN").catch((err) =>
-          console.error("Failed to change language:", err)
+        console.log('Syncing language to URL lang:', lang);
+        changeLanguage(lang as 'zh-TW' | 'zh-CN').catch((err) =>
+          console.error('Failed to change language:', err)
         );
       }
     }
 
-    const newPath = segments.join("/") || "home";
-    console.log("newPath:", newPath);
+    const newPath = segments.join('/') || 'home';
+    console.log('newPath:', newPath);
 
     const screens = linking.config.screens;
     const homeScreens = screens.Home.screens;
@@ -166,60 +172,65 @@ const linking = {
     const topLevelRoute = segments[0]?.toLowerCase();
     let state;
 
-    if (topLevelRoute === "home") {
-      const subRoute = segments[1]?.toLowerCase() || "";
-      const screenName = Object.keys(homeScreens).find(
-        (key) => {
-          const value = homeScreens[key as keyof HomeScreensConfig];
-          return typeof value === "string" && (value === subRoute || (subRoute === "" && value === ""));
-        }
-      );
+    const parseQueryParams = (query: string | undefined): { [key: string]: string } => {
+      const params: { [key: string]: string } = {};
+      if (query) {
+        query.split('&').forEach((pair) => {
+          const [key, value] = pair.split('=');
+          if (key && value) {
+            params[key] = decodeURIComponent(value);
+          }
+        });
+      }
+      return params;
+    };
+
+    if (topLevelRoute === 'home') {
+      const subRoute = segments[1]?.toLowerCase() || '';
+      const screenName = Object.keys(homeScreens).find((key) => {
+        const value = homeScreens[key as keyof HomeScreensConfig];
+        return typeof value === 'string' && (value === subRoute || (subRoute === '' && value === ''));
+      });
 
       if (screenName) {
         state = {
           routes: [
             {
-              name: "Home",
+              name: 'Home',
               state: {
-                routes: [
-                  { name: "HomeScreen" },
-                  { name: screenName },
-                ],
+                routes: [{ name: 'HomeScreen' }, { name: screenName }],
               },
             },
           ],
         };
-      } else if (subRoute === "grammar" && segments[2]) {
+      } else if (subRoute === 'grammar' && segments[2]) {
         state = {
           routes: [
             {
-              name: "Home",
+              name: 'Home',
               state: {
                 routes: [
-                  { name: "HomeScreen" },
-                  {
-                    name: "GrammarScreen",
-                    params: { level: segments[2].toLowerCase() },
-                  },
+                  { name: 'HomeScreen' },
+                  { name: 'GrammarScreen', params: { level: segments[2].toLowerCase() } },
                 ],
               },
             },
           ],
         };
-      } else if (subRoute === "words-with-drawer" && segments[2]) {
-        const wordsSubRoute = segments[3]?.toLowerCase() || "";
+      } else if (subRoute === 'words-with-drawer' && segments[2]) {
+        const wordsSubRoute = segments[3]?.toLowerCase() || '';
         const wordsScreenName = Object.keys(homeScreens.WordsWithDrawer.screens || {}).find(
           (key) => homeScreens.WordsWithDrawer.screens![key] === wordsSubRoute
         );
         state = {
           routes: [
             {
-              name: "Home",
+              name: 'Home',
               state: {
                 routes: [
-                  { name: "HomeScreen" },
+                  { name: 'HomeScreen' },
                   {
-                    name: "WordsWithDrawer",
+                    name: 'WordsWithDrawer',
                     params: { level: segments[2].toLowerCase() },
                     ...(wordsScreenName
                       ? {
@@ -227,7 +238,7 @@ const linking = {
                             routes: [
                               {
                                 name: wordsScreenName,
-                                ...(queryString ? { params: { level: decodeURIComponent(queryString.split("=")[1]) } } : {}),
+                                ...(queryString ? { params: parseQueryParams(queryString) } : {}),
                               },
                             ],
                           },
@@ -239,97 +250,129 @@ const linking = {
             },
           ],
         };
-      } else if (subRoute === "story-stack") {
-        const storySubRoute = segments[2]?.toLowerCase() || "";
-        const storyScreenName = Object.keys(homeScreens.StoryStack.screens || {}).find(
-          (key) => homeScreens.StoryStack.screens![key] === storySubRoute || (storySubRoute === "" && homeScreens.StoryStack.screens![key] === "")
-        );
-        state = {
-          routes: [
-            {
-              name: "Home",
-              state: {
-                routes: [
-                  { name: "HomeScreen" },
-                  {
-                    name: "StoryStack",
-                    state: {
-                      routes: [
-                        {
-                          name: storyScreenName || "N5StoryMenu",
-                          ...(storySubRoute === "n5storyscreen" && queryString ? { params: { storyId: decodeURIComponent(queryString.split("=")[1]) } } : {}),
-                        },
-                      ],
+      } else if (subRoute === 'story-stack') {
+        const storySubRoute = segments[2]?.toLowerCase() || '';
+        const queryParams = parseQueryParams(queryString);
+        const storyIdFromPath = segments[3];
+        if (storySubRoute === 'n5storyscreen') {
+          state = {
+            routes: [
+              {
+                name: 'Home',
+                state: {
+                  routes: [
+                    { name: 'HomeScreen' },
+                    {
+                      name: 'StoryStack',
+                      state: {
+                        routes: [
+                          {
+                            name: 'N5StoryScreen',
+                            params: {
+                              storyId: storyIdFromPath || queryParams.storyId,
+                              namespace: queryParams.namespace,
+                            },
+                          },
+                        ],
+                      },
                     },
-                  },
-                ],
+                  ],
+                },
               },
-            },
-          ],
-        };
-      } else if (subRoute === "conversation-stack") {
-        const convSubRoute = segments[2]?.toLowerCase() || "";
-        const convScreenName = Object.keys(homeScreens.ConversationStack.screens || {}).find(
-          (key) => homeScreens.ConversationStack.screens![key] === convSubRoute || (convSubRoute === "" && homeScreens.ConversationStack.screens![key] === "")
-        );
-        state = {
-          routes: [
-            {
-              name: "Home",
-              state: {
-                routes: [
-                  { name: "HomeScreen" },
-                  {
-                    name: "ConversationStack",
-                    state: {
-                      routes: [
-                        {
-                          name: convScreenName || "N5ConversationMenu",
-                          ...(convSubRoute === "n5conversationscreen" && queryString ? { params: { conversationId: decodeURIComponent(queryString.split("=")[1]) } } : {}), // Changed to conversationId
-                        },
-                      ],
+            ],
+          };
+        } else {
+          state = {
+            routes: [
+              {
+                name: 'Home',
+                state: {
+                  routes: [
+                    { name: 'HomeScreen' },
+                    {
+                      name: 'StoryStack',
+                      state: {
+                        routes: [
+                          {
+                            name: 'N5StoryMenu',
+                            ...(Object.keys(queryParams).length > 0 ? { params: queryParams } : {}),
+                          },
+                        ],
+                      },
                     },
-                  },
-                ],
+                  ],
+                },
               },
-            },
-          ],
-        };
-        console.log("Conversation route state:", JSON.stringify(state, null, 2));
-      }
-    } else if (topLevelRoute === "words") {
-      const subRoute = segments[1]?.toLowerCase() || "";
-      const screenName = Object.keys(wordsScreens).find(
-        (key) => {
-          const value = wordsScreens[key as keyof WordsScreensConfig];
-          return typeof value === "string" && (value === subRoute || (subRoute === "" && value === ""));
+            ],
+          };
         }
-      );
+      }
+    } else if (topLevelRoute === 'words') {
+      const subRoute = segments[1]?.toLowerCase() || '';
+      const screenName = Object.keys(wordsScreens).find((key) => {
+        const value = wordsScreens[key as keyof WordsScreensConfig];
+        return typeof value === 'string' && (value === subRoute || (subRoute === '' && value === ''));
+      });
       if (screenName) {
         state = {
           routes: [
             {
-              name: "Words",
+              name: 'Words',
+              state: {
+                routes: [{ name: 'WordsMenuScreen' }, ...(screenName !== 'WordsMenuScreen' ? [{ name: screenName }] : [])],
+              },
+            },
+          ],
+        };
+      } else if (subRoute === 'words-with-drawer' && segments[2]) {
+        const queryParams = parseQueryParams(queryString);
+        state = {
+          routes: [
+            {
+              name: 'Words',
               state: {
                 routes: [
-                  { name: "WordsMenuScreen" },
-                  ...(screenName !== "WordsMenuScreen" ? [{ name: screenName }] : []),
+                  { name: 'WordsMenuScreen' },
+                  { name: 'WordsWithDrawer', params: { level: segments[2].toLowerCase(), ...queryParams } },
                 ],
               },
             },
           ],
         };
-      } else if (subRoute === "words-with-drawer" && segments[2]) {
+      }
+    } else if (topLevelRoute === 'story') {
+      const subRoute = segments[1]?.toLowerCase() || '';
+      const queryParams = parseQueryParams(queryString);
+      const storyIdFromPath = segments[2];
+      if (subRoute === 'n5storyscreen') {
         state = {
           routes: [
             {
-              name: "Words",
+              name: 'Story',
               state: {
                 routes: [
-                  { name: "WordsMenuScreen" },
                   {
-                    name: "WordsWithDrawer",
-                    params: { level: segments[2].toLowerCase() },
+                    name: 'N5StoryScreen',
+                    params: {
+                      storyId: storyIdFromPath || queryParams.storyId,
+                      namespace: queryParams.namespace,
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        };
+      } else {
+        state = {
+          routes: [
+            {
+              name: 'Story',
+              state: {
+                routes: [
+                  {
+                    name: 'N5StoryMenu',
+                    ...(Object.keys(queryParams).length > 0 ? { params: queryParams } : {}),
                   },
                 ],
               },
@@ -337,29 +380,6 @@ const linking = {
           ],
         };
       }
-    } else if (topLevelRoute === "story") {
-      const subRoute = segments[1]?.toLowerCase() || "";
-      const screenName = Object.keys(storyScreens).find(
-        (key) => storyScreens[key] === subRoute || (subRoute === "" && storyScreens[key] === "")
-      );
-      state = {
-        routes: [
-          {
-            name: "Story",
-            state: {
-              routes: [
-                {
-                  name: screenName || "N5StoryMenu",
-                  ...(subRoute === "n5storyscreen" && queryString
-                    ? { params: { storyId: decodeURIComponent(queryString.split("=")[1]) } }
-                    : {}),
-                },
-              ],
-            },
-          },
-        ],
-      };
-      console.log("Story route state:", JSON.stringify(state, null, 2));
     } else if (topLevelRoute && linking.config.screens[topLevelRoute as keyof LinkingConfig]) {
       state = {
         routes: [
@@ -374,16 +394,9 @@ const linking = {
       state = defaultGetStateFromPath(newPath, { ...options, ...linking.config });
     }
 
-    console.log("Parsed狀態:", JSON.stringify(state, null, 2));
+    console.log('Parsed state:', JSON.stringify(state, null, 2));
 
-    const params: RouteParams = {};
-    if (queryString && !state?.routes[0]?.state?.routes[0]?.params) {
-      queryString.split("&").forEach((pair) => {
-        const [key, value] = pair.split("=");
-        params[key] = decodeURIComponent(value);
-      });
-    }
-
+    const params = parseQueryParams(queryString);
     if (state && state.routes && state.routes[0]) {
       const updatedRoute = {
         ...state.routes[0],
@@ -393,21 +406,21 @@ const linking = {
           ...params,
         },
       };
-      console.log("Returning updated state:", JSON.stringify({ ...state, routes: [updatedRoute, ...state.routes.slice(1)] }, null, 2));
+      console.log('Returning updated state:', JSON.stringify({ ...state, routes: [updatedRoute, ...state.routes.slice(1)] }, null, 2));
       return {
         ...state,
         routes: [updatedRoute, ...state.routes.slice(1)],
       };
     }
 
-    console.error("Failed to parse state for path:", path);
+    console.error('Failed to parse state for path:', path);
     return {
       routes: [
         {
-          name: "Home",
+          name: 'Home',
           params: { lang },
           state: {
-            routes: [{ name: "HomeScreen" }],
+            routes: [{ name: 'HomeScreen' }],
           },
         },
       ],

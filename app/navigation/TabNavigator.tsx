@@ -1,4 +1,3 @@
-//app/navigation/TabNavigator.tsx
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import React from 'react';
@@ -31,7 +30,7 @@ const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 function HomeStack() {
-  const { t, i18n } = useTranslation('home');
+  const { t } = useTranslation('home');
   return (
     <Stack.Navigator
       screenOptions={{
@@ -49,12 +48,12 @@ function HomeStack() {
       <Stack.Screen name="KatakanaScreen" component={KatakanaScreen} options={{ headerTitle: t('menu.katakana') }} />
       <Stack.Screen name="KanaComparisonScreen" component={KanaComparisonScreen} options={{ headerTitle: t('menu.kana_comparison') }} />
       <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} options={{ headerTitle: t('menu.phonetics') }} />
-      <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} options={{ headerTitle:  t('menu.n5_concepts') }} />
+      <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} options={{ headerTitle: t('menu.n5_concepts') }} />
       <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} options={{ headerTitle: t('menu.grammar_concepts') }} />
       <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5文法' }} />
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }} />
-      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: false }}  />
-      <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true, headerTitle:  t('menu.conversation') }} />
+      <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: false }} />
+      <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true, headerTitle: t('menu.conversation') }} />
     </Stack.Navigator>
   );
 }
@@ -64,18 +63,20 @@ function StoryStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: true, 
+        headerShown: true,
         cardStyle: { flex: 1 },
       }}
     >
-      <Stack.Screen name="N5StoryMenu" 
-      component={N5StoryMenu} 
-      options={{ headerTitle: t('headerTitle.story'), headerShown: true}}
+      <Stack.Screen
+        name="N5StoryMenu"
+        component={N5StoryMenu}
+        initialParams={{ namespace: 'story' }} // 小寫
+        options={{ headerTitle: t('headerTitle.story'), headerShown: true }}
       />
       <Stack.Screen
         name="N5StoryScreen"
         component={N5StoryScreen}
-        options={{ headerTitle: t('menu.story'), headerShown: true}}
+        options={{ headerTitle: '', headerShown: true }}
       />
     </Stack.Navigator>
   );
@@ -86,11 +87,15 @@ function TabStoryStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false, 
+        headerShown: false,
         cardStyle: { flex: 1 },
       }}
     >
-      <Stack.Screen name="N5StoryMenu" component={N5StoryMenu} />
+      <Stack.Screen
+        name="N5StoryMenu"
+        component={N5StoryMenu}
+        initialParams={{ namespace: 'story' }} // 小寫
+      />
       <Stack.Screen
         name="N5StoryScreen"
         component={N5StoryScreen}

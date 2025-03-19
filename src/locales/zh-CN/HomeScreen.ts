@@ -11,11 +11,11 @@ const homeZhCN = {
       grammar_concepts: "N5 日语基础文法概念",
       n5_basic_grammar: "最常用 49 个 N5文法",
       n5_advance_grammar: "进阶N5文法",
-      conversation: "N5日常对话",
+      n5_chat: "N5日常对话",
       story: "N5短篇故事",
     },
     headerTitle: {
-      story:"N5故事选单"
+      story:"选单"
     },
     language:{
       traditional_chinese: "繁",
