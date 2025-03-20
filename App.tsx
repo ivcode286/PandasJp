@@ -37,7 +37,7 @@ export default function App(): JSX.Element | null {
           urlLang = urlLangMatch ? urlLangMatch[1].toLowerCase() : null;
         }
 
-        const initialLang = urlLang || savedLang || 'zh-CN';
+        const initialLang = urlLang || savedLang || 'zh-TW';
         console.log('Initial language:', initialLang);
         await i18n.changeLanguage(initialLang);
         await AsyncStorage.setItem(LANGUAGE_KEY, initialLang);
