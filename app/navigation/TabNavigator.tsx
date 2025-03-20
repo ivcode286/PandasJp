@@ -150,7 +150,6 @@ export default function MyTabs() {
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
         tabBarStyle: {
-          backgroundColor: 'black',
           borderTopWidth: 0,
           height: 60,
           paddingBottom: 10,
