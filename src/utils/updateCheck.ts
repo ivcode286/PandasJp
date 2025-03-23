@@ -1,4 +1,3 @@
-import * as Updates from 'expo-updates';
 import { Alert, Platform, Linking } from 'react-native';
 import Constants from 'expo-constants';
 
@@ -27,37 +26,21 @@ export const checkForUpdates = async (): Promise<void> => {
   try {
     const CURRENT_APP_VERSION = Constants.expoConfig?.version || DEFAULT_VERSION;
     const LATEST_NATIVE_VERSION = await getLatestVersion();
-
-    const update = await Updates.checkForUpdateAsync();
-    if (update.isAvailable) {
-      await Updates.fetchUpdateAsync();
+    console.log("CURRENT_APP_VERSION:"+CURRENT_APP_VERSION);
+    console.log("LATEST_NATIVE_VERSION:"+LATEST_NATIVE_VERSION);
+    console.log("URRENT_APP_VERSION !== LATEST_NATIVE_VERSION:"+(CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION));
+    if (CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION) {
       Alert.alert(
-        '應用更新可用',
-        '發現新版本，是否立即更新？',
+        '需要新版本',
+        '發現新版本，請前往 App Store 下載最新版本。',
         [
           { text: '取消', style: 'cancel' },
           {
-            text: '立即更新',
-            onPress: async () => {
-              await Updates.reloadAsync();
-            },
+            text: '前往 App Store',
+            onPress: () => Linking.openURL(APP_STORE_URL),
           },
         ]
       );
-    } else {
-      if (CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION) {
-        Alert.alert(
-          '需要新版本',
-          '發現新版本，請前往 App Store 下載最新版本。',
-          [
-            { text: '取消', style: 'cancel' },
-            {
-              text: '前往 App Store',
-              onPress: () => Linking.openURL(APP_STORE_URL),
-            },
-          ]
-        );
-      }
     }
   } catch (error) {
     console.error('Error checking for updates:', error);
