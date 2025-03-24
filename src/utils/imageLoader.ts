@@ -25,6 +25,12 @@ const imageMap: Record<string, any> = {
 
   //travel chat images
   'airport-flight.jpg': require('../../assets/images/stories_cover/airport-flight.jpg'),
+  'hotel-airbnb.jpg': require('../../assets/images/stories_cover/hotel-airbnb.jpg'),
+  'transportation.jpg': require('../../assets/images/stories_cover/transportation.jpg'),
+  'dining.jpg': require('../../assets/images/stories_cover/dining.jpg'),
+  'shopping.jpg': require('../../assets/images/stories_cover/shopping.jpg'),
+  'sightseeing.jpg': require('../../assets/images/stories_cover/sightseeing.jpg'),
+  'emergency.jpg': require('../../assets/images/stories_cover/emergency.jpg'),
 };
 
 export function getImage(imageName: string): any {
