@@ -32,6 +32,8 @@ import commonZhCN from '../locales/zh-CN/Common';
 import settingsZhCN from '../locales/zh-CN/SettingsScreen';
 import appPromptZhCN from './zh-CN/ApplicationPrompt';
 import n5ChatZhCN from './zh-CN/N5Chat';
+import travelChatZhTW from './zh-TW/TravelChat';
+import travelChatZhCN from './zh-CN/TravelChat';
 
 const resources = {
   'zh-TW': {
@@ -55,6 +57,7 @@ const resources = {
     common: commonZhTW,
     settings: settingsZhTW,
     appPrompt: appPromptZhTW,
+    travelchat: travelChatZhTW,
   },
   'zh-CN': {
     grammarConcepts: grammarConceptsZhCN,
@@ -77,6 +80,7 @@ const resources = {
     common: commonZhCN,
     settings: settingsZhCN,
     appPrompt: appPromptZhCN,
+    travelchat: travelChatZhCN,
   },
 };
 
@@ -88,7 +92,7 @@ i18n.use(initReactI18next).init({
   fallbackLng: 'zh-TW',
   interpolation: { escapeValue: false },
   defaultNS: 'home',
-  ns: [
+  ns: [   
     'grammarConcepts',
     'n5Concepts',
     'home',
@@ -103,6 +107,7 @@ i18n.use(initReactI18next).init({
     'common',
     'settings',
     'appPrompt',
+    'travelchat', // all lower case in url for story
   ],
   returnObjects: true,
 });

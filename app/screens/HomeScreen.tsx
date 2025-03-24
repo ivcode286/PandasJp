@@ -79,8 +79,9 @@ export default function HomeScreen() {
     { title: t('menu.grammar_concepts'), screen: 'GrammarConceptsScreen' },
     { title: t('menu.n5_basic_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_BASIC_GRAMMAR },
     { title: t('menu.n5_advance_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
-    { title: t('menu.n5_chat'), screen: 'StoryStack', namespace: 'n5chat' }, // 統一小寫
+    { title: t('menu.n5_chat'), screen: 'StoryStack', namespace: 'n5chat' }, // all lower case,namespace is react-i18next ns
     { title: t('menu.story'), screen: 'StoryStack', namespace: 'story' },
+    { title: t('menu.story'), screen: 'StoryStack', namespace: 'travelchat' },
   ];
 
   const handlePress = (item: MenuItem) => {

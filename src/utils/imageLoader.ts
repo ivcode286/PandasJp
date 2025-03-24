@@ -11,7 +11,7 @@ const imageMap: Record<string, any> = {
   'colinb-witch.jpg': require('../../assets/images/stories_cover/colinb-witch.jpg'),
   'panda-cat-lake.jpg': require('../../assets/images/stories_cover/panda-cat-lake.jpg'),
 
-  // conversation images
+  // n5chat images
   'convenience-shopping.jpg': require('../../assets/images/stories_cover/convenience-shopping.jpg'),
   'restaurant-dining.jpg': require('../../assets/images/stories_cover/restaurant-dining.jpg'),
   'station-help.jpg': require('../../assets/images/stories_cover/station-help.jpg'),
@@ -22,6 +22,9 @@ const imageMap: Record<string, any> = {
   'school-chat.jpg': require('../../assets/images/stories_cover/school-chat.jpg'),
   'bookstore-shopping.jpg': require('../../assets/images/stories_cover/bookstore-shopping.jpg'),
   'weekend-plan.jpg': require('../../assets/images/stories_cover/weekend-plan.jpg'),
+
+  //travel chat images
+  'airport-flight.jpg': require('../../assets/images/stories_cover/airport-flight.jpg'),
 };
 
 export function getImage(imageName: string): any {
