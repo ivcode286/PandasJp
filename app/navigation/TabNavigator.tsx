@@ -94,7 +94,7 @@ function TabStoryStack() {
       <Stack.Screen
         name="N5StoryMenu"
         component={N5StoryMenu}
-        initialParams={{ namespace: 'story' }} // 小寫
+        initialParams={{ namespace: 'travelchat' }} // 小寫
       />
       <Stack.Screen
         name="N5StoryScreen"
@@ -179,7 +179,7 @@ export default function MyTabs() {
         component={TabStoryStack}
         options={{
           title: 'Story',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="book.fill" color={color || 'white'} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color || 'white'} />,
         }}
       />
       <Tabs.Screen
