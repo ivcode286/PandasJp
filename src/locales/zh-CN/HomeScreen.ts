@@ -20,7 +20,7 @@ const homeZhTW = {
 
       //n4
       n4_basic_grammar: "最常用N4文法",
-      words_n4_n3: "常用N4单词",
+      words_n4_n3: "常用N4-N3单词",
     },
     headerTitle: {
       story:"选单",
