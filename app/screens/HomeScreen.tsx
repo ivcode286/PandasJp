@@ -80,7 +80,7 @@ export default function HomeScreen() {
     { title: t('menu.n5_basic_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_BASIC_GRAMMAR },
     { title: t('menu.n5_advance_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
     { title: t('menu.n5_chat'), screen: 'StoryStack', namespace: 'n5chat' },
-    { title:  t('menu.n4_basic_grammar'), screen: 'StoryStack', namespace: 'story' },
+    { title:  t('menu.story'), screen: 'StoryStack', namespace: 'story' },
   ];
 
   const secondMenuItems: MenuItem[] = [
