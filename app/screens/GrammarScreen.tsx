@@ -44,7 +44,22 @@ const GrammarScreen: React.FC = () => {
   useEffect(() => {
     setIsLoading(true); // Set loading state to true when fetching data
 
-    const namespace = level === LEVELS.N5_ADVANCE_GRAMMAR ? 'n5_advance' : 'n5_basic';
+    let namespace: string;
+    switch (level) {
+      case LEVELS.N5_ADVANCE_GRAMMAR:
+        namespace = 'n5_advance';
+        break;
+      case LEVELS.N5_BASIC_GRAMMAR:
+        namespace = 'n5_basic';
+        break;
+      case LEVELS.N4_BASIC_GRAMMAR:
+        namespace = 'n4_basic';
+        break;
+      default:
+        namespace = 'n5_basic'; // Default fallback
+    }
+
+
     const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
 
     // Defensive check: Ensure grammarData is valid and an array

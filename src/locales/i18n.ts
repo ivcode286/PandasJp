@@ -34,6 +34,7 @@ import appPromptZhCN from './zh-CN/ApplicationPrompt';
 import n5ChatZhCN from './zh-CN/N5Chat';
 import travelChatZhTW from './zh-TW/TravelChat';
 import travelChatZhCN from './zh-CN/TravelChat';
+import n4GrammarZhTW from './zh-TW/N4BasicGrammar';
 
 const resources = {
   'zh-TW': {
@@ -48,6 +49,7 @@ const resources = {
     grammar: {
       n5_basic: n5BasicGrammarZhTW,
       n5_advance: n5AdvanceGrammarZhTW,
+      n4_basic: n4GrammarZhTW, 
     },
     words: {
       n5: n5WordsZhTW,
@@ -71,6 +73,7 @@ const resources = {
     grammar: {
       n5_basic: n5BasicGrammarZhCN,
       n5_advance: n5AdvanceGrammarZhCN,
+      //n4_basic: n4GrammarZhCN,  //----------- TODO  -----------
     },
     words: {
       n5: n5WordsZhCN,
