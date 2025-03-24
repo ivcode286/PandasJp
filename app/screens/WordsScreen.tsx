@@ -83,7 +83,7 @@ export default function WordsScreen() {
       } else if (level === LEVELS.N5_KANJI) {
         key = 'n5_kanji';
       } else {
-        key = 'n3n4';
+        key = 'n4n3';
       }
 
       const words = t(key, { returnObjects: true });

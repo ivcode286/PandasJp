@@ -12,7 +12,7 @@ import n5BasicGrammarZhTW from '../locales/zh-TW/N5BasicGrammar';
 import n5AdvanceGrammarZhTW from '../locales/zh-TW/N5AdvanceGrammar';
 import n5WordsZhTW from '../locales/zh-TW/N5Words';
 import n5KanjiWordsZhTW from '../locales/zh-TW/N5KanjiWords';
-import n3n4WordsZhTW from '../locales/zh-TW/N3N4Words';
+import n4n3WordsZhTW from '../locales/zh-TW/N3N4Words';
 import commonZhTW from '../locales/zh-TW/Common';
 import settingsZhTW from '../locales/zh-TW/SettingsScreen';
 import appPromptZhTW from './zh-TW/ApplicationPrompt';
@@ -27,7 +27,7 @@ import n5BasicGrammarZhCN from '../locales/zh-CN/N5BasicGrammar';
 import n5AdvanceGrammarZhCN from '../locales/zh-CN/N5AdvanceGrammar';
 import n5WordsZhCN from '../locales/zh-CN/N5Words';
 import n5KanjiWordsZhCN from '../locales/zh-CN/N5KanjiWords';
-import n3n4WordsZhCN from '../locales/zh-CN/N3N4Words';
+import n4n3WordsZhCN from '../locales/zh-CN/N3N4Words';
 import commonZhCN from '../locales/zh-CN/Common';
 import settingsZhCN from '../locales/zh-CN/SettingsScreen';
 import appPromptZhCN from './zh-CN/ApplicationPrompt';
@@ -55,7 +55,7 @@ const resources = {
     words: {
       n5: n5WordsZhTW,
       n5_kanji: n5KanjiWordsZhTW,
-      n3n4: n3n4WordsZhTW,
+      n4n3: n4n3WordsZhTW,
     },
     common: commonZhTW,
     settings: settingsZhTW,
@@ -79,7 +79,7 @@ const resources = {
     words: {
       n5: n5WordsZhCN,
       n5_kanji: n5KanjiWordsZhCN,
-      n3n4: n3n4WordsZhCN,
+      n4n3: n4n3WordsZhCN,
     },
     common: commonZhCN,
     settings: settingsZhCN,
