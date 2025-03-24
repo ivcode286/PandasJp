@@ -39,10 +39,14 @@ const GrammarScreen: React.FC = () => {
   const { t } = useTranslation('grammar');
   const level = route.params?.level;
   const [data, setData] = useState<TransformedChapter[]>([]);
-  const [isLoading, setIsLoading] = useState(true); // Add loading state for better UX
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true); // Set loading state to true when fetching data
+    console.log('GrammarScreen received level:', level);
+  }, [level]);
+
+  useEffect(() => {
+    setIsLoading(true);
 
     let namespace: string;
     switch (level) {
@@ -56,13 +60,12 @@ const GrammarScreen: React.FC = () => {
         namespace = 'n4_basic';
         break;
       default:
-        namespace = 'n5_basic'; // Default fallback
+        namespace = 'n5_basic';
+        console.warn(`Unknown level '${level}', defaulting to 'n5_basic'`);
     }
-
 
     const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
 
-    // Defensive check: Ensure grammarData is valid and an array
     if (!grammarData || !Array.isArray(grammarData)) {
       console.error('Grammar data is invalid or empty:', grammarData);
       setData([]);
@@ -70,20 +73,18 @@ const GrammarScreen: React.FC = () => {
       return;
     }
 
-    // Transform the data into the required format
     const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => ({
-      title: chapter?.title || 'Unnamed Chapter', // Fallback for missing title
+      title: chapter?.title || 'Unnamed Chapter',
       data: (chapter?.sections || []).map((section: any) => ({
-        pattern: section?.pattern || 'No Pattern', // Fallback for missing pattern
-        description: section?.description || 'No Description', // Fallback for missing description
+        pattern: section?.pattern || 'No Pattern',
+        description: section?.description || 'No Description',
         examples: (section?.examples || []).map((example: any) => ({
-          sentence: example?.sentence || 'No Sentence', // Fallback for missing sentence
-          translation: example?.translation || 'No Translation', // Fallback for missing translation
+          sentence: example?.sentence || 'No Sentence',
+          translation: example?.translation || 'No Translation',
         })),
       })),
     }));
 
-    // Size check for debugging (runs only in development mode)
     if (__DEV__) {
       const grammarDataSectionsCount = grammarData.reduce(
         (total, chapter) => total + (chapter?.sections?.length || 0),
@@ -104,20 +105,17 @@ const GrammarScreen: React.FC = () => {
     }
 
     setData(transformedData);
-    setIsLoading(false); // Set loading to false after data is processed
+    setIsLoading(false);
   }, [level, t]);
 
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         {isLoading ? (
-          // Show loading message while data is being fetched
           <Text style={styles.header}>Loading...</Text>
         ) : data.length === 0 ? (
-          // Show message if no data is available
           <Text style={styles.header}>No data available</Text>
         ) : (
-          // Render the SectionList with transformed data
           <SectionList
             sections={data}
             keyExtractor={(item, index) => item.pattern + index}
