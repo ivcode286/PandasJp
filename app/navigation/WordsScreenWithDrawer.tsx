@@ -11,7 +11,7 @@ import { RootStackParamList } from "./RootStackParamList";
 import { useTranslation } from "react-i18next";
 import { IoniconsWeb } from "@/components/ui/IoniconsWeb";
 
-type LevelType = "N5" | "N4-N3" | "N5-KANJI";
+type LevelType = "n5" | "n4-n3" | "n5-kanji";
 
 const chunkArraySpecial = (array: string[]): string[][] => {
   const result: string[][] = [];
@@ -70,7 +70,7 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({
   return (
     <DrawerContentScrollView contentContainerStyle={[styles.drawerContent, { paddingBottom: 80 }]}>
       {(() => {
-        if (level === "N4-N3") {
+        if (level === "n4-n3") {
           return chunkArraySpecial(items).map((row, index) => (
             <View key={index} style={styles.drawerRow}>
               {row.map((label) => (
