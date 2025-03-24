@@ -35,6 +35,7 @@ import n5ChatZhCN from './zh-CN/N5Chat';
 import travelChatZhTW from './zh-TW/TravelChat';
 import travelChatZhCN from './zh-CN/TravelChat';
 import n4GrammarZhTW from './zh-TW/N4BasicGrammar';
+import n4GrammarZhCN from './zh-CN/N4BasicGrammar';
 
 const resources = {
   'zh-TW': {
@@ -73,7 +74,7 @@ const resources = {
     grammar: {
       n5_basic: n5BasicGrammarZhCN,
       n5_advance: n5AdvanceGrammarZhCN,
-      //n4_basic: n4GrammarZhCN,  //----------- TODO  -----------
+      n4_basic: n4GrammarZhCN,  
     },
     words: {
       n5: n5WordsZhCN,
