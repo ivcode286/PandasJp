@@ -112,6 +112,20 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- N4 -->
+  <url>
+    <loc>https://pandasapps.com/zh-cn/home/grammar/n4-basic</loc>
+    <lastmod>2025-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/grammar/n4-basic</loc>
+    <lastmod>2025-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- 單詞頁面：動態等級 -->
   <url>
     <loc>https://pandasapps.com/zh-cn/home/words-with-drawer/n5/wordsscreen</loc>
@@ -417,6 +431,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+<!-- Travel chat -->
+http://localhost:8081/zh-cn/story?namespace=travelchat
+    <url>
+    <loc>https://pandasapps.com/zh-cn/home/story?namespace=travelchat</loc>
+    <lastmod>2025-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/home/story?namespace=travelchat</loc>
+    <lastmod>2025-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 
   <!-- Words Tab 路由 -->
   <url>

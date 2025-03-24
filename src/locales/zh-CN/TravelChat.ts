@@ -5,7 +5,7 @@ const travelChatZhCN = {
       imageName: "airport-flight.jpg",
       story: [
         {
-          chapter: "机场报到 Check-in：パンダ 在机场确认航班。",
+          chapter: "机场报到",
           content: [
             { sentence: "パンダ: 「すみません、東京行きの飛行機（ひこうき）の予約（よやく）を確認（かくにん）したいです。」", translation: "熊猫: 「不好意思，我想确认去东京的飞机预订。」" },
             { sentence: "スタッフ: 「かしこまりました。パスポートをください。」", translation: "工作人员: 「好的，请给我您的护照。」" },
@@ -17,7 +17,7 @@ const travelChatZhCN = {
           ],
         },
         {
-          chapter: "行李托运 Baggage Check-in：パンダ 托运行李。",
+          chapter: "行李托运",
           content: [
             { sentence: "パンダ: 「荷物（にもつ）を預（あず）けたいです。」", translation: "熊猫: 「我想托运行李。」" },
             { sentence: "スタッフ: 「荷物はいくつですか？」", translation: "工作人员: 「行李有几件？」" },
@@ -28,7 +28,7 @@ const travelChatZhCN = {
           ],
         },
         {
-          chapter: "安检 Security：小花🌸 通过安检。",
+          chapter: "安检",
           content: [
             { sentence: "係員（かかりいん）: 「かばんをこちらで開けてください。」", translation: "安检人员: 「请在这里打开您的包包。」" },
             { sentence: "小花: 「はい、わかりました。」", translation: "小花: 「好的，我知道了。」" },
@@ -40,7 +40,7 @@ const travelChatZhCN = {
           ],
         },
         {
-          chapter: "登机门等候 Boarding Gate：小花🌸 在登机门等待。",
+          chapter: "登机门等候",
           content: [
             { sentence: "小花: 「すみません、搭乗口（とうじょうぐち）はどこですか？」", translation: "小花: 「不好意思，登机门在哪里？」" },
             { sentence: "スタッフ: 「ゲート5番です。あそこに座（すわ）って待ってください。」", translation: "工作人员: 「在5号登机门。请在那边坐下等候。」" },
@@ -51,7 +51,7 @@ const travelChatZhCN = {
           ],
         },
         {
-          chapter: "机上服务 In-flight Service：小花🌸 在飞机上请求服务。",
+          chapter: "机上服务",
           content: [
             { sentence: "小花: 「すみません、お水をください。」", translation: "小花: 「不好意思，请给我水。」" },
             { sentence: "CA（キャビンアテンダント）: 「はい、かしこまりました。冷（つめ）たい水でいいですか？」", translation: "空乘人员: 「好的，冷水可以吗？」" },
@@ -156,7 +156,7 @@ const travelChatZhCN = {
           ],
         },
         {
-          chapter: "问路 Directions：パンダ 询问去新宿的方法。",
+          chapter: "问路",
           content: [
             { sentence: "パンダ: 「すみません、新宿（しんじゅく）へどうやって行きますか？」", translation: "熊猫: 「不好意思，怎么去新宿？」" },
             { sentence: "駅員: 「新宿ですね。山手線（やまのてせん）に乗ってください。」", translation: "站务员: 「新宿是吧。请搭乘山手线。」" },
@@ -168,7 +168,7 @@ const travelChatZhCN = {
           ],
         },
         {
-          chapter: "确认班次 Schedule：小花🌸 询问下一班公车时间。",
+          chapter: "确认班次：小花🌸 询问下一班公车时间。",
           content: [
             { sentence: "小花: 「すみません、次（つぎ）のバスは何時（なんじ）ですか？」", translation: "小花: 「不好意思，下一班公车是几点？」" },
             { sentence: "運転手（うんてんしゅ）: 「午後（ごご）2時20分です。」", translation: "司机: 「下午2点20分。」" },
@@ -180,7 +180,7 @@ const travelChatZhCN = {
           ],
         },
         {
-          chapter: "叫计程车 Taxi：小花🌸 叫计程车。",
+          chapter: "叫计程车",
           content: [
             { sentence: "小花: 「すみません、タクシーを呼（よ）んでください。」", translation: "小花: 「不好意思，请帮我叫辆计程车。」" },
             { sentence: "スタッフ: 「かしこまりました。どこまで行きますか？」", translation: "工作人员: 「好的。您要去哪里？」" },
@@ -192,7 +192,7 @@ const travelChatZhCN = {
           ],
         },
         {
-          chapter: "告知目的地和付费 Destination & Payment：小花🌸 搭乘计程车并支付费用。",
+          chapter: "告知目的地和付费",
           content: [
             { sentence: "小花: 「東京駅までお願いします。」", translation: "小花: 「请去东京站。」" },
             { sentence: "運転手: 「かしこまりました。どの道（みち）がいいですか？」", translation: "司机: 「好的。您想走哪条路？」" },
@@ -273,7 +273,7 @@ const travelChatZhCN = {
       ],
     },
     {
-      title: "购物 Shopping",
+      title: "购物",
       imageName: "shopping.jpg",
       story: [
         {

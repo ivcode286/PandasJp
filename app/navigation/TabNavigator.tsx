@@ -50,7 +50,7 @@ function HomeStack() {
       <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} options={{ headerTitle: t('menu.phonetics') }} />
       <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} options={{ headerTitle: t('menu.n5_concepts') }} />
       <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} options={{ headerTitle: t('menu.grammar_concepts') }} />
-      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5文法' }} />
+      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: '文法' }} />
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }} />
       <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: false }} />
       <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true, headerTitle: t('menu.conversation') }} />
@@ -95,11 +95,12 @@ function TabStoryStack() {
         name="N5StoryMenu"
         component={N5StoryMenu}
         initialParams={{ namespace: 'travelchat' }} // 小寫
+        options={{ headerTitle: t('headerTitle.travelMenu'), headerShown: true }}
       />
       <Stack.Screen
         name="N5StoryScreen"
         component={N5StoryScreen}
-        options={{ headerTitle: t('menu.story'), headerShown: true }}
+        options={{ headerTitle: t('headerTitle.travelMenu'), headerShown: true }}
       />
     </Stack.Navigator>
   );
