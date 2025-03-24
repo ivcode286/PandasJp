@@ -76,7 +76,13 @@ const commonZhTW = {
     N5: "N5單字",
     "N5-KANJI": "N5漢字",
     "N4-N3": "N4-N3單字",
-  }
+  },
+  update: {
+    title: "需要新版本",
+    message: "發現新版本，請前往 App Store 下載最新版本。",
+    cancel: "取消",
+    goToStore: "前往 App Store",
+  },
 };
 
 export default commonZhTW;

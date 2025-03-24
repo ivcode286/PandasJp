@@ -8,17 +8,23 @@ const removeEmojis = (text: string): string => {
 
 // 移除所有講話人名稱（支援全形「：」和半形「:」）
 const removeSpeakerNames = (text: string): string => {
-  // 匹配任何非冒號字符後跟著全形「：」或半形「:」
   return text.replace(/[^：:]+[：:]/g, "");
+};
+
+// 移除括號中的假名
+const removeKanaInParentheses = (text: string): string => {
+  // 匹配括號中的假名內容，例如 (にもつ) 或 (も)，並移除
+  return text.replace(/\([^()]*\)/g, "");
 };
 
 const useTextToSpeech = () => {
   const speak = (text: string) => {
     if (!text) return;
 
-    // 先移除 emoji，再移除講話人名稱
+    // 先移除 emoji，再移除講話人名稱，最後移除括號中的假名
     let sanitizedText = removeEmojis(text);
     sanitizedText = removeSpeakerNames(sanitizedText);
+    sanitizedText = removeKanaInParentheses(sanitizedText);
     console.log("Original text:", text); // 顯示原始文字
     console.log("Sanitized text:", sanitizedText); // 顯示處理後的文字
 

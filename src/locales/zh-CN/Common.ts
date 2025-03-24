@@ -76,7 +76,13 @@ const commonZhCN = {
       N5: "N5单字",
       "N5-KANJI": "N5汉字",
       "N4-N3": "N4-N3单字",
-    }
+    },
+    update: {
+      title: "需要新版本",
+      message: "发现新版本，请前往 App Store 下载最新版本。",
+      cancel: "取消",
+      goToStore: "前往 App Store",
+    },
   };
   
   export default commonZhCN;
