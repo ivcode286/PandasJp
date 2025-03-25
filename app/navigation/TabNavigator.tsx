@@ -65,6 +65,11 @@ function StoryStack() {
       screenOptions={{
         headerShown: true,
         cardStyle: { flex: 1 },
+        headerLeft: ({ onPress }) => ( // add back button
+          <TouchableOpacity onPress={onPress} style={{ marginLeft: 10 }}>
+            <IoniconsWeb name="arrow-back" size={24} color="white" />
+          </TouchableOpacity>
+        ),
       }}
     >
       <Stack.Screen
@@ -89,6 +94,11 @@ function TabStoryStack() {
       screenOptions={{
         headerShown: false,
         cardStyle: { flex: 1 },
+        headerLeft: ({ onPress }) => ( // 添加返回按鈕
+          <TouchableOpacity onPress={onPress} style={{ marginLeft: 10 }}>
+            <IoniconsWeb name="arrow-back" size={24} color="white" />
+          </TouchableOpacity>
+        ),
       }}
     >
       <Stack.Screen
