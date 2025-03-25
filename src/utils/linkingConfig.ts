@@ -43,11 +43,16 @@ interface StoryScreensConfig {
   N5StoryScreen: string;
 }
 
+interface SettingsScreensConfig {
+  Settings: string;
+  PrivacyPolicy: string;
+}
+
 interface LinkingConfig {
   Home: ScreenConfig & { screens: HomeScreensConfig };
   Words: ScreenConfig & { screens: WordsScreensConfig };
   Story: ScreenConfig & { screens: StoryScreensConfig };
-  Settings: string;
+  Settings: ScreenConfig & { screens: SettingsScreensConfig };
 }
 
 const linking = {
@@ -94,7 +99,13 @@ const linking = {
           N5StoryScreen: 'n5storyscreen/:storyId',
         },
       },
-      Settings: ':lang/settings',
+      Settings: {
+        path: ':lang/settings',
+        screens: {
+          Settings: '',
+          PrivacyPolicy: 'privacypolicy',
+        },
+      },
     } as LinkingConfig,
   },
   getPathFromState(state: NavigationState | PartialState<NavigationState>, options?: any): string {
@@ -169,6 +180,7 @@ const linking = {
     const homeScreens = screens.Home.screens;
     const wordsScreens = screens.Words.screens;
     const storyScreens = screens.Story.screens;
+    const settingsScreens = screens.Settings.screens;
     const topLevelRoute = segments[0]?.toLowerCase();
     let state;
 
@@ -380,14 +392,25 @@ const linking = {
           ],
         };
       }
-    } else if (topLevelRoute && linking.config.screens[topLevelRoute as keyof LinkingConfig]) {
-      state = {
-        routes: [
-          {
-            name: topLevelRoute.charAt(0).toUpperCase() + topLevelRoute.slice(1),
-          },
-        ],
-      };
+    } else if (topLevelRoute === 'settings') {
+      const subRoute = segments[1]?.toLowerCase() || '';
+      const screenName = Object.keys(settingsScreens).find((key) => {
+        const value = settingsScreens[key as keyof SettingsScreensConfig];
+        return value === subRoute || (subRoute === '' && value === '');
+      });
+
+      if (screenName) {
+        state = {
+          routes: [
+            {
+              name: 'Settings',
+              state: {
+                routes: [{ name: screenName }],
+              },
+            },
+          ],
+        };
+      }
     }
 
     if (!state) {
