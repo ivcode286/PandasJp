@@ -3,7 +3,7 @@ import Constants from 'expo-constants';
 import i18n from '../locales/i18n'; // 確保路徑正確
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/%E7%86%8A%E8%B2%93%E6%97%A5%E8%AA%9E%E5%AD%B8%E7%BF%92/id6743336983';
-const DEFAULT_VERSION = '1.2.2'; // 與 app.json 一致
+const DEFAULT_VERSION = '1.2.3'; // 與 app.json 一致
 
 const getLatestVersion = async (): Promise<string> => {
   try {
