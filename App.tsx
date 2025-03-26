@@ -10,6 +10,7 @@ import linking from './src/utils/linkingConfig';
 import { handleIOSPrompt } from './src/utils/deviceCheck';
 import { checkForUpdates } from './src/utils/updateCheck';
 import { Platform } from 'react-native';
+import Constants from 'expo-constants';
 
 interface FontTypes {
   SpaceMono: string;
@@ -36,21 +37,21 @@ export default function App(): JSX.Element | null {
           urlLang = urlLangMatch ? urlLangMatch[1].toLowerCase() : null;
         }
 
-        const initialLang = urlLang || savedLang || 'zh-CN';
+        const initialLang = urlLang || savedLang || 'zh-TW';
+        console.log('Initial language:', initialLang);
         await i18n.changeLanguage(initialLang);
         await AsyncStorage.setItem(LANGUAGE_KEY, initialLang);
 
+        console.log('App version:', Constants.expoConfig?.version);
         if (Platform.OS === 'web') {
-          await handleIOSPrompt();
-        } else {
-          await checkForUpdates();
+          await handleIOSPrompt(); // 僅 Web 執行
         }
+        await checkForUpdates(); // 在所有環境執行
       } catch (error) {
         console.error('Failed to load language:', error);
         await i18n.changeLanguage('zh-TW');
-        if (Platform.OS !== 'web') {
-          await checkForUpdates();
-        }
+        console.log('App version (catch):', Constants.expoConfig?.version);
+        await checkForUpdates(); // 在錯誤處理中也執行
       } finally {
         setLangLoaded(true);
       }

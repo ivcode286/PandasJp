@@ -12,7 +12,7 @@ import n5BasicGrammarZhTW from '../locales/zh-TW/N5BasicGrammar';
 import n5AdvanceGrammarZhTW from '../locales/zh-TW/N5AdvanceGrammar';
 import n5WordsZhTW from '../locales/zh-TW/N5Words';
 import n5KanjiWordsZhTW from '../locales/zh-TW/N5KanjiWords';
-import n3n4WordsZhTW from '../locales/zh-TW/N3N4Words';
+import n4n3WordsZhTW from '../locales/zh-TW/N3N4Words';
 import commonZhTW from '../locales/zh-TW/Common';
 import settingsZhTW from '../locales/zh-TW/SettingsScreen';
 import appPromptZhTW from './zh-TW/ApplicationPrompt';
@@ -27,11 +27,15 @@ import n5BasicGrammarZhCN from '../locales/zh-CN/N5BasicGrammar';
 import n5AdvanceGrammarZhCN from '../locales/zh-CN/N5AdvanceGrammar';
 import n5WordsZhCN from '../locales/zh-CN/N5Words';
 import n5KanjiWordsZhCN from '../locales/zh-CN/N5KanjiWords';
-import n3n4WordsZhCN from '../locales/zh-CN/N3N4Words';
+import n4n3WordsZhCN from '../locales/zh-CN/N3N4Words';
 import commonZhCN from '../locales/zh-CN/Common';
 import settingsZhCN from '../locales/zh-CN/SettingsScreen';
 import appPromptZhCN from './zh-CN/ApplicationPrompt';
 import n5ChatZhCN from './zh-CN/N5Chat';
+import travelChatZhTW from './zh-TW/TravelChat';
+import travelChatZhCN from './zh-CN/TravelChat';
+import n4GrammarZhTW from './zh-TW/N4BasicGrammar';
+import n4GrammarZhCN from './zh-CN/N4BasicGrammar';
 
 const resources = {
   'zh-TW': {
@@ -46,15 +50,17 @@ const resources = {
     grammar: {
       n5_basic: n5BasicGrammarZhTW,
       n5_advance: n5AdvanceGrammarZhTW,
+      n4_basic: n4GrammarZhTW, 
     },
     words: {
       n5: n5WordsZhTW,
       n5_kanji: n5KanjiWordsZhTW,
-      n3n4: n3n4WordsZhTW,
+      n4n3: n4n3WordsZhTW,
     },
     common: commonZhTW,
     settings: settingsZhTW,
     appPrompt: appPromptZhTW,
+    travelchat: travelChatZhTW,
   },
   'zh-CN': {
     grammarConcepts: grammarConceptsZhCN,
@@ -68,15 +74,17 @@ const resources = {
     grammar: {
       n5_basic: n5BasicGrammarZhCN,
       n5_advance: n5AdvanceGrammarZhCN,
+      n4_basic: n4GrammarZhCN,  
     },
     words: {
       n5: n5WordsZhCN,
       n5_kanji: n5KanjiWordsZhCN,
-      n3n4: n3n4WordsZhCN,
+      n4n3: n4n3WordsZhCN,
     },
     common: commonZhCN,
     settings: settingsZhCN,
     appPrompt: appPromptZhCN,
+    travelchat: travelChatZhCN,
   },
 };
 
@@ -88,7 +96,7 @@ i18n.use(initReactI18next).init({
   fallbackLng: 'zh-TW',
   interpolation: { escapeValue: false },
   defaultNS: 'home',
-  ns: [
+  ns: [   
     'grammarConcepts',
     'n5Concepts',
     'home',
@@ -103,6 +111,7 @@ i18n.use(initReactI18next).init({
     'common',
     'settings',
     'appPrompt',
+    'travelchat', // all lower case in url for story
   ],
   returnObjects: true,
 });

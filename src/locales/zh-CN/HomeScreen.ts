@@ -1,6 +1,10 @@
-const homeZhCN = {
+import { Header } from "@react-navigation/stack";
+
+const homeZhTW = {
     title: "📌 从零开始学初级日语 N5",
+    n4title:"📌 N4日语学习",
     menu: {
+      //n5
       hiragana: "平假名",
       katakana: "片假名",
       kana_comparison: "平假和片假对比",
@@ -13,9 +17,14 @@ const homeZhCN = {
       n5_advance_grammar: "进阶N5文法",
       n5_chat: "N5日常对话",
       story: "N5短篇故事",
+
+      //n4
+      n4_basic_grammar: "最常用N4文法",
+      words_n4_n3: "常用N4-N3单词",
     },
     headerTitle: {
-      story:"选单"
+      story:"选单",
+      travelMenu:"旅游日语"
     },
     language:{
       traditional_chinese: "繁",
@@ -23,4 +32,5 @@ const homeZhCN = {
     }
   };
   
-  export default homeZhCN;
+  export default homeZhTW;
+

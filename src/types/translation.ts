@@ -183,7 +183,7 @@ export interface Translation {
   words: {
     n5: WordData[];
     n5_kanji: WordData[];
-    n3n4: WordData[];
+    n4n3: WordData[];
   };
   common: CommonTranslation;
   settings: SettingsTranslation;

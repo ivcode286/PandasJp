@@ -79,8 +79,13 @@ export default function HomeScreen() {
     { title: t('menu.grammar_concepts'), screen: 'GrammarConceptsScreen' },
     { title: t('menu.n5_basic_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_BASIC_GRAMMAR },
     { title: t('menu.n5_advance_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N5_ADVANCE_GRAMMAR },
-    { title: t('menu.n5_chat'), screen: 'StoryStack', namespace: 'n5chat' }, // 統一小寫
-    { title: t('menu.story'), screen: 'StoryStack', namespace: 'story' },
+    { title: t('menu.n5_chat'), screen: 'StoryStack', namespace: 'n5chat' },
+    { title:  t('menu.story'), screen: 'StoryStack', namespace: 'story' },
+  ];
+
+  const secondMenuItems: MenuItem[] = [
+    { title: t('menu.n4_basic_grammar'), screen: 'GrammarScreen', specialLevel: LEVELS.N4_BASIC_GRAMMAR },
+    { title: t('menu.words_n4_n3'), screen: 'WordsWithDrawer', specialLevel: LEVELS.N4_N3 },
   ];
 
   const handlePress = (item: MenuItem) => {
@@ -131,6 +136,12 @@ export default function HomeScreen() {
               <Text style={styles.cardText}>• {item.title}</Text>
             </TouchableOpacity>
           ))}
+          <Text style={styles.header}>{t('n4title')}</Text>
+          {secondMenuItems.map((item, idx) => (
+            <TouchableOpacity key={idx} style={styles.card} onPress={() => handlePress(item)}>
+              <Text style={styles.cardText}>• {item.title}</Text>
+            </TouchableOpacity>
+          ))}
         </ScrollView>
       </View>
     </SafeAreaView>
@@ -160,6 +171,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: '#ffffff',
+    paddingBottom: 5,
   },
   languageContainer: {
     flexDirection: 'row',

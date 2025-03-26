@@ -50,7 +50,7 @@ function HomeStack() {
       <Stack.Screen name="PhoneticsScreen" component={PhoneticsScreen} options={{ headerTitle: t('menu.phonetics') }} />
       <Stack.Screen name="N5ConceptsScreen" component={N5ConceptsScreen} options={{ headerTitle: t('menu.n5_concepts') }} />
       <Stack.Screen name="GrammarConceptsScreen" component={GrammarConceptsScreen} options={{ headerTitle: t('menu.grammar_concepts') }} />
-      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: 'N5文法' }} />
+      <Stack.Screen name="GrammarScreen" component={GrammarScreen} options={{ headerTitle: '文法' }} />
       <Stack.Screen name="WordsWithDrawer" component={WordsScreenWithDrawer} options={{ headerShown: false }} />
       <Stack.Screen name="StoryStack" component={StoryStack} options={{ headerShown: false }} />
       <Stack.Screen name="ConversationStack" component={ConversationStack} options={{ headerShown: true, headerTitle: t('menu.conversation') }} />
@@ -65,6 +65,11 @@ function StoryStack() {
       screenOptions={{
         headerShown: true,
         cardStyle: { flex: 1 },
+        headerLeft: ({ onPress }) => ( // add back button
+          <TouchableOpacity onPress={onPress} style={{ marginLeft: 10 }}>
+            <IoniconsWeb name="arrow-back" size={24} color="white" />
+          </TouchableOpacity>
+        ),
       }}
     >
       <Stack.Screen
@@ -89,17 +94,23 @@ function TabStoryStack() {
       screenOptions={{
         headerShown: false,
         cardStyle: { flex: 1 },
+        headerLeft: ({ onPress }) => ( // 添加返回按鈕
+          <TouchableOpacity onPress={onPress} style={{ marginLeft: 10 }}>
+            <IoniconsWeb name="arrow-back" size={24} color="white" />
+          </TouchableOpacity>
+        ),
       }}
     >
       <Stack.Screen
         name="N5StoryMenu"
         component={N5StoryMenu}
-        initialParams={{ namespace: 'story' }} // 小寫
+        initialParams={{ namespace: 'travelchat' }} // 小寫
+        options={{ headerTitle: t('headerTitle.travelMenu'), headerShown: true }}
       />
       <Stack.Screen
         name="N5StoryScreen"
         component={N5StoryScreen}
-        options={{ headerTitle: t('menu.story'), headerShown: true }}
+        options={{ headerTitle: t('headerTitle.travelMenu'), headerShown: true }}
       />
     </Stack.Navigator>
   );
@@ -179,7 +190,7 @@ export default function MyTabs() {
         component={TabStoryStack}
         options={{
           title: 'Story',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="book.fill" color={color || 'white'} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color || 'white'} />,
         }}
       />
       <Tabs.Screen
