@@ -105,12 +105,13 @@ function TabStoryStack() {
         name="N5StoryMenu"
         component={N5StoryMenu}
         initialParams={{ namespace: 'travelchat' }} // 小寫
-        options={{ headerTitle: t('headerTitle.travelMenu'), headerShown: true }}
+        options={{ headerTitle: t('headerTitle.travelMenu'), headerShown: true,headerLeft: () => null }}// Override to remove back arrow for this screen
+        
       />
       <Stack.Screen
         name="N5StoryScreen"
         component={N5StoryScreen}
-        options={{ headerTitle: t('headerTitle.travelMenu'), headerShown: true }}
+        options={{ headerTitle: t('headerTitle.travelMenu'), headerShown: true}} 
       />
     </Stack.Navigator>
   );
