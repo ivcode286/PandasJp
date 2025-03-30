@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useTranslation } from "react-i18next";
-import { HiraganaTable } from "./HiraganaScreen";
+import { HiraganaTable } from "./hiragana";
 import useTextToSpeech from "../hooks/useTextToSpeech";
 
 // 定義各個資料項目的型別
