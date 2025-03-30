@@ -10,11 +10,14 @@ export default function ContentScreen() {
   const { speak } = useTextToSpeech();
   const { storyTitle, namespace = 'story' } = useLocalSearchParams<{
     storyTitle: string;
-    namespace?: 'story' | 'n5chat' | 'travelchat'; 
+    namespace?: 'story' | 'n5chat' | 'travelchat';
   }>();
+
+  console.log('ContentScreen params:', { storyTitle, namespace });
+
   const { t } = useTranslation(namespace);
 
-  const itemsRaw = t('stories', { returnObjects: true }); // 統一使用 "stories"
+  const itemsRaw = t('stories', { returnObjects: true });
   const items = Array.isArray(itemsRaw)
     ? (itemsRaw as Array<{
         title: string;
@@ -24,9 +27,12 @@ export default function ContentScreen() {
       }>)
     : [];
 
+  console.log('Items data:', items);
+
   const item = items.find((s) => s.imageName.replace('.jpg', '') === storyTitle);
 
   if (!items.length) {
+    console.log('No items available for namespace:', namespace);
     return (
       <View style={styles.container}>
         <Text style={styles.errorText}>No {namespace} available for namespace: {namespace}</Text>
@@ -35,6 +41,7 @@ export default function ContentScreen() {
   }
 
   if (!item) {
+    console.log('Item not found for storyTitle:', storyTitle);
     return (
       <View style={styles.container}>
         <Text style={styles.errorText}>{namespace} not found for ID: {storyTitle}</Text>

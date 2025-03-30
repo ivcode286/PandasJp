@@ -6,13 +6,26 @@ import { getImage } from '../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
 export default function N5StoryMenu() {
-  const { t } = useTranslation();
-  const namespace = 'story'; // 默認為 'story'，可根據需要動態化
+  const { t } = useTranslation('story');
+  const namespace = 'story';
 
-  const stories = t(`${namespace}:stories`, { returnObjects: true }) as Array<{
+  console.log('Rendering N5StoryMenu for namespace:', namespace);
+
+  const stories = t('stories', { returnObjects: true }) as Array<{
     title: string;
     imageName: string;
   }>;
+
+  console.log('Stories data:', stories);
+
+  if (!stories.length) {
+    console.log('No stories available for namespace:', namespace);
+    return (
+      <View style={styles.container}>
+        <Text>No stories available</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
@@ -20,12 +33,11 @@ export default function N5StoryMenu() {
         data={stories}
         keyExtractor={(item) => item.imageName}
         renderItem={({ item }) => (
-          <Link
-           // @ts-ignore
-            href={`/story/${item.imageName.replace('.jpg', '')}?namespace=${namespace}`}
-            asChild
-          >
-            <TouchableOpacity style={styles.cardContainer}>
+          <Link href={`/story/${item.imageName.replace('.jpg', '')}?namespace=${namespace}`} asChild>
+            <TouchableOpacity
+              style={styles.cardContainer}
+              onPress={() => console.log('Navigating to:', `/story/${item.imageName.replace('.jpg', '')}`)}
+            >
               <Image source={getImage(item.imageName)} style={styles.coverImage} />
               <View style={styles.textContainer}>
                 <Text style={styles.storyText}>{item.title}</Text>
@@ -42,7 +54,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: 'black Sabine',
+    backgroundColor: '#121212', // 統一背景色
     paddingBottom: 80,
   },
   cardContainer: {
