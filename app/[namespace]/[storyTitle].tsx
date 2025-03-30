@@ -1,3 +1,4 @@
+// app/[namespace]/[storyTitle].tsx
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
@@ -8,14 +9,17 @@ import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 export default function ContentScreen() {
   const { speak } = useTextToSpeech();
-  const { storyTitle, namespace = 'story' } = useLocalSearchParams<{
+  const { namespace, storyTitle } = useLocalSearchParams<{
+    namespace: 'story' | 'n5chat' | 'travelchat';
     storyTitle: string;
-    namespace?: 'story' | 'n5chat' | 'travelchat';
   }>();
 
-  console.log('ContentScreen params:', { storyTitle, namespace });
+  const validNamespaces = ['story', 'n5chat', 'travelchat'];
+  const effectiveNamespace = validNamespaces.includes(namespace) ? namespace : 'story';
 
-  const { t } = useTranslation(namespace);
+  console.log('ContentScreen params:', { storyTitle, namespace: effectiveNamespace });
+
+  const { t } = useTranslation(effectiveNamespace);
 
   const itemsRaw = t('stories', { returnObjects: true });
   const items = Array.isArray(itemsRaw)
@@ -32,10 +36,10 @@ export default function ContentScreen() {
   const item = items.find((s) => s.imageName.replace('.jpg', '') === storyTitle);
 
   if (!items.length) {
-    console.log('No items available for namespace:', namespace);
+    console.log('No items available for namespace:', effectiveNamespace);
     return (
       <View style={styles.container}>
-        <Text style={styles.errorText}>No {namespace} available for namespace: {namespace}</Text>
+        <Text style={styles.errorText}>No {effectiveNamespace} available for namespace: {effectiveNamespace}</Text>
       </View>
     );
   }
@@ -44,7 +48,7 @@ export default function ContentScreen() {
     console.log('Item not found for storyTitle:', storyTitle);
     return (
       <View style={styles.container}>
-        <Text style={styles.errorText}>{namespace} not found for ID: {storyTitle}</Text>
+        <Text style={styles.errorText}>{effectiveNamespace} not found for ID: {storyTitle}</Text>
       </View>
     );
   }
@@ -99,7 +103,6 @@ export default function ContentScreen() {
   );
 }
 
-// 樣式保持不變
 const styles = StyleSheet.create({
   container: {
     flex: 1,

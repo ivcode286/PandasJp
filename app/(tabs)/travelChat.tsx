@@ -1,7 +1,7 @@
 // app/(tabs)/travelChat.tsx
 import React from 'react';
-import ContentMenu from '../../components/ContentMenu';
+import { Redirect } from 'expo-router';
 
 export default function TravelChat() {
-  return <ContentMenu type="travelchat" />;
+  return <Redirect href="/travelchat" />;
 }
