@@ -6,75 +6,93 @@ import useTextToSpeech from '@/hooks/useTextToSpeech';
 import { getImage } from '../../src/utils/imageLoader';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
-export default function N5StoryScreen() {
+export default function ContentScreen() {
   const { speak } = useTextToSpeech();
   const { storyTitle, namespace = 'story' } = useLocalSearchParams<{
     storyTitle: string;
-    namespace?: string;
+    namespace?: 'story' | 'n5chat';
   }>();
-  const { t } = useTranslation();
+  const { t } = useTranslation(namespace);
 
-  const storiesRaw = t(`${namespace}:stories`, { returnObjects: true });
-  const stories = Array.isArray(storiesRaw)
-    ? (storiesRaw as Array<{
+  const itemsRaw = t('stories', { returnObjects: true }); // 統一使用 "stories"
+  const items = Array.isArray(itemsRaw)
+    ? (itemsRaw as Array<{
         title: string;
         imageName: string;
-        story: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
+        story?: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
+        conversation?: Array<{ speaker: string; japanese: string; chinese: string }>;
       }>)
     : [];
 
-  const story = stories.find((s) => s.imageName.replace('.jpg', '') === storyTitle);
+  const item = items.find((s) => s.imageName.replace('.jpg', '') === storyTitle);
 
-  if (!stories.length) {
+  if (!items.length) {
     return (
       <View style={styles.container}>
-        <Text style={styles.errorText}>No stories available for namespace: {namespace}</Text>
+        <Text style={styles.errorText}>No {namespace} available for namespace: {namespace}</Text>
       </View>
     );
   }
 
-  if (!story) {
+  if (!item) {
     return (
       <View style={styles.container}>
-        <Text style={styles.errorText}>Story not found for ID: {storyTitle}</Text>
+        <Text style={styles.errorText}>{namespace} not found for ID: {storyTitle}</Text>
       </View>
     );
   }
+
+  const content = item.story || item.conversation || [];
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 80 }}>
       <View style={styles.coverContainer}>
-        <Image source={getImage(story.imageName)} style={styles.coverImage} />
+        <Image source={getImage(item.imageName)} style={styles.coverImage} />
       </View>
-      <Text style={styles.title}>{story.title}</Text>
-      {story.story.map((chapter, chapterIndex) => (
-        <View key={chapterIndex} style={styles.chapterContainer}>
-          <Text style={styles.chapterTitle}>{chapter.chapter}</Text>
-          {chapter.content.map((line, index) => (
-            <View key={index} style={styles.sentenceContainer}>
+      <Text style={styles.title}>{item.title}</Text>
+      {content.map((entry, index) => (
+        <View key={index} style={styles.entryContainer}>
+          {'chapter' in entry ? (
+            <>
+              <Text style={styles.chapterTitle}>{entry.chapter}</Text>
+              {entry.content.map((line, lineIndex) => (
+                <View key={lineIndex} style={styles.sentenceContainer}>
+                  <View style={styles.sentenceRow}>
+                    <Text style={styles.sentence}>{line.sentence}</Text>
+                    <TouchableOpacity
+                      onPress={() => {
+                        const spokenText = line.sentence.includes('：')
+                          ? line.sentence.split('：')[1].trim()
+                          : line.sentence;
+                        speak(spokenText);
+                      }}
+                      style={styles.iconSpacing}
+                    >
+                      <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                    </TouchableOpacity>
+                  </View>
+                  <Text style={styles.translation}>{line.translation}</Text>
+                </View>
+              ))}
+            </>
+          ) : (
+            <View style={styles.sentenceContainer}>
               <View style={styles.sentenceRow}>
-                <Text style={styles.sentence}>{line.sentence}</Text>
-                <TouchableOpacity
-                  onPress={() => {
-                    const spokenText = line.sentence.includes('：')
-                      ? line.sentence.split('：')[1].trim()
-                      : line.sentence;
-                    speak(spokenText);
-                  }}
-                  style={styles.iconSpacing}
-                >
+                <Text style={styles.sentence}>{entry.speaker}: {entry.japanese}</Text>
+                <TouchableOpacity onPress={() => speak(entry.japanese)} style={styles.iconSpacing}>
                   <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
                 </TouchableOpacity>
               </View>
-              <Text style={styles.translation}>{line.translation}</Text>
+              <Text style={styles.translation}>{entry.chinese}</Text>
             </View>
-          ))}
+          )}
         </View>
       ))}
     </ScrollView>
   );
 }
 
+// 樣式保持不變
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -88,7 +106,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#ffffff',
   },
-  chapterContainer: {
+  entryContainer: {
     marginBottom: 20,
     backgroundColor: '#1e1e1e',
     padding: 15,
