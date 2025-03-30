@@ -4,7 +4,7 @@ const katakanaZhCN = {
   },
   sections: {
     katakana: {
-      title: "2. 片假名（カタカナ, Katakana）",
+      title: "片假名（カタカナ, Katakana）",
       intro: "片假名是一种较方正的日文字母，主要用于：",
       uses: [
         "外来语（如「コンピューター」computer、「ホテル」hotel）",

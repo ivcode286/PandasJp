@@ -161,6 +161,14 @@ export interface SettingsTranslation {
   };
 }
 
+export interface AppPromptTranslation {
+  title: string;
+  message: string;
+  download: string;
+  open: string;
+  cancel: string;
+}
+
 export interface Translation {
   grammarConcepts: GrammarConceptsTranslation;
   home: HomeTranslation;
@@ -168,7 +176,6 @@ export interface Translation {
   katakana: KatakanaTranslation;
   phonetics: PhoneticsTranslation;
   story: StoryTranslation[];
-  conversation: { conversations: ConversationTranslation[] };
   grammar: {
     n5_basic: GrammarData;
     n5_advance: GrammarData;
@@ -176,8 +183,9 @@ export interface Translation {
   words: {
     n5: WordData[];
     n5_kanji: WordData[];
-    n3n4: WordData[];
+    n4n3: WordData[];
   };
   common: CommonTranslation;
-  settings: SettingsTranslation; 
+  settings: SettingsTranslation;
+  appPrompt: AppPromptTranslation; 
 }

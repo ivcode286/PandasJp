@@ -1,6 +1,6 @@
 const settingsZhTW = {
   translation: {
-    title: "設定",
+    title: "熊貓日語設定",
     languageSection: "語言",
     languages: {
       traditionalChinese: "繁體中文",

@@ -1,31 +1,5 @@
 // src/locales/zh-TW/Common.ts
 const commonZhTW = {
-  titles: {
-    appName: "日語學習",
-    welcome: "歡迎",
-    settings: "設定",
-    about: "關於",
-    home: "首頁",
-  },
-  messages: {
-    loading: "載入中...",
-    error: "發生錯誤，請稍後再試。",
-    success: "操作成功！",
-    noData: "暫無資料",
-    confirm: "確認",
-    cancel: "取消",
-  },
-  buttons: {
-    submit: "提交",
-    back: "返回",
-    next: "下一步",
-    retry: "重試",
-  },
-  labels: {
-    username: "用戶名",
-    password: "密碼",
-    language: "語言",
-  },
   drawer: {
     N5: [
       "人",
@@ -97,6 +71,17 @@ const commonZhTW = {
       'わ'  // **這一行是例外（單獨一行）**
     ],
     "N5-KANJI": ["數字", "時間", "方位", "人", "自然", "事物"],
+  },
+  levels: {
+    N5: "N5單字",
+    "N5-KANJI": "N5漢字",
+    "N4-N3": "N4-N3單字",
+  },
+  update: {
+    title: "需要新版本",
+    message: "發現新版本，請前往 App Store 下載最新版本。",
+    cancel: "取消",
+    goToStore: "前往 App Store",
   },
 };
 

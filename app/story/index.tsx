@@ -21,6 +21,7 @@ export default function N5StoryMenu() {
         keyExtractor={(item) => item.imageName}
         renderItem={({ item }) => (
           <Link
+           // @ts-ignore
             href={`/story/${item.imageName.replace('.jpg', '')}?namespace=${namespace}`}
             asChild
           >
