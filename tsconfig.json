@@ -12,6 +12,7 @@
     "resolveJsonModule": true, // Allows importing JSON files
     "allowSyntheticDefaultImports": true, // Fixes module import issues
     "skipLibCheck": true, // Prevents unnecessary TypeScript errors
+    "allowImportingTsExtensions": true,
     "paths": {
       "@/*": ["./*"]
     }

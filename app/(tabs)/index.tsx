@@ -14,8 +14,9 @@ export default function HomeScreen() {
     { title: t('menu.katakana'), href: '/katakana' },
     { title: t('menu.kana_comparison'), href: '/kana-comparison' },
     { title: t('menu.phonetics'), href: '/phonetics' },
-    { title: t('menu.words_n5'), href: `/words?level=${LEVELS.N5}` },
-    { title: t('menu.kanji_n5'), href: `/words?level=${LEVELS.N5_KANJI}` },
+    { title: t('menu.words_n5'), href: `/words/n5` }, // 改為動態路由
+    { title: t('menu.kanji_n5'), href: `/words/n5-kanji` }, // 改為動態路由
+    { title: t('menu.words_n4_n3'), href: '/words/n4-n3' },
     { title: t('menu.n5_concepts'), href: '/n5-concepts' },
     { title: t('menu.grammar_concepts'), href: '/grammar-concepts' },
     { title: t('menu.n5_basic_grammar'), href: `/grammar?level=${LEVELS.N5_BASIC_GRAMMAR}` },
