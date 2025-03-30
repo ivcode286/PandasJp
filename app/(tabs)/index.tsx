@@ -21,7 +21,7 @@ export default function HomeScreen() {
     { title: t('menu.grammar_concepts'), href: '/grammar-concepts' },
     { title: t('menu.n5_basic_grammar'), href: `/grammar?level=${LEVELS.N5_BASIC_GRAMMAR}` },
     { title: t('menu.n5_advance_grammar'), href: `/grammar?level=${LEVELS.N5_ADVANCE_GRAMMAR}` },
-    { title: t('menu.conversation'), href: '/n5chat' },
+    { title: t('menu.n5_chat'), href: '/n5chat' },
     { title: t('menu.story'), href: '/story' },
   ];
 
