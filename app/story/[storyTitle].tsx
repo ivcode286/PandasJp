@@ -1,37 +1,42 @@
-import useTextToSpeech from '@/hooks/useTextToSpeech';
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
-import { useRoute, RouteProp } from '@react-navigation/native';
-import { getImage } from '../src/utils/imageLoader';
+import { useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import useTextToSpeech from '@/hooks/useTextToSpeech';
+import { getImage } from '../../src/utils/imageLoader';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
-// Define StackParamList
-type StackParamList = {
-  N5StoryScreen: { storyTitle: string };
-};
-
-type StoryScreenRouteProp = RouteProp<StackParamList, 'N5StoryScreen'>;
-
 export default function N5StoryScreen() {
-  const route = useRoute<StoryScreenRouteProp>();
-  const { t } = useTranslation('story'); // Use the "story" namespace
   const { speak } = useTextToSpeech();
+  const { storyTitle, namespace = 'story' } = useLocalSearchParams<{
+    storyTitle: string;
+    namespace?: string;
+  }>();
+  const { t } = useTranslation();
 
-  // Fetch all stories from the "stories" key
-  const stories = t('stories', { returnObjects: true }) as Array<{
-    title: string;
-    imageName: string;
-    story: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
-  }>;
+  const storiesRaw = t(`${namespace}:stories`, { returnObjects: true });
+  const stories = Array.isArray(storiesRaw)
+    ? (storiesRaw as Array<{
+        title: string;
+        imageName: string;
+        story: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
+      }>)
+    : [];
 
-  const storyTitle = route.params?.storyTitle;
-  const story = stories.find((s) => s.title === storyTitle);
+  const story = stories.find((s) => s.imageName.replace('.jpg', '') === storyTitle);
+
+  if (!stories.length) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.errorText}>No stories available for namespace: {namespace}</Text>
+      </View>
+    );
+  }
 
   if (!story) {
     return (
       <View style={styles.container}>
-        <Text style={styles.errorText}>Story not found.</Text>
+        <Text style={styles.errorText}>Story not found for ID: {storyTitle}</Text>
       </View>
     );
   }
@@ -70,7 +75,6 @@ export default function N5StoryScreen() {
   );
 }
 
-// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,

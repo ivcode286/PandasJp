@@ -46,7 +46,7 @@ export default function TabsLayout() {
             ),
           }}
         />
-        <Tabs.Screen
+        {/* <Tabs.Screen
           name="story"
           options={{
             title: 'Story',
@@ -54,7 +54,7 @@ export default function TabsLayout() {
               <IconSymbol size={28} name="pencil.line" color={color || 'white'} />
             ),
           }}
-        />
+        /> */}
         <Tabs.Screen
           name="settings"
           options={{

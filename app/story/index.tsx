@@ -1,50 +1,47 @@
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { Link } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { getImage } from '../src/utils/imageLoader';
+import { getImage } from '../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
-// Define StackParamList
-type StackParamList = {
-  N5StoryScreen: { storyTitle: string };
-};
-
 export default function N5StoryMenu() {
-  const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5StoryScreen'>>();
-  const { t } = useTranslation('story'); // Use the "story" namespace
+  const { t } = useTranslation();
+  const namespace = 'story'; // 默認為 'story'，可根據需要動態化
 
-  // Fetch the stories array dynamically
-  const stories = t('stories', { returnObjects: true }) as Array<{ title: string; imageName: string }>;
+  const stories = t(`${namespace}:stories`, { returnObjects: true }) as Array<{
+    title: string;
+    imageName: string;
+  }>;
 
   return (
     <View style={styles.container}>
       <FlatList
         data={stories}
-        keyExtractor={(item) => item.title}
+        keyExtractor={(item) => item.imageName}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            style={styles.cardContainer}
-            onPress={() => navigation.navigate('N5StoryScreen', { storyTitle: item.title })}
+          <Link
+            href={`/story/${item.imageName.replace('.jpg', '')}?namespace=${namespace}`}
+            asChild
           >
-            <Image source={getImage(item.imageName)} style={styles.coverImage} />
-            <View style={styles.textContainer}>
-              <Text style={styles.storyText}>{item.title}</Text>
-            </View>
-          </TouchableOpacity>
+            <TouchableOpacity style={styles.cardContainer}>
+              <Image source={getImage(item.imageName)} style={styles.coverImage} />
+              <View style={styles.textContainer}>
+                <Text style={styles.storyText}>{item.title}</Text>
+              </View>
+            </TouchableOpacity>
+          </Link>
         )}
       />
     </View>
   );
 }
 
-// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: 'black',
+    backgroundColor: 'black Sabine',
     paddingBottom: 80,
   },
   cardContainer: {
