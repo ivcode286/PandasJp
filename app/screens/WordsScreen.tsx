@@ -9,6 +9,7 @@ import {
   View,
   StatusBar,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
@@ -16,7 +17,7 @@ import sectionListGetItemLayout from 'react-native-section-list-get-item-layout'
 import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
-import { RootStackParamList } from '../navigation/RootStackParamList'; 
+import { RootStackParamList } from '../navigation/RootStackParamList';
 
 export const sectionListRef = React.createRef<SectionList<any>>();
 export let globalSections: { title: string; data: any[] }[] = [];
@@ -31,10 +32,7 @@ const groupWordsByLetter = (words: any[]) => {
   words.forEach(word => {
     const letter = word.letter;
     if (!groups[letter]) {
-      groups[letter] = {
-        order: word.letterOrder,
-        words: [],
-      };
+      groups[letter] = { order: word.letterOrder, words: [] };
     }
     groups[letter].words.push(word);
   });
@@ -67,12 +65,45 @@ export const scrollToSection = (title: string): void => {
   }
 };
 
+const chunkArraySpecial = (array: string[]): string[][] => {
+  const result: string[][] = [];
+  let tempArray: string[] = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const item = array[i];
+    if (item === "や") {
+      if (tempArray.length > 0) result.push(tempArray);
+      tempArray = ["や", "ゆ", "よ"];
+      result.push(tempArray);
+      tempArray = [];
+      i += 2;
+      continue;
+    }
+    if (item === "わ") {
+      if (tempArray.length > 0) result.push(tempArray);
+      result.push([item]);
+      continue;
+    }
+    tempArray.push(item);
+    if (tempArray.length === 5) {
+      result.push(tempArray);
+      tempArray = [];
+    }
+  }
+  if (tempArray.length > 0) {
+    result.push(tempArray);
+  }
+  return result;
+};
+
 export default function WordsScreen() {
   const route = useRoute<RouteProp<RootStackParamList, 'WordsWithDrawer'>>();
   const level = route.params?.level;
   const { t } = useTranslation('words');
+  const { t: tCommon } = useTranslation('common');
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     console.log(`Current Level in WordsScreen: ${level}`);
@@ -84,20 +115,16 @@ export default function WordsScreen() {
       }
 
       let key: string;
-      if (level === LEVELS.N5) {
-        key = 'n5';
-      } else if (level === LEVELS.N5_KANJI) {
-        key = 'n5_kanji';
-      } else if (level === LEVELS.N4_N3) {
-        key = 'n4n3';
-      } else {
+      if (level === LEVELS.N5) key = 'n5';
+      else if (level === LEVELS.N5_KANJI) key = 'n5_kanji';
+      else if (level === LEVELS.N4_N3) key = 'n4n3';
+      else {
         console.error(`Invalid level: ${level}`);
         setSections([]);
         return;
       }
 
       const words = t(key, { returnObjects: true });
-      console.log(`Words loaded for key '${key}':`, words);
       if (!Array.isArray(words)) {
         console.error(`t('${key}') did not return an array:`, words);
         setSections([]);
@@ -117,10 +144,57 @@ export default function WordsScreen() {
     loadWords();
   }, [level, t]);
 
+  const drawerItems = tCommon(`drawer.${level?.toUpperCase()}`, { returnObjects: true }) || [];
+
   return (
     <SafeAreaProvider>
       <StatusBar barStyle="light-content" backgroundColor="#121212" />
       <SafeAreaView style={styles.container}>
+        <View style={styles.header}>
+          <TouchableOpacity onPress={() => setDrawerOpen(!drawerOpen)} style={styles.headerButton}>
+            <IoniconsWeb name="menu" size={24} color="#ffffff" />
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>{level}</Text>
+        </View>
+
+        {drawerOpen && (
+          <View style={styles.drawer}>
+            <ScrollView>
+              {level === 'n4-n3' ? (
+                chunkArraySpecial(drawerItems).map((row, index) => (
+                  <View key={index} style={styles.drawerRow}>
+                    {row.map((label) => (
+                      <TouchableOpacity
+                        key={label}
+                        style={styles.drawerItem}
+                        onPress={() => {
+                          setDrawerOpen(false);
+                          setTimeout(() => scrollToSection(label), 300);
+                        }}
+                      >
+                        <Text style={styles.drawerItemLabel}>{label}</Text>
+                      </TouchableOpacity>
+                    ))}
+                  </View>
+                ))
+              ) : (
+                drawerItems.map((label) => (
+                  <TouchableOpacity
+                    key={label}
+                    style={styles.drawerItemVertical}
+                    onPress={() => {
+                      setDrawerOpen(false);
+                      setTimeout(() => scrollToSection(label), 300);
+                    }}
+                  >
+                    <Text style={styles.drawerItemLabel}>{label}</Text>
+                  </TouchableOpacity>
+                ))
+              )}
+            </ScrollView>
+          </View>
+        )}
+
         {sections.length === 0 ? (
           <Text style={styles.errorText}>No data available for level: {level || 'undefined'}</Text>
         ) : (
@@ -159,6 +233,57 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#121212',
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+    backgroundColor: '#121212',
+  },
+  headerButton: {
+    marginRight: 16,
+  },
+  headerTitle: {
+    fontSize: 20,
+    color: '#ffffff',
+    fontWeight: 'bold',
+  },
+  drawer: {
+    position: 'absolute',
+    right: 0,
+    top: 60,
+    width: 200,
+    height: '100%',
+    backgroundColor: '#121212',
+    zIndex: 1000,
+    padding: 10,
+  },
+  drawerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 8,
+  },
+  drawerItem: {
+    flex: 1,
+    marginHorizontal: 2,
+    backgroundColor: '#1e1e1e',
+    borderRadius: 4,
+    padding: 10,
+    alignItems: 'center',
+  },
+  drawerItemVertical: {
+    width: '100%',
+    marginVertical: 4,
+    paddingVertical: 8,
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#444444',
+    backgroundColor: '#1e1e1e',
+    alignItems: 'center',
+  },
+  drawerItemLabel: {
+    textAlign: 'center',
+    fontSize: 18,
+    color: '#ffffff',
   },
   sectionListContent: {
     paddingBottom: 80,
@@ -201,11 +326,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 5,
-    backgroundColor: '#1e1e1e',
   },
   speakerIcon: {
     padding: 1,
-    backgroundColor: '#1e1e1e',
   },
   errorText: {
     color: '#ff5555',

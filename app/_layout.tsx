@@ -24,8 +24,10 @@ export default function RootLayout() {
 
   return (
     <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="index" /> {/* 根路由，顯示 HomeScreen */}
-      <Stack.Screen name="(tabs)" /> {/* Tabs 群組 */}
+      <Stack.Screen name="index" />
+      <Stack.Screen name="(tabs)" />
+      <Stack.Screen name="words/menu" />
+      <Stack.Screen name="words/[level]" />
     </Stack>
   );
 }

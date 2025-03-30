@@ -2,7 +2,7 @@
 import { useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { Text } from 'react-native';
-import WordsScreenWithDrawer from '../screens/WordsScreenWithDrawer';
+import WordsScreen from '../screens/WordsScreen';
 
 export default function WordsScreenWrapper() {
   const { level } = useLocalSearchParams();
@@ -13,5 +13,5 @@ export default function WordsScreenWrapper() {
   }
 
   console.log('Level received in [level].tsx:', level);
-  return <WordsScreenWithDrawer level={level} />;
+  return <WordsScreen />;
 }
