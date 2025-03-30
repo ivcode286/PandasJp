@@ -21,11 +21,11 @@ export default function GrammarLayout() {
     >
       <Stack.Screen
         name="index"
-        options={{ title: '文法選單 Grammar Menu' }}
+        options={{ title: '文法選單 Grammar Menu',headerShown: false }}
       />
       <Stack.Screen
         name="[level]"
-        options={{ title: '文法詳情 Grammar Detail' }}
+        options={{ title: '文法詳情 Grammar Detail',headerShown: false}}
       />
     </Stack>
   );

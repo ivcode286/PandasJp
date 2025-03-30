@@ -260,7 +260,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontWeight: 'bold',
     flex: 1,
-    textAlign: 'center',
+    //textAlign: 'center',
     marginHorizontal: 8,
   },
   drawer: {

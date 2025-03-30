@@ -48,7 +48,7 @@ export default function RootLayout() {
       }}
     >
       <Stack.Screen name="index" /> {/* HomeScreen 使用默認 header */}
-      <Stack.Screen name="(tabs)" /> {/* Tab Layout 使用默認 header */}
+      <Stack.Screen name="(tabs)" options={{headerShown: false}}/> {/* Tab Layout 使用默認 header */}
       <Stack.Screen name="words/menu" /> {/* Words Menu 使用默認 header */}
       <Stack.Screen
         name="words/[level]"
