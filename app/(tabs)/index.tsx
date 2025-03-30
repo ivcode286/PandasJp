@@ -1,0 +1,125 @@
+// app/index.tsx
+import React from 'react';
+import { View, ScrollView, StyleSheet, Text, TouchableOpacity, StatusBar } from 'react-native';
+import { Link } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
+import { LEVELS } from '@/src/utils/constants';
+
+export default function HomeScreen() {
+  const { t, i18n } = useTranslation('home');
+
+  const menuItems = [
+    { title: t('menu.hiragana'), href: '/hiragana' },
+    { title: t('menu.katakana'), href: '/katakana' },
+    { title: t('menu.kana_comparison'), href: '/kana-comparison' },
+    { title: t('menu.phonetics'), href: '/phonetics' },
+    { title: t('menu.words_n5'), href: `/words?level=${LEVELS.N5}` },
+    { title: t('menu.kanji_n5'), href: `/words?level=${LEVELS.N5_KANJI}` },
+    { title: t('menu.n5_concepts'), href: '/n5-concepts' },
+    { title: t('menu.grammar_concepts'), href: '/grammar-concepts' },
+    { title: t('menu.n5_basic_grammar'), href: `/grammar?level=${LEVELS.N5_BASIC_GRAMMAR}` },
+    { title: t('menu.n5_advance_grammar'), href: `/grammar?level=${LEVELS.N5_ADVANCE_GRAMMAR}` },
+    { title: t('menu.conversation'), href: '/conversation' },
+    { title: t('menu.story'), href: '/story' },
+  ];
+
+  const changeLanguage = (lang: 'zh-TW' | 'zh-CN') => {
+    i18n.changeLanguage(lang);
+  };
+
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      <View style={styles.container}>
+        <ScrollView contentContainerStyle={styles.scrollContent}>
+          <View style={styles.headerContainer}>
+            <Text style={styles.header}>{t('title')}</Text>
+            <View style={styles.languageContainer}>
+              <TouchableOpacity onPress={() => changeLanguage('zh-TW')}>
+                <Text
+                  style={[
+                    styles.languageText,
+                    i18n.language === 'zh-TW' && styles.languageTextSelected,
+                  ]}
+                >
+                  繁
+                </Text>
+              </TouchableOpacity>
+              <Text style={styles.languageDivider}> | </Text>
+              <TouchableOpacity onPress={() => changeLanguage('zh-CN')}>
+                <Text
+                  style={[
+                    styles.languageText,
+                    i18n.language === 'zh-CN' && styles.languageTextSelected,
+                  ]}
+                >
+                  簡
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+          {menuItems.map((item, idx) => (
+            <Link href={item.href} key={idx} asChild>
+              <TouchableOpacity style={styles.card}>
+                <Text style={styles.cardText}>• {item.title}</Text>
+              </TouchableOpacity>
+            </Link>
+          ))}
+        </ScrollView>
+      </View>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#121212',
+  },
+  container: {
+    flex: 1,
+    padding: 20,
+    paddingTop: StatusBar.currentHeight || 0,
+  },
+  scrollContent: {
+    paddingBottom: 80,
+  },
+  headerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginVertical: 20,
+  },
+  header: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#ffffff',
+  },
+  languageContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  languageText: {
+    fontSize: 16,
+    color: '#ffffff',
+    paddingHorizontal: 4,
+  },
+  languageTextSelected: {
+    color: '#1E88E5',
+    fontWeight: 'bold',
+  },
+  languageDivider: {
+    fontSize: 16,
+    color: '#ffffff',
+  },
+  card: {
+    backgroundColor: '#1e1e1e',
+    padding: 16,
+    borderRadius: 8,
+    marginBottom: 16,
+  },
+  cardText: {
+    fontSize: 18,
+    color: '#ffffff',
+  },
+});
