@@ -61,8 +61,8 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({
       <DrawerContentScrollView contentContainerStyle={styles.drawerContent}>
         <Text style={styles.errorText}>No items available for level: {level}</Text>
       </DrawerContentScrollView>
-  );
-}
+    );
+  }
 
   return (
     <DrawerContentScrollView contentContainerStyle={[styles.drawerContent, { paddingBottom: 80 }]}>
@@ -73,16 +73,16 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({
               {row.map((label) => (
                 <DrawerItem
                   key={label}
-                  label={({ color }) => (
-                    <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
-                      {label}
-                    </Text>
+                  label={() => (
+                    <Text style={styles.drawerItemLabel}>{label}</Text> // 移除動態 color，直接使用固定樣式
                   )}
                   onPress={() => {
                     navigation.closeDrawer();
                     setTimeout(() => scrollToSection(label), 300);
                   }}
                   style={styles.drawerItem}
+                  activeTintColor="#ffcc00" // 選中時的文字顏色
+                  inactiveTintColor="#ffffff" // 未選中時的文字顏色
                 />
               ))}
             </View>
@@ -91,16 +91,16 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({
           return items.map((label) => (
             <DrawerItem
               key={label}
-              label={({ color }) => (
-                <Text style={[styles.drawerItemLabel, { color }]} numberOfLines={1} adjustsFontSizeToFit>
-                  {label}
-                </Text>
+              label={() => (
+                <Text style={styles.drawerItemLabel}>{label}</Text> // 移除動態 color，直接使用固定樣式
               )}
               onPress={() => {
                 navigation.closeDrawer();
                 setTimeout(() => scrollToSection(label), 300);
               }}
               style={styles.drawerItemVertical}
+              activeTintColor="#ffcc00" // 選中時的文字顏色
+              inactiveTintColor="#ffffff" // 未選中時的文字顏色
             />
           ));
         }
@@ -119,6 +119,13 @@ const WordsScreenWithDrawer: React.FC<{ level: string }> = ({ level }) => {
         swipeEdgeWidth: 300,
         drawerPosition: "right",
         drawerType: "front",
+        headerStyle: {
+          backgroundColor: '#121212', // 標題欄背景
+        },
+        headerTintColor: '#ffffff', // 標題文字顏色
+        drawerStyle: {
+          backgroundColor: '#121212', // Drawer 背景
+        },
       }}
       drawerContent={(props) => (
         <CustomDrawerContent {...props} level={level as LevelType} />
@@ -132,12 +139,12 @@ const WordsScreenWithDrawer: React.FC<{ level: string }> = ({ level }) => {
           title: `${level}`,
           headerLeft: () => (
             <TouchableOpacity onPress={() => navigation.goBack()} style={{ paddingLeft: 16 }}>
-              <IoniconsWeb name="arrow-back" size={24} color="white" />
+              <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
             </TouchableOpacity>
           ),
           headerRight: () => (
             <TouchableOpacity onPress={() => navigation.toggleDrawer()} style={{ paddingRight: 16 }}>
-              <IoniconsWeb name="menu" size={24} color="white" />
+              <IoniconsWeb name="menu" size={24} color="#ffffff" />
             </TouchableOpacity>
           ),
         })}
@@ -151,30 +158,36 @@ export default WordsScreenWithDrawer;
 const styles = StyleSheet.create({
   drawerContent: {
     paddingHorizontal: 10,
+    backgroundColor: '#121212', // Drawer 背景
   },
   drawerRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginVertical: 8,
+    backgroundColor: '#121212',
   },
   drawerItem: {
     flex: 1,
     marginHorizontal: 2,
+    backgroundColor: '#1e1e1e', // 項目背景
+    borderRadius: 4,
   },
   drawerItemLabel: {
     textAlign: "center",
     fontSize: 18,
     minWidth: 40,
+    color: '#ffffff', // 固定文字顏色為白色
   },
   drawerItemVertical: {
     width: "100%",
     marginVertical: 4,
     paddingVertical: 8,
     borderBottomWidth: 0.5,
-    borderBottomColor: "#ddd",
+    borderBottomColor: "#444444",
+    backgroundColor: '#1e1e1e', // 項目背景
   },
   errorText: {
-    color: "red",
+    color: '#ff5555', // 紅色錯誤文字
     fontSize: 16,
     textAlign: "center",
     padding: 20,

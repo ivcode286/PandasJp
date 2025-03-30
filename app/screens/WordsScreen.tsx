@@ -1,6 +1,7 @@
 // screens/WordsScreen.tsx
 import React, { useEffect, useState } from 'react';
 import { useRoute } from '@react-navigation/native';
+import { RouteProp } from '@react-navigation/native';
 import {
   StyleSheet,
   SectionList,
@@ -15,6 +16,7 @@ import sectionListGetItemLayout from 'react-native-section-list-get-item-layout'
 import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
+import { RootStackParamList } from '../navigation/RootStackParamList'; 
 
 export const sectionListRef = React.createRef<SectionList<any>>();
 export let globalSections: { title: string; data: any[] }[] = [];
@@ -66,8 +68,8 @@ export const scrollToSection = (title: string): void => {
 };
 
 export default function WordsScreen() {
-  const route = useRoute();
-  const level = (route.params as { level?: string })?.level; // 從 route.params 獲取 level
+  const route = useRoute<RouteProp<RootStackParamList, 'WordsWithDrawer'>>();
+  const level = route.params?.level;
   const { t } = useTranslation('words');
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
@@ -117,6 +119,7 @@ export default function WordsScreen() {
 
   return (
     <SafeAreaProvider>
+      <StatusBar barStyle="light-content" backgroundColor="#121212" />
       <SafeAreaView style={styles.container}>
         {sections.length === 0 ? (
           <Text style={styles.errorText}>No data available for level: {level || 'undefined'}</Text>
@@ -144,7 +147,7 @@ export default function WordsScreen() {
             )}
             stickySectionHeadersEnabled={false}
             getItemLayout={getItemLayout}
-            contentContainerStyle={{ paddingBottom: 80 }}
+            contentContainerStyle={styles.sectionListContent}
           />
         )}
       </SafeAreaView>
@@ -155,8 +158,10 @@ export default function WordsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight || 0,
-    marginHorizontal: 16,
+    backgroundColor: '#121212',
+  },
+  sectionListContent: {
+    paddingBottom: 80,
     backgroundColor: '#121212',
   },
   item: {
@@ -196,12 +201,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 5,
+    backgroundColor: '#1e1e1e',
   },
   speakerIcon: {
     padding: 1,
+    backgroundColor: '#1e1e1e',
   },
   errorText: {
-    color: 'red',
+    color: '#ff5555',
     fontSize: 16,
     textAlign: 'center',
     padding: 20,
