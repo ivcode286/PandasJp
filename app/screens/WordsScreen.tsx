@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
+import { useRouter } from 'expo-router';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
@@ -98,6 +99,7 @@ const chunkArraySpecial = (array: string[]): string[][] => {
 
 export default function WordsScreen() {
   const route = useRoute<RouteProp<RootStackParamList, 'WordsWithDrawer'>>();
+  const router = useRouter();
   const level = route.params?.level;
   const { t } = useTranslation('words');
   const { t: tCommon } = useTranslation('common');
@@ -145,20 +147,26 @@ export default function WordsScreen() {
   }, [level, t]);
 
   const drawerItems = tCommon(`drawer.${level?.toUpperCase()}`, { returnObjects: true }) || [];
+  const drawerWidth = level === 'n4-n3' ? 300 : 200;
 
   return (
     <SafeAreaProvider>
       <StatusBar barStyle="light-content" backgroundColor="#121212" />
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
+          <TouchableOpacity onPress={() => router.back()} style={styles.headerButton}>
+            <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
+          </TouchableOpacity>
+          <Text style={styles.headerTitle} numberOfLines={1} ellipsizeMode="tail">
+            {level}
+          </Text>
           <TouchableOpacity onPress={() => setDrawerOpen(!drawerOpen)} style={styles.headerButton}>
             <IoniconsWeb name="menu" size={24} color="#ffffff" />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>{level}</Text>
         </View>
 
         {drawerOpen && (
-          <View style={styles.drawer}>
+          <View style={[styles.drawer, { width: drawerWidth }]}>
             <ScrollView>
               {level === 'n4-n3' ? (
                 chunkArraySpecial(drawerItems).map((row, index) => (
@@ -216,7 +224,7 @@ export default function WordsScreen() {
             )}
             renderSectionHeader={({ section: { title } }) => (
               <View style={styles.headerContainer}>
-                <Text style={styles.header}>{title || 'No Header'}</Text>
+                <Text style={styles.sectionHeader}>{title || 'No Header'}</Text>
               </View>
             )}
             stickySectionHeadersEnabled={false}
@@ -237,22 +245,28 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 16,
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
     backgroundColor: '#121212',
+    width: '100%',
   },
   headerButton: {
-    marginRight: 16,
+    padding: 4,
+    minWidth: 32,
   },
   headerTitle: {
     fontSize: 20,
     color: '#ffffff',
     fontWeight: 'bold',
+    flex: 1,
+    textAlign: 'center',
+    marginHorizontal: 8,
   },
   drawer: {
     position: 'absolute',
     right: 0,
     top: 60,
-    width: 200,
     height: '100%',
     backgroundColor: '#121212',
     zIndex: 1000,
@@ -301,7 +315,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#2a2a2a',
   },
-  header: {
+  sectionHeader: {
     fontSize: 32,
     fontWeight: 'bold',
     paddingLeft: 10,
