@@ -3,8 +3,8 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
-import { getImage } from '../../../src/utils/imageLoader';
-import { ConversationTranslation } from '../../../src/types/translation';
+import { getImage } from '../src/utils/imageLoader';
+import { ConversationTranslation } from '../src/types/translation';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 type StackParamList = {

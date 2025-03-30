@@ -11,20 +11,18 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { COVERPAGE_CARD_WIDTH, LEVELS } from '@/src/utils/constants';
 
-// 定義 StackParamList 讓 TypeScript 知道需要傳入 storyTitle
+// 定義 StackParamList 讓 TypeScript 知道需要傳入 level
 type StackParamList = {
-  N5StoryScreen: { storyTitle: string };
-  WordsWithDrawer: { level: string };
+  GrammarScreen: { level: string };
 };
 
 const menuData = [
-  { title: 'N5', image: require('../../assets/images/n5.jpg') },
-  { title: 'N5-KANJI', image: require('../../assets/images/n5_kanji.jpg') },
-  { title: 'N4-N3', image: require('../../assets/images/n4_n3.jpg') },
+  { title: 'N5 基本文法', image: require('../../assets/images/n5_basic_grammar.jpg'), level: LEVELS.N5_BASIC_GRAMMAR },
+  { title: 'N5 上級文法', image: require('../../assets/images/n5_advance_grammar.jpg'), level: LEVELS.N5_ADVANCE_GRAMMAR },
 ];
 
-export default function N5StoryMenu() {
-  const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'N5StoryScreen' | 'WordsWithDrawer'>>();
+export default function GrammarMenu() {
+  const navigation = useNavigation<NativeStackNavigationProp<StackParamList, 'GrammarScreen'>>();
 
   return (
     <View style={styles.container}>
@@ -34,15 +32,15 @@ export default function N5StoryMenu() {
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.cardContainer}
-            onPress={() => navigation.navigate('WordsWithDrawer', { level: item.title })}
-            activeOpacity={0.7} // ✅ 讓點擊效果更平滑
+            onPress={() => navigation.navigate('GrammarScreen', { level: item.level })}
+            activeOpacity={0.7}
           >
             <Image 
-              source={item.image} // ✅ 直接載入靜態圖片
+              source={item.image} 
               style={styles.coverImage}
             />
             <View style={styles.textContainer}>
-              <Text style={styles.storyText}>{item.title}</Text>
+              <Text style={styles.menuText}>{item.title}</Text>
             </View>
           </TouchableOpacity>
         )}
@@ -61,7 +59,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     width: COVERPAGE_CARD_WIDTH,
     alignSelf: 'center',
-    backgroundColor: '#fff', // ✅ 深色卡片背景
+    backgroundColor: '#1e1e1e', // ✅ 深色卡片背景
     borderRadius: 15,
     marginVertical: 12,
     overflow: 'hidden',
@@ -80,12 +78,10 @@ const styles = StyleSheet.create({
     padding: 15,
     alignItems: 'center',
   },
-  storyText: {
+  menuText: {
     fontSize: 18,
     fontWeight: '500',
-    color: '#333',
+    color: '#ffcc00',
     textAlign: 'center',
-    flexWrap: 'wrap',
-    maxWidth: '90%',
   },
 });

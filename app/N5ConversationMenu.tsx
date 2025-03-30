@@ -3,9 +3,9 @@ import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { getImage } from '../../../src/utils/imageLoader';
+import { getImage } from '../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
-import { ConversationTranslation } from '../../../src/types/translation';
+import { ConversationTranslation } from '../src/types/translation';
 
 type StackParamList = {
   N5ConversationScreen: { conversationTitle: string };
