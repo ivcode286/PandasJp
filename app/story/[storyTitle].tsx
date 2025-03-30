@@ -10,7 +10,7 @@ export default function ContentScreen() {
   const { speak } = useTextToSpeech();
   const { storyTitle, namespace = 'story' } = useLocalSearchParams<{
     storyTitle: string;
-    namespace?: 'story' | 'n5chat';
+    namespace?: 'story' | 'n5chat' | 'travelchat'; 
   }>();
   const { t } = useTranslation(namespace);
 

@@ -1,6 +1,6 @@
 import { Platform, View, StyleProp, ViewStyle } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { MdHome, MdEdit, MdSettings, MdAbc, MdArrowForward, MdMenu } from 'react-icons/md';
+import { MdHome, MdEdit, MdSettings, MdAbc, MdArrowForward, MdMenu, MdBook, MdSend } from 'react-icons/md';
 import { FaCode } from 'react-icons/fa';
 import React from 'react';
 import { OpaqueColorValue } from 'react-native';
@@ -9,12 +9,14 @@ import { OpaqueColorValue } from 'react-native';
 const MAPPING = {
   'house.fill': 'home',
   'character.square.fill': 'abc',
+  'paperplane.fill': 'send',
   'pencil.line': 'menu-book',
   'gearshape.fill': 'settings',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
   'menu.fill': 'menu',
   'settings.fill': 'settings',
+  'book.fill': 'book',
 } as const;
 
 // Define the allowed icon names as a TypeScript type
@@ -48,6 +50,10 @@ export function IconSymbol({
           return <MdHome color={color as string} size={size} />;
         case 'character.square.fill':
           return <MdAbc color={color as string} size={size} />;
+        case 'character.square.fill':
+          return <MdAbc color={color as string} size={size} />;
+        case 'paperplane.fill':  // 新增的 case
+          return <MdSend color={color as string} size={size} />;
         case 'pencil.line':
           return <MdEdit color={color as string} size={size} />;
         case 'gearshape.fill':
@@ -60,6 +66,8 @@ export function IconSymbol({
           return <MdMenu color={color as string} size={size} />;
         case 'settings.fill':
           return <MdSettings color={color as string} size={size} />;
+        case 'book.fill':
+          return <MdBook color={color as string} size={size} />;
         default:
           console.warn(`No SVG icon found for ${name}`);
           return null;
@@ -74,6 +82,6 @@ export function IconSymbol({
     );
   } else {
     // Mobile platform (iOS/Android): Use MaterialIcons
-    return <MaterialIcons name={MAPPING[name]} size={size} color={color}  />;
+    return <MaterialIcons name={MAPPING[name]} size={size} color={color} />;
   }
 }

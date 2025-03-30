@@ -6,7 +6,7 @@ import { getImage } from '../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
 type ContentMenuProps = {
-  type: 'story' | 'n5chat';
+  type: 'story' | 'n5chat' | 'travelchat';
 };
 
 export default function ContentMenu({ type }: ContentMenuProps) {

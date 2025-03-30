@@ -36,11 +36,11 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="words"
+          name="travelChat"
           options={{
-            title: "Words",
+            title: "travelChat",
             tabBarIcon: ({ color }) => (
-              <IconSymbol size={28} name="character.square.fill" color={color} />
+              <IconSymbol size={28} name="paperplane.fill" color={color} />
             ),
           }}
         />
