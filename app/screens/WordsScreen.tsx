@@ -1,6 +1,6 @@
-import { useRoute } from '@react-navigation/native';
-import useTextToSpeech from '@/hooks/useTextToSpeech';
+// screens/WordsScreen.tsx
 import React, { useEffect, useState } from 'react';
+import { useRoute } from '@react-navigation/native';
 import {
   StyleSheet,
   SectionList,
@@ -14,9 +14,9 @@ import { useTranslation } from 'react-i18next';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
+import useTextToSpeech from '@/hooks/useTextToSpeech';
 
 export const sectionListRef = React.createRef<SectionList<any>>();
-
 export let globalSections: { title: string; data: any[] }[] = [];
 
 const SECTION_HEADER_HEIGHT = 40;
@@ -26,26 +26,24 @@ const ITEM_MARGIN = 8;
 const groupWordsByLetter = (words: any[]) => {
   const groups: { [letter: string]: { order: number; words: any[] } } = {};
   
-  // 分組並記錄 letterOrder
   words.forEach(word => {
     const letter = word.letter;
     if (!groups[letter]) {
       groups[letter] = {
-        order: word.letterOrder, // 使用第一個單詞的 letterOrder
+        order: word.letterOrder,
         words: [],
       };
     }
     groups[letter].words.push(word);
   });
 
-  // 按 letterOrder 排序 section，並在每個 section 內按 wordId 排序單詞
   const sortedGroups = Object.entries(groups)
     .map(([letter, { order, words }]) => ({
       title: letter,
-      data: words.sort((a, b) => a.wordId - b.wordId), // 按 wordId 排序單詞
-      letterOrder: order, // 保留 letterOrder 用於排序
+      data: words.sort((a, b) => a.wordId - b.wordId),
+      letterOrder: order,
     }))
-    .sort((a, b) => a.letterOrder - b.letterOrder); // 按 letterOrder 排序 section
+    .sort((a, b) => a.letterOrder - b.letterOrder);
 
   return sortedGroups;
 };
@@ -67,32 +65,46 @@ export const scrollToSection = (title: string): void => {
   }
 };
 
-export default function WordsScreen({ level }: { level: string }) {
+export default function WordsScreen() {
+  const route = useRoute();
+  const level = (route.params as { level?: string })?.level; // 從 route.params 獲取 level
   const { t } = useTranslation('words');
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
 
   useEffect(() => {
-    console.log(`Current Level: ${level}`);
+    console.log(`Current Level in WordsScreen: ${level}`);
     const loadWords = () => {
+      if (!level) {
+        console.error('Level is undefined');
+        setSections([]);
+        return;
+      }
+
       let key: string;
       if (level === LEVELS.N5) {
         key = 'n5';
       } else if (level === LEVELS.N5_KANJI) {
         key = 'n5_kanji';
-      } else {
+      } else if (level === LEVELS.N4_N3) {
         key = 'n4n3';
+      } else {
+        console.error(`Invalid level: ${level}`);
+        setSections([]);
+        return;
       }
 
       const words = t(key, { returnObjects: true });
+      console.log(`Words loaded for key '${key}':`, words);
       if (!Array.isArray(words)) {
         console.error(`t('${key}') did not return an array:`, words);
+        setSections([]);
         return;
       }
 
       const transformedWords = words.map(word => ({
         ...word,
-        meaning_zh: word.meaning, // 直接使用 meaning
+        meaning_zh: word.meaning,
       }));
 
       const groupedSections = groupWordsByLetter(transformedWords);
@@ -106,32 +118,35 @@ export default function WordsScreen({ level }: { level: string }) {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <SectionList
-          ref={sectionListRef}
-          sections={sections}
-          keyExtractor={(item, index) => item.wordId + index.toString()}
-          renderItem={({ item }) => (
-            <View style={styles.item}>
-              <Text style={styles.words}>{item.words}</Text>
-              <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
-              <View style={styles.row}>
-                <Text style={styles.reading}>{item.pron}</Text>
-                <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
-                  <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
-                </TouchableOpacity>
+        {sections.length === 0 ? (
+          <Text style={styles.errorText}>No data available for level: {level || 'undefined'}</Text>
+        ) : (
+          <SectionList
+            ref={sectionListRef}
+            sections={sections}
+            keyExtractor={(item, index) => item.wordId + index.toString()}
+            renderItem={({ item }) => (
+              <View style={styles.item}>
+                <Text style={styles.words}>{item.words}</Text>
+                <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
+                <View style={styles.row}>
+                  <Text style={styles.reading}>{item.pron}</Text>
+                  <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
+                    <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                  </TouchableOpacity>
+                </View>
               </View>
-            </View>
-          )}
-          renderSectionHeader={({ section: { title } }) => (
-            <View style={styles.headerContainer}>
-              <Text style={styles.header}>{title || 'No Header'}</Text>
-            </View>
-          )}
-          stickySectionHeadersEnabled={false}
-          // @ts-ignore
-          getItemLayout={getItemLayout}
-          contentContainerStyle={{ paddingBottom: 80 }}
-        />
+            )}
+            renderSectionHeader={({ section: { title } }) => (
+              <View style={styles.headerContainer}>
+                <Text style={styles.header}>{title || 'No Header'}</Text>
+              </View>
+            )}
+            stickySectionHeadersEnabled={false}
+            getItemLayout={getItemLayout}
+            contentContainerStyle={{ paddingBottom: 80 }}
+          />
+        )}
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -177,12 +192,18 @@ const styles = StyleSheet.create({
     color: '#b0b0b0',
   },
   row: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     marginTop: 5,
   },
   speakerIcon: {
     padding: 1,
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 16,
+    textAlign: 'center',
+    padding: 20,
   },
 });

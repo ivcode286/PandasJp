@@ -1,4 +1,4 @@
-// src/screens/WordsScreenWithDrawer.tsx
+// screens/WordsScreenWithDrawer.tsx
 import React from "react";
 import {
   createDrawerNavigator,
@@ -61,8 +61,8 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({
       <DrawerContentScrollView contentContainerStyle={styles.drawerContent}>
         <Text style={styles.errorText}>No items available for level: {level}</Text>
       </DrawerContentScrollView>
-    );
-  }
+  );
+}
 
   return (
     <DrawerContentScrollView contentContainerStyle={[styles.drawerContent, { paddingBottom: 80 }]}>
@@ -112,6 +112,7 @@ const CustomDrawerContent: React.FC<{ navigation: any; level: LevelType }> = ({
 const Drawer = createDrawerNavigator();
 
 const WordsScreenWithDrawer: React.FC<{ level: string }> = ({ level }) => {
+  console.log('Level in WordsScreenWithDrawer:', level);
   return (
     <Drawer.Navigator
       screenOptions={{
