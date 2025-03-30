@@ -6,6 +6,7 @@ export default function NamespaceLayout() {
   return (
     <Stack
       screenOptions={{
+        headerShown: false,
         headerStyle: { backgroundColor: '#121212' },
         headerTintColor: '#ffcc00',
         headerTitleStyle: { fontWeight: 'bold' },

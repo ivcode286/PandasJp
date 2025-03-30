@@ -24,7 +24,7 @@ const homeZhTW = {
     },
     headerTitle: {
       story:"选单",
-      travelMenu:"旅游日语"
+      travelMenu:"旅游日语教学"
     },
     language:{
       traditional_chinese: "繁",

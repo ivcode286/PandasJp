@@ -1,11 +1,12 @@
 // app/_layout.tsx
-import { Stack, useRouter } from 'expo-router';
+import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import { useFonts } from 'expo-font';
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
+import { useTranslation } from 'react-i18next';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -14,6 +15,7 @@ export default function RootLayout() {
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
   const router = useRouter();
+    const { t, i18n } = useTranslation('home');
 
   useEffect(() => {
     if (loaded) {
@@ -48,7 +50,7 @@ export default function RootLayout() {
       }}
     >
       <Stack.Screen name="index" /> {/* HomeScreen 使用默認 header */}
-      <Stack.Screen name="(tabs)" options={{headerShown: false}}/> {/* Tab Layout 使用默認 header */}
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> {/* Tab Layout 使用默認 header */}
       <Stack.Screen name="words/menu" /> {/* Words Menu 使用默認 header */}
       <Stack.Screen
         name="words/[level]"
@@ -66,6 +68,24 @@ export default function RootLayout() {
           ),
         }}
       />
+      <Stack.Screen
+        name="[namespace]"
+        options={({ route }) => {
+          // 從 route.params 中提取 namespace，並確保是字符串
+          const namespace = typeof route.params === 'object' && 'namespace' in route.params ? String(route.params.namespace) : undefined;
+          return {
+            title:
+              namespace === 'story'
+                ? t('menu.story')
+                : namespace === 'n5chat'
+                  ? t('menu.n5_chat')
+                  : namespace === 'travelchat'
+                    ? t('headerTitle.travelMenu')
+                    : 'Menu', // 默認標題
+          };
+        }}
+      />
+
       {/* 其他路由（如 /hiragana、/katakana 等）會自動繼承 screenOptions */}
     </Stack>
   );

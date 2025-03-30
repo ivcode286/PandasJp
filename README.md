@@ -103,17 +103,12 @@ app/
 ├── words/                     # Words 相關頁面
 │   ├── _layout.tsx            # Words 的嵌套佈局
 │   └── menu.tsx               # 指向screens/WordsScreen.tsx    
-├── story/                     # Story 相關頁面
-│   ├── _layout.tsx            # Story 的嵌套佈局
-│   ├── index.tsx              # N5StoryMenu
-│   └── [storyTitle].tsx       # N5StoryScreen
-├── n5chat/              # Conversation 相關頁面
-│   ├── _layout.tsx            # Conversation 的嵌套佈局
-│   ├── index.tsx              # N5ConversationMenu
 ├── screens/             
 │   ├── WordsScreen.tsx 
-├── components/  
-│   ├── ContentMenu.tsx        # Story source namce spaces settings
+├── [namespace]/               # 動態命名空間（內容頁面）
+│   ├── _layout.tsx
+│   └── [storyTitle].tsx       # 通用 ContentScreen
+
 
 
  
