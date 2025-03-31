@@ -132,7 +132,13 @@ export default function RootLayout() {
           };
         }}
       />
-      {/* 其他路由（如 /hiragana、/katakana 等）會自動繼承 screenOptions */}
+     {/*  HomeScreen header title settings */}
+      <Stack.Screen name="hiragana" options={{ headerTitle: t('menu.hiragana') }} />
+      <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
+      <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
+      <Stack.Screen name="phonetics" options={{ headerTitle: t('menu.phonetics') }} />
+      <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
+      <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
     </Stack>
   );
 }
