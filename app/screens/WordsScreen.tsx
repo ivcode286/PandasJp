@@ -135,6 +135,11 @@ export default function WordsScreen() {
 
   const panGesture = Gesture.Pan()
     .enabled(!isAnimating) // 動畫期間禁用手勢
+    .activeOffsetX([-10, 50]) // 手勢需向左移動 10px 或向右移動 50px 才生效，避免左邊緣觸發
+    .onBegin((event) => {
+      const startX = event.x;
+      console.log('Gesture began, startX:', startX);
+    })
     .onStart(() => {
       console.log('Gesture started, drawerOpen:', drawerOpen);
     })
