@@ -119,46 +119,46 @@ export default function WordsScreen() {
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<Section[]>([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const translateX = useSharedValue(200); // Start closed
   const levelString = Array.isArray(level) ? level[0] : level;
   const drawerWidth = levelString === 'n4-n3' ? 300 : 200;
 
   const toggleDrawer = (open: boolean) => {
-    console.log('Toggling drawer to:', open, 'translateX:', translateX.value);
     setDrawerOpen(open);
-    translateX.value = withTiming(open ? 0 : drawerWidth, { duration: 300 });
+    setIsAnimating(true);
+    translateX.value = withTiming(open ? 0 : drawerWidth, { duration: 300 }, () => {
+      runOnJS(setIsAnimating)(false); // 動畫完成後更新狀態
+    });
   };
 
   const panGesture = Gesture.Pan()
+    .enabled(!isAnimating) // 動畫期間禁用手勢
     .onStart(() => {
       console.log('Gesture started, drawerOpen:', drawerOpen);
     })
     .onUpdate((event) => {
-      console.log('Gesture update, translationX:', event.translationX);
       const offset = drawerOpen ? 0 : drawerWidth;
       const newX = Math.max(0, Math.min(event.translationX + offset, drawerWidth));
-      translateX.value = newX;
+      translateX.value = newX; // 限制範圍在 0 到 drawerWidth 之間
     })
     .onEnd((event) => {
       console.log('Gesture ended, translationX:', event.translationX);
-      const threshold = 50;
+      const threshold = drawerWidth * 0.25; // 閾值為 drawerWidth 的 25%
       const shouldOpen = drawerOpen
-        ? event.translationX < drawerWidth * 0.5
-        : event.translationX < -threshold;
+        ? event.translationX < threshold // 已打開時，若 translationX 小於正閾值，保持打開
+        : event.translationX < -threshold; // 未打開時，若 translationX 小於負閾值，打開
       runOnJS(toggleDrawer)(shouldOpen);
     });
 
-  const animatedStyle = useAnimatedStyle(() => {
-    console.log('Animated style updated, translateX:', translateX.value);
-    return {
-      transform: [{ translateX: translateX.value }],
-    };
-  });
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [{ translateX: translateX.value }],
+  }));
 
   useEffect(() => {
     console.log(`Current Level in WordsScreen: ${level}`);
-    translateX.value = drawerWidth; // Ensure initial position is closed
+    translateX.value = drawerWidth; // 初始位置關閉
     const loadWords = () => {
       if (!level || typeof level !== 'string') {
         console.error('Level is undefined or not a string');
@@ -189,7 +189,7 @@ export default function WordsScreen() {
       globalSections = groupedSections;
     };
     loadWords();
-  }, [level, t, drawerWidth]);
+  }, [level, t]);
 
   const drawerItems = (tCommon(`drawer.${levelString?.toUpperCase()}`, { returnObjects: true }) as string[]) || [];
 
@@ -209,15 +209,8 @@ export default function WordsScreen() {
           </TouchableOpacity>
         </View>
 
-        <View style={styles.contentWrapper}>
-          {/* Edge trigger for opening when closed */}
-          {!drawerOpen && (
-            <GestureDetector gesture={panGesture}>
-              <View style={styles.edgeTrigger} />
-            </GestureDetector>
-          )}
-
-          <GestureDetector gesture={panGesture}>
+        <GestureDetector gesture={panGesture}>
+          <View style={styles.contentWrapper}>
             <Animated.View 
               style={[
                 styles.drawer,
@@ -259,38 +252,38 @@ export default function WordsScreen() {
                 )}
               </ScrollView>
             </Animated.View>
-          </GestureDetector>
 
-          {sections.length === 0 ? (
-            <Text style={styles.errorText}>No data available for level: {levelString || 'undefined'}</Text>
-          ) : (
-            <SectionList<Word>
-              ref={sectionListRef}
-              sections={sections}
-              keyExtractor={(item, index) => item.wordId + index.toString()}
-              renderItem={({ item }) => (
-                <View style={styles.item}>
-                  <Text style={styles.words}>{item.words}</Text>
-                  <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
-                  <View style={styles.row}>
-                    <Text style={styles.reading}>{item.pron}</Text>
-                    <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
-                      <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
-                    </TouchableOpacity>
+            {sections.length === 0 ? (
+              <Text style={styles.errorText}>No data available for level: {levelString || 'undefined'}</Text>
+            ) : (
+              <SectionList<Word>
+                ref={sectionListRef}
+                sections={sections}
+                keyExtractor={(item, index) => item.wordId + index.toString()}
+                renderItem={({ item }) => (
+                  <View style={styles.item}>
+                    <Text style={styles.words}>{item.words}</Text>
+                    <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
+                    <View style={styles.row}>
+                      <Text style={styles.reading}>{item.pron}</Text>
+                      <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
+                        <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                      </TouchableOpacity>
+                    </View>
                   </View>
-                </View>
-              )}
-              renderSectionHeader={({ section: { title } }) => (
-                <View style={styles.headerContainer}>
-                  <Text style={styles.sectionHeader}>{title || 'No Header'}</Text>
-                </View>
-              )}
-              stickySectionHeadersEnabled={false}
-              getItemLayout={getItemLayout}
-              contentContainerStyle={styles.sectionListContent}
-            />
-          )}
-        </View>
+                )}
+                renderSectionHeader={({ section: { title } }) => (
+                  <View style={styles.headerContainer}>
+                    <Text style={styles.sectionHeader}>{title || 'No Header'}</Text>
+                  </View>
+                )}
+                stickySectionHeadersEnabled={false}
+                getItemLayout={getItemLayout}
+                contentContainerStyle={styles.sectionListContent}
+              />
+            )}
+          </View>
+        </GestureDetector>
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -334,15 +327,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#121212',
     zIndex: 1000,
     padding: 10,
-  },
-  edgeTrigger: {
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    width: 50,
-    height: '100%',
-    backgroundColor: 'transparent',
-    zIndex: 1002,
   },
   drawerRow: {
     flexDirection: 'row',
