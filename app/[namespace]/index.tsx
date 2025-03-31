@@ -59,9 +59,10 @@ export default function ContentMenu() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
     backgroundColor: '#121212',
-    paddingBottom: 80,
+    padding: 10,
+    paddingBottom: 20,
+    minHeight: '100%',
   },
   cardContainer: {
     width: COVERPAGE_CARD_WIDTH,

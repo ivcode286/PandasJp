@@ -16,7 +16,6 @@ export default function HomeScreen() {
     { title: t('menu.phonetics'), href: '/phonetics' },
     { title: t('menu.words_n5'), href: `/words/n5` }, // 改為動態路由
     { title: t('menu.kanji_n5'), href: `/words/n5-kanji` }, // 改為動態路由
-    { title: t('menu.words_n4_n3'), href: '/words/n4-n3' },
     { title: t('menu.n5_concepts'), href: '/n5-concepts' },
     { title: t('menu.grammar_concepts'), href: '/grammar-concepts' },
     { title: t('menu.n5_basic_grammar'), href: `/grammar/${LEVELS.N5_BASIC_GRAMMAR}` }, // 直接訪問動態路由
@@ -24,6 +23,13 @@ export default function HomeScreen() {
     { title: t('menu.n5_chat'), href: '/n5chat' },
     { title: t('menu.story'), href: '/story' },
   ];
+
+
+  const secondMenuItems = [
+    { title: t('menu.n4_basic_grammar'), href: `/grammar/${LEVELS.N4_BASIC_GRAMMAR}` },
+    { title: t('menu.words_n4_n3'), href: '/words/n4-n3' },
+  ];
+  
 
   const changeLanguage = (lang: 'zh-TW' | 'zh-CN') => {
     i18n.changeLanguage(lang);
@@ -67,6 +73,15 @@ export default function HomeScreen() {
               </TouchableOpacity>
             </Link>
           ))}
+           <Text style={styles.header}>{t('n4title')}</Text>
+               {secondMenuItems.map((item, idx) => (
+              // @ts-ignore
+            <Link href={item.href} key={idx} asChild>
+              <TouchableOpacity style={styles.card}>
+                <Text style={styles.cardText}>• {item.title}</Text>
+              </TouchableOpacity>
+            </Link>
+          ))}
         </ScrollView>
       </View>
     </SafeAreaView>
@@ -80,7 +95,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    padding: 20,
+    padding: 10,
     paddingTop: StatusBar.currentHeight || 0,
   },
   scrollContent: {

@@ -40,7 +40,7 @@ export default function WordsMenuScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: 10,
     backgroundColor: '#121212',
     paddingBottom: 80,
   },
