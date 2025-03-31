@@ -110,5 +110,13 @@ app/
 │   └── [storyTitle].tsx       # 通用 ContentScreen
 
 
+hook/
+useTextToSpeech.ts
 
- 
+src/
+├── utils/ 
+deviceCheck.ts
+imageLoader.ts
+imageLoader.ts
+languageService.ts
+updateCheck.ts

@@ -1,39 +1,83 @@
 // app/_layout.tsx
-import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useFonts } from 'expo-font';
-import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import { useTranslation } from 'react-i18next';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import i18n from '../src/locales/i18n';
+import { Platform } from 'react-native';
+import { handleIOSPrompt } from '../src/utils/deviceCheck';
+import { checkForUpdates } from '../src/utils/updateCheck';
+import Constants from 'expo-constants';
+import React from 'react';
 
 SplashScreen.preventAutoHideAsync();
+
+const LANGUAGE_KEY = 'app_language';
 
 export default function RootLayout() {
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
+  const [langLoaded, setLangLoaded] = useState(false);
   const router = useRouter();
-    const { t, i18n } = useTranslation('home');
+  const { t } = useTranslation('home');
 
+  // 初始化應用（語言、設備檢查、更新檢查）
   useEffect(() => {
-    if (loaded) {
+    async function initializeApp() {
+      try {
+        // 加載語言
+        const savedLang = await AsyncStorage.getItem(LANGUAGE_KEY);
+        let urlLang = null;
+        if (Platform.OS === 'web') {
+          const urlPath = window.location.pathname;
+          const urlLangMatch = urlPath.match(/^\/(ZH-TW|ZH-CN)/i);
+          urlLang = urlLangMatch ? urlLangMatch[1].toLowerCase() : null;
+          await handleIOSPrompt(); // Web 環境下的 iOS 提示
+        }
+        const initialLang = urlLang || savedLang || 'zh-TW';
+        await i18n.changeLanguage(initialLang);
+        await AsyncStorage.setItem(LANGUAGE_KEY, initialLang);
+        console.log('Initial language:', initialLang);
+        console.log('App version:', Constants.expoConfig?.version);
+
+        // 檢查更新
+        await checkForUpdates();
+      } catch (error) {
+        console.error('Failed to initialize app:', error);
+        await i18n.changeLanguage('zh-TW'); // 默認語言
+        await checkForUpdates(); // 即使失敗也檢查更新
+      } finally {
+        setLangLoaded(true);
+      }
+    }
+    initializeApp();
+  }, []);
+
+  // 當字體和語言都加載完成時隱藏啟動畫面
+  useEffect(() => {
+    if (loaded && langLoaded) {
       SplashScreen.hideAsync();
     }
-  }, [loaded]);
+  }, [loaded, langLoaded]);
 
-  if (!loaded) {
-    return null;
-  }
-
+  // 返回按鈕處理
   const handleBack = () => {
     if (router.canGoBack()) {
       router.back();
     } else {
-      router.replace('/'); // 預設返回到 HomeScreen (index)
+      router.replace('/'); // 默認返回到 HomeScreen (index)
     }
   };
+
+  // 如果字體或語言未加載完成，返回 null
+  if (!loaded || !langLoaded) {
+    return null;
+  }
 
   return (
     <Stack
@@ -72,20 +116,22 @@ export default function RootLayout() {
         name="[namespace]"
         options={({ route }) => {
           // 從 route.params 中提取 namespace，並確保是字符串
-          const namespace = typeof route.params === 'object' && 'namespace' in route.params ? String(route.params.namespace) : undefined;
+          const namespace =
+            typeof route.params === 'object' && 'namespace' in route.params
+              ? String(route.params.namespace)
+              : undefined;
           return {
             title:
               namespace === 'story'
                 ? t('menu.story')
                 : namespace === 'n5chat'
-                  ? t('menu.n5_chat')
-                  : namespace === 'travelchat'
-                    ? t('headerTitle.travelMenu')
-                    : 'Menu', // 默認標題
+                ? t('menu.n5_chat')
+                : namespace === 'travelchat'
+                ? t('headerTitle.travelMenu')
+                : 'Menu', // 默認標題
           };
         }}
       />
-
       {/* 其他路由（如 /hiragana、/katakana 等）會自動繼承 screenOptions */}
     </Stack>
   );

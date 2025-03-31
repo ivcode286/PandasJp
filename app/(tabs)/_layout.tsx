@@ -1,3 +1,4 @@
+//app.(tabs)/_layout.tsx
 import { Tabs } from "expo-router"; // 使用 Expo Router 的 Tabs
 import { StatusBar } from "expo-status-bar";
 import { IconSymbol } from "@/components/ui/IconSymbol";
