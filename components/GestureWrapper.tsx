@@ -21,7 +21,11 @@ const GestureWrapper = React.forwardRef<View, GestureWrapperProps>((props, ref) 
     console.log('Handler State:', state, 'TranslationX:', translationX, 'VelocityX:', velocityX);
 
     if (state === State.END) {
-      if (translationX > 50 || (translationX > 30 && velocityX > 20)) { // 動態條件
+      if (
+        translationX > 50 || // 長距離滑動
+        (translationX > 30 && velocityX > 20) || // 中等距離+低速
+        (translationX > 20 && velocityX > 500) // 短距離+高速
+      ) {
         console.log('Swipe detected, attempting to go back');
         if (router.canGoBack()) {
           console.log('Navigating back');
@@ -39,7 +43,7 @@ const GestureWrapper = React.forwardRef<View, GestureWrapperProps>((props, ref) 
     <PanGestureHandler
       onGestureEvent={onGestureEvent}
       onHandlerStateChange={onHandlerStateChange}
-      activeOffsetX={[-50, 50]} // 允許從左邊緣50像素內觸發
+      activeOffsetX={[-50, 50]} // 從左邊緣50像素內觸發
       failOffsetY={[-20, 20]}
     >
       <View ref={ref} style={{ flex: 1 }}>
