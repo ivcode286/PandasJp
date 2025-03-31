@@ -2,26 +2,32 @@
   "expo": {
     "name": "PandasJp",
     "slug": "PandasJp",
-    "version": "1.0.0",
+    "version": "1.2.3",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "pandasapps",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "owner": "pandasappsgobal",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pandasapps.PandasJp",
+      "buildNumber": "7",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.pandasbeginner.PandasJp"
+      "package": "com.pandasapps.PandasJp"
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "output": "static"
     },
     "plugins": [
       "expo-router",
@@ -45,6 +51,15 @@
       "eas": {
         "projectId": "a4b2011b-6bda-4f4a-80de-23afdcf34342"
       }
+    },
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "ON_ERROR_RECOVERY",
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/a4b2011b-6bda-4f4a-80de-23afdcf34342"
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
     }
   }
 }
