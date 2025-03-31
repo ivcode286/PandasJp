@@ -19,8 +19,8 @@ export default function HomeScreen() {
     { title: t('menu.words_n4_n3'), href: '/words/n4-n3' },
     { title: t('menu.n5_concepts'), href: '/n5-concepts' },
     { title: t('menu.grammar_concepts'), href: '/grammar-concepts' },
-    { title: t('menu.n5_basic_grammar'), href: `/grammar?level=${LEVELS.N5_BASIC_GRAMMAR}` },
-    { title: t('menu.n5_advance_grammar'), href: `/grammar?level=${LEVELS.N5_ADVANCE_GRAMMAR}` },
+    { title: t('menu.n5_basic_grammar'), href: `/grammar/${LEVELS.N5_BASIC_GRAMMAR}` }, // 直接訪問動態路由
+    { title: t('menu.n5_advance_grammar'), href: `/grammar/${LEVELS.N5_ADVANCE_GRAMMAR}` }, // 直接訪問動態路由
     { title: t('menu.n5_chat'), href: '/n5chat' },
     { title: t('menu.story'), href: '/story' },
   ];
