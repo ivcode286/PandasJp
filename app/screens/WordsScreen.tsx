@@ -8,6 +8,7 @@ import {
   StatusBar,
   TouchableOpacity,
   ScrollView,
+  Dimensions,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
@@ -45,6 +46,7 @@ export let globalSections: Section[] = [];
 const SECTION_HEADER_HEIGHT = 40;
 const ITEM_HEIGHT = 140;
 const ITEM_MARGIN = 8;
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 const groupWordsByLetter = (words: Word[]): Section[] => {
   const groups: { [letter: string]: { order: number; words: Word[] } } = {};
@@ -120,6 +122,7 @@ export default function WordsScreen() {
   const [sections, setSections] = useState<Section[]>([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [gestureEnabled, setGestureEnabled] = useState(true); // 動態控制手勢啟用
 
   const translateX = useSharedValue(200); // Start closed
   const levelString = Array.isArray(level) ? level[0] : level;
@@ -129,32 +132,42 @@ export default function WordsScreen() {
     setDrawerOpen(open);
     setIsAnimating(true);
     translateX.value = withTiming(open ? 0 : drawerWidth, { duration: 300 }, () => {
-      runOnJS(setIsAnimating)(false); // 動畫完成後更新狀態
+      runOnJS(setIsAnimating)(false);
     });
   };
 
   const panGesture = Gesture.Pan()
-    .enabled(!isAnimating) // 動畫期間禁用手勢
-    .activeOffsetX([-10, 50]) // 手勢需向左移動 10px 或向右移動 50px 才生效，避免左邊緣觸發
+    .enabled(!isAnimating && gestureEnabled) // 根據 gestureEnabled 動態啟用
+    .activeOffsetX([-10, 50])
     .onBegin((event) => {
       const startX = event.x;
-      console.log('Gesture began, startX:', startX);
+      console.log('Drawer Gesture began, startX:', startX);
+      // 如果從左邊緣50像素內開始且抽屜未打開，禁用抽屜手勢
+      if (startX < 50 && !drawerOpen) {
+        runOnJS(setGestureEnabled)(false);
+      } else {
+        runOnJS(setGestureEnabled)(true);
+      }
     })
     .onStart(() => {
-      console.log('Gesture started, drawerOpen:', drawerOpen);
+      console.log('Drawer Gesture started, drawerOpen:', drawerOpen);
     })
     .onUpdate((event) => {
       const offset = drawerOpen ? 0 : drawerWidth;
       const newX = Math.max(0, Math.min(event.translationX + offset, drawerWidth));
-      translateX.value = newX; // 限制範圍在 0 到 drawerWidth 之間
+      translateX.value = newX;
     })
     .onEnd((event) => {
-      console.log('Gesture ended, translationX:', event.translationX);
-      const threshold = drawerWidth * 0.25; // 閾值為 drawerWidth 的 25%
+      console.log('Drawer Gesture ended, translationX:', event.translationX);
+      const threshold = drawerWidth * 0.25;
       const shouldOpen = drawerOpen
-        ? event.translationX < threshold // 已打開時，若 translationX 小於正閾值，保持打開
-        : event.translationX < -threshold; // 未打開時，若 translationX 小於負閾值，打開
+        ? event.translationX < threshold
+        : event.translationX < -threshold;
       runOnJS(toggleDrawer)(shouldOpen);
+      runOnJS(setGestureEnabled)(true); // 重置手勢啟用狀態
+    })
+    .onFinalize(() => {
+      runOnJS(setGestureEnabled)(true); // 確保手勢結束後重置
     });
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -163,7 +176,7 @@ export default function WordsScreen() {
 
   useEffect(() => {
     console.log(`Current Level in WordsScreen: ${level}`);
-    translateX.value = drawerWidth; // 初始位置關閉
+    translateX.value = drawerWidth;
     const loadWords = () => {
       if (!level || typeof level !== 'string') {
         console.error('Level is undefined or not a string');
