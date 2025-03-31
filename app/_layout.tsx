@@ -14,6 +14,7 @@ import { checkForUpdates } from '../src/utils/updateCheck';
 import Constants from 'expo-constants';
 import React from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import GestureWrapper from '@/components/GestureWrapper';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -75,6 +76,7 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
+      <GestureWrapper>
       <Stack
         screenOptions={{
           headerShown: true,
@@ -86,6 +88,7 @@ export default function RootLayout() {
             </TouchableOpacity>
           ),
           headerRight: () => null,
+          gestureEnabled: false, // 禁用預設返回手勢
         }}
       >
         <Stack.Screen name="index" />
@@ -132,6 +135,7 @@ export default function RootLayout() {
         <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
         <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
       </Stack>
+      </GestureWrapper>
     </GestureHandlerRootView>
   );
 }

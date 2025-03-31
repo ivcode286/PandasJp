@@ -6,10 +6,13 @@ import { HapticTab } from "@/components/HapticTab";
 import TabBarBackground from "@/components/ui/TabBarBackground";
 import "../../src/locales/i18n";
 import React from "react";
+import GestureWrapper from "@/components/GestureWrapper";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function TabsLayout() {
   return (
-    <>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <GestureWrapper>
       <Tabs
         screenOptions={{
           tabBarActiveTintColor: "#1E88E5",
@@ -55,7 +58,8 @@ export default function TabsLayout() {
           }}
         />
       </Tabs>
+      </GestureWrapper>
       <StatusBar style="auto" />
-    </>
+    </GestureHandlerRootView>
   );
 }
