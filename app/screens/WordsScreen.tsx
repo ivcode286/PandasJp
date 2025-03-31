@@ -1,7 +1,5 @@
-// screens/WordsScreen.tsx
 import React, { useEffect, useState } from 'react';
-import { useRoute } from '@react-navigation/native';
-import { RouteProp } from '@react-navigation/native';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import {
   StyleSheet,
   SectionList,
@@ -10,25 +8,41 @@ import {
   StatusBar,
   TouchableOpacity,
   ScrollView,
+  SectionListData,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
-import { useRouter } from 'expo-router';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
-import { RootStackParamList } from '../navigation/RootStackParamList';
 
-export const sectionListRef = React.createRef<SectionList<any>>();
-export let globalSections: { title: string; data: any[] }[] = [];
+// Define types for word and section data
+interface Word {
+  wordId: number;
+  letter: string;
+  letterOrder: number;
+  words: string;
+  pron: string;
+  meaning: string;
+  meaning_zh?: string;
+}
+
+interface Section {
+  title: string;
+  data: Word[];
+  letterOrder: number;
+}
+
+export const sectionListRef = React.createRef<SectionList<Word>>();
+export let globalSections: Section[] = [];
 
 const SECTION_HEADER_HEIGHT = 40;
 const ITEM_HEIGHT = 140;
 const ITEM_MARGIN = 8;
 
-const groupWordsByLetter = (words: any[]) => {
-  const groups: { [letter: string]: { order: number; words: any[] } } = {};
+const groupWordsByLetter = (words: Word[]): Section[] => {
+  const groups: { [letter: string]: { order: number; words: Word[] } } = {};
   
   words.forEach(word => {
     const letter = word.letter;
@@ -38,15 +52,13 @@ const groupWordsByLetter = (words: any[]) => {
     groups[letter].words.push(word);
   });
 
-  const sortedGroups = Object.entries(groups)
+  return Object.entries(groups)
     .map(([letter, { order, words }]) => ({
       title: letter,
       data: words.sort((a, b) => a.wordId - b.wordId),
       letterOrder: order,
     }))
     .sort((a, b) => a.letterOrder - b.letterOrder);
-
-  return sortedGroups;
 };
 
 const getItemLayout = sectionListGetItemLayout({
@@ -98,20 +110,19 @@ const chunkArraySpecial = (array: string[]): string[][] => {
 };
 
 export default function WordsScreen() {
-  const route = useRoute<RouteProp<RootStackParamList, 'WordsWithDrawer'>>();
+  const { level } = useLocalSearchParams();
   const router = useRouter();
-  const level = route.params?.level;
   const { t } = useTranslation('words');
   const { t: tCommon } = useTranslation('common');
   const { speak } = useTextToSpeech();
-  const [sections, setSections] = useState<{ title: string; data: any[] }[]>([]);
+  const [sections, setSections] = useState<Section[]>([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     console.log(`Current Level in WordsScreen: ${level}`);
     const loadWords = () => {
-      if (!level) {
-        console.error('Level is undefined');
+      if (!level || typeof level !== 'string') {
+        console.error('Level is undefined or not a string');
         setSections([]);
         return;
       }
@@ -126,7 +137,7 @@ export default function WordsScreen() {
         return;
       }
 
-      const words = t(key, { returnObjects: true });
+      const words = t(key, { returnObjects: true }) as Word[];
       if (!Array.isArray(words)) {
         console.error(`t('${key}') did not return an array:`, words);
         setSections([]);
@@ -146,8 +157,10 @@ export default function WordsScreen() {
     loadWords();
   }, [level, t]);
 
-  const drawerItems = tCommon(`drawer.${level?.toUpperCase()}`, { returnObjects: true }) || [];
-  const drawerWidth = level === 'n4-n3' ? 300 : 200;
+  // Handle case where level might be string[] or undefined
+  const levelString = Array.isArray(level) ? level[0] : level;
+  const drawerItems = (tCommon(`drawer.${levelString?.toUpperCase()}`, { returnObjects: true }) as string[]) || [];
+  const drawerWidth = levelString === 'n4-n3' ? 300 : 200;
 
   return (
     <SafeAreaProvider>
@@ -158,7 +171,7 @@ export default function WordsScreen() {
             <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
           </TouchableOpacity>
           <Text style={styles.headerTitle} numberOfLines={1} ellipsizeMode="tail">
-            {level}
+            {levelString || 'Unknown Level'}
           </Text>
           <TouchableOpacity onPress={() => setDrawerOpen(!drawerOpen)} style={styles.headerButton}>
             <IoniconsWeb name="menu" size={24} color="#ffffff" />
@@ -168,10 +181,10 @@ export default function WordsScreen() {
         {drawerOpen && (
           <View style={[styles.drawer, { width: drawerWidth }]}>
             <ScrollView>
-              {level === 'n4-n3' ? (
+              {levelString === 'n4-n3' ? (
                 chunkArraySpecial(drawerItems).map((row, index) => (
                   <View key={index} style={styles.drawerRow}>
-                    {row.map((label) => (
+                    {row.map((label: string) => (
                       <TouchableOpacity
                         key={label}
                         style={styles.drawerItem}
@@ -186,7 +199,7 @@ export default function WordsScreen() {
                   </View>
                 ))
               ) : (
-                drawerItems.map((label) => (
+                drawerItems.map((label: string) => (
                   <TouchableOpacity
                     key={label}
                     style={styles.drawerItemVertical}
@@ -204,9 +217,9 @@ export default function WordsScreen() {
         )}
 
         {sections.length === 0 ? (
-          <Text style={styles.errorText}>No data available for level: {level || 'undefined'}</Text>
+          <Text style={styles.errorText}>No data available for level: {levelString || 'undefined'}</Text>
         ) : (
-          <SectionList
+          <SectionList<Word>
             ref={sectionListRef}
             sections={sections}
             keyExtractor={(item, index) => item.wordId + index.toString()}
@@ -228,6 +241,7 @@ export default function WordsScreen() {
               </View>
             )}
             stickySectionHeadersEnabled={false}
+            //@ts-ignore
             getItemLayout={getItemLayout}
             contentContainerStyle={styles.sectionListContent}
           />
@@ -237,6 +251,7 @@ export default function WordsScreen() {
   );
 }
 
+// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -260,7 +275,6 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontWeight: 'bold',
     flex: 1,
-    //textAlign: 'center',
     marginHorizontal: 8,
   },
   drawer: {
