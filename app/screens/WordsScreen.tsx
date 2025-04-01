@@ -81,35 +81,7 @@ export const scrollToSection = (title: string): void => {
   }
 };
 
-const chunkArraySpecial = (array: string[]): string[][] => {
-  const result: string[][] = [];
-  let tempArray: string[] = [];
-  for (let i = 0; i < array.length; i++) {
-    const item = array[i];
-    if (item === "や") {
-      if (tempArray.length > 0) result.push(tempArray);
-      tempArray = ["や", "ゆ", "よ"];
-      result.push(tempArray);
-      tempArray = [];
-      i += 2;
-      continue;
-    }
-    if (item === "わ") {
-      if (tempArray.length > 0) result.push(tempArray);
-      result.push([item]);
-      continue;
-    }
-    tempArray.push(item);
-    if (tempArray.length === 5) {
-      result.push(tempArray);
-      tempArray = [];
-    }
-  }
-  if (tempArray.length > 0) {
-    result.push(tempArray);
-  }
-  return result;
-};
+// 移除 chunkArraySpecial 函數，因為不再需要
 
 export default function WordsScreen() {
   const { level } = useLocalSearchParams();
@@ -122,7 +94,7 @@ export default function WordsScreen() {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const levelString = Array.isArray(level) ? level[0] : level;
-  const drawerWidth = levelString === 'n4-n3' ? 300 : 200;
+  const drawerWidth = 200;
   const translateX = useSharedValue(drawerWidth); // Start closed
 
   const toggleDrawer = (open: boolean) => {
@@ -134,24 +106,24 @@ export default function WordsScreen() {
   };
 
   const panGesture = Gesture.Pan()
-  .enabled(!isAnimating)
-  .onStart(() => {
-    console.log('Gesture started, drawerOpen:', drawerOpen);
-  })
-  .onUpdate((event) => {
-    const offset = drawerOpen ? 0 : drawerWidth;
-    const newX = Math.max(0, Math.min(event.translationX + offset, drawerWidth));
-    translateX.value = newX;
-  })
-  .onEnd((event) => {
-    console.log('Gesture ended, translationX:', event.translationX);
-    const threshold = drawerWidth * 0.1; // 設為 10%（例如 20 或 30）
-    const shouldOpen = drawerOpen
-      ? event.translationX < threshold  // 已開啟，向右滑小於閾值保持開啟，大於閾值關閉
-      : event.translationX < -threshold; // 未開啟，向左滑超過閾值打開
-    console.log('shouldOpen:', shouldOpen, 'threshold:', threshold); // 增加日誌
-    runOnJS(toggleDrawer)(shouldOpen);
-  });
+    .enabled(!isAnimating)
+    .onStart(() => {
+      console.log('Gesture started, drawerOpen:', drawerOpen);
+    })
+    .onUpdate((event) => {
+      const offset = drawerOpen ? 0 : drawerWidth;
+      const newX = Math.max(0, Math.min(event.translationX + offset, drawerWidth));
+      translateX.value = newX;
+    })
+    .onEnd((event) => {
+      console.log('Gesture ended, translationX:', event.translationX);
+      const threshold = drawerWidth * 0.1; // 設為 10%（例如 20 或 30）
+      const shouldOpen = drawerOpen
+        ? event.translationX < threshold  // 已開啟，向右滑小於閾值保持開啟，大於閾值關閉
+        : event.translationX < -threshold; // 未開啟，向左滑超過閾值打開
+      console.log('shouldOpen:', shouldOpen, 'threshold:', threshold);
+      runOnJS(toggleDrawer)(shouldOpen);
+    });
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ translateX: translateX.value }],
@@ -250,37 +222,19 @@ export default function WordsScreen() {
             >
               <View style={[styles.drawer, { width: drawerWidth }]}>
                 <ScrollView>
-                  {levelString === 'n4-n3' ? (
-                    chunkArraySpecial(drawerItems).map((row, index) => (
-                      <View key={index} style={styles.drawerRow}>
-                        {row.map((label: string) => (
-                          <TouchableOpacity
-                            key={label}
-                            style={styles.drawerItem}
-                            onPress={() => {
-                              toggleDrawer(false);
-                              setTimeout(() => scrollToSection(label), 300);
-                            }}
-                          >
-                            <Text style={styles.drawerItemLabel}>{label}</Text>
-                          </TouchableOpacity>
-                        ))}
-                      </View>
-                    ))
-                  ) : (
-                    drawerItems.map((label: string) => (
-                      <TouchableOpacity
-                        key={label}
-                        style={styles.drawerItemVertical}
-                        onPress={() => {
-                          toggleDrawer(false);
-                          setTimeout(() => scrollToSection(label), 300);
-                        }}
-                      >
-                        <Text style={styles.drawerItemLabel}>{label}</Text>
-                      </TouchableOpacity>
-                    ))
-                  )}
+                  {/* 統一使用垂直排列，不論 levelString */}
+                  {drawerItems.map((label: string) => (
+                    <TouchableOpacity
+                      key={label}
+                      style={styles.drawerItemVertical}
+                      onPress={() => {
+                        toggleDrawer(false);
+                        setTimeout(() => scrollToSection(label), 300);
+                      }}
+                    >
+                      <Text style={styles.drawerItemLabel}>{label}</Text>
+                    </TouchableOpacity>
+                  ))}
                 </ScrollView>
               </View>
             </Animated.View>
@@ -323,17 +277,17 @@ const styles = StyleSheet.create({
   },
   drawerContainer: {
     position: 'absolute',
-    right: 0, // 從右側開始，避免初始可見
+    right: 0,
     top: 0,
     height: '100%',
-    width:  '100%', 
+    width: '100%',
     zIndex: 1000,
   },
   drawer: {
     backgroundColor: '#121212',
     height: '100%',
     padding: 10,
-    marginLeft: 'auto', // 確保抽屜內容靠右
+    marginLeft: 'auto',
   },
   drawerRow: {
     flexDirection: 'row',
