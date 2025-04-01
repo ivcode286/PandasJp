@@ -22,9 +22,9 @@ const GestureWrapper = React.forwardRef<View, GestureWrapperProps>((props, ref) 
 
     if (state === State.END) {
       if (
-        translationX > 50 ||
-        (translationX > 30 && velocityX > 20) ||
-        (translationX > 20 && velocityX > 500)
+        translationX > 30 || // 降低距離閾值
+        (translationX > 20 && velocityX > 20) || // 放寬中等距離條件
+        (translationX > 10 && velocityX > 500) // 放寬快速滑動條件
       ) {
         console.log('Swipe detected, attempting to go back');
         try {
@@ -47,7 +47,7 @@ const GestureWrapper = React.forwardRef<View, GestureWrapperProps>((props, ref) 
     <PanGestureHandler
       onGestureEvent={onGestureEvent}
       onHandlerStateChange={onHandlerStateChange}
-      activeOffsetX={[-50, 50]}
+      activeOffsetX={[-30, 30]} // 降低啟動距離
       failOffsetY={[-20, 20]}
     >
       <View ref={ref} style={{ flex: 1 }}>

@@ -122,7 +122,6 @@ export default function WordsScreen() {
   const [sections, setSections] = useState<Section[]>([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [gestureEnabled, setGestureEnabled] = useState(true); // 動態控制手勢啟用
 
   const translateX = useSharedValue(200); // Start closed
   const levelString = Array.isArray(level) ? level[0] : level;
@@ -137,19 +136,18 @@ export default function WordsScreen() {
   };
 
   const panGesture = Gesture.Pan()
-    .enabled(!isAnimating && gestureEnabled) // 根據 gestureEnabled 動態啟用
+    .enabled(!isAnimating)
     .activeOffsetX([-10, 50])
+    .hitSlop({ left: -SCREEN_WIDTH + drawerWidth + 50 }) // 限制觸發區域為右側 drawerWidth + 50
     .onBegin((event) => {
       const startX = event.x;
       console.log('Drawer Gesture began, startX:', startX);
-      // 如果從左邊緣50像素內開始且抽屜未打開，禁用抽屜手勢
-      if (startX < 50 && !drawerOpen) {
-        runOnJS(setGestureEnabled)(false);
-      } else {
-        runOnJS(setGestureEnabled)(true);
-      }
     })
-    .onStart(() => {
+    .onStart((event) => {
+      const startX = event.x;
+      if (startX < 50 && !drawerOpen) {
+        return; // 不啟動手勢，讓外層處理
+      }
       console.log('Drawer Gesture started, drawerOpen:', drawerOpen);
     })
     .onUpdate((event) => {
@@ -164,10 +162,6 @@ export default function WordsScreen() {
         ? event.translationX < threshold
         : event.translationX < -threshold;
       runOnJS(toggleDrawer)(shouldOpen);
-      runOnJS(setGestureEnabled)(true); // 重置手勢啟用狀態
-    })
-    .onFinalize(() => {
-      runOnJS(setGestureEnabled)(true); // 確保手勢結束後重置
     });
 
   const animatedStyle = useAnimatedStyle(() => ({
