@@ -134,23 +134,24 @@ export default function WordsScreen() {
   };
 
   const panGesture = Gesture.Pan()
-    .enabled(!isAnimating)
-    .onStart(() => {
-      console.log('Gesture started, drawerOpen:', drawerOpen);
-    })
-    .onUpdate((event) => {
-      const offset = drawerOpen ? 0 : drawerWidth;
-      const newX = Math.max(0, Math.min(event.translationX + offset, drawerWidth));
-      translateX.value = newX;
-    })
-    .onEnd((event) => {
-      console.log('Gesture ended, translationX:', event.translationX);
-      const threshold = drawerWidth * 0.2; // 降低閾值到 20%
-      const shouldOpen = drawerOpen
-        ? event.translationX > threshold  // 已開啟，向右滑超過閾值關閉
-        : event.translationX < -threshold; // 未開啟，向左滑超過閾值打開
-      runOnJS(toggleDrawer)(shouldOpen);
-    });
+  .enabled(!isAnimating)
+  .onStart(() => {
+    console.log('Gesture started, drawerOpen:', drawerOpen);
+  })
+  .onUpdate((event) => {
+    const offset = drawerOpen ? 0 : drawerWidth;
+    const newX = Math.max(0, Math.min(event.translationX + offset, drawerWidth));
+    translateX.value = newX;
+  })
+  .onEnd((event) => {
+    console.log('Gesture ended, translationX:', event.translationX);
+    const threshold = drawerWidth * 0.1; // 設為 10%（例如 20 或 30）
+    const shouldOpen = drawerOpen
+      ? event.translationX < threshold  // 已開啟，向右滑小於閾值保持開啟，大於閾值關閉
+      : event.translationX < -threshold; // 未開啟，向左滑超過閾值打開
+    console.log('shouldOpen:', shouldOpen, 'threshold:', threshold); // 增加日誌
+    runOnJS(toggleDrawer)(shouldOpen);
+  });
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ translateX: translateX.value }],
@@ -325,7 +326,7 @@ const styles = StyleSheet.create({
     right: 0, // 從右側開始，避免初始可見
     top: 0,
     height: '100%',
-    width: '100%', // 覆蓋右側觸發區域
+    width:  '100%', 
     zIndex: 1000,
   },
   drawer: {
