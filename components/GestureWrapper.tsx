@@ -52,7 +52,7 @@ const GestureWrapper = React.forwardRef<View, GestureWrapperProps>((props, ref) 
       onHandlerStateChange={onHandlerStateChange}
       activeOffsetX={[-30, 30]}
       failOffsetY={[-20, 20]}
-      enabled={!isDrawerOpen}  // 當 drawer 開啟時禁用全局返回手勢
+      enabled={!isDrawerOpen}
     >
       <View ref={ref} style={{ flex: 1 }}>
         {children}

@@ -16,7 +16,7 @@ export default function WordsScreenWrapper() {
   console.log('Level received in [level].tsx:', level);
   return (
     <>
-      <Stack.Screen options={{ headerShown: false }} />
+      <Stack.Screen options={{ headerShown: false  }} />
       <WordsScreen />
     </>
   );

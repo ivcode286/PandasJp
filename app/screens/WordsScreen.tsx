@@ -1,5 +1,5 @@
 // screens/WordsScreen.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useLayoutEffect } from 'react';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import {
   StyleSheet,
@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Dimensions,
+  BackHandler,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
@@ -25,6 +26,7 @@ import Animated, {
   runOnJS,
 } from 'react-native-reanimated';
 import { useDrawer } from '@/src/context/DrawerContext';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 
 interface Word {
   wordId: number;
@@ -118,6 +120,7 @@ const chunkArraySpecial = (array: string[]): string[][] => {
 export default function WordsScreen() {
   const { level } = useLocalSearchParams();
   const router = useRouter();
+  const navigation = useNavigation();
   const { t } = useTranslation('words');
   const { t: tCommon } = useTranslation('common');
   const { speak } = useTextToSpeech();
@@ -126,11 +129,12 @@ export default function WordsScreen() {
 
   const { isDrawerOpen, setDrawerOpen } = useDrawer();
 
-  // 初始值為 drawer 關閉時的位置
+  // 初始值：drawer 關閉時 translateX = drawerWidth；開啟時 = 0
   const translateX = useSharedValue(200);
   const levelString = Array.isArray(level) ? level[0] : level;
   const drawerWidth = levelString === 'n4-n3' ? 300 : 200;
 
+  // 统一关闭 drawer 的方法
   const toggleDrawer = (open: boolean) => {
     setDrawerOpen(open);
     setIsAnimating(true);
@@ -139,6 +143,7 @@ export default function WordsScreen() {
     });
   };
 
+  // 拦截手势事件控制 drawer 开关
   const panGesture = Gesture.Pan()
     .enabled(!isAnimating)
     .activeOffsetX([-10, 50])
@@ -161,7 +166,6 @@ export default function WordsScreen() {
         if (event.translationX > threshold) {
           runOnJS(toggleDrawer)(false);
         } else {
-          // 若未達門檻，則恢復到開啟狀態（不重新更新 state）
           setIsAnimating(true);
           translateX.value = withTiming(0, { duration: 300 }, () => {
             runOnJS(setIsAnimating)(false);
@@ -183,9 +187,9 @@ export default function WordsScreen() {
     transform: [{ translateX: translateX.value }],
   }));
 
+  // 同步初始状态，避免动画复位问题
   useEffect(() => {
     console.log(`Current Level in WordsScreen: ${level}`);
-    // 避免每次重新渲染時重置 drawer 狀態
     translateX.value = isDrawerOpen ? 0 : drawerWidth;
     const loadWords = () => {
       if (!level || typeof level !== 'string') {
@@ -219,14 +223,62 @@ export default function WordsScreen() {
     loadWords();
   }, [level, t, drawerWidth, isDrawerOpen, translateX]);
 
+  // 拦截硬件返回按钮（Android）
+  useFocusEffect(
+    React.useCallback(() => {
+      const onBackPress = () => {
+        if (isDrawerOpen) {
+          toggleDrawer(false);
+          return true;
+        }
+        return false;
+      };
+      BackHandler.addEventListener('hardwareBackPress', onBackPress);
+      return () => BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }, [isDrawerOpen])
+  );
+
+  // 使用 useFocusEffect 在页面失去焦点时确保关闭 drawer
+  useFocusEffect(
+    React.useCallback(() => {
+      return () => {
+        if (isDrawerOpen) {
+          setDrawerOpen(false);
+          translateX.value = drawerWidth;
+        }
+      };
+    }, [isDrawerOpen, drawerWidth, translateX])
+  );
+
+  // 修改 header 返回按钮逻辑，仅在 WordsScreen 中生效
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerLeft: () => (
+        <TouchableOpacity onPress={handleBack} style={styles.headerButton}>
+          <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
+        </TouchableOpacity>
+      ),
+    });
+  }, [navigation]);
+
+  // 返回按钮处理：若 drawer 开启，则先关闭；否则返回上一页
+  const handleBack = () => {
+    if (isDrawerOpen) {
+      toggleDrawer(false);
+    } else {
+      router.back();
+    }
+  };
+
   const drawerItems = (tCommon(`drawer.${levelString?.toUpperCase()}`, { returnObjects: true }) as string[]) || [];
 
   return (
     <SafeAreaProvider>
       <StatusBar barStyle="light-content" backgroundColor="#121212" />
       <SafeAreaView style={styles.container}>
+        {/* 自定义 header */}
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.headerButton}>
+          <TouchableOpacity onPress={handleBack} style={styles.headerButton}>
             <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
           </TouchableOpacity>
           <Text style={styles.headerTitle} numberOfLines={1} ellipsizeMode="tail">
