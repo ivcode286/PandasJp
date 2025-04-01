@@ -121,34 +121,34 @@ export default function WordsScreen() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const translateX = useSharedValue(200); // Start closed
   const levelString = Array.isArray(level) ? level[0] : level;
   const drawerWidth = levelString === 'n4-n3' ? 300 : 200;
+  const translateX = useSharedValue(drawerWidth); // Start closed
 
   const toggleDrawer = (open: boolean) => {
     setDrawerOpen(open);
     setIsAnimating(true);
     translateX.value = withTiming(open ? 0 : drawerWidth, { duration: 300 }, () => {
-      runOnJS(setIsAnimating)(false); // 動畫完成後更新狀態
+      runOnJS(setIsAnimating)(false);
     });
   };
 
   const panGesture = Gesture.Pan()
-    .enabled(!isAnimating) // 動畫期間禁用手勢
+    .enabled(!isAnimating)
     .onStart(() => {
       console.log('Gesture started, drawerOpen:', drawerOpen);
     })
     .onUpdate((event) => {
       const offset = drawerOpen ? 0 : drawerWidth;
       const newX = Math.max(0, Math.min(event.translationX + offset, drawerWidth));
-      translateX.value = newX; // 限制範圍在 0 到 drawerWidth 之間
+      translateX.value = newX;
     })
     .onEnd((event) => {
       console.log('Gesture ended, translationX:', event.translationX);
-      const threshold = drawerWidth * 0.25; // 閾值為 drawerWidth 的 25%
+      const threshold = drawerWidth * 0.2; // 降低閾值到 20%
       const shouldOpen = drawerOpen
-        ? event.translationX < threshold // 已打開時，若 translationX 小於正閾值，保持打開
-        : event.translationX < -threshold; // 未打開時，若 translationX 小於負閾值，打開
+        ? event.translationX > threshold  // 已開啟，向右滑超過閾值關閉
+        : event.translationX < -threshold; // 未開啟，向左滑超過閾值打開
       runOnJS(toggleDrawer)(shouldOpen);
     });
 
@@ -209,81 +209,82 @@ export default function WordsScreen() {
           </TouchableOpacity>
         </View>
 
-        <GestureDetector gesture={panGesture}>
-          <View style={styles.contentWrapper}>
+        <View style={styles.contentWrapper}>
+          {sections.length === 0 ? (
+            <Text style={styles.errorText}>No data available for level: {levelString || 'undefined'}</Text>
+          ) : (
+            <SectionList<Word>
+              ref={sectionListRef}
+              sections={sections}
+              keyExtractor={(item, index) => item.wordId + index.toString()}
+              renderItem={({ item }) => (
+                <View style={styles.item}>
+                  <Text style={styles.words}>{item.words}</Text>
+                  <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
+                  <View style={styles.row}>
+                    <Text style={styles.reading}>{item.pron}</Text>
+                    <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
+                      <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )}
+              renderSectionHeader={({ section: { title } }) => (
+                <View style={styles.headerContainer}>
+                  <Text style={styles.sectionHeader}>{title || 'No Header'}</Text>
+                </View>
+              )}
+              stickySectionHeadersEnabled={false}
+              getItemLayout={getItemLayout}
+              contentContainerStyle={styles.sectionListContent}
+            />
+          )}
+
+          <GestureDetector gesture={panGesture}>
             <Animated.View 
               style={[
-                styles.drawer,
-                { width: drawerWidth },
+                styles.drawerContainer,
                 animatedStyle,
               ]}
             >
-              <ScrollView>
-                {levelString === 'n4-n3' ? (
-                  chunkArraySpecial(drawerItems).map((row, index) => (
-                    <View key={index} style={styles.drawerRow}>
-                      {row.map((label: string) => (
-                        <TouchableOpacity
-                          key={label}
-                          style={styles.drawerItem}
-                          onPress={() => {
-                            toggleDrawer(false);
-                            setTimeout(() => scrollToSection(label), 300);
-                          }}
-                        >
-                          <Text style={styles.drawerItemLabel}>{label}</Text>
-                        </TouchableOpacity>
-                      ))}
-                    </View>
-                  ))
-                ) : (
-                  drawerItems.map((label: string) => (
-                    <TouchableOpacity
-                      key={label}
-                      style={styles.drawerItemVertical}
-                      onPress={() => {
-                        toggleDrawer(false);
-                        setTimeout(() => scrollToSection(label), 300);
-                      }}
-                    >
-                      <Text style={styles.drawerItemLabel}>{label}</Text>
-                    </TouchableOpacity>
-                  ))
-                )}
-              </ScrollView>
-            </Animated.View>
-
-            {sections.length === 0 ? (
-              <Text style={styles.errorText}>No data available for level: {levelString || 'undefined'}</Text>
-            ) : (
-              <SectionList<Word>
-                ref={sectionListRef}
-                sections={sections}
-                keyExtractor={(item, index) => item.wordId + index.toString()}
-                renderItem={({ item }) => (
-                  <View style={styles.item}>
-                    <Text style={styles.words}>{item.words}</Text>
-                    <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
-                    <View style={styles.row}>
-                      <Text style={styles.reading}>{item.pron}</Text>
-                      <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
-                        <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+              <View style={[styles.drawer, { width: drawerWidth }]}>
+                <ScrollView>
+                  {levelString === 'n4-n3' ? (
+                    chunkArraySpecial(drawerItems).map((row, index) => (
+                      <View key={index} style={styles.drawerRow}>
+                        {row.map((label: string) => (
+                          <TouchableOpacity
+                            key={label}
+                            style={styles.drawerItem}
+                            onPress={() => {
+                              toggleDrawer(false);
+                              setTimeout(() => scrollToSection(label), 300);
+                            }}
+                          >
+                            <Text style={styles.drawerItemLabel}>{label}</Text>
+                          </TouchableOpacity>
+                        ))}
+                      </View>
+                    ))
+                  ) : (
+                    drawerItems.map((label: string) => (
+                      <TouchableOpacity
+                        key={label}
+                        style={styles.drawerItemVertical}
+                        onPress={() => {
+                          toggleDrawer(false);
+                          setTimeout(() => scrollToSection(label), 300);
+                        }}
+                      >
+                        <Text style={styles.drawerItemLabel}>{label}</Text>
                       </TouchableOpacity>
-                    </View>
-                  </View>
-                )}
-                renderSectionHeader={({ section: { title } }) => (
-                  <View style={styles.headerContainer}>
-                    <Text style={styles.sectionHeader}>{title || 'No Header'}</Text>
-                  </View>
-                )}
-                stickySectionHeadersEnabled={false}
-                getItemLayout={getItemLayout}
-                contentContainerStyle={styles.sectionListContent}
-              />
-            )}
-          </View>
-        </GestureDetector>
+                    ))
+                  )}
+                </ScrollView>
+              </View>
+            </Animated.View>
+          </GestureDetector>
+        </View>
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -319,14 +320,19 @@ const styles = StyleSheet.create({
     flex: 1,
     position: 'relative',
   },
-  drawer: {
+  drawerContainer: {
     position: 'absolute',
-    right: 0,
+    right: 0, // 從右側開始，避免初始可見
     top: 0,
     height: '100%',
-    backgroundColor: '#121212',
+    width: '100%', // 覆蓋右側觸發區域
     zIndex: 1000,
+  },
+  drawer: {
+    backgroundColor: '#121212',
+    height: '100%',
     padding: 10,
+    marginLeft: 'auto', // 確保抽屜內容靠右
   },
   drawerRow: {
     flexDirection: 'row',
