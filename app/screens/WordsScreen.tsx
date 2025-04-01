@@ -1,3 +1,4 @@
+// screens/WordsScreen.tsx
 import React, { useEffect, useState } from 'react';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import {
@@ -23,6 +24,7 @@ import Animated, {
   withTiming,
   runOnJS,
 } from 'react-native-reanimated';
+import { useDrawer } from '@/src/context/DrawerContext';
 
 interface Word {
   wordId: number;
@@ -120,10 +122,12 @@ export default function WordsScreen() {
   const { t: tCommon } = useTranslation('common');
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<Section[]>([]);
-  const [drawerOpen, setDrawerOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const translateX = useSharedValue(200); // Start closed
+  const { isDrawerOpen, setDrawerOpen } = useDrawer();
+
+  // 初始值為 drawer 關閉時的位置
+  const translateX = useSharedValue(200);
   const levelString = Array.isArray(level) ? level[0] : level;
   const drawerWidth = levelString === 'n4-n3' ? 300 : 200;
 
@@ -138,30 +142,41 @@ export default function WordsScreen() {
   const panGesture = Gesture.Pan()
     .enabled(!isAnimating)
     .activeOffsetX([-10, 50])
-    .hitSlop({ left: -SCREEN_WIDTH + drawerWidth + 50 }) // 限制觸發區域為右側 drawerWidth + 50
+    .hitSlop({ left: -SCREEN_WIDTH + drawerWidth + 50 })
     .onBegin((event) => {
-      const startX = event.x;
-      console.log('Drawer Gesture began, startX:', startX);
+      console.log('Drawer Gesture began, startX:', event.x);
     })
     .onStart((event) => {
-      const startX = event.x;
-      if (startX < 50 && !drawerOpen) {
-        return; // 不啟動手勢，讓外層處理
-      }
-      console.log('Drawer Gesture started, drawerOpen:', drawerOpen);
+      if (event.x < 50 && !isDrawerOpen) return;
+      console.log('Drawer Gesture started, isDrawerOpen:', isDrawerOpen);
     })
     .onUpdate((event) => {
-      const offset = drawerOpen ? 0 : drawerWidth;
+      const offset = isDrawerOpen ? 0 : drawerWidth;
       const newX = Math.max(0, Math.min(event.translationX + offset, drawerWidth));
       translateX.value = newX;
     })
     .onEnd((event) => {
-      console.log('Drawer Gesture ended, translationX:', event.translationX);
       const threshold = drawerWidth * 0.25;
-      const shouldOpen = drawerOpen
-        ? event.translationX < threshold
-        : event.translationX < -threshold;
-      runOnJS(toggleDrawer)(shouldOpen);
+      if (isDrawerOpen) {
+        if (event.translationX > threshold) {
+          runOnJS(toggleDrawer)(false);
+        } else {
+          // 若未達門檻，則恢復到開啟狀態（不重新更新 state）
+          setIsAnimating(true);
+          translateX.value = withTiming(0, { duration: 300 }, () => {
+            runOnJS(setIsAnimating)(false);
+          });
+        }
+      } else {
+        if (event.translationX < -threshold) {
+          runOnJS(toggleDrawer)(true);
+        } else {
+          setIsAnimating(true);
+          translateX.value = withTiming(drawerWidth, { duration: 300 }, () => {
+            runOnJS(setIsAnimating)(false);
+          });
+        }
+      }
     });
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -170,7 +185,8 @@ export default function WordsScreen() {
 
   useEffect(() => {
     console.log(`Current Level in WordsScreen: ${level}`);
-    translateX.value = drawerWidth;
+    // 避免每次重新渲染時重置 drawer 狀態
+    translateX.value = isDrawerOpen ? 0 : drawerWidth;
     const loadWords = () => {
       if (!level || typeof level !== 'string') {
         console.error('Level is undefined or not a string');
@@ -201,7 +217,7 @@ export default function WordsScreen() {
       globalSections = groupedSections;
     };
     loadWords();
-  }, [level, t]);
+  }, [level, t, drawerWidth, isDrawerOpen, translateX]);
 
   const drawerItems = (tCommon(`drawer.${levelString?.toUpperCase()}`, { returnObjects: true }) as string[]) || [];
 
@@ -216,7 +232,7 @@ export default function WordsScreen() {
           <Text style={styles.headerTitle} numberOfLines={1} ellipsizeMode="tail">
             {levelString || 'Unknown Level'}
           </Text>
-          <TouchableOpacity onPress={() => toggleDrawer(!drawerOpen)} style={styles.headerButton}>
+          <TouchableOpacity onPress={() => toggleDrawer(!isDrawerOpen)} style={styles.headerButton}>
             <IoniconsWeb name="menu" size={24} color="#ffffff" />
           </TouchableOpacity>
         </View>

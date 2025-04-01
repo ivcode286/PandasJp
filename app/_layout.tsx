@@ -15,6 +15,7 @@ import Constants from 'expo-constants';
 import React from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import GestureWrapper from '@/components/GestureWrapper';
+import { DrawerProvider } from '@/src/context/DrawerContext';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -76,66 +77,68 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <GestureWrapper>
-      <Stack
-        screenOptions={{
-          headerShown: true,
-          headerStyle: { backgroundColor: '#121212' },
-          headerTintColor: '#ffffff',
-          headerLeft: () => (
-            <TouchableOpacity onPress={handleBack} style={{ paddingLeft: 16 }}>
-              <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
-            </TouchableOpacity>
-          ),
-          headerRight: () => null,
-          gestureEnabled: false, // 禁用預設返回手勢
-        }}
-      >
-        <Stack.Screen name="index" />
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="words/menu" />
-        <Stack.Screen
-          name="words/[level]"
-          options={{
-            headerRight: () => (
-              <TouchableOpacity
-                onPress={() => {
-                  // Drawer toggle logic would need to be handled in WordsScreen
-                }}
-                style={{ paddingRight: 16 }}
-              >
-                <IoniconsWeb name="menu" size={24} color="#ffffff" />
-              </TouchableOpacity>
-            ),
-          }}
-        />
-        <Stack.Screen
-          name="[namespace]"
-          options={({ route }) => {
-            const namespace =
-              typeof route.params === 'object' && 'namespace' in route.params
-                ? String(route.params.namespace)
-                : undefined;
-            return {
-              title:
-                namespace === 'story'
-                  ? t('menu.story')
-                  : namespace === 'n5chat'
-                  ? t('menu.n5_chat')
-                  : namespace === 'travelchat'
-                  ? t('headerTitle.travelMenu')
-                  : 'Menu',
-            };
-          }}
-        />
-        <Stack.Screen name="hiragana" options={{ headerTitle: t('menu.hiragana') }} />
-        <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
-        <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
-        <Stack.Screen name="phonetics" options={{ headerTitle: t('menu.phonetics') }} />
-        <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
-        <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
-      </Stack>
-      </GestureWrapper>
+      <DrawerProvider>
+        <GestureWrapper>
+          <Stack
+            screenOptions={{
+              headerShown: true,
+              headerStyle: { backgroundColor: '#121212' },
+              headerTintColor: '#ffffff',
+              headerLeft: () => (
+                <TouchableOpacity onPress={handleBack} style={{ paddingLeft: 16 }}>
+                  <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
+                </TouchableOpacity>
+              ),
+              headerRight: () => null,
+              gestureEnabled: false, // 禁用預設返回手勢
+            }}
+          >
+            <Stack.Screen name="index" />
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen name="words/menu" />
+            <Stack.Screen
+              name="words/[level]"
+              options={{
+                headerRight: () => (
+                  <TouchableOpacity
+                    onPress={() => {
+                      // Drawer toggle logic would need to be handled in WordsScreen
+                    }}
+                    style={{ paddingRight: 16 }}
+                  >
+                    <IoniconsWeb name="menu" size={24} color="#ffffff" />
+                  </TouchableOpacity>
+                ),
+              }}
+            />
+            <Stack.Screen
+              name="[namespace]"
+              options={({ route }) => {
+                const namespace =
+                  typeof route.params === 'object' && 'namespace' in route.params
+                    ? String(route.params.namespace)
+                    : undefined;
+                return {
+                  title:
+                    namespace === 'story'
+                      ? t('menu.story')
+                      : namespace === 'n5chat'
+                      ? t('menu.n5_chat')
+                      : namespace === 'travelchat'
+                      ? t('headerTitle.travelMenu')
+                      : 'Menu',
+                };
+              }}
+            />
+            <Stack.Screen name="hiragana" options={{ headerTitle: t('menu.hiragana') }} />
+            <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
+            <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
+            <Stack.Screen name="phonetics" options={{ headerTitle: t('menu.phonetics') }} />
+            <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
+            <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
+          </Stack>
+        </GestureWrapper>
+      </DrawerProvider>
     </GestureHandlerRootView>
   );
 }

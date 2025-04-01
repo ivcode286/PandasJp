@@ -1,7 +1,9 @@
+// components/GestureWrapper.tsx
 import React from 'react';
 import { PanGestureHandler, GestureEvent, PanGestureHandlerEventPayload, State } from 'react-native-gesture-handler';
 import { useRouter } from 'expo-router';
 import { View } from 'react-native';
+import { useDrawer } from '@/src/context/DrawerContext';
 
 type GestureWrapperProps = {
   children: React.ReactNode;
@@ -10,6 +12,7 @@ type GestureWrapperProps = {
 const GestureWrapper = React.forwardRef<View, GestureWrapperProps>((props, ref) => {
   const { children } = props;
   const router = useRouter();
+  const { isDrawerOpen } = useDrawer();
 
   const onGestureEvent = (event: GestureEvent<PanGestureHandlerEventPayload>) => {
     const { translationX, velocityX, state } = event.nativeEvent;
@@ -22,9 +25,9 @@ const GestureWrapper = React.forwardRef<View, GestureWrapperProps>((props, ref) 
 
     if (state === State.END) {
       if (
-        translationX > 30 || // 降低距離閾值
-        (translationX > 20 && velocityX > 20) || // 放寬中等距離條件
-        (translationX > 10 && velocityX > 500) // 放寬快速滑動條件
+        translationX > 30 ||
+        (translationX > 20 && velocityX > 20) ||
+        (translationX > 10 && velocityX > 500)
       ) {
         console.log('Swipe detected, attempting to go back');
         try {
@@ -47,8 +50,9 @@ const GestureWrapper = React.forwardRef<View, GestureWrapperProps>((props, ref) 
     <PanGestureHandler
       onGestureEvent={onGestureEvent}
       onHandlerStateChange={onHandlerStateChange}
-      activeOffsetX={[-30, 30]} // 降低啟動距離
+      activeOffsetX={[-30, 30]}
       failOffsetY={[-20, 20]}
+      enabled={!isDrawerOpen}  // 當 drawer 開啟時禁用全局返回手勢
     >
       <View ref={ref} style={{ flex: 1 }}>
         {children}
