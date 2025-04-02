@@ -1,17 +1,31 @@
 #import "AppDelegate.h"
-
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTLinkingManager.h>
+#import "CustomNavigationController.h" // 引入自定義導航控制器
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  self.moduleName = @"main";
+  self.moduleName = @"PandasJp"; // 更新為你的應用名稱
 
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
+
+  // 初始化 React Native 橋接
+  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
+                                                  moduleName:self.moduleName
+                                           initialProperties:self.initialProps];
+
+  rootView.backgroundColor = [UIColor blackColor];
+
+  // 使用自定義導航控制器
+  CustomNavigationController *bridge = [[CustomNavigationController alloc] initWithRootViewController:rootView];
+  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  self.window.rootViewController = bridge;
+  [self.window makeKeyAndVisible];
 
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
