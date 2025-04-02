@@ -1,6 +1,6 @@
 import UIKit
 
-@objc(CustomNavigationController) // 添加這行以暴露給 Objective-C
+@objc(CustomNavigationController)
 class CustomNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()

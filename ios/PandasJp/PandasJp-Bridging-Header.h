@@ -1,5 +1,4 @@
 //
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
-
-#import "CustomNavigationController.h"
+#import "PandasJp-Swift.h"
