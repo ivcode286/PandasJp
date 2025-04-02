@@ -8,7 +8,6 @@ import {
   StatusBar,
   TouchableOpacity,
   ScrollView,
-  SectionListData,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
@@ -16,8 +15,14 @@ import sectionListGetItemLayout from 'react-native-section-list-get-item-layout'
 import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
+import Animated, {
+  useSharedValue,
+  useAnimatedStyle,
+  withTiming,
+  runOnJS,
+} from 'react-native-reanimated';
 
-// Define types for word and section data
 interface Word {
   wordId: number;
   letter: string;
@@ -43,7 +48,6 @@ const ITEM_MARGIN = 8;
 
 const groupWordsByLetter = (words: Word[]): Section[] => {
   const groups: { [letter: string]: { order: number; words: Word[] } } = {};
-  
   words.forEach(word => {
     const letter = word.letter;
     if (!groups[letter]) {
@@ -51,7 +55,6 @@ const groupWordsByLetter = (words: Word[]): Section[] => {
     }
     groups[letter].words.push(word);
   });
-
   return Object.entries(groups)
     .map(([letter, { order, words }]) => ({
       title: letter,
@@ -78,36 +81,7 @@ export const scrollToSection = (title: string): void => {
   }
 };
 
-const chunkArraySpecial = (array: string[]): string[][] => {
-  const result: string[][] = [];
-  let tempArray: string[] = [];
-
-  for (let i = 0; i < array.length; i++) {
-    const item = array[i];
-    if (item === "や") {
-      if (tempArray.length > 0) result.push(tempArray);
-      tempArray = ["や", "ゆ", "よ"];
-      result.push(tempArray);
-      tempArray = [];
-      i += 2;
-      continue;
-    }
-    if (item === "わ") {
-      if (tempArray.length > 0) result.push(tempArray);
-      result.push([item]);
-      continue;
-    }
-    tempArray.push(item);
-    if (tempArray.length === 5) {
-      result.push(tempArray);
-      tempArray = [];
-    }
-  }
-  if (tempArray.length > 0) {
-    result.push(tempArray);
-  }
-  return result;
-};
+// 移除 chunkArraySpecial 函數，因為不再需要
 
 export default function WordsScreen() {
   const { level } = useLocalSearchParams();
@@ -117,16 +91,53 @@ export default function WordsScreen() {
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<Section[]>([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const levelString = Array.isArray(level) ? level[0] : level;
+  const drawerWidth = 200;
+  const translateX = useSharedValue(drawerWidth); // Start closed
+
+  const toggleDrawer = (open: boolean) => {
+    setDrawerOpen(open);
+    setIsAnimating(true);
+    translateX.value = withTiming(open ? 0 : drawerWidth, { duration: 300 }, () => {
+      runOnJS(setIsAnimating)(false);
+    });
+  };
+
+  const panGesture = Gesture.Pan()
+    .enabled(!isAnimating)
+    .onStart(() => {
+      console.log('Gesture started, drawerOpen:', drawerOpen);
+    })
+    .onUpdate((event) => {
+      const offset = drawerOpen ? 0 : drawerWidth;
+      const newX = Math.max(0, Math.min(event.translationX + offset, drawerWidth));
+      translateX.value = newX;
+    })
+    .onEnd((event) => {
+      console.log('Gesture ended, translationX:', event.translationX);
+      const threshold = drawerWidth * 0.1; // 設為 10%（例如 20 或 30）
+      const shouldOpen = drawerOpen
+        ? event.translationX < threshold  // 已開啟，向右滑小於閾值保持開啟，大於閾值關閉
+        : event.translationX < -threshold; // 未開啟，向左滑超過閾值打開
+      console.log('shouldOpen:', shouldOpen, 'threshold:', threshold);
+      runOnJS(toggleDrawer)(shouldOpen);
+    });
+
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [{ translateX: translateX.value }],
+  }));
 
   useEffect(() => {
     console.log(`Current Level in WordsScreen: ${level}`);
+    translateX.value = drawerWidth; // 初始位置關閉
     const loadWords = () => {
       if (!level || typeof level !== 'string') {
         console.error('Level is undefined or not a string');
         setSections([]);
         return;
       }
-
       let key: string;
       if (level === LEVELS.N5) key = 'n5';
       else if (level === LEVELS.N5_KANJI) key = 'n5_kanji';
@@ -136,31 +147,24 @@ export default function WordsScreen() {
         setSections([]);
         return;
       }
-
       const words = t(key, { returnObjects: true }) as Word[];
       if (!Array.isArray(words)) {
         console.error(`t('${key}') did not return an array:`, words);
         setSections([]);
         return;
       }
-
       const transformedWords = words.map(word => ({
         ...word,
         meaning_zh: word.meaning,
       }));
-
       const groupedSections = groupWordsByLetter(transformedWords);
       setSections(groupedSections);
       globalSections = groupedSections;
     };
-
     loadWords();
   }, [level, t]);
 
-  // Handle case where level might be string[] or undefined
-  const levelString = Array.isArray(level) ? level[0] : level;
   const drawerItems = (tCommon(`drawer.${levelString?.toUpperCase()}`, { returnObjects: true }) as string[]) || [];
-  const drawerWidth = levelString === 'n4-n3' ? 300 : 200;
 
   return (
     <SafeAreaProvider>
@@ -173,85 +177,74 @@ export default function WordsScreen() {
           <Text style={styles.headerTitle} numberOfLines={1} ellipsizeMode="tail">
             {levelString || 'Unknown Level'}
           </Text>
-          <TouchableOpacity onPress={() => setDrawerOpen(!drawerOpen)} style={styles.headerButton}>
+          <TouchableOpacity onPress={() => toggleDrawer(!drawerOpen)} style={styles.headerButton}>
             <IoniconsWeb name="menu" size={24} color="#ffffff" />
           </TouchableOpacity>
         </View>
 
-        {drawerOpen && (
-          <View style={[styles.drawer, { width: drawerWidth }]}>
-            <ScrollView>
-              {levelString === 'n4-n3' ? (
-                chunkArraySpecial(drawerItems).map((row, index) => (
-                  <View key={index} style={styles.drawerRow}>
-                    {row.map((label: string) => (
-                      <TouchableOpacity
-                        key={label}
-                        style={styles.drawerItem}
-                        onPress={() => {
-                          setDrawerOpen(false);
-                          setTimeout(() => scrollToSection(label), 300);
-                        }}
-                      >
-                        <Text style={styles.drawerItemLabel}>{label}</Text>
-                      </TouchableOpacity>
-                    ))}
+        <View style={styles.contentWrapper}>
+          {sections.length === 0 ? (
+            <Text style={styles.errorText}>No data available for level: {levelString || 'undefined'}</Text>
+          ) : (
+            <SectionList<Word>
+              ref={sectionListRef}
+              sections={sections}
+              keyExtractor={(item, index) => item.wordId + index.toString()}
+              renderItem={({ item }) => (
+                <View style={styles.item}>
+                  <Text style={styles.words}>{item.words}</Text>
+                  <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
+                  <View style={styles.row}>
+                    <Text style={styles.reading}>{item.pron}</Text>
+                    <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
+                      <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                    </TouchableOpacity>
                   </View>
-                ))
-              ) : (
-                drawerItems.map((label: string) => (
-                  <TouchableOpacity
-                    key={label}
-                    style={styles.drawerItemVertical}
-                    onPress={() => {
-                      setDrawerOpen(false);
-                      setTimeout(() => scrollToSection(label), 300);
-                    }}
-                  >
-                    <Text style={styles.drawerItemLabel}>{label}</Text>
-                  </TouchableOpacity>
-                ))
-              )}
-            </ScrollView>
-          </View>
-        )}
-
-        {sections.length === 0 ? (
-          <Text style={styles.errorText}>No data available for level: {levelString || 'undefined'}</Text>
-        ) : (
-          <SectionList<Word>
-            ref={sectionListRef}
-            sections={sections}
-            keyExtractor={(item, index) => item.wordId + index.toString()}
-            renderItem={({ item }) => (
-              <View style={styles.item}>
-                <Text style={styles.words}>{item.words}</Text>
-                <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
-                <View style={styles.row}>
-                  <Text style={styles.reading}>{item.pron}</Text>
-                  <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
-                    <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
-                  </TouchableOpacity>
                 </View>
+              )}
+              renderSectionHeader={({ section: { title } }) => (
+                <View style={styles.headerContainer}>
+                  <Text style={styles.sectionHeader}>{title || 'No Header'}</Text>
+                </View>
+              )}
+              stickySectionHeadersEnabled={false}
+              getItemLayout={getItemLayout}
+              contentContainerStyle={styles.sectionListContent}
+            />
+          )}
+
+          <GestureDetector gesture={panGesture}>
+            <Animated.View 
+              style={[
+                styles.drawerContainer,
+                animatedStyle,
+              ]}
+            >
+              <View style={[styles.drawer, { width: drawerWidth }]}>
+                <ScrollView>
+                  {/* 統一使用垂直排列，不論 levelString */}
+                  {drawerItems.map((label: string) => (
+                    <TouchableOpacity
+                      key={label}
+                      style={styles.drawerItemVertical}
+                      onPress={() => {
+                        toggleDrawer(false);
+                        setTimeout(() => scrollToSection(label), 300);
+                      }}
+                    >
+                      <Text style={styles.drawerItemLabel}>{label}</Text>
+                    </TouchableOpacity>
+                  ))}
+                </ScrollView>
               </View>
-            )}
-            renderSectionHeader={({ section: { title } }) => (
-              <View style={styles.headerContainer}>
-                <Text style={styles.sectionHeader}>{title || 'No Header'}</Text>
-              </View>
-            )}
-            stickySectionHeadersEnabled={false}
-            //@ts-ignore
-            getItemLayout={getItemLayout}
-            contentContainerStyle={styles.sectionListContent}
-          />
-        )}
+            </Animated.View>
+          </GestureDetector>
+        </View>
       </SafeAreaView>
     </SafeAreaProvider>
   );
 }
 
-// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -265,6 +258,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     backgroundColor: '#121212',
     width: '100%',
+    zIndex: 1001,
   },
   headerButton: {
     padding: 4,
@@ -277,14 +271,23 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 8,
   },
-  drawer: {
+  contentWrapper: {
+    flex: 1,
+    position: 'relative',
+  },
+  drawerContainer: {
     position: 'absolute',
     right: 0,
-    top: 60,
+    top: 0,
     height: '100%',
-    backgroundColor: '#121212',
+    width: '100%',
     zIndex: 1000,
+  },
+  drawer: {
+    backgroundColor: '#121212',
+    height: '100%',
     padding: 10,
+    marginLeft: 'auto',
   },
   drawerRow: {
     flexDirection: 'row',

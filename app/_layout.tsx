@@ -13,6 +13,7 @@ import { handleIOSPrompt } from '../src/utils/deviceCheck';
 import { checkForUpdates } from '../src/utils/updateCheck';
 import Constants from 'expo-constants';
 import React from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -26,31 +27,27 @@ export default function RootLayout() {
   const router = useRouter();
   const { t } = useTranslation('home');
 
-  // 初始化應用（語言、設備檢查、更新檢查）
   useEffect(() => {
     async function initializeApp() {
       try {
-        // 加載語言
         const savedLang = await AsyncStorage.getItem(LANGUAGE_KEY);
         let urlLang = null;
         if (Platform.OS === 'web') {
           const urlPath = window.location.pathname;
           const urlLangMatch = urlPath.match(/^\/(ZH-TW|ZH-CN)/i);
           urlLang = urlLangMatch ? urlLangMatch[1].toLowerCase() : null;
-          await handleIOSPrompt(); // Web 環境下的 iOS 提示
+          await handleIOSPrompt();
         }
         const initialLang = urlLang || savedLang || 'zh-TW';
         await i18n.changeLanguage(initialLang);
         await AsyncStorage.setItem(LANGUAGE_KEY, initialLang);
         console.log('Initial language:', initialLang);
         console.log('App version:', Constants.expoConfig?.version);
-
-        // 檢查更新
         await checkForUpdates();
       } catch (error) {
         console.error('Failed to initialize app:', error);
-        await i18n.changeLanguage('zh-TW'); // 默認語言
-        await checkForUpdates(); // 即使失敗也檢查更新
+        await i18n.changeLanguage('zh-TW');
+        await checkForUpdates();
       } finally {
         setLangLoaded(true);
       }
@@ -58,87 +55,83 @@ export default function RootLayout() {
     initializeApp();
   }, []);
 
-  // 當字體和語言都加載完成時隱藏啟動畫面
   useEffect(() => {
     if (loaded && langLoaded) {
       SplashScreen.hideAsync();
     }
   }, [loaded, langLoaded]);
 
-  // 返回按鈕處理
   const handleBack = () => {
     if (router.canGoBack()) {
       router.back();
     } else {
-      router.replace('/'); // 默認返回到 HomeScreen (index)
+      router.replace('/');
     }
   };
 
-  // 如果字體或語言未加載完成，返回 null
   if (!loaded || !langLoaded) {
     return null;
   }
 
   return (
-    <Stack
-      screenOptions={{
-        headerShown: true, // 啟用 header
-        headerStyle: { backgroundColor: '#121212' },
-        headerTintColor: '#ffffff',
-        headerLeft: () => (
-          <TouchableOpacity onPress={handleBack} style={{ paddingLeft: 16 }}>
-            <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
-          </TouchableOpacity>
-        ),
-        headerRight: () => null, // 默認不顯示右側按鈕
-      }}
-    >
-      <Stack.Screen name="index" /> {/* HomeScreen 使用默認 header */}
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> {/* Tab Layout 使用默認 header */}
-      <Stack.Screen name="words/menu" /> {/* Words Menu 使用默認 header */}
-      <Stack.Screen
-        name="words/[level]"
-        options={{
-          headerRight: () => (
-            <TouchableOpacity
-              onPress={() => {
-                // 這裡無法直接控制 WordsScreen 的 drawer，需通過其他方式（如全局狀態）
-                // 暫時留空，後續在 WordsScreen 中處理
-              }}
-              style={{ paddingRight: 16 }}
-            >
-              <IoniconsWeb name="menu" size={24} color="#ffffff" />
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Stack
+        screenOptions={{
+          headerShown: true,
+          headerStyle: { backgroundColor: '#121212' },
+          headerTintColor: '#ffffff',
+          headerLeft: () => (
+            <TouchableOpacity onPress={handleBack} style={{ paddingLeft: 16 }}>
+              <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
             </TouchableOpacity>
           ),
+          headerRight: () => null,
         }}
-      />
-      <Stack.Screen
-        name="[namespace]"
-        options={({ route }) => {
-          // 從 route.params 中提取 namespace，並確保是字符串
-          const namespace =
-            typeof route.params === 'object' && 'namespace' in route.params
-              ? String(route.params.namespace)
-              : undefined;
-          return {
-            title:
-              namespace === 'story'
-                ? t('menu.story')
-                : namespace === 'n5chat'
-                ? t('menu.n5_chat')
-                : namespace === 'travelchat'
-                ? t('headerTitle.travelMenu')
-                : 'Menu', // 默認標題
-          };
-        }}
-      />
-     {/*  HomeScreen header title settings */}
-      <Stack.Screen name="hiragana" options={{ headerTitle: t('menu.hiragana') }} />
-      <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
-      <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
-      <Stack.Screen name="phonetics" options={{ headerTitle: t('menu.phonetics') }} />
-      <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
-      <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
-    </Stack>
+      >
+        <Stack.Screen name="index" />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="words/menu" />
+        <Stack.Screen
+          name="words/[level]"
+          options={{
+            headerRight: () => (
+              <TouchableOpacity
+                onPress={() => {
+                  // Drawer toggle logic would need to be handled in WordsScreen
+                }}
+                style={{ paddingRight: 16 }}
+              >
+                <IoniconsWeb name="menu" size={24} color="#ffffff" />
+              </TouchableOpacity>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="[namespace]"
+          options={({ route }) => {
+            const namespace =
+              typeof route.params === 'object' && 'namespace' in route.params
+                ? String(route.params.namespace)
+                : undefined;
+            return {
+              title:
+                namespace === 'story'
+                  ? t('menu.story')
+                  : namespace === 'n5chat'
+                  ? t('menu.n5_chat')
+                  : namespace === 'travelchat'
+                  ? t('headerTitle.travelMenu')
+                  : 'Menu',
+            };
+          }}
+        />
+        <Stack.Screen name="hiragana" options={{ headerTitle: t('menu.hiragana') }} />
+        <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
+        <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
+        <Stack.Screen name="phonetics" options={{ headerTitle: t('menu.phonetics') }} />
+        <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
+        <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
+      </Stack>
+    </GestureHandlerRootView>
   );
 }
