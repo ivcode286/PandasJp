@@ -77,6 +77,7 @@ export default function RootLayout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Stack
         screenOptions={{
+          gestureEnabled: true,
           headerShown: true,
           headerStyle: { backgroundColor: '#121212' },
           headerTintColor: '#ffffff',
