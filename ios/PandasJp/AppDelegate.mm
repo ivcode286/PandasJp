@@ -10,13 +10,20 @@
   self.moduleName = @"PandasJp"; // 與 package.json 的 name 一致
   self.initialProps = @{};
 
+  // 初始化 bridge 與 rootView
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                   moduleName:self.moduleName
                                            initialProperties:self.initialProps];
 
   rootView.backgroundColor = [UIColor blackColor];
-  CustomNavigationController *navController = [[CustomNavigationController alloc] initWithRootViewController:rootView];
+
+  // 將 rootView 包進 UIViewController，再交給 CustomNavigationController
+  UIViewController *rootViewController = [UIViewController new];
+  rootViewController.view = rootView;
+
+  CustomNavigationController *navController = [[CustomNavigationController alloc] initWithRootViewController:rootViewController];
+
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.window.rootViewController = navController;
   [self.window makeKeyAndVisible];
