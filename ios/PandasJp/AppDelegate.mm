@@ -7,7 +7,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  self.moduleName = @"pandasjp"; // 與 package.json 的 name 一致
+  self.moduleName = @"PandasJp"; // 與 package.json 的 name 一致
   self.initialProps = @{};
 
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
