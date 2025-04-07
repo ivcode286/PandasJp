@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, ScrollView, useColorScheme, SafeAreaView, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 
 const KANA_LIST = [
@@ -17,7 +16,6 @@ const KANA_LIST = [
 ];
 
 const KanaComparisonScreen = () => {
-  const navigation = useNavigation();
   const colorScheme = useColorScheme();
   const isDark = colorScheme === 'dark';
   const { speak } = useTextToSpeech();

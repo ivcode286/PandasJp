@@ -4,7 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { HapticTab } from "@/components/HapticTab";
 import TabBarBackground from "@/components/ui/TabBarBackground";
-import "../../src/locales/i18n";
+import "@/src/locales/i18n";
 import React from "react";
 
 export default function TabsLayout() {

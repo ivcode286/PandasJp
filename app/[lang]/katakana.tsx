@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useTranslation } from "react-i18next";
 import useTextToSpeech from "@/hooks/useTextToSpeech";
-import { KatakanaTranslation } from "../src/types/translation";
+import { KatakanaTranslation } from "@/src/types/translation";
 
 export const KatakanaTable = () => {
   const theme = useColorScheme();

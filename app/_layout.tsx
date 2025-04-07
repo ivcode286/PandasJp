@@ -7,9 +7,9 @@ import { useFonts } from 'expo-font';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import { useTranslation } from 'react-i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import i18n from '../src/locales/i18n';
-import { handleIOSPrompt } from '../src/utils/deviceCheck';
-import { checkForUpdates } from '../src/utils/updateCheck';
+import i18n from '@/src/locales/i18n';
+import { handleIOSPrompt } from '@/src/utils/deviceCheck';
+import { checkForUpdates } from '@/src/utils/updateCheck';
 import Constants from 'expo-constants';
 import {
   GestureHandlerRootView,

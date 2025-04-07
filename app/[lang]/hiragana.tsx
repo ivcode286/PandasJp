@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useTranslation } from "react-i18next";
 import useTextToSpeech from "@/hooks/useTextToSpeech";
-import { HiraganaTranslation } from "../src/types/translation"; 
+import { HiraganaTranslation } from "@/src/types/translation"; 
 
 export const HiraganaTable = () => {
   const theme = useColorScheme();
