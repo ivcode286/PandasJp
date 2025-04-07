@@ -1,23 +1,52 @@
 // app/_layout.tsx
+import React, { useEffect, useState, useRef } from 'react';
+import { Platform, TouchableOpacity, View, Text } from 'react-native';
 import { Stack, useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect, useState } from 'react';
 import { useFonts } from 'expo-font';
-import { TouchableOpacity } from 'react-native';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import { useTranslation } from 'react-i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import i18n from '../src/locales/i18n';
-import { Platform } from 'react-native';
 import { handleIOSPrompt } from '../src/utils/deviceCheck';
 import { checkForUpdates } from '../src/utils/updateCheck';
 import Constants from 'expo-constants';
-import React from 'react';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import {
+  GestureHandlerRootView,
+  PanGestureHandler,
+  State as GestureState,
+} from 'react-native-gesture-handler';
 
 SplashScreen.preventAutoHideAsync();
 
 const LANGUAGE_KEY = 'app_language';
+
+// 自定義手勢包覆元件：在 native 平台上，偵測從左側開始的滑動手勢，若滿足條件則觸發返回
+function GestureBackWrapper({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
+  const startXRef = useRef(0);
+
+  const onHandlerStateChange = (event: any) => {
+    const { state, translationX, x } = event.nativeEvent;
+    if (state === GestureState.BEGAN) {
+      startXRef.current = x;
+    }
+    if (state === GestureState.END) {
+      // If the gesture begins within the left 250px of the screen and swipes to the right by more than 50, then trigger the back action.
+      if (startXRef.current < 250 && translationX > 50) {
+        if (router.canGoBack()) {
+          router.back();
+        }
+      }
+    }
+  };
+
+  return (
+    <PanGestureHandler onHandlerStateChange={onHandlerStateChange}>
+      <View style={{ flex: 1 }}>{children}</View>
+    </PanGestureHandler>
+  );
+}
 
 export default function RootLayout() {
   const [loaded] = useFonts({
@@ -73,65 +102,70 @@ export default function RootLayout() {
     return null;
   }
 
-  return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <Stack
-        screenOptions={{
-          headerShown: true,
-          headerStyle: { backgroundColor: '#121212' },
-          headerTintColor: '#ffffff',
-          headerLeft: () => (
-            <TouchableOpacity onPress={handleBack} style={{ paddingLeft: 16 }}>
-              <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
+  // 原本由 Expo Router file-based routing 所產生的 Stack
+  const content = (
+    <Stack
+      screenOptions={{
+        headerShown: true,
+        headerStyle: { backgroundColor: '#121212' },
+        headerTintColor: '#ffffff',
+        headerLeft: () => (
+          <TouchableOpacity onPress={handleBack} style={{ paddingLeft: 16 }}>
+            <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
+          </TouchableOpacity>
+        ),
+        headerRight: () => null,
+      }}
+    >
+      <Stack.Screen name="index" />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="words/menu" />
+      <Stack.Screen
+        name="words/[level]"
+        options={{
+          headerRight: () => (
+            <TouchableOpacity
+              onPress={() => {
+                // Drawer toggle logic，可依需求在 WordsScreen 處理
+              }}
+              style={{ paddingRight: 16 }}
+            >
+              <IoniconsWeb name="menu" size={24} color="#ffffff" />
             </TouchableOpacity>
           ),
-          headerRight: () => null,
         }}
-      >
-        <Stack.Screen name="index" />
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="words/menu" />
-        <Stack.Screen
-          name="words/[level]"
-          options={{
-            headerRight: () => (
-              <TouchableOpacity
-                onPress={() => {
-                  // Drawer toggle logic would need to be handled in WordsScreen
-                }}
-                style={{ paddingRight: 16 }}
-              >
-                <IoniconsWeb name="menu" size={24} color="#ffffff" />
-              </TouchableOpacity>
-            ),
-          }}
-        />
-        <Stack.Screen
-          name="[namespace]"
-          options={({ route }) => {
-            const namespace =
-              typeof route.params === 'object' && 'namespace' in route.params
-                ? String(route.params.namespace)
-                : undefined;
-            return {
-              title:
-                namespace === 'story'
-                  ? t('menu.story')
-                  : namespace === 'n5chat'
-                  ? t('menu.n5_chat')
-                  : namespace === 'travelchat'
-                  ? t('headerTitle.travelMenu')
-                  : 'Menu',
-            };
-          }}
-        />
-        <Stack.Screen name="hiragana" options={{ headerTitle: t('menu.hiragana') }} />
-        <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
-        <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
-        <Stack.Screen name="phonetics" options={{ headerTitle: t('menu.phonetics') }} />
-        <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
-        <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
-      </Stack>
+      />
+      <Stack.Screen
+        name="[namespace]"
+        options={({ route }) => {
+          const namespace =
+            typeof route.params === 'object' && 'namespace' in route.params
+              ? String(route.params.namespace)
+              : undefined;
+          return {
+            title:
+              namespace === 'story'
+                ? t('menu.story')
+                : namespace === 'n5chat'
+                ? t('menu.n5_chat')
+                : namespace === 'travelchat'
+                ? t('headerTitle.travelMenu')
+                : 'Menu',
+          };
+        }}
+      />
+      <Stack.Screen name="hiragana" options={{ headerTitle: t('menu.hiragana') }} />
+      <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
+      <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
+      <Stack.Screen name="phonetics" options={{ headerTitle: t('menu.phonetics') }} />
+      <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
+      <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
+    </Stack>
+  );
+
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      {Platform.OS === 'web' ? content : <GestureBackWrapper>{content}</GestureBackWrapper>}
     </GestureHandlerRootView>
   );
 }
