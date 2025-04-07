@@ -2,6 +2,8 @@
 #import <UIKit/UIKit.h>
 #import <Expo/Expo.h>
 
-@interface AppDelegate : EXAppDelegateWrapper
+@interface AppDelegate : EXAppDelegateWrapper <UIGestureRecognizerDelegate>
+
+@property (nonatomic, strong) UIWindow *window;
 
 @end

@@ -13,7 +13,18 @@
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
 
-  return [super application:application didFinishLaunchingWithOptions:launchOptions];
+  // 初始化窗口
+  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  
+  // 創建一個 UINavigationController 並設為根視圖控制器
+  UINavigationController *navController = [[UINavigationController alloc] init];
+  navController.interactivePopGestureRecognizer.delegate = self; // 設置手勢代理為 AppDelegate
+  self.window.rootViewController = navController;
+
+  BOOL success = [super application:application didFinishLaunchingWithOptions:launchOptions];
+  [self.window makeKeyAndVisible]; // 確保窗口可見
+
+  return success;
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
@@ -28,6 +39,19 @@
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
+}
+
+// 自定義手勢識別範圍
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+  CGPoint location = [touch locationInView:self.window];
+  // 將手勢觸發範圍擴大到 250 像素
+  NSLog(@"Touch location: %f", location.x); // 調試用，可移除
+  return location.x <= 250;
+}
+
+// 確保手勢總是啟用（可選）
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+  return YES;
 }
 
 // Linking API
