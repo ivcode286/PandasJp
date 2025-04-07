@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useTranslation } from "react-i18next";
 import { HiraganaTable } from "./hiragana";
-import useTextToSpeech from "../hooks/useTextToSpeech";
+import useTextToSpeech from "../../hooks/useTextToSpeech";
 
 // 定義各個資料項目的型別
 type DakuonItem = {

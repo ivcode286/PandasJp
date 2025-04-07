@@ -208,6 +208,7 @@ export default function WordsScreen() {
                 </View>
               )}
               stickySectionHeadersEnabled={false}
+              // @ts-ignore
               getItemLayout={getItemLayout}
               contentContainerStyle={styles.sectionListContent}
             />

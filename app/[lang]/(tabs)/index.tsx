@@ -1,35 +1,38 @@
-// app/index.tsx
 import React from 'react';
 import { View, ScrollView, StyleSheet, Text, TouchableOpacity, StatusBar } from 'react-native';
-import { Link } from 'expo-router';
+import { Link, useLocalSearchParams } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import { LEVELS } from '@/src/utils/constants';
 
 export default function HomeScreen() {
   const { t, i18n } = useTranslation('home');
+  const { lang } = useLocalSearchParams();
+  const langPrefix = `/${(lang as string).toLowerCase()}`;
+
+  const getLangHref = (path: string) => {
+    return `${langPrefix}${path.startsWith('/') ? path : `/${path}`}`;
+  };
 
   const menuItems = [
-    { title: t('menu.hiragana'), href: '/hiragana' },
-    { title: t('menu.katakana'), href: '/katakana' },
-    { title: t('menu.kana_comparison'), href: '/kana-comparison' },
-    { title: t('menu.phonetics'), href: '/phonetics' },
-    { title: t('menu.words_n5'), href: `/words/n5` }, // 改為動態路由
-    { title: t('menu.kanji_n5'), href: `/words/n5-kanji` }, // 改為動態路由
-    { title: t('menu.n5_concepts'), href: '/n5-concepts' },
-    { title: t('menu.grammar_concepts'), href: '/grammar-concepts' },
-    { title: t('menu.n5_basic_grammar'), href: `/grammar/${LEVELS.N5_BASIC_GRAMMAR}` }, // 直接訪問動態路由
-    { title: t('menu.n5_advance_grammar'), href: `/grammar/${LEVELS.N5_ADVANCE_GRAMMAR}` }, // 直接訪問動態路由
-    { title: t('menu.n5_chat'), href: '/n5chat' },
-    { title: t('menu.story'), href: '/story' },
+    { title: t('menu.hiragana'), href: getLangHref('/hiragana') },
+    { title: t('menu.katakana'), href: getLangHref('/katakana') },
+    { title: t('menu.kana_comparison'), href: getLangHref('/kana-comparison') },
+    { title: t('menu.phonetics'), href: getLangHref('/phonetics') },
+    { title: t('menu.words_n5'), href: getLangHref('/words/n5') },
+    { title: t('menu.kanji_n5'), href: getLangHref('/words/n5-kanji') },
+    { title: t('menu.n5_concepts'), href: getLangHref('/n5-concepts') },
+    { title: t('menu.grammar_concepts'), href: getLangHref('/grammar-concepts') },
+    { title: t('menu.n5_basic_grammar'), href: getLangHref(`/grammar/${LEVELS.N5_BASIC_GRAMMAR}`) },
+    { title: t('menu.n5_advance_grammar'), href: getLangHref(`/grammar/${LEVELS.N5_ADVANCE_GRAMMAR}`) },
+    { title: t('menu.n5_chat'), href: getLangHref('/n5chat') },
+    { title: t('menu.story'), href: getLangHref('/story') },
   ];
-
 
   const secondMenuItems = [
-    { title: t('menu.n4_basic_grammar'), href: `/grammar/${LEVELS.N4_BASIC_GRAMMAR}` },
-    { title: t('menu.words_n4_n3'), href: '/words/n4-n3' },
+    { title: t('menu.n4_basic_grammar'), href: getLangHref(`/grammar/${LEVELS.N4_BASIC_GRAMMAR}`) },
+    { title: t('menu.words_n4_n3'), href: getLangHref('/words/n4-n3') },
   ];
-  
 
   const changeLanguage = (lang: 'zh-TW' | 'zh-CN') => {
     i18n.changeLanguage(lang);
@@ -65,17 +68,18 @@ export default function HomeScreen() {
               </TouchableOpacity>
             </View>
           </View>
+
           {menuItems.map((item, idx) => (
-              // @ts-ignore
             <Link href={item.href} key={idx} asChild>
               <TouchableOpacity style={styles.card}>
                 <Text style={styles.cardText}>• {item.title}</Text>
               </TouchableOpacity>
             </Link>
           ))}
-           <Text style={styles.header}>{t('n4title')}</Text>
-               {secondMenuItems.map((item, idx) => (
-              // @ts-ignore
+
+          <Text style={styles.header}>{t('n4title')}</Text>
+
+          {secondMenuItems.map((item, idx) => (
             <Link href={item.href} key={idx} asChild>
               <TouchableOpacity style={styles.card}>
                 <Text style={styles.cardText}>• {item.title}</Text>
