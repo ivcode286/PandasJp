@@ -1,5 +1,5 @@
 // app/(tabs)/settings.tsx
-import React from "react";
+import React from 'react';
 import {
   View,
   Text,
@@ -7,82 +7,66 @@ import {
   useColorScheme,
   TouchableOpacity,
   ScrollView,
-} from "react-native";
-import { useTranslation } from "react-i18next";
-import { changeLanguage } from "@/src/utils/languageService"; // 統一路徑為 @/src
-import { router } from "expo-router";
+} from 'react-native';
+import { useTranslation } from 'react-i18next';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { router, useLocalSearchParams } from 'expo-router';
+import i18n from '@/src/locales/i18n';
 
 const SettingsScreen: React.FC = () => {
-  const isDark = useColorScheme() === "dark"; // 根據系統主題決定深色或淺色模式
-  const styles = getStyles(isDark); // 動態生成樣式
-  const { t, i18n } = useTranslation("settings"); // 使用 i18n 翻譯 "settings" namespace
+  const isDark = useColorScheme() === 'dark';
+  const styles = getStyles(isDark);
+  const { t } = useTranslation('settings');
+  const { lang } = useLocalSearchParams();
 
-  // 處理語言切換的函數
-  const handleLanguageChange = async (lang: "zh-TW" | "zh-CN") => {
-    console.log("正在切換語言至:", lang);
-    await changeLanguage(lang); // 假設這是一個異步函數，用於改變應用程式語言
-    console.log("已切換語言至:", lang);
-    // 不需要 router.replace，因為 i18n 會自動更新 UI
-    // 如果需要強制重新載入頁面，可以使用 router.replace("/(tabs)/settings")
-  };
+  const handleLanguageChange = async (newLang: 'zh-TW' | 'zh-CN') => {
+    const newLangPath = newLang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
 
-  // 處理點擊「隱私政策」的導航
-  const handlePrivacyPolicy = () => {
-    router.push("../privacy-policy"); // 導航到 app/privacy-policy.tsx
+    await i18n.changeLanguage(newLang);
+    await AsyncStorage.setItem('app_language', newLang);
+
+    router.replace(`/${newLangPath}/(tabs)/settings`);
   };
 
   return (
     <ScrollView style={styles.container}>
-      {/* 標題 */}
-      <Text style={styles.title}>{t("translation.title")}</Text>
+      <Text style={styles.title}>{t('translation.title')}</Text>
 
-      {/* 語言選擇區塊 */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>{t("translation.languageSection")}</Text>
-        {/* 繁體中文按鈕 */}
+        <Text style={styles.sectionTitle}>{t('translation.languageSection')}</Text>
+
         <TouchableOpacity
           style={[
             styles.optionButton,
-            i18n.language === "zh-TW" && styles.optionButtonSelected,
+            i18n.language === 'zh-TW' && styles.optionButtonSelected,
           ]}
-          onPress={() => handleLanguageChange("zh-TW")}
+          onPress={() => handleLanguageChange('zh-TW')}
         >
           <Text
             style={[
               styles.optionText,
-              i18n.language === "zh-TW" && styles.optionTextSelected,
+              i18n.language === 'zh-TW' && styles.optionTextSelected,
             ]}
           >
-            {t("translation.languages.traditionalChinese")}
+            {t('translation.languages.traditionalChinese')}
           </Text>
         </TouchableOpacity>
-        {/* 簡體中文按鈕 */}
+
         <TouchableOpacity
           style={[
             styles.optionButton,
-            i18n.language === "zh-CN" && styles.optionButtonSelected,
+            i18n.language === 'zh-CN' && styles.optionButtonSelected,
           ]}
-          onPress={() => handleLanguageChange("zh-CN")}
+          onPress={() => handleLanguageChange('zh-CN')}
         >
           <Text
             style={[
               styles.optionText,
-              i18n.language === "zh-CN" && styles.optionTextSelected,
+              i18n.language === 'zh-CN' && styles.optionTextSelected,
             ]}
           >
-            {t("translation.languages.simplifiedChinese")}
+            {t('translation.languages.simplifiedChinese')}
           </Text>
-        </TouchableOpacity>
-      </View>
-
-      {/* 隱私政策區塊 */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Privacy Policy</Text>
-        <TouchableOpacity
-          style={styles.optionButton}
-          onPress={handlePrivacyPolicy}
-        >
-          <Text style={styles.optionText}>Privacy Policy</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

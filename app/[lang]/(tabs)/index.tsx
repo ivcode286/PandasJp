@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet, Text, TouchableOpacity, StatusBar } from 'react-native';
-import { Link, useLocalSearchParams } from 'expo-router';
+import { Link, useLocalSearchParams, useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import { LEVELS } from '@/src/utils/constants';
@@ -9,7 +9,8 @@ export default function HomeScreen() {
   const { t, i18n } = useTranslation('home');
   const { lang } = useLocalSearchParams();
   const langPrefix = `/${(lang as string).toLowerCase()}`;
-
+  const router = useRouter();
+  
   const getLangHref = (path: string) => {
     return `${langPrefix}${path.startsWith('/') ? path : `/${path}`}`;
   };
@@ -34,8 +35,11 @@ export default function HomeScreen() {
     { title: t('menu.words_n4_n3'), href: getLangHref('/words/n4-n3') },
   ];
 
-  const changeLanguage = (lang: 'zh-TW' | 'zh-CN') => {
-    i18n.changeLanguage(lang);
+  const changeLanguage = async (lang: 'zh-TW' | 'zh-CN') => {
+    await i18n.changeLanguage(lang);
+  
+    const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
+    router.replace(`/${newLangPath}`);
   };
 
   return (

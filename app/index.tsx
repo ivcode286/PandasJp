@@ -13,11 +13,10 @@ export default function IndexRedirectScreen() {
   useEffect(() => {
     (async () => {
       const savedLang = await AsyncStorage.getItem(LANGUAGE_KEY);
-      const browserLang = navigator.language.toLowerCase();
-      const inferredLang =
-        savedLang || (browserLang.includes('zh-cn') ? 'zh-cn' : 'zh-tw');
+      const browserLang = typeof navigator !== 'undefined' ? navigator.language.toLowerCase() : '';
+      const inferredLang = savedLang || (browserLang.includes('zh-cn') ? 'zh-cn' : 'zh-tw');
       const normalizedLang = inferredLang.toLowerCase(); // zh-tw or zh-cn
-      router.replace(`/${normalizedLang}`);
+      router.replace(`/${normalizedLang}/(tabs)`);
       setLoading(false);
     })();
   }, []);
