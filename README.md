@@ -122,7 +122,7 @@ app/
 │   │   ├── useTextToSpeech.ts           
 
 
-│   ├── src/                    # Vocabulary section
+│   ├── src/                    
 │   │   ├── utils/           
 │   │   ├──constants.ts
 │   │   ├──deviceCheck.ts

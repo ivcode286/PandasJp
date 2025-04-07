@@ -1,3 +1,4 @@
+//app/[lang]/(tabs)/index.tsx
 import React from 'react';
 import { View, ScrollView, StyleSheet, Text, TouchableOpacity, StatusBar } from 'react-native';
 import { Link, useLocalSearchParams, useRouter, Href } from 'expo-router';
