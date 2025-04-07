@@ -1,4 +1,4 @@
-// app/[namespace]/_layout.tsx
+// app/[lang]/[namespace]/_layout.tsx
 import { Stack } from 'expo-router';
 import React from 'react';
 

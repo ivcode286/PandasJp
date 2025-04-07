@@ -1,4 +1,4 @@
-// app/[namespace]/[storyTitle].tsx
+// app/[lang]/[namespace]/[storyTitle].tsx
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';

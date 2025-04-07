@@ -1,4 +1,4 @@
-// app/[namespace]/index.tsx
+// app/[lang]/[namespace]/index.tsx
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Link, useLocalSearchParams } from 'expo-router';
@@ -7,8 +7,13 @@ import { getImage } from '../../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
 export default function ContentMenu() {
-  const { namespace } = useLocalSearchParams<{ namespace: 'story' | 'n5chat' | 'travelchat' }>();
+  const { lang, namespace } = useLocalSearchParams<{
+    lang?: string;
+    namespace: 'story' | 'n5chat' | 'travelchat';
+  }>();
+
   const effectiveNamespace = namespace || 'story';
+  const langPrefix = `/${(lang || 'zh-tw').toLowerCase()}`;
 
   console.log(`Rendering ContentMenu for ${effectiveNamespace}`);
 
@@ -36,10 +41,17 @@ export default function ContentMenu() {
         keyExtractor={(item) => item.imageName || `${effectiveNamespace}-${Math.random()}`}
         renderItem={({ item }) => (
           item.imageName ? (
-            <Link href={`/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`} asChild>
+            <Link
+              href={`${langPrefix}/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`}
+              asChild
+            >
               <TouchableOpacity
                 style={styles.cardContainer}
-                onPress={() => console.log(`Navigating to /${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`)}
+                onPress={() =>
+                  console.log(
+                    `Navigating to ${langPrefix}/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`
+                  )
+                }
               >
                 <Image source={getImage(item.imageName)} style={styles.coverImage} />
                 <View style={styles.textContainer}>
