@@ -166,6 +166,7 @@ const PhoneticsScreen = () => {
     {
       key: "7",
       title: t("sections.summary.title"),
+      //@ts-ignore
       data: t("sections.summary.items", { returnObjects: true }).map((text: string, index: number) => ({
         key: `${index + 1}`,
         text,

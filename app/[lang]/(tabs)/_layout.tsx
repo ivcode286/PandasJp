@@ -9,6 +9,13 @@ import { HapticTab } from '@/components/HapticTab';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import React from 'react';
 
+// define tabBarIcon params
+interface TabBarIconProps {
+  color: string;
+  focused: boolean;
+  size: number;
+}
+
 export default function TabsLayout() {
   const { lang } = useLocalSearchParams();
   const [ready, setReady] = useState(false);
@@ -48,7 +55,7 @@ export default function TabsLayout() {
           name="index"
           options={{
             title: t('tabs.home'),
-            tabBarIcon: ({ color }) => (
+            tabBarIcon: ({ color }: TabBarIconProps) => (
               <IconSymbol size={28} name="house.fill" color={color || 'white'} />
             ),
           }}
@@ -57,7 +64,7 @@ export default function TabsLayout() {
           name="travelChat"
           options={{
             title: t('tabs.travel'),
-            tabBarIcon: ({ color }) => (
+            tabBarIcon: ({ color }: TabBarIconProps) => (
               <IconSymbol size={28} name="paperplane.fill" color={color || 'white'} />
             ),
           }}
@@ -66,7 +73,7 @@ export default function TabsLayout() {
           name="settings"
           options={{
             title: t('tabs.settings'),
-            tabBarIcon: ({ color }) => (
+            tabBarIcon: ({ color }: TabBarIconProps) => (
               <IconSymbol size={28} name="gearshape.fill" color={color || 'white'} />
             ),
           }}

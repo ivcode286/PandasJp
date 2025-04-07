@@ -1,21 +1,26 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet, Text, TouchableOpacity, StatusBar } from 'react-native';
-import { Link, useLocalSearchParams, useRouter } from 'expo-router';
+import { Link, useLocalSearchParams, useRouter, Href } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import { LEVELS } from '@/src/utils/constants';
+
+type MenuItem = {
+  title: string;
+  href: Href; 
+};
 
 export default function HomeScreen() {
   const { t, i18n } = useTranslation('home');
   const { lang } = useLocalSearchParams();
   const langPrefix = `/${(lang as string).toLowerCase()}`;
   const router = useRouter();
-  
-  const getLangHref = (path: string) => {
-    return `${langPrefix}${path.startsWith('/') ? path : `/${path}`}`;
+
+  const getLangHref = (path: string): Href => {
+    return `${langPrefix}${path.startsWith('/') ? path : `/${path}`}` as Href;
   };
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     { title: t('menu.hiragana'), href: getLangHref('/hiragana') },
     { title: t('menu.katakana'), href: getLangHref('/katakana') },
     { title: t('menu.kana_comparison'), href: getLangHref('/kana-comparison') },
@@ -30,14 +35,13 @@ export default function HomeScreen() {
     { title: t('menu.story'), href: getLangHref('/story') },
   ];
 
-  const secondMenuItems = [
+  const secondMenuItems: MenuItem[] = [
     { title: t('menu.n4_basic_grammar'), href: getLangHref(`/grammar/${LEVELS.N4_BASIC_GRAMMAR}`) },
     { title: t('menu.words_n4_n3'), href: getLangHref('/words/n4-n3') },
   ];
 
   const changeLanguage = async (lang: 'zh-TW' | 'zh-CN') => {
     await i18n.changeLanguage(lang);
-  
     const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
     router.replace(`/${newLangPath}`);
   };
