@@ -7,7 +7,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFonts } from 'expo-font';
 import i18n from '@/src/locales/i18n';
-import { handleIOSPrompt } from '@/src/utils/deviceCheck';
+import { handleIOSPrompt, checkIOSDevice } from '@/src/utils/deviceCheck';
 import { checkForUpdates } from '@/src/utils/updateCheck';
 import Constants from 'expo-constants';
 import { useTranslation } from 'react-i18next';
@@ -29,7 +29,7 @@ function GestureBackWrapper({ children }: { children: React.ReactNode }) {
         if (Platform.OS === 'web') {
           window.history.back();
         } else if (router.canGoBack()) {
-          router.back(); // 原生環境使用 router.back()
+          router.back();
         }
       }
     }
@@ -48,10 +48,17 @@ export default function LangLayout() {
   const [loaded, error] = useFonts({
     SpaceMono: require('@/assets/fonts/SpaceMono-Regular.ttf'),
   });
+  const hasInitialized = useRef(false); // 用於追踪 initializeApp 是否已執行
 
   useEffect(() => {
+    if (hasInitialized.current) {
+      console.log('initializeApp already ran, skipping');
+      return;
+    }
+
     const initializeApp = async () => {
       try {
+        console.log('Starting initializeApp');
         const normalizedLang = typeof lang === 'string' && lang.toLowerCase() === 'zh-cn' ? 'zh-CN' : 'zh-TW';
 
         if (i18n.language !== normalizedLang) {
@@ -61,25 +68,39 @@ export default function LangLayout() {
         }
 
         console.log('App version:', Constants.expoConfig?.version);
-        await handleIOSPrompt();
-        await checkForUpdates();
 
-        if (loaded || error) {
-          console.log('Fonts loaded:', loaded, 'Error:', error);
-          SplashScreen.hideAsync().catch((err) => console.error('Failed to hide splash:', err));
+        const isIOSWeb = checkIOSDevice();
+        if (isIOSWeb) {
+          console.log('iOS Web detected, running handleIOSPrompt');
+          await handleIOSPrompt();
+        } else {
+          console.log('Non-iOS Web detected, running checkForUpdates');
+          await checkForUpdates();
         }
       } catch (err) {
         console.error('Failed to initialize app:', err);
-        SplashScreen.hideAsync().catch((err) => console.error('Failed to hide splash:', err));
+      } finally {
+        hasInitialized.current = true; // 標記為已執行
       }
     };
+
     initializeApp();
-  }, [lang, loaded, error]);
+  }, []); // 移除依賴陣列，僅在初次掛載時執行
+
+  useEffect(() => {
+    // 單獨處理字體載入完成後隱藏啟動畫面
+    if (loaded || error) {
+      console.log('Fonts loaded:', loaded, 'Error:', error);
+      SplashScreen.hideAsync().catch((err) => console.error('Failed to hide splash:', err));
+    }
+  }, [loaded, error]); // 僅在字體狀態變化時觸發
 
   if (!loaded && !error) {
+    console.log('Fonts not loaded yet, waiting...');
     return null;
   }
 
+  console.log('Rendering LangLayout');
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       {Platform.OS === 'web' ? (
@@ -135,8 +156,8 @@ export default function LangLayout() {
               options={({ route }) => {
                 const namespace =
                   typeof route.params === 'object' && 'namespace' in route.params
-                    ? String(route.params.namespace)
-                    : undefined;
+                  ? String(route.params.namespace)
+                  : undefined;
                 return {
                   title:
                     namespace === 'story'

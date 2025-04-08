@@ -29,7 +29,6 @@ export const handleIOSPrompt = async (): Promise<void> => {
     return;
   }
 
-  // 僅在 iPhone Web 環境執行以下邏輯
   const message = `${i18n.t('appPrompt:title')}\n${i18n.t('appPrompt:message')}`;
   const shouldDownload = window.confirm(message);
   if (shouldDownload) {
