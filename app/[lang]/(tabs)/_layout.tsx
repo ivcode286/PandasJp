@@ -9,7 +9,6 @@ import { HapticTab } from '@/components/HapticTab';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import React from 'react';
 
-// define tabBarIcon params
 interface TabBarIconProps {
   color: string;
   focused: boolean;
@@ -61,7 +60,7 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="travelChat"
+          name="travelChat" // 指向 (tabs) 下的 travelChat.tsx
           options={{
             title: t('tabs.travel'),
             tabBarIcon: ({ color }: TabBarIconProps) => (

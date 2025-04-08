@@ -101,7 +101,7 @@ app/
 │   │   ├── _layout.tsx           # Tabs layout (BottomTabNavigator)
 │   │   ├── index.tsx             # Home screen with language switch + main links
 │   │   └── settings.tsx          # Settings screen with language switch and routing sync
-│
+│   │   └── travelChat.tsx        # refer to [namespace]/ 
 │   ├── hiragana.tsx              # Hiragana page
 │   ├── katakana.tsx              # Katakana page
 │   ├── kana-comparison.tsx       # Kana comparison page
