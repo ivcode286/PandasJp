@@ -29,7 +29,7 @@ function GestureBackWrapper({ children }: { children: React.ReactNode }) {
         if (Platform.OS === 'web') {
           window.history.back();
         } else if (router.canGoBack()) {
-          router.back(); // 原生环境使用 router.back()
+          router.back(); // 原生環境使用 router.back()
         }
       }
     }

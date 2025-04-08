@@ -94,7 +94,7 @@ export default function WordsScreen() {
 
   const levelString = Array.isArray(level) ? level[0] : level;
   const drawerWidth = 200;
-  const gestureAreaWidth = Platform.OS === 'web' ? drawerWidth : 300; // iOS 上擴展到 300px
+  const gestureAreaWidth = Platform.OS === 'web' ? drawerWidth : 350; // iOS 上擴展到 350px
   const translateX = useSharedValue(drawerWidth); // Start closed
 
   const toggleDrawer = (open: boolean) => {
