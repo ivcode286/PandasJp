@@ -54,12 +54,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pandasapps.com/zh-tw/SettingsScreen</loc>
-    <lastmod>2025-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://pandasapps.com/zh-tw/privacy-policy</loc>
     <lastmod>2025-04-08</lastmod>
     <changefreq>yearly</changefreq>
@@ -125,6 +119,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/(tabs)/settings</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- 核心學習頁面 (zh-cn) -->
   <url>
@@ -153,12 +153,6 @@
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/settings</loc>
-    <lastmod>2025-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pandasapps.com/zh-cn/SettingsScreen</loc>
     <lastmod>2025-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -225,6 +219,12 @@
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/screens/WordsScreen</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/(tabs)/settings</loc>
     <lastmod>2025-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
