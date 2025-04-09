@@ -89,9 +89,6 @@ app/
 ├── index.tsx                     # Redirect to /zh-tw or /zh-cn based on saved language or browser
 ├── _layout.tsx                   # Root layout: detect language and redirect using <Redirect />
 ├── +not-found.tsx                # Fallback for unknown routes
-
-
-
 ├── [lang]/                       # Language namespace (zh-tw, zh-cn)
 │   ├── _layout.tsx               # Per-language layout (load fonts, language, handle splash, gestures)
 │

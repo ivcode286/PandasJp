@@ -6,20 +6,17 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useFonts } from 'expo-font';
 import i18n from '@/src/locales/i18n';
 import { useTranslation } from 'react-i18next';
-import Constants from 'expo-constants';
 
-// 定義支援的語言
+// Define supported languages
 const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'];
 
-// 靜態參數生成
 export async function generateStaticParams() {
   return SUPPORTED_LANGUAGES.map((lang) => ({ lang }));
 }
 
 export default function LangLayout() {
-  // 在客戶端渲染時，使用 useLocalSearchParams 獲取 lang
   const params = useLocalSearchParams();
-  const lang = params.lang || 'zh-tw'; // 提供預設值以避免 undefined
+  const lang = params.lang || 'zh-tw'; // Default to 'zh-tw' if undefined
 
   const { t } = useTranslation('home');
 
@@ -27,14 +24,13 @@ export default function LangLayout() {
     SpaceMono: require('@/assets/fonts/SpaceMono-Regular.ttf'),
   });
 
-  // 在靜態生成中，語言應在構建時確定
   const normalizedLang = lang.toLowerCase() === 'zh-cn' ? 'zh-CN' : 'zh-TW';
   if (i18n.language !== normalizedLang) {
-    i18n.changeLanguage(normalizedLang); // 這裡假設 i18n 在構建時可用
+    i18n.changeLanguage(normalizedLang);
   }
 
   if (!loaded && !error) {
-    return null; // 在靜態生成中，這部分會在客戶端處理
+    return null; // Font loading handled client-side
   }
 
   return (
@@ -52,6 +48,7 @@ export default function LangLayout() {
           <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
           <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
           <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
+          <Stack.Screen name="grammar" options={{ headerShown: false }} /> {/* Add grammar route */}
           <Stack.Screen
             name="[namespace]"
             options={({ route }) => {
@@ -87,6 +84,7 @@ export default function LangLayout() {
             <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
             <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
             <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
+            <Stack.Screen name="grammar" options={{ headerShown: false }} /> {/* Add grammar route */}
             <Stack.Screen
               name="[namespace]"
               options={({ route }) => {
@@ -97,12 +95,12 @@ export default function LangLayout() {
                 return {
                   title:
                     namespace === 'story'
-                      ? t('menu.story')
-                      : namespace === 'n5chat'
-                      ? t('menu.n5_chat')
-                      : namespace === 'travelchat'
-                      ? t('headerTitle.travelMenu')
-                      : 'Menu',
+                    ? t('menu.story')
+                    : namespace === 'n5chat'
+                    ? t('menu.n5_chat')
+                    : namespace === 'travelchat'
+                    ? t('headerTitle.travelMenu')
+                    : 'Menu',
                 };
               }}
             />

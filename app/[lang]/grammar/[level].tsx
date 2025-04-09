@@ -1,21 +1,14 @@
-// app/grammar/[level].tsx
+// app/[lang]/grammar/[level].tsx
 import React from 'react';
 import { View, Text, SectionList, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import useTextToSpeech from '@/hooks/useTextToSpeech';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
-
-// 靜態參數生成（這裡不需要，因為已在 _layout.tsx 中定義，但保留一致性）
-export async function generateStaticParams() {
-  return [
-    { level: LEVELS.N5_BASIC_GRAMMAR },
-    { level: LEVELS.N5_ADVANCE_GRAMMAR },
-  ];
-}
+import i18n from '@/src/locales/i18n';
+import useTextToSpeech from '@/hooks/useTextToSpeech';
 
 interface TransformedSection {
   pattern: string;
@@ -36,28 +29,101 @@ const getItemLayout = sectionListGetItemLayout({
   getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
 });
 
-export default function GrammarScreen() {
-  const { speak } = useTextToSpeech();
-  const { level } = useLocalSearchParams<{ level: string }>();
-  const { t } = useTranslation('grammar');
+// Define static params for this route
+export async function generateStaticParams({ params }: { params: { lang: string } }) {
+  const { lang } = params;
+  const levels = [LEVELS.N5_BASIC_GRAMMAR, LEVELS.N5_ADVANCE_GRAMMAR];
 
-  // 直接獲取並轉換數據（無需 useEffect）
+  console.log('Generating static params in [level].tsx for lang:', lang);
+
+  const staticParams = levels.map((level) => ({
+    level,
+  }));
+
+  console.log('Generated static params in [level].tsx:', staticParams);
+  return staticParams;
+}
+
+// Fetch static props for each route
+export async function getStaticProps({ params }: { params: { lang: string; level: string } }) {
+  const { lang, level } = params;
+
+  console.log('getStaticProps params in [level].tsx:', { lang, level });
+
+  const normalizedLang = lang === 'zh-cn' ? 'zh-CN' : 'zh-TW';
+  await i18n.changeLanguage(normalizedLang);
+
   const namespace = level === LEVELS.N5_ADVANCE_GRAMMAR ? 'n5_advance' : 'n5_basic';
-  const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
+  const grammarData = i18n.t(`grammar:${namespace}.chapters`, { returnObjects: true });
+
+  if (!Array.isArray(grammarData)) {
+    console.error(`Invalid grammar data for ${namespace} in ${lang}:`, grammarData);
+    return { props: { level, transformedData: [] } };
+  }
 
   const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => ({
-    title: chapter.title,
+    title: chapter.title || '無標題',
     data: chapter.sections.map((section: any) => ({
-      pattern: section.pattern,
-      description: section.description,
+      pattern: section.pattern || '無句型',
+      description: section.description || '無描述',
       examples: section.examples.map((example: any) => ({
-        sentence: example.sentence,
-        translation: example.translation,
+        sentence: example.sentence || '無例句',
+        translation: example.translation || '無翻譯',
       })),
     })),
   }));
 
+  console.log('Transformed data in [level].tsx:', transformedData);
+  return {
+    props: {
+      level,
+      transformedData,
+    },
+  };
+}
+
+// Force static rendering
+export const dynamic = 'force-static';
+
+export default function GrammarScreen({
+  level: staticLevel,
+  transformedData: staticTransformedData,
+}: {
+  level?: string;
+  transformedData?: TransformedChapter[];
+}) {
+  const { speak } = useTextToSpeech();
+  const { level: paramLevel, lang } = useLocalSearchParams<{ level: string; lang: string }>();
+  const { t } = useTranslation('grammar');
+
+  const level = staticLevel || paramLevel || '';
+  let transformedData = staticTransformedData;
+
+  if (!transformedData && level) {
+    const namespace = level === LEVELS.N5_ADVANCE_GRAMMAR ? 'n5_advance' : 'n5_basic';
+    const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
+
+    transformedData = Array.isArray(grammarData)
+      ? grammarData.map((chapter: any) => ({
+          title: chapter.title || '無標題',
+          data: chapter.sections.map((section: any) => ({
+            pattern: section.pattern || '無句型',
+            description: section.description || '無描述',
+            examples: section.examples.map((example: any) => ({
+              sentence: example.sentence || '無例句',
+              translation: example.translation || '無翻譯',
+            })),
+          })),
+        }))
+      : [];
+  }
+
   console.log('Level received in [level].tsx:', level);
+
+  if (!Array.isArray(transformedData)) {
+    console.error('transformedData is not an array:', transformedData);
+    transformedData = [];
+  }
 
   return (
     <SafeAreaProvider>
@@ -88,7 +154,6 @@ export default function GrammarScreen() {
             </View>
           )}
           stickySectionHeadersEnabled={false}
-          // @ts-ignore
           getItemLayout={getItemLayout}
           contentContainerStyle={{ paddingBottom: 300 }}
         />
