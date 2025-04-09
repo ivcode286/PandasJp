@@ -1,4 +1,4 @@
-// app/[lang]/(tabs)/travelchat.tsx (renamed to lowercase for consistency)
+// app/[lang]/(tabs)/travelchat.tsx
 import React from 'react';
 import { useLocalSearchParams } from 'expo-router';
 import ContentMenu from '../[namespace]/index';

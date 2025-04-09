@@ -6,6 +6,28 @@ import { useTranslation } from 'react-i18next';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 import { getImage } from '../../../src/utils/imageLoader';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
+import i18n from '@/src/locales/i18n'; // 直接引入已初始化的 i18n
+
+// 靜態參數生成
+export async function generateStaticParams({ params }) {
+  const { namespace, lang } = params;
+
+  // 切換語言以獲取對應的翻譯數據
+  await i18n.changeLanguage(lang.toLowerCase() === 'zh-cn' ? 'zh-CN' : 'zh-TW');
+  
+  // 從 i18n 獲取 namespace 對應的 stories
+  const itemsRaw = i18n.t(`${namespace}:stories`, { returnObjects: true });
+  const items = Array.isArray(itemsRaw)
+    ? itemsRaw.map((item) => ({
+        title: item.title,
+        imageName: item.imageName.replace('.jpg', ''),
+      }))
+    : [];
+
+  return items.map((item) => ({
+    storyTitle: item.imageName, // 使用 imageName 作為路由參數，去掉 .jpg
+  }));
+}
 
 export default function ContentScreen() {
   const { speak } = useTextToSpeech();

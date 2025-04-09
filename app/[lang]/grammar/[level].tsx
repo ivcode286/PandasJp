@@ -1,5 +1,5 @@
 // app/grammar/[level].tsx
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { View, Text, SectionList, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from 'expo-router';
@@ -8,6 +8,14 @@ import useTextToSpeech from '@/hooks/useTextToSpeech';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
 import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
+
+// 靜態參數生成（這裡不需要，因為已在 _layout.tsx 中定義，但保留一致性）
+export async function generateStaticParams() {
+  return [
+    { level: LEVELS.N5_BASIC_GRAMMAR },
+    { level: LEVELS.N5_ADVANCE_GRAMMAR },
+  ];
+}
 
 interface TransformedSection {
   pattern: string;
@@ -32,34 +40,30 @@ export default function GrammarScreen() {
   const { speak } = useTextToSpeech();
   const { level } = useLocalSearchParams<{ level: string }>();
   const { t } = useTranslation('grammar');
-  const [data, setData] = useState<TransformedChapter[]>([]);
 
-  useEffect(() => {
-    if (!level) return;
+  // 直接獲取並轉換數據（無需 useEffect）
+  const namespace = level === LEVELS.N5_ADVANCE_GRAMMAR ? 'n5_advance' : 'n5_basic';
+  const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
 
-    const namespace = level === LEVELS.N5_ADVANCE_GRAMMAR ? 'n5_advance' : 'n5_basic';
-    const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
-
-    const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => ({
-      title: chapter.title,
-      data: chapter.sections.map((section: any) => ({
-        pattern: section.pattern,
-        description: section.description,
-        examples: section.examples.map((example: any) => ({
-          sentence: example.sentence,
-          translation: example.translation,
-        })),
+  const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => ({
+    title: chapter.title,
+    data: chapter.sections.map((section: any) => ({
+      pattern: section.pattern,
+      description: section.description,
+      examples: section.examples.map((example: any) => ({
+        sentence: example.sentence,
+        translation: example.translation,
       })),
-    }));
+    })),
+  }));
 
-    setData(transformedData);
-  }, [level, t]);
+  console.log('Level received in [level].tsx:', level);
 
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <SectionList
-          sections={data}
+          sections={transformedData}
           keyExtractor={(item, index) => item.pattern + index}
           renderSectionHeader={({ section: { title } }) => (
             <View style={styles.headerContainer}>
@@ -84,7 +88,7 @@ export default function GrammarScreen() {
             </View>
           )}
           stickySectionHeadersEnabled={false}
-            // @ts-ignore
+          // @ts-ignore
           getItemLayout={getItemLayout}
           contentContainerStyle={{ paddingBottom: 300 }}
         />

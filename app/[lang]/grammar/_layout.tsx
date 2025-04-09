@@ -1,6 +1,15 @@
 // app/grammar/_layout.tsx
 import React from 'react';
 import { Stack } from 'expo-router';
+import { LEVELS } from '@/src/utils/constants';
+
+// 定義所有可能的 level
+export async function generateStaticParams() {
+  return [
+    { level: LEVELS.N5_BASIC_GRAMMAR },
+    { level: LEVELS.N5_ADVANCE_GRAMMAR },
+  ];
+}
 
 export default function GrammarLayout() {
   return (
@@ -21,11 +30,11 @@ export default function GrammarLayout() {
     >
       <Stack.Screen
         name="index"
-        options={{ title: '文法選單 Grammar Menu',headerShown: false }}
+        options={{ title: '文法選單 Grammar Menu', headerShown: false }}
       />
       <Stack.Screen
         name="[level]"
-        options={{ title: '文法詳情 Grammar Detail',headerShown: false}}
+        options={{ title: '文法詳情 Grammar Detail', headerShown: false }}
       />
     </Stack>
   );
