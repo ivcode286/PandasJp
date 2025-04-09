@@ -39,8 +39,8 @@ export default function HomeScreen() {
   ];
 
   const secondMenuItems: MenuItem[] = [
-    { title: t('menu.n4_basic_grammar'), href: getLangHref(`/grammar/${LEVELS.N4_BASIC_GRAMMAR}`) },
     { title: t('menu.words_n4_n3'), href: getLangHref('/words/n4-n3') },
+    { title: t('menu.n4_basic_grammar'), href: getLangHref(`/grammar/${LEVELS.N4_BASIC_GRAMMAR}`) },
   ];
 
   const changeLanguage = async (lang: 'zh-TW' | 'zh-CN') => {

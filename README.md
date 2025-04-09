@@ -103,6 +103,7 @@ app/
 │   ├── phonetics.tsx             # Phonetics guide
 │   ├── n5-concepts.tsx           # N5 concept overview
 │   ├── grammar-concepts.tsx      # Grammar explanation screen
+│   ├── privacy-policy.tsx        
 
 │   ├── grammar/                  # Grammar section
 │   │   ├── _layout.tsx           # Optional nested layout for grammar

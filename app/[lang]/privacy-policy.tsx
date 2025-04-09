@@ -1,4 +1,4 @@
-//app/PrivacyPolicyScreen.tsx
+//app//[lang]/PrivacyPolicyScreen.tsx
 import React from 'react';
 import { ScrollView, Text, View, StyleSheet, useColorScheme, TextStyle } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
