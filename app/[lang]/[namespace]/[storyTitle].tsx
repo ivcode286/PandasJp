@@ -6,10 +6,16 @@ import { useTranslation } from 'react-i18next';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 import { getImage } from '../../../src/utils/imageLoader';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
-import i18n from '@/src/locales/i18n'; // 直接引入已初始化的 i18n
+import i18n from '@/src/locales/i18n';
+
+// 定義 params 的類型
+interface StaticParams {
+  lang: string;
+  namespace: string;
+}
 
 // 靜態參數生成
-export async function generateStaticParams({ params }) {
+export async function generateStaticParams({ params }: { params: StaticParams }) {
   const { namespace, lang } = params;
 
   // 切換語言以獲取對應的翻譯數據

@@ -5,5 +5,6 @@ import ContentMenu from '../[namespace]/index';
 
 export default function TravelChatTab() {
   const { lang } = useLocalSearchParams();
+  //@ts-ignore
   return <ContentMenu lang={lang} namespace="travelchat" />;
 }
