@@ -4,35 +4,35 @@ import {
   View,
   Text,
   StyleSheet,
-  useColorScheme,
   TouchableOpacity,
   ScrollView,
 } from "react-native";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "@/src/utils/languageService";
-import { router, useLocalSearchParams } from "expo-router";
+import { router, useLocalSearchParams, Href } from "expo-router";
 
 const SettingsScreen: React.FC = () => {
-  const isDark = useColorScheme() === "dark";
-  const styles = getStyles(isDark);
   const { t, i18n } = useTranslation("settings");
   const params = useLocalSearchParams<{ lang?: string }>();
   const lang = params.lang || "zh-tw";
+  const styles = getStyles(); // 移除 isDark 參數，因為樣式固定為 Dark Mode
+
+  const getSettingsRoute = (lang: "zh-tw" | "zh-cn"): Href => {
+    return `/${lang}/(tabs)/settings` as Href;
+  };
 
   const handleLanguageChange = async (lang: "zh-TW" | "zh-CN") => {
     console.log("正在切換語言至:", lang);
     await changeLanguage(lang);
     console.log("已切換語言至:", lang);
-    // 更新路由以觸發頁面重新渲染
     const newLangPath = lang === "zh-CN" ? "zh-cn" : "zh-tw";
-    router.replace(`/${newLangPath}/(tabs)/settings`);
+    router.replace(getSettingsRoute(newLangPath));
   };
 
   const handlePrivacyPolicy = () => {
     const targetPath = `/${lang}/privacy-policy`;
     console.log("Navigating to:", targetPath);
-    //@ts-ignore
-    router.push(targetPath);
+    router.push(targetPath as Href); 
   };
 
   return (
@@ -88,17 +88,18 @@ const SettingsScreen: React.FC = () => {
   );
 };
 
-const getStyles = (isDark: boolean) =>
+// 移除 isDark 參數，固定使用 Dark Mode 樣式
+const getStyles = () =>
   StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: isDark ? "#121212" : "#ffffff",
+      backgroundColor: "#121212", // Dark Mode 背景色
       padding: 20,
     },
     headerTitle: {
       fontSize: 24,
       fontWeight: "700",
-      color: isDark ? "#ffffff" : "#000000",
+      color: "#ffffff", // Dark Mode 文字顏色
       marginBottom: 20,
     },
     section: {
@@ -107,29 +108,29 @@ const getStyles = (isDark: boolean) =>
     sectionTitle: {
       fontSize: 18,
       fontWeight: "bold",
-      color: isDark ? "#ffcc00" : "#ffcc00",
+      color: "#ffcc00", // Dark Mode 的標題顏色
       marginBottom: 10,
     },
     optionButton: {
       paddingVertical: 12,
       paddingHorizontal: 16,
       borderWidth: 1,
-      borderColor: isDark ? "#555555" : "#CCCCCC",
+      borderColor: "#555555", // Dark Mode 邊框顏色
       borderRadius: 8,
       marginBottom: 10,
-      backgroundColor: isDark ? "#1e1e1e" : "#f9f9f9",
+      backgroundColor: "#1e1e1e", // Dark Mode 按鈕背景
     },
     optionButtonSelected: {
-      backgroundColor: isDark ? "#1E88E5" : "#007AFF",
-      borderColor: isDark ? "#1E88E5" : "#007AFF",
+      backgroundColor: "#1E88E5", // Dark Mode 選中背景
+      borderColor: "#1E88E5", // Dark Mode 選中邊框
     },
     optionText: {
       fontSize: 16,
-      color: isDark ? "#ffffff" : "#333333",
+      color: "#ffffff", // Dark Mode 文字顏色
       textAlign: "center",
     },
     optionTextSelected: {
-      color: "#FFFFFF",
+      color: "#FFFFFF", // 選中文字顏色（與 Dark Mode 一致）
     },
   });
 
