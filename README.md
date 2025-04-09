@@ -112,6 +112,8 @@ app/
 │   ├── words/                    # Vocabulary section
 │   │   ├── _layout.tsx           # Optional nested layout for words
 │   │   └── menu.tsx              # Words menu entry point
+│   ├── screens/  
+│   │   └── WordsScreen.tsx
 
 │   ├── [namespace]/              # Shared content namespace (e.g. story / n5chat / travelchat)
 │   │   ├── index.tsx             # Render story cards by namespace (uses i18n resources)
