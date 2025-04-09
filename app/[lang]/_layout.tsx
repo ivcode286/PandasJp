@@ -13,7 +13,9 @@ export async function generateStaticParams() {
 
 export default function LangLayout() {
   const params = useLocalSearchParams();
-  const lang = params.lang || 'zh-tw'; // 預設值
+  // 處理 lang 可能是 string 或 string[] 的情況，取第一個值並設置預設值
+  const langParam = Array.isArray(params.lang) ? params.lang[0] : params.lang;
+  const lang = typeof langParam === 'string' ? langParam : 'zh-tw'; // 若無效則預設為 'zh-tw'
 
   const { t } = useTranslation('home');
 

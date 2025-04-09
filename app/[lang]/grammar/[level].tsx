@@ -154,6 +154,7 @@ export default function GrammarScreen({
             </View>
           )}
           stickySectionHeadersEnabled={false}
+          //@ts-ignore
           getItemLayout={getItemLayout}
           contentContainerStyle={{ paddingBottom: 300 }}
         />
