@@ -1,14 +1,21 @@
-// app/grammar/_layout.tsx
+// app/[lang]/grammar/_layout.tsx
 import React from 'react';
 import { Stack } from 'expo-router';
 import { LEVELS } from '@/src/utils/constants';
 
-// 定義所有可能的 level
+// 定義所有可能的語言和文法級別
+const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'];
+const SUPPORTED_LEVELS = [LEVELS.N5_BASIC_GRAMMAR, LEVELS.N5_ADVANCE_GRAMMAR];
+
+// 生成所有 lang 和 level 的組合
 export async function generateStaticParams() {
-  return [
-    { level: LEVELS.N5_BASIC_GRAMMAR },
-    { level: LEVELS.N5_ADVANCE_GRAMMAR },
-  ];
+  const params = [];
+  for (const lang of SUPPORTED_LANGUAGES) {
+    for (const level of SUPPORTED_LEVELS) {
+      params.push({ lang, level });
+    }
+  }
+  return params;
 }
 
 export default function GrammarLayout() {
