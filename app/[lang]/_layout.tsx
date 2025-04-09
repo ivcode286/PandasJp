@@ -1,106 +1,42 @@
 // app/[lang]/_layout.tsx
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Platform, View } from 'react-native';
-import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
-import { GestureHandlerRootView, PanGestureHandler, State as GestureState } from 'react-native-gesture-handler';
-import * as SplashScreen from 'expo-splash-screen';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Stack, useLocalSearchParams } from 'expo-router';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useFonts } from 'expo-font';
 import i18n from '@/src/locales/i18n';
-import { handleIOSPrompt, checkIOSDevice } from '@/src/utils/deviceCheck';
-import { checkForUpdates } from '@/src/utils/updateCheck';
-import Constants from 'expo-constants';
 import { useTranslation } from 'react-i18next';
+import Constants from 'expo-constants';
 
-SplashScreen.preventAutoHideAsync();
-const LANGUAGE_KEY = 'app_language';
+// 定義支援的語言
+const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'];
 
-function GestureBackWrapper({ children }: { children: React.ReactNode }) {
-  const router = useRouter();
-  const startXRef = useRef(0);
-
-  const onHandlerStateChange = (event: any) => {
-    const { state, translationX, x } = event.nativeEvent;
-    if (state === GestureState.BEGAN) {
-      startXRef.current = x;
-    }
-    if (state === GestureState.END) {
-      if (startXRef.current < 250 && translationX > 50) {
-        if (Platform.OS === 'web') {
-          window.history.back();
-        } else if (router.canGoBack()) {
-          router.back();
-        }
-      }
-    }
-  };
-
-  return (
-    <PanGestureHandler onHandlerStateChange={onHandlerStateChange}>
-      <View style={{ flex: 1 }}>{children}</View>
-    </PanGestureHandler>
-  );
+// 靜態參數生成
+export async function generateStaticParams() {
+  return SUPPORTED_LANGUAGES.map((lang) => ({ lang }));
 }
 
 export default function LangLayout() {
-  const { lang } = useLocalSearchParams();
+  // 在客戶端渲染時，使用 useLocalSearchParams 獲取 lang
+  const params = useLocalSearchParams();
+  const lang = params.lang || 'zh-tw'; // 提供預設值以避免 undefined
+
   const { t } = useTranslation('home');
+
   const [loaded, error] = useFonts({
     SpaceMono: require('@/assets/fonts/SpaceMono-Regular.ttf'),
   });
-  const hasInitialized = useRef(false); // 用於追踪 initializeApp 是否已執行
 
-  useEffect(() => {
-    if (hasInitialized.current) {
-      console.log('initializeApp already ran, skipping');
-      return;
-    }
-
-    const initializeApp = async () => {
-      try {
-        console.log('Starting initializeApp');
-        const normalizedLang = typeof lang === 'string' && lang.toLowerCase() === 'zh-cn' ? 'zh-CN' : 'zh-TW';
-
-        if (i18n.language !== normalizedLang) {
-          await i18n.changeLanguage(normalizedLang);
-          await AsyncStorage.setItem(LANGUAGE_KEY, normalizedLang);
-          console.log('Language set to:', normalizedLang);
-        }
-
-        console.log('App version:', Constants.expoConfig?.version);
-
-        const isIOSWeb = checkIOSDevice();
-        if (isIOSWeb) {
-          console.log('iOS Web detected, running handleIOSPrompt');
-          await handleIOSPrompt();
-        } else {
-          console.log('Non-iOS Web detected, running checkForUpdates');
-          await checkForUpdates();
-        }
-      } catch (err) {
-        console.error('Failed to initialize app:', err);
-      } finally {
-        hasInitialized.current = true; // 標記為已執行
-      }
-    };
-
-    initializeApp();
-  }, []); // 移除依賴陣列，僅在初次掛載時執行
-
-  useEffect(() => {
-    // 單獨處理字體載入完成後隱藏啟動畫面
-    if (loaded || error) {
-      console.log('Fonts loaded:', loaded, 'Error:', error);
-      SplashScreen.hideAsync().catch((err) => console.error('Failed to hide splash:', err));
-    }
-  }, [loaded, error]); // 僅在字體狀態變化時觸發
-
-  if (!loaded && !error) {
-    console.log('Fonts not loaded yet, waiting...');
-    return null;
+  // 在靜態生成中，語言應在構建時確定
+  const normalizedLang = lang.toLowerCase() === 'zh-cn' ? 'zh-CN' : 'zh-TW';
+  if (i18n.language !== normalizedLang) {
+    i18n.changeLanguage(normalizedLang); // 這裡假設 i18n 在構建時可用
   }
 
-  console.log('Rendering LangLayout');
+  if (!loaded && !error) {
+    return null; // 在靜態生成中，這部分會在客戶端處理
+  }
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       {Platform.OS === 'web' ? (
@@ -138,7 +74,7 @@ export default function LangLayout() {
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         </Stack>
       ) : (
-        <GestureBackWrapper>
+        <View style={{ flex: 1 }}>
           <Stack
             screenOptions={{
               headerStyle: { backgroundColor: '#121212' },
@@ -172,7 +108,7 @@ export default function LangLayout() {
             />
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           </Stack>
-        </GestureBackWrapper>
+        </View>
       )}
     </GestureHandlerRootView>
   );
