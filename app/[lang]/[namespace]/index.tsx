@@ -18,8 +18,10 @@ export default function ContentMenu({ lang: propLang, namespace: propNamespace }
     namespace?: 'story' | 'n5chat' | 'travelchat';
   }>();
 
+  // Use propNamespace if provided, otherwise fall back to params.namespace, then 'story'
   const effectiveNamespace = propNamespace || params.namespace || 'story';
   const effectiveLang = propLang || params.lang || 'zh-tw';
+  const langPrefix = `/${effectiveLang.toLowerCase()}`;
 
   console.log(`Rendering ContentMenu for ${effectiveNamespace}`);
 
@@ -48,14 +50,15 @@ export default function ContentMenu({ lang: propLang, namespace: propNamespace }
         renderItem={({ item }) => (
           item.imageName ? (
             <Link
-              href={{ pathname: './[storyTitle]', params: { storyTitle: item.imageName.replace('.jpg', '') } }} // 使用相對路徑
+            //@ts-ignore
+              href={`${langPrefix}/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`}
               asChild
             >
               <TouchableOpacity
                 style={styles.cardContainer}
                 onPress={() =>
                   console.log(
-                    `Navigating to /${effectiveLang}/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`
+                    `Navigating to ${langPrefix}/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`
                   )
                 }
               >
@@ -74,6 +77,7 @@ export default function ContentMenu({ lang: propLang, namespace: propNamespace }
   );
 }
 
+// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,
