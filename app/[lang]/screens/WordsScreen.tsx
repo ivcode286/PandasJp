@@ -1,3 +1,4 @@
+// app/[lang]/screens/WordsScreen.tsx
 import React, { useEffect, useState } from 'react';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import {
@@ -82,20 +83,27 @@ export const scrollToSection = (title: string): void => {
   }
 };
 
-export default function WordsScreen() {
-  const { level } = useLocalSearchParams();
+export default function WordsScreen({
+  level: staticLevel,
+  sections: staticSections,
+}: {
+  level?: string;
+  sections?: Section[];
+}) {
+  const { level: paramLevel } = useLocalSearchParams();
   const router = useRouter();
   const { t } = useTranslation('words');
   const { t: tCommon } = useTranslation('common');
   const { speak } = useTextToSpeech();
-  const [sections, setSections] = useState<Section[]>([]);
+  const [sections, setSections] = useState<Section[]>(staticSections || []);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
+  const level = staticLevel || paramLevel || '';
   const levelString = Array.isArray(level) ? level[0] : level;
   const drawerWidth = 200;
-  const gestureAreaWidth = Platform.OS === 'web' ? drawerWidth : 350; // iOS 上擴展到 350px
-  const translateX = useSharedValue(drawerWidth); // Start closed
+  const gestureAreaWidth = Platform.OS === 'web' ? drawerWidth : 350;
+  const translateX = useSharedValue(drawerWidth);
 
   const toggleDrawer = (open: boolean) => {
     console.log('Toggling drawer to:', open, 'Platform:', Platform.OS, 'isAnimating:', isAnimating);
@@ -108,7 +116,7 @@ export default function WordsScreen() {
   };
 
   const panGesture = Gesture.Pan()
-    .enabled(!isAnimating && Platform.OS !== 'web') // Web 上禁用手勢
+    .enabled(!isAnimating && Platform.OS !== 'web')
     .onStart((event) => {
       console.log('Gesture started, drawerOpen:', drawerOpen, 'Platform:', Platform.OS, 'x:', event.x);
     })
@@ -133,38 +141,42 @@ export default function WordsScreen() {
 
   useEffect(() => {
     console.log(`Current Level in WordsScreen: ${level}, Platform: ${Platform.OS}`);
-    translateX.value = drawerWidth; // 初始位置關閉
-    const loadWords = () => {
-      if (!level || typeof level !== 'string') {
-        console.error('Level is undefined or not a string');
-        setSections([]);
-        return;
-      }
-      let key: string;
-      if (level === LEVELS.N5) key = 'n5';
-      else if (level === LEVELS.N5_KANJI) key = 'n5_kanji';
-      else if (level === LEVELS.N4_N3) key = 'n4n3';
-      else {
-        console.error(`Invalid level: ${level}`);
-        setSections([]);
-        return;
-      }
-      const words = t(key, { returnObjects: true }) as Word[];
-      if (!Array.isArray(words)) {
-        console.error(`t('${key}') did not return an array:`, words);
-        setSections([]);
-        return;
-      }
-      const transformedWords = words.map(word => ({
-        ...word,
-        meaning_zh: word.meaning,
-      }));
-      const groupedSections = groupWordsByLetter(transformedWords);
-      setSections(groupedSections);
-      globalSections = groupedSections;
-    };
-    loadWords();
-  }, [level, t]);
+    translateX.value = drawerWidth;
+    if (!staticSections) {
+      const loadWords = () => {
+        if (!level || typeof level !== 'string') {
+          console.error('Level is undefined or not a string');
+          setSections([]);
+          return;
+        }
+        let key: string;
+        if (level === LEVELS.N5) key = 'n5';
+        else if (level === LEVELS.N5_KANJI) key = 'n5_kanji';
+        else if (level === LEVELS.N4_N3) key = 'n4n3';
+        else {
+          console.error(`Invalid level: ${level}`);
+          setSections([]);
+          return;
+        }
+        const words = t(key, { returnObjects: true }) as Word[];
+        if (!Array.isArray(words)) {
+          console.error(`t('${key}') did not return an array:`, words);
+          setSections([]);
+          return;
+        }
+        const transformedWords = words.map(word => ({
+          ...word,
+          meaning_zh: word.meaning,
+        }));
+        const groupedSections = groupWordsByLetter(transformedWords);
+        setSections(groupedSections);
+        globalSections = groupedSections;
+      };
+      loadWords();
+    } else {
+      globalSections = staticSections;
+    }
+  }, [level, t, staticSections]);
 
   const drawerItems = (tCommon(`drawer.${levelString?.toUpperCase()}`, { returnObjects: true }) as string[]) || [];
 
@@ -222,7 +234,7 @@ export default function WordsScreen() {
               style={[
                 styles.drawerContainer,
                 animatedStyle,
-                { width: gestureAreaWidth }, // 擴展手勢區域
+                { width: gestureAreaWidth },
               ]}
             >
               <View style={[styles.drawer, { width: drawerWidth }]}>
@@ -340,7 +352,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#ffffff',
     flex: 1,
-    marginRight: 40, // 給按鈕留出更多空間，避免與手勢區域重疊
+    marginRight: 40,
   },
   meaning: {
     fontSize: 16,
@@ -351,11 +363,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 5,
-    paddingRight: 50, // 將整個 row 向左移，避免與手勢區域重疊
+    paddingRight: 50,
   },
   speakerIcon: {
     padding: 1,
-    marginRight: 150, // 按鈕左移
+    marginRight: 150,
   },
   errorText: {
     color: '#ff5555',

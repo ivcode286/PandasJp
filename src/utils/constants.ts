@@ -1,3 +1,4 @@
+//src/urils/constants
 export const LEVELS = {
   N5: 'n5',
   N5_KANJI: 'n5-kanji',

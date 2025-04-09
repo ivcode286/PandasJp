@@ -121,4 +121,6 @@ i18n.on('languageChanged', (lng) => {
   console.log('Language changed to:', lng);
 });
 
+console.log('Grammar n5_basic (zh-TW):', resources['zh-TW'].grammar.n5_basic);
+
 export default i18n;

@@ -50,6 +50,7 @@ export default function ContentMenu({ lang: propLang, namespace: propNamespace }
         renderItem={({ item }) => (
           item.imageName ? (
             <Link
+            //@ts-ignore
               href={`${langPrefix}/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`}
               asChild
             >
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#121212',
     padding: 10,
-    paddingBottom: 20,
+    paddingBottom: 80,
     minHeight: '100%',
   },
   cardContainer: {

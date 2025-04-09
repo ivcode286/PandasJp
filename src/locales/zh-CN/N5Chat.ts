@@ -60,6 +60,25 @@ const n5ChatZhCN = {
       ],
     },
     {
+      title: "计划周末的活动",
+      imageName: "weekend-plan.jpg",
+      story: [
+        {
+          chapter: "熊猫🐼、莉莉🌼 和芽依🌿 在计划周末的活动。",
+          content: [
+            { sentence: "熊貓: 「今週（こんしゅう）の土曜日（どようび）、何をしますか？」", translation: "熊猫: 「这周六要做什么呢？」" },
+            { sentence: "莉莉: 「動物園（どうぶつえん）に行きたいです！」", translation: "莉莉: 「我想去动物园！」" },
+            { sentence: "芽依: 「いいですね！何時（なんじ）に行きますか？」", translation: "芽依: 「好啊！几点去？」" },
+            { sentence: "熊貓: 「午前（ごぜん）10時に駅（えき）で待ち合わせしましょう！」", translation: "熊猫: 「早上 10 点在车站碰面吧！」" },
+            { sentence: "莉莉: 「オッケー！お弁当（おべんとう）を作ってもいいですか？」", translation: "莉莉: 「OK！我可以做便当吗？」" },
+            { sentence: "芽依: 「すごい！楽しみです！」", translation: "芽依: 「太棒了！好期待！」" },
+            { sentence: "熊貓: 「じゃあ、土曜日に会いましょう！」", translation: "熊猫: 「那我们周六见吧！」" },
+            { sentence: "莉莉 & 芽依: 「はい！楽しみにしています！」", translation: "莉莉 & 芽依: 「好！很期待！」" },
+          ],
+        },
+      ],
+    },
+    {
       title: "在车站问路",
       imageName: "station-help.jpg",
       story: [
@@ -177,26 +196,7 @@ const n5ChatZhCN = {
           ],
         },
       ],
-    },
-    {
-      title: "计划周末的活动",
-      imageName: "weekend-plan.jpg",
-      story: [
-        {
-          chapter: "熊猫🐼、莉莉🌼 和芽依🌿 在计划周末的活动。",
-          content: [
-            { sentence: "熊貓: 「今週（こんしゅう）の土曜日（どようび）、何をしますか？」", translation: "熊猫: 「这周六要做什么呢？」" },
-            { sentence: "莉莉: 「動物園（どうぶつえん）に行きたいです！」", translation: "莉莉: 「我想去动物园！」" },
-            { sentence: "芽依: 「いいですね！何時（なんじ）に行きますか？」", translation: "芽依: 「好啊！几点去？」" },
-            { sentence: "熊貓: 「午前（ごぜん）10時に駅（えき）で待ち合わせしましょう！」", translation: "熊猫: 「早上 10 点在车站碰面吧！」" },
-            { sentence: "莉莉: 「オッケー！お弁当（おべんとう）を作ってもいいですか？」", translation: "莉莉: 「OK！我可以做便当吗？」" },
-            { sentence: "芽依: 「すごい！楽しみです！」", translation: "芽依: 「太棒了！好期待！」" },
-            { sentence: "熊貓: 「じゃあ、土曜日に会いましょう！」", translation: "熊猫: 「那我们周六见吧！」" },
-            { sentence: "莉莉 & 芽依: 「はい！楽しみにしています！」", translation: "莉莉 & 芽依: 「好！很期待！」" },
-          ],
-        },
-      ],
-    },
+    }
   ],
 };
 

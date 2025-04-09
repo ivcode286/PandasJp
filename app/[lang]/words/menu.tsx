@@ -1,4 +1,4 @@
-// app/words/menu.tsx
+// app/[lang]/words/menu.tsx
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Link } from 'expo-router';
@@ -21,7 +21,7 @@ export default function WordsMenuScreen() {
         keyExtractor={(item) => item.level}
         renderItem={({ item }) => (
           <Link
-            href={{ pathname: '/words/[level]', params: { level: item.level } }}
+            href={{ pathname: './[level]', params: { level: item.level } }} // 使用明確的相對路徑
             asChild
           >
             <TouchableOpacity style={styles.cardContainer} activeOpacity={0.7}>
