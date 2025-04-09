@@ -60,7 +60,16 @@ export default function TabsLayout() {
           }}
         />
         <Tabs.Screen
-          name="travelChat" // 指向 (tabs) 下的 travelChat.tsx
+          name="story" // New tab for story
+          options={{
+            title: t('menu.story'),
+            tabBarIcon: ({ color }: TabBarIconProps) => (
+              <IconSymbol size={28} name="book.fill" color={color || 'white'} /> // Adjust icon as needed
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="travelchat" // Fixed tab for travelchat
           options={{
             title: t('tabs.travel'),
             tabBarIcon: ({ color }: TabBarIconProps) => (

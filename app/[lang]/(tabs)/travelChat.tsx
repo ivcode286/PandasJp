@@ -1,12 +1,9 @@
-// app/[lang]/(tabs)/travelChat.tsx
+// app/[lang]/(tabs)/travelchat.tsx (renamed to lowercase for consistency)
 import React from 'react';
-import { Redirect } from 'expo-router';
-import i18n from '@/src/locales/i18n';
+import { useLocalSearchParams } from 'expo-router';
+import ContentMenu from '../[namespace]/index';
 
-export default function TravelChat() {
-  const lang = i18n.language === 'zh-CN' ? 'zh-cn' : 'zh-tw';
-  const href = `/${lang}/travelchat/`;
-
-  console.log('TravelChat redirecting to:', href);
-  return <Redirect href={href} />;
+export default function TravelChatTab() {
+  const { lang } = useLocalSearchParams();
+  return <ContentMenu lang={lang} namespace="travelchat" />;
 }

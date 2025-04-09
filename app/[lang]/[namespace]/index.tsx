@@ -6,14 +6,22 @@ import { useTranslation } from 'react-i18next';
 import { getImage } from '../../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
-export default function ContentMenu() {
-  const { lang, namespace } = useLocalSearchParams<{
+// Define props interface
+interface ContentMenuProps {
+  lang?: string;
+  namespace?: 'story' | 'n5chat' | 'travelchat';
+}
+
+export default function ContentMenu({ lang: propLang, namespace: propNamespace }: ContentMenuProps) {
+  const params = useLocalSearchParams<{
     lang?: string;
-    namespace: 'story' | 'n5chat' | 'travelchat';
+    namespace?: 'story' | 'n5chat' | 'travelchat';
   }>();
 
-  const effectiveNamespace = namespace || 'story';
-  const langPrefix = `/${(lang || 'zh-tw').toLowerCase()}`;
+  // Use propNamespace if provided, otherwise fall back to params.namespace, then 'story'
+  const effectiveNamespace = propNamespace || params.namespace || 'story';
+  const effectiveLang = propLang || params.lang || 'zh-tw';
+  const langPrefix = `/${effectiveLang.toLowerCase()}`;
 
   console.log(`Rendering ContentMenu for ${effectiveNamespace}`);
 
@@ -68,6 +76,7 @@ export default function ContentMenu() {
   );
 }
 
+// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,

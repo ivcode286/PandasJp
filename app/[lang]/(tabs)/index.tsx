@@ -1,4 +1,4 @@
-//app/[lang]/(tabs)/index.tsx
+// app/[lang]/(tabs)/index.tsx
 import React from 'react';
 import { View, ScrollView, StyleSheet, Text, TouchableOpacity, StatusBar } from 'react-native';
 import { Link, useLocalSearchParams, useRouter, Href } from 'expo-router';
@@ -8,13 +8,15 @@ import { LEVELS } from '@/src/utils/constants';
 
 type MenuItem = {
   title: string;
-  href: Href; 
+  href: Href;
 };
 
 export default function HomeScreen() {
   const { t, i18n } = useTranslation('home');
   const { lang } = useLocalSearchParams();
-  const langPrefix = `/${(lang as string).toLowerCase()}`;
+  const defaultLang = 'zh-tw'; // Fallback language
+  const effectiveLang = typeof lang === 'string' ? lang : defaultLang; // Safe check
+  const langPrefix = `/${effectiveLang.toLowerCase()}`;
   const router = useRouter();
 
   const getLangHref = (path: string): Href => {
@@ -44,7 +46,7 @@ export default function HomeScreen() {
   const changeLanguage = async (lang: 'zh-TW' | 'zh-CN') => {
     await i18n.changeLanguage(lang);
     const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
-    router.replace(`/${newLangPath}`);
+    router.replace(`/${newLangPath}/(tabs)`); // Ensure tabs are included
   };
 
   return (
@@ -101,6 +103,7 @@ export default function HomeScreen() {
   );
 }
 
+// Styles remain unchanged
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
