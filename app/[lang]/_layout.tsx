@@ -44,6 +44,7 @@ export default function LangLayout() {
       <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
       <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
       <Stack.Screen name="grammar" options={{ headerShown: true }} />
+      <Stack.Screen name="words" options={{ headerShown: false }} />
       <Stack.Screen
         name="[namespace]"
         options={({ route }) => {
