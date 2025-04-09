@@ -8,6 +8,7 @@ import {
   StatusBar,
   TouchableOpacity,
   ScrollView,
+  Platform,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
@@ -81,8 +82,6 @@ export const scrollToSection = (title: string): void => {
   }
 };
 
-// 移除 chunkArraySpecial 函數，因為不再需要
-
 export default function WordsScreen() {
   const { level } = useLocalSearchParams();
   const router = useRouter();
@@ -95,33 +94,36 @@ export default function WordsScreen() {
 
   const levelString = Array.isArray(level) ? level[0] : level;
   const drawerWidth = 200;
+  const gestureAreaWidth = Platform.OS === 'web' ? drawerWidth : 350; // iOS 上擴展到 350px
   const translateX = useSharedValue(drawerWidth); // Start closed
 
   const toggleDrawer = (open: boolean) => {
+    console.log('Toggling drawer to:', open, 'Platform:', Platform.OS, 'isAnimating:', isAnimating);
     setDrawerOpen(open);
     setIsAnimating(true);
     translateX.value = withTiming(open ? 0 : drawerWidth, { duration: 300 }, () => {
       runOnJS(setIsAnimating)(false);
+      console.log('Animation finished, isAnimating set to false, drawerOpen:', open);
     });
   };
 
   const panGesture = Gesture.Pan()
-    .enabled(!isAnimating)
-    .onStart(() => {
-      console.log('Gesture started, drawerOpen:', drawerOpen);
+    .enabled(!isAnimating && Platform.OS !== 'web') // Web 上禁用手勢
+    .onStart((event) => {
+      console.log('Gesture started, drawerOpen:', drawerOpen, 'Platform:', Platform.OS, 'x:', event.x);
     })
     .onUpdate((event) => {
       const offset = drawerOpen ? 0 : drawerWidth;
       const newX = Math.max(0, Math.min(event.translationX + offset, drawerWidth));
       translateX.value = newX;
+      console.log('Gesture updating, translationX:', event.translationX, 'newX:', newX);
     })
     .onEnd((event) => {
       console.log('Gesture ended, translationX:', event.translationX);
-      const threshold = drawerWidth * 0.1; // 設為 10%（例如 20 或 30）
+      const threshold = drawerWidth * 0.1;
       const shouldOpen = drawerOpen
-        ? event.translationX < threshold  // 已開啟，向右滑小於閾值保持開啟，大於閾值關閉
-        : event.translationX < -threshold; // 未開啟，向左滑超過閾值打開
-      console.log('shouldOpen:', shouldOpen, 'threshold:', threshold);
+        ? event.translationX < threshold
+        : event.translationX < -threshold;
       runOnJS(toggleDrawer)(shouldOpen);
     });
 
@@ -130,7 +132,7 @@ export default function WordsScreen() {
   }));
 
   useEffect(() => {
-    console.log(`Current Level in WordsScreen: ${level}`);
+    console.log(`Current Level in WordsScreen: ${level}, Platform: ${Platform.OS}`);
     translateX.value = drawerWidth; // 初始位置關閉
     const loadWords = () => {
       if (!level || typeof level !== 'string') {
@@ -208,21 +210,23 @@ export default function WordsScreen() {
                 </View>
               )}
               stickySectionHeadersEnabled={false}
+              // @ts-ignore
               getItemLayout={getItemLayout}
               contentContainerStyle={styles.sectionListContent}
+              style={styles.sectionList}
             />
           )}
 
           <GestureDetector gesture={panGesture}>
-            <Animated.View 
+            <Animated.View
               style={[
                 styles.drawerContainer,
                 animatedStyle,
+                { width: gestureAreaWidth }, // 擴展手勢區域
               ]}
             >
               <View style={[styles.drawer, { width: drawerWidth }]}>
                 <ScrollView>
-                  {/* 統一使用垂直排列，不論 levelString */}
                   {drawerItems.map((label: string) => (
                     <TouchableOpacity
                       key={label}
@@ -275,12 +279,18 @@ const styles = StyleSheet.create({
     flex: 1,
     position: 'relative',
   },
+  sectionList: {
+    flex: 1,
+  },
+  sectionListContent: {
+    paddingBottom: 80,
+    backgroundColor: '#121212',
+  },
   drawerContainer: {
     position: 'absolute',
     right: 0,
     top: 0,
     height: '100%',
-    width: '100%',
     zIndex: 1000,
   },
   drawer: {
@@ -288,19 +298,6 @@ const styles = StyleSheet.create({
     height: '100%',
     padding: 10,
     marginLeft: 'auto',
-  },
-  drawerRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginVertical: 8,
-  },
-  drawerItem: {
-    flex: 1,
-    marginHorizontal: 2,
-    backgroundColor: '#1e1e1e',
-    borderRadius: 4,
-    padding: 10,
-    alignItems: 'center',
   },
   drawerItemVertical: {
     width: '100%',
@@ -315,10 +312,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 18,
     color: '#ffffff',
-  },
-  sectionListContent: {
-    paddingBottom: 80,
-    backgroundColor: '#121212',
   },
   item: {
     backgroundColor: '#1e1e1e',
@@ -347,6 +340,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#ffffff',
     flex: 1,
+    marginRight: 40, // 給按鈕留出更多空間，避免與手勢區域重疊
   },
   meaning: {
     fontSize: 16,
@@ -357,9 +351,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 5,
+    paddingRight: 50, // 將整個 row 向左移，避免與手勢區域重疊
   },
   speakerIcon: {
     padding: 1,
+    marginRight: 150, // 按鈕左移
   },
   errorText: {
     color: '#ff5555',

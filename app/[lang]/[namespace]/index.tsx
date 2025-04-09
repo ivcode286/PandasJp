@@ -1,14 +1,27 @@
-// app/[namespace]/index.tsx
+// app/[lang]/[namespace]/index.tsx
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Link, useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { getImage } from '../../src/utils/imageLoader';
+import { getImage } from '../../../src/utils/imageLoader';
 import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
 
-export default function ContentMenu() {
-  const { namespace } = useLocalSearchParams<{ namespace: 'story' | 'n5chat' | 'travelchat' }>();
-  const effectiveNamespace = namespace || 'story';
+// Define props interface
+interface ContentMenuProps {
+  lang?: string;
+  namespace?: 'story' | 'n5chat' | 'travelchat';
+}
+
+export default function ContentMenu({ lang: propLang, namespace: propNamespace }: ContentMenuProps) {
+  const params = useLocalSearchParams<{
+    lang?: string;
+    namespace?: 'story' | 'n5chat' | 'travelchat';
+  }>();
+
+  // Use propNamespace if provided, otherwise fall back to params.namespace, then 'story'
+  const effectiveNamespace = propNamespace || params.namespace || 'story';
+  const effectiveLang = propLang || params.lang || 'zh-tw';
+  const langPrefix = `/${effectiveLang.toLowerCase()}`;
 
   console.log(`Rendering ContentMenu for ${effectiveNamespace}`);
 
@@ -36,10 +49,17 @@ export default function ContentMenu() {
         keyExtractor={(item) => item.imageName || `${effectiveNamespace}-${Math.random()}`}
         renderItem={({ item }) => (
           item.imageName ? (
-            <Link href={`/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`} asChild>
+            <Link
+              href={`${langPrefix}/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`}
+              asChild
+            >
               <TouchableOpacity
                 style={styles.cardContainer}
-                onPress={() => console.log(`Navigating to /${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`)}
+                onPress={() =>
+                  console.log(
+                    `Navigating to ${langPrefix}/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`
+                  )
+                }
               >
                 <Image source={getImage(item.imageName)} style={styles.coverImage} />
                 <View style={styles.textContainer}>
@@ -56,6 +76,7 @@ export default function ContentMenu() {
   );
 }
 
+// Styles remain unchanged
 const styles = StyleSheet.create({
   container: {
     flex: 1,

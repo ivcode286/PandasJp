@@ -86,37 +86,50 @@ Join our community of developers creating universal apps.
 
 ## File Structure
 app/
-├── _layout.tsx                # 根佈局，包含 Tabs
-├── (tabs)/                    # Bottom Tab 頁面
-│   ├── index.tsx              # HomeScreen
-│   └── settings.tsx           # Settings Tab 入口
-├── hiragana.tsx               # HiraganaScreen
-├── katakana.tsx               # KatakanaScreen
-├── kana-comparison.tsx        # KanaComparisonScreen
-├── phonetics.tsx              # PhoneticsScreen
-├── n5-concepts.tsx            # N5ConceptsScreen
-├── grammar-concepts.tsx       # GrammarConceptsScreen
-├── grammar/                   # Grammar 相關頁面
-│   ├── _layout.tsx            # Grammar 的嵌套佈局
-│   ├── index.tsx              # GrammarMenu
-│   └── [level].tsx            # GrammarScreen (動態路由)
-├── words/                     # Words 相關頁面
-│   ├── _layout.tsx            # Words 的嵌套佈局
-│   └── menu.tsx               # 指向screens/WordsScreen.tsx    
-├── screens/             
-│   ├── WordsScreen.tsx 
-├── [namespace]/               # 動態命名空間（內容頁面）
-│   ├── _layout.tsx
-│   └── [storyTitle].tsx       # 通用 ContentScreen
+├── index.tsx                     # Redirect to /zh-tw or /zh-cn based on saved language or browser
+├── _layout.tsx                   # Root layout: detect language and redirect using <Redirect />
+├── +not-found.tsx                # Fallback for unknown routes
+├── app-ads.txt
+├── robots.txt
+├── sitemap.xml
 
 
-hook/
-useTextToSpeech.ts
+├── [lang]/                       # Language namespace (zh-tw, zh-cn)
+│   ├── _layout.tsx               # Per-language layout (load fonts, language, handle splash, gestures)
+│
+│   ├── (tabs)/                   # Bottom tab navigation pages
+│   │   ├── _layout.tsx           # Tabs layout (BottomTabNavigator)
+│   │   ├── index.tsx             # Home screen with language switch + main links
+│   │   └── settings.tsx          # Settings screen with language switch and routing sync
+│   │   └── travelChat.tsx        # refer to [namespace]/ 
+│   ├── hiragana.tsx              # Hiragana page
+│   ├── katakana.tsx              # Katakana page
+│   ├── kana-comparison.tsx       # Kana comparison page
+│   ├── phonetics.tsx             # Phonetics guide
+│   ├── n5-concepts.tsx           # N5 concept overview
+│   ├── grammar-concepts.tsx      # Grammar explanation screen
 
-src/
-├── utils/ 
-deviceCheck.ts
-imageLoader.ts
-imageLoader.ts
-languageService.ts
-updateCheck.ts
+│   ├── grammar/                  # Grammar section
+│   │   ├── _layout.tsx           # Optional nested layout for grammar
+│   │   ├── index.tsx             # Grammar menu (e.g. N5/N4 grammar selection)
+│   │   └── [level].tsx           # Dynamic grammar page based on selected level
+
+│   ├── words/                    # Vocabulary section
+│   │   ├── _layout.tsx           # Optional nested layout for words
+│   │   └── menu.tsx              # Words menu entry point
+
+│   ├── [namespace]/              # Shared content namespace (e.g. story / n5chat / travelchat)
+│   │   ├── index.tsx             # Render story cards by namespace (uses i18n resources)
+│   │   └── [storyTitle].tsx      # Display actual story content based on title
+
+│   ├── hook/                    # Vocabulary section
+│   │   ├── useTextToSpeech.ts           
+
+
+│   ├── src/                    
+│   │   ├── utils/           
+│   │   ├──constants.ts
+│   │   ├──deviceCheck.ts
+│   │   ├──imageLoader.ts
+│   │   ├──languageService.ts
+│   │   ├──updateCheck.ts

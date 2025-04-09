@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useTranslation } from "react-i18next";
 import { HiraganaTable } from "./hiragana";
-import useTextToSpeech from "../hooks/useTextToSpeech";
+import useTextToSpeech from "../../hooks/useTextToSpeech";
 
 // 定義各個資料項目的型別
 type DakuonItem = {
@@ -166,6 +166,7 @@ const PhoneticsScreen = () => {
     {
       key: "7",
       title: t("sections.summary.title"),
+      //@ts-ignore
       data: t("sections.summary.items", { returnObjects: true }).map((text: string, index: number) => ({
         key: `${index + 1}`,
         text,

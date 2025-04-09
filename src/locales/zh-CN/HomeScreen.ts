@@ -1,5 +1,3 @@
-import { Header } from "@react-navigation/stack";
-
 const homeZhTW = {
     title: "📌 从零开始学初级日语 N5",
     n4title:"📌 N4日语学习",

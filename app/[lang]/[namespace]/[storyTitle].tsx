@@ -1,10 +1,10 @@
-// app/[namespace]/[storyTitle].tsx
+// app/[lang]/[namespace]/[storyTitle].tsx
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
-import { getImage } from '../../src/utils/imageLoader';
+import { getImage } from '../../../src/utils/imageLoader';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 
 export default function ContentScreen() {

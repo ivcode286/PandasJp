@@ -41,7 +41,7 @@ export default function N5ConceptsScreen() {
               <View style={[styles.tableHeaderRow, { borderColor: colors.border }]}>
                 {(t("sections.1.table.header", { returnObjects: true }) as string[]).map(
                   (header, idx) => (
-                    <Text key={idx} style={[styles.tableHeaderCell, { color: colors.text }]}>
+                    <Text key={idx} style={styles.tableHeaderCell}>
                       {header}
                     </Text>
                   )
@@ -70,7 +70,7 @@ export default function N5ConceptsScreen() {
               <View style={[styles.tableHeaderRow, { borderColor: colors.border }]}>
                 {(t("sections.2.table.header", { returnObjects: true }) as string[]).map(
                   (header, idx) => (
-                    <Text key={idx} style={[styles.tableHeaderCell, { color: colors.text }]}>
+                    <Text key={idx} style={styles.tableHeaderCell}>
                       {header}
                     </Text>
                   )
@@ -99,7 +99,7 @@ export default function N5ConceptsScreen() {
               <View style={[styles.tableHeaderRow, { borderColor: colors.border }]}>
                 {(t("sections.3.table.header", { returnObjects: true }) as string[]).map(
                   (header, idx) => (
-                    <Text key={idx} style={[styles.tableHeaderCell, { color: colors.text }]}>
+                    <Text key={idx} style={styles.tableHeaderCell}>
                       {header}
                     </Text>
                   )
@@ -166,11 +166,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderWidth: 1,
     borderColor: "#ccc",
-    backgroundColor: "#444",
+    backgroundColor: "#444", // 標頭背景色保持深灰色
   },
   tableHeaderCell: {
     flex: 1,
-    color: "#fff",
+    color: "#FFFFFF", // 固定為白色
     fontWeight: "bold",
     padding: 8,
     textAlign: "center",

@@ -1,15 +1,8 @@
 // src/utils/deviceCheck.ts
-import { Platform, Alert, Linking } from 'react-native';
+import { Platform } from 'react-native';
 import i18n from '../locales/i18n';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/%E7%86%8A%E8%B2%93%E6%97%A5%E8%AA%9E%E5%AD%B8%E7%BF%92/id6743336983';
-const APP_SCHEME = 'pandasapps://';
-
-interface AlertButton {
-  text: string;
-  onPress?: () => void;
-  style?: 'default' | 'cancel' | 'destructive';
-}
 
 export const checkIOSDevice = (): boolean => {
   console.log('Platform.OS:', Platform.OS);
@@ -31,62 +24,22 @@ export const checkIOSDevice = (): boolean => {
 export const handleIOSPrompt = async (): Promise<void> => {
   console.log('Starting handleIOSPrompt');
   
-  if (Platform.OS === 'web') {
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    const isIOS = /iphone|ipad|ipod/.test(userAgent);
-    
-    if (isIOS) {
-      // iOS 設備：顯示提示並可跳轉
-      const message = `${i18n.t('appPrompt:title')}\n${i18n.t('appPrompt:message')}`;
-      const shouldDownload = window.confirm(message);
-      if (shouldDownload) {
-        console.log('Redirecting to App Store:', APP_STORE_URL);
-        window.location.assign(APP_STORE_URL);
-      } else {
-        console.log('User cancelled');
-      }
-    } else {
-      // 非 iOS 設備（例如 Android）：不顯示提示，不跳轉
-      console.log('Non-iOS device detected, no redirect');
-      return;
-    }
-  } else {
-    // 原生環境：保持不變
-    const canOpen: boolean = await Linking.canOpenURL(APP_SCHEME);
-    console.log('Can open pandasapps://:', canOpen);
-    
-    const buttons: AlertButton[] = [
-      {
-        text: i18n.t('appPrompt:download'),
-        onPress: () => {
-          console.log('Opening App Store:', APP_STORE_URL);
-          Linking.openURL(APP_STORE_URL);
-        },
-      },
-      ...(canOpen ? [{
-        text: i18n.t('appPrompt:open'),
-        onPress: () => {
-          console.log('Opening pandasapps://');
-          Linking.openURL(APP_SCHEME);
-        },
-      }] : []),
-      {
-        text: i18n.t('appPrompt:cancel'),
-        style: 'cancel',
-        onPress: () => console.log('Cancelled'),
-      },
-    ];
+  if (!checkIOSDevice()) {
+    console.log('Not an iOS Web environment, skipping prompt');
+    return;
+  }
 
-    console.log('Showing Alert');
-    Alert.alert(
-      i18n.t('appPrompt:title'),
-      i18n.t('appPrompt:message'),
-      buttons
-    );
+  const message = `${i18n.t('appPrompt:title')}\n${i18n.t('appPrompt:message')}`;
+  const shouldDownload = window.confirm(message);
+  if (shouldDownload) {
+    console.log('Redirecting to App Store:', APP_STORE_URL);
+    window.location.assign(APP_STORE_URL);
+  } else {
+    console.log('User cancelled');
   }
 };
 
 export default {
   checkIOSDevice,
-  handleIOSPrompt
+  handleIOSPrompt,
 };

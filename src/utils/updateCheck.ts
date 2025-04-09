@@ -1,9 +1,10 @@
 import { Alert, Platform, Linking } from 'react-native';
 import Constants from 'expo-constants';
-import i18n from '../locales/i18n'; // 確保路徑正確
+import i18n from '../locales/i18n';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/%E7%86%8A%E8%B2%93%E6%97%A5%E8%AA%9E%E5%AD%B8%E7%BF%92/id6743336983';
-const DEFAULT_VERSION = '1.2.3'; // 與 app.json 一致
+const DEFAULT_VERSION = '1.2.3';
+let hasChecked = false; // 臨時旗標，僅在當前應用生命週期有效
 
 const getLatestVersion = async (): Promise<string> => {
   try {
@@ -21,28 +22,48 @@ const getLatestVersion = async (): Promise<string> => {
 
 export const checkForUpdates = async (): Promise<void> => {
   if (Platform.OS === 'web') {
-    return; 
+    console.log('Web environment, skipping checkForUpdates');
+    return;
   }
 
   try {
+    console.log('Running checkForUpdates');
+
+    if (hasChecked) {
+      console.log('Update check already performed in this session, skipping');
+      return;
+    }
+
     const CURRENT_APP_VERSION = Constants.expoConfig?.version || DEFAULT_VERSION;
     const LATEST_NATIVE_VERSION = await getLatestVersion();
-    console.log("CURRENT_APP_VERSION: " + CURRENT_APP_VERSION);
-    console.log("LATEST_NATIVE_VERSION: " + LATEST_NATIVE_VERSION);
-    console.log("CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION: " + (CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION));
+    console.log('CURRENT_APP_VERSION: ' + CURRENT_APP_VERSION);
+    console.log('LATEST_NATIVE_VERSION: ' + LATEST_NATIVE_VERSION);
+    console.log('CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION: ' + (CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION));
 
     if (CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION) {
+      hasChecked = true; // 標記為已檢查
       Alert.alert(
-        i18n.t('common:update.title'), // 標題
-        i18n.t('common:update.message'), // 訊息
+        i18n.t('common:update.title'),
+        i18n.t('common:update.message'),
         [
-          { text: i18n.t('common:update.cancel'), style: 'cancel' },
+          {
+            text: i18n.t('common:update.cancel'),
+            style: 'cancel',
+            onPress: () => console.log('Update alert cancelled'),
+          },
           {
             text: i18n.t('common:update.goToStore'),
-            onPress: () => Linking.openURL(APP_STORE_URL),
+            onPress: () => {
+              console.log('Navigating to App Store');
+              Linking.openURL(APP_STORE_URL);
+            },
           },
-        ]
+        ],
+        { cancelable: true }
       );
+    } else {
+      hasChecked = true; // 即使無更新也標記
+      console.log('App is up to date');
     }
   } catch (error) {
     console.error('Error checking for updates:', error);

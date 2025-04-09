@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /api/             # Prevent crawling of API endpoints
+Sitemap: https://pandasapps.com/sitemap.xml

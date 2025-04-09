@@ -1,171 +1,51 @@
 // app/_layout.tsx
-import React, { useEffect, useState, useRef } from 'react';
-import { Platform, TouchableOpacity, View, Text } from 'react-native';
-import { Stack, useRouter } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useFonts } from 'expo-font';
-import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
-import { useTranslation } from 'react-i18next';
+import React, { useEffect, useState } from 'react';
+import { Slot, useRouter, useRootNavigationState } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import i18n from '../src/locales/i18n';
-import { handleIOSPrompt } from '../src/utils/deviceCheck';
-import { checkForUpdates } from '../src/utils/updateCheck';
-import Constants from 'expo-constants';
-import {
-  GestureHandlerRootView,
-  PanGestureHandler,
-  State as GestureState,
-} from 'react-native-gesture-handler';
-
-SplashScreen.preventAutoHideAsync();
+import { Platform } from 'react-native'; // 導入 Platform 以檢查運行環境
 
 const LANGUAGE_KEY = 'app_language';
 
-// 自定義手勢包覆元件：在 native 平台上，偵測從左側開始的滑動手勢，若滿足條件則觸發返回
-function GestureBackWrapper({ children }: { children: React.ReactNode }) {
-  const router = useRouter();
-  const startXRef = useRef(0);
-
-  const onHandlerStateChange = (event: any) => {
-    const { state, translationX, x } = event.nativeEvent;
-    if (state === GestureState.BEGAN) {
-      startXRef.current = x;
-    }
-    if (state === GestureState.END) {
-      // If the gesture begins within the left 250px of the screen and swipes to the right by more than 50, then trigger the back action.
-      if (startXRef.current < 250 && translationX > 50) {
-        if (router.canGoBack()) {
-          router.back();
-        }
-      }
-    }
-  };
-
-  return (
-    <PanGestureHandler onHandlerStateChange={onHandlerStateChange}>
-      <View style={{ flex: 1 }}>{children}</View>
-    </PanGestureHandler>
-  );
-}
-
 export default function RootLayout() {
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-  const [langLoaded, setLangLoaded] = useState(false);
   const router = useRouter();
-  const { t } = useTranslation('home');
+  const navigationState = useRootNavigationState();
+  const [initialRedirectDone, setInitialRedirectDone] = useState(false);
 
   useEffect(() => {
-    async function initializeApp() {
+    if (initialRedirectDone || !navigationState?.key) return;
+
+    const initializeLanguage = async () => {
       try {
         const savedLang = await AsyncStorage.getItem(LANGUAGE_KEY);
-        let urlLang = null;
+        const initialLang = savedLang || 'zh-TW';
+        const normalizedLang = initialLang.toLowerCase();
+
+        // 根據平台設置 currentPath
+        let currentPath = '';
         if (Platform.OS === 'web') {
-          const urlPath = window.location.pathname;
-          const urlLangMatch = urlPath.match(/^\/(ZH-TW|ZH-CN)/i);
-          urlLang = urlLangMatch ? urlLangMatch[1].toLowerCase() : null;
-          await handleIOSPrompt();
+          // 在 web 環境中，使用 window.location.pathname
+          currentPath = window.location.pathname.toLowerCase();
+          console.log('Web currentPath:', currentPath);
+        } else {
+          // 在原生環境中，無需檢查路徑，直接使用預設邏輯
+          currentPath = ''; // 設置為空字串，觸發預設重定向
+          console.log('Native environment detected, skipping path check');
         }
-        const initialLang = urlLang || savedLang || 'zh-TW';
-        await i18n.changeLanguage(initialLang);
-        await AsyncStorage.setItem(LANGUAGE_KEY, initialLang);
-        console.log('Initial language:', initialLang);
-        console.log('App version:', Constants.expoConfig?.version);
-        await checkForUpdates();
+
+        if (!currentPath || currentPath === '/' || !currentPath.startsWith(`/${normalizedLang}`)) {
+          console.log('Root layout redirecting to:', `${normalizedLang}/(tabs)`);
+          router.replace(`/${normalizedLang}/(tabs)`);
+        }
+        setInitialRedirectDone(true);
       } catch (error) {
-        console.error('Failed to initialize app:', error);
-        await i18n.changeLanguage('zh-TW');
-        await checkForUpdates();
-      } finally {
-        setLangLoaded(true);
+        console.error('Failed to initialize language:', error);
+        router.replace('/zh-tw/(tabs)');
+        setInitialRedirectDone(true);
       }
-    }
-    initializeApp();
-  }, []);
+    };
 
-  useEffect(() => {
-    if (loaded && langLoaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded, langLoaded]);
+    initializeLanguage();
+  }, [router, navigationState]);
 
-  const handleBack = () => {
-    if (router.canGoBack()) {
-      router.back();
-    } else {
-      router.replace('/');
-    }
-  };
-
-  if (!loaded || !langLoaded) {
-    return null;
-  }
-
-  // 原本由 Expo Router file-based routing 所產生的 Stack
-  const content = (
-    <Stack
-      screenOptions={{
-        headerShown: true,
-        headerStyle: { backgroundColor: '#121212' },
-        headerTintColor: '#ffffff',
-        headerLeft: () => (
-          <TouchableOpacity onPress={handleBack} style={{ paddingLeft: 16 }}>
-            <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
-          </TouchableOpacity>
-        ),
-        headerRight: () => null,
-      }}
-    >
-      <Stack.Screen name="index" />
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="words/menu" />
-      <Stack.Screen
-        name="words/[level]"
-        options={{
-          headerRight: () => (
-            <TouchableOpacity
-              onPress={() => {
-                // Drawer toggle logic，可依需求在 WordsScreen 處理
-              }}
-              style={{ paddingRight: 16 }}
-            >
-              <IoniconsWeb name="menu" size={24} color="#ffffff" />
-            </TouchableOpacity>
-          ),
-        }}
-      />
-      <Stack.Screen
-        name="[namespace]"
-        options={({ route }) => {
-          const namespace =
-            typeof route.params === 'object' && 'namespace' in route.params
-              ? String(route.params.namespace)
-              : undefined;
-          return {
-            title:
-              namespace === 'story'
-                ? t('menu.story')
-                : namespace === 'n5chat'
-                ? t('menu.n5_chat')
-                : namespace === 'travelchat'
-                ? t('headerTitle.travelMenu')
-                : 'Menu',
-          };
-        }}
-      />
-      <Stack.Screen name="hiragana" options={{ headerTitle: t('menu.hiragana') }} />
-      <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
-      <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
-      <Stack.Screen name="phonetics" options={{ headerTitle: t('menu.phonetics') }} />
-      <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
-      <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
-    </Stack>
-  );
-
-  return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      {Platform.OS === 'web' ? content : <GestureBackWrapper>{content}</GestureBackWrapper>}
-    </GestureHandlerRootView>
-  );
+  return <Slot />;
 }
