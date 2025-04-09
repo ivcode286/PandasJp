@@ -55,14 +55,8 @@ export default function LangLayout() {
               ? String(route.params.namespace)
               : undefined;
           return {
-            title:
-              namespace === 'story'
-                ? t('menu.story')
-                : namespace === 'n5chat'
-                ? t('menu.n5_chat')
-                : namespace === 'travelchat'
-                ? t('headerTitle.travelMenu')
-                : 'Menu',
+            headerShown: namespace === 'travelchat' ? true : false,
+            headerTitle: t('headerTitle.travelMenu')
           };
         }}
       />
