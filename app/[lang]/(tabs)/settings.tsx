@@ -23,11 +23,15 @@ const SettingsScreen: React.FC = () => {
     console.log("正在切換語言至:", lang);
     await changeLanguage(lang);
     console.log("已切換語言至:", lang);
+    // 更新路由以觸發頁面重新渲染
+    const newLangPath = lang === "zh-CN" ? "zh-cn" : "zh-tw";
+    router.replace(`/${newLangPath}/(tabs)/settings`);
   };
 
   const handlePrivacyPolicy = () => {
-    const targetPath = `/${lang}/privacy-policy`; // 更新為小寫並與檔案名稱一致
+    const targetPath = `/${lang}/privacy-policy`;
     console.log("Navigating to:", targetPath);
+    //@ts-ignore
     router.push(targetPath);
   };
 
