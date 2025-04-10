@@ -3,6 +3,7 @@ import { Stack } from 'expo-router';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from '@/src/locales/i18n';
+import HeaderBackButton from '@/components/HeaderBackButton';
 
 // 定義所有可能的語言和 namespace
 const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'];
@@ -37,7 +38,7 @@ export default function NamespaceLayout() {
           headerTintColor: '#ffcc00',
           headerTitleStyle: { fontWeight: 'bold' },
           contentStyle: { backgroundColor: '#121212' },
-          headerLeft: () => <HeaderBackButton />,
+          headerLeft: namespace === 'travelchat' ? () => <HeaderBackButton /> : () => null, 
         };
       }}
     >
