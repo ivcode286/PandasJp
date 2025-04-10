@@ -4,6 +4,7 @@ import i18n from '../locales/i18n';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/%E7%86%8A%E8%B2%93%E6%97%A5%E8%AA%9E%E5%AD%B8%E7%BF%92/id6743336983';
 const DEFAULT_VERSION = '1.2.3';
+const STOP_UPDATE_VERSION = '0.0.0';
 let hasChecked = false; // 臨時旗標，僅在當前應用生命週期有效
 
 const getLatestVersion = async (): Promise<string> => {
@@ -39,8 +40,10 @@ export const checkForUpdates = async (): Promise<void> => {
     console.log('CURRENT_APP_VERSION: ' + CURRENT_APP_VERSION);
     console.log('LATEST_NATIVE_VERSION: ' + LATEST_NATIVE_VERSION);
     console.log('CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION: ' + (CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION));
+    console.log('CURRENT_APP_VERSION !== STOP_UPDATE_VERSION: ' + (CURRENT_APP_VERSION !== STOP_UPDATE_VERSION));
 
-    if (CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION) {
+
+    if (CURRENT_APP_VERSION !== LATEST_NATIVE_VERSION && CURRENT_APP_VERSION !== STOP_UPDATE_VERSION) {
       hasChecked = true; // 標記為已檢查
       Alert.alert(
         i18n.t('common:update.title'),

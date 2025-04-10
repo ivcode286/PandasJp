@@ -140,4 +140,5 @@ public/
 ├── sitemap.xml
 
 
-
+## Version update 
+Stop APP update checking if https://version-api.pandasappsglobal.workers.dev/ set to STOP_UPDATE_VERSION = '0.0.0'
