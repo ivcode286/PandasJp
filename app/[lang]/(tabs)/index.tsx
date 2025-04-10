@@ -5,6 +5,9 @@ import { Link, useLocalSearchParams, useRouter, Href } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import { LEVELS } from '@/src/utils/constants';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const LANGUAGE_KEY = 'app_language';
 
 type MenuItem = {
   title: string;
@@ -14,8 +17,8 @@ type MenuItem = {
 export default function HomeScreen() {
   const { t, i18n } = useTranslation('home');
   const { lang } = useLocalSearchParams();
-  const defaultLang = 'zh-tw'; // Fallback language
-  const effectiveLang = typeof lang === 'string' ? lang : defaultLang; // Safe check
+  const defaultLang = 'zh-tw';
+  const effectiveLang = typeof lang === 'string' ? lang : defaultLang;
   const langPrefix = `/${effectiveLang.toLowerCase()}`;
   const router = useRouter();
 
@@ -46,7 +49,8 @@ export default function HomeScreen() {
   const changeLanguage = async (lang: 'zh-TW' | 'zh-CN') => {
     await i18n.changeLanguage(lang);
     const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
-    router.replace(`/${newLangPath}/(tabs)`); // Ensure tabs are included
+    await AsyncStorage.setItem(LANGUAGE_KEY, newLangPath); // 儲存新語言
+    router.replace(`/${newLangPath}/(tabs)`);
   };
 
   return (
@@ -103,7 +107,6 @@ export default function HomeScreen() {
   );
 }
 
-// Styles remain unchanged
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,

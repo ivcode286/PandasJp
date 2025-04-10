@@ -13,10 +13,8 @@ export default function IndexRedirectScreen() {
   useEffect(() => {
     (async () => {
       const savedLang = await AsyncStorage.getItem(LANGUAGE_KEY);
-      const browserLang = typeof navigator !== 'undefined' ? navigator.language.toLowerCase() : '';
-      const inferredLang = savedLang || (browserLang.includes('zh-cn') ? 'zh-cn' : 'zh-tw');
-      const normalizedLang = inferredLang.toLowerCase(); // zh-tw or zh-cn
-      router.replace(`/${normalizedLang}/(tabs)`);
+      const initialLang = savedLang || 'zh-tw'; // 預設 zh-tw
+      router.replace(`/${initialLang}/(tabs)`);
       setLoading(false);
     })();
   }, []);

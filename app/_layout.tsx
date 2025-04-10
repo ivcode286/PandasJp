@@ -1,5 +1,5 @@
 // app/_layout.tsx
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Slot, useRouter, useRootNavigationState } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform, View } from 'react-native';
@@ -7,13 +7,14 @@ import { GestureHandlerRootView, PanGestureHandler, State as GestureState } from
 import Constants from 'expo-constants';
 import { checkForUpdates } from '@/src/utils/updateCheck';
 import { handleIOSPrompt } from '@/src/utils/deviceCheck';
+import i18n from '@/src/locales/i18n';
 
 const LANGUAGE_KEY = 'app_language';
 
 // 自定義手勢包覆元件：在 Native 平台上，偵測從左側開始的滑動手勢，若滿足條件則觸發返回
 function GestureBackWrapper({ children }: { children: React.ReactNode }) {
   const router = useRouter();
-  const startXRef = useRef(0);
+  const startXRef = React.useRef(0);
 
   const onHandlerStateChange = (event: any) => {
     const { state, translationX, x } = event.nativeEvent;
@@ -21,7 +22,7 @@ function GestureBackWrapper({ children }: { children: React.ReactNode }) {
       startXRef.current = x;
     }
     if (state === GestureState.END) {
-        // If the gesture begins within the left 250px of the screen and swipes to the right by more than 50, then trigger the back action.
+      // If the gesture begins within the left 250px of the screen and swipes to the right by more than 50, then trigger the back action.
       if (startXRef.current < 250 && translationX > 50) {
         if (router.canGoBack()) {
           router.back();
@@ -49,37 +50,57 @@ export default function RootLayout() {
 
     const initializeApp = async () => {
       try {
-        // 1. 初始化語言
+        // 1. 獲取儲存的語言，無則預設 zh-TW
         const savedLang = await AsyncStorage.getItem(LANGUAGE_KEY);
-        const initialLang = savedLang || 'zh-TW';
-        const normalizedLang = initialLang.toLowerCase();
+        const defaultLang = 'zh-TW';
+        const initialLang = savedLang || defaultLang;
+        let selectedLang = initialLang.toLowerCase();
 
+        // 2. Web 環境：檢查 URL 是否指定語言
         let currentPath = '';
         if (Platform.OS === 'web') {
           currentPath = window.location.pathname.toLowerCase();
           console.log('Web currentPath:', currentPath);
+
+          // 如果路徑以 zh-tw 或 zh-cn 開頭，使用 URL 的語言
+          const pathLangMatch = currentPath.match(/^\/(zh-tw|zh-cn)/);
+          const pathLang = pathLangMatch ? pathLangMatch[1] : null;
+
+          if (pathLang && currentPath !== '/' && currentPath.length > 1) {
+            selectedLang = pathLang; // URL 語言優先
+            console.log('Using URL-specified language:', selectedLang);
+          } else if (!currentPath || currentPath === '/') {
+            // 根路徑使用儲存語言或預設語言
+            console.log('Root path detected, redirecting to:', `${selectedLang}/(tabs)`);
+            router.replace(`/${selectedLang}/(tabs)`);
+            setHasRedirected(true);
+          }
         } else {
-          console.log('Native environment detected, skipping path check');
+          // 3. Mobile 環境：使用儲存語言或預設語言
+          console.log('Native environment detected');
           const currentRoute = navigationState.routes[0]?.path || '';
-          if (currentRoute.startsWith(`/${normalizedLang}/(tabs)`)) {
+          if (currentRoute.startsWith(`/${selectedLang}/(tabs)`)) {
             console.log('Already at target route, skipping redirect');
             setHasRedirected(true);
             return;
           }
-          currentPath = '';
+          if (!currentRoute || currentRoute === '/') {
+            console.log('Root layout redirecting to:', `${selectedLang}/(tabs)`);
+            router.replace(`/${selectedLang}/(tabs)`);
+            setHasRedirected(true);
+          }
         }
 
-        if (!currentPath || currentPath === '/' || !currentPath.startsWith(`/${normalizedLang}`)) {
-          console.log('Root layout redirecting to:', `${normalizedLang}/(tabs)`);
-          router.replace(`/${normalizedLang}/(tabs)`);
-          setHasRedirected(true);
+        // 4. 同步 i18n 語言
+        const i18nLang = selectedLang === 'zh-cn' ? 'zh-CN' : 'zh-TW';
+        if (i18n.language !== i18nLang) {
+          await i18n.changeLanguage(i18nLang);
         }
 
-        // 2. 檢查應用版本和 iOS 提示（在語言初始化後執行）
+        // 5. 其他初始化
         console.log('App version:', Constants.expoConfig?.version);
-        await handleIOSPrompt(); // 檢查是否為 iOS Web 環境並提示下載
-        await checkForUpdates(); // 檢查更新
-
+        await handleIOSPrompt();
+        await checkForUpdates();
       } catch (error) {
         console.error('Failed to initialize app:', error);
         router.replace('/zh-tw/(tabs)');
@@ -90,9 +111,7 @@ export default function RootLayout() {
     initializeApp();
   }, [router, navigationState?.key, isStaticExport, hasRedirected]);
 
-  // 在 Native 平台上使用 GestureBackWrapper 包覆 Slot
   const content = <Slot />;
-
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       {Platform.OS === 'web' ? content : <GestureBackWrapper>{content}</GestureBackWrapper>}
