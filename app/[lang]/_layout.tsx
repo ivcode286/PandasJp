@@ -49,10 +49,7 @@ export default function LangLayout() {
       <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
       <Stack.Screen name="grammar" options={{ headerShown: true }} />
       <Stack.Screen name="words" options={{ headerShown: false }} />
-      <Stack.Screen 
-        name="privacy-policy" 
-        options={{ headerTitle: 'Privacy Policy'}} 
-      />
+      <Stack.Screen name="privacy-policy" options={{ headerTitle: 'Privacy Policy' }} />
       <Stack.Screen
         name="[namespace]"
         options={({ route }) => {

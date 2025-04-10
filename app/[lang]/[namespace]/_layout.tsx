@@ -38,7 +38,7 @@ export default function NamespaceLayout() {
           headerTintColor: '#ffcc00',
           headerTitleStyle: { fontWeight: 'bold' },
           contentStyle: { backgroundColor: '#121212' },
-          headerLeft: namespace === 'travelchat' ? () => <HeaderBackButton /> : () => null, 
+          headerLeft: () => <HeaderBackButton />
         };
       }}
     >
@@ -56,8 +56,8 @@ export default function NamespaceLayout() {
               namespace === 'story'
                 ? t('menu.story') // namespace 為 story 時
                 : namespace === 'n5chat'
-                ? t('menu.n5_chat') // namespace 為 n5chat 時
-                : 'Menu', // 默認情況（包括 travelchat 或未定義）
+                  ? t('menu.n5_chat') // namespace 為 n5chat 時
+                  : 'Menu', // 默認情況（包括 travelchat 或未定義）
           };
         }}
       />
@@ -69,8 +69,17 @@ export default function NamespaceLayout() {
             typeof route.params === 'object' && 'storyTitle' in route.params
               ? String(route.params.storyTitle)
               : 'Content'; // 默認值，如果未提供 storyTitle
+          const namespace =
+            typeof route.params === 'object' && 'namespace' in route.params
+              ? String(route.params.namespace)
+              : undefined;
           return {
-            title: storyTitle, // 將 title 設為 storyTitle 的值
+            title:
+            namespace === 'story'
+              ? t('menu.story')+' '+storyTitle // namespace 為 story 時
+              : namespace === 'n5chat'
+                ? t('menu.n5_chat')+' '+storyTitle // namespace 為 n5chat 時
+                : storyTitle
           };
         }}
       />
