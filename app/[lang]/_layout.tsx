@@ -4,6 +4,7 @@ import { Stack, useLocalSearchParams } from 'expo-router';
 import { useFonts } from 'expo-font';
 import i18n from '@/src/locales/i18n';
 import { useTranslation } from 'react-i18next';
+import HeaderBackButton from '@/components/HeaderBackButton';
 
 const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'];
 
@@ -37,6 +38,7 @@ export default function LangLayout() {
       screenOptions={{
         headerStyle: { backgroundColor: '#121212' },
         headerTintColor: '#ffffff',
+        headerLeft: () => <HeaderBackButton />, // 使用抽出的組件
       }}
     >
       <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
