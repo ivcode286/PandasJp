@@ -37,6 +37,7 @@ export default function NamespaceLayout() {
           headerTintColor: '#ffcc00',
           headerTitleStyle: { fontWeight: 'bold' },
           contentStyle: { backgroundColor: '#121212' },
+          headerLeft: () => <HeaderBackButton />,
         };
       }}
     >
