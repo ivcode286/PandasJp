@@ -1,10 +1,11 @@
 // app/[lang]/_layout.tsx
-import React from 'react';
-import { Stack, useLocalSearchParams } from 'expo-router';
+import React, { useEffect } from 'react';
+import { Stack, useLocalSearchParams, useRouter, useNavigation } from 'expo-router';
 import { useFonts } from 'expo-font';
 import i18n from '@/src/locales/i18n';
 import { useTranslation } from 'react-i18next';
 import HeaderBackButton from '@/components/HeaderBackButton';
+import { Platform } from 'react-native';
 
 const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'];
 
@@ -14,9 +15,10 @@ export async function generateStaticParams() {
 
 export default function LangLayout() {
   const params = useLocalSearchParams();
-  // 處理 lang 可能是 string 或 string[] 的情況，取第一個值並設置預設值
+  const router = useRouter();
+  const navigation = useNavigation();
   const langParam = Array.isArray(params.lang) ? params.lang[0] : params.lang;
-  const lang = typeof langParam === 'string' ? langParam : 'zh-tw'; // 若無效則預設為 'zh-tw'
+  const lang = typeof langParam === 'string' ? langParam : 'zh-tw';
 
   const { t } = useTranslation('home');
 
@@ -29,16 +31,48 @@ export default function LangLayout() {
     i18n.changeLanguage(normalizedLang);
   }
 
+  useEffect(() => {
+    if (Platform.OS === 'web') {
+      const currentPath = window.location.pathname.toLowerCase();
+      const isTabRoute = currentPath.includes('/(tabs)');
+      if (!router.canGoBack() && !isTabRoute) {
+        navigation.setOptions({
+          headerLeft: () => (
+            <HeaderBackButton
+              onPress={() => router.replace(`/${lang}/(tabs)`)}
+            />
+          ),
+        });
+      }
+    }
+  }, [router, navigation, lang]);
+
   if (!loaded && !error) {
-    return null; // 字體加載中，僅客戶端渲染時生效
+    return null;
   }
+
+  // 修改：在 screenOptions 中動態設置 headerLeft，根據是否有返回目標
+  const getHeaderLeft = () => {
+    if (Platform.OS === 'web' && !router.canGoBack()) {
+      const currentPath = window.location.pathname.toLowerCase();
+      const isTabRoute = currentPath.includes('/(tabs)');
+      if (!isTabRoute) {
+        return () => (
+          <HeaderBackButton
+            onPress={() => router.replace(`/${lang}/(tabs)`)}
+          />
+        );
+      }
+    }
+    return () => <HeaderBackButton />; // 默認行為
+  };
 
   return (
     <Stack
       screenOptions={{
         headerStyle: { backgroundColor: '#121212' },
         headerTintColor: '#ffffff',
-        headerLeft: () => <HeaderBackButton />, // 使用抽出的組件
+        headerLeft: getHeaderLeft(), // 使用動態函數
       }}
     >
       <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
@@ -59,7 +93,7 @@ export default function LangLayout() {
               : undefined;
           return {
             headerShown: namespace === 'travelchat' ? true : false,
-            headerTitle: t('headerTitle.travelMenu')
+            headerTitle: t('headerTitle.travelMenu'),
           };
         }}
       />

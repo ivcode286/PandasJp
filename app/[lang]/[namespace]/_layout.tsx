@@ -1,9 +1,10 @@
 // app/[lang]/[namespace]/_layout.tsx
-import { Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router'; // 修改：新增 useRouter
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from '@/src/locales/i18n';
 import HeaderBackButton from '@/components/HeaderBackButton';
+import { Platform } from 'react-native'; // 修改：新增 Platform
 
 // 定義所有可能的語言和 namespace
 const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'];
@@ -21,31 +22,47 @@ export async function generateStaticParams() {
 }
 
 export default function NamespaceLayout() {
-  const { t } = useTranslation('home'); // 從 'home' 命名空間獲取翻譯
+  const { t } = useTranslation('home');
+  const router = useRouter(); // 修改：新增 router 實例
+
+  // 修改：動態設置 headerLeft
+  const getHeaderLeft = () => {
+    if (Platform.OS === 'web' && !router.canGoBack()) {
+      const currentPath = window.location.pathname.toLowerCase();
+      const isTabRoute = currentPath.includes('/(tabs)');
+      const lang = currentPath.split('/')[1]; // 提取語言（zh-tw 或 zh-cn）
+      if (!isTabRoute && SUPPORTED_LANGUAGES.includes(lang)) {
+        return () => (
+          <HeaderBackButton
+            onPress={() => router.replace(`/${lang}/(tabs)`)}
+          />
+        );
+      }
+    }
+    return () => <HeaderBackButton />; // 默認行為
+  };
 
   return (
     <Stack
       screenOptions={({ route }) => {
-        // 從路由參數中提取 namespace
         const namespace =
           typeof route.params === 'object' && 'namespace' in route.params
             ? String(route.params.namespace)
             : undefined;
 
         return {
-          headerShown: namespace === 'travelchat' ? false : true, // travelchat hide header
+          headerShown: namespace === 'travelchat' ? false : true,
           headerStyle: { backgroundColor: '#121212' },
           headerTintColor: '#ffcc00',
           headerTitleStyle: { fontWeight: 'bold' },
           contentStyle: { backgroundColor: '#121212' },
-          headerLeft: () => <HeaderBackButton />
+          headerLeft: getHeaderLeft(), // 修改：使用動態函數
         };
       }}
     >
       <Stack.Screen
         name="index"
         options={({ route }) => {
-          // 從路由參數中提取 namespace
           const namespace =
             typeof route.params === 'object' && 'namespace' in route.params
               ? String(route.params.namespace)
@@ -54,32 +71,31 @@ export default function NamespaceLayout() {
           return {
             title:
               namespace === 'story'
-                ? t('menu.story') // namespace 為 story 時
+                ? t('menu.story')
                 : namespace === 'n5chat'
-                  ? t('menu.n5_chat') // namespace 為 n5chat 時
-                  : 'Menu', // 默認情況（包括 travelchat 或未定義）
+                  ? t('menu.n5_chat')
+                  : 'Menu',
           };
         }}
       />
       <Stack.Screen
         name="[storyTitle]"
         options={({ route }) => {
-          // 從路由參數中提取 storyTitle
           const storyTitle =
             typeof route.params === 'object' && 'storyTitle' in route.params
               ? String(route.params.storyTitle)
-              : 'Content'; // 默認值，如果未提供 storyTitle
+              : 'Content';
           const namespace =
             typeof route.params === 'object' && 'namespace' in route.params
               ? String(route.params.namespace)
               : undefined;
           return {
             title:
-            namespace === 'story'
-              ? t('menu.story')+' '+storyTitle // namespace 為 story 時
-              : namespace === 'n5chat'
-                ? t('menu.n5_chat')+' '+storyTitle // namespace 為 n5chat 時
-                : storyTitle
+              namespace === 'story'
+                ? t('menu.story') + ' ' + storyTitle
+                : namespace === 'n5chat'
+                  ? t('menu.n5_chat') + ' ' + storyTitle
+                  : storyTitle,
           };
         }}
       />

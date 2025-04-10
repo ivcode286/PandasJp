@@ -90,7 +90,7 @@ export default function WordsScreen({
   level?: string;
   sections?: Section[];
 }) {
-  const { level: paramLevel } = useLocalSearchParams();
+  const { level: paramLevel, lang } = useLocalSearchParams(); // 修改：新增 lang 參數
   const router = useRouter();
   const { t } = useTranslation('words');
   const { t: tCommon } = useTranslation('common');
@@ -101,6 +101,7 @@ export default function WordsScreen({
 
   const level = staticLevel || paramLevel || '';
   const levelString = Array.isArray(level) ? level[0] : level;
+  const effectiveLang = typeof lang === 'string' ? lang : 'zh-tw'; // 修改：從 URL 提取語言，預設 zh-tw
   const drawerWidth = 200;
   const gestureAreaWidth = Platform.OS === 'web' ? drawerWidth : 350;
   const translateX = useSharedValue(drawerWidth);
@@ -113,6 +114,15 @@ export default function WordsScreen({
       runOnJS(setIsAnimating)(false);
       console.log('Animation finished, isAnimating set to false, drawerOpen:', open);
     });
+  };
+
+  // 修改：動態設置返回按鈕行為
+  const handleBackPress = () => {
+    if (Platform.OS === 'web' && !router.canGoBack()) {
+      router.replace(`/${effectiveLang}/(tabs)`); // 堆疊為空時跳轉到 (tabs)
+    } else {
+      router.back(); // 有堆疊歷史時返回上一個頁面
+    }
   };
 
   const panGesture = Gesture.Pan()
@@ -185,7 +195,7 @@ export default function WordsScreen({
       <StatusBar barStyle="light-content" backgroundColor="#121212" />
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.headerButton}>
+          <TouchableOpacity onPress={handleBackPress} style={styles.headerButton}> {/* 修改：使用 handleBackPress */}
             <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
           </TouchableOpacity>
           <Text style={styles.headerTitle} numberOfLines={1} ellipsizeMode="tail">
