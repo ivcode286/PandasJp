@@ -125,6 +125,9 @@ app/
 │   ├── hook/                    # Vocabulary section
 │   │   ├── useTextToSpeech.ts           
 
+locales/
+├── i18n.ts        
+
 
 │   ├── src/                    
 │   │   ├── utils/           
