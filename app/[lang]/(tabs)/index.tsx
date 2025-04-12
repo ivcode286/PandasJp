@@ -1,5 +1,5 @@
 // app/[lang]/(tabs)/index.tsx
-import React from 'react';
+import React, { useCallback } from 'react';
 import {
   View,
   ScrollView,
@@ -13,7 +13,11 @@ import { Link, useLocalSearchParams, useRouter, Href } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { debounce } from 'lodash';
 import { LEVELS } from '@/src/utils/constants';
+
+// Placeholder for web SEO (replace with react-helmet or expo-router's <Head> in a real app)
+const Head = Platform.OS === 'web' ? ({ children }: { children: React.ReactNode }) => <>{children}</> : () => null;
 
 const LANGUAGE_KEY = 'app_language';
 
@@ -31,10 +35,14 @@ export default function HomeScreen() {
   const router = useRouter();
   const isWeb = Platform.OS === 'web';
 
-  const getLangHref = (path: string): Href => {
-    return `${langPrefix}${path.startsWith('/') ? path : `/${path}`}` as Href;
-  };
+  // Memoize getLangHref to avoid recreating function on every render
+  const getLangHref = useCallback(
+    (path: string): Href =>
+      `${langPrefix}${path.startsWith('/') ? path : `/${path}`}` as Href,
+    [langPrefix]
+  );
 
+  // Define menu items for N5 and N4 sections
   const menuItems: MenuItem[] = [
     { title: t('menu.hiragana'), href: getLangHref('/hiragana') },
     { title: t('menu.katakana'), href: getLangHref('/katakana') },
@@ -44,8 +52,14 @@ export default function HomeScreen() {
     { title: t('menu.kanji_n5'), href: getLangHref('/words/n5-kanji') },
     { title: t('menu.n5_concepts'), href: getLangHref('/n5-concepts') },
     { title: t('menu.grammar_concepts'), href: getLangHref('/grammar-concepts') },
-    {title: t('menu.n5_basic_grammar'),href: getLangHref(`/grammar/${LEVELS.N5_BASIC_GRAMMAR}`)},
-    {title: t('menu.n5_advance_grammar'),href: getLangHref(`/grammar/${LEVELS.N5_ADVANCE_GRAMMAR}`)},
+    {
+      title: t('menu.n5_basic_grammar'),
+      href: getLangHref(`/grammar/${LEVELS.N5_BASIC_GRAMMAR}`),
+    },
+    {
+      title: t('menu.n5_advance_grammar'),
+      href: getLangHref(`/grammar/${LEVELS.N5_ADVANCE_GRAMMAR}`),
+    },
     { title: t('menu.n5_chat'), href: getLangHref('/n5chat') },
     { title: t('menu.story'), href: getLangHref('/story') },
   ];
@@ -58,43 +72,51 @@ export default function HomeScreen() {
     },
   ];
 
-  const changeLanguage = async (lang: 'zh-TW' | 'zh-CN') => {
-    await i18n.changeLanguage(lang);
-    const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
-    await AsyncStorage.setItem(LANGUAGE_KEY, newLangPath);
-    router.replace(`/${newLangPath}/(tabs)`);
-  };
+  // Debounced language change to prevent rapid toggling
+  const changeLanguage = useCallback(
+    debounce(async (lang: 'zh-TW' | 'zh-CN') => {
+      console.log('Changing language to:', lang); // Debug log
+      await i18n.changeLanguage(lang);
+      const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
+      await AsyncStorage.setItem(LANGUAGE_KEY, newLangPath);
+      router.replace(`/${newLangPath}/(tabs)`);
+    }, 300),
+    [router, i18n]
+  );
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* SEO元標籤 */}
-      <View style={{ display: 'none' }}>
-        <Text>{`<title>${t('title')} - ${t('app_name')}</title>`}</Text>
-        <Text>{`<meta name="description" content="${t('meta_description')}" />`}</Text>
-        <Text>{`
+      {/* SEO metadata for web */}
+      {isWeb && (
+        <Head>
+          <title>{`${t('title')} - ${t('app_name')}`}</title>
+          <meta name="description" content={t('meta_description')} />
+          <link rel="canonical" href={`https://pandasapps.com${langPrefix}`} />
           <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "Course",
-              "name": "${t('title')}",
-              "description": "${t('meta_description')}",
-              "provider": {
-                "@type": "Organization",
-                "name": "PandasJP",
-                "url": "https://pandasapps.com"
-              }
-            }
+            {JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Course',
+              'name': t('title'),
+              'description': t('meta_description'),
+              'provider': {
+                '@type': 'Organization',
+                'name': 'PandasJP',
+                'url': 'https://pandasapps.com',
+              },
+            })}
           </script>
-        `}</Text>
-        <Text>{`<link rel="canonical" href="https://pandasapps.com${langPrefix}" />`}</Text>
-      </View>
+        </Head>
+      )}
 
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.scrollContent}>
           <View style={styles.headerContainer}>
             <Text style={styles.header}>{t('title')}</Text>
             <View style={styles.languageContainer}>
-              <TouchableOpacity onPress={() => changeLanguage('zh-TW')}>
+              <TouchableOpacity
+                onPress={() => changeLanguage('zh-TW')}
+                style={styles.languageButton}
+              >
                 <Text
                   style={[
                     styles.languageText,
@@ -105,7 +127,10 @@ export default function HomeScreen() {
                 </Text>
               </TouchableOpacity>
               <Text style={styles.languageDivider}> | </Text>
-              <TouchableOpacity onPress={() => changeLanguage('zh-CN')}>
+              <TouchableOpacity
+                onPress={() => changeLanguage('zh-CN')}
+                style={styles.languageButton}
+              >
                 <Text
                   style={[
                     styles.languageText,
@@ -175,10 +200,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  languageButton: {
+    padding: 4, // Added for better touch area
+  },
   languageText: {
     fontSize: 16,
     color: '#ffffff',
-    paddingHorizontal: 4,
   },
   languageTextSelected: {
     color: '#1E88E5',
@@ -187,12 +214,23 @@ const styles = StyleSheet.create({
   languageDivider: {
     fontSize: 16,
     color: '#ffffff',
+    paddingHorizontal: 4,
   },
   card: {
     backgroundColor: '#1e1e1e',
     padding: 16,
     borderRadius: 8,
     marginBottom: 16,
+    // Platform-specific shadow styles
+    ...(Platform.OS === 'web'
+      ? { boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }
+      : {
+          shadowColor: '#000',
+          shadowOffset: { width: 0, height: 2 },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.84,
+          elevation: 5,
+        }),
   },
   cardText: {
     fontSize: 18,
@@ -202,7 +240,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#ffffff',
     marginBottom: 20,
-    textAlign: "center",
+    textAlign: 'center',
   },
   n5Header: {
     fontSize: 20,
