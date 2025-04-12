@@ -50,7 +50,7 @@ const ITEM_MARGIN = 8;
 
 const groupWordsByLetter = (words: Word[]): Section[] => {
   const groups: { [letter: string]: { order: number; words: Word[] } } = {};
-  words.forEach(word => {
+  words.forEach((word) => {
     const letter = word.letter;
     if (!groups[letter]) {
       groups[letter] = { order: word.letterOrder, words: [] };
@@ -72,7 +72,7 @@ const getItemLayout = sectionListGetItemLayout({
 });
 
 export const scrollToSection = (title: string): void => {
-  const sectionIndex = globalSections.findIndex(section => section.title === title);
+  const sectionIndex = globalSections.findIndex((section) => section.title === title);
   if (sectionIndex !== -1 && sectionListRef.current) {
     sectionListRef.current.scrollToLocation({
       animated: true,
@@ -90,10 +90,9 @@ export default function WordsScreen({
   level?: string;
   sections?: Section[];
 }) {
-  const { level: paramLevel, lang } = useLocalSearchParams(); // 修改：新增 lang 參數
+  const { level: paramLevel, lang } = useLocalSearchParams();
   const router = useRouter();
-  const { t } = useTranslation('words');
-  const { t: tCommon } = useTranslation('common');
+  const { t } = useTranslation(['words', 'common', 'home']); // Add 'home' namespace
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<Section[]>(staticSections || []);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -101,10 +100,22 @@ export default function WordsScreen({
 
   const level = staticLevel || paramLevel || '';
   const levelString = Array.isArray(level) ? level[0] : level;
-  const effectiveLang = typeof lang === 'string' ? lang : 'zh-tw'; // 修改：從 URL 提取語言，預設 zh-tw
+  const effectiveLang = typeof lang === 'string' ? lang : 'zh-tw';
   const drawerWidth = 200;
   const gestureAreaWidth = Platform.OS === 'web' ? drawerWidth : 350;
   const translateX = useSharedValue(drawerWidth);
+
+  // Map level to translation key
+  const levelToTranslationKey: { [key: string]: string } = {
+    [LEVELS.N5]: 'words_n5',
+    [LEVELS.N5_KANJI]: 'kanji_n5',
+    [LEVELS.N4_N3]: 'words_n4_n3',
+  };
+
+  // Get header title from translation
+  const headerTitle = levelString && levelToTranslationKey[levelString]
+    ? t(`home:menu.${levelToTranslationKey[levelString]}`, 'Words')
+    : 'Words';
 
   const toggleDrawer = (open: boolean) => {
     console.log('Toggling drawer to:', open, 'Platform:', Platform.OS, 'isAnimating:', isAnimating);
@@ -116,12 +127,11 @@ export default function WordsScreen({
     });
   };
 
-  // 修改：動態設置返回按鈕行為
   const handleBackPress = () => {
     if (Platform.OS === 'web' && !router.canGoBack()) {
-      router.replace(`/${effectiveLang}/(tabs)`); // 堆疊為空時跳轉到 (tabs)
+      router.replace(`/${effectiveLang}/(tabs)`);
     } else {
-      router.back(); // 有堆疊歷史時返回上一個頁面
+      router.back();
     }
   };
 
@@ -168,13 +178,13 @@ export default function WordsScreen({
           setSections([]);
           return;
         }
-        const words = t(key, { returnObjects: true }) as Word[];
+        const words = t(`words:${key}`, { returnObjects: true }) as Word[];
         if (!Array.isArray(words)) {
-          console.error(`t('${key}') did not return an array:`, words);
+          console.error(`t('words:${key}') did not return an array:`, words);
           setSections([]);
           return;
         }
-        const transformedWords = words.map(word => ({
+        const transformedWords = words.map((word) => ({
           ...word,
           meaning_zh: word.meaning,
         }));
@@ -188,18 +198,19 @@ export default function WordsScreen({
     }
   }, [level, t, staticSections]);
 
-  const drawerItems = (tCommon(`drawer.${levelString?.toUpperCase()}`, { returnObjects: true }) as string[]) || [];
+  const drawerItems =
+    (t(`common:drawer.${levelString?.toUpperCase()}`, { returnObjects: true }) as string[]) || [];
 
   return (
     <SafeAreaProvider>
       <StatusBar barStyle="light-content" backgroundColor="#121212" />
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
-          <TouchableOpacity onPress={handleBackPress} style={styles.headerButton}> {/* 修改：使用 handleBackPress */}
+          <TouchableOpacity onPress={handleBackPress} style={styles.headerButton}>
             <IoniconsWeb name="arrow-back" size={24} color="#ffffff" />
           </TouchableOpacity>
           <Text style={styles.headerTitle} numberOfLines={1} ellipsizeMode="tail">
-            {levelString || 'Unknown Level'}
+            {headerTitle}
           </Text>
           <TouchableOpacity onPress={() => toggleDrawer(!drawerOpen)} style={styles.headerButton}>
             <IoniconsWeb name="menu" size={24} color="#ffffff" />
@@ -241,11 +252,7 @@ export default function WordsScreen({
 
           <GestureDetector gesture={panGesture}>
             <Animated.View
-              style={[
-                styles.drawerContainer,
-                animatedStyle,
-                { width: gestureAreaWidth },
-              ]}
+              style={[styles.drawerContainer, animatedStyle, { width: gestureAreaWidth }]}
             >
               <View style={[styles.drawer, { width: drawerWidth }]}>
                 <ScrollView>
