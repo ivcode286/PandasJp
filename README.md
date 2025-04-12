@@ -41,6 +41,9 @@ custom development build/bareflow
 
  -Run on Android by android simulator
 npm run android
+or
+select device
+npx expo run:android --device               
 
 -build android
 eas build --platform android --profile development  
