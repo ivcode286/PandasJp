@@ -32,7 +32,9 @@ function GestureBackWrapper({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <PanGestureHandler onHandlerStateChange={onHandlerStateChange}>
+    <PanGestureHandler onHandlerStateChange={onHandlerStateChange}
+    activeOffsetX={[-10, 10]}   //android scroll with pangesture 
+    >
       <View style={{ flex: 1 }}>{children}</View>
     </PanGestureHandler>
   );
