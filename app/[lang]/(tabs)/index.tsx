@@ -42,14 +42,8 @@ export default function HomeScreen() {
     { title: t('menu.kanji_n5'), href: getLangHref('/words/n5-kanji') },
     { title: t('menu.n5_concepts'), href: getLangHref('/n5-concepts') },
     { title: t('menu.grammar_concepts'), href: getLangHref('/grammar-concepts') },
-    {
-      title: t('menu.n5_basic_grammar'),
-      href: getLangHref(`/grammar/${LEVELS.N5_BASIC_GRAMMAR}`),
-    },
-    {
-      title: t('menu.n5_advance_grammar'),
-      href: getLangHref(`/grammar/${LEVELS.N5_ADVANCE_GRAMMAR}`),
-    },
+    {title: t('menu.n5_basic_grammar'),href: getLangHref(`/grammar/${LEVELS.N5_BASIC_GRAMMAR}`)},
+    {title: t('menu.n5_advance_grammar'),href: getLangHref(`/grammar/${LEVELS.N5_ADVANCE_GRAMMAR}`)},
     { title: t('menu.n5_chat'), href: getLangHref('/n5chat') },
     { title: t('menu.story'), href: getLangHref('/story') },
   ];
@@ -73,32 +67,24 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.safeArea}>
       {/* SEO元標籤 */}
       <View style={{ display: 'none' }}>
-        <Text accessibilityRole="none">
-          {`<title>${t('title')} - PandasJP日語學習APP</title>`}
-        </Text>
-        <Text accessibilityRole="none">
-          {`<meta name="description" content="${t('meta_description')}" />`}
-        </Text>
-        <Text accessibilityRole="none">
-          {`
-            <script type="application/ld+json">
-              {
-                "@context": "https://schema.org",
-                "@type": "Course",
-                "name": "${t('title')}",
-                "description": "${t('meta_description')}",
-                "provider": {
-                  "@type": "Organization",
-                  "name": "PandasJP",
-                  "url": "https://pandasapps.com"
-                }
+        <Text>{`<title>${t('title')} - ${t('app_name')}</title>`}</Text>
+        <Text>{`<meta name="description" content="${t('meta_description')}" />`}</Text>
+        <Text>{`
+          <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Course",
+              "name": "${t('title')}",
+              "description": "${t('meta_description')}",
+              "provider": {
+                "@type": "Organization",
+                "name": "PandasJP",
+                "url": "https://pandasapps.com"
               }
-            </script>
-          `}
-        </Text>
-        <Text accessibilityRole="none">
-          {`<link rel="canonical" href="https://pandasapps.com${langPrefix}" />`}
-        </Text>
+            }
+          </script>
+        `}</Text>
+        <Text>{`<link rel="canonical" href="https://pandasapps.com${langPrefix}" />`}</Text>
       </View>
 
       <View style={styles.container}>
@@ -106,10 +92,7 @@ export default function HomeScreen() {
           <View style={styles.headerContainer}>
             <Text style={styles.header}>{t('title')}</Text>
             <View style={styles.languageContainer}>
-              <TouchableOpacity
-                accessibilityLabel="切換到繁體中文"
-                onPress={() => changeLanguage('zh-TW')}
-              >
+              <TouchableOpacity onPress={() => changeLanguage('zh-TW')}>
                 <Text
                   style={[
                     styles.languageText,
@@ -120,17 +103,14 @@ export default function HomeScreen() {
                 </Text>
               </TouchableOpacity>
               <Text style={styles.languageDivider}> | </Text>
-              <TouchableOpacity
-                accessibilityLabel="切換到簡體中文"
-                onPress={() => changeLanguage('zh-CN')}
-              >
+              <TouchableOpacity onPress={() => changeLanguage('zh-CN')}>
                 <Text
                   style={[
                     styles.languageText,
                     i18n.language === 'zh-CN' && styles.languageTextSelected,
                   ]}
                 >
-                    {t('language.simple_chinese')}
+                  {t('language.simple_chinese')}
                 </Text>
               </TouchableOpacity>
             </View>
@@ -138,7 +118,6 @@ export default function HomeScreen() {
 
           <Text style={styles.introText}>{t('intro')}</Text>
 
-          {/* 新增N5子標題 */}
           <Text style={styles.n5Header}>{t('n5title')}</Text>
 
           {menuItems.map((item, idx) => (
@@ -187,8 +166,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: '#ffffff',
-    textAlign: 'center', // 主標題置中
-    flex: 1, // 確保標題佔據空間以置中
+    textAlign: 'center',
+    flex: 1,
   },
   languageContainer: {
     flexDirection: 'row',
@@ -227,13 +206,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#ffffff',
     marginVertical: 10,
-    textAlign: 'left', // N5子標題左靠齊
+    textAlign: 'left',
   },
   n4Header: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#ffffff',
     marginVertical: 10,
-    textAlign: 'left', // N4子標題左靠齊，保持一致
+    textAlign: 'left',
   },
 });

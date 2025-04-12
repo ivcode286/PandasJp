@@ -6,6 +6,7 @@ const homeZhCN = {
     'PandasJP提供免费日语N5学习资源，包含入门必学的平假名和文法、初学者必备的N5单词和汉字，以及深入学习的进阶文法，助您快速掌握日语基础。',
   intro:
     '欢迎使用PandasJP日语学习APP！本应用专为中文使用者设计，提供免费的日语N5和N4学习资源，包含入门必学的平假名和文法、初学者必备的N5单词和汉字，以及深入学习的进阶文法，助您快速入门日语。',
+  app_name: 'PandasJP日语学习APP',
   language: {
     traditional_chinese: '繁',
     simple_chinese: '简',
