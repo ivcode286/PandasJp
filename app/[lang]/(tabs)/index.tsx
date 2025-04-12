@@ -7,6 +7,7 @@ import {
   Text,
   TouchableOpacity,
   StatusBar,
+  Platform,
 } from 'react-native';
 import { Link, useLocalSearchParams, useRouter, Href } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -28,6 +29,7 @@ export default function HomeScreen() {
   const effectiveLang = typeof lang === 'string' ? lang : defaultLang;
   const langPrefix = `/${effectiveLang.toLowerCase()}`;
   const router = useRouter();
+  const isWeb = Platform.OS === 'web';
 
   const getLangHref = (path: string): Href => {
     return `${langPrefix}${path.startsWith('/') ? path : `/${path}`}` as Href;
@@ -116,7 +118,7 @@ export default function HomeScreen() {
             </View>
           </View>
 
-          <Text style={styles.introText}>{t('intro')}</Text>
+          <Text style={styles.introText}>{isWeb ? t('intro') : t('intro_mobile')}</Text>
 
           <Text style={styles.n5Header}>{t('n5title')}</Text>
 
@@ -200,6 +202,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#ffffff',
     marginBottom: 20,
+    textAlign: "center",
   },
   n5Header: {
     fontSize: 20,
