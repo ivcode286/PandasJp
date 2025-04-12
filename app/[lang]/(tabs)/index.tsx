@@ -206,6 +206,7 @@ const styles = StyleSheet.create({
   languageText: {
     fontSize: 16,
     color: '#ffffff',
+    marginRight: 2,
   },
   languageTextSelected: {
     color: '#1E88E5',
