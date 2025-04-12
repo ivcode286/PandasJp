@@ -81,7 +81,33 @@ export default function LangLayout() {
       <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
       <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
       <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
-      <Stack.Screen name="grammar" options={{ headerShown: true }} />
+      <Stack.Screen
+        name="grammar"
+        options={({ route }) => {
+          // Extract level from route params
+          const level =
+            typeof route.params === 'object' && 'level' in route.params
+              ? String(route.params.level)
+              : undefined;
+
+          // Map level to translation key
+          const levelToTranslationKey: { [key: string]: string } = {
+            'n5-basic-grammar': 'n5_basic_grammar',
+            'n5-advance-grammar': 'n5_advance_grammar',
+            'n4-basic-grammar': 'n4_basic_grammar',
+          };
+
+          // Determine header title
+          const headerTitle = level && levelToTranslationKey[level]
+            ? t(`menu.${levelToTranslationKey[level]}`, 'Grammar')
+            : 'Grammar';
+
+          return {
+            headerShown: true,
+            headerTitle,
+          };
+        }}
+      />
       <Stack.Screen name="words" options={{ headerShown: false }} />
       <Stack.Screen name="privacy-policy" options={{ headerTitle: 'Privacy Policy' }} />
       <Stack.Screen

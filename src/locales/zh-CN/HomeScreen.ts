@@ -30,7 +30,7 @@ const homeZhCN = {
     n5_chat: 'N5日常对话 - 实用日语练习',
     story: 'N5短篇故事 - 阅读与学习',
     words_n4_n3: '常用N4-N3单词 - 日语进阶学习',
-    n4_basic_grammar: '最常用N4文法 - 进阶必学',
+    n4_basic_grammar: '最常用N4文法 - 核心必学',
   },
 };
 
