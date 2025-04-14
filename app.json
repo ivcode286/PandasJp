@@ -14,7 +14,8 @@
       "bundleIdentifier": "com.pandasapps.PandasJp",
       "buildNumber": "8",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "GADApplicationIdentifier": "ca-app-pub-8778852534152395~8255277423"
       }
     },
     "android": {
@@ -22,7 +23,10 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.pandasapps.PandasJp"
+      "package": "com.pandasapps.PandasJp",
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-3940256099942544~3347511713"
+      }
     },
     "web": {
       "bundler": "metro",

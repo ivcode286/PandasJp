@@ -1,6 +1,6 @@
 // app/[lang]/grammar/[level].tsx
 import React from 'react';
-import { View, Text, SectionList, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, SectionList, StyleSheet, TouchableOpacity, Platform } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
@@ -9,6 +9,8 @@ import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import i18n from '@/src/locales/i18n';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+import { SectionListData } from 'react-native';
 
 interface TransformedSection {
   pattern: string;
@@ -16,16 +18,27 @@ interface TransformedSection {
   examples: { sentence: string; translation: string }[];
 }
 
-interface TransformedChapter {
+interface AdItem {
+  type: 'ad';
+}
+
+type SectionItem = TransformedSection | AdItem;
+
+interface ChapterSection extends SectionListData<SectionItem> {
   title: string;
-  data: TransformedSection[];
 }
 
 const SECTION_HEADER_HEIGHT = 70;
 const ITEM_MARGIN = 12;
 
+// Ad unit ID (use test ID in development, your ID in production)
+const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-8778852534152395/6522556607';
+
 const getItemLayout = sectionListGetItemLayout({
-  getItemHeight: (_, index) => 80 + ITEM_MARGIN * index,
+  getItemHeight: (_, index) => {
+    // Adjust height for ad items (BannerAd is ~50px for BANNER size)
+    return index % 8 === 7 ? 50 + ITEM_MARGIN : 80 + ITEM_MARGIN;
+  },
   getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
 });
 
@@ -61,19 +74,32 @@ export async function getStaticProps({ params }: { params: { lang: string; level
     return { props: { level, transformedData: [] } };
   }
 
-  const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => ({
-    title: chapter.title || '無標題',
-    data: chapter.sections.map((section: any) => ({
+  const transformedData: ChapterSection[] = grammarData.map((chapter: any) => {
+    const sectionsWithAds: SectionItem[] = [];
+    const sections = chapter.sections.map((section: any) => ({
       pattern: section.pattern || '無句型',
       description: section.description || '無描述',
       examples: section.examples.map((example: any) => ({
         sentence: example.sentence || '無例句',
         translation: example.translation || '無翻譯',
       })),
-    })),
-  }));
+    }));
 
-  console.log('Transformed data in [level].tsx:', transformedData);
+    // Insert ad every 7 items
+    sections.forEach((section: TransformedSection, index: number) => {
+      sectionsWithAds.push(section);
+      if ((index + 1) % 7 === 0) {
+        sectionsWithAds.push({ type: 'ad' });
+      }
+    });
+
+    return {
+      title: chapter.title || '無標題',
+      data: sectionsWithAds,
+    };
+  });
+
+  console.log('Transformed data with ads in [level].tsx:', transformedData);
   return {
     props: {
       level,
@@ -90,7 +116,7 @@ export default function GrammarScreen({
   transformedData: staticTransformedData,
 }: {
   level?: string;
-  transformedData?: TransformedChapter[];
+  transformedData?: ChapterSection[];
 }) {
   const { speak } = useTextToSpeech();
   const { level: paramLevel, lang } = useLocalSearchParams<{ level: string; lang: string }>();
@@ -104,17 +130,30 @@ export default function GrammarScreen({
     const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
 
     transformedData = Array.isArray(grammarData)
-      ? grammarData.map((chapter: any) => ({
-          title: chapter.title || '無標題',
-          data: chapter.sections.map((section: any) => ({
+      ? grammarData.map((chapter: any) => {
+          const sectionsWithAds: SectionItem[] = [];
+          const sections = chapter.sections.map((section: any) => ({
             pattern: section.pattern || '無句型',
             description: section.description || '無描述',
             examples: section.examples.map((example: any) => ({
               sentence: example.sentence || '無例句',
               translation: example.translation || '無翻譯',
             })),
-          })),
-        }))
+          }));
+
+          // Insert ad every 7 items
+          sections.forEach((section: TransformedSection, index: number) => {
+            sectionsWithAds.push(section);
+            if ((index + 1) % 7 === 0) {
+              sectionsWithAds.push({ type: 'ad' });
+            }
+          });
+
+          return {
+            title: chapter.title || '無標題',
+            data: sectionsWithAds,
+          };
+        })
       : [];
   }
 
@@ -128,34 +167,64 @@ export default function GrammarScreen({
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <SectionList
+        <SectionList<SectionItem, ChapterSection>
           sections={transformedData}
-          keyExtractor={(item, index) => item.pattern + index}
-          renderSectionHeader={({ section: { title } }) => (
+          keyExtractor={(item, index) =>
+            'type' in item ? `ad-${index}` : `${item.pattern}-${index}`
+          }
+          renderSectionHeader={({ section }) => (
             <View style={styles.headerContainer}>
-              <Text style={styles.header}>{title || '無標題'}</Text>
+              <Text style={styles.header}>{section.title || '無標題'}</Text>
             </View>
           )}
-          renderItem={({ item }) => (
-            <View style={styles.item}>
-              <Text style={styles.pattern}>{item.pattern || '無句型'}</Text>
-              <Text style={styles.description}>{item.description || '無描述'}</Text>
-              {item.examples.map((example, index) => (
-                <View key={index} style={styles.exampleContainer}>
-                  <View style={styles.sentenceRow}>
-                    <Text style={styles.sentence}>{example.sentence || '無例句'}</Text>
-                    <TouchableOpacity onPress={() => speak(example.sentence || '')} style={styles.iconSpacing}>
-                      <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
-                    </TouchableOpacity>
-                  </View>
-                  <Text style={styles.translation}>{example.translation || '無翻譯'}</Text>
+          renderItem={({ item }) => {
+            if ('type' in item && item.type === 'ad') {
+              return (
+                <View style={styles.adContainer}>
+                  <BannerAd
+                    unitId={adUnitId}
+                    size={BannerAdSize.BANNER}
+                    onAdFailedToLoad={(error) => console.error('Ad failed to load:', error)}
+                  />
                 </View>
-              ))}
-            </View>
-          )}
+              );
+            }
+
+            return (
+              <View style={styles.item}>
+                <Text style={styles.pattern}>{(item as TransformedSection).pattern || '無句型'}</Text>
+                <Text style={styles.description}>{(item as TransformedSection).description || '無描述'}</Text>
+                {(item as TransformedSection).examples.map((example, index) => (
+                  <View key={index} style={styles.exampleContainer}>
+                    <View style={styles.sentenceRow}>
+                      <Text style={styles.sentence}>{example.sentence || '無例句'}</Text>
+                      <TouchableOpacity
+                        onPress={() => speak(example.sentence || '')}
+                        style={styles.iconSpacing}
+                      >
+                        <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                      </TouchableOpacity>
+                    </View>
+                    <Text style={styles.translation}>{example.translation || '無翻譯'}</Text>
+                  </View>
+                ))}
+              </View>
+            );
+          }}
           stickySectionHeadersEnabled={false}
-          //@ts-ignore
-          getItemLayout={getItemLayout}
+          getItemLayout={(data, index) => {
+            // Cast data to match sectionListGetItemLayout's expected type
+            const compatibleData = (data || []).map((section) => ({
+              ...section,
+              data: section.data as any[],
+            }));
+            const layout = getItemLayout(compatibleData, index);
+            return {
+              length: layout.length,
+              offset: layout.offset,
+              index,
+            };
+          }}
           contentContainerStyle={{ paddingBottom: 300 }}
         />
       </SafeAreaView>
@@ -173,6 +242,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#1e1e1e',
     padding: 16,
     borderRadius: 8,
+    marginBottom: ITEM_MARGIN,
+  },
+  adContainer: {
+    alignItems: 'center',
     marginBottom: ITEM_MARGIN,
   },
   headerContainer: {
