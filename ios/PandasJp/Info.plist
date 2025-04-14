@@ -40,6 +40,8 @@
     </array>
     <key>CFBundleVersion</key>
     <string>7</string>
+    <key>GADApplicationIdentifier</key>
+    <string>ca-app-pub-8778852534152395~8255277423</string>
     <key>ITSAppUsesNonExemptEncryption</key>
     <false/>
     <key>LSMinimumSystemVersion</key>
