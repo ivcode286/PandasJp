@@ -141,10 +141,10 @@ export default function GrammarScreen({
             })),
           }));
 
-          // Insert ad every 7 items
+          // Insert ad every 5 items
           sections.forEach((section: TransformedSection, index: number) => {
             sectionsWithAds.push(section);
-            if ((index + 1) % 7 === 0) {
+            if ((index + 1) % 5 === 0) {
               sectionsWithAds.push({ type: 'ad' });
             }
           });

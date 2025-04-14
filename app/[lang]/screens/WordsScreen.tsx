@@ -24,9 +24,11 @@ import Animated, {
   withTiming,
   runOnJS,
 } from 'react-native-reanimated';
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+import { insertAds, AdItem } from '@/src/utils/adUtils';
 
 interface Word {
-  wordId: number;
+  wordId: number | string;
   letter: string;
   letterOrder: number;
   words: string;
@@ -35,39 +37,71 @@ interface Word {
   meaning_zh?: string;
 }
 
+type SectionItem = Word | AdItem;
+
 interface Section {
   title: string;
-  data: Word[];
+  data: SectionItem[];
   letterOrder: number;
 }
 
-export const sectionListRef = React.createRef<SectionList<Word>>();
+export const sectionListRef = React.createRef<SectionList<SectionItem>>();
 export let globalSections: Section[] = [];
 
 const SECTION_HEADER_HEIGHT = 40;
 const ITEM_HEIGHT = 140;
+const AD_HEIGHT = 50;
 const ITEM_MARGIN = 8;
+
+const AD_FREQUENCY = 6;
+const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-8778852534152395/6522556607';
 
 const groupWordsByLetter = (words: Word[]): Section[] => {
   const groups: { [letter: string]: { order: number; words: Word[] } } = {};
-  words.forEach((word) => {
-    const letter = word.letter;
+  words.forEach((word, index) => {
+    const wordWithId = {
+      ...word,
+      wordId: word.wordId ?? `fallback-${index}`,
+    };
+    const letter = wordWithId.letter || 'Unknown';
     if (!groups[letter]) {
-      groups[letter] = { order: word.letterOrder, words: [] };
+      groups[letter] = { order: wordWithId.letterOrder ?? 0, words: [] };
     }
-    groups[letter].words.push(word);
+    groups[letter].words.push(wordWithId);
   });
-  return Object.entries(groups)
-    .map(([letter, { order, words }]) => ({
-      title: letter,
-      data: words.sort((a, b) => a.wordId - b.wordId),
-      letterOrder: order,
-    }))
+
+  const sections = Object.entries(groups)
+    .map(([letter, { order, words }], sectionIndex) => {
+      if (!words.length) {
+        console.warn(`Empty section for letter: ${letter}`);
+        return null;
+      }
+      // Ensure unique ad IDs by using sectionIndex
+      const sectionData = insertAds(words, AD_FREQUENCY, sectionIndex);
+      return {
+        title: letter,
+        data: sectionData,
+        letterOrder: order,
+      };
+    })
+    .filter((section): section is Section => section !== null)
     .sort((a, b) => a.letterOrder - b.letterOrder);
+
+  if (__DEV__) {
+    console.log('Generated sections:', sections.map(s => ({
+      title: s.title,
+      dataLength: s.data.length,
+      adCount: s.data.filter(item => 'type' in item).length,
+    })));
+  }
+
+  return sections;
 };
 
 const getItemLayout = sectionListGetItemLayout({
-  getItemHeight: () => ITEM_HEIGHT + ITEM_MARGIN,
+  getItemHeight: (_, index) => {
+    return index % (AD_FREQUENCY + 1) === AD_FREQUENCY ? AD_HEIGHT + ITEM_MARGIN : ITEM_HEIGHT + ITEM_MARGIN;
+  },
   getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
 });
 
@@ -92,7 +126,7 @@ export default function WordsScreen({
 }) {
   const { level: paramLevel, lang } = useLocalSearchParams();
   const router = useRouter();
-  const { t } = useTranslation(['words', 'common', 'home']); // Add 'home' namespace
+  const { t } = useTranslation(['words', 'common', 'home']);
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<Section[]>(staticSections || []);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -105,14 +139,12 @@ export default function WordsScreen({
   const gestureAreaWidth = Platform.OS === 'web' ? drawerWidth : 350;
   const translateX = useSharedValue(drawerWidth);
 
-  // Map level to translation key
   const levelToTranslationKey: { [key: string]: string } = {
     [LEVELS.N5]: 'words_n5',
     [LEVELS.N5_KANJI]: 'kanji_n5',
     [LEVELS.N4_N3]: 'words_n4_n3',
   };
 
-  // Get header title from translation
   const headerTitle = levelString && levelToTranslationKey[levelString]
     ? t(`home:menu.${levelToTranslationKey[levelString]}`, 'Words')
     : 'Words';
@@ -179,14 +211,20 @@ export default function WordsScreen({
           return;
         }
         const words = t(`words:${key}`, { returnObjects: true }) as Word[];
+        if (__DEV__) {
+          console.log(`Raw words for ${key}:`, words);
+        }
         if (!Array.isArray(words)) {
           console.error(`t('words:${key}') did not return an array:`, words);
           setSections([]);
           return;
         }
-        const transformedWords = words.map((word) => ({
+        const transformedWords = words.map((word, index) => ({
           ...word,
-          meaning_zh: word.meaning,
+          wordId: word.wordId ?? `fallback-${key}-${index}`,
+          letter: word.letter || 'Unknown',
+          letterOrder: word.letterOrder ?? 0,
+          meaning_zh: word.meaning_zh ?? word.meaning,
         }));
         const groupedSections = groupWordsByLetter(transformedWords);
         setSections(groupedSections);
@@ -221,29 +259,48 @@ export default function WordsScreen({
           {sections.length === 0 ? (
             <Text style={styles.errorText}>No data available for level: {levelString || 'undefined'}</Text>
           ) : (
-            <SectionList<Word>
+            <SectionList<SectionItem>
               ref={sectionListRef}
               sections={sections}
-              keyExtractor={(item, index) => item.wordId + index.toString()}
-              renderItem={({ item }) => (
-                <View style={styles.item}>
-                  <Text style={styles.words}>{item.words}</Text>
-                  <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
-                  <View style={styles.row}>
-                    <Text style={styles.reading}>{item.pron}</Text>
-                    <TouchableOpacity onPress={() => speak(item.pron)} style={styles.speakerIcon}>
-                      <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
-                    </TouchableOpacity>
+              keyExtractor={(item, index) => {
+                if ('type' in item) {
+                  const adId = item.id || `fallback-ad-${index}`; // Use || for simplicity
+                  return `ad-${adId}`;
+                }
+                return `word-${item.wordId}-${index}`;
+              }}
+              renderItem={({ item }) => {
+                if ('type' in item && item.type === 'ad') {
+                  return (
+                    <View style={styles.adContainer}>
+                      <BannerAd
+                        unitId={adUnitId}
+                        size={BannerAdSize.BANNER}
+                        onAdFailedToLoad={(error) => console.error('Ad failed to load:', error)}
+                      />
+                    </View>
+                  );
+                }
+                const word = item as Word;
+                return (
+                  <View style={styles.item}>
+                    <Text style={styles.words}>{word.words}</Text>
+                    <Text style={styles.meaning}>{word.meaning_zh || 'No Translation'}</Text>
+                    <View style={styles.row}>
+                      <Text style={styles.reading}>{word.pron}</Text>
+                      <TouchableOpacity onPress={() => speak(word.pron)} style={styles.speakerIcon}>
+                        <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                      </TouchableOpacity>
+                    </View>
                   </View>
-                </View>
-              )}
+                );
+              }}
               renderSectionHeader={({ section: { title } }) => (
                 <View style={styles.headerContainer}>
                   <Text style={styles.sectionHeader}>{title || 'No Header'}</Text>
                 </View>
               )}
               stickySectionHeadersEnabled={false}
-              // @ts-ignore
               getItemLayout={getItemLayout}
               contentContainerStyle={styles.sectionListContent}
               style={styles.sectionList}
@@ -348,6 +405,11 @@ const styles = StyleSheet.create({
     height: ITEM_HEIGHT,
     borderRadius: 8,
     marginBottom: ITEM_MARGIN,
+  },
+  adContainer: {
+    alignItems: 'center',
+    marginBottom: ITEM_MARGIN,
+    height: AD_HEIGHT,
   },
   headerContainer: {
     height: SECTION_HEADER_HEIGHT,
