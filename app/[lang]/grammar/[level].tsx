@@ -9,17 +9,14 @@ import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import i18n from '@/src/locales/i18n';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
-import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+import { AdBanner } from '@/components/AdBanner';
+import { insertAds, AdItem } from '@/src/utils/adUtils';
 import { SectionListData } from 'react-native';
 
 interface TransformedSection {
   pattern: string;
   description: string;
   examples: { sentence: string; translation: string }[];
-}
-
-interface AdItem {
-  type: 'ad';
 }
 
 type SectionItem = TransformedSection | AdItem;
@@ -30,19 +27,16 @@ interface ChapterSection extends SectionListData<SectionItem> {
 
 const SECTION_HEADER_HEIGHT = 70;
 const ITEM_MARGIN = 12;
-
-// Ad unit ID (use test ID in development, your ID in production)
-const adUnitId = __DEV__ ? TestIds.BANNER : 'ca-app-pub-8778852534152395/6522556607';
+const BANNER_AD_HEIGHT = 50; // BannerAdSize.BANNER 的標準高度
+const AD_FREQUENCY = 10; // 每5個項目插入一個廣告
 
 const getItemLayout = sectionListGetItemLayout({
   getItemHeight: (_, index) => {
-    // Adjust height for ad items (BannerAd is ~50px for BANNER size)
-    return index % 8 === 7 ? 50 + ITEM_MARGIN : 80 + ITEM_MARGIN;
+    return index % (AD_FREQUENCY + 1) === AD_FREQUENCY ? BANNER_AD_HEIGHT + ITEM_MARGIN : 80 + ITEM_MARGIN;
   },
   getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
 });
 
-// Define static params for this route
 export async function generateStaticParams({ params }: { params: { lang: string } }) {
   const { lang } = params;
   const levels = [LEVELS.N5_BASIC_GRAMMAR, LEVELS.N5_ADVANCE_GRAMMAR];
@@ -57,7 +51,6 @@ export async function generateStaticParams({ params }: { params: { lang: string 
   return staticParams;
 }
 
-// Fetch static props for each route
 export async function getStaticProps({ params }: { params: { lang: string; level: string } }) {
   const { lang, level } = params;
 
@@ -74,8 +67,7 @@ export async function getStaticProps({ params }: { params: { lang: string; level
     return { props: { level, transformedData: [] } };
   }
 
-  const transformedData: ChapterSection[] = grammarData.map((chapter: any) => {
-    const sectionsWithAds: SectionItem[] = [];
+  const transformedData: ChapterSection[] = grammarData.map((chapter: any, chapterIndex: number) => {
     const sections = chapter.sections.map((section: any) => ({
       pattern: section.pattern || '無句型',
       description: section.description || '無描述',
@@ -85,13 +77,7 @@ export async function getStaticProps({ params }: { params: { lang: string; level
       })),
     }));
 
-    // Insert ad every 7 items
-    sections.forEach((section: TransformedSection, index: number) => {
-      sectionsWithAds.push(section);
-      if ((index + 1) % 7 === 0) {
-        sectionsWithAds.push({ type: 'ad' });
-      }
-    });
+    const sectionsWithAds = insertAds<TransformedSection>(sections, AD_FREQUENCY, chapterIndex);
 
     return {
       title: chapter.title || '無標題',
@@ -108,7 +94,6 @@ export async function getStaticProps({ params }: { params: { lang: string; level
   };
 }
 
-// Force static rendering
 export const dynamic = 'force-static';
 
 export default function GrammarScreen({
@@ -130,8 +115,7 @@ export default function GrammarScreen({
     const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
 
     transformedData = Array.isArray(grammarData)
-      ? grammarData.map((chapter: any) => {
-          const sectionsWithAds: SectionItem[] = [];
+      ? grammarData.map((chapter: any, chapterIndex: number) => {
           const sections = chapter.sections.map((section: any) => ({
             pattern: section.pattern || '無句型',
             description: section.description || '無描述',
@@ -141,13 +125,7 @@ export default function GrammarScreen({
             })),
           }));
 
-          // Insert ad every 5 items
-          sections.forEach((section: TransformedSection, index: number) => {
-            sectionsWithAds.push(section);
-            if ((index + 1) % 5 === 0) {
-              sectionsWithAds.push({ type: 'ad' });
-            }
-          });
+          const sectionsWithAds = insertAds<TransformedSection>(sections, AD_FREQUENCY, chapterIndex);
 
           return {
             title: chapter.title || '無標題',
@@ -179,15 +157,7 @@ export default function GrammarScreen({
           )}
           renderItem={({ item }) => {
             if ('type' in item && item.type === 'ad') {
-              return (
-                <View style={styles.adContainer}>
-                  <BannerAd
-                    unitId={adUnitId}
-                    size={BannerAdSize.BANNER}
-                    onAdFailedToLoad={(error) => console.error('Ad failed to load:', error)}
-                  />
-                </View>
-              );
+              return <AdBanner />;
             }
 
             return (
@@ -213,7 +183,6 @@ export default function GrammarScreen({
           }}
           stickySectionHeadersEnabled={false}
           getItemLayout={(data, index) => {
-            // Cast data to match sectionListGetItemLayout's expected type
             const compatibleData = (data || []).map((section) => ({
               ...section,
               data: section.data as any[],
@@ -242,10 +211,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#1e1e1e',
     padding: 16,
     borderRadius: 8,
-    marginBottom: ITEM_MARGIN,
-  },
-  adContainer: {
-    alignItems: 'center',
     marginBottom: ITEM_MARGIN,
   },
   headerContainer: {

@@ -6,7 +6,7 @@ export interface AdItem {
   
   export function insertAds<T>(
     items: T[],
-    adFrequency: number = 5,
+    adFrequency: number = 5, // 預設每5個項目插入一個廣告
     sectionIndex: number = 0
   ): (T | AdItem)[] {
     const result: (T | AdItem)[] = [];
