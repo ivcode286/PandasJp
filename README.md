@@ -88,59 +88,60 @@ Join our community of developers creating universal apps.
 
 ## File Structure
 app/
-├── index.tsx                     # Redirect to /zh-tw or /zh-cn based on saved language or browser
-├── _layout.tsx                   # Root layout: detect language and redirect using <Redirect />
+├── index.tsx                     # Redirects to /zh-tw or /zh-cn based on saved language or browser
+├── _layout.tsx                   # Root layout: detects language and redirects using <Redirect />
 ├── +not-found.tsx                # Fallback for unknown routes
-├── [lang]/                       # Language namespace (zh-tw, zh-cn)
-│   ├── _layout.tsx               # Per-language layout (load fonts, language, handle splash, gestures)
-│
+├── [lang]/                       # Language namespace (e.g., zh-tw, zh-cn)
+│   ├── _layout.tsx               # Per-language layout: loads fonts, language, handles splash, gestures
+│   │
 │   ├── (tabs)/                   # Bottom tab navigation pages
-│   │   ├── _layout.tsx           # Tabs layout (BottomTabNavigator)
-│   │   ├── index.tsx             # Home screen with language switch + main links
-│   │   └── settings.tsx          # Settings screen with language switch and routing sync
-│   │   └── travelChat.tsx        # refer to [namespace]/ 
+│   │   ├── _layout.tsx           # Tabs layout with BottomTabNavigator
+│   │   ├── index.tsx             # Home screen with language switch and main links
+│   │   ├── settings.tsx          # Settings screen with language switch and routing sync
+│   │   ├── travelChat.tsx        # Refers to [namespace]/
+│   │
 │   ├── hiragana.tsx              # Hiragana page
 │   ├── katakana.tsx              # Katakana page
 │   ├── kana-comparison.tsx       # Kana comparison page
 │   ├── phonetics.tsx             # Phonetics guide
 │   ├── n5-concepts.tsx           # N5 concept overview
 │   ├── grammar-concepts.tsx      # Grammar explanation screen
-│   ├── privacy-policy.tsx        
-
+│   ├── privacy-policy.tsx        # Privacy policy page
+│   │
 │   ├── grammar/                  # Grammar section
 │   │   ├── _layout.tsx           # Optional nested layout for grammar
-│   │   ├── index.tsx             # Grammar menu (e.g. N5/N4 grammar selection)
-│   │   └── [level].tsx           # Dynamic grammar page based on selected level
-
+│   │   ├── index.tsx             # Grammar menu (e.g., N5/N4 grammar selection)
+│   │   ├── [level].tsx           # Dynamic grammar page based on selected level
+│   │
 │   ├── words/                    # Vocabulary section
 │   │   ├── _layout.tsx           # Optional nested layout for words
-│   │   └── menu.tsx              # Words menu entry point
-│   ├── screens/  
-│   │   └── WordsScreen.tsx
-
-│   ├── [namespace]/              # Shared content namespace (e.g. story / n5chat / travelchat)
-│   │   ├── index.tsx             # Render story cards by namespace (uses i18n resources)
-│   │   └── [storyTitle].tsx      # Display actual story content based on title
-
-│   ├── hook/                    # Vocabulary section
-│   │   ├── useTextToSpeech.ts           
-
+│   │   ├── menu.tsx              # Words menu entry point
+│   │
+│   ├── screens/                  # Screens section
+│   │   ├── WordsScreen.tsx       # Vocabulary screen
+│   │
+│   ├── [namespace]/              # Shared content namespace (e.g., story, n5chat, travelchat)
+│   │   ├── index.tsx             # Renders story cards by namespace using i18n resources
+│   │   ├── [storyTitle].tsx      # Displays story content based on title
+│   │
+│   ├── hook/                     # Custom hooks
+│   │   ├── useTextToSpeech.ts    # Text-to-speech utility hook
+│
 locales/
-├── i18n.ts        
-
-
-│   ├── src/                    
-│   │   ├── utils/           
-│   │   ├──constants.ts
-│   │   ├──deviceCheck.ts
-│   │   ├──imageLoader.ts
-│   │   ├──languageService.ts
-│   │   ├──updateCheck.ts
-
+├── i18n.ts                       # Internationalization configuration
+│
+src/
+├── utils/                        # Utility functions
+│   ├── constants.ts              # Application constants
+│   ├── deviceCheck.ts            # Device compatibility checks
+│   ├── imageLoader.ts            # Image loading utilities
+│   ├── languageService.ts        # Language management service
+│   ├── updateCheck.ts            # Update checking utilities
+│
 public/
-├── app-ads.txt
-├── robots.txt
-├── sitemap.xml
+├── app-ads.txt                   # Ads configuration
+├── robots.txt                    # Robots configuration
+├── sitemap.xml                   # Sitemap for SEO
 
 
 ## Version update 
