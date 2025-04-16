@@ -157,7 +157,6 @@ const HiraganaScreen = () => {
       ))}
 
       <HiraganaTable />
-      <AdBanner />
     </ScrollView>
   );
 };

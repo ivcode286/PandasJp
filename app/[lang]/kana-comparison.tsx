@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, ScrollView, useColorScheme, SafeAreaView, TouchableOpacity } from 'react-native';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
+import { AdBanner } from '@/components/AdBanner';
 
 const KANA_LIST = [
   [['あ', 'ア', 'a'], ['い', 'イ', 'i'], ['う', 'ウ', 'u'], ['え', 'エ', 'e'], ['お', 'オ', 'o']],
@@ -37,7 +38,12 @@ const KanaComparisonScreen = () => {
                   margin: 2,
                   borderWidth: 1,
                   borderColor: isDark ? '#fff' : '#000',
-                  borderRadius: 5
+                  borderRadius: 5,
+                  shadowColor: isDark ? '#fff' : '#000',
+                  shadowOffset: { width: 0, height: 2 },
+                  shadowOpacity: 0.3,
+                  shadowRadius: 2,
+                  elevation: 3,
                 }}
               >
                 <Text style={{ fontSize: 20, fontWeight: '600', color: isDark ? '#fff' : '#000' }}>
@@ -48,6 +54,7 @@ const KanaComparisonScreen = () => {
             ))}
           </View>
         ))}
+        <AdBanner />
       </ScrollView>
     </SafeAreaView>
   );
