@@ -15,12 +15,12 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    ```bash
     npx expo start
  
- -Run on expo web or expo go
-  npm start
+ Run on expo web or expo go
+ npm start
 
 
---- 
-Web Producton build in local
+
+## Web Producton build in local
 (i)npx expo start --clear          (clears Metro Bundler’s cache error like: Unable to resolve module ./app/navigation/TabNavigator from App.tsx) 
 (ii)npx expo export --platform web
 
@@ -33,6 +33,21 @@ npx eas submit --platform ios --latest
 
 or build auto submit
 npx eas build --platform ios --profile production --auto-submit
+
+## IOS local run 
+1.If there is native ios settings updated
+cd ios
+pod install            
+cd ..
+npm start
+Xcode build   
+
+
+## Android local run 
+cd android
+./gradlew clean
+cd ..
+npx expo run:android --device
 
 
 ## Custom development build/bareflow
