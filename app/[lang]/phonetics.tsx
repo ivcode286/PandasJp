@@ -10,6 +10,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { HiraganaTable } from "./hiragana";
 import useTextToSpeech from "../../hooks/useTextToSpeech";
+import { AdBanner } from "@/components/AdBanner";
 
 // 定義各個資料項目的型別
 type DakuonItem = {
@@ -133,6 +134,10 @@ const PhoneticsScreen = () => {
       component: <HiraganaTable />,
     },
     {
+      key: "ad",
+      component: <AdBanner />,
+    },
+    {
       key: "2",
       title: t("sections.dakuon.title"),
       description: t("sections.dakuon.description"),
@@ -171,6 +176,10 @@ const PhoneticsScreen = () => {
         key: `${index + 1}`,
         text,
       })),
+    },
+    {
+      key: "ad2",
+      component: <AdBanner />,
     },
   ];
 

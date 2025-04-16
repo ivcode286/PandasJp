@@ -10,6 +10,7 @@ import {
 import { useTranslation } from "react-i18next";
 import useTextToSpeech from "@/hooks/useTextToSpeech";
 import { KatakanaTranslation } from "../../src/types/translation";
+import { AdBanner } from "@/components/AdBanner";
 
 export const KatakanaTable = () => {
   const theme = useColorScheme();
@@ -122,6 +123,8 @@ const KatakanaScreen = () => {
           </Text>
         )
       )}
+
+      <AdBanner />
 
       <Text style={[styles.subTitle, { color: colors.text }]}>
         {typedT("sections.examples.title")}

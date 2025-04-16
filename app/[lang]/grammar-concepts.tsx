@@ -1,6 +1,7 @@
 import React from "react";
 import { ScrollView, View, Text, StyleSheet, useColorScheme } from "react-native";
 import { useTranslation } from "react-i18next";
+import { AdBanner } from "@/components/AdBanner";
 
 interface TableProps {
   header: string[];
@@ -74,6 +75,8 @@ const GrammarConceptsScreen: React.FC = () => {
         />
       </View>
 
+      <AdBanner />
+      
       <View style={styles.section}>
         <Text style={[styles.sectionTitle, { color: colors.text }]}>
           {t("translation.sections.section2.title")}
@@ -123,6 +126,8 @@ const GrammarConceptsScreen: React.FC = () => {
           data={t("translation.sections.section6.table.data", { returnObjects: true }) as string[][]}
         />
       </View>
+
+      <AdBanner />
 
       <View style={styles.section}>
         <Text style={[styles.sectionTitle, { color: colors.text }]}>
