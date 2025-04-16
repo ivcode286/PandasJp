@@ -10,7 +10,8 @@ import {
 import { useTranslation } from "react-i18next";
 import { HiraganaTable } from "./hiragana";
 import useTextToSpeech from "../../hooks/useTextToSpeech";
-import { AdBanner } from "@/components/AdBanner";
+import AdBanner from "@/components/AdBanner";
+
 
 // 定義各個資料項目的型別
 type DakuonItem = {

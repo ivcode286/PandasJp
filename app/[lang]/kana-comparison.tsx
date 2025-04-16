@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, ScrollView, useColorScheme, SafeAreaView, TouchableOpacity } from 'react-native';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
-import { AdBanner } from '@/components/AdBanner';
+import AdBanner from '@/components/AdBanner';
+
 
 const KANA_LIST = [
   [['あ', 'ア', 'a'], ['い', 'イ', 'i'], ['う', 'ウ', 'u'], ['え', 'エ', 'e'], ['お', 'オ', 'o']],

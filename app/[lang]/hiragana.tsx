@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
-import { AdBanner } from '@/components/AdBanner';
+import AdBanner from '@/components/AdBanner';
 
 // 定義翻譯鍵的預期結構
 interface TranslationKeys {

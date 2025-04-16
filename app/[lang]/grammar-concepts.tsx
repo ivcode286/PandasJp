@@ -1,7 +1,8 @@
 import React from "react";
 import { ScrollView, View, Text, StyleSheet, useColorScheme } from "react-native";
 import { useTranslation } from "react-i18next";
-import { AdBanner } from "@/components/AdBanner";
+import AdBanner from "@/components/AdBanner";
+
 
 interface TableProps {
   header: string[];

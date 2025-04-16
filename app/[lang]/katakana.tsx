@@ -10,7 +10,8 @@ import {
 import { useTranslation } from "react-i18next";
 import useTextToSpeech from "@/hooks/useTextToSpeech";
 import { KatakanaTranslation } from "../../src/types/translation";
-import { AdBanner } from "@/components/AdBanner";
+import AdBanner from "@/components/AdBanner";
+
 
 export const KatakanaTable = () => {
   const theme = useColorScheme();

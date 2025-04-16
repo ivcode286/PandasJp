@@ -1,7 +1,8 @@
 import React from "react";
 import { FlatList, View, Text, StyleSheet, useColorScheme } from "react-native";
 import { useTranslation } from "react-i18next";
-import { AdBanner } from "@/components/AdBanner";
+import AdBanner from "@/components/AdBanner";
+
 
 export default function N5ConceptsScreen() {
   const { t } = useTranslation("n5Concepts");

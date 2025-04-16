@@ -66,7 +66,7 @@ npm run export:web
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## File Structure
+## File Structure - This app is for web and mobile(IOS/ANDROID). Currently, it uses AdMob for the mobile app, while the web app does not have advertisements:
 app/                              \
 ├── index.tsx                     # Redirects to /zh-tw or /zh-cn based on saved language or browser \
 ├── _layout.tsx                   # Root layout: detects language and redirects using <Redirect /> \
