@@ -76,6 +76,26 @@ export default function HomeScreen() {
       title: t('menu.n4_advance_grammar'),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N4_ADVANCE_GRAMMAR}`),
     },
+    {
+      title: t('menu.n3_basic_grammar'),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N3_BASIC_GRAMMAR}`),
+    },
+    {
+      title: t('menu.n3_advance_grammar'),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N3_ADVANCE_GRAMMAR}`),
+    },
+  ];
+
+  const thirdMenuItems: MenuItem[] = [
+    { title: t('menu.words_n4_n3'), href: getLangHref('/words/n4-n3') },
+    {
+      title: t('menu.n3_basic_grammar'),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N3_BASIC_GRAMMAR}`),
+    },
+    {
+      title: t('menu.n3_advance_grammar'),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N3_ADVANCE_GRAMMAR}`),
+    },
   ];
 
   // Debounced language change to prevent rapid toggling

@@ -3,9 +3,9 @@ const homeZhCN = {
   n5title: '📌 從零開始學日語N5',
   n4title: '📌 N4日语学习',
   meta_description:
-    'PandasJP提供免费日语N5学习资源，包含入门必学的平假名和文法、初学者必备的N5单词和汉字，以及深入学习的进阶文法，助您快速掌握日语基础。',
+    'PandasJP提供免费日语N5,N4,N3学习资源，包含入门必学的平假名和文法、初学者必备的日语单词和汉字，以及深入学习的进阶文法，助您快速掌握日语基础。',
   intro:
-    '欢迎使用PandasJP日语学习APP！本应用提供免费的日语N5和N4学习资源，包含入门必学的平假名和文法、初学者必备的N5单词和汉字，以及深入学习的进阶文法，助您快速入门日语。',
+    '欢迎使用PandasJP日语学习APP！本应用提供免费的日语N5,N4,N3学习资源，包含入门必学的平假名和文法、初学者必备的N5单词和汉字，以及深入学习的进阶文法，助您快速入门日语。',
   intro_mobile: 'PandasJP-免费日语教学，快速学日语！',
   app_name: 'PandasJP日语学习APP',
   language: {
@@ -31,7 +31,9 @@ const homeZhCN = {
     story: 'N5短篇故事 - 阅读与学习',
     words_n4_n3: '常用N4-N3单词 - 日语进阶学习',
     n4_basic_grammar: '最常用N4文法 - 核心必学',
-    n4_advance_grammar: '进阶N5文法 - 进阶必学',
+    n4_advance_grammar: '进阶N4文法 - 进阶必学',
+    n3_basic_grammar: '最常用N3文法 - 核心必学',
+    n3_advance_grammar: '进阶N3文法 - 进阶必学',
   },
 };
 
