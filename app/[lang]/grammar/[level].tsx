@@ -5,10 +5,10 @@ import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
-import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import i18n from '@/src/locales/i18n';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
+import { GRAMMAR_LEVELS } from '@/src/utils/constants';
 
 interface TransformedSection {
   pattern: string;
@@ -21,6 +21,8 @@ interface TransformedChapter {
   data: TransformedSection[];
 }
 
+
+
 const SECTION_HEADER_HEIGHT = 70;
 const ITEM_MARGIN = 12;
 
@@ -32,7 +34,7 @@ const getItemLayout = sectionListGetItemLayout({
 // Define static params for this route
 export async function generateStaticParams({ params }: { params: { lang: string } }) {
   const { lang } = params;
-  const levels = [LEVELS.N5_BASIC_GRAMMAR, LEVELS.N5_ADVANCE_GRAMMAR];
+  const levels = Object.values(GRAMMAR_LEVELS);
 
   console.log('Generating static params in [level].tsx for lang:', lang);
 
@@ -53,7 +55,7 @@ export async function getStaticProps({ params }: { params: { lang: string; level
   const normalizedLang = lang === 'zh-cn' ? 'zh-CN' : 'zh-TW';
   await i18n.changeLanguage(normalizedLang);
 
-  const namespace = level === LEVELS.N5_ADVANCE_GRAMMAR ? 'n5_advance' : 'n5_basic';
+  const namespace = level.replace(/-grammar$/, '').replace(/-/g, '_');
   const grammarData = i18n.t(`grammar:${namespace}.chapters`, { returnObjects: true });
 
   if (!Array.isArray(grammarData)) {
@@ -100,7 +102,7 @@ export default function GrammarScreen({
   let transformedData = staticTransformedData;
 
   if (!transformedData && level) {
-    const namespace = level === LEVELS.N5_ADVANCE_GRAMMAR ? 'n5_advance' : 'n5_basic';
+    const namespace = level.replace(/-grammar$/, '').replace(/-/g, '_');
     const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
 
     transformedData = Array.isArray(grammarData)

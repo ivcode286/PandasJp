@@ -14,7 +14,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { debounce } from 'lodash';
-import { LEVELS } from '@/src/utils/constants';
+import { GRAMMAR_LEVELS } from '@/src/utils/constants';
+
+
 
 // Placeholder for web SEO (replace with react-helmet or expo-router's <Head> in a real app)
 const Head = Platform.OS === 'web' ? ({ children }: { children: React.ReactNode }) => <>{children}</> : () => null;
@@ -54,11 +56,11 @@ export default function HomeScreen() {
     { title: t('menu.grammar_concepts'), href: getLangHref('/grammar-concepts') },
     {
       title: t('menu.n5_basic_grammar'),
-      href: getLangHref(`/grammar/${LEVELS.N5_BASIC_GRAMMAR}`),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N5_BASIC_GRAMMAR}`),
     },
     {
       title: t('menu.n5_advance_grammar'),
-      href: getLangHref(`/grammar/${LEVELS.N5_ADVANCE_GRAMMAR}`),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N5_ADVANCE_GRAMMAR}`),
     },
     { title: t('menu.n5_chat'), href: getLangHref('/n5chat') },
     { title: t('menu.story'), href: getLangHref('/story') },
@@ -68,7 +70,11 @@ export default function HomeScreen() {
     { title: t('menu.words_n4_n3'), href: getLangHref('/words/n4-n3') },
     {
       title: t('menu.n4_basic_grammar'),
-      href: getLangHref(`/grammar/${LEVELS.N4_BASIC_GRAMMAR}`),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N4_BASIC_GRAMMAR}`),
+    },
+    {
+      title: t('menu.n4_advance_grammar'),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N4_ADVANCE_GRAMMAR}`),
     },
   ];
 
