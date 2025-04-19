@@ -380,6 +380,385 @@ const n4AdvanceGrammarZhTW: GrammarData = {
             },
           ],
         },
+        {
+          pattern: "82. ～ところ（正要～、正在～、剛做完～）",
+          meaning: "表示某動作或狀態的時間點，如正要、正在或剛完成。",
+          description: "📌 句型說明\n動詞辭書形 + ところ（正要～）\n動詞て形 + いるところ（正在～）\n動詞た形 + ところ（剛做完～）\n用來描述動作的具體階段。",
+          examples: [
+            {
+              sentence: "🔹今、家を出るところです。",
+              translation: "我正要出門。",
+            },
+            {
+              sentence: "🔹彼はご飯を食べているところです。",
+              translation: "他正在吃飯。",
+            },
+            {
+              sentence: "🔹宿題をやったところです。",
+              translation: "我剛做完作業。",
+            },
+          ],
+        },
+        {
+          pattern: "83. ～までに（到～之前）",
+          meaning: "表示某動作或狀態必須在某時間點之前完成。",
+          description: "📌 句型說明\n名詞（時間） + までに + 動詞\n強調截止時間。",
+          examples: [
+            {
+              sentence: "🔹月曜日までにレポートを提出してください。",
+              translation: "請在星期一之前提交報告。",
+            },
+            {
+              sentence: "🔹5時までに駅に着きます。",
+              translation: "我會在5點之前到車站。",
+            },
+          ],
+        },
+        {
+          pattern: "84. ～によって（因為～而不同、根據～）",
+          meaning: "表示因某因素而異，或根據某基準。",
+          description: "📌 句型說明\n名詞 + によって + 動詞 / 形容詞\n用於表示原因、方法或依據。\n書面語氣較強。",
+          examples: [
+            {
+              sentence: "🔹人によって考え方が違います。",
+              translation: "根據人的不同，想法也不同。",
+            },
+            {
+              sentence: "🔹天気によって予定が変わります。",
+              translation: "根據天氣，計劃會改變。",
+            },
+          ],
+        },
+        {
+          pattern: "85. ～はずだ（理應～）",
+          meaning: "表示根據常理或預期，某事應該會發生。",
+          description: "📌 句型說明\n動詞普通形 / い形容詞普通形 / な形容詞 + はずだ\n名詞 + のはずだ\n表示邏輯推測。",
+          examples: [
+            {
+              sentence: "🔹彼はもう家に着いたはずです。",
+              translation: "他應該已經到家了。",
+            },
+            {
+              sentence: "🔹この店は美味しいはずだ。",
+              translation: "這家店應該很好吃。",
+            },
+          ],
+        },
+        {
+          pattern: "86. ～はずがない（不可能～）",
+          meaning: "表示根據常理，某事不可能發生。",
+          description: "📌 句型說明\n動詞普通形 / い形容詞普通形 / な形容詞 + はずがない\n名詞 + のはずがない\n強調否定推測。",
+          examples: [
+            {
+              sentence: "🔹彼がそんなことを言うはずがない。",
+              translation: "他不可能說那種話。",
+            },
+            {
+              sentence: "🔹この問題が簡単なはずがない。",
+              translation: "這個問題不可能簡單。",
+            },
+          ],
+        },
+        {
+          pattern: "87. ～ことになる（決定要～）",
+          meaning: "表示某事已被決定，通常是客觀或外部決定。",
+          description: "📌 句型說明\n動詞辭書形 / ない形 + ことになる\n表示決定或安排。",
+          examples: [
+            {
+              sentence: "🔹来月、海外に行くことになりました。",
+              translation: "下個月決定要去國外。",
+            },
+            {
+              sentence: "🔹会議は午後から行うことになった。",
+              translation: "會議決定從下午開始。",
+            },
+          ],
+        },
+        {
+          pattern: "88. ～ことにする（自己決定要～）",
+          meaning: "表示說話者自己決定做某事。",
+          description: "📌 句型說明\n動詞辭書形 / ない形 + ことにする\n強調主觀決定。",
+          examples: [
+            {
+              sentence: "🔹毎日、運動することにしました。",
+              translation: "我決定每天運動。",
+            },
+            {
+              sentence: "🔹タバコを吸わないことにした。",
+              translation: "我決定不抽菸。",
+            },
+          ],
+        },
+        {
+          pattern: "89. ～ようにする（盡量做到～）",
+          meaning: "表示努力或嘗試去實現某狀態或動作。",
+          description: "📌 句型說明\n動詞辭書形 / ない形 + ようにする\n表示有意識的努力。",
+          examples: [
+            {
+              sentence: "🔹遅刻しないようにします。",
+              translation: "我會盡量不遲到。",
+            },
+            {
+              sentence: "🔹毎日、日本語を勉強するようにしています。",
+              translation: "我盡量每天學日語。",
+            },
+          ],
+        },
+        {
+          pattern: "90. ～ようになる（變得能～）",
+          meaning: "表示能力或狀態的變化，變得能夠做某事。",
+          description: "📌 句型說明\n動詞辭書形 / ない形 + ようになる\n強調能力或習慣的改變。",
+          examples: [
+            {
+              sentence: "🔹日本語が話せるようになりました。",
+              translation: "我變得能說日語了。",
+            },
+            {
+              sentence: "🔹朝早く起きるようになった。",
+              translation: "我變得能早起了。",
+            },
+          ],
+        },
+        {
+          pattern: "91. ～らしい（符合～身份、典型）",
+          meaning: "表示某事物或人符合某種典型特徵或身份。",
+          description: "📌 句型說明\n名詞 + らしい\n動詞普通形 / い形容詞普通形 + らしい\n表示符合預期或特徵。",
+          examples: [
+            {
+              sentence: "🔹彼女は女らしい服を着ています。",
+              translation: "她穿著很女性化的衣服。",
+            },
+            {
+              sentence: "🔹子供らしい笑顔が素敵です。",
+              translation: "那孩子般的笑容很迷人。",
+            },
+          ],
+        },
+        {
+          pattern: "92. ～みたいだ（看起來像～）",
+          meaning: "表示根據外觀或感覺，某事物看起來像某狀態。",
+          description: "📌 句型說明\n動詞普通形 / い形容詞普通形 / な形容詞 + みたいだ\n名詞 + のみたいだ\n語氣較口語化。",
+          examples: [
+            {
+              sentence: "🔹彼は病気みたいだ。",
+              translation: "他看起來像是生病了。",
+            },
+            {
+              sentence: "🔹この絵は本物みたいだ。",
+              translation: "這幅畫看起來像是真品。",
+            },
+          ],
+        },
+        {
+          pattern: "93. ～ばよかった（如果～就好了）",
+          meaning: "表示對過去的遺憾，認為如果做了某事會更好。",
+          description: "📌 句型說明\n動詞ば形 + よかった\n表示反事實的遺憾。",
+          examples: [
+            {
+              sentence: "🔹もっと勉強すればよかった。",
+              translation: "如果多學習就好了。",
+            },
+            {
+              sentence: "🔹早く寝ればよかった。",
+              translation: "如果早點睡就好了。",
+            },
+          ],
+        },
+        {
+          pattern: "94. ～ば～ほど（越～越～）",
+          meaning: "表示某狀態或動作的程度越高，另一狀態也越強。",
+          description: "📌 句型說明\n動詞ば形 / い形容詞ければ + ほど\n表示比例關係。",
+          examples: [
+            {
+              sentence: "🔹勉強すればするほど、頭がよくなります。",
+              translation: "越學習，頭腦越聰明。",
+            },
+            {
+              sentence: "🔹高ければ高いほど、品質がいい。",
+              translation: "越貴，品質越好。",
+            },
+          ],
+        },
+        {
+          pattern: "95. ～たまま（保持某狀態）",
+          meaning: "表示某動作完成後，該狀態持續不變。",
+          description: "📌 句型說明\n動詞た形 + まま\n強調狀態的持續。",
+          examples: [
+            {
+              sentence: "🔹窓を開けたまま寝ました。",
+              translation: "我開著窗戶睡覺了。",
+            },
+            {
+              sentence: "🔹靴を履いたまま家に入りました。",
+              translation: "我穿著鞋進了家。",
+            },
+          ],
+        },
+        {
+          pattern: "96. ～のようだ（比喻、像～一樣）",
+          meaning: "表示某事物像某種狀態或事物，用於比喻。",
+          description: "📌 句型說明\n名詞 + のようだ\n動詞普通形 / い形容詞普通形 / な形容詞 + ようだ\n用於比喻或推測。",
+          examples: [
+            {
+              sentence: "🔹彼女は天使のようだ。",
+              translation: "她就像天使一樣。",
+            },
+            {
+              sentence: "🔹風が強く吹くようだ。",
+              translation: "風好像在猛烈地吹。",
+            },
+          ],
+        },
+        {
+          pattern: "97. ～のように（像～一樣做某事）",
+          meaning: "表示某動作或狀態像某事物一樣進行。",
+          description: "📌 句型說明\n名詞 + のように + 動詞\n動詞普通形 / い形容詞普通形 + ように\n強調模仿或比喻。",
+          examples: [
+            {
+              sentence: "🔹鳥のようにはう。",
+              translation: "像鳥一樣飛。",
+            },
+            {
+              sentence: "🔹子供のようにはしゃぐ。",
+              translation: "像小孩一樣興奮。",
+            },
+          ],
+        },
+        {
+          pattern: "98. ～ないで（不做～而～）",
+          meaning: "表示不做某事而進行另一動作。",
+          description: "📌 句型說明\n動詞ない形 + で + 動詞\n表示否定條件下的動作。",
+          examples: [
+            {
+              sentence: "🔹朝ごはんを食べないで学校に行きました。",
+              translation: "我沒吃早餐就去學校了。",
+            },
+            {
+              sentence: "🔹宿題をしないで遊んでいます。",
+              translation: "我沒做作業就去玩了。",
+            },
+          ],
+        },
+        {
+          pattern: "99. ～ずに（書面語的ないで）",
+          meaning: "表示不做某事而進行另一動作，書面語氣。",
+          description: "📌 句型說明\n動詞辭書形 + ずに + 動詞\n功能與「～ないで」相同，但更正式。",
+          examples: [
+            {
+              sentence: "🔹許可を得ずに部屋に入った。",
+              translation: "我沒得到許可就進了房間。",
+            },
+            {
+              sentence: "🔹食事せずに働いた。",
+              translation: "我沒吃飯就工作了。",
+            },
+          ],
+        },
+        {
+          pattern: "100. ～てもかまわない（做～也沒關係）",
+          meaning: "表示做某事是允許的，沒問題。",
+          description: "📌 句型說明\n動詞て形 + もかまわない\n表示許可，語氣較隨意。",
+          examples: [
+            {
+              sentence: "🔹ここで写真を撮ってもかまいません。",
+              translation: "在這裡拍照也沒關係。",
+            },
+            {
+              sentence: "🔹遅く帰ってもかまいません。",
+              translation: "晚點回家也沒關係。",
+            },
+          ],
+        },
+        {
+          pattern: "101. ～なくてもかまわない（不做～也沒關係）",
+          meaning: "表示不做某事也沒問題，沒有義務。",
+          description: "📌 句型說明\n動詞ない形 + なくてもかまわない\n表示無需強制。",
+          examples: [
+            {
+              sentence: "🔹急がなくてもかまいません。",
+              translation: "不用著急也沒關係。",
+            },
+            {
+              sentence: "🔹宿題をしなくてもかまいません。",
+              translation: "不做作業也沒關係。",
+            },
+          ],
+        },
+        {
+          pattern: "102. ～てはいけない（不可以做～）",
+          meaning: "表示禁止，不允許做某事。",
+          description: "📌 句型說明\n動詞て形 + はいけない\n用於規則或禁止。",
+          examples: [
+            {
+              sentence: "🔹ここでタバコを吸ってはいけません。",
+              translation: "這裡不可以抽菸。",
+            },
+            {
+              sentence: "🔹授業中に話してはいけません。",
+              translation: "上課時不可以說話。",
+            },
+          ],
+        },
+        {
+          pattern: "103. ～なくてはいけない（必須～）",
+          meaning: "表示必須做某事，帶有義務感。",
+          description: "📌 句型說明\n動詞ない形去掉「い」 + くてはいけない\n表示必要性。",
+          examples: [
+            {
+              sentence: "🔹毎日、運動しなくてはいけません。",
+              translation: "每天必須運動。",
+            },
+            {
+              sentence: "🔹時間通りに来なくてはいけません。",
+              translation: "必須準時到。",
+            },
+          ],
+        },
+        {
+          pattern: "104. ～なければならない（必須～）",
+          meaning: "表示必須做某事，語氣較正式。",
+          description: "📌 句型說明\n動詞ない形去掉「い」 + なければならない\n與「～なくてはいけない」意思相近。",
+          examples: [
+            {
+              sentence: "🔹試験のために勉強しなければなりません。",
+              translation: "為了考試必須學習。",
+            },
+            {
+              sentence: "🔹明日、早く起きなければなりません。",
+              translation: "明天必須早起。",
+            },
+          ],
+        },
+        {
+          pattern: "105. ～てもいい（可以做～）",
+          meaning: "表示允許做某事。",
+          description: "📌 句型說明\n動詞て形 + もいい\n用於表示許可。",
+          examples: [
+            {
+              sentence: "🔹ここで休んでもいいです。",
+              translation: "可以在這裡休息。",
+            },
+            {
+              sentence: "🔹この本を読んでもいいです。",
+              translation: "可以讀這本書。",
+            },
+          ],
+        },
+        {
+          pattern: "106. ～なくてもいい（可以不做～）",
+          meaning: "表示不做某事也沒關係，沒有義務。",
+          description: "📌 句型說明\n動詞ない形 + なくてもいい\n表示無需強制。",
+          examples: [
+            {
+              sentence: "🔹今日、掃除しなくてもいいです。",
+              translation: "今天可以不打掃。",
+            },
+            {
+              sentence: "🔹急がなくてもいいですよ。",
+              translation: "不用急也沒關係。",
+            },
+          ],
+        }
       ],
     },
   ],

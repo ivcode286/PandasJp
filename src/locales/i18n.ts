@@ -35,10 +35,10 @@ import appPromptZhCN from './zh-CN/ApplicationPrompt';
 import n5ChatZhCN from './zh-CN/N5Chat';
 import travelChatZhTW from './zh-TW/TravelChat';
 import travelChatZhCN from './zh-CN/TravelChat';
-import n4GrammarZhTW from './zh-TW/N4BasicGrammar';
-import n4GrammarZhCN from './zh-CN/N4BasicGrammar';
-import n4AdvanceGrammarZhTW from './zh-TW/n4AdvanceGrammar';
-import n4AdvanceGrammarZhCN from './zh-CN/n4AdvanceGrammar';
+import n4BasicGrammarZhTW from './zh-TW/N4BasicGrammar';
+import n4BasicGrammarZhCN from './zh-CN/N4BasicGrammar';
+import n4AdvanceGrammarZhTW from './zh-TW/N4AdvanceGrammar';
+import n4AdvanceGrammarZhCN from './zh-CN/N4AdvanceGrammar';
 
 
 const resources = {
@@ -54,7 +54,7 @@ const resources = {
     grammar: {
       n5_basic: n5BasicGrammarZhTW,
       n5_advance: n5AdvanceGrammarZhTW,
-      n4_basic: n4GrammarZhTW, 
+      n4_basic: n4BasicGrammarZhTW, 
       n4_advance: n4AdvanceGrammarZhTW, 
     },
     words: {
@@ -79,7 +79,7 @@ const resources = {
     grammar: {
       n5_basic: n5BasicGrammarZhCN,
       n5_advance: n5AdvanceGrammarZhCN,
-      n4_basic: n4GrammarZhCN,  
+      n4_basic: n4BasicGrammarZhCN,  
       n4_advance: n4AdvanceGrammarZhCN, 
     },
     words: {

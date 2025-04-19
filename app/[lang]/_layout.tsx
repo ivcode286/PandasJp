@@ -95,6 +95,7 @@ export default function LangLayout() {
             'n5-basic-grammar': 'n5_basic_grammar',
             'n5-advance-grammar': 'n5_advance_grammar',
             'n4-basic-grammar': 'n4_basic_grammar',
+            'n4-advance-grammar': 'n4_advance_grammar',
           };
 
           // Determine header title

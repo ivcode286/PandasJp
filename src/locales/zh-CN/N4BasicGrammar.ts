@@ -1,6 +1,6 @@
 import { GrammarData } from "../../types/translation";
 
-const n4GrammarZhCN: GrammarData = {
+const n4BasicGrammarZhCN: GrammarData = {
   chapters: [
     {
       title: "建议与命令",
@@ -1144,4 +1144,4 @@ const n4GrammarZhCN: GrammarData = {
   ],
 };
 
-export default n4GrammarZhCN;
+export default n4BasicGrammarZhCN;
