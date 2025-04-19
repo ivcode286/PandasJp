@@ -11,10 +11,10 @@ const removeSpeakerNames = (text: string): string => {
   return text.replace(/[^：:]+[：:]/g, "");
 };
 
-// 移除括號中的假名
+// 移除括號中的假名（支援半形 () 和全形 （））
 const removeKanaInParentheses = (text: string): string => {
-  // 匹配括號中的假名內容，例如 (にもつ) 或 (も)，並移除
-  return text.replace(/\([^()]*\)/g, "");
+  // 匹配半形括號 () 和全形括號 （），括號內是任意字符
+  return text.replace(/(\(.*? \)|\（.*?\）)/g, "");
 };
 
 const useTextToSpeech = () => {
