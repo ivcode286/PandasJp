@@ -76,14 +76,6 @@ export default function HomeScreen() {
       title: t('menu.n4_advance_grammar'),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N4_ADVANCE_GRAMMAR}`),
     },
-    {
-      title: t('menu.n3_basic_grammar'),
-      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N3_BASIC_GRAMMAR}`),
-    },
-    {
-      title: t('menu.n3_advance_grammar'),
-      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N3_ADVANCE_GRAMMAR}`),
-    },
   ];
 
   const thirdMenuItems: MenuItem[] = [
@@ -197,6 +189,16 @@ export default function HomeScreen() {
               </TouchableOpacity>
             </Link>
           ))}
+
+<Text style={styles.n4Header}>{t('n3title')}</Text>
+
+{thirdMenuItems.map((item, idx) => (
+  <Link href={item.href} key={idx} asChild>
+    <TouchableOpacity style={styles.card}>
+      <Text style={styles.cardText}>• {item.title}</Text>
+    </TouchableOpacity>
+  </Link>
+))}
         </ScrollView>
       </View>
     </SafeAreaView>

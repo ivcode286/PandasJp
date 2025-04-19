@@ -2,6 +2,7 @@ const homeZhCN = {
   title: '日语学习 - PandasJP',
   n5title: '📌 從零開始學日語N5',
   n4title: '📌 N4日语学习',
+  n3title: '📌 N3日语学习',
   meta_description:
     'PandasJP提供免费日语N5,N4,N3学习资源，包含入门必学的平假名和文法、初学者必备的日语单词和汉字，以及深入学习的进阶文法，助您快速掌握日语基础。',
   intro:

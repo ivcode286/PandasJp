@@ -37,10 +37,12 @@ import travelChatZhTW from './zh-TW/TravelChat';
 import travelChatZhCN from './zh-CN/TravelChat';
 import n4BasicGrammarZhTW from './zh-TW/N4BasicGrammar';
 import n4BasicGrammarZhCN from './zh-CN/N4BasicGrammar';
-import n4AdvanceGrammarZhTW from './zh-TW/nN4AdvanceGrammar';
-import n4AdvanceGrammarZhCN from './zh-CN/nN4AdvanceGrammar';
+import n4AdvanceGrammarZhTW from './zh-TW/N4AdvanceGrammar';
+import n4AdvanceGrammarZhCN from './zh-CN/N4AdvanceGrammar';
 import n3BasicGrammarZhTW from './zh-TW/N3BasicGrammar';
 import n3AdvanceGrammarZhTW from './zh-TW/N3AdvanceGrammar';
+import n3AdvanceGrammarZhCN from './zh-CN/N3AdvanceGrammar';
+import n3BasicGrammarZhCN from './zh-CN/N3BasicGrammar';
 
 
 const resources = {
@@ -85,8 +87,8 @@ const resources = {
       n5_advance: n5AdvanceGrammarZhCN,
       n4_basic: n4BasicGrammarZhCN,  
       n4_advance: n4AdvanceGrammarZhCN, 
-      //n3_basic: n3BasicGrammarZhCN, 
-      //n3_advance: n3AdvanceGrammarZhCN, 
+      n3_basic: n3BasicGrammarZhCN, 
+      n3_advance: n3AdvanceGrammarZhCN, 
     },
     words: {
       n5: n5WordsZhCN,
