@@ -1,7 +1,7 @@
-// src/data/n4AdvanceGrammarZhCN.ts
+// src/data/N4AdvanceGrammarZhCN.ts
 import { GrammarData } from "../../types/translation";
 
-const n4AdvanceGrammarZhCN: GrammarData = {
+const N4AdvanceGrammarZhCN: GrammarData = {
   chapters: [
     {
       title: "📌 N4进阶语法",
@@ -765,4 +765,4 @@ const n4AdvanceGrammarZhCN: GrammarData = {
   ],
 };
 
-export default n4AdvanceGrammarZhCN;
+export default N4AdvanceGrammarZhCN;

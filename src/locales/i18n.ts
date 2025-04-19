@@ -37,8 +37,8 @@ import travelChatZhTW from './zh-TW/TravelChat';
 import travelChatZhCN from './zh-CN/TravelChat';
 import n4BasicGrammarZhTW from './zh-TW/N4BasicGrammar';
 import n4BasicGrammarZhCN from './zh-CN/N4BasicGrammar';
-import n4AdvanceGrammarZhTW from './zh-TW/N4AdvanceGrammar';
-import n4AdvanceGrammarZhCN from './zh-CN/N4AdvanceGrammar';
+import n4AdvanceGrammarZhTW from './zh-TW/n4AdvanceGrammar';
+import n4AdvanceGrammarZhCN from './zh-TW/n4AdvanceGrammar';
 
 
 const resources = {

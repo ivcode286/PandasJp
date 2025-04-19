@@ -1,6 +1,6 @@
 import { GrammarData } from "../../types/translation";
 
-const n4AdvanceGrammarZhTW: GrammarData = {
+const N4AdvanceGrammarZhTW: GrammarData = {
   chapters: [
     {
       title: "📌 N4進階文法",
@@ -764,4 +764,4 @@ const n4AdvanceGrammarZhTW: GrammarData = {
   ],
 };
 
-export default n4AdvanceGrammarZhTW;
+export default N4AdvanceGrammarZhTW;
