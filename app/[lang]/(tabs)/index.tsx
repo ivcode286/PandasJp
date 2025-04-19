@@ -94,15 +94,22 @@ export default function HomeScreen() {
           <link rel="canonical" href={`https://pandasapps.com${langPrefix}`} />
           <script type="application/ld+json">
             {JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Course',
-              'name': t('title'),
-              'description': t('meta_description'),
-              'provider': {
-                '@type': 'Organization',
-                'name': 'PandasJP',
-                'url': 'https://pandasapps.com',
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": t('title'),
+              "description": t('meta_description'),
+              "image": "https://pandasapps.com/cover-example.jpg",
+              "datePublished": "2025-04-19", 
+              "author": {
+                "@type": "Organization",
+                "name": "PandasJP",
+                "url": "https://pandasapps.com"
               },
+              "publisher": {
+                "@type": "Organization",
+                "name": "PandasJP",
+                "url": "https://pandasapps.com"
+              }
             })}
           </script>
         </Head>
@@ -226,12 +233,12 @@ const styles = StyleSheet.create({
     ...(Platform.OS === 'web'
       ? { boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }
       : {
-          shadowColor: '#000',
-          shadowOffset: { width: 0, height: 2 },
-          shadowOpacity: 0.25,
-          shadowRadius: 3.84,
-          elevation: 5,
-        }),
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
+      }),
   },
   cardText: {
     fontSize: 18,
