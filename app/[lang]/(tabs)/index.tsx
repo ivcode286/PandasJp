@@ -98,7 +98,7 @@ export default function HomeScreen() {
               "@type": "Article",
               "headline": t('title'),
               "description": t('meta_description'),
-              "image": "https://pandasapps.com/cover-example.jpg",
+              //"image": "https://pandasapps.com/cover-example.jpg",
               "datePublished": "2025-04-19", 
               "author": {
                 "@type": "Organization",
