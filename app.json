@@ -12,10 +12,15 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.pandasapps.PandasJp",
-      "buildNumber": "8",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
-        "GADApplicationIdentifier": "ca-app-pub-8778852534152395~8255277423"
+        "GADApplicationIdentifier": "ca-app-pub-8778852534152395~8255277423",
+        "NSUserTrackingUsageDescription": "This app uses tracking data to provide personalized ads.",
+        "SKAdNetworkItems": [
+          {
+            "SKAdNetworkIdentifier": "cstr6suwn9.skadnetwork"
+          }
+        ]
       }
     },
     "android": {
@@ -25,7 +30,7 @@
       },
       "package": "com.pandasapps.PandasJp",
       "config": {
-        "googleMobileAdsAppId": "ca-app-pub-3940256099942544~3347511713"
+        "googleMobileAdsAppId": "ca-app-pub-8778852534152395~8255277423"
       }
     },
     "web": {

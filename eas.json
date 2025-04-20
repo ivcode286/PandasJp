@@ -7,15 +7,42 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal",
+      "node": "18.x",
       "ios": {
-        "simulator": true
+        "simulator": true,
+        "cocoapods": "1.15.2"
+      },
+      "env": {
+        "USE_HERMES": "true",
+        "EXPO_NO_DOTENV": "1",
+        "GAD_APPLICATION_IDENTIFIER": "ca-app-pub-8778852534152395~8255277423"
       }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "node": "18.x",
+      "ios": {
+        "simulator": true,
+        "cocoapods": "1.15.2"
+      },
+      "env": {
+        "USE_HERMES": "true",
+        "EXPO_NO_DOTENV": "1",
+        "GAD_APPLICATION_IDENTIFIER": "ca-app-pub-8778852534152395~8255277423"
+      }
     },
     "production": {
-      "autoIncrement": true
+      "autoIncrement": true,
+      "distribution": "store",
+      "node": "18.x",
+      "ios": {
+        "cocoapods": "1.15.2"
+      },
+      "env": {
+        "USE_HERMES": "true",
+        "EXPO_NO_DOTENV": "1",
+        "GAD_APPLICATION_IDENTIFIER": "ca-app-pub-8778852534152395~8255277423"
+      }
     }
   },
   "submit": {
