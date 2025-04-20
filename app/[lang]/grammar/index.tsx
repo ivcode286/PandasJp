@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Link } from 'expo-router';
-import { COVERPAGE_CARD_WIDTH, LEVELS } from '@/src/utils/constants';
+import { COVERPAGE_CARD_WIDTH, GRAMMAR_LEVELS } from '@/src/utils/constants';
 
 const menuData = [
-    { title: 'N5 基本文法', image: require('@/assets/images/n5-basic-grammar.jpg'), level: LEVELS.N5_BASIC_GRAMMAR },
-    { title: 'N5 上級文法', image: require('@/assets/images/n5-advance-grammar.jpg'), level: LEVELS.N5_ADVANCE_GRAMMAR },
+    { title: 'N5 基本文法', image: require('@/assets/images/n5-basic-grammar.jpg'), level: GRAMMAR_LEVELS.N5_BASIC_GRAMMAR },
+    { title: 'N5 上級文法', image: require('@/assets/images/n5-advance-grammar.jpg'), level: GRAMMAR_LEVELS.N5_ADVANCE_GRAMMAR },
   ];
 
 export default function GrammarMenu() {

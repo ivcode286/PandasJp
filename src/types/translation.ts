@@ -179,6 +179,10 @@ export interface Translation {
   grammar: {
     n5_basic: GrammarData;
     n5_advance: GrammarData;
+    n4_basic: GrammarData,  
+    n4_advance: GrammarData, 
+    n3_basic: GrammarData, 
+    n3_advance: GrammarData, 
   };
   words: {
     n5: WordData[];
