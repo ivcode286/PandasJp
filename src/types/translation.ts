@@ -52,19 +52,6 @@ export interface StoryTranslation {
   story: StoryChapter[];
 }
 
-export interface ConversationLine {
-  speaker: string;
-  japanese: string;
-  chinese: string;
-}
-
-export interface ConversationTranslation {
-  title: string;
-  imageName: string;
-  scene: string;
-  conversation: ConversationLine[];
-}
-
 export interface GrammarExample {
   sentence: string;
   translation: string;
@@ -115,7 +102,6 @@ export interface HomeTranslation {
     grammar_concepts: string;
     n5_basic_grammar: string;
     n5_advance_grammar: string;
-    conversation: string;
     story: string;
   };
 }

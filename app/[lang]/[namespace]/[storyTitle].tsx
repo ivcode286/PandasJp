@@ -54,8 +54,7 @@ export default function ContentScreen() {
     ? (itemsRaw as Array<{
         title: string;
         imageName: string;
-        story?: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;
-        conversation?: Array<{ speaker: string; japanese: string; chinese: string }>;
+        story?: Array<{ chapter: string; content: Array<{ sentence: string; translation: string }> }>;     
       }>)
     : [];
 
@@ -81,7 +80,7 @@ export default function ContentScreen() {
     );
   }
 
-  const content = item.story || item.conversation || [];
+  const content = item.story || [];
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{ paddingBottom: 80 }}>
@@ -91,40 +90,26 @@ export default function ContentScreen() {
       <Text style={styles.title}>{item.title}</Text>
       {content.map((entry, index) => (
         <View key={index} style={styles.entryContainer}>
-          {'chapter' in entry ? (
-            <>
-              <Text style={styles.chapterTitle}>{entry.chapter}</Text>
-              {entry.content.map((line, lineIndex) => (
-                <View key={lineIndex} style={styles.sentenceContainer}>
-                  <View style={styles.sentenceRow}>
-                    <Text style={styles.sentence}>{line.sentence}</Text>
-                    <TouchableOpacity
-                      onPress={() => {
-                        const spokenText = line.sentence.includes('：')
-                          ? line.sentence.split('：')[1].trim()
-                          : line.sentence;
-                        speak(spokenText);
-                      }}
-                      style={styles.iconSpacing}
-                    >
-                      <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
-                    </TouchableOpacity>
-                  </View>
-                  <Text style={styles.translation}>{line.translation}</Text>
-                </View>
-              ))}
-            </>
-          ) : (
-            <View style={styles.sentenceContainer}>
+          <Text style={styles.chapterTitle}>{entry.chapter}</Text>
+          {entry.content.map((line, lineIndex) => (
+            <View key={lineIndex} style={styles.sentenceContainer}>
               <View style={styles.sentenceRow}>
-                <Text style={styles.sentence}>{entry.speaker}: {entry.japanese}</Text>
-                <TouchableOpacity onPress={() => speak(entry.japanese)} style={styles.iconSpacing}>
+                <Text style={styles.sentence}>{line.sentence}</Text>
+                <TouchableOpacity
+                  onPress={() => {
+                    const spokenText = line.sentence.includes('：')
+                      ? line.sentence.split('：')[1].trim()
+                      : line.sentence;
+                    speak(spokenText);
+                  }}
+                  style={styles.iconSpacing}
+                >
                   <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
                 </TouchableOpacity>
               </View>
-              <Text style={styles.translation}>{entry.chinese}</Text>
+              <Text style={styles.translation}>{line.translation}</Text>
             </View>
-          )}
+          ))}
         </View>
       ))}
     </ScrollView>

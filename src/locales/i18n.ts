@@ -119,7 +119,6 @@ i18n.use(initReactI18next).init({
     'phonetics',
     'story',
     'n5chat', // all lower case in url for story
-    'conversation',
     'grammar',
     'words',
     'common',
