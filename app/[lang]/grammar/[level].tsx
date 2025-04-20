@@ -9,7 +9,7 @@ import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import i18n from '@/src/locales/i18n';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 import { GRAMMAR_LEVELS } from '@/src/utils/constants';
-import AdBanner from '@/components/AdBanner.native'; // Import AdBanner
+import AdBanner from '@/components/AdBanner'; // Import AdBanner
 
 interface GrammarSection {
   pattern: string;
