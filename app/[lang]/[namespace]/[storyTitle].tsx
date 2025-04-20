@@ -7,6 +7,7 @@ import useTextToSpeech from '@/hooks/useTextToSpeech';
 import { getImage } from '../../../src/utils/imageLoader';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import i18n from '@/src/locales/i18n';
+import AdBanner from '@/components/AdBanner';
 
 // 定義 params 的類型
 interface StaticParams {
@@ -89,27 +90,30 @@ export default function ContentScreen() {
       </View>
       <Text style={styles.title}>{item.title}</Text>
       {content.map((entry, index) => (
-        <View key={index} style={styles.entryContainer}>
-          <Text style={styles.chapterTitle}>{entry.chapter}</Text>
-          {entry.content.map((line, lineIndex) => (
-            <View key={lineIndex} style={styles.sentenceContainer}>
-              <View style={styles.sentenceRow}>
-                <Text style={styles.sentence}>{line.sentence}</Text>
-                <TouchableOpacity
-                  onPress={() => {
-                    const spokenText = line.sentence.includes('：')
-                      ? line.sentence.split('：')[1].trim()
-                      : line.sentence;
-                    speak(spokenText);
-                  }}
-                  style={styles.iconSpacing}
-                >
-                  <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
-                </TouchableOpacity>
+        <View key={index}>
+          <View style={styles.entryContainer}>
+            <Text style={styles.chapterTitle}>{entry.chapter}</Text>
+            {entry.content.map((line, lineIndex) => (
+              <View key={lineIndex} style={styles.sentenceContainer}>
+                <View style={styles.sentenceRow}>
+                  <Text style={styles.sentence}>{line.sentence}</Text>
+                  <TouchableOpacity
+                    onPress={() => {
+                      const spokenText = line.sentence.includes('：')
+                        ? line.sentence.split('：')[1].trim()
+                        : line.sentence;
+                      speak(spokenText);
+                    }}
+                    style={styles.iconSpacing}
+                  >
+                    <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                  </TouchableOpacity>
+                </View>
+                <Text style={styles.translation}>{line.translation}</Text>
               </View>
-              <Text style={styles.translation}>{line.translation}</Text>
-            </View>
-          ))}
+            ))}
+          </View>
+          {index === 0 && <AdBanner />}
         </View>
       ))}
     </ScrollView>
