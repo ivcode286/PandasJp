@@ -35,6 +35,9 @@ npx eas submit --platform ios --latest
 or build auto submit
 npx eas build --platform ios --profile production --auto-submit
 
+## Update app version 
+Check app.json and infoplist app version when building new version,they should be same  
+
 ## IOS local run
 
 1.If there is native ios settings updated
