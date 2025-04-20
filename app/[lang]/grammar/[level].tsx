@@ -9,25 +9,30 @@ import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import i18n from '@/src/locales/i18n';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 import { GRAMMAR_LEVELS } from '@/src/utils/constants';
+import AdBanner from '@/components/AdBanner.native'; // Import AdBanner
 
-interface TransformedSection {
+interface GrammarSection {
   pattern: string;
   description: string;
   examples: { sentence: string; translation: string }[];
 }
 
-interface TransformedChapter {
-  title: string;
-  data: TransformedSection[];
+interface AdSection {
+  ad: true;
 }
 
+type SectionItem = GrammarSection | AdSection;
 
+interface TransformedChapter {
+  title: string;
+  data: SectionItem[];
+}
 
 const SECTION_HEADER_HEIGHT = 70;
 const ITEM_MARGIN = 12;
 
 const getItemLayout = sectionListGetItemLayout({
-  getItemHeight: (_, index) => 80 + ITEM_MARGIN * index,
+  getItemHeight: (_, index) => (index % 6 === 5 ? 80 : 80 + ITEM_MARGIN * index), // Adjust for ad height
   getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
 });
 
@@ -63,19 +68,33 @@ export async function getStaticProps({ params }: { params: { lang: string; level
     return { props: { level, transformedData: [] } };
   }
 
-  const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => ({
-    title: chapter.title || '無標題',
-    data: chapter.sections.map((section: any) => ({
+  // Transform data and insert ads
+  const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => {
+    const grammarItems: GrammarSection[] = chapter.sections.map((section: any) => ({
       pattern: section.pattern || '無句型',
       description: section.description || '無描述',
       examples: section.examples.map((example: any) => ({
         sentence: example.sentence || '無例句',
         translation: example.translation || '無翻譯',
       })),
-    })),
-  }));
+    }));
 
-  console.log('Transformed data in [level].tsx:', transformedData);
+    // Insert ad every 5 items
+    const dataWithAds: SectionItem[] = [];
+    grammarItems.forEach((item, index) => {
+      dataWithAds.push(item);
+      if ((index + 1) % 5 === 0) {
+        dataWithAds.push({ ad: true });
+      }
+    });
+
+    return {
+      title: chapter.title || '無標題',
+      data: dataWithAds,
+    };
+  });
+
+  console.log('Transformed data with ads in [level].tsx:', transformedData);
   return {
     props: {
       level,
@@ -106,17 +125,30 @@ export default function GrammarScreen({
     const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
 
     transformedData = Array.isArray(grammarData)
-      ? grammarData.map((chapter: any) => ({
-          title: chapter.title || '無標題',
-          data: chapter.sections.map((section: any) => ({
+      ? grammarData.map((chapter: any) => {
+          const grammarItems: GrammarSection[] = chapter.sections.map((section: any) => ({
             pattern: section.pattern || '無句型',
             description: section.description || '無描述',
             examples: section.examples.map((example: any) => ({
               sentence: example.sentence || '無例句',
               translation: example.translation || '無翻譯',
             })),
-          })),
-        }))
+          }));
+
+          // Insert ad every 5 items
+          const dataWithAds: SectionItem[] = [];
+          grammarItems.forEach((item, index) => {
+            dataWithAds.push(item);
+            if ((index + 1) % 5 === 0) {
+              dataWithAds.push({ ad: true });
+            }
+          });
+
+          return {
+            title: chapter.title || '無標題',
+            data: dataWithAds,
+          };
+        })
       : [];
   }
 
@@ -132,29 +164,34 @@ export default function GrammarScreen({
       <SafeAreaView style={styles.container}>
         <SectionList
           sections={transformedData}
-          keyExtractor={(item, index) => item.pattern + index}
+          keyExtractor={(item, index) => ('ad' in item ? `ad-${index}` : item.pattern + index)}
           renderSectionHeader={({ section: { title } }) => (
             <View style={styles.headerContainer}>
               <Text style={styles.header}>{title || '無標題'}</Text>
             </View>
           )}
-          renderItem={({ item }) => (
-            <View style={styles.item}>
-              <Text style={styles.pattern}>{item.pattern || '無句型'}</Text>
-              <Text style={styles.description}>{item.description || '無描述'}</Text>
-              {item.examples.map((example, index) => (
-                <View key={index} style={styles.exampleContainer}>
-                  <View style={styles.sentenceRow}>
-                    <Text style={styles.sentence}>{example.sentence || '無例句'}</Text>
-                    <TouchableOpacity onPress={() => speak(example.sentence || '')} style={styles.iconSpacing}>
-                      <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
-                    </TouchableOpacity>
+          renderItem={({ item }) => {
+            if ('ad' in item) {
+              return <AdBanner />;
+            }
+            return (
+              <View style={styles.item}>
+                <Text style={styles.pattern}>{item.pattern || '無句型'}</Text>
+                <Text style={styles.description}>{item.description || '無描述'}</Text>
+                {item.examples.map((example, index) => (
+                  <View key={index} style={styles.exampleContainer}>
+                    <View style={styles.sentenceRow}>
+                      <Text style={styles.sentence}>{example.sentence || '無例句'}</Text>
+                      <TouchableOpacity onPress={() => speak(example.sentence || '')} style={styles.iconSpacing}>
+                        <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                      </TouchableOpacity>
+                    </View>
+                    <Text style={styles.translation}>{example.translation || '無翻譯'}</Text>
                   </View>
-                  <Text style={styles.translation}>{example.translation || '無翻譯'}</Text>
-                </View>
-              ))}
-            </View>
-          )}
+                ))}
+              </View>
+            );
+          }}
           stickySectionHeadersEnabled={false}
           //@ts-ignore
           getItemLayout={getItemLayout}

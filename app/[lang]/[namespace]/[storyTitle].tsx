@@ -113,7 +113,7 @@ export default function ContentScreen() {
               </View>
             ))}
           </View>
-          {index === 0 && <AdBanner />}
+          {(index % 2 === 0) && <AdBanner />}
         </View>
       ))}
     </ScrollView>

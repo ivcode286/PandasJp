@@ -158,6 +158,10 @@ const PhoneticsScreen = () => {
       description: t("sections.sokuon.description"),
     },
     {
+      key: "ad2",
+      component: <AdBanner />,
+    },
+    {
       key: "5",
       title: t("sections.chouon.title"),
       description: t("sections.chouon.description"),
@@ -179,7 +183,7 @@ const PhoneticsScreen = () => {
       })),
     },
     {
-      key: "ad2",
+      key: "ad3",
       component: <AdBanner />,
     },
   ];
