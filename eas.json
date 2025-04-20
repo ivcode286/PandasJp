@@ -7,7 +7,7 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal",
-      "node": "18.x",
+      "node": "18.20.4",
       "ios": {
         "simulator": true,
         "cocoapods": "1.15.2"
@@ -20,7 +20,7 @@
     },
     "preview": {
       "distribution": "internal",
-      "node": "18.x",
+      "node": "18.20.4",
       "ios": {
         "simulator": true,
         "cocoapods": "1.15.2"
@@ -34,7 +34,7 @@
     "production": {
       "autoIncrement": true,
       "distribution": "store",
-      "node": "18.x",
+      "node": "18.20.4",
       "ios": {
         "cocoapods": "1.15.2"
       },
