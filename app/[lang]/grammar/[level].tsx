@@ -9,12 +9,13 @@ import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import i18n from '@/src/locales/i18n';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 import { GRAMMAR_LEVELS } from '@/src/utils/constants';
-import AdBanner from '@/components/AdBanner'; // Import AdBanner
+import AdBanner from '@/components/AdBanner';
 
 interface GrammarSection {
   pattern: string;
+  meaning: string;
   description: string;
-  examples: { sentence: string; translation: string }[];
+  examples: { sentence: string; translation: string; analysis?: string }[];
 }
 
 interface AdSection {
@@ -32,11 +33,10 @@ const SECTION_HEADER_HEIGHT = 70;
 const ITEM_MARGIN = 12;
 
 const getItemLayout = sectionListGetItemLayout({
-  getItemHeight: (_, index) => (index % 6 === 5 ? 80 : 80 + ITEM_MARGIN * index), // Adjust for ad height
+  getItemHeight: (_, index) => (index % 6 === 5 ? 80 : 100 + ITEM_MARGIN * index), // Increased height for analysis
   getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
 });
 
-// Define static params for this route
 export async function generateStaticParams({ params }: { params: { lang: string } }) {
   const { lang } = params;
   const levels = Object.values(GRAMMAR_LEVELS);
@@ -51,7 +51,6 @@ export async function generateStaticParams({ params }: { params: { lang: string 
   return staticParams;
 }
 
-// Fetch static props for each route
 export async function getStaticProps({ params }: { params: { lang: string; level: string } }) {
   const { lang, level } = params;
 
@@ -68,18 +67,18 @@ export async function getStaticProps({ params }: { params: { lang: string; level
     return { props: { level, transformedData: [] } };
   }
 
-  // Transform data and insert ads
   const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => {
     const grammarItems: GrammarSection[] = chapter.sections.map((section: any) => ({
       pattern: section.pattern || '無句型',
+      meaning: section.meaning || '無意義',
       description: section.description || '無描述',
       examples: section.examples.map((example: any) => ({
         sentence: example.sentence || '無例句',
         translation: example.translation || '無翻譯',
+        analysis: example.analysis || '',
       })),
     }));
 
-    // Insert ad every 5 items
     const dataWithAds: SectionItem[] = [];
     grammarItems.forEach((item, index) => {
       dataWithAds.push(item);
@@ -103,7 +102,6 @@ export async function getStaticProps({ params }: { params: { lang: string; level
   };
 }
 
-// Force static rendering
 export const dynamic = 'force-static';
 
 export default function GrammarScreen({
@@ -128,14 +126,15 @@ export default function GrammarScreen({
       ? grammarData.map((chapter: any) => {
           const grammarItems: GrammarSection[] = chapter.sections.map((section: any) => ({
             pattern: section.pattern || '無句型',
+            meaning: section.meaning || '無意義',
             description: section.description || '無描述',
             examples: section.examples.map((example: any) => ({
               sentence: example.sentence || '無例句',
               translation: example.translation || '無翻譯',
+              analysis: example.analysis || '',
             })),
           }));
 
-          // Insert ad every 7 items
           const dataWithAds: SectionItem[] = [];
           grammarItems.forEach((item, index) => {
             dataWithAds.push(item);
@@ -177,6 +176,7 @@ export default function GrammarScreen({
             return (
               <View style={styles.item}>
                 <Text style={styles.pattern}>{item.pattern || '無句型'}</Text>
+                <Text style={styles.meaning}>{item.meaning || '無意義'}</Text>
                 <Text style={styles.description}>{item.description || '無描述'}</Text>
                 {item.examples.map((example, index) => (
                   <View key={index} style={styles.exampleContainer}>
@@ -187,6 +187,9 @@ export default function GrammarScreen({
                       </TouchableOpacity>
                     </View>
                     <Text style={styles.translation}>{example.translation || '無翻譯'}</Text>
+                    {example.analysis && (
+                      <Text style={styles.analysis}>{example.analysis}</Text>
+                    )}
                   </View>
                 ))}
               </View>
@@ -195,7 +198,7 @@ export default function GrammarScreen({
           stickySectionHeadersEnabled={false}
           //@ts-ignore
           getItemLayout={getItemLayout}
-          contentContainerStyle={{ paddingBottom: 300 }}
+          contentContainerStyle={{ paddingBottom: 150 }}
         />
       </SafeAreaView>
     </SafeAreaProvider>
@@ -230,10 +233,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: '#ffffff',
+    marginBottom: 4,
+  },
+  meaning: {
+    fontSize: 18,
+    color: '#ffcc00',
+    marginBottom: 8,
   },
   description: {
-    fontSize: 18,
+    fontSize: 16,
     color: '#b0b0b0',
+    marginBottom: 10,
   },
   exampleContainer: {
     marginTop: 10,
@@ -252,6 +262,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#b0b0b0',
     marginTop: 4,
+  },
+  analysis: {
+    fontSize: 14,
+    color: '#b0b0b0',
+    marginTop: 4,
+    fontStyle: 'italic',
   },
   iconSpacing: {
     marginLeft: 10,

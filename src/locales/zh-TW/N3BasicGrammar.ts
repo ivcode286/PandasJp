@@ -1,778 +1,878 @@
 import { GrammarData } from "../../types/translation";
 
 const n3BasicGrammarZhTW: GrammarData = {
-    chapters: [
-      {
-        title: "動詞變化與句型",
-        sections: [
-          {
-            pattern: "1. 動詞使役形（～させる／～せる）",
-            meaning: "",
-            description: "📌 句型說明 表示讓某人做某事或使某事發生。",
-            examples: [
-              {
-                sentence: "🔹 先生は学生に宿題をさせます。",
-                translation: "（老師讓學生做作業。）",
-              },
-              {
-                sentence: "🔹 親は子供に野菜を食べさせる。",
-                translation: "（父母讓小孩吃蔬菜。）",
-              },
-            ],
-          },
-          {
-            pattern: "2. 動詞被動形（～られる）",
-            meaning: "",
-            description: "📌 句型說明 表示被動，某人受到某行動的影響。",
-            examples: [
-              {
-                sentence: "🔹 この本は多くの人に読まれました。",
-                translation: "（這本書被很多人讀過。）",
-              },
-              {
-                sentence: "🔹 彼は友達に笑われた。",
-                translation: "（他被朋友嘲笑了。）",
-              },
-            ],
-          },
-          {
-            pattern: "3. 動詞使役被動形（～させられる）",
-            meaning: "",
-            description: "📌 句型說明 表示被迫做某事。",
-            examples: [
-              {
-                sentence: "🔹 私は上司に残業させられた。",
-                translation: "（我被上司強迫加班。）",
-              },
-              {
-                sentence: "🔹 彼は親に医者をさせられた。",
-                translation: "（他被父母強迫當醫生。）",
-              },
-            ],
-          },
-          {
-            pattern: "4. 動詞意向形（～よう）",
-            meaning: "",
-            description: "📌 句型說明 表示說話者的意願或打算。",
-            examples: [
-              {
-                sentence: "🔹 明日、早く起きよう。",
-                translation: "（明天我要早起。）",
-              },
-              {
-                sentence: "🔹 一緒に映画を見よう。",
-                translation: "（一起去看電影吧。）",
-              },
-            ],
-          },
-          {
-            pattern: "5. ～てください",
-            meaning: "",
-            description: "📌 句型說明 表示禮貌的請求或指示。",
-            examples: [
-              {
-                sentence: "🔹 ここで待っていてください。",
-                translation: "（請在這裡等。）",
-              },
-              {
-                sentence: "🔹 静かにしてください。",
-                translation: "（請安靜。）",
-              },
-            ],
-          },
-          {
-            pattern: "6. ～ておく",
-            meaning: "",
-            description: "📌 句型說明 表示提前做好某事以備後用。",
-            examples: [
-              {
-                sentence: "🔹 旅行のために荷物を準備しておく。",
-                translation: "（為旅行提前準備行李。）",
-              },
-              {
-                sentence: "🔹 ドアを閉めておきます。",
-                translation: "（我先把門關上。）",
-              },
-            ],
-          },
-          {
-            pattern: "7. ～てしまう",
-            meaning: "",
-            description: "📌 句型說明 表示完成某事或帶有遺憾的語氣。",
-            examples: [
-              {
-                sentence: "🔹 宿題をやってしまった。",
-                translation: "（我把作業做完了。）",
-              },
-              {
-                sentence: "🔹 大切な写真を捨ててしまった。",
-                translation: "（我把重要的照片丟掉了。）",
-              },
-            ],
-          },
-          {
-            pattern: "8. ～てもいい",
-            meaning: "",
-            description: "📌 句型說明 表示允許做某事。",
-            examples: [
-              {
-                sentence: "🔹 ここで写真を撮ってもいいですか。",
-                translation: "（這裡可以拍照嗎？）",
-              },
-              {
-                sentence: "🔹 もう帰ってもいいです。",
-                translation: "（可以回去了。）",
-              },
-            ],
-          },
-          {
-            pattern: "9. ～てはいけない",
-            meaning: "",
-            description: "📌 句型說明 表示禁止做某事。",
-            examples: [
-              {
-                sentence: "🔹 ここでタバコを吸ってはいけません。",
-                translation: "（這裡不能抽菸。）",
-              },
-              {
-                sentence: "🔹 試験中に話してはいけない。",
-                translation: "（考試中不能說話。）",
-              },
-            ],
-          },
-          {
-            pattern: "10. ～たら",
-            meaning: "",
-            description: "📌 句型說明 表示假設或條件，後接結果。",
-            examples: [
-              {
-                sentence: "🔹 雨が降ったら、傘を持って行きます。",
-                translation: "（如果下雨，我就帶傘。）",
-              },
-              {
-                sentence: "🔹 時間があったら、映画を見ます。",
-                translation: "（如果有時間，我就看電影。）",
-              },
-            ],
-          },
-          {
-            pattern: "11. ～ば",
-            meaning: "",
-            description: "📌 句型說明 表示假設條件，後接結果。",
-            examples: [
-              {
-                sentence: "🔹 勉強すれば、試験に合格します。",
-                translation: "（如果努力學習，就能通過考試。）",
-              },
-              {
-                sentence: "🔹 早く行けば、間に合います。",
-                translation: "（如果早點去，就能趕上。）",
-              },
-            ],
-          },
-          {
-            pattern: "12. ～と",
-            meaning: "",
-            description: "📌 句型說明 表示自然結果或條件，意為「一…就…」。",
-            examples: [
-              {
-                sentence: "🔹 スイッチを押すと、電気がつきます。",
-                translation: "（一按開關，燈就亮。）",
-              },
-              {
-                sentence: "🔹 春になると、花が咲きます。",
-                translation: "（一到春天，花就開。）",
-              },
-            ],
-          },
-          {
-            pattern: "13. ～続ける",
-            meaning: "",
-            description: "📌 句型說明 表示持續進行某動作。",
-            examples: [
-              {
-                sentence: "🔹 毎日、運動を続けます。",
-                translation: "（每天持續運動。）",
-              },
-              {
-                sentence: "🔹 彼は仕事を続けました。",
-                translation: "（他持續工作。）",
-              },
-            ],
-          },
-          {
-            pattern: "14. ～始める",
-            meaning: "",
-            description: "📌 句型說明 表示開始做某事。",
-            examples: [
-              {
-                sentence: "🔹 朝、勉強を始めます。",
-                translation: "（早上開始學習。）",
-              },
-              {
-                sentence: "🔹 彼は新しい仕事を始めた。",
-                translation: "（他開始了新工作。）",
-              },
-            ],
-          },
-          {
-            pattern: "15. ～終わる",
-            meaning: "",
-            description: "📌 句型說明 表示某事結束。",
-            examples: [
-              {
-                sentence: "🔹 授業が終わりました。",
-                translation: "（課程結束了。）",
-              },
-              {
-                sentence: "🔹 映画が終わると、皆帰りました。",
-                translation: "（電影結束後，大家都回去了。）",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        title: "形容詞與比較",
-        sections: [
-          {
-            pattern: "16. 形容詞變化（～くなる）",
-            meaning: "",
-            description: "📌 句型說明 表示某事物變得具有某種性質。",
-            examples: [
-              {
-                sentence: "🔹 天気が暖かくなった。",
-                translation: "（天氣變暖了。）",
-              },
-              {
-                sentence: "🔹 部屋がきれいになった。",
-                translation: "（房間變乾淨了。）",
-              },
-            ],
-          },
-          {
-            pattern: "17. 形容詞變化（～くする）",
-            meaning: "",
-            description: "📌 句型說明 表示使某事物具有某種性質。",
-            examples: [
-              {
-                sentence: "🔹 部屋をきれいにします。",
-                translation: "（我把房間弄乾淨。）",
-              },
-              {
-                sentence: "🔹 声を小さくしてください。",
-                translation: "（請把聲音放小。）",
-              },
-            ],
-          },
-          {
-            pattern: "18. ～そうだ（外觀）",
-            meaning: "",
-            description: "📌 句型說明 表示根據外觀的判斷，某事物看起來如何。",
-            examples: [
-              {
-                sentence: "🔹 このケーキはおいしそうだ。",
-                translation: "（這個蛋糕看起來很好吃。）",
-              },
-              {
-                sentence: "🔹 彼は疲れていそうだ。",
-                translation: "（他看起來很累。）",
-              },
-            ],
-          },
-          {
-            pattern: "19. ～ほど",
-            meaning: "",
-            description: "📌 句型說明 表示某事物的程度。",
-            examples: [
-              {
-                sentence: "🔹 泣きたいほど嬉しい。",
-                translation: "（高興到想哭。）",
-              },
-              {
-                sentence: "🔹 忙しくて寝る時間もないほどだ。",
-                translation: "（忙到連睡覺的時間都沒有。）",
-              },
-            ],
-          },
-          {
-            pattern: "20. ～くらい／ぐらい",
-            meaning: "",
-            description: "📌 句型說明 表示大約的數量或程度。",
-            examples: [
-              {
-                sentence: "🔹 1時間ぐらい待ちました。",
-                translation: "（我等了大約一小時。）",
-              },
-              {
-                sentence: "🔹 この本は500円ぐらいです。",
-                translation: "（這本書大約500日元。）",
-              },
-            ],
-          },
-          {
-            pattern: "21. ～より～ほうが",
-            meaning: "",
-            description: "📌 句型說明 表示比較，意為「比…更…」。",
-            examples: [
-              {
-                sentence: "🔹 バスより電車のほうが速いです。",
-                translation: "（比起公車，電車更快。）",
-              },
-              {
-                sentence: "🔹 夏より冬のほうが好きです。",
-                translation: "（比起夏天，我更喜歡冬天。）",
-              },
-            ],
-          },
-          {
-            pattern: "22. ～と同じくらい",
-            meaning: "",
-            description: "📌 句型說明 表示兩者程度相同。",
-            examples: [
-              {
-                sentence: "🔹 彼は私と同じくらい背が高い。",
-                translation: "（他和我一樣高。）",
-              },
-              {
-                sentence: "🔹 この店はあそこと同じくらい安い。",
-                translation: "（這家店和那邊一樣便宜。）",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        title: "助詞與連接",
-        sections: [
-          {
-            pattern: "23. 助詞 に（目的、對象、時間）",
-            meaning: "",
-            description: "📌 句型說明 表示動作的目的、對象或特定時間點。",
-            examples: [
-              {
-                sentence: "🔹 学校に行く。",
-                translation: "（去學校。）",
-              },
-              {
-                sentence: "🔹 友達に手紙を書く。",
-                translation: "（給朋友寫信。）",
-              },
-            ],
-          },
-          {
-            pattern: "24. 助詞 で（場所、手段、原因）",
-            meaning: "",
-            description: "📌 句型說明 表示動作的場所、手段或原因。",
-            examples: [
-              {
-                sentence: "🔹 図書館で勉強する。",
-                translation: "（在圖書館學習。）",
-              },
-              {
-                sentence: "🔹 バスで行く。",
-                translation: "（坐公車去。）",
-              },
-            ],
-          },
-          {
-            pattern: "25. 助詞 と（共同、引用）",
-            meaning: "",
-            description: "📌 句型說明 表示共同行動或引用說話內容。",
-            examples: [
-              {
-                sentence: "🔹 友達と映画を見ました。",
-                translation: "（和朋友一起看電影。）",
-              },
-              {
-                sentence: "🔹 彼は「大丈夫」と言った。",
-                translation: "（他說「沒問題」。）",
-              },
-            ],
-          },
-          {
-            pattern: "26. 助詞 へ（方向）",
-            meaning: "",
-            description: "📌 句型說明 表示動作的方向。",
-            examples: [
-              {
-                sentence: "🔹 東京へ行きます。",
-                translation: "（去東京。）",
-              },
-              {
-                sentence: "🔹 手紙を友達へ送る。",
-                translation: "（寄信給朋友。）",
-              },
-            ],
-          },
-          {
-            pattern: "27. ～から／まで",
-            meaning: "",
-            description: "📌 句型說明 表示時間或空間的起點和終點。",
-            examples: [
-              {
-                sentence: "🔹 朝から夜まで働きます。",
-                translation: "（從早上工作到晚上。）",
-              },
-              {
-                sentence: "🔹 東京から大阪まで行きます。",
-                translation: "（從東京到大阪。）",
-              },
-            ],
-          },
-          {
-            pattern: "28. ～ながら",
-            meaning: "",
-            description: "📌 句型說明 表示同時進行兩個動作。",
-            examples: [
-              {
-                sentence: "🔹 音楽を聴きながら勉強します。",
-                translation: "（一邊聽音樂一邊學習。）",
-              },
-              {
-                sentence: "🔹 テレビを見ながらご飯を食べる。",
-                translation: "（一邊看電視一邊吃飯。）",
-              },
-            ],
-          },
-          {
-            pattern: "29. ～から（原因）",
-            meaning: "",
-            description: "📌 句型說明 表示原因，意為「因為…」。",
-            examples: [
-              {
-                sentence: "🔹 病気だから休みます。",
-                translation: "（因為生病所以休息。）",
-              },
-              {
-                sentence: "🔹 忙しいから行けません。",
-                translation: "（因為忙所以不能去。）",
-              },
-            ],
-          },
-          {
-            pattern: "30. ～ので",
-            meaning: "",
-            description: "📌 句型說明 表示原因，較為客觀，意為「由於…」。",
-            examples: [
-              {
-                sentence: "🔹 雨が降るので、傘を持って行きます。",
-                translation: "（由於下雨，我帶傘去。）",
-              },
-              {
-                sentence: "🔹 時間がなかったので、宿題を終えませんでした。",
-                translation: "（由於沒時間，我沒完成作業。）",
-              },
-            ],
-          },
-          {
-            pattern: "31. ～けど",
-            meaning: "",
-            description: "📌 句型說明 表示轉折，意為「但是…」。",
-            examples: [
-              {
-                sentence: "🔹 行きたいけど、時間がない。",
-                translation: "（想去，但是沒時間。）",
-              },
-              {
-                sentence: "🔹 安いけど、品質が悪い。",
-                translation: "（雖然便宜，但品質不好。）",
-              },
-            ],
-          },
-          {
-            pattern: "32. ～のに",
-            meaning: "",
-            description: "📌 句型說明 表示意外或遺憾的轉折，意為「雖然…卻…」。",
-            examples: [
-              {
-                sentence: "🔹 勉強したのに、試験に落ちました。",
-                translation: "（雖然學習了，卻沒通過考試。）",
-              },
-              {
-                sentence: "🔹 早く来たのに、電車が遅れた。",
-                translation: "（雖然早點來了，電車卻晚了。）",
-              },
-            ],
-          },
-          {
-            pattern: "33. ～ても",
-            meaning: "",
-            description: "📌 句型說明 表示假設的轉折，意為「即使…」。",
-            examples: [
-              {
-                sentence: "🔹 雨が降っても、行きます。",
-                translation: "（即使下雨，我也會去。）",
-              },
-              {
-                sentence: "🔹 忙しくても、友達に会います。",
-                translation: "（即使忙，我也會見朋友。）",
-              },
-            ],
-          },
-          {
-            pattern: "卸-31-50",
-            meaning: "",
-            description: "📌 句型說明 表示假設條件，意為「如果是…」。",
-            examples: [
-              {
-                sentence: "🔹 時間があれば、旅行に行きます。",
-                translation: "（如果有時間，我就去旅行。）",
-              },
-              {
-                sentence: "🔹 天気がよければ、ピクニックに行きます。",
-                translation: "（如果天氣好，我就去野餐。）",
-              },
-            ],
-          },
-          {
-            pattern: "35. ～ように",
-            meaning: "",
-            description: "📌 句型說明 表示目的，意為「為了…」。",
-            examples: [
-              {
-                sentence: "🔹 試験に合格するために、毎日勉強します。",
-                translation: "（為了通過考試，我每天學習。）",
-              },
-              {
-                sentence: "🔹 早く着くように、急ぎました。",
-                translation: "（為了早點到，我趕快了。）",
-              },
-            ],
-          },
-          {
-            pattern: "36. ～ために",
-            meaning: "",
-            description: "📌 句型說明 表示目的或原因，意為「為了…」或「因為…」。",
-            examples: [
-              {
-                sentence: "🔹 健康のために、運動します。",
-                translation: "（為了健康，我運動。）",
-              },
-              {
-                sentence: "🔹 雨のために、試合が中止になった。",
-                translation: "（因為下雨，比賽取消了。）",
-              },
-            ],
-          },
-          {
-            pattern: "37. ～ようにする",
-            meaning: "",
-            description: "📌 句型說明 表示努力使某事發生。",
-            examples: [
-              {
-                sentence: "🔹 毎日、早く起きるようにします。",
-                translation: "（我努力每天早起。）",
-              },
-              {
-                sentence: "🔹 忘れないように、メモします。",
-                translation: "（為了不忘記，我會記筆記。）",
-              },
-            ],
-          },
-          {
-            pattern: "38. ～ようになる",
-            meaning: "",
-            description: "📌 句型說明 表示某事變得可能或能夠做到。",
-            examples: [
-              {
-                sentence: "🔹 日本語が読めるようになりました。",
-                translation: "（我變得能讀日語了。）",
-              },
-              {
-                sentence: "🔹 自転車に乗れるようになった。",
-                translation: "（我變得會騎腳踏車了。）",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        title: "敬語與推測",
-        sections: [
-          {
-            pattern: "39. 尊敬語（お～になる／～られる）",
-            meaning: "",
-            description: "📌 句型說明 表示對對方的尊敬。",
-            examples: [
-              {
-                sentence: "🔹 先生がいらっしゃいました。",
-                translation: "（老師來了。）",
-              },
-              {
-                sentence: "🔹 社長がお話しになる。",
-                translation: "（社長說話。）",
-              },
-            ],
-          },
-          {
-            pattern: "40. 謙讓語（お～する／～いたします）",
-            meaning: "",
-            description: "📌 句型說明 表示自己的謙虛。",
-            examples: [
-              {
-                sentence: "🔹 お預かりいたします。",
-                translation: "（我幫您保管。）",
-              },
-              {
-                sentence: "🔹 ご案内いたします。",
-                translation: "（我為您帶路。）",
-              },
-            ],
-          },
-          {
-            pattern: "41. 丁寧語（です／ます）",
-            meaning: "",
-            description: "📌 句型說明 表示禮貌的表達方式。",
-            examples: [
-              {
-                sentence: "🔹 よろしくお願いします。",
-                translation: "（請多關照。）",
-              },
-              {
-                sentence: "🔹 ありがとうございます。",
-                translation: "（謝謝。）",
-              },
-            ],
-          },
-          {
-            pattern: "42. ～そうだ（傳聞）",
-            meaning: "",
-            description: "📌 句型說明 表示聽到的傳聞。",
-            examples: [
-              {
-                sentence: "🔹 明日、雨が降るそうです。",
-                translation: "（聽說明天會下雨。）",
-              },
-              {
-                sentence: "🔹 彼は転職したそうです。",
-                translation: "（聽說他換工作了。）",
-              },
-            ],
-          },
-          {
-            pattern: "43. ～らしい",
-            meaning: "",
-            description: "📌 句型說明 表示推測，意為「好像…」。",
-            examples: [
-              {
-                sentence: "🔹 彼は忙しいらしい。",
-                translation: "（他好像很忙。）",
-              },
-              {
-                sentence: "🔹 この店は人気らしい。",
-                translation: "（這家店好像很受歡迎。）",
-              },
-            ],
-          },
-          {
-            pattern: "44. ～みたい",
-            meaning: "",
-            description: "📌 句型說明 表示比喻或推測，意為「像是…」。",
-            examples: [
-              {
-                sentence: "🔹 彼女は子供みたいに笑う。",
-                translation: "（她笑得像小孩一樣。）",
-              },
-              {
-                sentence: "🔹 雲が何か悪いことみたいだ。",
-                translation: "（雲看起來像是壞事。）",
-              },
-            ],
-          },
-          {
-            pattern: "45. ～なければならない",
-            meaning: "",
-            description: "📌 句型說明 表示必須做某事。",
-            examples: [
-              {
-                sentence: "🔹 宿題をしなければなりません。",
-                translation: "（我必須做作業。）",
-              },
-              {
-                sentence: "🔹 早く行かなければなりません。",
-                translation: "（我必須早點去。）",
-              },
-            ],
-          },
-          {
-            pattern: "46. ～べきだ",
-            meaning: "",
-            description: "📌 句型說明 表示應該做某事。",
-            examples: [
-              {
-                sentence: "🔹 若い人はもっと勉強すべきだ。",
-                translation: "（年輕人應該多學習。）",
-              },
-              {
-                sentence: "🔹 約束は守るべきだ。",
-                translation: "（應該遵守承諾。）",
-              },
-            ],
-          },
-          {
-            pattern: "47. ～かもしれない",
-            meaning: "",
-            description: "📌 句型說明 表示可能性，意為「可能…」。",
-            examples: [
-              {
-                sentence: "🔹 彼は遅れるかもしれない。",
-                translation: "（他可能會遲到。）",
-              },
-              {
-                sentence: "🔹 明日、雪が降るかもしれない。",
-                translation: "（明天可能會下雪。）",
-              },
-            ],
-          },
-          {
-            pattern: "48. ～だろう",
-            meaning: "",
-            description: "📌 句型說明 表示推測，意為「大概…」。",
-            examples: [
-              {
-                sentence: "🔹 彼はもう帰っただろう。",
-                translation: "（他大概已經回去了。）",
-              },
-              {
-                sentence: "🔹 これは簡単だろう。",
-                translation: "（這大概很簡單。）",
-              },
-            ],
-          },
-          {
-            pattern: "49. ～たり～たりする",
-            meaning: "",
-            description: "📌 句型說明 表示列舉多個動作或狀態。",
-            examples: [
-              {
-                sentence: "🔹 休日は本を読んだり、映画を見たりします。",
-                translation: "（假日我讀書或看電影。）",
-              },
-              {
-                sentence: "🔹 彼は笑ったり、泣いたりします。",
-                translation: "（他一會笑一會哭。）",
-              },
-            ],
-          },
-          {
-            pattern: "50. ～か～か",
-            meaning: "",
-            description: "📌 句型說明 表示選擇，意為「…還是…」。",
-            examples: [
-              {
-                sentence: "🔹 コーヒーか紅茶を飲みますか。",
-                translation: "（你要喝咖啡還是紅茶？）",
-              },
-              {
-                sentence: "🔹 行くか行かないか決めなさい。",
-                translation: "（決定去還是不去。）",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  };
+  chapters: [
+    {
+      title: "動詞變化與句型",
+      sections: [
+        {
+          pattern: "1. 動詞使役形（～させる／～せる）",
+          meaning: "讓某人做某事或使某事發生",
+          description: "📌 句型說明：使役形表示說話者讓某人做某事或使某事發生。\n形成方法：\n- 一類動詞：將動詞終止形的「う」段變為「あ」段＋「せる」（如 書く → 書かせる）。\n- 二類動詞：動詞詞幹＋「させる」（如 食べる → 食べさせる）。\n- 三類動詞：する → させる、来る → 来させる。\n使用場景：常用於上對下或強制的情況，需注意與被動形的區別。",
+          examples: [
+            {
+              sentence: "🔹 先生は学生に宿題をさせます。",
+              translation: "老師要求學生完成作業。",
+              analysis: "句中「させる」為「する」的使役形，表示老師要求學生做作業。",
+            },
+            {
+              sentence: "🔹 親は子供に野菜を食べさせる。",
+              translation: "父母要求小孩吃蔬菜。",
+              analysis: "句中「食べさせる」為「食べる」的使役形，表示父母要求小孩吃蔬菜。",
+            },
+          ],
+        },
+        {
+          pattern: "2. 動詞被動形（～られる）",
+          meaning: "表示被動，某人受到某行動的影響",
+          description: "📌 句型說明：被動形表示主語受到某動作的影響，動作由他人執行。\n形成方法：\n- 一類動詞：將「う」段變為「あ」段＋「れる」（如 書く → 書かれる）。\n- 二類動詞：詞幹＋「られる」（如 食べる → 食べられる）。\n- 三類動詞：する → される、来る → 来られる。\n使用場景：常用於描述被動情況或不好的影響。",
+          examples: [
+            {
+              sentence: "🔹 この本は多くの人に読まれました。",
+              translation: "這本書被許多人閱讀。",
+              analysis: "句中「読まれる」為「読む」的被動形，表示書被多人閱讀。",
+            },
+            {
+              sentence: "🔹 彼は友達に笑われた。",
+              translation: "他被朋友嘲笑。",
+              analysis: "句中「笑われる」為「笑う」的被動形，表示他被朋友嘲笑。",
+            },
+          ],
+        },
+        {
+          pattern: "3. 動詞使役被動形（～させられる）",
+          meaning: "被迫做某事",
+          description: "📌 句型說明：使役被動形表示主語被迫執行某動作，通常帶有不情願的語氣。\n形成方法：在使役形（～させる／～せる）後加「れる」（如 書かせる → 書かせられる）。\n使用場景：描述被強迫的情況，常帶負面情感。",
+          examples: [
+            {
+              sentence: "🔹 私は上司に残業させられた。",
+              translation: "我被上司強迫加班。",
+              analysis: "句中「させられる」為「する」的使役被動形，表示被上司強迫加班。",
+            },
+            {
+              sentence: "🔹 彼は親に医者をさせられた。",
+              translation: "他被父母強迫成為醫生。",
+              analysis: "句中「させられる」為「する」的使役被動形，表示被父母強迫當醫生。",
+            },
+          ],
+        },
+        {
+          pattern: "4. 動詞意向形（～よう）",
+          meaning: "表示說話者的意願或打算",
+          description: "📌 句型說明：意向形表示說話者的主觀意願或計劃。\n形成方法：\n- 一類動詞：將「う」段變為「お」段＋「う」（如 書く → 書こう）。\n- 二類動詞：詞幹＋「よう」（如 食べる → 食べよう）。\n- 三類動詞：する → しよう、来る → 来よう。\n使用場景：常用於口語，表達個人意願。",
+          examples: [
+            {
+              sentence: "🔹 明日、早く起きよう。",
+              translation: "明天我打算早起。",
+              analysis: "句中「起きよう」為「起きる」的意向形，表示說話者打算早起。",
+            },
+            {
+              sentence: "🔹 一緒に映画を見よう。",
+              translation: "一起去看電影吧。",
+              analysis: "句中「見よう」為「見る」的意向形，表示提議一起看電影。",
+            },
+          ],
+        },
+        {
+          pattern: "5. ～てください",
+          meaning: "禮貌的請求或指示",
+          description: "📌 句型說明：表示禮貌地請求或指示對方做某事。\n形成方法：動詞て形＋「ください」。\n使用場景：用於正式或禮貌的場合。",
+          examples: [
+            {
+              sentence: "🔹 ここで待っていてください。",
+              translation: "請在這裡等待。",
+              analysis: "句中「待って」為「待つ」的て形，後接「ください」，表示禮貌請求對方等待。",
+            },
+            {
+              sentence: "🔹 静かにしてください。",
+              translation: "請保持安靜。",
+              analysis: "句中「して」為「する」的て形，後接「ください」，表示請求對方安靜。",
+            },
+          ],
+        },
+        {
+          pattern: "6. ～ておく",
+          meaning: "提前做好某事以備後用",
+          description: "📌 句型說明：表示為未來需要而提前完成某事。\n形成方法：動詞て形＋「おく」。\n使用場景：強調準備或預防。",
+          examples: [
+            {
+              sentence: "🔹 旅行のために荷物を準備しておく。",
+              translation: "為旅行提前準備行李。",
+              analysis: "句中「準備して」為「準備する」的て形，後接「おく」，表示提前準備行李。",
+            },
+            {
+              sentence: "🔹 ドアを閉めておきます。",
+              translation: "我先把門關上。",
+              analysis: "句中「閉めて」為「閉める」的て形，後接「おく」，表示先關門以備後用。",
+            },
+          ],
+        },
+        {
+          pattern: "7. ～てしまう",
+          meaning: "完成某事或帶有遺憾的語氣",
+          description: "📌 句型說明：表示某事已完成，或帶有遺憾、不情願的語氣。\n形成方法：動詞て形＋「しまう」。\n使用場景：完成感或後悔時使用。",
+          examples: [
+            {
+              sentence: "🔹 宿題をやってしまった。",
+              translation: "我已經完成作業了。",
+              analysis: "句中「やって」為「やる」的て形，後接「しまう」，表示作業已完成。",
+            },
+            {
+              sentence: "🔹 大切な写真を捨ててしまった。",
+              translation: "我不小心把重要的照片丟掉了。",
+              analysis: "句中「捨てて」為「捨てる」的て形，後接「しまう」，表示不小心丟掉照片的遺憾。",
+            },
+          ],
+        },
+        {
+          pattern: "8. ～てもいい",
+          meaning: "允許做某事",
+          description: "📌 句型說明：表示允許或許可做某事。\n形成方法：動詞て形＋「もいい」。\n使用場景：詢問或給予許可。",
+          examples: [
+            {
+              sentence: "🔹 ここで写真を撮ってもいいですか。",
+              translation: "這裡可以拍照嗎？",
+              analysis: "句中「撮って」為「撮る」的て形，後接「もいい」，表示詢問是否可拍照。",
+            },
+            {
+              sentence: "🔹 もう帰ってもいいです。",
+              translation: "現在可以回去了。",
+              analysis: "句中「帰って」為「帰る」的て形，後接「もいい」，表示允許回去。",
+            },
+          ],
+        },
+        {
+          pattern: "9. ～てはいけない",
+          meaning: "禁止做某事",
+          description: "📌 句型說明：表示禁止或不允許做某事。\n形成方法：動詞て形＋「はいけない」。\n使用場景：規則或禁令。",
+          examples: [
+            {
+              sentence: "🔹 ここでタバコを吸ってはいけません。",
+              translation: "這裡禁止吸菸。",
+              analysis: "句中「吸って」為「吸う」的て形，後接「はいけない」，表示禁止吸菸。",
+            },
+            {
+              sentence: "🔹 試験中に話してはいけない。",
+              translation: "考試期間禁止說話。",
+              analysis: "句中「話して」為「話す」的て形，後接「はいけない」，表示考試中禁止說話。",
+            },
+          ],
+        },
+        {
+          pattern: "10. ～たら",
+          meaning: "假設或條件，後接結果",
+          description: "📌 句型說明：表示假設或條件，後接結果。\n形成方法：動詞た形＋「ら」。\n使用場景：描述假設情況。",
+          examples: [
+            {
+              sentence: "🔹 雨が降ったら、傘を持って行きます。",
+              translation: "如果下雨，我就帶傘。",
+              analysis: "句中「降った」為「降る」的た形，後接「ら」，表示如果下雨就帶傘。",
+            },
+            {
+              sentence: "🔹 時間があったら、映画を見ます。",
+              translation: "如果有時間，我就去看電影。",
+              analysis: "句中「あった」為「ある」的た形，後接「ら」，表示如果有時間就看電影。",
+            },
+          ],
+        },
+        {
+          pattern: "11. ～ば",
+          meaning: "假設條件，後接結果",
+          description: "📌 句型說明：表示假設條件，後接結果，語氣較正式。\n形成方法：\n- 一類動詞：將「う」段變為「え」段＋「ば」（如 書く → 書けば）。\n- 二類動詞：詞幹＋「れば」（如 食べる → 食べれば）。\n- 三類動詞：する → すれば、来る → 来れば。\n使用場景：書面或正式場合。",
+          examples: [
+            {
+              sentence: "🔹 勉強すれば、試験に合格します。",
+              translation: "如果努力學習，就能通過考試。",
+              analysis: "句中「勉強すれば」為「勉強する」的ば形，表示努力學習就能通過。",
+            },
+            {
+              sentence: "🔹 早く行けば、間に合います。",
+              translation: "如果早點去，就能趕上。",
+              analysis: "句中「行けば」為「行く」的ば形，表示早去就能趕上。",
+            },
+          ],
+        },
+        {
+          pattern: "12. ～と",
+          meaning: "自然結果或條件，意為「一…就…」",
+          description: "📌 句型說明：表示某條件成立後必然的結果。\n形成方法：動詞辭書形＋「と」。\n使用場景：描述客觀規律。",
+          examples: [
+            {
+              sentence: "🔹 スイッチを押すと、電気がつきます。",
+              translation: "一按開關，燈就亮。",
+              analysis: "句中「押すと」為「押す」的と形，表示一按開關燈就亮。",
+            },
+            {
+              sentence: "🔹 春になると、花が咲きます。",
+              translation: "一到春天，花就盛開。",
+              analysis: "句中「なる」後接「と」，表示春天一到花就開。",
+            },
+          ],
+        },
+        {
+          pattern: "13. ～続ける",
+          meaning: "持續進行某動作",
+          description: "📌 句型說明：表示某動作持續進行。\n形成方法：動詞て形＋「続ける」。\n使用場景：強調連續性。",
+          examples: [
+            {
+              sentence: "🔹 毎日、運動を続けます。",
+              translation: "每天持續運動。",
+              analysis: "句中「続けて」為「続ける」的て形，後接動詞，表示每天持續運動。",
+            },
+            {
+              sentence: "🔹 彼は仕事を続けました。",
+              translation: "他持續工作。",
+              analysis: "句中「続けて」為「続ける」的て形，表示他持續工作。",
+            },
+          ],
+        },
+        {
+          pattern: "14. ～始める",
+          meaning: "開始做某事",
+          description: "📌 句型說明：表示某動作的開始。\n形成方法：動詞て形＋「始める」。\n使用場景：描述新動作的開端。",
+          examples: [
+            {
+              sentence: "🔹 朝、勉強を始めます。",
+              translation: "早上開始學習。",
+              analysis: "句中「勉強して」為「勉強する」的て形，後接「始める」，表示早上開始學習。",
+            },
+            {
+              sentence: "🔹 彼は新しい仕事を始めた。",
+              translation: "他開始了新工作。",
+              analysis: "句中「始めて」為「始める」的て形，表示開始新工作。",
+            },
+          ],
+        },
+        {
+          pattern: "15. ～終わる",
+          meaning: "某事結束",
+          description: "📌 句型說明：表示某動作或事件的結束。\n形成方法：動詞て形＋「終わる」。\n使用場景：描述完成或終結。",
+          examples: [
+            {
+              sentence: "🔹 授業が終わりました。",
+              translation: "課程結束了。",
+              analysis: "句中「終わって」為「終わる」的て形，表示課程結束。",
+            },
+            {
+              sentence: "🔹 映画が終わると、皆帰りました。",
+              translation: "電影結束後，大家都回去了。",
+              analysis: "句中「終わって」為「終わる」的て形，表示電影結束。",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "形容詞與比較",
+      sections: [
+        {
+          pattern: "16. 形容詞變化（～くなる）",
+          meaning: "某事物變得具有某種性質",
+          description: "📌 句型說明：表示某事物的狀態逐漸變化。\n形成方法：形容詞詞幹＋「くなる」（如 暖かい → 暖かくなる）。\n使用場景：描述狀態改變。",
+          examples: [
+            {
+              sentence: "🔹 天気が暖かくなった。",
+              translation: "天氣變暖了。",
+              analysis: "句中「暖かく」為「暖かい」的詞幹，後接「なる」，表示天氣變暖。",
+            },
+            {
+              sentence: "🔹 部屋がきれいになった。",
+              translation: "房間變乾淨了。",
+              analysis: "句中「きれい」為形容詞詞幹，後接「なる」，表示房間變乾淨。",
+            },
+          ],
+        },
+        {
+          pattern: "17. 形容詞變化（～くする）",
+          meaning: "使某事物具有某種性質",
+          description: "📌 句型說明：表示主動使某事物改變狀態。\n形成方法：形容詞詞幹＋「くする」（如 きれい → きれいにする）。\n使用場景：描述主動改變。",
+          examples: [
+            {
+              sentence: "🔹 部屋をきれいにします。",
+              translation: "我把房間弄乾淨。",
+              analysis: "句中「きれい」為形容詞詞幹，後接「にする」，表示使房間乾淨。",
+            },
+            {
+              sentence: "🔹 声を小さくしてください。",
+              translation: "請把聲音放小。",
+              analysis: "句中「小さく」為「小さい」的詞幹，後接「する」，表示使聲音變小。",
+            },
+          ],
+        },
+        {
+          pattern: "18. ～そうだ（外觀）",
+          meaning: "根據外觀判斷某事物看起來如何",
+          description: "📌 句型說明：表示根據觀察的推測。\n形成方法：形容詞詞幹＋「そうだ」（如 おいしい → おいしそう）。\n使用場景：描述外觀印象。",
+          examples: [
+            {
+              sentence: "🔹 このケーキはおいしそうだ。",
+              translation: "這個蛋糕看起來很好吃。",
+              analysis: "句中「おいし」為「おいしい」的詞幹，後接「そうだ」，表示蛋糕看起來好吃。",
+            },
+            {
+              sentence: "🔹 彼は疲れていそうだ。",
+              translation: "他看起來很累。",
+              analysis: "句中「疲れて」為「疲れる」的て形，後接「そうだ」，表示他看起來疲累。",
+            },
+          ],
+        },
+        {
+          pattern: "19. ～ほど",
+          meaning: "某事物的程度",
+          description: "📌 句型說明：表示某狀態或動作的程度。\n形成方法：動詞/形容詞＋「ほど」。\n使用場景：強調程度。",
+          examples: [
+            {
+              sentence: "🔹 泣きたいほど嬉しい。",
+              translation: "高興到想哭。",
+              analysis: "句中「泣きたい」後接「ほど」，表示高興到想哭的程度。",
+            },
+            {
+              sentence: "🔹 忙しくて寝る時間もないほどだ。",
+              translation: "忙到連睡覺的時間都沒有。",
+              analysis: "句中「忙しくて」後接「ほど」，表示忙碌到極點。",
+            },
+          ],
+        },
+        {
+          pattern: "20. ～くらい／ぐらい",
+          meaning: "大約的數量或程度",
+          description: "📌 句型說明：表示大約的數量或程度。\n形成方法：數量/時間＋「くらい／ぐらい」。\n使用場景：模糊表達。",
+          examples: [
+            {
+              sentence: "🔹 1時間ぐらい待ちました。",
+              translation: "我等了大約一小時。",
+              analysis: "句中「1時間」後接「ぐらい」，表示大約等了一小時。",
+            },
+            {
+              sentence: "🔹 この本は500円ぐらいです。",
+              translation: "這本書大約500日元。",
+              analysis: "句中「500円」後接「ぐらい」，表示價格大約500日元。",
+            },
+          ],
+        },
+        {
+          pattern: "21. ～より～ほうが",
+          meaning: "比較，意為「比…更…」",
+          description: "📌 句型說明：表示兩者比較，後者更優。\n形成方法：AよりBのほうが＋形容詞。\n使用場景：比較選擇。",
+          examples: [
+            {
+              sentence: "🔹 バスより電車のほうが速いです。",
+              translation: "比起公車，電車更快。",
+              analysis: "句中「バスより」表示比較對象，後接「電車のほうが」，表示電車更快。",
+            },
+            {
+              sentence: "🔹 夏より冬のほうが好きです。",
+              translation: "比起夏天，我更喜歡冬天。",
+              analysis: "句中「夏より」表示比較對象，後接「冬のほうが」，表示更喜歡冬天。",
+            },
+          ],
+        },
+        {
+          pattern: "22. ～と同じくらい",
+          meaning: "兩者程度相同",
+          description: "📌 句型說明：表示兩者程度相等。\n形成方法：Aと＋同じくらい＋形容詞。\n使用場景：平等比較。",
+          examples: [
+            {
+              sentence: "🔹 彼は私と同じくらい背が高い。",
+              translation: "他和我一樣高。",
+              analysis: "句中「同じくらい」表示程度相同，句中指他和我一樣高。",
+            },
+            {
+              sentence: "🔹 この店はあそこと同じくらい安い。",
+              translation: "這家店和那邊一樣便宜。",
+              analysis: "句中「同じくらい」表示程度相同，句中指這家店和那邊一樣便宜。",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "助詞與連接",
+      sections: [
+        {
+          pattern: "23. 助詞 に（目的、對象、時間）",
+          meaning: "動作的目的、對象或特定時間點",
+          description: "📌 句型說明：助詞「に」表示動作的目的地、對象或時間點。\n使用場景：多用於動詞如「行く」「書く」。",
+          examples: [
+            {
+              sentence: "🔹 学校に行く。",
+              translation: "去學校。",
+              analysis: "句中「に」表示動作目的地，句中指去學校。",
+            },
+            {
+              sentence: "🔹 友達に手紙を書く。",
+              translation: "給朋友寫信。",
+              analysis: "句中「に」表示動作對象，句中指給朋友寫信。",
+            },
+          ],
+        },
+        {
+          pattern: "24. 助詞 で（場所、手段、原因）",
+          meaning: "動作的場所、手段或原因",
+          description: "📌 句型說明：助詞「で」表示動作的場所、手段或原因。\n使用場景：描述地點或工具。",
+          examples: [
+            {
+              sentence: "🔹 図書館で勉強する。",
+              translation: "在圖書館學習。",
+              analysis: "句中「で」表示動作地點，句中指在圖書館學習。",
+            },
+            {
+              sentence: "🔹 バスで行く。",
+              translation: "坐公車去。",
+              analysis: "句中「で」表示動作手段，句中指坐公車去。",
+            },
+          ],
+        },
+        {
+          pattern: "25. 助詞 と（共同、引用）",
+          meaning: "共同行動或引用說話內容",
+          description: "📌 句型說明：助詞「と」表示與某人共同行動或引用內容。\n使用場景：描述合作或對話。",
+          examples: [
+            {
+              sentence: "🔹 友達と映画を見ました。",
+              translation: "和朋友一起看電影。",
+              analysis: "句中「と」表示共同，句中指和朋友看電影。",
+            },
+            {
+              sentence: "🔹 彼は「大丈夫」と言った。",
+              translation: "他說「沒問題」。",
+              analysis: "句中「と」表示引用，句中指他說的話。",
+            },
+          ],
+        },
+        {
+          pattern: "26. 助詞 へ（方向）",
+          meaning: "動作的方向",
+          description: "📌 句型說明：助詞「へ」表示動作的方向，語氣較柔和。\n使用場景：描述目的地。",
+          examples: [
+            {
+              sentence: "🔹 東京へ行きます。",
+              translation: "去東京。",
+              analysis: "句中「へ」表示方向，句中指去東京。",
+            },
+            {
+              sentence: "🔹 手紙を友達へ送る。",
+              translation: "寄信給朋友。",
+              analysis: "句中「へ」表示動作方向，句中指寄信給朋友。",
+            },
+          ],
+        },
+        {
+          pattern: "27. ～から／まで",
+          meaning: "時間或空間的起點和終點",
+          description: "📌 句型說明：表示時間或空間的範圍。\n形成方法：AからBまで。\n使用場景：描述範圍。",
+          examples: [
+            {
+              sentence: "🔹 朝から夜まで働きます。",
+              translation: "從早上工作到晚上。",
+              analysis: "句中「から」「まで」表示時間範圍，句中指從早到晚。",
+            },
+            {
+              sentence: "🔹 東京から大阪まで行きます。",
+              translation: "從東京到大阪。",
+              analysis: "句中「から」「まで」表示空間範圍，句中指從東京到大阪。",
+            },
+          ],
+        },
+        {
+          pattern: "28. ～ながら",
+          meaning: "同時進行兩個動作",
+          description: "📌 句型說明：表示兩個動作同時進行。\n形成方法：動詞ます形去ます＋「ながら」。\n使用場景：描述多任務。",
+          examples: [
+            {
+              sentence: "🔹 音楽を聴きながら勉強します。",
+              translation: "一邊聽音樂一邊學習。",
+              analysis: "句中「聴き」為「聴く」的ます形，後接「ながら」，表示邊聽邊學。",
+            },
+            {
+              sentence: "🔹 テレビを見ながらご飯を食べる。",
+              translation: "一邊看電視一邊吃飯。",
+              analysis: "句中「見」為「見る」的ます形，後接「ながら」，表示邊看邊吃。",
+            },
+          ],
+        },
+        {
+          pattern: "29. ～から（原因）",
+          meaning: "原因，意為「因為…」",
+          description: "📌 句型說明：表示原因，語氣較主觀。\n形成方法：句子＋「から」。\n使用場景：解釋原因。",
+          examples: [
+            {
+              sentence: "🔹 病気だから休みます。",
+              translation: "因為生病所以休息。",
+              analysis: "句中「病気だ」後接「から」，表示因為生病而休息。",
+            },
+            {
+              sentence: "🔹 忙しいから行けません。",
+              translation: "因為忙所以不能去。",
+              analysis: "句中「忙しい」後接「から」，表示因為忙而不能去。",
+            },
+          ],
+        },
+        {
+          pattern: "30. ～ので",
+          meaning: "原因，意為「由於…」",
+          description: "📌 句型說明：表示客觀原因。\n形成方法：動詞/形容詞＋「ので」。\n使用場景：正式場合。",
+          examples: [
+            {
+              sentence: "🔹 雨が降るので、傘を持って行きます。",
+              translation: "由於下雨，我帶傘去。",
+              analysis: "句中「降る」後接「ので」，表示因為下雨帶傘。",
+            },
+            {
+              sentence: "🔹 時間がなかったので、宿題を終えませんでした。",
+              translation: "由於沒時間，我沒完成作業。",
+              analysis: "句中「なかった」後接「ので」，表示因為沒時間未完成作業。",
+            },
+          ],
+        },
+        {
+          pattern: "31. ～けど",
+          meaning: "轉折，意為「但是…」",
+          description: "📌 句型說明：表示轉折，語氣較口語化。\n形成方法：句子＋「けど」。\n使用場景：對比語氣。",
+          examples: [
+            {
+              sentence: "🔹 行きたいけど、時間がない。",
+              translation: "想去，但是沒時間。",
+              analysis: "句中「行きたい」後接「けど」，表示想去但沒時間。",
+            },
+            {
+              sentence: "🔹 安いけど、品質が悪い。",
+              translation: "雖然便宜，但品質不好。",
+              analysis: "句中「安い」後接「けど」，表示雖然便宜但品質差。",
+            },
+          ],
+        },
+        {
+          pattern: "32. ～のに",
+          meaning: "意外或遺憾的轉折，意為「雖然…卻…」",
+          description: "📌 句型說明：表示與預期相反的結果。\n形成方法：句子＋「のに」。\n使用場景：表達遺憾。",
+          examples: [
+            {
+              sentence: "🔹 勉強したのに、試験に落ちました。",
+              translation: "雖然學習了，卻沒通過考試。",
+              analysis: "句中「勉強した」後接「のに」，表示雖然學習卻沒通過。",
+            },
+            {
+              sentence: "🔹 早く来たのに、電車が遅れた。",
+              translation: "雖然早點來了，電車卻晚了。",
+              analysis: "句中「来た」後接「のに」，表示雖然早到但電車晚點。",
+            },
+          ],
+        },
+        {
+          pattern: "33. ～ても",
+          meaning: "假設的轉折，意為「即使…」",
+          description: "📌 句型說明：表示即使某條件成立，結果仍不變。\n形成方法：動詞て形＋「も」。\n使用場景：假設語氣。",
+          examples: [
+            {
+              sentence: "🔹 雨が降っても、行きます。",
+              translation: "即使下雨，我也會去。",
+              analysis: "句中「降って」為「降る」的て形，後接「も」，表示即使下雨也去。",
+            },
+            {
+              sentence: "🔹 忙しくても、友達に会います。",
+              translation: "即使忙，我也會見朋友。",
+              analysis: "句中「忙しくて」為「忙しい」的て形，後接「も」，表示即使忙也見朋友。",
+            },
+          ],
+        },
+        {
+          pattern: "34. ～なら",
+          meaning: "假設條件，意為「如果是…」",
+          description: "📌 句型說明：表示假設條件，語氣較口語化。\n形成方法：動詞/名詞＋「なら」。\n使用場景：假設情況。",
+          examples: [
+            {
+              sentence: "🔹 時間があれば、旅行に行きます。",
+              translation: "如果有時間，我就去旅行。",
+              analysis: "句中「時間があれば」後接「なら」，表示如果有時間就旅行。",
+            },
+            {
+              sentence: "🔹 天気がよければ、ピクニックに行きます。",
+              translation: "如果天氣好，我就去野餐。",
+              analysis: "句中「天気がよければ」後接「なら」，表示如果天氣好就野餐。",
+            },
+          ],
+        },
+        {
+          pattern: "35. ～ように",
+          meaning: "目的，意為「為了…」",
+          description: "📌 句型說明：表示動作的目的。\n形成方法：動詞辭書形＋「ように」。\n使用場景：表達意圖。",
+          examples: [
+            {
+              sentence: "🔹 試験に合格するために、毎日勉強します。",
+              translation: "為了通過考試，我每天學習。",
+              analysis: "句中「合格する」後接「ように」，表示為了通過考試而學習。",
+            },
+            {
+              sentence: "🔹 早く着くように、急ぎました。",
+              translation: "為了早點到，我趕快了。",
+              analysis: "句中「着く」後接「ように」，表示為了早到而趕快。",
+            },
+          ],
+        },
+        {
+          pattern: "36. ～ために",
+          meaning: "目的或原因，意為「為了…」或「因為…」",
+          description: "📌 句型說明：表示目的或原因，語氣較正式。\n形成方法：動詞/名詞＋「ために」。\n使用場景：正式場合。",
+          examples: [
+            {
+              sentence: "🔹 健康のために、運動します。",
+              translation: "為了健康，我運動。",
+              analysis: "句中「健康」後接「ために」，表示為了健康而運動。",
+            },
+            {
+              sentence: "🔹 雨のために、試合が中止になった。",
+              translation: "因為下雨，比賽取消了。",
+              analysis: "句中「雨」後接「ために」，表示因為下雨比賽取消。",
+            },
+          ],
+        },
+        {
+          pattern: "37. ～ようにする",
+          meaning: "努力使某事發生",
+          description: "📌 句型說明：表示努力達成某目標。\n形成方法：動詞辭書形＋「ようにする」。\n使用場景：表達努力。",
+          examples: [
+            {
+              sentence: "🔹 毎日、早く起きるようにします。",
+              translation: "我努力每天早起。",
+              analysis: "句中「起きる」後接「ようにする」，表示努力早起。",
+            },
+            {
+              sentence: "🔹 忘れないように、メモします。",
+              translation: "為了不忘記，我會記筆記。",
+              analysis: "句中「忘れない」後接「ようにする」，表示為了不忘記而記筆記。",
+            },
+          ],
+        },
+        {
+          pattern: "38. ～ようになる",
+          meaning: "某事變得可能或能夠做到",
+          description: "📌 句型說明：表示能力或狀態的改變。\n形成方法：動詞辭書形＋「ようになる」。\n使用場景：描述進步。",
+          examples: [
+            {
+              sentence: "🔹 日本語が読めるようになりました。",
+              translation: "我變得能讀日語了。",
+              analysis: "句中「読める」後接「ようになる」，表示變得能讀日語。",
+            },
+            {
+              sentence: "🔹 自転車に乗れるようになった。",
+              translation: "我變得會騎腳踏車了。",
+              analysis: "句中「乗れる」後接「ようになる」，表示變得會騎腳踏車。",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "敬語與推測",
+      sections: [
+        {
+          pattern: "39. 尊敬語（お～になる／～られる）",
+          meaning: "對對方的尊敬",
+          description: "📌 句型說明：表示對對方的尊敬，提升對方地位。\n形成方法：お/ご＋動詞ます形去ます＋になる，或動詞被動形。\n使用場景：正式場合。",
+          examples: [
+            {
+              sentence: "🔹 先生がいらっしゃいました。",
+              translation: "老師來了。",
+              analysis: "句中「いらっしゃる」為「来る」的尊敬語，表示老師來了。",
+            },
+            {
+              sentence: "🔹 社長がお話しになる。",
+              translation: "社長說話。",
+              analysis: "句中「お話しになる」為「話す」的尊敬語，表示社長說話。",
+            },
+          ],
+        },
+        {
+          pattern: "40. 謙讓語（お～する／～いたします）",
+          meaning: "表示自己的謙虛",
+          description: "📌 句型說明：表示對自己的謙虛，降低自己地位。\n形成方法：お/ご＋動詞ます形去ます＋する，或～いたします。\n使用場景：服務行業。",
+          examples: [
+            {
+              sentence: "🔹 お預かりいたします。",
+              translation: "我幫您保管。",
+              analysis: "句中「お預かりいたします」為「預かる」的謙讓語，表示幫您保管。",
+            },
+            {
+              sentence: "🔹 ご案内いたします。",
+              translation: "我為您帶路。",
+              analysis: "句中「ご案内いたします」為「案内する」的謙讓語，表示為您帶路。",
+            },
+          ],
+        },
+        {
+          pattern: "41. 丁寧語（です／ます）",
+          meaning: "禮貌的表達方式",
+          description: "📌 句型說明：表示禮貌的語氣。\n形成方法：動詞ます形或です。\n使用場景：日常對話。",
+          examples: [
+            {
+              sentence: "🔹 よろしくお願いします。",
+              translation: "請多關照。",
+              analysis: "句中「です」為丁寧語，表示請多關照。",
+            },
+            {
+              sentence: "🔹 ありがとうございます。",
+              translation: "謝謝。",
+              analysis: "句中「ございます」為丁寧語，表示感謝。",
+            },
+          ],
+        },
+        {
+          pattern: "42. ～そうだ（傳聞）",
+          meaning: "聽到的傳聞",
+          description: "📌 句型說明：表示從他人處聽到的消息。\n形成方法：動詞/形容詞＋「そうだ」。\n使用場景：轉述信息。",
+          examples: [
+            {
+              sentence: "🔹 明日、雨が降るそうです。",
+              translation: "聽說明天會下雨。",
+              analysis: "句中「降る」後接「そうだ」，表示聽說明天會下雨。",
+            },
+            {
+              sentence: "🔹 彼は転職したそうです。",
+              translation: "聽說他換工作了。",
+              analysis: "句中「転職した」後接「そうだ」，表示聽說他換工作。",
+            },
+          ],
+        },
+        {
+          pattern: "43. ～らしい",
+          meaning: "推測，意為「好像…」",
+          description: "📌 句型說明：表示根據線索的推測。\n形成方法：動詞/形容詞＋「らしい」。\n使用場景：不確定推測。",
+          examples: [
+            {
+              sentence: "🔹 彼は忙しいらしい。",
+              translation: "他好像很忙。",
+              analysis: "句中「忙しい」後接「らしい」，表示他好像很忙。",
+            },
+            {
+              sentence: "🔹 この店は人気らしい。",
+              translation: "這家店好像很受歡迎。",
+              analysis: "句中「人気」後接「らしい」，表示這家店好像很受歡迎。",
+            },
+          ],
+        },
+        {
+          pattern: "44. ～みたい",
+          meaning: "比喻或推測，意為「像是…」",
+          description: "📌 句型說明：表示比喻或感性推測。\n形成方法：動詞/名詞＋「みたい」。\n使用場景：口語化表達。",
+          examples: [
+            {
+              sentence: "🔹 彼女は子供みたいに笑う。",
+              translation: "她笑得像小孩一樣。",
+              analysis: "句中「子供」後接「みたい」，表示她笑得像小孩。",
+            },
+            {
+              sentence: "🔹 雲が何か悪いことみたいだ。",
+              translation: "雲看起來像是壞事。",
+              analysis: "句中「悪いこと」後接「みたい」，表示雲看起來像壞事。",
+            },
+          ],
+        },
+        {
+          pattern: "45. ～なければならない",
+          meaning: "必須做某事",
+          description: "📌 句型說明：表示義務或必須。\n形成方法：動詞ない形去い＋「なければならない」。\n使用場景：強烈義務。",
+          examples: [
+            {
+              sentence: "🔹 宿題をしなければなりません。",
+              translation: "我必須做作業。",
+              analysis: "句中「しない」為「する」的ない形，後接「なければならない」，表示必須做作業。",
+            },
+            {
+              sentence: "🔹 早く行かなければなりません。",
+              translation: "我必須早點去。",
+              analysis: "句中「行かない」為「行く」的ない形，後接「なければならない」，表示必須早去。",
+            },
+          ],
+        },
+        {
+          pattern: "46. ～べきだ",
+          meaning: "應該做某事",
+          description: "📌 句型說明：表示建議或應當。\n形成方法：動詞辭書形＋「べきだ」。\n使用場景：道德建議。",
+          examples: [
+            {
+              sentence: "🔹 若い人はもっと勉強すべきだ。",
+              translation: "年輕人應該多學習。",
+              analysis: "句中「勉強する」後接「べきだ」，表示年輕人應多學習。",
+            },
+            {
+              sentence: "🔹 約束は守るべきだ。",
+              translation: "應該遵守承諾。",
+              analysis: "句中「守る」後接「べきだ」，表示應遵守承諾。",
+            },
+          ],
+        },
+        {
+          pattern: "47. ～かもしれない",
+          meaning: "可能性，意為「可能…」",
+          description: "📌 句型說明：表示不確定的可能性。\n形成方法：動詞/形容詞＋「かもしれない」。\n使用場景：推測可能性。",
+          examples: [
+            {
+              sentence: "🔹 彼は遅れるかもしれない。",
+              translation: "他可能會遲到。",
+              analysis: "句中「遅れる」後接「かもしれない」，表示他可能會遲到。",
+            },
+            {
+              sentence: "🔹 明日、雪が降るかもしれない。",
+              translation: "明天可能會下雪。",
+              analysis: "句中「降る」後接「かもしれない」，表示明天可能下雪。",
+            },
+          ],
+        },
+        {
+          pattern: "48. ～だろう",
+          meaning: "推測，意為「大概…」",
+          description: "📌 句型說明：表示較有把握的推測。\n形成方法：動詞/形容詞＋「だろう」。\n使用場景：自信推測。",
+          examples: [
+            {
+              sentence: "🔹 彼はもう帰っただろう。",
+              translation: "他大概已經回去了。",
+              analysis: "句中「帰った」後接「だろう」，表示他大概已經回去。",
+            },
+            {
+              sentence: "🔹 これは簡単だろう。",
+              translation: "這大概很簡單。",
+              analysis: "句中「簡単」後接「だろう」，表示這大概很簡單。",
+            },
+          ],
+        },
+        {
+          pattern: "49. ～たり～たりする",
+          meaning: "列舉多個動作或狀態",
+          description: "📌 句型說明：表示多個動作或狀態的並列。\n形成方法：動詞た形＋「り」＋動詞た形＋「りする」。\n使用場景：列舉行為。",
+          examples: [
+            {
+              sentence: "🔹 休日は本を読んだり、映画を見たりします。",
+              translation: "假日我讀書或看電影。",
+              analysis: "句中「読んだ」「見た」為た形，後接「り」，表示讀書或看電影。",
+            },
+            {
+              sentence: "🔹 彼は笑ったり、泣いたりします。",
+              translation: "他一會笑一會哭。",
+              analysis: "句中「笑った」「泣いた」為た形，後接「り」，表示一會笑一會哭。",
+            },
+          ],
+        },
+        {
+          pattern: "50. ～か～か",
+          meaning: "選擇，意為「…還是…」",
+          description: "📌 句型說明：表示兩個選項的選擇。\n形成方法：動詞/名詞＋「か」＋動詞/名詞＋「か」。\n使用場景：詢問選擇。",
+          examples: [
+            {
+              sentence: "🔹 コーヒーか紅茶を飲みますか。",
+              translation: "你要喝咖啡還是紅茶？",
+              analysis: "句中「コーヒー」「紅茶」後接「か」，表示詢問喝咖啡還是紅茶。",
+            },
+            {
+              sentence: "🔹 行くか行かないか決めなさい。",
+              translation: "決定去還是不去。",
+              analysis: "句中「行く」「行かない」後接「か」，表示選擇去或不去。",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
 
 export default n3BasicGrammarZhTW;

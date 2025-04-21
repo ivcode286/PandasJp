@@ -55,6 +55,7 @@ export interface StoryTranslation {
 export interface GrammarExample {
   sentence: string;
   translation: string;
+  analysis: string;
 }
 
 export interface GrammarSection {
