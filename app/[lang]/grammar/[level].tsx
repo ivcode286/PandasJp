@@ -1,7 +1,15 @@
 // app/[lang]/grammar/[level].tsx
 import React from 'react';
-import { View, Text, SectionList, StyleSheet, TouchableOpacity } from 'react-native';
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import {
+  View,
+  Text,
+  SectionList,
+  StyleSheet,
+  TouchableOpacity,
+  Platform,
+  SectionListProps
+} from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import sectionListGetItemLayout from 'react-native-section-list-get-item-layout';
@@ -17,13 +25,8 @@ interface GrammarSection {
   description: string;
   examples: { sentence: string; translation: string; analysis?: string }[];
 }
-
-interface AdSection {
-  ad: true;
-}
-
+interface AdSection { ad: true }
 type SectionItem = GrammarSection | AdSection;
-
 interface TransformedChapter {
   title: string;
   data: SectionItem[];
@@ -31,74 +34,81 @@ interface TransformedChapter {
 
 const SECTION_HEADER_HEIGHT = 70;
 const ITEM_MARGIN = 12;
+const ITEMS_BETWEEN_ADS = 6;              // 每隔幾個文法條目後插一則廣告
+const AD_PERIOD = ITEMS_BETWEEN_ADS + 1;  // grammar + ad 週期長度
+const ITEM_HEIGHT = 140 + ITEM_MARGIN;    // 一般文法條目的行高
+const AD_HEIGHT = 80;                     // 廣告條目的行高
 
-const getItemLayout = sectionListGetItemLayout({
-  getItemHeight: (_, index) => (index % 6 === 5 ? 80 : 100 + ITEM_MARGIN * index), // Increased height for analysis
+// 先拿到原始的 getItemLayout function
+const rawGetItemLayout = sectionListGetItemLayout({
+  getItemHeight: (_item, index) =>
+    (index + 1) % AD_PERIOD === 0 ? AD_HEIGHT : ITEM_HEIGHT,
   getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
 });
 
-export async function generateStaticParams({ params }: { params: { lang: string } }) {
-  const { lang } = params;
+// 再用 wrapper 轉成正確的 SectionListProps 型別
+const getItemLayout: SectionListProps<SectionItem, TransformedChapter>['getItemLayout'] =
+  (sections, index) => {
+    // sections 在我們的使用情境下永遠不會是 null
+    return rawGetItemLayout(sections as TransformedChapter[], index);
+  };
+
+export async function generateStaticParams({
+  params
+}: {
+  params: { lang: string }
+}) {
   const levels = Object.values(GRAMMAR_LEVELS);
-
-  console.log('Generating static params in [level].tsx for lang:', lang);
-
-  const staticParams = levels.map((level) => ({
-    level,
-  }));
-
-  console.log('Generated static params in [level].tsx:', staticParams);
-  return staticParams;
+  return levels.map(level => ({ level }));
 }
 
-export async function getStaticProps({ params }: { params: { lang: string; level: string } }) {
+export async function getStaticProps({
+  params
+}: {
+  params: { lang: string; level: string }
+}) {
   const { lang, level } = params;
-
-  console.log('getStaticProps params in [level].tsx:', { lang, level });
-
   const normalizedLang = lang === 'zh-cn' ? 'zh-CN' : 'zh-TW';
   await i18n.changeLanguage(normalizedLang);
 
   const namespace = level.replace(/-grammar$/, '').replace(/-/g, '_');
-  const grammarData = i18n.t(`grammar:${namespace}.chapters`, { returnObjects: true });
-
+  const grammarData = i18n.t(`grammar:${namespace}.chapters`, {
+    returnObjects: true
+  });
   if (!Array.isArray(grammarData)) {
-    console.error(`Invalid grammar data for ${namespace} in ${lang}:`, grammarData);
     return { props: { level, transformedData: [] } };
   }
 
-  const transformedData: TransformedChapter[] = grammarData.map((chapter: any) => {
-    const grammarItems: GrammarSection[] = chapter.sections.map((section: any) => ({
-      pattern: section.pattern || '無句型',
-      meaning: section.meaning || '無意義',
-      description: section.description || '無描述',
-      examples: section.examples.map((example: any) => ({
-        sentence: example.sentence || '無例句',
-        translation: example.translation || '無翻譯',
-        analysis: example.analysis || '',
-      })),
-    }));
+  const transformedData: TransformedChapter[] = grammarData.map(
+    (chapter: any) => {
+      const items: SectionItem[] = [];
+      chapter.sections.forEach((sec: any, idx: number) => {
+        items.push({
+          pattern: sec.pattern || '無句型',
+          meaning: sec.meaning || '無意義',
+          description: sec.description || '無描述',
+          examples: sec.examples.map((ex: any) => ({
+            sentence: ex.sentence || '無例句',
+            translation: ex.translation || '無翻譯',
+            analysis: ex.analysis || ''
+          }))
+        } as GrammarSection);
+        if ((idx + 1) % ITEMS_BETWEEN_ADS === 0) {
+          items.push({ ad: true });
+        }
+      });
+      return {
+        title: chapter.title || '無標題',
+        data: items
+      };
+    }
+  );
 
-    const dataWithAds: SectionItem[] = [];
-    grammarItems.forEach((item, index) => {
-      dataWithAds.push(item);
-      if ((index + 1) % 5 === 0) {
-        dataWithAds.push({ ad: true });
-      }
-    });
-
-    return {
-      title: chapter.title || '無標題',
-      data: dataWithAds,
-    };
-  });
-
-  console.log('Transformed data with ads in [level].tsx:', transformedData);
   return {
     props: {
       level,
-      transformedData,
-    },
+      transformedData
+    }
   };
 }
 
@@ -106,56 +116,48 @@ export const dynamic = 'force-static';
 
 export default function GrammarScreen({
   level: staticLevel,
-  transformedData: staticTransformedData,
+  transformedData: staticTransformedData = []
 }: {
   level?: string;
   transformedData?: TransformedChapter[];
 }) {
   const { speak } = useTextToSpeech();
-  const { level: paramLevel, lang } = useLocalSearchParams<{ level: string; lang: string }>();
+  const { level: paramLevel } = useLocalSearchParams<{ level: string }>();
   const { t } = useTranslation('grammar');
 
   const level = staticLevel || paramLevel || '';
   let transformedData = staticTransformedData;
 
-  if (!transformedData && level) {
+  // 客戶端 fallback
+  if (!staticTransformedData.length && level) {
     const namespace = level.replace(/-grammar$/, '').replace(/-/g, '_');
-    const grammarData = t(`${namespace}.chapters`, { returnObjects: true }) as any[];
-
+    const grammarData = t(`${namespace}.chapters`, {
+      returnObjects: true
+    }) as any[];
     transformedData = Array.isArray(grammarData)
       ? grammarData.map((chapter: any) => {
-          const grammarItems: GrammarSection[] = chapter.sections.map((section: any) => ({
-            pattern: section.pattern || '無句型',
-            meaning: section.meaning || '無意義',
-            description: section.description || '無描述',
-            examples: section.examples.map((example: any) => ({
-              sentence: example.sentence || '無例句',
-              translation: example.translation || '無翻譯',
-              analysis: example.analysis || '',
-            })),
-          }));
-
-          const dataWithAds: SectionItem[] = [];
-          grammarItems.forEach((item, index) => {
-            dataWithAds.push(item);
-            if ((index + 1) % 7 === 0) {
-              dataWithAds.push({ ad: true });
+          const items: SectionItem[] = [];
+          chapter.sections.forEach((sec: any, idx: number) => {
+            items.push({
+              pattern: sec.pattern || '無句型',
+              meaning: sec.meaning || '無意義',
+              description: sec.description || '無描述',
+              examples: sec.examples.map((ex: any) => ({
+                sentence: ex.sentence || '無例句',
+                translation: ex.translation || '無翻譯',
+                analysis: ex.analysis || ''
+              }))
+            } as GrammarSection);
+            if ((idx + 1) % ITEMS_BETWEEN_ADS === 0) {
+              items.push({ ad: true });
             }
           });
-
           return {
             title: chapter.title || '無標題',
-            data: dataWithAds,
+            data: items
           };
         })
       : [];
-  }
-
-  console.log('Level received in [level].tsx:', level);
-
-  if (!Array.isArray(transformedData)) {
-    console.error('transformedData is not an array:', transformedData);
-    transformedData = [];
   }
 
   return (
@@ -163,40 +165,50 @@ export default function GrammarScreen({
       <SafeAreaView style={styles.container}>
         <SectionList
           sections={transformedData}
-          keyExtractor={(item, index) => ('ad' in item ? `ad-${index}` : item.pattern + index)}
+          keyExtractor={(item, idx) =>
+            'ad' in item ? `ad-${idx}` : `${item.pattern}-${idx}`
+          }
           renderSectionHeader={({ section: { title } }) => (
             <View style={styles.headerContainer}>
-              <Text style={styles.header}>{title || '無標題'}</Text>
+              <Text style={styles.header}>{title}</Text>
             </View>
           )}
-          renderItem={({ item }) => {
-            if ('ad' in item) {
-              return <AdBanner />;
-            }
-            return (
+          renderItem={({ item }) =>
+            'ad' in item ? (
+              <AdBanner />
+            ) : (
               <View style={styles.item}>
-                <Text style={styles.pattern}>{item.pattern || '無句型'}</Text>
-                <Text style={styles.meaning}>{item.meaning || '無意義'}</Text>
-                <Text style={styles.description}>{item.description || '無描述'}</Text>
-                {item.examples.map((example, index) => (
-                  <View key={index} style={styles.exampleContainer}>
+                <Text style={styles.pattern}>{item.pattern}</Text>
+                <Text style={styles.meaning}>{item.meaning}</Text>
+                <Text style={styles.description}>{item.description}</Text>
+                {item.examples.map((ex, i) => (
+                  <View key={i} style={styles.exampleContainer}>
                     <View style={styles.sentenceRow}>
-                      <Text style={styles.sentence}>{example.sentence || '無例句'}</Text>
-                      <TouchableOpacity onPress={() => speak(example.sentence || '')} style={styles.iconSpacing}>
-                        <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                      <Text style={styles.sentence}>{ex.sentence}</Text>
+                      <TouchableOpacity
+                        onPress={() => speak(ex.sentence)}
+                        style={[
+                          styles.iconSpacing,
+                          Platform.OS === 'web' && { pointerEvents: 'auto' }
+                        ]}
+                      >
+                        <IoniconsWeb
+                          name="volume-high"
+                          size={24}
+                          color="#ffcc00"
+                        />
                       </TouchableOpacity>
                     </View>
-                    <Text style={styles.translation}>{example.translation || '無翻譯'}</Text>
-                    {example.analysis && (
-                      <Text style={styles.analysis}>{example.analysis}</Text>
-                    )}
+                    <Text style={styles.translation}>{ex.translation}</Text>
+                    {ex.analysis ? (
+                      <Text style={styles.analysis}>{ex.analysis}</Text>
+                    ) : null}
                   </View>
                 ))}
               </View>
-            );
-          }}
+            )
+          }
           stickySectionHeadersEnabled={false}
-          //@ts-ignore
           getItemLayout={getItemLayout}
           contentContainerStyle={{ paddingBottom: 150 }}
         />
@@ -209,13 +221,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#121212',
-  },
-  item: {
-    backgroundColor: '#1e1e1e',
-    padding: 16,
-    borderRadius: 8,
-    marginBottom: ITEM_MARGIN,
+    backgroundColor: '#121212'
   },
   headerContainer: {
     height: SECTION_HEADER_HEIGHT,
@@ -223,53 +229,81 @@ const styles = StyleSheet.create({
     backgroundColor: '#2a2a2a',
     paddingVertical: 15,
     paddingLeft: 15,
+    ...Platform.select({
+      web: {
+        boxShadow: '0px 2px 4px rgba(0,0,0,0.2)'
+      },
+      default: {
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4
+      }
+    })
   },
   header: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#ffcc00',
+    color: '#ffcc00'
+  },
+  item: {
+    backgroundColor: '#1e1e1e',
+    padding: 16,
+    borderRadius: 8,
+    marginBottom: ITEM_MARGIN,
+    ...Platform.select({
+      web: {
+        boxShadow: '0px 1px 3px rgba(0,0,0,0.2)'
+      },
+      default: {
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.1,
+        shadowRadius: 2
+      }
+    })
   },
   pattern: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#ffffff',
-    marginBottom: 4,
+    marginBottom: 4
   },
   meaning: {
     fontSize: 18,
     color: '#ffcc00',
-    marginBottom: 8,
+    marginBottom: 8
   },
   description: {
     fontSize: 16,
     color: '#b0b0b0',
-    marginBottom: 10,
+    marginBottom: 10
   },
   exampleContainer: {
-    marginTop: 10,
+    marginTop: 10
   },
   sentenceRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   sentence: {
     fontSize: 18,
     color: '#ffffff',
-    flexShrink: 1,
+    flexShrink: 1
   },
   translation: {
     fontSize: 16,
     color: '#b0b0b0',
-    marginTop: 4,
+    marginTop: 4
   },
   analysis: {
     fontSize: 14,
     color: '#b0b0b0',
     marginTop: 4,
-    fontStyle: 'italic',
+    fontStyle: 'italic'
   },
   iconSpacing: {
-    marginLeft: 10,
-  },
+    marginLeft: 10
+  }
 });
