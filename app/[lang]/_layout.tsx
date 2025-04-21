@@ -1,70 +1,42 @@
 // app/[lang]/_layout.tsx
 import React, { useEffect } from 'react';
-import { Stack, useLocalSearchParams, useRouter, useNavigation } from 'expo-router';
-import { useFonts } from 'expo-font';
-import i18n from '@/src/locales/i18n';
+import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import i18n from '@/src/locales/i18n';
 import HeaderBackButton from '@/components/HeaderBackButton';
 import { Platform } from 'react-native';
 
-const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'];
+const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'] as const;
 
 export async function generateStaticParams() {
   return SUPPORTED_LANGUAGES.map((lang) => ({ lang }));
 }
 
 export default function LangLayout() {
-  const params = useLocalSearchParams();
+  const { lang: rawLang } = useLocalSearchParams<{ lang: string }>();
+  const lang = SUPPORTED_LANGUAGES.includes(rawLang as any) ? rawLang : 'zh-tw';
   const router = useRouter();
-  const navigation = useNavigation();
-  const langParam = Array.isArray(params.lang) ? params.lang[0] : params.lang;
-  const lang = typeof langParam === 'string' ? langParam : 'zh-tw';
-
   const { t } = useTranslation('home');
 
-  const [loaded, error] = useFonts({
-    SpaceMono: require('@/assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  const normalizedLang = lang.toLowerCase() === 'zh-cn' ? 'zh-CN' : 'zh-TW';
-  if (i18n.language !== normalizedLang) {
-    i18n.changeLanguage(normalizedLang);
-  }
-
+  // 同步 i18n 語言
   useEffect(() => {
-    if (Platform.OS === 'web') {
-      const currentPath = window.location.pathname.toLowerCase();
-      const isTabRoute = currentPath.includes('/(tabs)');
-      if (!router.canGoBack() && !isTabRoute) {
-        navigation.setOptions({
-          headerLeft: () => (
-            <HeaderBackButton
-              onPress={() => router.replace(`/${lang}/(tabs)`)}
-            />
-          ),
-        });
-      }
+    const normalized = lang === 'zh-cn' ? 'zh-CN' : 'zh-TW';
+    if (i18n.language !== normalized) {
+      i18n.changeLanguage(normalized);
     }
-  }, [router, navigation, lang]);
+  }, [lang]);
 
-  if (!loaded && !error) {
-    return null;
-  }
-
-  // 修改：在 screenOptions 中動態設置 headerLeft，根據是否有返回目標
+  // Web 下，非 (tabs) 路由時顯示回首頁按鈕
   const getHeaderLeft = () => {
     if (Platform.OS === 'web' && !router.canGoBack()) {
-      const currentPath = window.location.pathname.toLowerCase();
-      const isTabRoute = currentPath.includes('/(tabs)');
-      if (!isTabRoute) {
+      const p = window.location.pathname.toLowerCase();
+      if (!p.includes('/(tabs)')) {
         return () => (
-          <HeaderBackButton
-            onPress={() => router.replace(`/${lang}/(tabs)`)}
-          />
+          <HeaderBackButton onPress={() => router.replace(`/${lang}/(tabs)`)} />
         );
       }
     }
-    return () => <HeaderBackButton />; // 默認行為
+    return () => <HeaderBackButton />;
   };
 
   return (

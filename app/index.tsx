@@ -1,27 +1,10 @@
-// app/[lang]/index.tsx
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'expo-router';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { ActivityIndicator, View } from 'react-native';
+// app/index.tsx
+import React from 'react';
+import { Redirect } from 'expo-router';
 
-const LANGUAGE_KEY = 'app_language';
-
-export default function IndexRedirectScreen() {
-  const [loading, setLoading] = useState(true);
-  const router = useRouter();
-
-  useEffect(() => {
-    (async () => {
-      const savedLang = await AsyncStorage.getItem(LANGUAGE_KEY);
-      const initialLang = savedLang || 'zh-tw'; // 預設 zh-tw
-      router.replace(`/${initialLang}/(tabs)`);
-      setLoading(false);
-    })();
-  }, []);
-
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <ActivityIndicator size="large" color="#1E88E5" />
-    </View>
-  );
+export default function RootIndex() {
+  // 伺服端靜態輸出時也會正確產生 <meta http-equiv="refresh">
+  return <Redirect href="/zh-tw/(tabs)" />;
 }
+
+
