@@ -107,6 +107,30 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+   <url>
+    <loc>https://pandasapps.com/zh-tw/grammar/n4-basic-grammar</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://pandasapps.com/zh-tw/grammar/n4-advance-grammar</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+   <url>
+    <loc>https://pandasapps.com/zh-tw/grammar/n3-basic-grammar</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-tw/grammar/n3-advance-grammar</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/grammar-concepts</loc>
     <lastmod>2025-04-08</lastmod>
@@ -208,6 +232,31 @@
   <url>
     <loc>https://pandasapps.com/zh-cn/grammar/n5-advance-grammar</loc>
     <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/grammar/n4-basic-grammar</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/grammar/n4-advance-grammar</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+    </url>
+    <url>
+    <loc>https://pandasapps.com/zh-cn/grammar/n3-basic-grammar</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pandasapps.com/zh-cn/grammar/n3-advance-grammar</loc>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
