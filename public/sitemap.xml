@@ -3,7 +3,7 @@
   <!-- 根頁面 -->
   <url>
     <loc>https://pandasapps.com/</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,13 +11,13 @@
   <!-- 語言首頁 -->
   <url>
     <loc>https://pandasapps.com/zh-tw/</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -25,127 +25,127 @@
   <!-- 核心學習頁面 (zh-tw) -->
   <url>
     <loc>https://pandasapps.com/zh-tw/hiragana</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/katakana</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/kana-comparison</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/phonetics</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/settings</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/privacy-policy</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/words/n5</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/words/n5-kanji</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/words/n4-n3</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/words/menu</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/n5-concepts</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/grammar</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/grammar/n5-basic-grammar</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/grammar/n5-advance-grammar</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
    <url>
     <loc>https://pandasapps.com/zh-tw/grammar/n4-basic-grammar</loc>
-    <lastmod>2025-04-21</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/grammar/n4-advance-grammar</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/grammar/n3-basic-grammar</loc>
-    <lastmod>2025-04-21</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/grammar/n3-advance-grammar</loc>
-    <lastmod>2025-04-21</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/grammar-concepts</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/screens/WordsScreen</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/(tabs)/settings</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -153,127 +153,127 @@
   <!-- 核心學習頁面 (zh-cn) -->
   <url>
     <loc>https://pandasapps.com/zh-cn/hiragana</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/katakana</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/kana-comparison</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/phonetics</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/settings</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/privacy-policy</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/words/n5</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/words/n5-kanji</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/words/n4-n3</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/words/menu</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/n5-concepts</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/grammar</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/grammar/n5-basic-grammar</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/grammar/n5-advance-grammar</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/grammar/n4-basic-grammar</loc>
-    <lastmod>2025-04-21</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/grammar/n4-advance-grammar</loc>
-    <lastmod>2025-04-21</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/grammar/n3-basic-grammar</loc>
-    <lastmod>2025-04-21</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/grammar/n3-advance-grammar</loc>
-    <lastmod>2025-04-21</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/grammar-concepts</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/screens/WordsScreen</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/(tabs)/settings</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -281,67 +281,67 @@
   <!-- Story 命名空間 (zh-tw) -->
   <url>
     <loc>https://pandasapps.com/zh-tw/story</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/story/momoko</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/story/fat-cat</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/story/panda-river</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/story/panda-shrine</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/story/colinb-witch</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/story/overlord-food</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/story/magical-shoujo</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/story/panda-cat-lake</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/story/girl-hospital-visit</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/story/delinquent-cat-sennin</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -349,67 +349,67 @@
   <!-- Story 命名空間 (zh-cn) -->
   <url>
     <loc>https://pandasapps.com/zh-cn/story</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/story/momoko</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/story/fat-cat</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/story/panda-river</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/story/panda-shrine</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/story/colinb-witch</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/story/overlord-food</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/story/magical-shoujo</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/story/panda-cat-lake</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/story/girl-hospital-visit</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/story/delinquent-cat-sennin</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -417,67 +417,67 @@
   <!-- N5chat 命名空間 (zh-tw) -->
   <url>
     <loc>https://pandasapps.com/zh-tw/n5chat</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/n5chat/cafe-order</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/n5chat/phone-call</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/n5chat/school-chat</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/n5chat/weekend-plan</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/n5chat/station-help</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/n5chat/clothing-store</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/n5chat/restaurant-dining</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/n5chat/bookstore-shopping</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/n5chat/convenience-shopping</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/n5chat/supermarket-shopping</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -485,67 +485,67 @@
   <!-- N5chat 命名空間 (zh-cn) -->
   <url>
     <loc>https://pandasapps.com/zh-cn/n5chat</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/n5chat/cafe-order</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/n5chat/phone-call</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/n5chat/school-chat</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/n5chat/weekend-plan</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/n5chat/station-help</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/n5chat/clothing-store</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/n5chat/restaurant-dining</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/n5chat/bookstore-shopping</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/n5chat/convenience-shopping</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/n5chat/supermarket-shopping</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -553,49 +553,49 @@
   <!-- Travelchat 命名空間 (zh-tw) -->
   <url>
     <loc>https://pandasapps.com/zh-tw/travelchat</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/travelchat/dining</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/travelchat/shopping</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/travelchat/emergency</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/travelchat/sightseeing</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/travelchat/hotel-airbnb</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/travelchat/airport-flight</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-tw/travelchat/transportation</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -603,49 +603,49 @@
   <!-- Travelchat 命名空間 (zh-cn) -->
   <url>
     <loc>https://pandasapps.com/zh-cn/travelchat</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/travelchat/dining</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/travelchat/shopping</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/travelchat/emergency</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/travelchat/sightseeing</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/travelchat/hotel-airbnb</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/travelchat/airport-flight</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/travelchat/transportation</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
