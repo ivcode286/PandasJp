@@ -1,5 +1,5 @@
 const homeZhCN = {
-  title: '日语学习 - PandasJP',
+  title: '熊猫日语学习 - PandasJP',
   n5title: '📌 從零開始學日語N5',
   n4title: '📌 N4日语学习',
   n3title: '📌 N3日语学习',

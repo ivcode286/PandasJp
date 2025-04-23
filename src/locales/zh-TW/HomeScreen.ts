@@ -1,5 +1,5 @@
 const homeZhTW = {
-  title: '日語學習 - PandasJP',
+  title: '熊貓日語學習 - PandasJP',
   n5title: '📌 從零開始學日語N5',
   n4title: '📌 N4日語學習',
   n3title: '📌 N3日語學習',
