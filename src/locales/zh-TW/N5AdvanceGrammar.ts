@@ -13,10 +13,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹いっしょに 映画 (えいが) を見 (み) ませんか？",
               translation: "要不要一起看電影呢？",
+              analysis: ""
             },
             {
               sentence: "🔹今晩 (こんばん) ご飯 (ごはん) を食 (た) べませんか？",
               translation: "要不要今晚一起吃飯呢？",
+              analysis: ""
             },
           ],
         },
@@ -29,10 +31,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹いっしょに 行 (い) きましょう！",
               translation: "一起去吧！",
+              analysis: ""
             },
             {
               sentence: "🔹荷物 (にもつ) を 持 (も) ちましょうか？",
               translation: "要不要幫你拿行李呢？",
+              analysis: ""
             },
           ],
         },
@@ -44,10 +48,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹ここで 写真 (しゃしん) を撮 (と) ってもいいですか？",
               translation: "在這裡拍照可以嗎？",
+              analysis: ""
             },
             {
               sentence: "🔹この本を 読 (よ) んでもいいです。",
               translation: "這本書可以看。",
+              analysis: ""
             },
           ],
         },
@@ -59,10 +65,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹ここで タバコを吸 (す) ってはいけません。",
               translation: "這裡不可以抽菸。",
+              analysis: ""
             },
             {
               sentence: "🔹夜 (よる) に 大 (おお) きい声 (こえ) で話 (はな) してはいけません。",
               translation: "晚上不可以大聲說話。",
+              analysis: ""
             },
           ],
         },
@@ -74,10 +82,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹宿題 (しゅくだい) は 書 (か) かなくてもいいです。",
               translation: "作業不用寫也可以。",
+              analysis: ""
             },
             {
               sentence: "🔹今日は 仕事 (しごと) に行 (い) かなくてもいいです。",
               translation: "今天不用去上班也可以。",
+              analysis: ""
             },
           ],
         },
@@ -89,10 +99,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹早 (はや) く 寝 (ね) なければなりません。",
               translation: "必須早點睡。",
+              analysis: ""
             },
             {
               sentence: "🔹明日 (あした) 会議 (かいぎ) に出 (で) なければなりません。",
               translation: "明天必須出席會議。",
+              analysis: ""
             },
           ],
         },
@@ -104,10 +116,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹宿題 (しゅくだい) を しなくてはいけません。",
               translation: "必須做作業。",
+              analysis: ""
             },
             {
               sentence: "🔹毎日 (まいにち) 勉強 (べんきょう) しなくてはいけません。",
               translation: "每天都得學習。",
+              analysis: ""
             },
           ],
         },
@@ -119,10 +133,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹早 (はや) く 寝 (ね) たほうがいいです。",
               translation: "最好早點睡。",
+              analysis: ""
             },
             {
               sentence: "🔹日本語 (にほんご) を 毎日 (まいにち) 勉強 (べんきょう) したほうがいいです。",
               translation: "最好每天學習日語。",
+              analysis: ""
             },
           ],
         },
@@ -134,10 +150,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹夜遅 (よるおそ) く 食 (た) べないほうがいいです。",
               translation: "最好不要太晚吃東西。",
+              analysis: ""
             },
             {
               sentence: "🔹タバコを 吸 (す) わないほうがいいです。",
               translation: "最好不要抽菸。",
+              analysis: ""
             },
           ],
         },
@@ -149,10 +167,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹日本語 (にほんご) を 話 (はな) すことができます。",
               translation: "能說日語。",
+              analysis: ""
             },
             {
               sentence: "🔹ここで 泳 (およ) ぐことができます。",
               translation: "可以在這裡游泳。",
+              analysis: ""
             },
           ],
         },
@@ -164,10 +184,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹日本へ 行 (い) きたいです。",
               translation: "我想去日本。",
+              analysis: ""
             },
             {
               sentence: "🔹お寿司 (すし) を 食 (た) べたいです。",
               translation: "我想吃壽司。",
+              analysis: ""
             },
           ],
         },
@@ -179,10 +201,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹彼 (かれ) は 日本へ行 (い) きたがっています。",
               translation: "他想去日本。",
+              analysis: ""
             },
             {
               sentence: "🔹妹 (いもうと) は ケーキを食 (た) べたがっています。",
               translation: "妹妹想吃蛋糕。",
+              analysis: ""
             },
           ],
         },
@@ -195,18 +219,22 @@ const n5AdvanceGrammarZhTW: GrammarData = {
               {
                 sentence: "🔹今、私は 本 (ほん) を読 (よ) んでいます。",
                 translation: "現在我正在看書。",
+                analysis: ""
               },
               {
                 sentence: "🔹田中先生正在打電話。",
                 translation: "妹妹想吃蛋糕。",
+                analysis: ""
               },
               {
                 sentence: "🔹彼 (かれ) は 結婚 (けっこん) しています。",
                 translation: "他已經結婚了。",
+                analysis: ""
               },
               {
                 sentence: "🔹兄 (あに) は 会社 (かいしゃ) に勤 (つと) めています。",
                 translation: "我哥哥在公司上班。",
+                analysis: ""
               },
             ],
         },
@@ -218,10 +246,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹朝 (あさ) ごはんを食 (た) べてから、会社 (かいしゃ) へ行 (い) きます。",
               translation: "吃完早餐後，去公司。",
+              analysis: ""
             },
             {
               sentence: "🔹日本に来 (き) てから、日本語 (にほんご) を勉強 (べんきょう) し始 (はじ) めました。",
               translation: "來到日本之後，開始學日語。",
+              analysis: ""
             },
           ],
         },
@@ -233,10 +263,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹寿司 (すし) を食 (た) べたことがあります。",
               translation: "我曾經吃過壽司。",
+              analysis: ""
             },
             {
               sentence: "🔹富士山 (ふじさん) に登 (のぼ) ったことがありますか？",
               translation: "你有爬過富士山嗎？",
+              analysis: ""
             },
           ],
         },
@@ -248,10 +280,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹休 (やす) みの日 (ひ) は映画 (えいが) を見 (み) たり、本 (ほん) を読 (よ) んだりします。",
               translation: "休假的時候，有時看電影，有時讀書。",
+              analysis: ""
             },
             {
               sentence: "🔹夏 (なつ) は海 (うみ) で泳 (およ) いだり、山 (やま) へ行 (い) ったりします。",
               translation: "夏天有時去海邊游泳，有時去爬山。",
+              analysis: ""
             },
           ],
         },
@@ -263,10 +297,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹音楽 (おんがく) を聞 (き) きながら、勉強 (べんきょう) します。",
               translation: "一邊聽音樂，一邊學習。",
+              analysis: ""
             },
             {
               sentence: "🔹テレビを見 (み) ながら、ご飯 (ごはん) を食 (た) べます。",
               translation: "一邊看電視，一邊吃飯。",
+              analysis: ""
             },
           ],
         },
@@ -279,18 +315,22 @@ const n5AdvanceGrammarZhTW: GrammarData = {
               {
                 sentence: "🔹このペンは書 (か) きやすいです。",
                 translation: "這支筆很好寫。",
+                analysis: ""
               },
               {
                 sentence: "🔹この料理 (りょうり) は作 (つく) りやすいです。",
                 translation: "這道料理很容易做。",
+                analysis: ""
               },
               {
                 sentence: "🔹この字 (じ) は読 (よ) みにくいです。",
                 translation: "這個字很難讀。",
+                analysis: ""
               },
               {
                 sentence: "🔹彼 (かれ) の話 (はなし) はわかりにくいです。\n",
                 translation: "他的話很難理解。",
+                analysis: ""
               }
             ],
         },
@@ -303,14 +343,17 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹寒 (さむ) くなりました。",
               translation: "變冷了。",
+              analysis: ""
             },
             {
               sentence: "🔹日本語 (にほんご) が上手 (じょうず) になりました。",
               translation: "日語變好了。",
+              analysis: ""
             },
             {
               sentence: "🔹先生 (せんせい) になりたいです。",
               translation: "我想成為老師。",
+              analysis: ""
             },
           ],
         },
@@ -323,14 +366,17 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹食 (た) べすぎました。",
               translation: "吃太多了。",
+              analysis: ""
             },
             {
               sentence: "🔹この服 (ふく) は高 (たか) すぎます。",
               translation: "這件衣服太貴了。",
+              analysis: ""
             },
             {
               sentence: "🔹この問題 (もんだい) は難 (むずか) しすぎます。",
               translation: "這個問題太難了。",
+              analysis: ""
             },
           ],
         },
@@ -343,14 +389,17 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹このケーキはおいしそうです。",
               translation: "這個蛋糕看起來很好吃。",
+              analysis: ""
             },
             {
               sentence: "🔹彼 (かれ) は元気 (げんき) そうです。",
               translation: "他看起來很有精神。",
+              analysis: ""
             },
             {
               sentence: "🔹雨 (あめ) が降 (ふ) りそうです。",
               translation: "看起來快要下雨了。",
+              analysis: ""
             },
           ],
         },
@@ -363,14 +412,17 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹天気予報 (てんきよほう) によると、明日 (あした) は雨 (あめ) が降 (ふ) るそうです。",
               translation: "據天氣預報說，明天會下雨。",
+              analysis: ""
             },
             {
               sentence: "🔹田中 (たなか) さんは結婚 (けっこん) するそうです。",
               translation: "聽說田中先生要結婚了。",
+              analysis: ""
             },
             {
               sentence: "🔹この映画 (えいが) はとても面白 (おもしろ) いそうです。",
               translation: "聽說這部電影很有趣。",
+              analysis: ""
             },
           ],
         },
@@ -383,18 +435,22 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹明日 (あした) は雨 (あめ) が降 (ふ) るでしょう。",
               translation: "明天應該會下雨吧。（較確定）",
+              analysis: ""
             },
             {
               sentence: "🔹明日 (あした) は雨 (あめ) が降 (ふ) るかもしれません。",
               translation: "明天可能會下雨。（不太確定）",
+              analysis: ""
             },
             {
               sentence: "🔹田中 (たなか) さんは来 (く) るでしょう。",
               translation: "田中先生應該會來吧。",
+              analysis: ""
             },
             {
               sentence: "🔹田中 (たなか) さんは来 (く) るかもしれません。",
               translation: "田中先生可能會來。",
+              analysis: ""
             },
           ],
         },
@@ -407,14 +463,17 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹この映画 (えいが) は面白 (おもしろ) いと思 (おも) います。",
               translation: "我覺得這部電影很有趣。",
+              analysis: ""
             },
             {
               sentence: "🔹田中 (たなか) さんは来 (く) ると思 (おも) います。",
               translation: "我覺得田中先生會來。",
+              analysis: ""
             },
             {
               sentence: "🔹この店 (みせ) はおいしいと思 (おも) います。",
               translation: "我覺得這家店的東西很好吃。",
+              analysis: ""
             },
           ],
         },
@@ -426,10 +485,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹今日は雨 (あめ) だから、出 (で) かけません。",
               translation: "今天因為下雨，所以不外出。",
+              analysis: ""
             },
             {
               sentence: "🔹疲 (つか) れたから、早 (はや) く寝 (ね) ます。",
               translation: "因為累了，所以早點睡。",
+              analysis: ""
             },
           ],
         },
@@ -441,10 +502,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹明日 (あした) は試験 (しけん) なので、勉強 (べんきょう) します。",
               translation: "因為明天有考試，所以要學習。",
+              analysis: ""
             },
             {
               sentence: "🔹熱 (ねつ) があるので、会社 (かいしゃ) を休 (やす) みます。",
               translation: "因為發燒了，所以請假。",
+              analysis: ""
             },
           ],
         },
@@ -456,10 +519,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹健康 (けんこう) のために、運動 (うんどう) します。",
               translation: "為了健康，我運動。",
+              analysis: ""
             },
             {
               sentence: "🔹日本語 (にほんご) を勉強 (べんきょう) するために、日本へ行 (い) きます。",
               translation: "為了學日語，我去日本。",
+              analysis: ""
             },
           ],
         },
@@ -471,10 +536,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹日本語 (にほんご) が話 (はな) せるように、毎日 (まいにち) 練習 (れんしゅう) しています。",
               translation: "為了能說日語，每天都在練習。",
+              analysis: ""
             },
             {
               sentence: "🔹風邪 (かぜ) をひかないように、暖 (あたた) かい服 (ふく) を着 (き) てください。",
               translation: "為了不感冒，請穿暖一點的衣服。",
+              analysis: ""
             },
           ],
         },
@@ -486,10 +553,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹駅 (えき) に切符 (きっぷ) を買 (か) いに行きます。",
               translation: "我去車站買票。",
+              analysis: ""
             },
             {
               sentence: "🔹友達 (ともだち) に会 (あ) いに行きます。",
               translation: "我去見朋友。",
+              analysis: ""
             },
           ],
         },
@@ -501,10 +570,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹この本 (ほん) より あの本 (ほん) のほうが おもしろいです。",
               translation: "那本書比這本書更有趣。",
+              analysis: ""
             },
             {
               sentence: "🔹日本語 (にほんご) より 英語 (えいご) のほうが 簡単 (かんたん) です。",
               translation: "英語比日語簡單。",
+              analysis: ""
             },
           ],
         },
@@ -516,10 +587,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹季節 (きせつ) の中 (なか) で、春 (はる) がいちばん 好 (す) きです。",
               translation: "在四季當中，我最喜歡春天。",
+              analysis: ""
             },
             {
               sentence: "🔹このレストランの料理 (りょうり) が いちばん おいしいです。",
               translation: "這家餐廳的料理最好吃。",
+              analysis: ""
             },
           ],
         },
@@ -532,10 +605,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹雨 (あめ) が降 (ふ) ったら、出 (で) かけません。",
               translation: "如果下雨的話，就不出門。",
+              analysis: ""
             },
             {
               sentence: "🔹暇 (ひま) だったら、一緒 (いっしょ) に映画 (えいが) を見 (み) に行 (い) きませんか？",
               translation: "如果有空的話，要不要一起去看電影？",
+              analysis: ""
             },
           ],
         },
@@ -548,10 +623,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹お金 (かね) があれば、旅行 (りょこう) に行 (い) きたいです。",
               translation: "如果有錢的話，就想去旅行。",
+              analysis: ""
             },
             {
               sentence: "🔹静 (しず) かであれば、勉強 (べんきょう) しやすいです。",
               translation: "如果安靜的話，就容易學習。",
+              analysis: ""
             },
           ],
         },
@@ -563,10 +640,12 @@ const n5AdvanceGrammarZhTW: GrammarData = {
             {
               sentence: "🔹日本語 (にほんご) なら、少 (すこ) しわかります。",
               translation: "如果是日語的話，我懂一點。",
+              analysis: ""
             },
             {
               sentence: "🔹行 (い) くなら、早 (はや) く行 (い) ったほうがいいですよ。",
               translation: "如果要去的話，最好早點去哦。",
+              analysis: ""
             },
           ],
         },
