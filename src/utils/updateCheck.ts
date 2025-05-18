@@ -4,22 +4,37 @@ import i18n from '../locales/i18n';
 import semver from 'semver';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/%E7%86%8A%E8%B2%93%E6%97%A5%E8%AA%9E%E5%AD%B8%E7%BF%92/id6743336983';
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.yourapp'; // 需替換為實際的 Google Play URL
 const DEFAULT_VERSION = '1.2.3';
 const STOP_UPDATE_VERSION = '0.0.0';
 const TEMP_STOP_VERSION = '1.2.3';
-let hasChecked = false; // 臨時旗標，僅在當前應用生命週期有效
+let hasChecked = false; // Temporary flag, valid only for the current app lifecycle
 
-const getLatestVersion = async (): Promise<string> => {
+interface VersionResponse {
+  version: string;
+  androidVersion: string;
+  iosVersion: string;
+}
+
+const getLatestVersion = async (): Promise<VersionResponse> => {
   try {
     const response = await fetch('https://version-api.pandasappsglobal.workers.dev/');
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const data = await response.json();
-    return data.version;
+    return {
+      version: data.version || DEFAULT_VERSION,
+      androidVersion: data.androidVersion || DEFAULT_VERSION,
+      iosVersion: data.iosVersion || DEFAULT_VERSION,
+    };
   } catch (error) {
     console.error('Error fetching latest version:', error);
-    return Constants.expoConfig?.version || DEFAULT_VERSION;
+    return {
+      version: Constants.expoConfig?.version || DEFAULT_VERSION,
+      androidVersion: Constants.expoConfig?.version || DEFAULT_VERSION,
+      iosVersion: Constants.expoConfig?.version || DEFAULT_VERSION,
+    };
   }
 };
 
@@ -38,15 +53,20 @@ export const checkForUpdates = async (): Promise<void> => {
     }
 
     const CURRENT_APP_VERSION = Constants.expoConfig?.version || DEFAULT_VERSION;
-    const LATEST_NATIVE_VERSION = await getLatestVersion();
+    const versionData = await getLatestVersion();
+    const LATEST_NATIVE_VERSION = Platform.OS === 'android' ? versionData.androidVersion : versionData.iosVersion;
+
     console.log('CURRENT_APP_VERSION: ' + CURRENT_APP_VERSION);
     console.log('LATEST_NATIVE_VERSION: ' + LATEST_NATIVE_VERSION);
-    console.log('semver.lt(CURRENT_APP_VERSION, LATEST_NATIVE_VERSION): ' + (semver.lt(CURRENT_APP_VERSION, LATEST_NATIVE_VERSION)));
+    console.log('semver.lt(CURRENT_APP_VERSION, LATEST_NATIVE_VERSION): ' + semver.lt(CURRENT_APP_VERSION, LATEST_NATIVE_VERSION));
     console.log('LATEST_NATIVE_VERSION !== STOP_UPDATE_VERSION: ' + (LATEST_NATIVE_VERSION !== STOP_UPDATE_VERSION));
 
-
-    if (semver.lt(CURRENT_APP_VERSION, LATEST_NATIVE_VERSION) && LATEST_NATIVE_VERSION !== STOP_UPDATE_VERSION && CURRENT_APP_VERSION !== TEMP_STOP_VERSION) {
-      hasChecked = true; // 標記為已檢查
+    if (
+      semver.lt(CURRENT_APP_VERSION, LATEST_NATIVE_VERSION) &&
+      LATEST_NATIVE_VERSION !== STOP_UPDATE_VERSION &&
+      CURRENT_APP_VERSION !== TEMP_STOP_VERSION
+    ) {
+      hasChecked = true; // Mark as checked
       Alert.alert(
         i18n.t('common:update.title'),
         i18n.t('common:update.message'),
@@ -59,15 +79,16 @@ export const checkForUpdates = async (): Promise<void> => {
           {
             text: i18n.t('common:update.goToStore'),
             onPress: () => {
-              console.log('Navigating to App Store');
-              Linking.openURL(APP_STORE_URL);
+              console.log('Navigating to Store');
+              const storeUrl = Platform.OS === 'android' ? PLAY_STORE_URL : APP_STORE_URL;
+              Linking.openURL(storeUrl);
             },
           },
         ],
         { cancelable: true }
       );
     } else {
-      hasChecked = true; // 即使無更新也標記
+      hasChecked = true; // Mark as checked even if no update
       console.log('App is up to date');
     }
   } catch (error) {
