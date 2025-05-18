@@ -132,6 +132,42 @@
     <priority>0.8</priority>
   </url>
   <url>
+        <loc>https://pandasapps.com/zh-tw/grammar/n2-basic-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://pandasapps.com/zh-tw/grammar/n2-advance-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://pandasapps.com/zh-tw/grammar/n1-basic-one-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://pandasapps.com/zh-tw/grammar/n1-basic-two-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://pandasapps.com/zh-tw/grammar/n1-advance-one-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://pandasapps.com/zh-tw/grammar/n1-advance-two-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+  <url>
     <loc>https://pandasapps.com/zh-tw/grammar-concepts</loc>
     <lastmod>2025-04-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -259,6 +295,42 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+        <loc>https://pandasapps.com/zh-cn/grammar/n2-basic-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://pandasapps.com/zh-cn/grammar/n2-advance-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://pandasapps.com/zh-cn/grammar/n1-basic-one-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://pandasapps.com/zh-cn/grammar/n1-basic-two-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://pandasapps.com/zh-cn/grammar/n1-advance-one-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://pandasapps.com/zh-cn/grammar/n1-advance-two-grammar</loc>
+        <lastmod>2025-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
   <url>
     <loc>https://pandasapps.com/zh-cn/grammar-concepts</loc>
     <lastmod>2025-04-22</lastmod>
