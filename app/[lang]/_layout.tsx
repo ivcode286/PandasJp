@@ -14,17 +14,18 @@ export async function generateStaticParams() {
 
 export default function LangLayout() {
   const { lang: rawLang } = useLocalSearchParams<{ lang: string }>();
-  const lang = SUPPORTED_LANGUAGES.includes(rawLang as any) ? rawLang : 'zh-tw';
+  const lang = rawLang && SUPPORTED_LANGUAGES.includes(rawLang.toLowerCase() as "zh-tw" | "zh-cn") ? rawLang.toLowerCase(): 'zh-tw';
   const router = useRouter();
   const { t } = useTranslation('home');
 
   // 同步 i18n 語言
-  useEffect(() => {
-    const normalized = lang === 'zh-cn' ? 'zh-CN' : 'zh-TW';
-    if (i18n.language !== normalized) {
-      i18n.changeLanguage(normalized);
-    }
-  }, [lang]);
+useEffect(() => {
+  const normalized = lang === 'zh-cn' ? 'zh-CN' : 'zh-TW';
+  if (i18n.language !== normalized) {
+    console.log(`Changing i18n language to ${normalized}`);
+    i18n.changeLanguage(normalized);
+  }
+}, [lang]);
 
   // Web 下，非 (tabs) 路由時顯示回首頁按鈕
   const getHeaderLeft = () => {

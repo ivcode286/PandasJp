@@ -121,16 +121,19 @@ export default function HomeScreen() {
   ];
 
   // Debounced language change to prevent rapid toggling
-  const changeLanguage = useCallback(
-    debounce(async (lang: 'zh-TW' | 'zh-CN') => {
-      console.log('Changing language to:', lang); // Debug log
-      await i18n.changeLanguage(lang);
-      const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
-      await AsyncStorage.setItem(LANGUAGE_KEY, newLangPath);
+const changeLanguage = useCallback(
+  debounce(async (lang: 'zh-TW' | 'zh-CN') => {
+    console.log('Changing language to:', lang);
+    await i18n.changeLanguage(lang);
+    const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
+    await AsyncStorage.setItem(LANGUAGE_KEY, newLangPath);
+    // 僅在首頁或必要時重新導向
+    if (window.location.pathname === `/${effectiveLang}/(tabs)`) {
       router.replace(`/${newLangPath}/(tabs)`);
-    }, 300),
-    [router, i18n]
-  );
+    }
+  }, 300),
+  [router, i18n, effectiveLang]
+);
 
   return (
     <SafeAreaView style={styles.safeArea}>
