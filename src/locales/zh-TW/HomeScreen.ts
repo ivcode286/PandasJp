@@ -3,6 +3,8 @@ const homeZhTW = {
   n5title: '📌 從零開始學日語N5',
   n4title: '📌 N4日語學習',
   n3title: '📌 N3日語學習',
+  n2title: '📌 N2日語學習',
+  n1title: '📌 N1日語學習',
   meta_description:
     'PandasJP提供免費日語N5,N4,N3學習資源，包含入門必學的平假名和文法、初學者必備的日語單詞和漢字，以及深入學習的進階文法，助您快速掌握日語基礎。',
   intro:
@@ -35,6 +37,12 @@ const homeZhTW = {
     n4_advance_grammar: '進階N4文法 - 進階必學',
     n3_basic_grammar: '最常用N3文法 - 核心必學',
     n3_advance_grammar: '進階N3文法 - 進階必學',
+    n2_basic_grammar: '最常用N2文法 - 核心必學',
+    n2_advance_grammar: '進階N2文法 - 進階必學',
+    n1_basic_one_grammar: '最常用N1文法(1) - 核心必學',
+    n1_basic_two_grammar: '最常用N1文法(2) - 核心必學',
+    n1_advance_one_grammar: '進階N1文法(1) - 進階必學',
+    n1_advance_two_grammar: '進階N1文法(2) - 進階必學',
   },
 };
 

@@ -43,6 +43,21 @@ import n3BasicGrammarZhTW from './zh-TW/N3BasicGrammar';
 import n3AdvanceGrammarZhTW from './zh-TW/N3AdvanceGrammar';
 import n3AdvanceGrammarZhCN from './zh-CN/N3AdvanceGrammar';
 import n3BasicGrammarZhCN from './zh-CN/N3BasicGrammar';
+import n2BasicGrammarZhTW from './zh-TW/N2BasicGrammar';
+import n2AdvanceGrammarZhTW from './zh-TW/N2AdvanceGrammar';
+import n2AdvanceGrammarZhCN from './zh-CN/N2AdvanceGrammar';
+import n2BasicGrammarZhCN from './zh-CN/N2BasicGrammar';
+
+import n1BasicGrammarOneZhTW from './zh-TW/N1BasicGrammarOne';
+import n1BasicGrammarTwoZhTW from './zh-TW/N1BasicGrammarTwo';
+import n1AdvanceGrammarOneZhTW from './zh-TW/N1AdvanceGrammarOne';
+import n1AdvanceGrammarTwoZhTW from './zh-TW/N1AdvanceGrammarTwo';
+
+
+import n1BasicGrammarOneZhCN from './zh-CN/N1BasicGrammarOne';
+import n1BasicGrammarTwoZhCN from './zh-CN/N1BasicGrammarTwo';
+import n1AdvanceGrammarOneZhCN from './zh-CN/N1AdvanceGrammarOne';
+import n1AdvanceGrammarTwoZhCN from './zh-CN/N1AdvanceGrammarTwo';
 
 
 const resources = {
@@ -62,6 +77,12 @@ const resources = {
       n4_advance: n4AdvanceGrammarZhTW, 
       n3_basic: n3BasicGrammarZhTW, 
       n3_advance: n3AdvanceGrammarZhTW, 
+      n2_basic: n2BasicGrammarZhTW, 
+      n2_advance: n2AdvanceGrammarZhTW, 
+      n1_basic_one: n1BasicGrammarOneZhTW, 
+      n1_basic_two: n1BasicGrammarTwoZhTW, 
+      n1_advance_one: n1AdvanceGrammarOneZhTW, 
+      n1_advance_two: n1AdvanceGrammarTwoZhTW, 
     },
     words: {
       n5: n5WordsZhTW,
@@ -89,6 +110,12 @@ const resources = {
       n4_advance: n4AdvanceGrammarZhCN, 
       n3_basic: n3BasicGrammarZhCN, 
       n3_advance: n3AdvanceGrammarZhCN, 
+      n2_basic: n2BasicGrammarZhCN, 
+      n2_advance: n2AdvanceGrammarZhCN, 
+      n1_basic_one: n1BasicGrammarOneZhCN, 
+      n1_basic_two: n1BasicGrammarTwoZhCN, 
+      n1_advance_one: n1AdvanceGrammarOneZhCN, 
+      n1_advance_two: n1AdvanceGrammarTwoZhCN, 
     },
     words: {
       n5: n5WordsZhCN,

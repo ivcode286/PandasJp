@@ -12,6 +12,12 @@ export const GRAMMAR_LEVELS = {
   N4_ADVANCE_GRAMMAR: 'n4-advance-grammar',
   N3_BASIC_GRAMMAR: 'n3-basic-grammar',
   N3_ADVANCE_GRAMMAR: 'n3-advance-grammar',
+  N2_BASIC_GRAMMAR: 'n2-basic-grammar',
+  N2_ADVANCE_GRAMMAR: 'n2-advance-grammar',
+  N1_BASIC_ONE_GRAMMAR: 'n1-basic-one-grammar',
+  N1_BASIC_TWO_GRAMMAR: 'n1-basic-two-grammar',
+  N1_ADVANCE_ONE_GRAMMAR: 'n1-advance-one-grammar',
+  N1_ADVANCE_TWO_GRAMMAR: 'n1-advance-two-grammar',
 };
 
 export const COVERPAGE_CARD_WIDTH = 360;

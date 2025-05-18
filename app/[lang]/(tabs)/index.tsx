@@ -90,6 +90,36 @@ export default function HomeScreen() {
     },
   ];
 
+    const fourthMenuItems: MenuItem[] = [
+    {
+      title: t('menu.n2_basic_grammar'),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N2_BASIC_GRAMMAR}`),
+    },
+    {
+      title: t('menu.n2_advance_grammar'),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N2_ADVANCE_GRAMMAR}`),
+    },
+  ];
+
+    const fifthMenuItems: MenuItem[] = [
+    {
+      title: t('menu.n1_basic_one_grammar'),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N1_BASIC_ONE_GRAMMAR}`),
+    },
+    {
+      title: t('menu.n1_basic_two_grammar'),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N1_BASIC_TWO_GRAMMAR}`),
+    },
+    {
+      title: t('menu.n1_advance_one_grammar'),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N1_ADVANCE_ONE_GRAMMAR}`),
+    },
+      {
+      title: t('menu.n1_advance_two_grammar'),
+      href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N1_ADVANCE_TWO_GRAMMAR}`),
+    },
+  ];
+
   // Debounced language change to prevent rapid toggling
   const changeLanguage = useCallback(
     debounce(async (lang: 'zh-TW' | 'zh-CN') => {
@@ -191,7 +221,6 @@ export default function HomeScreen() {
           ))}
 
 <Text style={styles.n4Header}>{t('n3title')}</Text>
-
 {thirdMenuItems.map((item, idx) => (
   <Link href={item.href} key={idx} asChild>
     <TouchableOpacity style={styles.card}>
@@ -199,6 +228,26 @@ export default function HomeScreen() {
     </TouchableOpacity>
   </Link>
 ))}
+
+<Text style={styles.n4Header}>{t('n2title')}</Text>
+{fourthMenuItems.map((item, idx) => (
+  <Link href={item.href} key={idx} asChild>
+    <TouchableOpacity style={styles.card}>
+      <Text style={styles.cardText}>• {item.title}</Text>
+    </TouchableOpacity>
+  </Link>
+))}
+
+<Text style={styles.n4Header}>{t('n1title')}</Text>
+{fifthMenuItems.map((item, idx) => (
+  <Link href={item.href} key={idx} asChild>
+    <TouchableOpacity style={styles.card}>
+      <Text style={styles.cardText}>• {item.title}</Text>
+    </TouchableOpacity>
+  </Link>
+))}
+
+
         </ScrollView>
       </View>
     </SafeAreaView>

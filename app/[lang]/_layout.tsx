@@ -70,6 +70,12 @@ export default function LangLayout() {
             'n4-advance-grammar': 'n4_advance_grammar',
             'n3-basic-grammar': 'n3_basic_grammar',
             'n3-advance-grammar': 'n3_advance_grammar',
+            'n2-basic-grammar': 'n2_basic_grammar',
+            'n2-advance-grammar': 'n2_advance_grammar',
+            'n1-basic-one-grammar': 'n1-basic-one-grammar',
+            'n1-basic-two-grammar': 'n1-basic-two-grammar',
+            'n1-advance-one-grammar': 'n1-advance-one-grammar',
+            'n1-advance-two-grammar': 'n1-advance-two-grammar',
           };
 
           // Determine header title
