@@ -166,17 +166,18 @@ export interface Translation {
   grammar: {
     n5_basic: GrammarData;
     n5_advance: GrammarData;
-    n4_basic: GrammarData,  
-    n4_advance: GrammarData, 
-    n3_basic: GrammarData, 
-    n3_advance: GrammarData, 
+    n4_basic: GrammarData,
+    n4_advance: GrammarData,
+    n3_basic: GrammarData,
+    n3_advance: GrammarData,
   };
   words: {
     n5: WordData[];
     n5_kanji: WordData[];
-    n4n3: WordData[];
+    n4: WordData[];
+    n3: WordData[];
   };
   common: CommonTranslation;
   settings: SettingsTranslation;
-  appPrompt: AppPromptTranslation; 
+  appPrompt: AppPromptTranslation;
 }

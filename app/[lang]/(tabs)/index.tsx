@@ -67,7 +67,7 @@ export default function HomeScreen() {
   ];
 
   const secondMenuItems: MenuItem[] = [
-    { title: t('menu.words_n4_n3'), href: getLangHref('/words/n4-n3') },
+    { title: t('menu.words_n4'), href: getLangHref('/words/n4') },
     {
       title: t('menu.n4_basic_grammar'),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N4_BASIC_GRAMMAR}`),
@@ -79,7 +79,7 @@ export default function HomeScreen() {
   ];
 
   const thirdMenuItems: MenuItem[] = [
-    { title: t('menu.words_n4_n3'), href: getLangHref('/words/n4-n3') },
+    { title: t('menu.words_n3'), href: getLangHref('/words/n3') },
     {
       title: t('menu.n3_basic_grammar'),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N3_BASIC_GRAMMAR}`),
@@ -90,7 +90,7 @@ export default function HomeScreen() {
     },
   ];
 
-    const fourthMenuItems: MenuItem[] = [
+  const fourthMenuItems: MenuItem[] = [
     {
       title: t('menu.n2_basic_grammar'),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N2_BASIC_GRAMMAR}`),
@@ -101,7 +101,7 @@ export default function HomeScreen() {
     },
   ];
 
-    const fifthMenuItems: MenuItem[] = [
+  const fifthMenuItems: MenuItem[] = [
     {
       title: t('menu.n1_basic_one_grammar'),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N1_BASIC_ONE_GRAMMAR}`),
@@ -114,26 +114,26 @@ export default function HomeScreen() {
       title: t('menu.n1_advance_one_grammar'),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N1_ADVANCE_ONE_GRAMMAR}`),
     },
-      {
+    {
       title: t('menu.n1_advance_two_grammar'),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N1_ADVANCE_TWO_GRAMMAR}`),
     },
   ];
 
   // Debounced language change to prevent rapid toggling
-const changeLanguage = useCallback(
-  debounce(async (lang: 'zh-TW' | 'zh-CN') => {
-    console.log('Changing language to:', lang);
-    await i18n.changeLanguage(lang);
-    const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
-    await AsyncStorage.setItem(LANGUAGE_KEY, newLangPath);
-    // 僅在首頁或必要時重新導向
-    if (window.location.pathname === `/${effectiveLang}/(tabs)`) {
-      router.replace(`/${newLangPath}/(tabs)`);
-    }
-  }, 300),
-  [router, i18n, effectiveLang]
-);
+  const changeLanguage = useCallback(
+    debounce(async (lang: 'zh-TW' | 'zh-CN') => {
+      console.log('Changing language to:', lang);
+      await i18n.changeLanguage(lang);
+      const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
+      await AsyncStorage.setItem(LANGUAGE_KEY, newLangPath);
+      // 僅在首頁或必要時重新導向
+      if (window.location.pathname === `/${effectiveLang}/(tabs)`) {
+        router.replace(`/${newLangPath}/(tabs)`);
+      }
+    }, 300),
+    [router, i18n, effectiveLang]
+  );
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -150,7 +150,7 @@ const changeLanguage = useCallback(
               "headline": t('title'),
               "description": t('meta_description'),
               "image": "https://pub-5af902f85cb74a518bdc799bfc956441.r2.dev/cover-example.jpg",
-              "datePublished": "2025-04-19", 
+              "datePublished": "2025-04-19",
               "author": {
                 "@type": "Organization",
                 "name": "PandasJP",
@@ -223,32 +223,32 @@ const changeLanguage = useCallback(
             </Link>
           ))}
 
-<Text style={styles.n4Header}>{t('n3title')}</Text>
-{thirdMenuItems.map((item, idx) => (
-  <Link href={item.href} key={idx} asChild>
-    <TouchableOpacity style={styles.card}>
-      <Text style={styles.cardText}>• {item.title}</Text>
-    </TouchableOpacity>
-  </Link>
-))}
+          <Text style={styles.n4Header}>{t('n3title')}</Text>
+          {thirdMenuItems.map((item, idx) => (
+            <Link href={item.href} key={idx} asChild>
+              <TouchableOpacity style={styles.card}>
+                <Text style={styles.cardText}>• {item.title}</Text>
+              </TouchableOpacity>
+            </Link>
+          ))}
 
-<Text style={styles.n4Header}>{t('n2title')}</Text>
-{fourthMenuItems.map((item, idx) => (
-  <Link href={item.href} key={idx} asChild>
-    <TouchableOpacity style={styles.card}>
-      <Text style={styles.cardText}>• {item.title}</Text>
-    </TouchableOpacity>
-  </Link>
-))}
+          <Text style={styles.n4Header}>{t('n2title')}</Text>
+          {fourthMenuItems.map((item, idx) => (
+            <Link href={item.href} key={idx} asChild>
+              <TouchableOpacity style={styles.card}>
+                <Text style={styles.cardText}>• {item.title}</Text>
+              </TouchableOpacity>
+            </Link>
+          ))}
 
-<Text style={styles.n4Header}>{t('n1title')}</Text>
-{fifthMenuItems.map((item, idx) => (
-  <Link href={item.href} key={idx} asChild>
-    <TouchableOpacity style={styles.card}>
-      <Text style={styles.cardText}>• {item.title}</Text>
-    </TouchableOpacity>
-  </Link>
-))}
+          <Text style={styles.n4Header}>{t('n1title')}</Text>
+          {fifthMenuItems.map((item, idx) => (
+            <Link href={item.href} key={idx} asChild>
+              <TouchableOpacity style={styles.card}>
+                <Text style={styles.cardText}>• {item.title}</Text>
+              </TouchableOpacity>
+            </Link>
+          ))}
 
 
         </ScrollView>

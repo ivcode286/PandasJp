@@ -2132,7 +2132,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "起點助詞",
-    meaning: "起點、來源、理由 如:東京から来ました。（從東京來的。）"
+    meaning: "起點、來源、理由;\\n如:東京から来ました。（從東京來的。）"
   },
   {
     wordId: 238,
@@ -2186,7 +2186,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "が",
     type: "主語助詞",
-    meaning: "強調主語、表示新資訊 如:犬が好きです。（我喜歡狗。）"
+    meaning: "強調主語、表示新資訊;\\n如:犬が好きです。（我喜歡狗。）"
   },
   {
     wordId: 244,
@@ -3599,7 +3599,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "假設連接詞",
-    meaning: "於是、結果 (表示前句的結果)"
+    meaning: "於是、結果(表示前句的結果)"
   },
   {
     wordId: 401,
@@ -4382,7 +4382,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "で",
     type: "轉話題連接詞",
-    meaning: "那麼 (「それでは」的縮略形式，口語更常用)"
+    meaning: "那麼(「それでは」的縮略形式，口語更常用)"
   },
   {
     wordId: 488,
@@ -4391,7 +4391,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "で",
     type: "方位助詞",
-    meaning: "表示動作發生的地點、手段 如:バスで行きます。（搭公車去。）"
+    meaning: "表示動作發生的地點、手段;\\n如:バスで行きます。（搭公車去。）"
   },
   {
     wordId: 489,
@@ -4562,7 +4562,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "轉話題連接詞",
-    meaning: "對了、順帶一提 (轉換話題時使用)"
+    meaning: "對了、順帶一提(轉換話題時使用)"
   },
   {
     wordId: 508,
@@ -4958,7 +4958,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "方位助詞",
-    meaning: "表示時間、地點、方向 如:学校に行きます。（去學校。）"
+    meaning: "表示時間、地點、方向;\\n如:学校に行きます。（去學校。）"
   },
   {
     wordId: 552,
@@ -5354,7 +5354,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "主語助詞",
-    meaning: "主題標示，強調後面的內容 如:私は学生です。（我是學生。）"
+    meaning: "主題標示，強調後面的內容;\\n如:私は学生です。（我是學生。）"
   },
   {
     wordId: 596,
@@ -5741,7 +5741,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "方位助詞",
-    meaning: "表示方向（「に」的替代用法） 如:日本へ行きます。（去日本。）"
+    meaning: "表示方向（「に」的替代用法）;\\n如:日本へ行きます。（去日本。）"
   },
   {
     wordId: 639,
@@ -6011,7 +6011,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "起點助詞",
-    meaning: "終點、範圍 如:駅まで歩きます。（走到車站。）"
+    meaning: "終點、範圍;\\n如:駅まで歩きます。（走到車站。）"
   },
   {
     wordId: 669,
@@ -6299,7 +6299,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "假設連接詞",
-    meaning: "如果、假如 (假設條件，常與「～なら」「～たら」一起用)"
+    meaning: "如果、假如;\\n(假設條件，常與「～なら」「～たら」一起用)"
   },
   {
     wordId: 701,
@@ -6722,8 +6722,10 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 45,
     letter: "を",
     type: "目的語助詞",
-    meaning: "直接受詞標示（動作的對象） 如:本を読みます。（讀書。）"
-  },
+    meaning: "直接受詞標示（動作的對象;\\n如:本を読みます。（讀書。）"
+  }
 ];
+
+
 
 export default n5KanjiWordsZhTW;

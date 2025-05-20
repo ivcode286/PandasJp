@@ -13,7 +13,6 @@ import n5BasicGrammarZhTW from '../locales/zh-TW/N5BasicGrammar';
 import n5AdvanceGrammarZhTW from '../locales/zh-TW/N5AdvanceGrammar';
 import n5WordsZhTW from '../locales/zh-TW/N5Words';
 import n5KanjiWordsZhTW from '../locales/zh-TW/N5KanjiWords';
-import n4n3WordsZhTW from '../locales/zh-TW/N3N4Words';
 import commonZhTW from '../locales/zh-TW/Common';
 import settingsZhTW from '../locales/zh-TW/SettingsScreen';
 import appPromptZhTW from './zh-TW/ApplicationPrompt';
@@ -28,7 +27,6 @@ import n5BasicGrammarZhCN from '../locales/zh-CN/N5BasicGrammar';
 import n5AdvanceGrammarZhCN from '../locales/zh-CN/N5AdvanceGrammar';
 import n5WordsZhCN from '../locales/zh-CN/N5Words';
 import n5KanjiWordsZhCN from '../locales/zh-CN/N5KanjiWords';
-import n4n3WordsZhCN from '../locales/zh-CN/N3N4Words';
 import commonZhCN from '../locales/zh-CN/Common';
 import settingsZhCN from '../locales/zh-CN/SettingsScreen';
 import appPromptZhCN from './zh-CN/ApplicationPrompt';
@@ -58,6 +56,10 @@ import n1BasicGrammarOneZhCN from './zh-CN/N1BasicGrammarOne';
 import n1BasicGrammarTwoZhCN from './zh-CN/N1BasicGrammarTwo';
 import n1AdvanceGrammarOneZhCN from './zh-CN/N1AdvanceGrammarOne';
 import n1AdvanceGrammarTwoZhCN from './zh-CN/N1AdvanceGrammarTwo';
+import n4WordsZhTW from './zh-TW/N4Words';
+import n3WordsZhTW from './zh-TW/N3Words';
+import n4WordsZhCN from './zh-CN/N4Words';
+import n3WordsZhCN from './zh-CN/N3Words';
 
 
 const resources = {
@@ -73,21 +75,22 @@ const resources = {
     grammar: {
       n5_basic: n5BasicGrammarZhTW,
       n5_advance: n5AdvanceGrammarZhTW,
-      n4_basic: n4BasicGrammarZhTW, 
-      n4_advance: n4AdvanceGrammarZhTW, 
-      n3_basic: n3BasicGrammarZhTW, 
-      n3_advance: n3AdvanceGrammarZhTW, 
-      n2_basic: n2BasicGrammarZhTW, 
-      n2_advance: n2AdvanceGrammarZhTW, 
-      n1_basic_one: n1BasicGrammarOneZhTW, 
-      n1_basic_two: n1BasicGrammarTwoZhTW, 
-      n1_advance_one: n1AdvanceGrammarOneZhTW, 
-      n1_advance_two: n1AdvanceGrammarTwoZhTW, 
+      n4_basic: n4BasicGrammarZhTW,
+      n4_advance: n4AdvanceGrammarZhTW,
+      n3_basic: n3BasicGrammarZhTW,
+      n3_advance: n3AdvanceGrammarZhTW,
+      n2_basic: n2BasicGrammarZhTW,
+      n2_advance: n2AdvanceGrammarZhTW,
+      n1_basic_one: n1BasicGrammarOneZhTW,
+      n1_basic_two: n1BasicGrammarTwoZhTW,
+      n1_advance_one: n1AdvanceGrammarOneZhTW,
+      n1_advance_two: n1AdvanceGrammarTwoZhTW,
     },
     words: {
       n5: n5WordsZhTW,
       n5_kanji: n5KanjiWordsZhTW,
-      n4n3: n4n3WordsZhTW,
+      n4: n4WordsZhTW,
+      n3: n3WordsZhTW,
     },
     common: commonZhTW,
     settings: settingsZhTW,
@@ -106,21 +109,22 @@ const resources = {
     grammar: {
       n5_basic: n5BasicGrammarZhCN,
       n5_advance: n5AdvanceGrammarZhCN,
-      n4_basic: n4BasicGrammarZhCN,  
-      n4_advance: n4AdvanceGrammarZhCN, 
-      n3_basic: n3BasicGrammarZhCN, 
-      n3_advance: n3AdvanceGrammarZhCN, 
-      n2_basic: n2BasicGrammarZhCN, 
-      n2_advance: n2AdvanceGrammarZhCN, 
-      n1_basic_one: n1BasicGrammarOneZhCN, 
-      n1_basic_two: n1BasicGrammarTwoZhCN, 
-      n1_advance_one: n1AdvanceGrammarOneZhCN, 
-      n1_advance_two: n1AdvanceGrammarTwoZhCN, 
+      n4_basic: n4BasicGrammarZhCN,
+      n4_advance: n4AdvanceGrammarZhCN,
+      n3_basic: n3BasicGrammarZhCN,
+      n3_advance: n3AdvanceGrammarZhCN,
+      n2_basic: n2BasicGrammarZhCN,
+      n2_advance: n2AdvanceGrammarZhCN,
+      n1_basic_one: n1BasicGrammarOneZhCN,
+      n1_basic_two: n1BasicGrammarTwoZhCN,
+      n1_advance_one: n1AdvanceGrammarOneZhCN,
+      n1_advance_two: n1AdvanceGrammarTwoZhCN,
     },
     words: {
       n5: n5WordsZhCN,
       n5_kanji: n5KanjiWordsZhCN,
-      n4n3: n4n3WordsZhCN,
+      n4: n4WordsZhCN,
+      n3: n3WordsZhCN,
     },
     common: commonZhCN,
     settings: settingsZhCN,
@@ -137,7 +141,7 @@ i18n.use(initReactI18next).init({
   fallbackLng: 'zh-TW',
   interpolation: { escapeValue: false },
   defaultNS: 'home',
-  ns: [   
+  ns: [
     'grammarConcepts',
     'n5Concepts',
     'home',

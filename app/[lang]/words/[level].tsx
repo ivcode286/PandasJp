@@ -43,7 +43,7 @@ const groupWordsByLetter = (words: Word[]): Section[] => {
 
 export async function generateStaticParams({ params }: { params: { lang: string } }) {
   const { lang } = params;
-  const levels = [LEVELS.N5, LEVELS.N5_KANJI, LEVELS.N4_N3];
+  const levels = [LEVELS.N5, LEVELS.N5_KANJI, LEVELS.N4, LEVELS.N3];
 
   console.log('Generating static params in words/[level].tsx for lang:', lang);
 
@@ -66,7 +66,8 @@ export async function getStaticProps({ params }: { params: { lang: string; level
   let key: string;
   if (level === LEVELS.N5) key = 'n5';
   else if (level === LEVELS.N5_KANJI) key = 'n5_kanji';
-  else if (level === LEVELS.N4_N3) key = 'n4n3';
+  else if (level === LEVELS.N4) key = 'n4';
+  else if (level === LEVELS.N3) key = 'n3';
   else {
     console.error(`Invalid level: ${level}`);
     return { props: { level, sections: [] } };

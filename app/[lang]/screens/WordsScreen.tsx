@@ -108,8 +108,9 @@ export default function WordsScreen({
   // Map level to translation key
   const levelToTranslationKey: { [key: string]: string } = {
     [LEVELS.N5]: 'words_n5',
+    [LEVELS.N4]: 'words_n4',
+    [LEVELS.N3]: 'words_n3',
     [LEVELS.N5_KANJI]: 'kanji_n5',
-    [LEVELS.N4_N3]: 'words_n4_n3',
   };
 
   // Get header title from translation
@@ -172,7 +173,8 @@ export default function WordsScreen({
         let key: string;
         if (level === LEVELS.N5) key = 'n5';
         else if (level === LEVELS.N5_KANJI) key = 'n5_kanji';
-        else if (level === LEVELS.N4_N3) key = 'n4n3';
+        else if (level === LEVELS.N4) key = 'n4';
+        else if (level === LEVELS.N3) key = 'n3';
         else {
           console.error(`Invalid level: ${level}`);
           setSections([]);

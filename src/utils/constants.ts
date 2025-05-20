@@ -1,8 +1,9 @@
 //src/urils/constants
 export const LEVELS = {
   N5: 'n5',
+  N4: 'n4',
+  N3: 'n3',
   N5_KANJI: 'n5-kanji',
-  N4_N3: 'n4-n3',
 };
 
 export const GRAMMAR_LEVELS = {
