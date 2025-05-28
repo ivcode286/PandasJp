@@ -34,6 +34,7 @@ const homeZhCN = {
     story: 'N5短篇故事 - 阅读与学习',
     words_n4: '常用N4单词 - 日语进阶学习',
     words_n3: '常用N3单词 - 日语进阶学习',
+    words_n2: '常用N2单词 - 日语进阶学习',
     n4_basic_grammar: '最常用N4语法 - 核心必学',
     n4_advance_grammar: '进阶N4语法 - 进阶必学',
     n3_basic_grammar: '最常用N3语法 - 核心必学',

@@ -91,6 +91,7 @@ export default function HomeScreen() {
   ];
 
   const fourthMenuItems: MenuItem[] = [
+    { title: t('menu.words_n2'), href: getLangHref('/words/n2') },
     {
       title: t('menu.n2_basic_grammar'),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N2_BASIC_GRAMMAR}`),

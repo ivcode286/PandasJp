@@ -60,6 +60,9 @@ import n4WordsZhTW from './zh-TW/N4Words';
 import n3WordsZhTW from './zh-TW/N3Words';
 import n4WordsZhCN from './zh-CN/N4Words';
 import n3WordsZhCN from './zh-CN/N3Words';
+import n2WordsZhTW from './zh-TW/N2Words';
+import n2WordsZhCN from './zh-CN/N2Word';
+
 
 
 const resources = {
@@ -91,6 +94,7 @@ const resources = {
       n5_kanji: n5KanjiWordsZhTW,
       n4: n4WordsZhTW,
       n3: n3WordsZhTW,
+      n2: n2WordsZhTW,
     },
     common: commonZhTW,
     settings: settingsZhTW,
@@ -125,6 +129,7 @@ const resources = {
       n5_kanji: n5KanjiWordsZhCN,
       n4: n4WordsZhCN,
       n3: n3WordsZhCN,
+      n2: n2WordsZhCN,
     },
     common: commonZhCN,
     settings: settingsZhCN,
