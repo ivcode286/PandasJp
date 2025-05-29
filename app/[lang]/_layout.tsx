@@ -1,6 +1,6 @@
 // app/[lang]/_layout.tsx
 import React, { useEffect } from 'react';
-import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
+import { Stack, useLocalSearchParams, useRouter, usePathname } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import i18n from '@/src/locales/i18n';
 import HeaderBackButton from '@/components/HeaderBackButton';
@@ -14,20 +14,30 @@ export async function generateStaticParams() {
 
 export default function LangLayout() {
   const { lang: rawLang } = useLocalSearchParams<{ lang: string }>();
-  const lang = rawLang && SUPPORTED_LANGUAGES.includes(rawLang.toLowerCase() as "zh-tw" | "zh-cn") ? rawLang.toLowerCase(): 'zh-tw';
+  const lang = rawLang && SUPPORTED_LANGUAGES.includes(rawLang.toLowerCase() as "zh-tw" | "zh-cn") ? rawLang.toLowerCase() : 'zh-tw';
   const router = useRouter();
+  const pathname = usePathname();
   const { t } = useTranslation('home');
 
-  // 同步 i18n 語言
-useEffect(() => {
-  const normalized = lang === 'zh-cn' ? 'zh-CN' : 'zh-TW';
-  if (i18n.language !== normalized) {
-    console.log(`Changing i18n language to ${normalized}`);
-    i18n.changeLanguage(normalized);
-  }
-}, [lang]);
+  // Sync i18n language
+  useEffect(() => {
+    const normalized = lang === 'zh-cn' ? 'zh-CN' : 'zh-TW';
+    if (i18n.language !== normalized) {
+      console.log(`Changing i18n language to ${normalized}`);
+      i18n.changeLanguage(normalized);
+    }
+    // Handle invalid language
+    if (!SUPPORTED_LANGUAGES.includes(rawLang?.toLowerCase() as any)) {
+      if (Platform.OS === 'web') {
+        // Use 301 redirect
+        window.location.replace(`https://pandasapps.com/zh-tw/(tabs)`);
+      } else {
+        router.replace('/zh-tw/(tabs)');
+      }
+    }
+  }, [lang, rawLang, router]);
 
-  // Web 下，非 (tabs) 路由時顯示回首頁按鈕
+  // Dynamic headerLeft for web
   const getHeaderLeft = () => {
     if (Platform.OS === 'web' && !router.canGoBack()) {
       const p = window.location.pathname.toLowerCase();
@@ -40,12 +50,44 @@ useEffect(() => {
     return () => <HeaderBackButton />;
   };
 
+  // Generate canonical and hreflang URLs
+  // Comment: Dynamically create canonical URL based on current pathname
+  const getCanonicalUrl = () => {
+    // Remove leading '/[lang]' from pathname to get relative path
+    const relativePath = pathname.startsWith(`/${lang}`)
+      ? pathname.replace(`/${lang}`, '')
+      : pathname;
+    // Handle '(tabs)' by mapping to root
+    const canonicalPath = relativePath.includes('(tabs)') ? '' : relativePath;
+    return `https://pandasapps.com/${lang}${canonicalPath}`;
+  };
+
+  // Comment: Universal header for SEO metadata applied to all sub-routes
+  const getUniversalHeader = () => {
+    if (Platform.OS === 'web') {
+      const canonicalUrl = getCanonicalUrl();
+      const zhTwUrl = canonicalUrl.replace(`/${lang}/`, '/zh-tw/');
+      const zhCnUrl = canonicalUrl.replace(`/${lang}/`, '/zh-cn/');
+      return () => (
+        <>
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href={canonicalUrl} />
+          <link rel="alternate" hreflang="zh-Hant" href={zhTwUrl} />
+          <link rel="alternate" hreflang="zh-Hans" href={zhCnUrl} />
+          <link rel="alternate" hreflang="x-default" href={zhTwUrl} />
+        </>
+      );
+    }
+    return undefined;
+  };
+
   return (
     <Stack
       screenOptions={{
         headerStyle: { backgroundColor: '#121212' },
         headerTintColor: '#ffffff',
-        headerLeft: getHeaderLeft(), // 使用動態函數
+        headerLeft: getHeaderLeft(),
+        header: getUniversalHeader(), // Apply universal SEO header
       }}
     >
       <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
@@ -57,13 +99,10 @@ useEffect(() => {
       <Stack.Screen
         name="grammar"
         options={({ route }) => {
-          // Extract level from route params
           const level =
             typeof route.params === 'object' && 'level' in route.params
               ? String(route.params.level)
               : undefined;
-
-          // Map level to translation key
           const levelToTranslationKey: { [key: string]: string } = {
             'n5-basic-grammar': 'n5_basic_grammar',
             'n5-advance-grammar': 'n5_advance_grammar',
@@ -73,17 +112,14 @@ useEffect(() => {
             'n3-advance-grammar': 'n3_advance_grammar',
             'n2-basic-grammar': 'n2_basic_grammar',
             'n2-advance-grammar': 'n2_advance_grammar',
-            'n1-basic-one-grammar': 'n1-basic-one-grammar',
-            'n1-basic-two-grammar': 'n1-basic-two-grammar',
-            'n1-advance-one-grammar': 'n1-advance-one-grammar',
-            'n1-advance-two-grammar': 'n1-advance-two-grammar',
+            'n1-basic-one-grammar': 'n1_basic_one_grammar',
+            'n1-basic-two-grammar': 'n1_basic_two_grammar',
+            'n1-advance-one-grammar': 'n1_advance_one_grammar',
+            'n1-advance-two-grammar': 'n1_advance_two_grammar',
           };
-
-          // Determine header title
           const headerTitle = level && levelToTranslationKey[level]
             ? t(`menu.${levelToTranslationKey[level]}`, 'Grammar')
             : 'Grammar';
-
           return {
             headerShown: true,
             headerTitle,
