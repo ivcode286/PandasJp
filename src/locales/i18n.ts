@@ -95,6 +95,7 @@ const resources = {
       n4: n4WordsZhTW,
       n3: n3WordsZhTW,
       n2: n2WordsZhTW,
+      n1: n1WordsZhTW,
     },
     common: commonZhTW,
     settings: settingsZhTW,

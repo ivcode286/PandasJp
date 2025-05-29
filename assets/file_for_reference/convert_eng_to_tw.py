@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Comment: Read the Excel file
-input_file = "N2.xlsx"
+input_file = "N1.xlsx"
 df = pd.read_excel(input_file)
 
 # Comment: Function to limit English translations to max 3 words

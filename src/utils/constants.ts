@@ -4,6 +4,7 @@ export const LEVELS = {
   N4: 'n4',
   N3: 'n3',
   N2: 'n2',
+  N1: 'n1',
   N5_KANJI: 'n5-kanji',
 };
 

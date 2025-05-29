@@ -35,6 +35,7 @@ const homeZhTW = {
     words_n4: '常用N4單詞 - 日語進階學習',
     words_n3: '常用N3單詞 - 日語進階學習',
     words_n2: '常用N2單詞 - 日語進階學習',
+    words_n1: '常用N1單詞 - 日語進階學習',
     n4_basic_grammar: '最常用N4文法 - 核心必學',
     n4_advance_grammar: '進階N4文法 - 進階必學',
     n3_basic_grammar: '最常用N3文法 - 核心必學',
