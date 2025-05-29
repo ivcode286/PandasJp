@@ -62,6 +62,7 @@ import n4WordsZhCN from './zh-CN/N4Words';
 import n3WordsZhCN from './zh-CN/N3Words';
 import n2WordsZhTW from './zh-TW/N2Words';
 import n2WordsZhCN from './zh-CN/N2Word';
+import n1WordsZhTW from './zh-TW/N1Words';
 
 
 
