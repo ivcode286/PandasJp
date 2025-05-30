@@ -1,6 +1,6 @@
 import { WordData } from "../../types/translation";
 
-const n2WordsZhTW: WordData[] = [
+const n5KanjiWordsZhTW: WordData[] = [
   {
     wordId: 1,
     words: "あいかわらず",
@@ -13290,7 +13290,7 @@ const n2WordsZhTW: WordData[] = [
     words: "外部",
     pron: "がいぶ",
     letterOrder: 47,
-    letter: "が",
+    letter: "か",
     type: "nan",
     meaning: "外面的、外部的"
   },
@@ -13299,7 +13299,7 @@ const n2WordsZhTW: WordData[] = [
     words: "概論",
     pron: "がいろん",
     letterOrder: 47,
-    letter: "が",
+    letter: "か",
     type: "nan",
     meaning: "簡介、概要、總論"
   },
@@ -13308,7 +13308,7 @@ const n2WordsZhTW: WordData[] = [
     words: "学術",
     pron: "がくじゅつ",
     letterOrder: 47,
-    letter: "が",
+    letter: "か",
     type: "nan",
     meaning: "科學、學習、獎學金"
   },
@@ -13317,7 +13317,7 @@ const n2WordsZhTW: WordData[] = [
     words: "学年",
     pron: "がくねん",
     letterOrder: 47,
-    letter: "が",
+    letter: "か",
     type: "nan",
     meaning: "在校年份,年級"
   },
@@ -13326,7 +13326,7 @@ const n2WordsZhTW: WordData[] = [
     words: "学部",
     pron: "がくぶ",
     letterOrder: 47,
-    letter: "が",
+    letter: "か",
     type: "nan",
     meaning: "大學系、本科"
   },
@@ -13335,7 +13335,7 @@ const n2WordsZhTW: WordData[] = [
     words: "学力",
     pron: "がくりょく",
     letterOrder: 47,
-    letter: "が",
+    letter: "か",
     type: "nan",
     meaning: "學識、知識、文學能力"
   },
@@ -13344,7 +13344,7 @@ const n2WordsZhTW: WordData[] = [
     words: "学科",
     pron: "がっか",
     letterOrder: 47,
-    letter: "が",
+    letter: "か",
     type: "nan",
     meaning: "學習科目、學習課程"
   },
@@ -13353,7 +13353,7 @@ const n2WordsZhTW: WordData[] = [
     words: "学会",
     pron: "がっかい",
     letterOrder: 47,
-    letter: "が",
+    letter: "か",
     type: "nan",
     meaning: "科學會、學術會議"
   },
@@ -13362,7 +13362,7 @@ const n2WordsZhTW: WordData[] = [
     words: "楽器",
     pron: "がっき",
     letterOrder: 47,
-    letter: "が",
+    letter: "か",
     type: "nan",
     meaning: "樂器"
   },
@@ -13371,7 +13371,7 @@ const n2WordsZhTW: WordData[] = [
     words: "学級",
     pron: "がっきゅう",
     letterOrder: 47,
-    letter: "が",
+    letter: "か",
     type: "nan",
     meaning: "在校成績"
   },
@@ -13380,7 +13380,7 @@ const n2WordsZhTW: WordData[] = [
     words: "儀式",
     pron: "ぎしき",
     letterOrder: 48,
-    letter: "ぎ",
+    letter: "き",
     type: "nan",
     meaning: "典禮、儀式、禮儀"
   },
@@ -13389,7 +13389,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ぎっしり",
     pron: "ぎっしり",
     letterOrder: 48,
-    letter: "ぎ",
+    letter: "き",
     type: "nan",
     meaning: "緊緊地、完全地"
   },
@@ -13398,7 +13398,7 @@ const n2WordsZhTW: WordData[] = [
     words: "行事",
     pron: "ぎょうじ",
     letterOrder: 48,
-    letter: "ぎ",
+    letter: "き",
     type: "nan",
     meaning: "事件、函數"
   },
@@ -13407,7 +13407,7 @@ const n2WordsZhTW: WordData[] = [
     words: "行列",
     pron: "ぎょうれつ",
     letterOrder: 48,
-    letter: "ぎ",
+    letter: "き",
     type: "nan",
     meaning: "（1）線、列、（2）矩陣（數學）"
   },
@@ -13416,7 +13416,7 @@ const n2WordsZhTW: WordData[] = [
     words: "漁業",
     pron: "ぎょぎょう",
     letterOrder: 48,
-    letter: "ぎ",
+    letter: "き",
     type: "nan",
     meaning: "漁業（工業）"
   },
@@ -13425,7 +13425,7 @@ const n2WordsZhTW: WordData[] = [
     words: "偶数",
     pron: "ぐうすう",
     letterOrder: 49,
-    letter: "ぐ",
+    letter: "く",
     type: "nan",
     meaning: "偶數"
   },
@@ -13434,7 +13434,7 @@ const n2WordsZhTW: WordData[] = [
     words: "郡",
     pron: "ぐん",
     letterOrder: 49,
-    letter: "ぐ",
+    letter: "く",
     type: "nan",
     meaning: "國家、地區"
   },
@@ -13443,7 +13443,7 @@ const n2WordsZhTW: WordData[] = [
     words: "芸能",
     pron: "げいのう",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "公共娛樂、成就、造詣"
   },
@@ -13452,7 +13452,7 @@ const n2WordsZhTW: WordData[] = [
     words: "外科",
     pron: "げか",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "外科"
   },
@@ -13461,7 +13461,7 @@ const n2WordsZhTW: WordData[] = [
     words: "激増",
     pron: "げきぞう",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "突然增加"
   },
@@ -13470,7 +13470,7 @@ const n2WordsZhTW: WordData[] = [
     words: "下車",
     pron: "げしゃ",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "下車"
   },
@@ -13479,7 +13479,7 @@ const n2WordsZhTW: WordData[] = [
     words: "下旬",
     pron: "げじゅん",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "月（最後三分之一）"
   },
@@ -13488,7 +13488,7 @@ const n2WordsZhTW: WordData[] = [
     words: "下水",
     pron: "げすい",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "排水、污水、溝渠"
   },
@@ -13497,7 +13497,7 @@ const n2WordsZhTW: WordData[] = [
     words: "下駄",
     pron: "げた",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "木屐（日本鞋類）、木屐"
   },
@@ -13506,7 +13506,7 @@ const n2WordsZhTW: WordData[] = [
     words: "月給",
     pron: "げっきゅう",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "月薪"
   },
@@ -13515,7 +13515,7 @@ const n2WordsZhTW: WordData[] = [
     words: "月末",
     pron: "げつまつ",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "月底"
   },
@@ -13524,7 +13524,7 @@ const n2WordsZhTW: WordData[] = [
     words: "下品",
     pron: "げひん",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "粗俗、卑鄙、下流"
   },
@@ -13533,7 +13533,7 @@ const n2WordsZhTW: WordData[] = [
     words: "原稿",
     pron: "げんこう",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "手稿、影印件"
   },
@@ -13542,7 +13542,7 @@ const n2WordsZhTW: WordData[] = [
     words: "原産",
     pron: "げんさん",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "原產地、棲息地"
   },
@@ -13551,7 +13551,7 @@ const n2WordsZhTW: WordData[] = [
     words: "原始",
     pron: "げんし",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "起源、原始"
   },
@@ -13560,7 +13560,7 @@ const n2WordsZhTW: WordData[] = [
     words: "厳重",
     pron: "げんじゅう",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "嚴格、嚴謹、嚴厲"
   },
@@ -13569,7 +13569,7 @@ const n2WordsZhTW: WordData[] = [
     words: "限度",
     pron: "げんど",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "限制、界限"
   },
@@ -13578,7 +13578,7 @@ const n2WordsZhTW: WordData[] = [
     words: "現に",
     pron: "げんに",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "事實上、真的"
   },
@@ -13587,7 +13587,7 @@ const n2WordsZhTW: WordData[] = [
     words: "原理",
     pron: "げんり",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "原理、理論、基本真理"
   },
@@ -13596,7 +13596,7 @@ const n2WordsZhTW: WordData[] = [
     words: "原料",
     pron: "げんりょう",
     letterOrder: 50,
-    letter: "げ",
+    letter: "け",
     type: "nan",
     meaning: "原料"
   },
@@ -13605,7 +13605,7 @@ const n2WordsZhTW: WordData[] = [
     words: "碁",
     pron: "ご",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "圍棋（佔領領土的桌遊）"
   },
@@ -13614,7 +13614,7 @@ const n2WordsZhTW: WordData[] = [
     words: "強引",
     pron: "ごういん",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "霸道、脅迫、咄咄逼人"
   },
@@ -13623,7 +13623,7 @@ const n2WordsZhTW: WordData[] = [
     words: "合同",
     pron: "ごうどう",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "合併、併入、聯合"
   },
@@ -13632,7 +13632,7 @@ const n2WordsZhTW: WordData[] = [
     words: "合理",
     pron: "ごうり",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "合理的"
   },
@@ -13641,7 +13641,7 @@ const n2WordsZhTW: WordData[] = [
     words: "合流",
     pron: "ごうりゅう",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "匯合、聯合、連接"
   },
@@ -13650,7 +13650,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ごくろうさま",
     pron: "ごくろうさま",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "非常感謝您的....."
   },
@@ -13659,7 +13659,7 @@ const n2WordsZhTW: WordData[] = [
     words: "五十音",
     pron: "ごじゅうおん",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "日文五十音圖"
   },
@@ -13668,7 +13668,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ごぞんじですか",
     pron: "ごぞんじですか",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: ""
   },
@@ -13677,7 +13677,7 @@ const n2WordsZhTW: WordData[] = [
     words: "御馳走",
     pron: "ごちそう",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "宴請、款待（某人）"
   },
@@ -13686,7 +13686,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ごちそうさま",
     pron: "ごちそうさま",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "盛宴"
   },
@@ -13695,7 +13695,7 @@ const n2WordsZhTW: WordData[] = [
     words: "御無沙汰",
     pron: "ごぶさた",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "有一段時間沒有寫信或聯繫"
   },
@@ -13704,7 +13704,7 @@ const n2WordsZhTW: WordData[] = [
     words: "塵芥",
     pron: "ごみ",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "垃圾、廢物"
   },
@@ -13713,7 +13713,7 @@ const n2WordsZhTW: WordData[] = [
     words: "御免",
     pron: "ごめん",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "你的赦免、拒絕（某事）、解僱"
   },
@@ -13722,7 +13722,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ごめんください",
     pron: "ごめんください",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "我可以進來嗎？"
   },
@@ -13731,7 +13731,7 @@ const n2WordsZhTW: WordData[] = [
     words: "娯楽",
     pron: "ごらく",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "快樂、娛樂"
   },
@@ -13740,7 +13740,7 @@ const n2WordsZhTW: WordData[] = [
     words: "御覧",
     pron: "ごらん",
     letterOrder: 51,
-    letter: "ご",
+    letter: "こ",
     type: "nan",
     meaning: "（hon）看、檢查、嘗試"
   },
@@ -13749,7 +13749,7 @@ const n2WordsZhTW: WordData[] = [
     words: "在学",
     pron: "ざいがく",
     letterOrder: 52,
-    letter: "ざ",
+    letter: "さ",
     type: "nan",
     meaning: "（入學）"
   },
@@ -13758,7 +13758,7 @@ const n2WordsZhTW: WordData[] = [
     words: "材木",
     pron: "ざいもく",
     letterOrder: 52,
-    letter: "ざ",
+    letter: "さ",
     type: "nan",
     meaning: "木材、木料"
   },
@@ -13767,7 +13767,7 @@ const n2WordsZhTW: WordData[] = [
     words: "座敷",
     pron: "ざしき",
     letterOrder: 52,
-    letter: "ざ",
+    letter: "さ",
     type: "nan",
     meaning: "榻榻米房間"
   },
@@ -13776,7 +13776,7 @@ const n2WordsZhTW: WordData[] = [
     words: "雑音",
     pron: "ざつおん",
     letterOrder: 52,
-    letter: "ざ",
+    letter: "さ",
     type: "nan",
     meaning: "噪音（刺耳、刺耳）"
   },
@@ -13785,7 +13785,7 @@ const n2WordsZhTW: WordData[] = [
     words: "座布団",
     pron: "ざぶとん",
     letterOrder: 52,
-    letter: "ざ",
+    letter: "さ",
     type: "nan",
     meaning: "坐墊（日文）"
   },
@@ -13794,7 +13794,7 @@ const n2WordsZhTW: WordData[] = [
     words: "寺院",
     pron: "じいん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "寺廟"
   },
@@ -13803,7 +13803,7 @@ const n2WordsZhTW: WordData[] = [
     words: "自衛",
     pron: "じえい",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "自衛"
   },
@@ -13812,7 +13812,7 @@ const n2WordsZhTW: WordData[] = [
     words: "時間割",
     pron: "じかんわり",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "時間表、日程表"
   },
@@ -13821,7 +13821,7 @@ const n2WordsZhTW: WordData[] = [
     words: "持参",
     pron: "じさん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "帶來、拿走、攜帶"
   },
@@ -13830,7 +13830,7 @@ const n2WordsZhTW: WordData[] = [
     words: "磁石",
     pron: "じしゃく",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "磁鐵"
   },
@@ -13839,7 +13839,7 @@ const n2WordsZhTW: WordData[] = [
     words: "自習",
     pron: "じしゅう",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "自學"
   },
@@ -13848,7 +13848,7 @@ const n2WordsZhTW: WordData[] = [
     words: "時速",
     pron: "じそく",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "時速）"
   },
@@ -13857,7 +13857,7 @@ const n2WordsZhTW: WordData[] = [
     words: "自治",
     pron: "じち",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "自治、自主"
   },
@@ -13866,7 +13866,7 @@ const n2WordsZhTW: WordData[] = [
     words: "実感",
     pron: "じっかん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "感受（實際、真實）"
   },
@@ -13875,7 +13875,7 @@ const n2WordsZhTW: WordData[] = [
     words: "実習",
     pron: "じっしゅう",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "練習、訓練"
   },
@@ -13884,7 +13884,7 @@ const n2WordsZhTW: WordData[] = [
     words: "実績",
     pron: "じっせき",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "成就、實際結果"
   },
@@ -13893,7 +13893,7 @@ const n2WordsZhTW: WordData[] = [
     words: "実物",
     pron: "じつぶつ",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "真品、原裝"
   },
@@ -13902,7 +13902,7 @@ const n2WordsZhTW: WordData[] = [
     words: "実用",
     pron: "じつよう",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "實用、實用"
   },
@@ -13911,7 +13911,7 @@ const n2WordsZhTW: WordData[] = [
     words: "実力",
     pron: "じつりょく",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "功績、效率、武器"
   },
@@ -13920,7 +13920,7 @@ const n2WordsZhTW: WordData[] = [
     words: "実例",
     pron: "じつれい",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "例子、插圖"
   },
@@ -13929,7 +13929,7 @@ const n2WordsZhTW: WordData[] = [
     words: "児童",
     pron: "じどう",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "兒童、青少年"
   },
@@ -13938,7 +13938,7 @@ const n2WordsZhTW: WordData[] = [
     words: "地盤",
     pron: "じばん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "（地面）"
   },
@@ -13947,7 +13947,7 @@ const n2WordsZhTW: WordData[] = [
     words: "地味",
     pron: "じみ",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "樸素、簡單"
   },
@@ -13956,7 +13956,7 @@ const n2WordsZhTW: WordData[] = [
     words: "蛇口",
     pron: "じゃぐち",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "水龍頭"
   },
@@ -13965,7 +13965,7 @@ const n2WordsZhTW: WordData[] = [
     words: "弱点",
     pron: "じゃくてん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "弱點、弱點"
   },
@@ -13974,7 +13974,7 @@ const n2WordsZhTW: WordData[] = [
     words: "じゃんけん",
     pron: "じゃんけん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "（n）石頭剪刀布遊戲"
   },
@@ -13983,7 +13983,7 @@ const n2WordsZhTW: WordData[] = [
     words: "住居",
     pron: "じゅうきょ",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "住宅、房屋、住所"
   },
@@ -13992,7 +13992,7 @@ const n2WordsZhTW: WordData[] = [
     words: "重体",
     pron: "じゅうたい",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "重病、病情嚴重、危急狀態"
   },
@@ -14001,7 +14001,7 @@ const n2WordsZhTW: WordData[] = [
     words: "じゅうたん",
     pron: "じゅうたん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "地毯"
   },
@@ -14010,7 +14010,7 @@ const n2WordsZhTW: WordData[] = [
     words: "重点",
     pron: "じゅうてん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "重點、強調、冒號"
   },
@@ -14019,7 +14019,7 @@ const n2WordsZhTW: WordData[] = [
     words: "重役",
     pron: "じゅうやく",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "董事、高階管理人員"
   },
@@ -14028,7 +14028,7 @@ const n2WordsZhTW: WordData[] = [
     words: "重量",
     pron: "じゅうりょう",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "（1）體重、（2）重量級拳擊手"
   },
@@ -14037,7 +14037,7 @@ const n2WordsZhTW: WordData[] = [
     words: "重力",
     pron: "じゅうりょく",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "重力"
   },
@@ -14046,7 +14046,7 @@ const n2WordsZhTW: WordData[] = [
     words: "熟語",
     pron: "じゅくご",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "成語、慣用片語、漢字複合詞"
   },
@@ -14055,7 +14055,7 @@ const n2WordsZhTW: WordData[] = [
     words: "受験",
     pron: "じゅけん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "參加考試"
   },
@@ -14064,7 +14064,7 @@ const n2WordsZhTW: WordData[] = [
     words: "述語",
     pron: "じゅつご",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "謂詞"
   },
@@ -14073,7 +14073,7 @@ const n2WordsZhTW: WordData[] = [
     words: "寿命",
     pron: "じゅみょう",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "壽命"
   },
@@ -14082,7 +14082,7 @@ const n2WordsZhTW: WordData[] = [
     words: "受話器",
     pron: "じゅわき",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "（電話）接收器"
   },
@@ -14091,7 +14091,7 @@ const n2WordsZhTW: WordData[] = [
     words: "循環",
     pron: "じゅんかん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "循環、旋轉、週期"
   },
@@ -14100,7 +14100,7 @@ const n2WordsZhTW: WordData[] = [
     words: "巡査",
     pron: "じゅんさ",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "警察"
   },
@@ -14109,7 +14109,7 @@ const n2WordsZhTW: WordData[] = [
     words: "順々",
     pron: "じゅんじゅん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "依序"
   },
@@ -14118,7 +14118,7 @@ const n2WordsZhTW: WordData[] = [
     words: "順序",
     pron: "じゅんじょ",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "順序、序列、程序"
   },
@@ -14127,7 +14127,7 @@ const n2WordsZhTW: WordData[] = [
     words: "純情",
     pron: "じゅんじょう",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "純潔的心、天真、無私的奉獻"
   },
@@ -14136,7 +14136,7 @@ const n2WordsZhTW: WordData[] = [
     words: "純粋",
     pron: "じゅんすい",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "純正、真實、真誠"
   },
@@ -14145,7 +14145,7 @@ const n2WordsZhTW: WordData[] = [
     words: "蒸気",
     pron: "じょうき",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "蒸汽、蒸氣"
   },
@@ -14154,7 +14154,7 @@ const n2WordsZhTW: WordData[] = [
     words: "定規",
     pron: "じょうぎ",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "（測量）尺"
   },
@@ -14163,7 +14163,7 @@ const n2WordsZhTW: WordData[] = [
     words: "上級",
     pron: "じょうきゅう",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "高級, 高等, 資深"
   },
@@ -14172,7 +14172,7 @@ const n2WordsZhTW: WordData[] = [
     words: "上下",
     pron: "じょうげ",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "高低、上落、卸載和裝載"
   },
@@ -14181,7 +14181,7 @@ const n2WordsZhTW: WordData[] = [
     words: "乗車",
     pron: "じょうしゃ",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "搭火車、搭車"
   },
@@ -14190,7 +14190,7 @@ const n2WordsZhTW: WordData[] = [
     words: "上旬",
     pron: "じょうじゅん",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "每月前 10 天"
   },
@@ -14199,7 +14199,7 @@ const n2WordsZhTW: WordData[] = [
     words: "蒸発",
     pron: "じょうはつ",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "蒸發、不明原因的失踪"
   },
@@ -14208,7 +14208,7 @@ const n2WordsZhTW: WordData[] = [
     words: "助教授",
     pron: "じょきょうじゅ",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "助理教授"
   },
@@ -14217,7 +14217,7 @@ const n2WordsZhTW: WordData[] = [
     words: "人造",
     pron: "じんぞう",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "人造的、合成的、人工的"
   },
@@ -14226,7 +14226,7 @@ const n2WordsZhTW: WordData[] = [
     words: "人文科学",
     pron: "じんぶんかがく",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "社會科學、人文科學"
   },
@@ -14235,7 +14235,7 @@ const n2WordsZhTW: WordData[] = [
     words: "人命",
     pron: "じんめい",
     letterOrder: 53,
-    letter: "じ",
+    letter: "し",
     type: "nan",
     meaning: "（人類）生命"
   },
@@ -14244,7 +14244,7 @@ const n2WordsZhTW: WordData[] = [
     words: "随筆",
     pron: "ずいひつ",
     letterOrder: 54,
-    letter: "ず",
+    letter: "す",
     type: "nan",
     meaning: "散文、雜文"
   },
@@ -14253,7 +14253,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ずうずうしい",
     pron: "ずうずうしい",
     letterOrder: 54,
-    letter: "ず",
+    letter: "す",
     type: "nan",
     meaning: "厚顏無恥、無恥"
   },
@@ -14262,7 +14262,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ずうっと",
     pron: "ずうっと",
     letterOrder: 54,
-    letter: "ず",
+    letter: "す",
     type: "nan",
     meaning: ""
   },
@@ -14271,7 +14271,7 @@ const n2WordsZhTW: WordData[] = [
     words: "図鑑",
     pron: "ずかん",
     letterOrder: 54,
-    letter: "ず",
+    letter: "す",
     type: "nan",
     meaning: "繪本"
   },
@@ -14280,7 +14280,7 @@ const n2WordsZhTW: WordData[] = [
     words: "図形",
     pron: "ずけい",
     letterOrder: 54,
-    letter: "ず",
+    letter: "す",
     type: "nan",
     meaning: "數位"
   },
@@ -14289,7 +14289,7 @@ const n2WordsZhTW: WordData[] = [
     words: "頭脳",
     pron: "ずのう",
     letterOrder: 54,
-    letter: "ず",
+    letter: "す",
     type: "nan",
     meaning: "頭腦、大腦、智力"
   },
@@ -14298,7 +14298,7 @@ const n2WordsZhTW: WordData[] = [
     words: "図表",
     pron: "ずひょう",
     letterOrder: 54,
-    letter: "ず",
+    letter: "す",
     type: "nan",
     meaning: "圖表、圖解、圖形"
   },
@@ -14307,7 +14307,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ずらす",
     pron: "ずらす",
     letterOrder: 54,
-    letter: "ず",
+    letter: "す",
     type: "nan",
     meaning: "延後、拖延"
   },
@@ -14316,7 +14316,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ずらり",
     pron: "ずらり",
     letterOrder: 54,
-    letter: "ず",
+    letter: "す",
     type: "nan",
     meaning: "一字排開、整齊排列"
   },
@@ -14325,7 +14325,7 @@ const n2WordsZhTW: WordData[] = [
     words: "狡い",
     pron: "ずるい",
     letterOrder: 54,
-    letter: "ず",
+    letter: "す",
     type: "nan",
     meaning: "狡猾、狡猾"
   },
@@ -14334,7 +14334,7 @@ const n2WordsZhTW: WordData[] = [
     words: "滑れる",
     pron: "ずれる",
     letterOrder: 54,
-    letter: "ず",
+    letter: "す",
     type: "nan",
     meaning: "能滑、會滑"
   },
@@ -14343,7 +14343,7 @@ const n2WordsZhTW: WordData[] = [
     words: "税関",
     pron: "ぜいかん",
     letterOrder: 55,
-    letter: "ぜ",
+    letter: "せ",
     type: "nan",
     meaning: "海關"
   },
@@ -14352,7 +14352,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ぜひとも",
     pron: "ぜひとも",
     letterOrder: 55,
-    letter: "ぜ",
+    letter: "せ",
     type: "nan",
     meaning: "當然可以（不接受否定的回答）"
   },
@@ -14361,7 +14361,7 @@ const n2WordsZhTW: WordData[] = [
     words: "前後",
     pron: "ぜんご",
     letterOrder: 55,
-    letter: "ぜ",
+    letter: "せ",
     type: "nan",
     meaning: "周圍、整個、前面和後面"
   },
@@ -14370,7 +14370,7 @@ const n2WordsZhTW: WordData[] = [
     words: "全集",
     pron: "ぜんしゅう",
     letterOrder: 55,
-    letter: "ぜ",
+    letter: "せ",
     type: "nan",
     meaning: "全集"
   },
@@ -14379,7 +14379,7 @@ const n2WordsZhTW: WordData[] = [
     words: "全身",
     pron: "ぜんしん",
     letterOrder: 55,
-    letter: "ぜ",
+    letter: "せ",
     type: "nan",
     meaning: "全身（肖像）"
   },
@@ -14388,7 +14388,7 @@ const n2WordsZhTW: WordData[] = [
     words: "全般",
     pron: "ぜんぱん",
     letterOrder: 55,
-    letter: "ぜ",
+    letter: "せ",
     type: "nan",
     meaning: "（整個）,普遍的,全部的"
   },
@@ -14397,7 +14397,7 @@ const n2WordsZhTW: WordData[] = [
     words: "雑巾",
     pron: "ぞうきん",
     letterOrder: 56,
-    letter: "ぞ",
+    letter: "そ",
     type: "nan",
     meaning: "家用布、除塵布"
   },
@@ -14406,7 +14406,7 @@ const n2WordsZhTW: WordData[] = [
     words: "増減",
     pron: "ぞうげん",
     letterOrder: 56,
-    letter: "ぞ",
+    letter: "そ",
     type: "nan",
     meaning: "增減、波動"
   },
@@ -14415,7 +14415,7 @@ const n2WordsZhTW: WordData[] = [
     words: "造船",
     pron: "ぞうせん",
     letterOrder: 56,
-    letter: "ぞ",
+    letter: "そ",
     type: "nan",
     meaning: "造船"
   },
@@ -14424,7 +14424,7 @@ const n2WordsZhTW: WordData[] = [
     words: "増大",
     pron: "ぞうだい",
     letterOrder: 56,
-    letter: "ぞ",
+    letter: "そ",
     type: "nan",
     meaning: "放大"
   },
@@ -14433,7 +14433,7 @@ const n2WordsZhTW: WordData[] = [
     words: "草履",
     pron: "ぞうり",
     letterOrder: 56,
-    letter: "ぞ",
+    letter: "そ",
     type: "nan",
     meaning: "zoori（日本鞋類）、涼鞋"
   },
@@ -14442,7 +14442,7 @@ const n2WordsZhTW: WordData[] = [
     words: "属する",
     pron: "ぞくする",
     letterOrder: 56,
-    letter: "ぞ",
+    letter: "そ",
     type: "nan",
     meaning: "屬於、隸屬於、隸屬於"
   },
@@ -14451,7 +14451,7 @@ const n2WordsZhTW: WordData[] = [
     words: "続々",
     pron: "ぞくぞく",
     letterOrder: 56,
-    letter: "ぞ",
+    letter: "そ",
     type: "nan",
     meaning: "接連不斷地"
   },
@@ -14460,7 +14460,7 @@ const n2WordsZhTW: WordData[] = [
     words: "存じる",
     pron: "ぞんじる",
     letterOrder: 56,
-    letter: "ぞ",
+    letter: "そ",
     type: "nan",
     meaning: "（哼）知道"
   },
@@ -14469,7 +14469,7 @@ const n2WordsZhTW: WordData[] = [
     words: "存ずる",
     pron: "ぞんずる",
     letterOrder: 56,
-    letter: "ぞ",
+    letter: "そ",
     type: "nan",
     meaning: ""
   },
@@ -14478,7 +14478,7 @@ const n2WordsZhTW: WordData[] = [
     words: "だいいち",
     pron: "だいいち",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "首先、# 1"
   },
@@ -14487,7 +14487,7 @@ const n2WordsZhTW: WordData[] = [
     words: "大学院",
     pron: "だいがくいん",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "研究所"
   },
@@ -14496,7 +14496,7 @@ const n2WordsZhTW: WordData[] = [
     words: "大工",
     pron: "だいく",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "木匠"
   },
@@ -14505,7 +14505,7 @@ const n2WordsZhTW: WordData[] = [
     words: "大小",
     pron: "だいしょう",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "尺寸"
   },
@@ -14514,7 +14514,7 @@ const n2WordsZhTW: WordData[] = [
     words: "大分",
     pron: "だいぶん",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "相當多、很大、很多"
   },
@@ -14523,7 +14523,7 @@ const n2WordsZhTW: WordData[] = [
     words: "題名",
     pron: "だいめい",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "標題"
   },
@@ -14532,7 +14532,7 @@ const n2WordsZhTW: WordData[] = [
     words: "代名詞",
     pron: "だいめいし",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "代名詞"
   },
@@ -14541,7 +14541,7 @@ const n2WordsZhTW: WordData[] = [
     words: "楕円",
     pron: "だえん",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "橢圓"
   },
@@ -14550,7 +14550,7 @@ const n2WordsZhTW: WordData[] = [
     words: "脱線",
     pron: "だっせん",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "脫軌、題外話"
   },
@@ -14559,7 +14559,7 @@ const n2WordsZhTW: WordData[] = [
     words: "妥当",
     pron: "だとう",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "有效、適當、正確"
   },
@@ -14568,7 +14568,7 @@ const n2WordsZhTW: WordData[] = [
     words: "だます",
     pron: "だます",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "欺騙、詐騙、欺詐"
   },
@@ -14577,7 +14577,7 @@ const n2WordsZhTW: WordData[] = [
     words: "だらしない",
     pron: "だらしない",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "邋遢的、放蕩的、蕩婦"
   },
@@ -14586,7 +14586,7 @@ const n2WordsZhTW: WordData[] = [
     words: "段階",
     pron: "だんかい",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "等級、級別、階段"
   },
@@ -14595,7 +14595,7 @@ const n2WordsZhTW: WordData[] = [
     words: "断水",
     pron: "だんすい",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "停水"
   },
@@ -14604,7 +14604,7 @@ const n2WordsZhTW: WordData[] = [
     words: "団地",
     pron: "だんち",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "多單元公寓"
   },
@@ -14613,7 +14613,7 @@ const n2WordsZhTW: WordData[] = [
     words: "断定",
     pron: "だんてい",
     letterOrder: 57,
-    letter: "だ",
+    letter: "た",
     type: "nan",
     meaning: "結論、決定"
   },
@@ -14622,7 +14622,7 @@ const n2WordsZhTW: WordData[] = [
     words: "出合い",
     pron: "であい",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "一次邂逅"
   },
@@ -14631,7 +14631,7 @@ const n2WordsZhTW: WordData[] = [
     words: "出入り",
     pron: "でいり",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "進進出出、來來去去、自由聯想"
   },
@@ -14640,7 +14640,7 @@ const n2WordsZhTW: WordData[] = [
     words: "出入口",
     pron: "でいりぐち",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "出口和入口"
   },
@@ -14649,7 +14649,7 @@ const n2WordsZhTW: WordData[] = [
     words: "出掛ける",
     pron: "でかける",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "出發、動身、開始"
   },
@@ -14658,7 +14658,7 @@ const n2WordsZhTW: WordData[] = [
     words: "出来上がり",
     pron: "できあがり",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "完成、準備好、做好"
   },
@@ -14667,7 +14667,7 @@ const n2WordsZhTW: WordData[] = [
     words: "出来上がる",
     pron: "できあがる",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "（1）根據定義、完成、準備好"
   },
@@ -14676,7 +14676,7 @@ const n2WordsZhTW: WordData[] = [
     words: "凸凹",
     pron: "でこぼこ",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "平整、粗糙、崎嶇"
   },
@@ -14685,7 +14685,7 @@ const n2WordsZhTW: WordData[] = [
     words: "でたらめ",
     pron: "でたらめ",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "（1）不負責任的言論、胡言亂語、無意義的"
   },
@@ -14694,7 +14694,7 @@ const n2WordsZhTW: WordData[] = [
     words: "出迎え",
     pron: "でむかえ",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "會議、招待會"
   },
@@ -14703,7 +14703,7 @@ const n2WordsZhTW: WordData[] = [
     words: "出迎える",
     pron: "でむかえる",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "見面、問候"
   },
@@ -14712,7 +14712,7 @@ const n2WordsZhTW: WordData[] = [
     words: "伝記",
     pron: "でんき",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "傳記、人生故事"
   },
@@ -14721,7 +14721,7 @@ const n2WordsZhTW: WordData[] = [
     words: "電球",
     pron: "でんきゅう",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "燈泡"
   },
@@ -14730,7 +14730,7 @@ const n2WordsZhTW: WordData[] = [
     words: "伝染",
     pron: "でんせん",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "傳染"
   },
@@ -14739,7 +14739,7 @@ const n2WordsZhTW: WordData[] = [
     words: "電池",
     pron: "でんち",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "電池"
   },
@@ -14748,7 +14748,7 @@ const n2WordsZhTW: WordData[] = [
     words: "電柱",
     pron: "でんちゅう",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "電線桿、電線桿、燈桿"
   },
@@ -14757,7 +14757,7 @@ const n2WordsZhTW: WordData[] = [
     words: "電波",
     pron: "でんぱ",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "電磁波"
   },
@@ -14766,7 +14766,7 @@ const n2WordsZhTW: WordData[] = [
     words: "電流",
     pron: "でんりゅう",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "電流"
   },
@@ -14775,7 +14775,7 @@ const n2WordsZhTW: WordData[] = [
     words: "電力",
     pron: "でんりょく",
     letterOrder: 60,
-    letter: "で",
+    letter: "て",
     type: "nan",
     meaning: "電力"
   },
@@ -14784,7 +14784,7 @@ const n2WordsZhTW: WordData[] = [
     words: "銅",
     pron: "どう",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "銅"
   },
@@ -14793,7 +14793,7 @@ const n2WordsZhTW: WordData[] = [
     words: "同格",
     pron: "どうかく",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "同級、平等、並列"
   },
@@ -14802,7 +14802,7 @@ const n2WordsZhTW: WordData[] = [
     words: "動作",
     pron: "どうさ",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "動作、動作、動作"
   },
@@ -14811,7 +14811,7 @@ const n2WordsZhTW: WordData[] = [
     words: "どうせ",
     pron: "どうせ",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "無論如何,無論如何,無論如何"
   },
@@ -14820,7 +14820,7 @@ const n2WordsZhTW: WordData[] = [
     words: "どうぞよろしく",
     pron: "どうぞよろしく",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "很高興認識你"
   },
@@ -14829,7 +14829,7 @@ const n2WordsZhTW: WordData[] = [
     words: "童話",
     pron: "どうわ",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "童話"
   },
@@ -14838,7 +14838,7 @@ const n2WordsZhTW: WordData[] = [
     words: "どきどき",
     pron: "どきどき",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "悸動、跳動（快速）"
   },
@@ -14847,7 +14847,7 @@ const n2WordsZhTW: WordData[] = [
     words: "退く",
     pron: "どく",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "（1）撤退、退卻、撤退"
   },
@@ -14856,7 +14856,7 @@ const n2WordsZhTW: WordData[] = [
     words: "退ける",
     pron: "どける",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "除去, 拿走, 驅逐"
   },
@@ -14865,7 +14865,7 @@ const n2WordsZhTW: WordData[] = [
     words: "どっと",
     pron: "どっと",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "突然"
   },
@@ -14874,7 +14874,7 @@ const n2WordsZhTW: WordData[] = [
     words: "どなる",
     pron: "どなる",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "喊叫、叫喊"
   },
@@ -14883,7 +14883,7 @@ const n2WordsZhTW: WordData[] = [
     words: "丼",
     pron: "どんぶり",
     letterOrder: 61,
-    letter: "ど",
+    letter: "と",
     type: "nan",
     meaning: "瓷碗、盛有食物的碗"
   },
@@ -14892,7 +14892,7 @@ const n2WordsZhTW: WordData[] = [
     words: "売店",
     pron: "ばいてん",
     letterOrder: 62,
-    letter: "ば",
+    letter: "は",
     type: "nan",
     meaning: "商店、攤位"
   },
@@ -14901,7 +14901,7 @@ const n2WordsZhTW: WordData[] = [
     words: "売買",
     pron: "ばいばい",
     letterOrder: 62,
-    letter: "ば",
+    letter: "は",
     type: "nan",
     meaning: "貿易、買賣"
   },
@@ -14910,7 +14910,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ばからしい",
     pron: "ばからしい",
     letterOrder: 62,
-    letter: "ば",
+    letter: "は",
     type: "nan",
     meaning: "荒誕"
   },
@@ -14919,7 +14919,7 @@ const n2WordsZhTW: WordData[] = [
     words: "×",
     pron: "ばつ",
     letterOrder: 62,
-    letter: "ば",
+    letter: "は",
     type: "nan",
     meaning: ""
   },
@@ -14928,7 +14928,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ばね",
     pron: "ばね",
     letterOrder: 62,
-    letter: "ば",
+    letter: "は",
     type: "nan",
     meaning: "彈簧（例如線圈、葉片）"
   },
@@ -14937,7 +14937,7 @@ const n2WordsZhTW: WordData[] = [
     words: "万歳",
     pron: "ばんざい",
     letterOrder: 62,
-    letter: "ば",
+    letter: "は",
     type: "nan",
     meaning: "歡呼、歡呼"
   },
@@ -14946,7 +14946,7 @@ const n2WordsZhTW: WordData[] = [
     words: "番地",
     pron: "ばんち",
     letterOrder: 62,
-    letter: "ば",
+    letter: "は",
     type: "nan",
     meaning: "門牌號碼、地址"
   },
@@ -14955,7 +14955,7 @@ const n2WordsZhTW: WordData[] = [
     words: "美容",
     pron: "びよう",
     letterOrder: 63,
-    letter: "び",
+    letter: "ひ",
     type: "nan",
     meaning: "形體美"
   },
@@ -14964,7 +14964,7 @@ const n2WordsZhTW: WordData[] = [
     words: "便箋",
     pron: "びんせん",
     letterOrder: 63,
-    letter: "び",
+    letter: "ひ",
     type: "nan",
     meaning: "書寫紙、文具"
   },
@@ -14973,7 +14973,7 @@ const n2WordsZhTW: WordData[] = [
     words: "瓶詰",
     pron: "びんづめ",
     letterOrder: 63,
-    letter: "び",
+    letter: "ひ",
     type: "nan",
     meaning: "裝瓶、瓶裝"
   },
@@ -14982,7 +14982,7 @@ const n2WordsZhTW: WordData[] = [
     words: "無沙汰",
     pron: "ぶさた",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "忽視保持聯繫"
   },
@@ -14991,7 +14991,7 @@ const n2WordsZhTW: WordData[] = [
     words: "武士",
     pron: "ぶし",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "戰士、武士"
   },
@@ -15000,7 +15000,7 @@ const n2WordsZhTW: WordData[] = [
     words: "部首",
     pron: "ぶしゅ",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "部首（漢字）"
   },
@@ -15009,7 +15009,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ぶつかる",
     pron: "ぶつかる",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "撞擊、碰撞"
   },
@@ -15018,7 +15018,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ぶつける",
     pron: "ぶつける",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "敲、撞、釘"
   },
@@ -15027,7 +15027,7 @@ const n2WordsZhTW: WordData[] = [
     words: "物騒",
     pron: "ぶっそう",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "危險、不安、不安全"
   },
@@ -15036,7 +15036,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ぶつぶつ",
     pron: "ぶつぶつ",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "低聲抱怨"
   },
@@ -15045,7 +15045,7 @@ const n2WordsZhTW: WordData[] = [
     words: "部品",
     pron: "ぶひん",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "零件、配件"
   },
@@ -15054,7 +15054,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ぶらさげる",
     pron: "ぶらさげる",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "懸掛、懸垂、懸垂"
   },
@@ -15063,7 +15063,7 @@ const n2WordsZhTW: WordData[] = [
     words: "分解",
     pron: "ぶんかい",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "分析、拆解"
   },
@@ -15072,7 +15072,7 @@ const n2WordsZhTW: WordData[] = [
     words: "文芸",
     pron: "ぶんげい",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "文學、藝術與文學、純文學"
   },
@@ -15081,7 +15081,7 @@ const n2WordsZhTW: WordData[] = [
     words: "文献",
     pron: "ぶんけん",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "文獻、書籍（參考）"
   },
@@ -15090,7 +15090,7 @@ const n2WordsZhTW: WordData[] = [
     words: "分数",
     pron: "ぶんすう",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "分數（數學中）"
   },
@@ -15099,7 +15099,7 @@ const n2WordsZhTW: WordData[] = [
     words: "文体",
     pron: "ぶんたい",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "文學風格"
   },
@@ -15108,7 +15108,7 @@ const n2WordsZhTW: WordData[] = [
     words: "分布",
     pron: "ぶんぷ",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "分配"
   },
@@ -15117,7 +15117,7 @@ const n2WordsZhTW: WordData[] = [
     words: "文房具",
     pron: "ぶんぼうぐ",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "靜止的"
   },
@@ -15126,7 +15126,7 @@ const n2WordsZhTW: WordData[] = [
     words: "文脈",
     pron: "ぶんみゃく",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "情境"
   },
@@ -15135,7 +15135,7 @@ const n2WordsZhTW: WordData[] = [
     words: "分量",
     pron: "ぶんりょう",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "數量"
   },
@@ -15144,7 +15144,7 @@ const n2WordsZhTW: WordData[] = [
     words: "分類",
     pron: "ぶんるい",
     letterOrder: 64,
-    letter: "ぶ",
+    letter: "ふ",
     type: "nan",
     meaning: "分類"
   },
@@ -15153,7 +15153,7 @@ const n2WordsZhTW: WordData[] = [
     words: "別荘",
     pron: "べっそう",
     letterOrder: 65,
-    letter: "べ",
+    letter: "へ",
     type: "nan",
     meaning: "度假屋、別墅"
   },
@@ -15162,7 +15162,7 @@ const n2WordsZhTW: WordData[] = [
     words: "別々",
     pron: "べつべつ",
     letterOrder: 65,
-    letter: "べ",
+    letter: "へ",
     type: "nan",
     meaning: "分別地,單獨地"
   },
@@ -15171,7 +15171,7 @@ const n2WordsZhTW: WordData[] = [
     words: "便所",
     pron: "べんじょ",
     letterOrder: 65,
-    letter: "べ",
+    letter: "へ",
     type: "nan",
     meaning: "廁所、盥洗室、休息室"
   },
@@ -15180,7 +15180,7 @@ const n2WordsZhTW: WordData[] = [
     words: "望遠鏡",
     pron: "ぼうえんきょう",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "望遠鏡"
   },
@@ -15189,7 +15189,7 @@ const n2WordsZhTW: WordData[] = [
     words: "坊さん",
     pron: "ぼうさん",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "佛教僧侶、和尚"
   },
@@ -15198,7 +15198,7 @@ const n2WordsZhTW: WordData[] = [
     words: "防止",
     pron: "ぼうし",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "預防、檢查"
   },
@@ -15207,7 +15207,7 @@ const n2WordsZhTW: WordData[] = [
     words: "膨大",
     pron: "ぼうだい",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "巨大的、笨重的、巨大的"
   },
@@ -15216,7 +15216,7 @@ const n2WordsZhTW: WordData[] = [
     words: "防犯",
     pron: "ぼうはん",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "預防犯罪"
   },
@@ -15225,7 +15225,7 @@ const n2WordsZhTW: WordData[] = [
     words: "坊や",
     pron: "ぼうや",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "男生"
   },
@@ -15234,7 +15234,7 @@ const n2WordsZhTW: WordData[] = [
     words: "牧場",
     pron: "ぼくじょう",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "（1）農場（牲畜）、（2）牧場、草地"
   },
@@ -15243,7 +15243,7 @@ const n2WordsZhTW: WordData[] = [
     words: "牧畜",
     pron: "ぼくちく",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "畜牧業"
   },
@@ -15252,7 +15252,7 @@ const n2WordsZhTW: WordData[] = [
     words: "募集",
     pron: "ぼしゅう",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "招聘、接受申請"
   },
@@ -15261,7 +15261,7 @@ const n2WordsZhTW: WordData[] = [
     words: "坊っちゃん",
     pron: "ぼっちゃん",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "（他人的）兒子"
   },
@@ -15270,7 +15270,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ぼろ",
     pron: "ぼろ",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "破布、碎布、破掉的衣服"
   },
@@ -15279,7 +15279,7 @@ const n2WordsZhTW: WordData[] = [
     words: "盆",
     pron: "ぼん",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "元宵節、亡靈節、托盤"
   },
@@ -15288,7 +15288,7 @@ const n2WordsZhTW: WordData[] = [
     words: "盆地",
     pron: "ぼんち",
     letterOrder: 66,
-    letter: "ぼ",
+    letter: "ほ",
     type: "nan",
     meaning: "盆地（例如山間）"
   },
@@ -15297,7 +15297,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ぴかぴか",
     pron: "ぴかぴか",
     letterOrder: 68,
-    letter: "ぴ",
+    letter: "ひ",
     type: "nan",
     meaning: "閃閃發光"
   },
@@ -15306,7 +15306,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ぴたり",
     pron: "ぴたり",
     letterOrder: 68,
-    letter: "ぴ",
+    letter: "ひ",
     type: "nan",
     meaning: ""
   },
@@ -15315,7 +15315,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ぺん",
     pron: "ぺん",
     letterOrder: 70,
-    letter: "ぺ",
+    letter: "へ",
     type: "nan",
     meaning: "筆"
   },
@@ -15324,7 +15324,7 @@ const n2WordsZhTW: WordData[] = [
     words: "アイデア/アイディア",
     pron: "アイデア/アイディア",
     letterOrder: 72,
-    letter: "ア",
+    letter: "あ",
     type: "nan",
     meaning: "主意"
   },
@@ -15333,7 +15333,7 @@ const n2WordsZhTW: WordData[] = [
     words: "アクセント",
     pron: "アクセント",
     letterOrder: 72,
-    letter: "ア",
+    letter: "あ",
     type: "nan",
     meaning: "口音"
   },
@@ -15342,7 +15342,7 @@ const n2WordsZhTW: WordData[] = [
     words: "アンテナ",
     pron: "アンテナ",
     letterOrder: 72,
-    letter: "ア",
+    letter: "あ",
     type: "nan",
     meaning: "天線"
   },
@@ -15351,7 +15351,7 @@ const n2WordsZhTW: WordData[] = [
     words: "イコール",
     pron: "イコール",
     letterOrder: 73,
-    letter: "イ",
+    letter: "い",
     type: "nan",
     meaning: "平等的"
   },
@@ -15360,7 +15360,7 @@ const n2WordsZhTW: WordData[] = [
     words: "インキ",
     pron: "インキ",
     letterOrder: 73,
-    letter: "イ",
+    letter: "い",
     type: "nan",
     meaning: "墨水"
   },
@@ -15369,7 +15369,7 @@ const n2WordsZhTW: WordData[] = [
     words: "インタビュー",
     pron: "インタビュー",
     letterOrder: 73,
-    letter: "イ",
+    letter: "い",
     type: "nan",
     meaning: "面試"
   },
@@ -15378,7 +15378,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ウーマン",
     pron: "ウーマン",
     letterOrder: 74,
-    letter: "ウ",
+    letter: "う",
     type: "nan",
     meaning: "女士"
   },
@@ -15387,7 +15387,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ウール",
     pron: "ウール",
     letterOrder: 74,
-    letter: "ウ",
+    letter: "う",
     type: "nan",
     meaning: "羊毛"
   },
@@ -15396,7 +15396,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ウエートレス",
     pron: "ウエートレス",
     letterOrder: 74,
-    letter: "ウ",
+    letter: "う",
     type: "nan",
     meaning: "女服務生"
   },
@@ -15405,7 +15405,7 @@ const n2WordsZhTW: WordData[] = [
     words: "エチケット",
     pron: "エチケット",
     letterOrder: 75,
-    letter: "エ",
+    letter: "え",
     type: "nan",
     meaning: "禮儀"
   },
@@ -15414,7 +15414,7 @@ const n2WordsZhTW: WordData[] = [
     words: "エプロン",
     pron: "エプロン",
     letterOrder: 75,
-    letter: "エ",
+    letter: "え",
     type: "nan",
     meaning: "圍裙"
   },
@@ -15423,7 +15423,7 @@ const n2WordsZhTW: WordData[] = [
     words: "オイル",
     pron: "オイル",
     letterOrder: 76,
-    letter: "オ",
+    letter: "お",
     type: "nan",
     meaning: "機油、機油、煤油"
   },
@@ -15432,7 +15432,7 @@ const n2WordsZhTW: WordData[] = [
     words: "オーケストラ",
     pron: "オーケストラ",
     letterOrder: 76,
-    letter: "オ",
+    letter: "お",
     type: "nan",
     meaning: "樂團"
   },
@@ -15441,7 +15441,7 @@ const n2WordsZhTW: WordData[] = [
     words: "オートメーション",
     pron: "オートメーション",
     letterOrder: 76,
-    letter: "オ",
+    letter: "お",
     type: "nan",
     meaning: "自動化"
   },
@@ -15450,7 +15450,7 @@ const n2WordsZhTW: WordData[] = [
     words: "オーバーコート",
     pron: "オーバーコート",
     letterOrder: 76,
-    letter: "オ",
+    letter: "お",
     type: "nan",
     meaning: ""
   },
@@ -15459,7 +15459,7 @@ const n2WordsZhTW: WordData[] = [
     words: "オルガン",
     pron: "オルガン",
     letterOrder: 76,
-    letter: "オ",
+    letter: "お",
     type: "nan",
     meaning: "器官"
   },
@@ -15468,7 +15468,7 @@ const n2WordsZhTW: WordData[] = [
     words: "カーブ",
     pron: "カーブ",
     letterOrder: 77,
-    letter: "カ",
+    letter: "か",
     type: "nan",
     meaning: "（1）曲線球、（2）曲線球（棒球）"
   },
@@ -15477,7 +15477,7 @@ const n2WordsZhTW: WordData[] = [
     words: "カセット",
     pron: "カセット",
     letterOrder: 77,
-    letter: "カ",
+    letter: "か",
     type: "nan",
     meaning: "磁帶）"
   },
@@ -15486,7 +15486,7 @@ const n2WordsZhTW: WordData[] = [
     words: "カバー",
     pron: "カバー",
     letterOrder: 77,
-    letter: "カ",
+    letter: "か",
     type: "nan",
     meaning: "封面（例如書籍）"
   },
@@ -15495,7 +15495,7 @@ const n2WordsZhTW: WordData[] = [
     words: "カラー",
     pron: "カラー",
     letterOrder: 77,
-    letter: "カ",
+    letter: "か",
     type: "nan",
     meaning: "衣領、顏色、顏色"
   },
@@ -15504,7 +15504,7 @@ const n2WordsZhTW: WordData[] = [
     words: "カロリー",
     pron: "カロリー",
     letterOrder: 77,
-    letter: "カ",
+    letter: "か",
     type: "nan",
     meaning: "卡路里"
   },
@@ -15513,7 +15513,7 @@ const n2WordsZhTW: WordData[] = [
     words: "キャンパス",
     pron: "キャンパス",
     letterOrder: 78,
-    letter: "キ",
+    letter: "き",
     type: "nan",
     meaning: "校園"
   },
@@ -15522,7 +15522,7 @@ const n2WordsZhTW: WordData[] = [
     words: "クーラー",
     pron: "クーラー",
     letterOrder: 79,
-    letter: "ク",
+    letter: "く",
     type: "nan",
     meaning: "冷卻器、空調"
   },
@@ -15531,7 +15531,7 @@ const n2WordsZhTW: WordData[] = [
     words: "クリーニング",
     pron: "クリーニング",
     letterOrder: 79,
-    letter: "ク",
+    letter: "く",
     type: "nan",
     meaning: "清潔、乾洗、洗衣服務"
   },
@@ -15540,7 +15540,7 @@ const n2WordsZhTW: WordData[] = [
     words: "コース",
     pron: "コース",
     letterOrder: 81,
-    letter: "コ",
+    letter: "こ",
     type: "nan",
     meaning: "課程"
   },
@@ -15549,7 +15549,7 @@ const n2WordsZhTW: WordData[] = [
     words: "コーラス",
     pron: "コーラス",
     letterOrder: 81,
-    letter: "コ",
+    letter: "こ",
     type: "nan",
     meaning: "合唱"
   },
@@ -15558,7 +15558,7 @@ const n2WordsZhTW: WordData[] = [
     words: "コック",
     pron: "コック",
     letterOrder: 81,
-    letter: "コ",
+    letter: "こ",
     type: "nan",
     meaning: "(1) 廚師 (nl:)、(2) 水龍頭、插口"
   },
@@ -15567,7 +15567,7 @@ const n2WordsZhTW: WordData[] = [
     words: "コレクション",
     pron: "コレクション",
     letterOrder: 81,
-    letter: "コ",
+    letter: "こ",
     type: "nan",
     meaning: "（1）收集、（2）糾正"
   },
@@ -15576,7 +15576,7 @@ const n2WordsZhTW: WordData[] = [
     words: "コンクール",
     pron: "コンクール",
     letterOrder: 81,
-    letter: "コ",
+    letter: "こ",
     type: "nan",
     meaning: "競賽（法文：concours）"
   },
@@ -15585,7 +15585,7 @@ const n2WordsZhTW: WordData[] = [
     words: "コンクリート",
     pron: "コンクリート",
     letterOrder: 81,
-    letter: "コ",
+    letter: "こ",
     type: "nan",
     meaning: "具體的"
   },
@@ -15594,7 +15594,7 @@ const n2WordsZhTW: WordData[] = [
     words: "コンセント",
     pron: "コンセント",
     letterOrder: 81,
-    letter: "コ",
+    letter: "こ",
     type: "nan",
     meaning: "（1）同意、（2）同心"
   },
@@ -15603,7 +15603,7 @@ const n2WordsZhTW: WordData[] = [
     words: "サークル",
     pron: "サークル",
     letterOrder: 82,
-    letter: "サ",
+    letter: "さ",
     type: "nan",
     meaning: "圈子、體育俱樂部（例如在公司）"
   },
@@ -15612,7 +15612,7 @@ const n2WordsZhTW: WordData[] = [
     words: "サイレン",
     pron: "サイレン",
     letterOrder: 82,
-    letter: "サ",
+    letter: "さ",
     type: "nan",
     meaning: "警笛"
   },
@@ -15621,7 +15621,7 @@ const n2WordsZhTW: WordData[] = [
     words: "サラリーマン",
     pron: "サラリーマン",
     letterOrder: 82,
-    letter: "サ",
+    letter: "さ",
     type: "nan",
     meaning: "受薪族、公司職員"
   },
@@ -15630,7 +15630,7 @@ const n2WordsZhTW: WordData[] = [
     words: "サンプル",
     pron: "サンプル",
     letterOrder: 82,
-    letter: "サ",
+    letter: "さ",
     type: "nan",
     meaning: "樣本"
   },
@@ -15639,7 +15639,7 @@ const n2WordsZhTW: WordData[] = [
     words: "シーズン",
     pron: "シーズン",
     letterOrder: 83,
-    letter: "シ",
+    letter: "し",
     type: "nan",
     meaning: "（運動）賽季"
   },
@@ -15648,7 +15648,7 @@ const n2WordsZhTW: WordData[] = [
     words: "シーツ",
     pron: "シーツ",
     letterOrder: 83,
-    letter: "シ",
+    letter: "し",
     type: "nan",
     meaning: "床單"
   },
@@ -15657,7 +15657,7 @@ const n2WordsZhTW: WordData[] = [
     words: "シャッター",
     pron: "シャッター",
     letterOrder: 83,
-    letter: "シ",
+    letter: "し",
     type: "nan",
     meaning: "快門"
   },
@@ -15666,7 +15666,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ショップ",
     pron: "ショップ",
     letterOrder: 83,
-    letter: "シ",
+    letter: "し",
     type: "nan",
     meaning: "一家商店"
   },
@@ -15675,7 +15675,7 @@ const n2WordsZhTW: WordData[] = [
     words: "シリーズ",
     pron: "シリーズ",
     letterOrder: 83,
-    letter: "シ",
+    letter: "し",
     type: "nan",
     meaning: "系列"
   },
@@ -15684,7 +15684,7 @@ const n2WordsZhTW: WordData[] = [
     words: "スカーフ",
     pron: "スカーフ",
     letterOrder: 84,
-    letter: "ス",
+    letter: "す",
     type: "nan",
     meaning: "圍巾"
   },
@@ -15693,7 +15693,7 @@ const n2WordsZhTW: WordData[] = [
     words: "スクール",
     pron: "スクール",
     letterOrder: 84,
-    letter: "ス",
+    letter: "す",
     type: "nan",
     meaning: "學校"
   },
@@ -15702,7 +15702,7 @@ const n2WordsZhTW: WordData[] = [
     words: "スケジュール",
     pron: "スケジュール",
     letterOrder: 84,
-    letter: "ス",
+    letter: "す",
     type: "nan",
     meaning: "行程"
   },
@@ -15711,7 +15711,7 @@ const n2WordsZhTW: WordData[] = [
     words: "スタート",
     pron: "スタート",
     letterOrder: 84,
-    letter: "ス",
+    letter: "す",
     type: "nan",
     meaning: "開始"
   },
@@ -15720,7 +15720,7 @@ const n2WordsZhTW: WordData[] = [
     words: "スチュワーデス",
     pron: "スチュワーデス",
     letterOrder: 84,
-    letter: "ス",
+    letter: "す",
     type: "nan",
     meaning: "空中小姐"
   },
@@ -15729,7 +15729,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ステージ",
     pron: "ステージ",
     letterOrder: 84,
-    letter: "ス",
+    letter: "す",
     type: "nan",
     meaning: "（1）舞台、（2）表演"
   },
@@ -15738,7 +15738,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ストッキング",
     pron: "ストッキング",
     letterOrder: 84,
-    letter: "ス",
+    letter: "す",
     type: "nan",
     meaning: "長襪"
   },
@@ -15747,7 +15747,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ストップ",
     pron: "ストップ",
     letterOrder: 84,
-    letter: "ス",
+    letter: "す",
     type: "nan",
     meaning: "停止"
   },
@@ -15756,7 +15756,7 @@ const n2WordsZhTW: WordData[] = [
     words: "スピーカー",
     pron: "スピーカー",
     letterOrder: 84,
-    letter: "ス",
+    letter: "す",
     type: "nan",
     meaning: "揚聲器"
   },
@@ -15765,7 +15765,7 @@ const n2WordsZhTW: WordData[] = [
     words: "スマート",
     pron: "スマート",
     letterOrder: 84,
-    letter: "ス",
+    letter: "す",
     type: "nan",
     meaning: "智能、時尚、纖薄"
   },
@@ -15774,7 +15774,7 @@ const n2WordsZhTW: WordData[] = [
     words: "スライド",
     pron: "スライド",
     letterOrder: 84,
-    letter: "ス",
+    letter: "す",
     type: "nan",
     meaning: "滑動"
   },
@@ -15783,7 +15783,7 @@ const n2WordsZhTW: WordData[] = [
     words: "セメント",
     pron: "セメント",
     letterOrder: 85,
-    letter: "セ",
+    letter: "せ",
     type: "nan",
     meaning: "水泥"
   },
@@ -15792,7 +15792,7 @@ const n2WordsZhTW: WordData[] = [
     words: "センチ",
     pron: "センチ",
     letterOrder: 85,
-    letter: "セ",
+    letter: "せ",
     type: "nan",
     meaning: "厘米,公分,10^-2"
   },
@@ -15801,7 +15801,7 @@ const n2WordsZhTW: WordData[] = [
     words: "タイア",
     pron: "タイア",
     letterOrder: 87,
-    letter: "タ",
+    letter: "た",
     type: "nan",
     meaning: "輪胎、輪胎"
   },
@@ -15810,7 +15810,7 @@ const n2WordsZhTW: WordData[] = [
     words: "チップ",
     pron: "チップ",
     letterOrder: 88,
-    letter: "チ",
+    letter: "ち",
     type: "nan",
     meaning: "（1）小費、小費、（2）籌碼"
   },
@@ -15819,7 +15819,7 @@ const n2WordsZhTW: WordData[] = [
     words: "チョーク",
     pron: "チョーク",
     letterOrder: 88,
-    letter: "チ",
+    letter: "ち",
     type: "nan",
     meaning: "楔子、粉筆"
   },
@@ -15828,7 +15828,7 @@ const n2WordsZhTW: WordData[] = [
     words: "テーマ",
     pron: "テーマ",
     letterOrder: 90,
-    letter: "テ",
+    letter: "て",
     type: "nan",
     meaning: "（n）主題、專案、主題（de：Thema）"
   },
@@ -15837,7 +15837,7 @@ const n2WordsZhTW: WordData[] = [
     words: "テニスコート",
     pron: "テニスコート",
     letterOrder: 90,
-    letter: "テ",
+    letter: "て",
     type: "nan",
     meaning: "網球場"
   },
@@ -15846,7 +15846,7 @@ const n2WordsZhTW: WordData[] = [
     words: "テンポ",
     pron: "テンポ",
     letterOrder: 90,
-    letter: "テ",
+    letter: "て",
     type: "nan",
     meaning: "速度"
   },
@@ -15855,7 +15855,7 @@ const n2WordsZhTW: WordData[] = [
     words: "トレーニング",
     pron: "トレーニング",
     letterOrder: 91,
-    letter: "ト",
+    letter: "と",
     type: "nan",
     meaning: "訓練"
   },
@@ -15864,7 +15864,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ナイロン",
     pron: "ナイロン",
     letterOrder: 92,
-    letter: "ナ",
+    letter: "な",
     type: "nan",
     meaning: "尼龍"
   },
@@ -15873,7 +15873,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ナンバー",
     pron: "ナンバー",
     letterOrder: 92,
-    letter: "ナ",
+    letter: "な",
     type: "nan",
     meaning: "數位"
   },
@@ -15882,7 +15882,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ネックレス",
     pron: "ネックレス",
     letterOrder: 95,
-    letter: "ネ",
+    letter: "ね",
     type: "nan",
     meaning: "項鍊"
   },
@@ -15891,7 +15891,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ハンドル",
     pron: "ハンドル",
     letterOrder: 97,
-    letter: "ハ",
+    letter: "は",
     type: "nan",
     meaning: "把手、方向盤"
   },
@@ -15900,7 +15900,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ファスナー",
     pron: "ファスナー",
     letterOrder: 99,
-    letter: "フ",
+    letter: "ふ",
     type: "nan",
     meaning: "緊固件、拉鍊"
   },
@@ -15909,7 +15909,7 @@ const n2WordsZhTW: WordData[] = [
     words: "フライパン",
     pron: "フライパン",
     letterOrder: 99,
-    letter: "フ",
+    letter: "ふ",
     type: "nan",
     meaning: "煎鍋、煎鍋"
   },
@@ -15918,7 +15918,7 @@ const n2WordsZhTW: WordData[] = [
     words: "フリー",
     pron: "フリー",
     letterOrder: 99,
-    letter: "フ",
+    letter: "ふ",
     type: "nan",
     meaning: "自由的"
   },
@@ -15927,7 +15927,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ヘリコプター",
     pron: "ヘリコプター",
     letterOrder: 100,
-    letter: "ヘ",
+    letter: "へ",
     type: "nan",
     meaning: "直升機"
   },
@@ -15936,7 +15936,7 @@ const n2WordsZhTW: WordData[] = [
     words: "マイナス",
     pron: "マイナス",
     letterOrder: 102,
-    letter: "マ",
+    letter: "ま",
     type: "nan",
     meaning: "減"
   },
@@ -15945,7 +15945,7 @@ const n2WordsZhTW: WordData[] = [
     words: "マスク",
     pron: "マスク",
     letterOrder: 102,
-    letter: "マ",
+    letter: "ま",
     type: "nan",
     meaning: "面具"
   },
@@ -15954,7 +15954,7 @@ const n2WordsZhTW: WordData[] = [
     words: "マフラー",
     pron: "マフラー",
     letterOrder: 102,
-    letter: "マ",
+    letter: "ま",
     type: "nan",
     meaning: "圍巾、圍巾"
   },
@@ -15963,7 +15963,7 @@ const n2WordsZhTW: WordData[] = [
     words: "マラソン",
     pron: "マラソン",
     letterOrder: 102,
-    letter: "マ",
+    letter: "ま",
     type: "nan",
     meaning: "馬拉松"
   },
@@ -15972,7 +15972,7 @@ const n2WordsZhTW: WordData[] = [
     words: "マンション",
     pron: "マンション",
     letterOrder: 102,
-    letter: "マ",
+    letter: "ま",
     type: "nan",
     meaning: "大型公寓,公寓大樓"
   },
@@ -15981,7 +15981,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ミシン",
     pron: "ミシン",
     letterOrder: 103,
-    letter: "ミ",
+    letter: "み",
     type: "nan",
     meaning: "縫紉機"
   },
@@ -15990,7 +15990,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ミリ",
     pron: "ミリ",
     letterOrder: 103,
-    letter: "ミ",
+    letter: "み",
     type: "nan",
     meaning: "毫-,10^-3"
   },
@@ -15999,7 +15999,7 @@ const n2WordsZhTW: WordData[] = [
     words: "メーター",
     pron: "メーター",
     letterOrder: 105,
-    letter: "メ",
+    letter: "め",
     type: "nan",
     meaning: "米（鐘）"
   },
@@ -16008,7 +16008,7 @@ const n2WordsZhTW: WordData[] = [
     words: "メニュー",
     pron: "メニュー",
     letterOrder: 105,
-    letter: "メ",
+    letter: "め",
     type: "nan",
     meaning: "選單"
   },
@@ -16017,7 +16017,7 @@ const n2WordsZhTW: WordData[] = [
     words: "モーター",
     pron: "モーター",
     letterOrder: 106,
-    letter: "モ",
+    letter: "も",
     type: "nan",
     meaning: "引擎"
   },
@@ -16026,7 +16026,7 @@ const n2WordsZhTW: WordData[] = [
     words: "モダン",
     pron: "モダン",
     letterOrder: 106,
-    letter: "モ",
+    letter: "も",
     type: "nan",
     meaning: "現代的"
   },
@@ -16035,7 +16035,7 @@ const n2WordsZhTW: WordData[] = [
     words: "モデル",
     pron: "モデル",
     letterOrder: 106,
-    letter: "モ",
+    letter: "も",
     type: "nan",
     meaning: "模型"
   },
@@ -16044,7 +16044,7 @@ const n2WordsZhTW: WordData[] = [
     words: "モノレール",
     pron: "モノレール",
     letterOrder: 106,
-    letter: "モ",
+    letter: "も",
     type: "nan",
     meaning: "單軌列車"
   },
@@ -16053,7 +16053,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ラッシュアワー",
     pron: "ラッシュアワー",
     letterOrder: 110,
-    letter: "ラ",
+    letter: "ら",
     type: "nan",
     meaning: "尖峰時段"
   },
@@ -16062,7 +16062,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ランチ",
     pron: "ランチ",
     letterOrder: 110,
-    letter: "ラ",
+    letter: "ら",
     type: "nan",
     meaning: "發表會、午餐"
   },
@@ -16071,7 +16071,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ランニング",
     pron: "ランニング",
     letterOrder: 110,
-    letter: "ラ",
+    letter: "ら",
     type: "nan",
     meaning: "（1）跑步、（2）背心"
   },
@@ -16080,7 +16080,7 @@ const n2WordsZhTW: WordData[] = [
     words: "リズム",
     pron: "リズム",
     letterOrder: 111,
-    letter: "リ",
+    letter: "り",
     type: "nan",
     meaning: "韻律"
   },
@@ -16089,7 +16089,7 @@ const n2WordsZhTW: WordData[] = [
     words: "リットル",
     pron: "リットル",
     letterOrder: 111,
-    letter: "リ",
+    letter: "り",
     type: "nan",
     meaning: "公升"
   },
@@ -16098,7 +16098,7 @@ const n2WordsZhTW: WordData[] = [
     words: "リボン",
     pron: "リボン",
     letterOrder: 111,
-    letter: "リ",
+    letter: "り",
     type: "nan",
     meaning: "絲帶"
   },
@@ -16107,7 +16107,7 @@ const n2WordsZhTW: WordData[] = [
     words: "リポート",
     pron: "リポート",
     letterOrder: 111,
-    letter: "リ",
+    letter: "り",
     type: "nan",
     meaning: "報告、論文"
   },
@@ -16116,7 +16116,7 @@ const n2WordsZhTW: WordData[] = [
     words: "レインコート",
     pron: "レインコート",
     letterOrder: 113,
-    letter: "レ",
+    letter: "れ",
     type: "nan",
     meaning: "雨衣"
   },
@@ -16125,7 +16125,7 @@ const n2WordsZhTW: WordData[] = [
     words: "レクリェーション",
     pron: "レクリェーション",
     letterOrder: 113,
-    letter: "レ",
+    letter: "れ",
     type: "nan",
     meaning: "娛樂"
   },
@@ -16134,7 +16134,7 @@ const n2WordsZhTW: WordData[] = [
     words: "レジャー",
     pron: "レジャー",
     letterOrder: 113,
-    letter: "レ",
+    letter: "れ",
     type: "nan",
     meaning: "閒暇"
   },
@@ -16143,7 +16143,7 @@ const n2WordsZhTW: WordData[] = [
     words: "レベル",
     pron: "レベル",
     letterOrder: 113,
-    letter: "レ",
+    letter: "れ",
     type: "nan",
     meaning: "等級"
   },
@@ -16152,7 +16152,7 @@ const n2WordsZhTW: WordData[] = [
     words: "レンズ",
     pron: "レンズ",
     letterOrder: 113,
-    letter: "レ",
+    letter: "れ",
     type: "nan",
     meaning: "鏡片"
   },
@@ -16161,7 +16161,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ローマじ",
     pron: "ローマじ",
     letterOrder: 114,
-    letter: "ロ",
+    letter: "ろ",
     type: "nan",
     meaning: "羅馬化、羅馬字母"
   },
@@ -16170,7 +16170,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ロッカー",
     pron: "ロッカー",
     letterOrder: 114,
-    letter: "ロ",
+    letter: "ろ",
     type: "nan",
     meaning: "置物櫃"
   },
@@ -16179,7 +16179,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ロビー",
     pron: "ロビー",
     letterOrder: 114,
-    letter: "ロ",
+    letter: "ろ",
     type: "nan",
     meaning: "大廳"
   },
@@ -16188,7 +16188,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ワンピース",
     pron: "ワンピース",
     letterOrder: 115,
-    letter: "ワ",
+    letter: "わ",
     type: "nan",
     meaning: "洋裝"
   },
@@ -16197,7 +16197,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ガム",
     pron: "ガム",
     letterOrder: 118,
-    letter: "ガ",
+    letter: "か",
     type: "nan",
     meaning: "口香糖"
   },
@@ -16206,7 +16206,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ギャング",
     pron: "ギャング",
     letterOrder: 119,
-    letter: "ギ",
+    letter: "き",
     type: "nan",
     meaning: "幫派"
   },
@@ -16215,7 +16215,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ゴム",
     pron: "ゴム",
     letterOrder: 122,
-    letter: "ゴ",
+    letter: "こ",
     type: "nan",
     meaning: "口香糖、橡皮、橡皮擦"
   },
@@ -16224,7 +16224,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ジャーナリスト",
     pron: "ジャーナリスト",
     letterOrder: 124,
-    letter: "ジ",
+    letter: "し",
     type: "nan",
     meaning: "記者"
   },
@@ -16233,7 +16233,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ゼミ",
     pron: "ゼミ",
     letterOrder: 126,
-    letter: "ゼ",
+    letter: "せ",
     type: "nan",
     meaning: "研討會"
   },
@@ -16242,7 +16242,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ダイヤグラム",
     pron: "ダイヤグラム",
     letterOrder: 128,
-    letter: "ダ",
+    letter: "た",
     type: "nan",
     meaning: "圖表"
   },
@@ -16251,7 +16251,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ダイヤモンド",
     pron: "ダイヤモンド",
     letterOrder: 128,
-    letter: "ダ",
+    letter: "た",
     type: "nan",
     meaning: "鑽石"
   },
@@ -16260,7 +16260,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ダイヤル",
     pron: "ダイヤル",
     letterOrder: 128,
-    letter: "ダ",
+    letter: "た",
     type: "nan",
     meaning: "撥號"
   },
@@ -16269,7 +16269,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ダブル",
     pron: "ダブル",
     letterOrder: 128,
-    letter: "ダ",
+    letter: "た",
     type: "nan",
     meaning: "雙倍的"
   },
@@ -16278,7 +16278,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ダム",
     pron: "ダム",
     letterOrder: 128,
-    letter: "ダ",
+    letter: "た",
     type: "nan",
     meaning: "啞的"
   },
@@ -16287,7 +16287,7 @@ const n2WordsZhTW: WordData[] = [
     words: "バイバイ",
     pron: "バイバイ",
     letterOrder: 133,
-    letter: "バ",
+    letter: "は",
     type: "nan",
     meaning: ""
   },
@@ -16296,7 +16296,7 @@ const n2WordsZhTW: WordData[] = [
     words: "バケツ",
     pron: "バケツ",
     letterOrder: 133,
-    letter: "バ",
+    letter: "は",
     type: "nan",
     meaning: "桶、桶"
   },
@@ -16305,7 +16305,7 @@ const n2WordsZhTW: WordData[] = [
     words: "バック",
     pron: "バック",
     letterOrder: 133,
-    letter: "バ",
+    letter: "は",
     type: "nan",
     meaning: "後退"
   },
@@ -16314,7 +16314,7 @@ const n2WordsZhTW: WordData[] = [
     words: "バランス",
     pron: "バランス",
     letterOrder: 133,
-    letter: "バ",
+    letter: "は",
     type: "nan",
     meaning: "平衡"
   },
@@ -16323,7 +16323,7 @@ const n2WordsZhTW: WordData[] = [
     words: "バンド",
     pron: "バンド",
     letterOrder: 133,
-    letter: "バ",
+    letter: "は",
     type: "nan",
     meaning: "樂團"
   },
@@ -16332,7 +16332,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ビタミン",
     pron: "ビタミン",
     letterOrder: 134,
-    letter: "ビ",
+    letter: "ひ",
     type: "nan",
     meaning: "維他命"
   },
@@ -16341,7 +16341,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ビニール",
     pron: "ビニール",
     letterOrder: 134,
-    letter: "ビ",
+    letter: "ひ",
     type: "nan",
     meaning: "乙烯基塑料"
   },
@@ -16350,7 +16350,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ビルディング",
     pron: "ビルディング",
     letterOrder: 134,
-    letter: "ビ",
+    letter: "ひ",
     type: "nan",
     meaning: "大樓"
   },
@@ -16359,7 +16359,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ブラウス",
     pron: "ブラウス",
     letterOrder: 135,
-    letter: "ブ",
+    letter: "ふ",
     type: "nan",
     meaning: "女式襯衫"
   },
@@ -16368,7 +16368,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ブラシ",
     pron: "ブラシ",
     letterOrder: 135,
-    letter: "ブ",
+    letter: "ふ",
     type: "nan",
     meaning: "刷子"
   },
@@ -16377,7 +16377,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ブローチ",
     pron: "ブローチ",
     letterOrder: 135,
-    letter: "ブ",
+    letter: "ふ",
     type: "nan",
     meaning: "胸針"
   },
@@ -16386,7 +16386,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ベテラン",
     pron: "ベテラン",
     letterOrder: 136,
-    letter: "ベ",
+    letter: "へ",
     type: "nan",
     meaning: "老將"
   },
@@ -16395,7 +16395,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ボーナス",
     pron: "ボーナス",
     letterOrder: 137,
-    letter: "ボ",
+    letter: "ほ",
     type: "nan",
     meaning: "獎金"
   },
@@ -16404,7 +16404,7 @@ const n2WordsZhTW: WordData[] = [
     words: "パターン",
     pron: "パターン",
     letterOrder: 138,
-    letter: "パ",
+    letter: "は",
     type: "nan",
     meaning: "圖案"
   },
@@ -16413,7 +16413,7 @@ const n2WordsZhTW: WordData[] = [
     words: "パンツ",
     pron: "パンツ",
     letterOrder: 138,
-    letter: "パ",
+    letter: "は",
     type: "nan",
     meaning: "內褲"
   },
@@ -16422,7 +16422,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ピストル",
     pron: "ピストル",
     letterOrder: 139,
-    letter: "ピ",
+    letter: "ひ",
     type: "nan",
     meaning: "手槍"
   },
@@ -16431,7 +16431,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ピンク",
     pron: "ピンク",
     letterOrder: 139,
-    letter: "ピ",
+    letter: "ひ",
     type: "nan",
     meaning: "粉紅色的"
   },
@@ -16440,7 +16440,7 @@ const n2WordsZhTW: WordData[] = [
     words: "プラスチック",
     pron: "プラスチック",
     letterOrder: 140,
-    letter: "プ",
+    letter: "ふ",
     type: "nan",
     meaning: "塑膠"
   },
@@ -16449,7 +16449,7 @@ const n2WordsZhTW: WordData[] = [
     words: "プラットホーム",
     pron: "プラットホーム",
     letterOrder: 140,
-    letter: "プ",
+    letter: "ふ",
     type: "nan",
     meaning: "平台"
   },
@@ -16458,7 +16458,7 @@ const n2WordsZhTW: WordData[] = [
     words: "プリント",
     pron: "プリント",
     letterOrder: 140,
-    letter: "プ",
+    letter: "ふ",
     type: "nan",
     meaning: "印刷、講義"
   },
@@ -16467,7 +16467,7 @@ const n2WordsZhTW: WordData[] = [
     words: "プログラム",
     pron: "プログラム",
     letterOrder: 140,
-    letter: "プ",
+    letter: "ふ",
     type: "nan",
     meaning: "程式"
   },
@@ -16476,7 +16476,7 @@ const n2WordsZhTW: WordData[] = [
     words: "ペンチ",
     pron: "ペンチ",
     letterOrder: 141,
-    letter: "ペ",
+    letter: "へ",
     type: "nan",
     meaning: "（縮寫）鉗子（字面意思：鉗子）"
   },
@@ -16485,10 +16485,20 @@ const n2WordsZhTW: WordData[] = [
     words: "ポスター",
     pron: "ポスター",
     letterOrder: 142,
-    letter: "ポ",
+    letter: "ほ",
     type: "nan",
     meaning: "海報"
   }
 ];
 
-export default n2WordsZhTW;
+export interface WordData {
+  wordId: number;
+  words: string;
+  pron: string;
+  letterOrder: number;
+  letter: string;
+  type: string;
+  meaning: string;
+}
+
+export default n5KanjiWordsZhTW;
