@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "PandasJp",
+    "name": "熊貓日語學習",
     "slug": "PandasJp",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "pandasapps",
