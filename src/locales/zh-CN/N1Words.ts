@@ -1,6 +1,6 @@
 import { WordData } from "../../types/translation";
 
-const n1WordsZhTW: WordData[] = [
+const n1WordsZhCN: WordData[] = [
   {
     wordId: 1,
     words: "嗚呼",
@@ -8,7 +8,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "感嘆詞如中文噢！唉呀！"
+    meaning: "感叹词如中文噢！唉呀！"
   },
   {
     wordId: 2,
@@ -26,7 +26,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "一如既往，一如既往，同樣"
+    meaning: "一如既往，一如既往，同样"
   },
   {
     wordId: 4,
@@ -35,7 +35,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "禮貌、恭維、讚美"
+    meaning: "礼貌、恭维、赞美"
   },
   {
     wordId: 5,
@@ -44,7 +44,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "對抗，面對，我們之間"
+    meaning: "对抗，面对，我们之间"
   },
   {
     wordId: 6,
@@ -53,7 +53,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "關係"
+    meaning: "关系"
   },
   {
     wordId: 7,
@@ -62,7 +62,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "喜歡和不喜歡"
+    meaning: "喜欢和不喜欢"
   },
   {
     wordId: 8,
@@ -71,7 +71,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "間隔"
+    meaning: "间隔"
   },
   {
     wordId: 9,
@@ -89,7 +89,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "敢於，挑戰"
+    meaning: "敢于，挑战"
   },
   {
     wordId: 11,
@@ -98,7 +98,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "仰望、尊敬、依賴"
+    meaning: "仰望、尊敬、依赖"
   },
   {
     wordId: 12,
@@ -116,7 +116,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "亞目，亞科"
+    meaning: "亚目，亚科"
   },
   {
     wordId: 14,
@@ -125,7 +125,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "銅"
+    meaning: "铜"
   },
   {
     wordId: 15,
@@ -134,7 +134,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "證明，證據"
+    meaning: "证明，证据"
   },
   {
     wordId: 16,
@@ -143,7 +143,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "赤字，出現赤字"
+    meaning: "赤字，出现赤字"
   },
   {
     wordId: 17,
@@ -152,7 +152,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "傳遞、花費、揭示"
+    meaning: "传递、花费、揭示"
   },
   {
     wordId: 18,
@@ -161,7 +161,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "嬰兒，幼兒"
+    meaning: "婴儿，幼儿"
   },
   {
     wordId: 19,
@@ -170,7 +170,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "明顯的，明顯的，明顯的"
+    meaning: "明显的，明显的，明显的"
   },
   {
     wordId: 20,
@@ -179,7 +179,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "變紅，變紅，臉紅"
+    meaning: "变红，变红，脸红"
   },
   {
     wordId: 21,
@@ -188,7 +188,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "坡度、預支收入、作物產量"
+    meaning: "坡度、预支收入、作物产量"
   },
   {
     wordId: 22,
@@ -197,7 +197,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "進入，上升，升起"
+    meaning: "进入，上升，升起"
   },
   {
     wordId: 23,
@@ -206,7 +206,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "明亮，開朗"
+    meaning: "明亮，开朗"
   },
   {
     wordId: 24,
@@ -224,7 +224,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "空置房間出租或租賃"
+    meaning: "空置房间出租或租赁"
   },
   {
     wordId: 26,
@@ -233,7 +233,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "辭職、接受、安慰"
+    meaning: "辞职、接受、安慰"
   },
   {
     wordId: 27,
@@ -242,7 +242,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "感到驚訝，震驚"
+    meaning: "感到惊讶，震惊"
   },
   {
     wordId: 28,
@@ -251,7 +251,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "邪惡，惡行"
+    meaning: "邪恶，恶行"
   },
   {
     wordId: 29,
@@ -260,7 +260,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "皺巴巴的汁液"
+    meaning: "皱巴巴的汁液"
   },
   {
     wordId: 30,
@@ -269,7 +269,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "艷麗的，華而不實的，過度的"
+    meaning: "艳丽的，华而不实的，过度的"
   },
   {
     wordId: 31,
@@ -287,7 +287,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "接下來，接下來"
+    meaning: "接下来，接下来"
   },
   {
     wordId: 33,
@@ -305,7 +305,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "嚮往、渴望、志向"
+    meaning: "向往、渴望、志向"
   },
   {
     wordId: 35,
@@ -314,7 +314,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "亞麻，麻布，大麻"
+    meaning: "亚麻，麻布，大麻"
   },
   {
     wordId: 36,
@@ -323,7 +323,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "村莊的一部分"
+    meaning: "村庄的一部分"
   },
   {
     wordId: 37,
@@ -332,7 +332,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "後天"
+    meaning: "后天"
   },
   {
     wordId: 38,
@@ -341,7 +341,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "睡過頭，起床晚"
+    meaning: "睡过头，起床晚"
   },
   {
     wordId: 39,
@@ -350,7 +350,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "可憐的，悲慘的，可恥的"
+    meaning: "可怜的，悲惨的，可耻的"
   },
   {
     wordId: 40,
@@ -359,7 +359,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "欺騙"
+    meaning: "欺骗"
   },
   {
     wordId: 41,
@@ -368,7 +368,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "生動、清晰、輝煌"
+    meaning: "生动、清晰、辉煌"
   },
   {
     wordId: 42,
@@ -377,7 +377,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "嘲笑，嘲諷"
+    meaning: "嘲笑，嘲讽"
   },
   {
     wordId: 43,
@@ -386,7 +386,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "風味、意義、重要性"
+    meaning: "风味、意义、重要性"
   },
   {
     wordId: 44,
@@ -395,7 +395,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "東部，日本東部"
+    meaning: "东部，日本东部"
   },
   {
     wordId: 45,
@@ -404,7 +404,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "匆忙，不耐煩"
+    meaning: "匆忙，不耐烦"
   },
   {
     wordId: 46,
@@ -413,7 +413,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "（英國）那裡，那邊，那個地方"
+    meaning: "（英国）那里，那边，那个地方"
   },
   {
     wordId: 47,
@@ -422,7 +422,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "價值、價格、成本"
+    meaning: "价值、价格、成本"
   },
   {
     wordId: 48,
@@ -449,7 +449,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "另一個人，無關的人，局外人"
+    meaning: "另一个人，无关的人，局外人"
   },
   {
     wordId: 51,
@@ -458,7 +458,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "命中，成功，達到目標"
+    meaning: "命中，成功，达到目标"
   },
   {
     wordId: 52,
@@ -467,7 +467,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "周圍、附近"
+    meaning: "周围、附近"
   },
   {
     wordId: 53,
@@ -485,7 +485,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "這裡和那裡"
+    meaning: "这里和那里"
   },
   {
     wordId: 55,
@@ -494,7 +494,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "那裡，那邊，那"
+    meaning: "那里，那边，那"
   },
   {
     wordId: 56,
@@ -503,7 +503,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "這裡和那裡"
+    meaning: "这里和那里"
   },
   {
     wordId: 57,
@@ -512,7 +512,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "惡化，惡化，惡化"
+    meaning: "恶化，恶化，恶化"
   },
   {
     wordId: 58,
@@ -521,7 +521,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "治療、服務"
+    meaning: "治疗、服务"
   },
   {
     wordId: 59,
@@ -530,7 +530,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "不夠，太快（短、長等）"
+    meaning: "不够，太快（短、长等）"
   },
   {
     wordId: 60,
@@ -539,7 +539,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "辱罵、侮辱、誹謗"
+    meaning: "辱骂、侮辱、诽谤"
   },
   {
     wordId: 61,
@@ -548,7 +548,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "容易地, 輕易地, 迅速地"
+    meaning: "容易地, 轻易地, 迅速地"
   },
   {
     wordId: 62,
@@ -557,7 +557,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "壓力、脅迫、壓迫"
+    meaning: "压力、胁迫、压迫"
   },
   {
     wordId: 63,
@@ -575,7 +575,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "下訂單，下訂單"
+    meaning: "下订单，下订单"
   },
   {
     wordId: 65,
@@ -584,7 +584,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "壓力，壓力"
+    meaning: "压力，压力"
   },
   {
     wordId: 66,
@@ -593,7 +593,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "對象、目的、結果"
+    meaning: "对象、目的、结果"
   },
   {
     wordId: 67,
@@ -611,7 +611,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "音標對應字符、替代字符"
+    meaning: "音标对应字符、替代字符"
   },
   {
     wordId: 69,
@@ -620,7 +620,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "適用（規則）"
+    meaning: "适用（规则）"
   },
   {
     wordId: 70,
@@ -629,7 +629,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "運用，適應"
+    meaning: "运用，适应"
   },
   {
     wordId: 71,
@@ -638,7 +638,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "解決"
+    meaning: "解决"
   },
   {
     wordId: 72,
@@ -647,7 +647,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "繼承人，繼任者"
+    meaning: "继承人，继任者"
   },
   {
     wordId: 73,
@@ -656,7 +656,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "推遲，延期"
+    meaning: "推迟，延期"
   },
   {
     wordId: 74,
@@ -674,7 +674,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "那邊"
+    meaning: "那边"
   },
   {
     wordId: 76,
@@ -683,7 +683,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "油畫"
+    meaning: "油画"
   },
   {
     wordId: 77,
@@ -692,7 +692,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "燒焦"
+    meaning: "烧焦"
   },
   {
     wordId: 78,
@@ -701,7 +701,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "氾濫，溢出，溢出"
+    meaning: "泛滥，溢出，溢出"
   },
   {
     wordId: 79,
@@ -719,7 +719,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "像被寵壞的孩子一樣，奉承"
+    meaning: "像被宠坏的孩子一样，奉承"
   },
   {
     wordId: 81,
@@ -737,7 +737,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "甜味、溫和、奉承"
+    meaning: "甜味、温和、奉承"
   },
   {
     wordId: 83,
@@ -746,7 +746,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "天上的，帝國的"
+    meaning: "天上的，帝国的"
   },
   {
     wordId: 84,
@@ -755,7 +755,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "網絡，網絡"
+    meaning: "网络，网络"
   },
   {
     wordId: 85,
@@ -773,7 +773,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "操縱，操作，操縱"
+    meaning: "操纵，操作，操纵"
   },
   {
     wordId: 87,
@@ -782,7 +782,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "害怕，疑慮，懷疑"
+    meaning: "害怕，疑虑，怀疑"
   },
   {
     wordId: 88,
@@ -791,7 +791,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "不確定的，模糊的，含糊的"
+    meaning: "不确定的，模糊的，含糊的"
   },
   {
     wordId: 89,
@@ -800,7 +800,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "錯誤、失誤、失當"
+    meaning: "错误、失误、失当"
   },
   {
     wordId: 90,
@@ -809,7 +809,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "犯錯"
+    meaning: "犯错"
   },
   {
     wordId: 91,
@@ -818,7 +818,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "行人徒步區"
+    meaning: "行人徒步区"
   },
   {
     wordId: 92,
@@ -836,7 +836,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "哦，啊，鋸緣鱸魚（Niphon spinosus）"
+    meaning: "哦，啊，锯缘鲈鱼（Niphon spinosus）"
   },
   {
     wordId: 94,
@@ -854,7 +854,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "毀壞，破壞，損壞"
+    meaning: "毁坏，破坏，损坏"
   },
   {
     wordId: 96,
@@ -863,7 +863,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "提綱、概要"
+    meaning: "提纲、概要"
   },
   {
     wordId: 97,
@@ -872,7 +872,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "爭議、紛爭、爭吵"
+    meaning: "争议、纷争、争吵"
   },
   {
     wordId: 98,
@@ -890,7 +890,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "粗魯的，粗魯的"
+    meaning: "粗鲁的，粗鲁的"
   },
   {
     wordId: 100,
@@ -899,7 +899,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "全部，每一個"
+    meaning: "全部，每一个"
   },
   {
     wordId: 101,
@@ -908,7 +908,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "一種餅乾，卡通人物"
+    meaning: "一种饼干，卡通人物"
   },
   {
     wordId: 102,
@@ -917,7 +917,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "具體化，具體化"
+    meaning: "具体化，具体化"
   },
   {
     wordId: 103,
@@ -926,7 +926,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "出現，進入視線，變得可見"
+    meaning: "出现，进入视线，变得可见"
   },
   {
     wordId: 104,
@@ -935,7 +935,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "謝謝"
+    meaning: "谢谢"
   },
   {
     wordId: 105,
@@ -944,7 +944,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "狀況、條件、狀況"
+    meaning: "状况、条件、状况"
   },
   {
     wordId: 106,
@@ -953,7 +953,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "事實"
+    meaning: "事实"
   },
   {
     wordId: 107,
@@ -962,7 +962,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "某個...，一些..."
+    meaning: "某个...，一些..."
   },
   {
     wordId: 108,
@@ -980,7 +980,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "一件事或另一件事，這個和那個，這個或那個"
+    meaning: "一件事或另一件事，这个和那个，这个或那个"
   },
   {
     wordId: 110,
@@ -989,7 +989,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "聯合起來，面對，團結起來"
+    meaning: "联合起来，面对，团结起来"
   },
   {
     wordId: 111,
@@ -998,7 +998,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "接合在一起，相對，面對"
+    meaning: "接合在一起，相对，面对"
   },
   {
     wordId: 112,
@@ -1016,7 +1016,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "變得困惑（不安、混亂）"
+    meaning: "变得困惑（不安、混乱）"
   },
   {
     wordId: 114,
@@ -1025,7 +1025,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "暗殺"
+    meaning: "暗杀"
   },
   {
     wordId: 115,
@@ -1043,7 +1043,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "提示，建議"
+    meaning: "提示，建议"
   },
   {
     wordId: 117,
@@ -1052,7 +1052,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "焦慮，思考"
+    meaning: "焦虑，思考"
   },
   {
     wordId: 118,
@@ -1070,7 +1070,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "果然，和往常一樣"
+    meaning: "果然，和往常一样"
   },
   {
     wordId: 120,
@@ -1079,7 +1079,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "nan",
-    meaning: "不太（此形式僅用作副詞），不多，剩餘"
+    meaning: "不太（此形式仅用作副词），不多，剩余"
   },
   {
     wordId: 121,
@@ -1088,7 +1088,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "根據"
+    meaning: "根据"
   },
   {
     wordId: 122,
@@ -1106,7 +1106,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "那個，義大利"
+    meaning: "那个，义大利"
   },
   {
     wordId: 124,
@@ -1124,7 +1124,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "中等，正確，隨機"
+    meaning: "中等，正确，随机"
   },
   {
     wordId: 126,
@@ -1133,7 +1133,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "藉口，解釋"
+    meaning: "借口，解释"
   },
   {
     wordId: 127,
@@ -1142,7 +1142,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "離家出走, 離開家"
+    meaning: "离家出走, 离开家"
   },
   {
     wordId: 128,
@@ -1151,7 +1151,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "房東"
+    meaning: "房东"
   },
   {
     wordId: 129,
@@ -1160,7 +1160,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "怎樣"
+    meaning: "怎样"
   },
   {
     wordId: 130,
@@ -1169,7 +1169,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "使復活，使復甦，利用"
+    meaning: "使复活，使复苏，利用"
   },
   {
     wordId: 131,
@@ -1187,7 +1187,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "怎麼樣？以什麼方式？多少？"
+    meaning: "怎么样？以什么方式？多少？"
   },
   {
     wordId: 133,
@@ -1196,7 +1196,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "確實，確實，短語意思為同意"
+    meaning: "确实，确实，短语意思为同意"
   },
   {
     wordId: 134,
@@ -1205,7 +1205,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "扭曲，偏離，偏轉"
+    meaning: "扭曲，偏离，偏转"
   },
   {
     wordId: 135,
@@ -1214,7 +1214,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "憤怒、仇恨"
+    meaning: "愤怒、仇恨"
   },
   {
     wordId: 136,
@@ -1223,7 +1223,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "生氣，生氣"
+    meaning: "生气，生气"
   },
   {
     wordId: 137,
@@ -1232,7 +1232,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "別緻、風格、純淨"
+    meaning: "别致、风格、纯净"
   },
   {
     wordId: 138,
@@ -1241,7 +1241,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "反對、異議、抗議"
+    meaning: "反对、异议、抗议"
   },
   {
     wordId: 139,
@@ -1250,7 +1250,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "區域外"
+    meaning: "区域外"
   },
   {
     wordId: 140,
@@ -1259,7 +1259,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "充滿熱情"
+    meaning: "充满热情"
   },
   {
     wordId: 141,
@@ -1268,7 +1268,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "細節、整個故事、事件的順序"
+    meaning: "细节、整个故事、事件的顺序"
   },
   {
     wordId: 142,
@@ -1277,7 +1277,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "誤解、隔閡、分歧"
+    meaning: "误解、隔阂、分歧"
   },
   {
     wordId: 143,
@@ -1295,7 +1295,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "達到高潮"
+    meaning: "达到高潮"
   },
   {
     wordId: 145,
@@ -1304,7 +1304,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "戰爭、戰役、戰役"
+    meaning: "战争、战役、战役"
   },
   {
     wordId: 146,
@@ -1313,7 +1313,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "戰爭、戰役、戰役"
+    meaning: "战争、战役、战役"
   },
   {
     wordId: 147,
@@ -1322,7 +1322,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "撫養、訓練、養育"
+    meaning: "抚养、训练、养育"
   },
   {
     wordId: 148,
@@ -1331,7 +1331,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "許多，眾多"
+    meaning: "许多，众多"
   },
   {
     wordId: 149,
@@ -1340,7 +1340,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "佈置（花）"
+    meaning: "布置（花）"
   },
   {
     wordId: 150,
@@ -1349,7 +1349,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "不同意見，反對意見"
+    meaning: "不同意见，反对意见"
   },
   {
     wordId: 151,
@@ -1358,7 +1358,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "意圖、想法、傾向"
+    meaning: "意图、想法、倾向"
   },
   {
     wordId: 152,
@@ -1367,7 +1367,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "切換到"
+    meaning: "切换到"
   },
   {
     wordId: 153,
@@ -1376,7 +1376,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "現在，來吧，好吧"
+    meaning: "现在，来吧，好吧"
   },
   {
     wordId: 154,
@@ -1394,7 +1394,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "刻有銘文的石碑"
+    meaning: "刻有铭文的石碑"
   },
   {
     wordId: 156,
@@ -1403,7 +1403,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "戲弄、折磨、迫害"
+    meaning: "戏弄、折磨、迫害"
   },
   {
     wordId: 157,
@@ -1421,7 +1421,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "衣服, 服飾, 服裝"
+    meaning: "衣服, 服饰, 服装"
   },
   {
     wordId: 159,
@@ -1430,7 +1430,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "觸摸，竄改"
+    meaning: "触摸，窜改"
   },
   {
     wordId: 160,
@@ -1439,7 +1439,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "哪裡、哪個、誰"
+    meaning: "哪里、哪个、谁"
   },
   {
     wordId: 161,
@@ -1448,7 +1448,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "異性"
+    meaning: "异性"
   },
   {
     wordId: 162,
@@ -1457,7 +1457,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "歷史遺址（遺跡）"
+    meaning: "历史遗址（遗迹）"
   },
   {
     wordId: 163,
@@ -1475,7 +1475,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "依賴, 倚賴, 依靠"
+    meaning: "依赖, 倚赖, 依靠"
   },
   {
     wordId: 165,
@@ -1484,7 +1484,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "將（待售貨品）託付給某公司，委託（某人某物），委託"
+    meaning: "将（待售货品）托付给某公司，委托（某人某物），委托"
   },
   {
     wordId: 166,
@@ -1493,7 +1493,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "戲弄，惡作劇，捉弄"
+    meaning: "戏弄，恶作剧，捉弄"
   },
   {
     wordId: 167,
@@ -1502,7 +1502,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "（頭頂）, 峰頂, 尖頂"
+    meaning: "（头顶）, 峰顶, 尖顶"
   },
   {
     wordId: 168,
@@ -1511,7 +1511,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "飯前表達感激之情"
+    meaning: "饭前表达感激之情"
   },
   {
     wordId: 169,
@@ -1520,7 +1520,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "非常，極其，極其"
+    meaning: "非常，极其，极其"
   },
   {
     wordId: 170,
@@ -1529,7 +1529,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "受傷，感到疼痛，受傷"
+    meaning: "受伤，感到疼痛，受伤"
   },
   {
     wordId: 171,
@@ -1538,7 +1538,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "傷害，損傷，造成疼痛"
+    meaning: "伤害，损伤，造成疼痛"
   },
   {
     wordId: 172,
@@ -1556,7 +1556,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "憐憫、同情、安慰"
+    meaning: "怜悯、同情、安慰"
   },
   {
     wordId: 174,
@@ -1565,7 +1565,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "市場，公平"
+    meaning: "市场，公平"
   },
   {
     wordId: 175,
@@ -1574,7 +1574,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "地點、狀況、位置"
+    meaning: "地点、状况、位置"
   },
   {
     wordId: 176,
@@ -1592,7 +1592,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "無條件地，通常地"
+    meaning: "无条件地，通常地"
   },
   {
     wordId: 178,
@@ -1601,7 +1601,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "陌生，從未見過"
+    meaning: "陌生，从未见过"
   },
   {
     wordId: 179,
@@ -1610,7 +1610,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "單字"
+    meaning: "单字"
   },
   {
     wordId: 180,
@@ -1628,7 +1628,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "固定的，確定的，明確的"
+    meaning: "固定的，确定的，明确的"
   },
   {
     wordId: 182,
@@ -1637,7 +1637,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "顯著的，相當的"
+    meaning: "显著的，相当的"
   },
   {
     wordId: 183,
@@ -1646,7 +1646,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "所有在場的人、所有相關的人、我們所有人"
+    meaning: "所有在场的人、所有相关的人、我们所有人"
   },
   {
     wordId: 184,
@@ -1655,7 +1655,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "一個人"
+    meaning: "一个人"
   },
   {
     wordId: 185,
@@ -1682,7 +1682,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "離別"
+    meaning: "离别"
   },
   {
     wordId: 188,
@@ -1691,7 +1691,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "一面、一期、頭版"
+    meaning: "一面、一期、头版"
   },
   {
     wordId: 189,
@@ -1709,7 +1709,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "一致性、均勻性、相似性"
+    meaning: "一致性、均匀性、相似性"
   },
   {
     wordId: 191,
@@ -1718,7 +1718,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "均勻性、一致性、單調性"
+    meaning: "均匀性、一致性、单调性"
   },
   {
     wordId: 192,
@@ -1727,7 +1727,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "一系列、一鏈、一令（紙）"
+    meaning: "一系列、一链、一令（纸）"
   },
   {
     wordId: 193,
@@ -1736,7 +1736,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "何時、多久"
+    meaning: "何时、多久"
   },
   {
     wordId: 194,
@@ -1745,7 +1745,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "某時，某天，某一天"
+    meaning: "某时，某天，某一天"
   },
   {
     wordId: 195,
@@ -1754,7 +1754,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "全部一起，一批，一塊"
+    meaning: "全部一起，一批，一块"
   },
   {
     wordId: 196,
@@ -1763,7 +1763,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "喝！ （聚會時反覆說）"
+    meaning: "喝！ （聚会时反复说）"
   },
   {
     wordId: 197,
@@ -1781,7 +1781,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "全部，一切，無一例外"
+    meaning: "全部，一切，无一例外"
   },
   {
     wordId: 199,
@@ -1799,7 +1799,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "寧願早點，不如"
+    meaning: "宁愿早点，不如"
   },
   {
     wordId: 201,
@@ -1808,7 +1808,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "一個地區、一個區域、整個地方"
+    meaning: "一个地区、一个区域、整个地方"
   },
   {
     wordId: 202,
@@ -1817,7 +1817,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "任何時候，總是，隨時"
+    meaning: "任何时候，总是，随时"
   },
   {
     wordId: 203,
@@ -1826,7 +1826,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "不知不覺中"
+    meaning: "不知不觉中"
   },
   {
     wordId: 204,
@@ -1835,7 +1835,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "一次失敗"
+    meaning: "一次失败"
   },
   {
     wordId: 205,
@@ -1844,7 +1844,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "徹底改變，徹底轉變"
+    meaning: "彻底改变，彻底转变"
   },
   {
     wordId: 206,
@@ -1853,7 +1853,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "永遠地，永遠地，永遠地"
+    meaning: "永远地，永远地，永远地"
   },
   {
     wordId: 207,
@@ -1862,7 +1862,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "總是、通常、每次"
+    meaning: "总是、通常、每次"
   },
   {
     wordId: 208,
@@ -1871,7 +1871,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "意圖、目的、設計"
+    meaning: "意图、目的、设计"
   },
   {
     wordId: 209,
@@ -1880,7 +1880,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "改變"
+    meaning: "改变"
   },
   {
     wordId: 210,
@@ -1889,7 +1889,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "繼續（例如在儀式上）經營生意"
+    meaning: "继续（例如在仪式上）经营生意"
   },
   {
     wordId: 211,
@@ -1898,7 +1898,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "空閒時間，休閒，休假"
+    meaning: "空闲时间，休闲，休假"
   },
   {
     wordId: 212,
@@ -1907,7 +1907,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "挑戰、爭奪、做愛"
+    meaning: "挑战、争夺、做爱"
   },
   {
     wordId: 213,
@@ -1916,7 +1916,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "閃電"
+    meaning: "闪电"
   },
   {
     wordId: 214,
@@ -1934,7 +1934,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "祈禱、懇求"
+    meaning: "祈祷、恳求"
   },
   {
     wordId: 216,
@@ -1952,7 +1952,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "現在，這麼晚了"
+    meaning: "现在，这么晚了"
   },
   {
     wordId: 218,
@@ -1961,7 +1961,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "到目前為止，還沒有（否定）"
+    meaning: "到目前为止，还没有（否定）"
   },
   {
     wordId: 219,
@@ -1970,7 +1970,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "移民, 移居國外, 移居國外者"
+    meaning: "移民, 移居国外, 移居国外者"
   },
   {
     wordId: 220,
@@ -1979,7 +1979,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "不情願地、勉強地、搖頭拒絕（對孩子而言）"
+    meaning: "不情愿地、勉强地、摇头拒绝（对孩子而言）"
   },
   {
     wordId: 221,
@@ -1988,7 +1988,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "貪婪、粗俗、卑鄙"
+    meaning: "贪婪、粗俗、卑鄙"
   },
   {
     wordId: 222,
@@ -2006,7 +2006,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "令人厭惡的，令人不快的"
+    meaning: "令人厌恶的，令人不快的"
   },
   {
     wordId: 224,
@@ -2015,7 +2015,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "越來越, 更加, 越來越"
+    meaning: "越来越, 更加, 越来越"
   },
   {
     wordId: 225,
@@ -2024,7 +2024,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "意志、願望、野心"
+    meaning: "意志、愿望、野心"
   },
   {
     wordId: 226,
@@ -2033,7 +2033,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "變得緊張、煩躁"
+    meaning: "变得紧张、烦躁"
   },
   {
     wordId: 227,
@@ -2042,7 +2042,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "入口，大門，通道"
+    meaning: "入口，大门，通道"
   },
   {
     wordId: 228,
@@ -2060,7 +2060,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "權力、力量、權威"
+    meaning: "权力、力量、权威"
   },
   {
     wordId: 230,
@@ -2069,7 +2069,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "進入，進入，進來"
+    meaning: "进入，进入，进来"
   },
   {
     wordId: 231,
@@ -2078,7 +2078,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "衣服，服飾，服裝"
+    meaning: "衣服，服饰，服装"
   },
   {
     wordId: 232,
@@ -2087,7 +2087,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "各種各樣的"
+    meaning: "各种各样的"
   },
   {
     wordId: 233,
@@ -2096,7 +2096,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "不同意見，反對意見"
+    meaning: "不同意见，反对意见"
   },
   {
     wordId: 234,
@@ -2105,7 +2105,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "所謂的"
+    meaning: "所谓的"
   },
   {
     wordId: 235,
@@ -2114,7 +2114,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "印章，圖章，標記"
+    meaning: "印章，图章，标记"
   },
   {
     wordId: 236,
@@ -2123,7 +2123,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "成員"
+    meaning: "成员"
   },
   {
     wordId: 237,
@@ -2132,7 +2132,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "印章，圖章"
+    meaning: "印章，图章"
   },
   {
     wordId: 238,
@@ -2141,7 +2141,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "憂鬱，憂鬱"
+    meaning: "忧郁，忧郁"
   },
   {
     wordId: 239,
@@ -2150,7 +2150,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "nan",
-    meaning: "退休, 退休人員"
+    meaning: "退休, 退休人员"
   },
   {
     wordId: 240,
@@ -2159,7 +2159,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "高與低、上與下、卸載與裝載"
+    meaning: "高与低、上与下、卸载与装载"
   },
   {
     wordId: 241,
@@ -2177,7 +2177,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "漂浮，浮出水面，浮現在腦海中"
+    meaning: "漂浮，浮出水面，浮现在脑海中"
   },
   {
     wordId: 243,
@@ -2186,7 +2186,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "通過（考試）"
+    meaning: "通过（考试）"
   },
   {
     wordId: 244,
@@ -2195,7 +2195,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "接收，驗收"
+    meaning: "接收，验收"
   },
   {
     wordId: 245,
@@ -2213,7 +2213,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "繼承，成功，接管"
+    meaning: "继承，成功，接管"
   },
   {
     wordId: 247,
@@ -2222,7 +2222,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "被接受，收到（申請）"
+    meaning: "被接受，收到（申请）"
   },
   {
     wordId: 248,
@@ -2231,7 +2231,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "接住，阻止打擊，對…作出反應"
+    meaning: "接住，阻止打击，对…作出反应"
   },
   {
     wordId: 249,
@@ -2240,7 +2240,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "收據"
+    meaning: "收据"
   },
   {
     wordId: 250,
@@ -2249,7 +2249,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "被動語態"
+    meaning: "被动语态"
   },
   {
     wordId: 251,
@@ -2258,7 +2258,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "運動、活動、趨勢"
+    meaning: "运动、活动、趋势"
   },
   {
     wordId: 252,
@@ -2285,7 +2285,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "漩渦"
+    meaning: "漩涡"
   },
   {
     wordId: 255,
@@ -2294,7 +2294,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "被埋葬，被包圍，溢出"
+    meaning: "被埋葬，被包围，溢出"
   },
   {
     wordId: 256,
@@ -2303,7 +2303,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "說謊者（有時不太認真地說），說謊者"
+    meaning: "说谎者（有时不太认真地说），说谎者"
   },
   {
     wordId: 257,
@@ -2312,7 +2312,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "商務會議、事先安排、預約"
+    meaning: "商务会议、事先安排、预约"
   },
   {
     wordId: 258,
@@ -2330,7 +2330,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "停止，中止，中斷"
+    meaning: "停止，中止，中断"
   },
   {
     wordId: 260,
@@ -2339,7 +2339,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "否定，否認，負面"
+    meaning: "否定，否认，负面"
   },
   {
     wordId: 261,
@@ -2348,7 +2348,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "打入（如釘樁）、投入、射入"
+    meaning: "打入（如钉桩）、投入、射入"
   },
   {
     wordId: 262,
@@ -2366,7 +2366,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "項目、細目、分類"
+    meaning: "项目、细目、分类"
   },
   {
     wordId: 264,
@@ -2375,7 +2375,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "影印件、副本、傳真件"
+    meaning: "影印件、副本、传真件"
   },
   {
     wordId: 265,
@@ -2384,7 +2384,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "訴訟，投訴"
+    meaning: "诉讼，投诉"
   },
   {
     wordId: 266,
@@ -2393,7 +2393,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "陰鬱的，令人沮喪的"
+    meaning: "阴郁的，令人沮丧的"
   },
   {
     wordId: 267,
@@ -2429,7 +2429,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "陰雨天氣"
+    meaning: "阴雨天气"
   },
   {
     wordId: 271,
@@ -2438,7 +2438,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "麵條（日文）"
+    meaning: "面条（日文）"
   },
   {
     wordId: 272,
@@ -2447,7 +2447,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "敦促，敦促，建議"
+    meaning: "敦促，敦促，建议"
   },
   {
     wordId: 273,
@@ -2465,7 +2465,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "自負、自負、傲慢"
+    meaning: "自负、自负、傲慢"
   },
   {
     wordId: 275,
@@ -2501,7 +2501,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "生育、分娩、生產"
+    meaning: "生育、分娩、生产"
   },
   {
     wordId: 279,
@@ -2528,7 +2528,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "頂端，尖端"
+    meaning: "顶端，尖端"
   },
   {
     wordId: 282,
@@ -2537,7 +2537,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "內外顛倒"
+    meaning: "内外颠倒"
   },
   {
     wordId: 283,
@@ -2546,7 +2546,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "促銷、特賣、開始銷售"
+    meaning: "促销、特卖、开始销售"
   },
   {
     wordId: 284,
@@ -2555,7 +2555,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "出售，推向市場，流行"
+    meaning: "出售，推向市场，流行"
   },
   {
     wordId: 285,
@@ -2564,7 +2564,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "潮濕, 潮濕, 弄濕"
+    meaning: "潮湿, 潮湿, 弄湿"
   },
   {
     wordId: 286,
@@ -2573,7 +2573,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "吵鬧的，喧鬧的，挑剔的"
+    meaning: "吵闹的，喧闹的，挑剔的"
   },
   {
     wordId: 287,
@@ -2582,7 +2582,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "銷售量"
+    meaning: "销售量"
   },
   {
     wordId: 288,
@@ -2591,7 +2591,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "輕浮、善變、放蕩"
+    meaning: "轻浮、善变、放荡"
   },
   {
     wordId: 289,
@@ -2600,7 +2600,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "上部，上游，（舞台的）左側"
+    meaning: "上部，上游，（舞台的）左侧"
   },
   {
     wordId: 290,
@@ -2618,7 +2618,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "被種植"
+    meaning: "被种植"
   },
   {
     wordId: 292,
@@ -2627,7 +2627,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "管理，行政，運營"
+    meaning: "管理，行政，运营"
   },
   {
     wordId: 293,
@@ -2636,7 +2636,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "乏味、無聊、厭倦"
+    meaning: "乏味、无聊、厌倦"
   },
   {
     wordId: 294,
@@ -2645,7 +2645,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "航運，海上運輸"
+    meaning: "航运，海上运输"
   },
   {
     wordId: 295,
@@ -2654,7 +2654,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "運費、運輸費用、票價"
+    meaning: "运费、运输费用、票价"
   },
   {
     wordId: 296,
@@ -2663,7 +2663,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "等等等等，評論"
+    meaning: "等等等等，评论"
   },
   {
     wordId: 297,
@@ -2672,7 +2672,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "運輸，載運"
+    meaning: "运输，载运"
   },
   {
     wordId: 298,
@@ -2681,7 +2681,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "命運"
+    meaning: "命运"
   },
   {
     wordId: 299,
@@ -2690,7 +2690,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "運輸"
+    meaning: "运输"
   },
   {
     wordId: 300,
@@ -2699,7 +2699,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "nan",
-    meaning: "利用、應用、投資"
+    meaning: "利用、应用、投资"
   },
   {
     wordId: 301,
@@ -2717,7 +2717,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "折疊，層"
+    meaning: "折叠，层"
   },
   {
     wordId: 303,
@@ -2726,7 +2726,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "鰩魚"
+    meaning: "鳐鱼"
   },
   {
     wordId: 304,
@@ -2753,7 +2753,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "健康、衛生、環境衛生"
+    meaning: "健康、卫生、环境卫生"
   },
   {
     wordId: 307,
@@ -2771,7 +2771,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "英雄，偉人"
+    meaning: "英雄，伟人"
   },
   {
     wordId: 309,
@@ -2780,7 +2780,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "液體，流體"
+    meaning: "液体，流体"
   },
   {
     wordId: 310,
@@ -2789,7 +2789,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "戰爭、戰役、戰役"
+    meaning: "战争、战役、战役"
   },
   {
     wordId: 311,
@@ -2798,7 +2798,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "檢查、閱讀"
+    meaning: "检查、阅读"
   },
   {
     wordId: 312,
@@ -2807,7 +2807,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "遊戲、戰利品、獎盃"
+    meaning: "游戏、战利品、奖杯"
   },
   {
     wordId: 313,
@@ -2816,7 +2816,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "領子、衣領、翻領"
+    meaning: "领子、衣领、翻领"
   },
   {
     wordId: 314,
@@ -2825,7 +2825,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "機會、命運、緣分"
+    meaning: "机会、命运、缘分"
   },
   {
     wordId: 315,
@@ -2834,7 +2834,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "鹽"
+    meaning: "盐"
   },
   {
     wordId: 316,
@@ -2843,7 +2843,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "迷人的，迷人的，妖嬈的"
+    meaning: "迷人的，迷人的，妖娆的"
   },
   {
     wordId: 317,
@@ -2852,7 +2852,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "花園（尤其是人造的）"
+    meaning: "花园（尤其是人造的）"
   },
   {
     wordId: 318,
@@ -2861,7 +2861,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "和諧、流暢"
+    meaning: "和谐、流畅"
   },
   {
     wordId: 319,
@@ -2870,7 +2870,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "陽台，門廊，露台"
+    meaning: "阳台，门廊，露台"
   },
   {
     wordId: 320,
@@ -2879,7 +2879,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "海岸，岸邊"
+    meaning: "海岸，岸边"
   },
   {
     wordId: 321,
@@ -2888,7 +2888,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "委婉的，迂迴的，拐彎抹角的"
+    meaning: "委婉的，迂回的，拐弯抹角的"
   },
   {
     wordId: 322,
@@ -2897,7 +2897,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "練習、演習、演習"
+    meaning: "练习、演习、演习"
   },
   {
     wordId: 323,
@@ -2906,7 +2906,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "製作（例如戲劇）、導演"
+    meaning: "制作（例如戏剧）、导演"
   },
   {
     wordId: 324,
@@ -2915,7 +2915,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "演出（一齣戲）、扮演（一個角色）、演（一個角色）"
+    meaning: "演出（一出戏）、扮演（一个角色）、演（一个角色）"
   },
   {
     wordId: 325,
@@ -2933,7 +2933,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "沿著鐵路線"
+    meaning: "沿著铁路线"
   },
   {
     wordId: 327,
@@ -2942,7 +2942,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "求婚、訂婚"
+    meaning: "求婚、订婚"
   },
   {
     wordId: 328,
@@ -2951,7 +2951,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "遙遠的地方，遙遠的地方"
+    meaning: "遥远的地方，遥远的地方"
   },
   {
     wordId: 329,
@@ -2960,7 +2960,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "nan",
-    meaning: "完美、和諧、和平"
+    meaning: "完美、和谐、和平"
   },
   {
     wordId: 330,
@@ -2996,7 +2996,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "驅趕，圍堵，驅趕"
+    meaning: "驱赶，围堵，驱赶"
   },
   {
     wordId: 334,
@@ -3014,7 +3014,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "驅逐，趕出"
+    meaning: "驱逐，赶出"
   },
   {
     wordId: 336,
@@ -3041,7 +3041,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "變老，變老"
+    meaning: "变老，变老"
   },
   {
     wordId: 339,
@@ -3050,7 +3050,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "承擔，欠"
+    meaning: "承担，欠"
   },
   {
     wordId: 340,
@@ -3059,7 +3059,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "緊急狀況"
+    meaning: "紧急状况"
   },
   {
     wordId: 341,
@@ -3077,7 +3077,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "黃色的"
+    meaning: "黄色的"
   },
   {
     wordId: 343,
@@ -3086,7 +3086,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "訂閱、申請"
+    meaning: "订阅、申请"
   },
   {
     wordId: 344,
@@ -3104,7 +3104,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "或許，幾乎所有，大多"
+    meaning: "或许，几乎所有，大多"
   },
   {
     wordId: 346,
@@ -3113,7 +3113,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "大體型，大圖案"
+    meaning: "大体型，大图案"
   },
   {
     wordId: 347,
@@ -3122,7 +3122,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "誇張的，浮誇的"
+    meaning: "夸张的，浮夸的"
   },
   {
     wordId: 348,
@@ -3131,7 +3131,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "重要、有價值、嚴肅的事情"
+    meaning: "重要、有价值、严肃的事情"
   },
   {
     wordId: 349,
@@ -3140,7 +3140,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "粗糙的（如不精確的）、寬泛的、粗略的"
+    meaning: "粗糙的（如不精确的）、宽泛的、粗略的"
   },
   {
     wordId: 350,
@@ -3149,7 +3149,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "提綱、概要"
+    meaning: "提纲、概要"
   },
   {
     wordId: 351,
@@ -3158,7 +3158,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "天堂、穹蒼、天空"
+    meaning: "天堂、穹苍、天空"
   },
   {
     wordId: 352,
@@ -3167,7 +3167,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "全寬、大規模、劇烈"
+    meaning: "全宽、大规模、剧烈"
   },
   {
     wordId: 353,
@@ -3194,7 +3194,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "（你的）支持、幫助"
+    meaning: "（你的）支持、帮助"
   },
   {
     wordId: 356,
@@ -3203,7 +3203,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "感謝上帝，感謝你"
+    meaning: "感谢上帝，感谢你"
   },
   {
     wordId: 357,
@@ -3221,7 +3221,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "犯下、犯下、違反"
+    meaning: "犯下、犯下、违反"
   },
   {
     wordId: 359,
@@ -3230,7 +3230,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "入侵，襲擊，非法侵入"
+    meaning: "入侵，袭击，非法侵入"
   },
   {
     wordId: 360,
@@ -3239,7 +3239,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "配菜，米飯的佐餐"
+    meaning: "配菜，米饭的佐餐"
   },
   {
     wordId: 361,
@@ -3248,7 +3248,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "懦弱，膽怯"
+    meaning: "懦弱，胆怯"
   },
   {
     wordId: 362,
@@ -3257,7 +3257,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "延緩，延遲"
+    meaning: "延缓，延迟"
   },
   {
     wordId: 363,
@@ -3266,7 +3266,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "延遲，滯後"
+    meaning: "延迟，滞后"
   },
   {
     wordId: 364,
@@ -3275,7 +3275,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "喚醒、引起、喚醒某人"
+    meaning: "唤醒、引起、唤醒某人"
   },
   {
     wordId: 365,
@@ -3284,7 +3284,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "莊嚴、莊重、莊重"
+    meaning: "庄严、庄重、庄重"
   },
   {
     wordId: 366,
@@ -3293,7 +3293,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "行為、舉止、舉止"
+    meaning: "行为、举止、举止"
   },
   {
     wordId: 367,
@@ -3311,7 +3311,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "首領，頭目"
+    meaning: "首领，头目"
   },
   {
     wordId: 369,
@@ -3338,7 +3338,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "獲得、結束、安頓下來"
+    meaning: "获得、结束、安顿下来"
   },
   {
     wordId: 372,
@@ -3347,7 +3347,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "獲得、結束、安頓下來"
+    meaning: "获得、结束、安顿下来"
   },
   {
     wordId: 373,
@@ -3356,7 +3356,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "保持平靜，壓制，減輕（風暴恐怖憤怒）"
+    meaning: "保持平静，压制，减轻（风暴恐怖愤怒）"
   },
   {
     wordId: 374,
@@ -3383,7 +3383,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "教誨、訓誡、教訓"
+    meaning: "教诲、训诫、教训"
   },
   {
     wordId: 377,
@@ -3392,7 +3392,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "擠進，擠進"
+    meaning: "挤进，挤进"
   },
   {
     wordId: 378,
@@ -3401,7 +3401,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "節儉、珍惜、後悔"
+    meaning: "节俭、珍惜、后悔"
   },
   {
     wordId: 379,
@@ -3410,7 +3410,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "閒聊、閒聊、閒聊"
+    meaning: "闲聊、闲聊、闲聊"
   },
   {
     wordId: 380,
@@ -3419,7 +3419,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "抱歉打擾你了"
+    meaning: "抱歉打扰你了"
   },
   {
     wordId: 381,
@@ -3428,7 +3428,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "衣著光鮮，某人衣著光鮮，注重時尚"
+    meaning: "衣著光鲜，某人衣著光鲜，注重时尚"
   },
   {
     wordId: 382,
@@ -3437,7 +3437,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "推開，前進"
+    meaning: "推开，前进"
   },
   {
     wordId: 383,
@@ -3446,7 +3446,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "雄性（動物）"
+    meaning: "雄性（动物）"
   },
   {
     wordId: 384,
@@ -3455,7 +3455,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "奉承，讚美"
+    meaning: "奉承，赞美"
   },
   {
     wordId: 385,
@@ -3464,7 +3464,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "攻擊"
+    meaning: "攻击"
   },
   {
     wordId: 386,
@@ -3473,7 +3473,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "最遲"
+    meaning: "最迟"
   },
   {
     wordId: 387,
@@ -3482,7 +3482,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "也許"
+    meaning: "也许"
   },
   {
     wordId: 388,
@@ -3491,7 +3491,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "恐懼，恐怖"
+    meaning: "恐惧，恐怖"
   },
   {
     wordId: 389,
@@ -3500,7 +3500,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "充滿敬畏，感到渺小，感到驚訝"
+    meaning: "充满敬畏，感到渺小，感到惊讶"
   },
   {
     wordId: 390,
@@ -3509,7 +3509,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "照顧好自己"
+    meaning: "照顾好自己"
   },
   {
     wordId: 391,
@@ -3518,7 +3518,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "煽動，煽動，奉承"
+    meaning: "煽动，煽动，奉承"
   },
   {
     wordId: 392,
@@ -3527,7 +3527,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "陷入，感到沮喪（悲傷）"
+    meaning: "陷入，感到沮丧（悲伤）"
   },
   {
     wordId: 393,
@@ -3536,7 +3536,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "冷靜，沉著"
+    meaning: "冷静，沉著"
   },
   {
     wordId: 394,
@@ -3545,7 +3545,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "落葉、落葉層、落葉"
+    meaning: "落叶、落叶层、落叶"
   },
   {
     wordId: 395,
@@ -3554,7 +3554,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "失敗（例如考試）、跌倒、掉落"
+    meaning: "失败（例如考试）、跌倒、掉落"
   },
   {
     wordId: 396,
@@ -3563,7 +3563,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "奇怪的，古雅的，時尚的"
+    meaning: "奇怪的，古雅的，时尚的"
   },
   {
     wordId: 397,
@@ -3590,7 +3590,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "說，講話，告訴"
+    meaning: "说，讲话，告诉"
   },
   {
     wordId: 400,
@@ -3599,7 +3599,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "徹底放棄，放棄希望"
+    meaning: "彻底放弃，放弃希望"
   },
   {
     wordId: 401,
@@ -3608,7 +3608,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "盥洗室, 廁所, 盥洗室"
+    meaning: "盥洗室, 厕所, 盥洗室"
   },
   {
     wordId: 402,
@@ -3626,7 +3626,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "畏縮地，猶豫地"
+    meaning: "畏缩地，犹豫地"
   },
   {
     wordId: 404,
@@ -3635,7 +3635,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "威脅、脅迫"
+    meaning: "威胁、胁迫"
   },
   {
     wordId: 405,
@@ -3644,7 +3644,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "掉落，丟失，掉落"
+    meaning: "掉落，丢失，掉落"
   },
   {
     wordId: 406,
@@ -3653,7 +3653,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "威脅，恐嚇"
+    meaning: "威胁，恐吓"
   },
   {
     wordId: 407,
@@ -3662,7 +3662,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "參觀"
+    meaning: "参观"
   },
   {
     wordId: 408,
@@ -3671,7 +3671,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "順從的，溫順的，安靜的"
+    meaning: "顺从的，温顺的，安静的"
   },
   {
     wordId: 409,
@@ -3680,7 +3680,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "女兒、年輕女士、處女"
+    meaning: "女儿、年轻女士、处女"
   },
   {
     wordId: 410,
@@ -3689,7 +3689,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "侍從，同伴"
+    meaning: "侍从，同伴"
   },
   {
     wordId: 411,
@@ -3698,7 +3698,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "變得虛弱，衰落，磨損"
+    meaning: "变得虚弱，衰落，磨损"
   },
   {
     wordId: 412,
@@ -3707,7 +3707,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "驚奇、驚訝、疑惑"
+    meaning: "惊奇、惊讶、疑惑"
   },
   {
     wordId: 413,
@@ -3716,7 +3716,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "同年齡"
+    meaning: "同年龄"
   },
   {
     wordId: 414,
@@ -3734,7 +3734,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "請"
+    meaning: "请"
   },
   {
     wordId: 416,
@@ -3743,7 +3743,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "每一個，每一個，或者"
+    meaning: "每一个，每一个，或者"
   },
   {
     wordId: 417,
@@ -3779,7 +3779,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "感到害怕，做惡夢"
+    meaning: "感到害怕，做恶梦"
   },
   {
     wordId: 421,
@@ -3788,7 +3788,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "大量地，無數地"
+    meaning: "大量地，无数地"
   },
   {
     wordId: 422,
@@ -3797,7 +3797,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "佩戴、攜帶、委託"
+    meaning: "佩戴、携带、委托"
   },
   {
     wordId: 423,
@@ -3806,7 +3806,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "記憶、感覺、經驗"
+    meaning: "记忆、感觉、经验"
   },
   {
     wordId: 424,
@@ -3815,7 +3815,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "折扣，獎品， 額外的東西"
+    meaning: "折扣，奖品， 额外的东西"
   },
   {
     wordId: 425,
@@ -3824,7 +3824,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "警察（友善稱呼）"
+    meaning: "警察（友善称呼）"
   },
   {
     wordId: 426,
@@ -3851,7 +3851,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "恭喜、祝賀"
+    meaning: "恭喜、祝贺"
   },
   {
     wordId: 429,
@@ -3860,7 +3860,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "臉"
+    meaning: "脸"
   },
   {
     wordId: 430,
@@ -3869,7 +3869,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "計劃、想法、建議"
+    meaning: "计划、想法、建议"
   },
   {
     wordId: 431,
@@ -3905,7 +3905,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "意義、要旨、主旨"
+    meaning: "意义、要旨、主旨"
   },
   {
     wordId: 435,
@@ -3914,7 +3914,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "前往，繼續，修復"
+    meaning: "前往，继续，修复"
   },
   {
     wordId: 436,
@@ -3923,7 +3923,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "責任重大，導演"
+    meaning: "责任重大，导演"
   },
   {
     wordId: 437,
@@ -3959,7 +3959,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "（英國）兩餐之間的小吃，下午茶點，下午茶"
+    meaning: "（英国）两餐之间的小吃，下午茶点，下午茶"
   },
   {
     wordId: 441,
@@ -3968,7 +3968,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "大約，大致，一般來說"
+    meaning: "大约，大致，一般来说"
   },
   {
     wordId: 442,
@@ -3986,7 +3986,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "達到，達到，相當於"
+    meaning: "达到，达到，相当于"
   },
   {
     wordId: 444,
@@ -3995,7 +3995,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "編織，織造，編織品"
+    meaning: "编织，织造，编织品"
   },
   {
     wordId: 445,
@@ -4004,7 +4004,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "籠子、圍欄、牢房"
+    meaning: "笼子、围栏、牢房"
   },
   {
     wordId: 446,
@@ -4022,7 +4022,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "紡織品，織物"
+    meaning: "纺织品，织物"
   },
   {
     wordId: 448,
@@ -4031,7 +4031,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "編織"
+    meaning: "编织"
   },
   {
     wordId: 449,
@@ -4040,7 +4040,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "我（自我）（自誇的第一人稱代名詞）"
+    meaning: "我（自我）（自夸的第一人称代名词）"
   },
   {
     wordId: 450,
@@ -4067,7 +4067,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "完成，結束"
+    meaning: "完成，结束"
   },
   {
     wordId: 453,
@@ -4076,7 +4076,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "音色、音質、音色"
+    meaning: "音色、音质、音色"
   },
   {
     wordId: 454,
@@ -4085,7 +4085,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "nan",
-    meaning: "溫和的，溫和的，適度的"
+    meaning: "温和的，温和的，适度的"
   },
   {
     wordId: 455,
@@ -4094,7 +4094,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "暫定的，暫時的"
+    meaning: "暂定的，暂时的"
   },
   {
     wordId: 456,
@@ -4103,7 +4103,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "部門、科室"
+    meaning: "部门、科室"
   },
   {
     wordId: 457,
@@ -4112,7 +4112,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "文章計數器"
+    meaning: "文章计数器"
   },
   {
     wordId: 458,
@@ -4121,7 +4121,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "低等級，從屬，較低順序（例如位元組）"
+    meaning: "低等级，从属，较低顺序（例如位元组）"
   },
   {
     wordId: 459,
@@ -4130,7 +4130,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "-樓層（櫃檯）、樓層"
+    meaning: "-楼层（柜台）、楼层"
   },
   {
     wordId: 460,
@@ -4139,7 +4139,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "惡化，變得更糟"
+    meaning: "恶化，变得更糟"
   },
   {
     wordId: 461,
@@ -4148,7 +4148,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "海運，海上運輸"
+    meaning: "海运，海上运输"
   },
   {
     wordId: 462,
@@ -4157,7 +4157,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "改革、改革、創新"
+    meaning: "改革、改革、创新"
   },
   {
     wordId: 463,
@@ -4166,7 +4166,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "殼"
+    meaning: "壳"
   },
   {
     wordId: 464,
@@ -4175,7 +4175,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "班級、級別、年級"
+    meaning: "班级、级别、年级"
   },
   {
     wordId: 465,
@@ -4184,7 +4184,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "頻道"
+    meaning: "频道"
   },
   {
     wordId: 466,
@@ -4193,7 +4193,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "採訪，觀眾"
+    meaning: "采访，观众"
   },
   {
     wordId: 467,
@@ -4202,7 +4202,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "護理"
+    meaning: "护理"
   },
   {
     wordId: 468,
@@ -4211,7 +4211,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "舉辦會議、開展覽"
+    meaning: "举办会议、开展览"
   },
   {
     wordId: 469,
@@ -4220,7 +4220,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "收集、恢復"
+    meaning: "收集、恢复"
   },
   {
     wordId: 470,
@@ -4229,7 +4229,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "修復、改進"
+    meaning: "修复、改进"
   },
   {
     wordId: 471,
@@ -4247,7 +4247,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "取消、撤銷、解除"
+    meaning: "取消、撤销、解除"
   },
   {
     wordId: 473,
@@ -4256,7 +4256,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "轉發"
+    meaning: "转发"
   },
   {
     wordId: 474,
@@ -4265,7 +4265,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "階級、階級、階層"
+    meaning: "阶级、阶级、阶层"
   },
   {
     wordId: 475,
@@ -4274,7 +4274,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "開墾（荒地）、耕種、拓荒"
+    meaning: "开垦（荒地）、耕种、拓荒"
   },
   {
     wordId: 476,
@@ -4283,7 +4283,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "談話、會議、討論"
+    meaning: "谈话、会议、讨论"
   },
   {
     wordId: 477,
@@ -4301,7 +4301,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "修訂"
+    meaning: "修订"
   },
   {
     wordId: 479,
@@ -4328,7 +4328,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "開發、利用"
+    meaning: "开发、利用"
   },
   {
     wordId: 482,
@@ -4346,7 +4346,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "護理，照顧"
+    meaning: "护理，照顾"
   },
   {
     wordId: 484,
@@ -4355,7 +4355,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "解剖、屍檢"
+    meaning: "解剖、尸检"
   },
   {
     wordId: 485,
@@ -4364,7 +4364,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "循環"
+    meaning: "循环"
   },
   {
     wordId: 486,
@@ -4382,7 +4382,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "改進、改革"
+    meaning: "改进、改革"
   },
   {
     wordId: 488,
@@ -4391,7 +4391,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "電路（電氣）"
+    meaning: "电路（电气）"
   },
   {
     wordId: 489,
@@ -4400,7 +4400,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "回頭看，回顧，回顧"
+    meaning: "回头看，回顾，回顾"
   },
   {
     wordId: 490,
@@ -4418,7 +4418,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "返回，回來，回去"
+    meaning: "返回，回来，回去"
   },
   {
     wordId: 492,
@@ -4427,7 +4427,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "樣子、特徵、臉"
+    meaning: "样子、特征、脸"
   },
   {
     wordId: 493,
@@ -4436,7 +4436,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "課外"
+    meaning: "课外"
   },
   {
     wordId: 494,
@@ -4463,7 +4463,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "官員，職務，負責人"
+    meaning: "官员，职务，负责人"
   },
   {
     wordId: 497,
@@ -4472,7 +4472,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "聽寫"
+    meaning: "听写"
   },
   {
     wordId: 498,
@@ -4481,7 +4481,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "寫下來，聽寫，做筆記"
+    meaning: "写下来，听写，做笔记"
   },
   {
     wordId: 499,
@@ -4490,7 +4490,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "攪動，攪動，洗劫"
+    meaning: "搅动，搅动，洗劫"
   },
   {
     wordId: 500,
@@ -4508,7 +4508,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "角， 象（將棋）"
+    meaning: "角， 象（将棋）"
   },
   {
     wordId: 502,
@@ -4517,7 +4517,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "細胞核，內核"
+    meaning: "细胞核，内核"
   },
   {
     wordId: 503,
@@ -4526,7 +4526,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "身份、性格、狀況"
+    meaning: "身份、性格、状况"
   },
   {
     wordId: 504,
@@ -4535,7 +4535,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "優美的文學段落"
+    meaning: "优美的文学段落"
   },
   {
     wordId: 505,
@@ -4544,7 +4544,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "中風"
+    meaning: "中风"
   },
   {
     wordId: 506,
@@ -4553,7 +4553,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "質的差異，差距"
+    meaning: "质的差异，差距"
   },
   {
     wordId: 507,
@@ -4562,7 +4562,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "散射、擴散"
+    meaning: "散射、扩散"
   },
   {
     wordId: 508,
@@ -4571,7 +4571,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "各種各樣的"
+    meaning: "各种各样的"
   },
   {
     wordId: 509,
@@ -4598,7 +4598,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "改革、創新"
+    meaning: "改革、创新"
   },
   {
     wordId: 512,
@@ -4607,7 +4607,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "定義（數學）、決策、解決"
+    meaning: "定义（数学）、决策、解决"
   },
   {
     wordId: 513,
@@ -4616,7 +4616,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "取得、佔有"
+    meaning: "取得、占有"
   },
   {
     wordId: 514,
@@ -4625,7 +4625,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "保證，確保，維持"
+    meaning: "保证，确保，维持"
   },
   {
     wordId: 515,
@@ -4652,7 +4652,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "打賭，賭博，賭博"
+    meaning: "打赌，赌博，赌博"
   },
   {
     wordId: 518,
@@ -4679,7 +4679,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "家庭經濟、家庭財務"
+    meaning: "家庭经济、家庭财务"
   },
   {
     wordId: 521,
@@ -4688,7 +4688,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "專指「月」的計數方式。例如，「3ヶ月」表示「三個月」"
+    meaning: "专指「月」的计数方式。例如，「3ヶ月」表示「三个月」"
   },
   {
     wordId: 522,
@@ -4697,7 +4697,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "（競走）比賽"
+    meaning: "（竞走）比赛"
   },
   {
     wordId: 523,
@@ -4706,7 +4706,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "奔跑（尤其是賽馬）、疾馳、慢跑"
+    meaning: "奔跑（尤其是赛马）、疾驰、慢跑"
   },
   {
     wordId: 524,
@@ -4715,7 +4715,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "打賭，打賭，冒險"
+    meaning: "打赌，打赌，冒险"
   },
   {
     wordId: 525,
@@ -4724,7 +4724,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "製造、加工、處理"
+    meaning: "制造、加工、处理"
   },
   {
     wordId: 526,
@@ -4733,7 +4733,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "化學組合"
+    meaning: "化学组合"
   },
   {
     wordId: 527,
@@ -4742,7 +4742,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "風車， 紙輪"
+    meaning: "风车， 纸轮"
   },
   {
     wordId: 528,
@@ -4751,7 +4751,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "變得笨重，變得笨重，變得龐大"
+    meaning: "变得笨重，变得笨重，变得庞大"
   },
   {
     wordId: 529,
@@ -4760,7 +4760,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "堆積，增加"
+    meaning: "堆积，增加"
   },
   {
     wordId: 530,
@@ -4769,7 +4769,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "當然！"
+    meaning: "当然！"
   },
   {
     wordId: 531,
@@ -4778,7 +4778,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "奢華、盛大、精緻"
+    meaning: "奢华、盛大、精致"
   },
   {
     wordId: 532,
@@ -4787,7 +4787,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "通道、地點、點"
+    meaning: "通道、地点、点"
   },
   {
     wordId: 533,
@@ -4796,7 +4796,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "燒傷、燙傷"
+    meaning: "烧伤、烫伤"
   },
   {
     wordId: 534,
@@ -4805,7 +4805,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "明細形式，明細"
+    meaning: "明细形式，明细"
   },
   {
     wordId: 535,
@@ -4823,7 +4823,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "微弱的，昏暗的，無力的"
+    meaning: "微弱的，昏暗的，无力的"
   },
   {
     wordId: 537,
@@ -4832,7 +4832,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "變得朦朧，變得有霧"
+    meaning: "变得朦胧，变得有雾"
   },
   {
     wordId: 538,
@@ -4841,7 +4841,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "轉變為，變成，轉變"
+    meaning: "转变为，变成，转变"
   },
   {
     wordId: 539,
@@ -4850,7 +4850,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "輕輕觸碰，取一定比例（從）"
+    meaning: "轻轻触碰，取一定比例（从）"
   },
   {
     wordId: 540,
@@ -4886,7 +4886,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "合成纖維"
+    meaning: "合成纤维"
   },
   {
     wordId: 544,
@@ -4895,7 +4895,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "人口減少"
+    meaning: "人口减少"
   },
   {
     wordId: 545,
@@ -4904,7 +4904,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "過剩，過剩"
+    meaning: "过剩，过剩"
   },
   {
     wordId: 546,
@@ -4913,7 +4913,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "困難的，艱難的"
+    meaning: "困难的，艰难的"
   },
   {
     wordId: 547,
@@ -4922,7 +4922,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "主題、主題、任務"
+    meaning: "主题、主题、任务"
   },
   {
     wordId: 548,
@@ -4931,7 +4931,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "單戀"
+    meaning: "单恋"
   },
   {
     wordId: 549,
@@ -4940,7 +4940,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "敵人，對手"
+    meaning: "敌人，对手"
   },
   {
     wordId: 550,
@@ -4949,7 +4949,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "精神、性格、特質"
+    meaning: "精神、性格、特质"
   },
   {
     wordId: 551,
@@ -4958,7 +4958,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "一知半解，說話像嬰兒，斷斷續續"
+    meaning: "一知半解，说话像婴儿，断断续续"
   },
   {
     wordId: 552,
@@ -4976,7 +4976,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "傾向，傾斜，搖晃"
+    meaning: "倾向，倾斜，摇晃"
   },
   {
     wordId: 554,
@@ -4985,7 +4985,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "傾斜，傾斜，彎曲"
+    meaning: "倾斜，倾斜，弯曲"
   },
   {
     wordId: 555,
@@ -4994,7 +4994,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "使變硬，使凍結，使堅固"
+    meaning: "使变硬，使冻结，使坚固"
   },
   {
     wordId: 556,
@@ -5003,7 +5003,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "片面的，傾向的，有偏見的"
+    meaning: "片面的，倾向的，有偏见的"
   },
   {
     wordId: 557,
@@ -5012,7 +5012,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "旁邊，同時，附近"
+    meaning: "旁边，同时，附近"
   },
   {
     wordId: 558,
@@ -5021,7 +5021,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "花壇"
+    meaning: "花坛"
   },
   {
     wordId: 559,
@@ -5048,7 +5048,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "分成、切開、減半"
+    meaning: "分成、切开、减半"
   },
   {
     wordId: 562,
@@ -5057,7 +5057,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "劃時代"
+    meaning: "划时代"
   },
   {
     wordId: 563,
@@ -5066,7 +5066,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "約會，約會"
+    meaning: "约会，约会"
   },
   {
     wordId: 564,
@@ -5075,7 +5075,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "曾經，曾經"
+    meaning: "曾经，曾经"
   },
   {
     wordId: 565,
@@ -5084,7 +5084,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "活力，活躍"
+    meaning: "活力，活跃"
   },
   {
     wordId: 566,
@@ -5093,7 +5093,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "門"
+    meaning: "门"
   },
   {
     wordId: 567,
@@ -5102,7 +5102,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "實現（願望）"
+    meaning: "实现（愿望）"
   },
   {
     wordId: 568,
@@ -5111,7 +5111,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "滿足（請求願望）"
+    meaning: "满足（请求愿望）"
   },
   {
     wordId: 569,
@@ -5120,7 +5120,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "（鐵）錘，懲罰"
+    meaning: "（铁）锤，惩罚"
   },
   {
     wordId: 570,
@@ -5129,7 +5129,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "鐵棍，撬棍，單槓（體操）"
+    meaning: "铁棍，撬棍，单杠（体操）"
   },
   {
     wordId: 571,
@@ -5138,7 +5138,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "相當地, 相當地, 相當"
+    meaning: "相当地, 相当地, 相当"
   },
   {
     wordId: 572,
@@ -5147,7 +5147,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "成為會員、加入、進入"
+    meaning: "成为会员、加入、进入"
   },
   {
     wordId: 573,
@@ -5156,7 +5156,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "保險箱、金庫、金庫"
+    meaning: "保险箱、金库、金库"
   },
   {
     wordId: 574,
@@ -5165,7 +5165,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "預測、許諾、預言"
+    meaning: "预测、许诺、预言"
   },
   {
     wordId: 575,
@@ -5174,7 +5174,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "同時地"
+    meaning: "同时地"
   },
   {
     wordId: 576,
@@ -5192,7 +5192,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "盛況，輝煌，華麗"
+    meaning: "盛况，辉煌，华丽"
   },
   {
     wordId: 578,
@@ -5201,7 +5201,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "劣質品"
+    meaning: "劣质品"
   },
   {
     wordId: 579,
@@ -5219,7 +5219,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "對……作出反應，受……影響，為……而過度"
+    meaning: "对……作出反应，受……影响，为……而过度"
   },
   {
     wordId: 581,
@@ -5237,7 +5237,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "錢幣、貨幣、鑄幣"
+    meaning: "钱币、货币、铸币"
   },
   {
     wordId: 583,
@@ -5246,7 +5246,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "姿勢、姿態、風格"
+    meaning: "姿势、姿态、风格"
   },
   {
     wordId: 584,
@@ -5255,7 +5255,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "設定"
+    meaning: "设定"
   },
   {
     wordId: 585,
@@ -5264,7 +5264,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "調味料，調味品"
+    meaning: "调味料，调味品"
   },
   {
     wordId: 586,
@@ -5282,7 +5282,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "擠"
+    meaning: "挤"
   },
   {
     wordId: 588,
@@ -5291,7 +5291,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "沙鍋"
+    meaning: "沙锅"
   },
   {
     wordId: 589,
@@ -5300,7 +5300,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "可能、或許、或許"
+    meaning: "可能、或许、或许"
   },
   {
     wordId: 590,
@@ -5309,7 +5309,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "（稀飯"
+    meaning: "（稀饭"
   },
   {
     wordId: 591,
@@ -5318,7 +5318,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "癢，發癢"
+    meaning: "痒，发痒"
   },
   {
     wordId: 592,
@@ -5327,7 +5327,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "嘲笑、戲弄、調侃"
+    meaning: "嘲笑、戏弄、调侃"
   },
   {
     wordId: 593,
@@ -5336,7 +5336,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "身體"
+    meaning: "身体"
   },
   {
     wordId: 594,
@@ -5345,7 +5345,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "體型，身材"
+    meaning: "体型，身材"
   },
   {
     wordId: 595,
@@ -5354,7 +5354,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "糾纏，纏繞"
+    meaning: "纠缠，缠绕"
   },
   {
     wordId: 596,
@@ -5363,7 +5363,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "借款，債務，貸款"
+    meaning: "借款，债务，贷款"
   },
   {
     wordId: 597,
@@ -5372,7 +5372,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "下級官員"
+    meaning: "下级官员"
   },
   {
     wordId: 598,
@@ -5381,7 +5381,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "撲克牌、花牌"
+    meaning: "扑克牌、花牌"
   },
   {
     wordId: 599,
@@ -5390,7 +5390,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "乾涸，耗盡"
+    meaning: "干涸，耗尽"
   },
   {
     wordId: 600,
@@ -5399,7 +5399,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "勞累過度，緊張"
+    meaning: "劳累过度，紧张"
   },
   {
     wordId: 601,
@@ -5408,7 +5408,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "勉強、勉強、勉強做到"
+    meaning: "勉强、勉强、勉强做到"
   },
   {
     wordId: 602,
@@ -5417,7 +5417,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "側面、行、周圍環境"
+    meaning: "侧面、行、周围环境"
   },
   {
     wordId: 603,
@@ -5426,7 +5426,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "漂亮, 可愛, 媚人"
+    meaning: "漂亮, 可爱, 媚人"
   },
   {
     wordId: 604,
@@ -5435,7 +5435,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "去愛，去深情"
+    meaning: "去爱，去深情"
   },
   {
     wordId: 605,
@@ -5444,7 +5444,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "可憐的，可憐的，可悲的"
+    meaning: "可怜的，可怜的，可悲的"
   },
   {
     wordId: 606,
@@ -5453,7 +5453,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "可愛，甜美"
+    meaning: "可爱，甜美"
   },
   {
     wordId: 607,
@@ -5462,7 +5462,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "交換（訊息）、閃避、招架"
+    meaning: "交换（讯息）、闪避、招架"
   },
   {
     wordId: 608,
@@ -5471,7 +5471,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "取代，緩解，替代"
+    meaning: "取代，缓解，替代"
   },
   {
     wordId: 609,
@@ -5507,7 +5507,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "（樹）樹幹"
+    meaning: "（树）树干"
   },
   {
     wordId: 613,
@@ -5525,7 +5525,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "外觀、外表、景象"
+    meaning: "外观、外表、景象"
   },
   {
     wordId: 615,
@@ -5534,7 +5534,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "房屋、大廳、建築物"
+    meaning: "房屋、大厅、建筑物"
   },
   {
     wordId: 616,
@@ -5543,7 +5543,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "簡單、輕鬆、準"
+    meaning: "简单、轻松、准"
   },
   {
     wordId: 617,
@@ -5552,7 +5552,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "強烈的感情，深厚的情感"
+    meaning: "强烈的感情，深厚的情感"
   },
   {
     wordId: 618,
@@ -5561,7 +5561,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "寒冷, 霜凍, 寒意"
+    meaning: "寒冷, 霜冻, 寒意"
   },
   {
     wordId: 619,
@@ -5570,7 +5570,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "簡潔、簡潔、簡單"
+    meaning: "简洁、简洁、简单"
   },
   {
     wordId: 620,
@@ -5579,7 +5579,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "解決、減少、回歸本源"
+    meaning: "解决、减少、回归本源"
   },
   {
     wordId: 621,
@@ -5588,7 +5588,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "護理，（軍）護士"
+    meaning: "护理，（军）护士"
   },
   {
     wordId: 622,
@@ -5597,7 +5597,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "漢語詞、中日詞"
+    meaning: "汉语词、中日词"
   },
   {
     wordId: 623,
@@ -5606,7 +5606,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "出版品，發行"
+    meaning: "出版品，发行"
   },
   {
     wordId: 624,
@@ -5615,7 +5615,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "習俗、習慣、傳統活動"
+    meaning: "习俗、习惯、传统活动"
   },
   {
     wordId: 625,
@@ -5624,7 +5624,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "勸告、忠告、抗議"
+    meaning: "劝告、忠告、抗议"
   },
   {
     wordId: 626,
@@ -5633,7 +5633,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "轉換，改變，交換"
+    meaning: "转换，改变，交换"
   },
   {
     wordId: 627,
@@ -5642,7 +5642,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "觀察、守衛、檢查"
+    meaning: "观察、守卫、检查"
   },
   {
     wordId: 628,
@@ -5651,7 +5651,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "通常的（歷史）習俗"
+    meaning: "通常的（历史）习俗"
   },
   {
     wordId: 629,
@@ -5660,7 +5660,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "觀眾、旁觀者、觀眾"
+    meaning: "观众、旁观者、观众"
   },
   {
     wordId: 630,
@@ -5669,7 +5669,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "幹擾，幹預"
+    meaning: "干扰，干预"
   },
   {
     wordId: 631,
@@ -5678,7 +5678,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "觸覺、感覺、知覺"
+    meaning: "触觉、感觉、知觉"
   },
   {
     wordId: 632,
@@ -5687,7 +5687,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "必要的，根本的，關鍵的"
+    meaning: "必要的，根本的，关键的"
   },
   {
     wordId: 633,
@@ -5696,7 +5696,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "歡呼，歡呼聲"
+    meaning: "欢呼，欢呼声"
   },
   {
     wordId: 634,
@@ -5705,7 +5705,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "關稅，關稅，稅額"
+    meaning: "关税，关税，税额"
   },
   {
     wordId: 635,
@@ -5714,7 +5714,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "感染，傳染"
+    meaning: "感染，传染"
   },
   {
     wordId: 636,
@@ -5723,7 +5723,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "主幹線，幹線"
+    meaning: "主干线，干线"
   },
   {
     wordId: 637,
@@ -5732,7 +5732,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "簡單，樸素"
+    meaning: "简单，朴素"
   },
   {
     wordId: 638,
@@ -5741,7 +5741,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "觀點看法"
+    meaning: "观点看法"
   },
   {
     wordId: 639,
@@ -5750,7 +5750,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "敏感度、嚴重程度（地震）"
+    meaning: "敏感度、严重程度（地震）"
   },
   {
     wordId: 640,
@@ -5759,7 +5759,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "管理階層、（執行）人員、領導"
+    meaning: "管理阶层、（执行）人员、领导"
   },
   {
     wordId: 641,
@@ -5768,7 +5768,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "完美，完整，無瑕疵"
+    meaning: "完美，完整，无瑕疵"
   },
   {
     wordId: 642,
@@ -5777,7 +5777,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "寬恕、寬恕、忍耐"
+    meaning: "宽恕、宽恕、忍耐"
   },
   {
     wordId: 643,
@@ -5786,7 +5786,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "深情，難以言喻的感受，充滿情感"
+    meaning: "深情，难以言喻的感受，充满情感"
   },
   {
     wordId: 644,
@@ -5795,7 +5795,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "邀請、懇求、遊說"
+    meaning: "邀请、恳求、游说"
   },
   {
     wordId: 645,
@@ -5804,7 +5804,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "參與, 參加, 參加"
+    meaning: "参与, 参加, 参加"
   },
   {
     wordId: 646,
@@ -5813,7 +5813,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "常見的，習慣的"
+    meaning: "常见的，习惯的"
   },
   {
     wordId: 647,
@@ -5822,7 +5822,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "忍耐、寬容、慷慨"
+    meaning: "忍耐、宽容、慷慨"
   },
   {
     wordId: 648,
@@ -5831,7 +5831,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "觀看"
+    meaning: "观看"
   },
   {
     wordId: 649,
@@ -5840,7 +5840,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "官僚，官僚主義"
+    meaning: "官僚，官僚主义"
   },
   {
     wordId: 650,
@@ -5849,7 +5849,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "習慣、先例、慣例"
+    meaning: "习惯、先例、惯例"
   },
   {
     wordId: 651,
@@ -5858,7 +5858,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "60歲生日"
+    meaning: "60岁生日"
   },
   {
     wordId: 652,
@@ -5867,7 +5867,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "存在感、尊嚴"
+    meaning: "存在感、尊严"
   },
   {
     wordId: 653,
@@ -5876,7 +5876,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "nan",
-    meaning: "救濟、緩解"
+    meaning: "救济、缓解"
   },
   {
     wordId: 654,
@@ -5885,7 +5885,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "純淨的，未稀釋的，原始的"
+    meaning: "纯净的，未稀释的，原始的"
   },
   {
     wordId: 655,
@@ -5894,7 +5894,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "時期，時間"
+    meaning: "时期，时间"
   },
   {
     wordId: 656,
@@ -5903,7 +5903,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "傷害、損害、危險"
+    meaning: "伤害、损害、危险"
   },
   {
     wordId: 657,
@@ -5912,7 +5912,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "規劃、專案"
+    meaning: "规划、专案"
   },
   {
     wordId: 658,
@@ -5921,7 +5921,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "標準，規範"
+    meaning: "标准，规范"
   },
   {
     wordId: 659,
@@ -5939,7 +5939,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "猶豫、缺乏自信、感到局促"
+    meaning: "犹豫、缺乏自信、感到局促"
   },
   {
     wordId: 661,
@@ -5948,7 +5948,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "愉快的, 興高采烈的, 輕鬆的"
+    meaning: "愉快的, 兴高采烈的, 轻松的"
   },
   {
     wordId: 662,
@@ -5957,7 +5957,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "（身體的）器官，儀器"
+    meaning: "（身体的）器官，仪器"
   },
   {
     wordId: 663,
@@ -5966,7 +5966,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "季刊（如雜誌）"
+    meaning: "季刊（如杂志）"
   },
   {
     wordId: 664,
@@ -5975,7 +5975,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "危機"
+    meaning: "危机"
   },
   {
     wordId: 665,
@@ -5984,7 +5984,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "聽力理解"
+    meaning: "听力理解"
   },
   {
     wordId: 666,
@@ -6002,7 +6002,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "返回東京"
+    meaning: "返回东京"
   },
   {
     wordId: 668,
@@ -6011,7 +6011,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "基金、基金會"
+    meaning: "基金、基金会"
   },
   {
     wordId: 669,
@@ -6020,7 +6020,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "喜劇，搞笑節目"
+    meaning: "喜剧，搞笑节目"
   },
   {
     wordId: 670,
@@ -6029,7 +6029,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "棄權，放棄投票權"
+    meaning: "弃权，放弃投票权"
   },
   {
     wordId: 671,
@@ -6038,7 +6038,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "起源，開始，興起"
+    meaning: "起源，开始，兴起"
   },
   {
     wordId: 672,
@@ -6047,7 +6047,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "機制、組織"
+    meaning: "机制、组织"
   },
   {
     wordId: 673,
@@ -6065,7 +6065,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "矯揉造作、自負、勢利"
+    meaning: "矫揉造作、自负、势利"
   },
   {
     wordId: 675,
@@ -6074,7 +6074,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "提及，進入"
+    meaning: "提及，进入"
   },
   {
     wordId: 676,
@@ -6083,7 +6083,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "跡象、徵兆、症狀"
+    meaning: "迹象、征兆、症状"
   },
   {
     wordId: 677,
@@ -6092,7 +6092,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "跡象、徵兆、症狀"
+    meaning: "迹象、征兆、症状"
   },
   {
     wordId: 678,
@@ -6101,7 +6101,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "固定日期，結算日期"
+    meaning: "固定日期，结算日期"
   },
   {
     wordId: 679,
@@ -6110,7 +6110,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "震動，吱吱作響，磨碎"
+    meaning: "震动，吱吱作响，磨碎"
   },
   {
     wordId: 680,
@@ -6128,7 +6128,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "天氣、氣候"
+    meaning: "天气、气候"
   },
   {
     wordId: 682,
@@ -6137,7 +6137,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "奇數"
+    meaning: "奇数"
   },
   {
     wordId: 683,
@@ -6146,7 +6146,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "建造，堆積，積累"
+    meaning: "建造，堆积，积累"
   },
   {
     wordId: 684,
@@ -6155,7 +6155,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "受傷，受傷，受傷"
+    meaning: "受伤，受伤，受伤"
   },
   {
     wordId: 685,
@@ -6164,7 +6164,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "規定"
+    meaning: "规定"
   },
   {
     wordId: 686,
@@ -6173,7 +6173,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "輪船"
+    meaning: "轮船"
   },
   {
     wordId: 687,
@@ -6182,7 +6182,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "捐贈、贈送"
+    meaning: "捐赠、赠送"
   },
   {
     wordId: 688,
@@ -6191,7 +6191,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "貴族"
+    meaning: "贵族"
   },
   {
     wordId: 689,
@@ -6200,7 +6200,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "鍛造、鑽孔、回火"
+    meaning: "锻造、钻孔、回火"
   },
   {
     wordId: 690,
@@ -6218,7 +6218,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "來臨，到達，由於"
+    meaning: "来临，到达，由于"
   },
   {
     wordId: 692,
@@ -6236,7 +6236,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "有條不紊、準時、穩定"
+    meaning: "有条不紊、准时、稳定"
   },
   {
     wordId: 694,
@@ -6245,7 +6245,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "機會、開始、提示"
+    meaning: "机会、开始、提示"
   },
   {
     wordId: 695,
@@ -6254,7 +6254,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "準確, 精確"
+    meaning: "准确, 精确"
   },
   {
     wordId: 696,
@@ -6263,7 +6263,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "喝茶、茶館"
+    meaning: "喝茶、茶馆"
   },
   {
     wordId: 697,
@@ -6272,7 +6272,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "精確地、嚴格地"
+    meaning: "精确地、严格地"
   },
   {
     wordId: 698,
@@ -6281,7 +6281,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "（英國）肯定地，毫無疑問地，當然地"
+    meaning: "（英国）肯定地，毫无疑问地，当然地"
   },
   {
     wordId: 699,
@@ -6290,7 +6290,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "清楚、明白、明顯"
+    meaning: "清楚、明白、明显"
   },
   {
     wordId: 700,
@@ -6299,7 +6299,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "條例、規定"
+    meaning: "条例、规定"
   },
   {
     wordId: 701,
@@ -6308,7 +6308,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "起點"
+    meaning: "起点"
   },
   {
     wordId: 702,
@@ -6317,7 +6317,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "軌道，鐵軌"
+    meaning: "轨道，铁轨"
   },
   {
     wordId: 703,
@@ -6326,7 +6326,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "排名第一，農曆第一個星座，貝殼"
+    meaning: "排名第一，农历第一个星座，贝壳"
   },
   {
     wordId: 704,
@@ -6335,7 +6335,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "跡象、市場趨勢、擔憂"
+    meaning: "迹象、市场趋势、担忧"
   },
   {
     wordId: 705,
@@ -6344,7 +6344,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "型號、標準、模式"
+    meaning: "型号、标准、模式"
   },
   {
     wordId: 706,
@@ -6353,7 +6353,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "香氣"
+    meaning: "香气"
   },
   {
     wordId: 707,
@@ -6362,7 +6362,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "性格、特質、氣質"
+    meaning: "性格、特质、气质"
   },
   {
     wordId: 708,
@@ -6371,7 +6371,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "波動"
+    meaning: "波动"
   },
   {
     wordId: 709,
@@ -6380,7 +6380,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "規模、範圍、計劃"
+    meaning: "规模、范围、计划"
   },
   {
     wordId: 710,
@@ -6389,7 +6389,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "心血來潮，任性，奇想"
+    meaning: "心血来潮，任性，奇想"
   },
   {
     wordId: 711,
@@ -6398,7 +6398,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "太嚴肅，太嚴肅的人，誠實"
+    meaning: "太严肃，太严肃的人，诚实"
   },
   {
     wordId: 712,
@@ -6407,7 +6407,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "學期結束"
+    meaning: "学期结束"
   },
   {
     wordId: 713,
@@ -6416,7 +6416,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "感到尷尬、羞愧"
+    meaning: "感到尴尬、羞愧"
   },
   {
     wordId: 714,
@@ -6425,7 +6425,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "決定，安定，穿（衣服）好看"
+    meaning: "决定，安定，穿（衣服）好看"
   },
   {
     wordId: 715,
@@ -6434,7 +6434,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "簽名、登記"
+    meaning: "签名、登记"
   },
   {
     wordId: 716,
@@ -6443,7 +6443,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "協議、規則、代碼"
+    meaning: "协议、规则、代码"
   },
   {
     wordId: 717,
@@ -6452,7 +6452,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "戲劇化（例如電影）"
+    meaning: "戏剧化（例如电影）"
   },
   {
     wordId: 718,
@@ -6461,7 +6461,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "設想"
+    meaning: "设想"
   },
   {
     wordId: 719,
@@ -6470,7 +6470,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "客觀的"
+    meaning: "客观的"
   },
   {
     wordId: 720,
@@ -6488,7 +6488,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "暫時缺課、停學"
+    meaning: "暂时缺课、停学"
   },
   {
     wordId: 722,
@@ -6497,7 +6497,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "最終的，最後的，最後的"
+    meaning: "最终的，最后的，最后的"
   },
   {
     wordId: 723,
@@ -6506,7 +6506,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "狹窄、緊繃、僵硬"
+    meaning: "狭窄、紧绷、僵硬"
   },
   {
     wordId: 724,
@@ -6515,7 +6515,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "（植物的）球莖"
+    meaning: "（植物的）球茎"
   },
   {
     wordId: 725,
@@ -6524,7 +6524,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "救濟、援助、救援"
+    meaning: "救济、援助、救援"
   },
   {
     wordId: 726,
@@ -6533,7 +6533,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "辦公室男勤雜工、侍應生、服務員"
+    meaning: "办公室男勤杂工、侍应生、服务员"
   },
   {
     wordId: 727,
@@ -6542,7 +6542,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "學校午餐，提供餐食"
+    meaning: "学校午餐，提供餐食"
   },
   {
     wordId: 728,
@@ -6551,7 +6551,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "休戰，停戰"
+    meaning: "休战，停战"
   },
   {
     wordId: 729,
@@ -6560,7 +6560,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "老朋友，老友誼"
+    meaning: "老朋友，老友谊"
   },
   {
     wordId: 730,
@@ -6569,7 +6569,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "宮殿"
+    meaning: "宫殿"
   },
   {
     wordId: 731,
@@ -6578,7 +6578,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "貧窮"
+    meaning: "贫穷"
   },
   {
     wordId: 732,
@@ -6596,7 +6596,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "貢獻、服務"
+    meaning: "贡献、服务"
   },
   {
     wordId: 734,
@@ -6605,7 +6605,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "兩者，皆非（否定），全部"
+    meaning: "两者，皆非（否定），全部"
   },
   {
     wordId: 735,
@@ -6614,7 +6614,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "提供，贈送，呈交"
+    meaning: "提供，赠送，呈交"
   },
   {
     wordId: 736,
@@ -6623,7 +6623,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "奇蹟"
+    meaning: "奇迹"
   },
   {
     wordId: 737,
@@ -6632,7 +6632,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "教學人員"
+    meaning: "教学人员"
   },
   {
     wordId: 738,
@@ -6641,7 +6641,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "科目、課程"
+    meaning: "科目、课程"
   },
   {
     wordId: 739,
@@ -6650,7 +6650,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "協會、學會、組織"
+    meaning: "协会、学会、组织"
   },
   {
     wordId: 740,
@@ -6668,7 +6668,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "同情、回應"
+    meaning: "同情、回应"
   },
   {
     wordId: 742,
@@ -6677,7 +6677,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "會議、磋商、討論"
+    meaning: "会议、磋商、讨论"
   },
   {
     wordId: 743,
@@ -6686,7 +6686,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "環境、情況"
+    meaning: "环境、情况"
   },
   {
     wordId: 744,
@@ -6695,7 +6695,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "教訓、訓誡、道德教誨"
+    meaning: "教训、训诫、道德教诲"
   },
   {
     wordId: 745,
@@ -6704,7 +6704,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "強制執行"
+    meaning: "强制执行"
   },
   {
     wordId: 746,
@@ -6713,7 +6713,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "堅定、有力、不屈"
+    meaning: "坚定、有力、不屈"
   },
   {
     wordId: 747,
@@ -6722,7 +6722,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "教學材料"
+    meaning: "教学材料"
   },
   {
     wordId: 748,
@@ -6740,7 +6740,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "共產主義"
+    meaning: "共产主义"
   },
   {
     wordId: 750,
@@ -6758,7 +6758,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "培訓、指導"
+    meaning: "培训、指导"
   },
   {
     wordId: 752,
@@ -6767,7 +6767,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "懷舊，思鄉"
+    meaning: "怀旧，思乡"
   },
   {
     wordId: 753,
@@ -6776,7 +6776,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "教師資格證，教師職業"
+    meaning: "教师资格证，教师职业"
   },
   {
     wordId: 754,
@@ -6785,7 +6785,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "自娛自樂，歡樂"
+    meaning: "自娱自乐，欢乐"
   },
   {
     wordId: 755,
@@ -6794,7 +6794,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "義務、脅迫、強制"
+    meaning: "义务、胁迫、强制"
   },
   {
     wordId: 756,
@@ -6821,7 +6821,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "合作、和解、和諧"
+    meaning: "合作、和解、和谐"
   },
   {
     wordId: 759,
@@ -6830,7 +6830,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "安排，契約，協定"
+    meaning: "安排，契约，协定"
   },
   {
     wordId: 760,
@@ -6839,7 +6839,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "威脅、恐嚇、脅迫"
+    meaning: "威胁、恐吓、胁迫"
   },
   {
     wordId: 761,
@@ -6848,7 +6848,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "共鳴、同情"
+    meaning: "共鸣、同情"
   },
   {
     wordId: 762,
@@ -6857,7 +6857,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "出生地，家鄉"
+    meaning: "出生地，家乡"
   },
   {
     wordId: 763,
@@ -6866,7 +6866,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "強烈的，強烈的，嚴重的"
+    meaning: "强烈的，强烈的，严重的"
   },
   {
     wordId: 764,
@@ -6875,7 +6875,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "共和主義、合作"
+    meaning: "共和主义、合作"
   },
   {
     wordId: 765,
@@ -6884,7 +6884,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "曲調，樂曲"
+    meaning: "曲调，乐曲"
   },
   {
     wordId: 766,
@@ -6902,7 +6902,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "極端，極端"
+    meaning: "极端，极端"
   },
   {
     wordId: 768,
@@ -6920,7 +6920,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "拒絕，駁斥"
+    meaning: "拒绝，驳斥"
   },
   {
     wordId: 770,
@@ -6929,7 +6929,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "否認、否決、拒絕"
+    meaning: "否认、否决、拒绝"
   },
   {
     wordId: 771,
@@ -6938,7 +6938,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "允許，赦免"
+    meaning: "允许，赦免"
   },
   {
     wordId: 772,
@@ -6947,7 +6947,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "乾淨、純潔、貞潔"
+    meaning: "干净、纯洁、贞洁"
   },
   {
     wordId: 773,
@@ -6956,7 +6956,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "距離，範圍"
+    meaning: "距离，范围"
   },
   {
     wordId: 774,
@@ -6965,7 +6965,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "安心，舒適"
+    meaning: "安心，舒适"
   },
   {
     wordId: 775,
@@ -6974,7 +6974,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "華麗的，俗麗的，耀眼的"
+    meaning: "华丽的，俗丽的，耀眼的"
   },
   {
     wordId: 776,
@@ -6983,7 +6983,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "界限、終點、界限"
+    meaning: "界限、终点、界限"
   },
   {
     wordId: 777,
@@ -6992,7 +6992,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "泡桐樹"
+    meaning: "泡桐树"
   },
   {
     wordId: 778,
@@ -7001,7 +7001,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "改變，交換，轉變"
+    meaning: "改变，交换，转变"
   },
   {
     wordId: 779,
@@ -7010,7 +7010,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "大氣環流"
+    meaning: "大气环流"
   },
   {
     wordId: 780,
@@ -7019,7 +7019,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "漂亮，乾淨，漂亮"
+    meaning: "漂亮，干净，漂亮"
   },
   {
     wordId: 781,
@@ -7028,7 +7028,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "中斷，暫停，間隙"
+    meaning: "中断，暂停，间隙"
   },
   {
     wordId: 782,
@@ -7037,7 +7037,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "邊緣，邊緣，邊緣"
+    meaning: "边缘，边缘，边缘"
   },
   {
     wordId: 783,
@@ -7055,7 +7055,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "極其地，極其地"
+    meaning: "极其地，极其地"
   },
   {
     wordId: 785,
@@ -7073,7 +7073,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "近視，近視，近視"
+    meaning: "近视，近视，近视"
   },
   {
     wordId: 787,
@@ -7082,7 +7082,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "緊急的，緊迫的，緊急的"
+    meaning: "紧急的，紧迫的，紧急的"
   },
   {
     wordId: 788,
@@ -7091,7 +7091,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "臨近，不久"
+    meaning: "临近，不久"
   },
   {
     wordId: 789,
@@ -7100,7 +7100,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "郊區，郊區"
+    meaning: "郊区，郊区"
   },
   {
     wordId: 790,
@@ -7118,7 +7118,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "短視"
+    meaning: "短视"
   },
   {
     wordId: 792,
@@ -7136,7 +7136,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "禁止，壓制"
+    meaning: "禁止，压制"
   },
   {
     wordId: 794,
@@ -7145,7 +7145,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "勤奮、勤奮"
+    meaning: "勤奋、勤奋"
   },
   {
     wordId: 795,
@@ -7154,7 +7154,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "服務、職責、工作"
+    meaning: "服务、职责、工作"
   },
   {
     wordId: 796,
@@ -7172,7 +7172,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "nan",
-    meaning: "勞力、努力、勤奮服務"
+    meaning: "劳力、努力、勤奋服务"
   },
   {
     wordId: 798,
@@ -7181,7 +7181,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "區、區、區"
+    meaning: "区、区、区"
   },
   {
     wordId: 799,
@@ -7190,7 +7190,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "互相衝突，互相抵觸，不同"
+    meaning: "互相冲突，互相抵触，不同"
   },
   {
     wordId: 800,
@@ -7199,7 +7199,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "飢餓"
+    meaning: "饥饿"
   },
   {
     wordId: 801,
@@ -7208,7 +7208,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "部門，部分，隔間"
+    meaning: "部门，部分，隔间"
   },
   {
     wordId: 802,
@@ -7217,7 +7217,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "（軌道等的）部分"
+    meaning: "（轨道等的）部分"
   },
   {
     wordId: 803,
@@ -7226,7 +7226,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "莖"
+    meaning: "茎"
   },
   {
     wordId: 804,
@@ -7235,7 +7235,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "結束、停止、標點"
+    meaning: "结束、停止、标点"
   },
   {
     wordId: 805,
@@ -7244,7 +7244,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "驅趕，穿過， 躲避"
+    meaning: "驱赶，穿过， 躲避"
   },
   {
     wordId: 806,
@@ -7253,7 +7253,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "種類"
+    meaning: "种类"
   },
   {
     wordId: 807,
@@ -7262,7 +7262,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "過去的事，過去的事"
+    meaning: "过去的事，过去的事"
   },
   {
     wordId: 808,
@@ -7271,7 +7271,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "彩票，抽籤"
+    meaning: "彩票，抽签"
   },
   {
     wordId: 809,
@@ -7280,7 +7280,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "噴嚏"
+    meaning: "喷嚏"
   },
   {
     wordId: 810,
@@ -7289,7 +7289,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "怕癢"
+    meaning: "怕痒"
   },
   {
     wordId: 811,
@@ -7298,7 +7298,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "疲倦，筋疲力盡"
+    meaning: "疲倦，筋疲力尽"
   },
   {
     wordId: 812,
@@ -7307,7 +7307,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "一無是處、愚蠢、無足輕重"
+    meaning: "一无是处、愚蠢、无足轻重"
   },
   {
     wordId: 813,
@@ -7316,7 +7316,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "例、先例、慣例"
+    meaning: "例、先例、惯例"
   },
   {
     wordId: 814,
@@ -7325,7 +7325,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "哼唱歌曲，自言自語"
+    meaning: "哼唱歌曲，自言自语"
   },
   {
     wordId: 815,
@@ -7343,7 +7343,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "腐爛"
+    meaning: "腐烂"
   },
   {
     wordId: 817,
@@ -7352,7 +7352,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "推翻，顛覆，推翻"
+    meaning: "推翻，颠覆，推翻"
   },
   {
     wordId: 818,
@@ -7361,7 +7361,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "清楚、清晰、大膽"
+    meaning: "清楚、清晰、大胆"
   },
   {
     wordId: 819,
@@ -7370,7 +7370,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "彎曲、壓痕、折射"
+    meaning: "弯曲、压痕、折射"
   },
   {
     wordId: 820,
@@ -7379,7 +7379,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "堅持，保持接近"
+    meaning: "坚持，保持接近"
   },
   {
     wordId: 821,
@@ -7397,7 +7397,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "冗長的，糾纏的，沉重的（味道）"
+    meaning: "冗长的，纠缠的，沉重的（味道）"
   },
   {
     wordId: 823,
@@ -7406,7 +7406,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "國家或州邊界"
+    meaning: "国家或州边界"
   },
   {
     wordId: 824,
@@ -7415,7 +7415,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "項鍊"
+    meaning: "项链"
   },
   {
     wordId: 825,
@@ -7424,7 +7424,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "項鍊，頸鍊"
+    meaning: "项链，颈链"
   },
   {
     wordId: 826,
@@ -7433,7 +7433,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "組合"
+    meaning: "组合"
   },
   {
     wordId: 827,
@@ -7442,7 +7442,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "聯合起來，結合，接合"
+    meaning: "联合起来，结合，接合"
   },
   {
     wordId: 828,
@@ -7460,7 +7460,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "倉庫、地窖、雜誌社"
+    meaning: "仓库、地窖、杂志社"
   },
   {
     wordId: 830,
@@ -7469,7 +7469,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "折磨、騷擾、造成痛苦"
+    meaning: "折磨、骚扰、造成痛苦"
   },
   {
     wordId: 831,
@@ -7478,7 +7478,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "被吞沒，被包圍，被包裹"
+    meaning: "被吞没，被包围，被包裹"
   },
   {
     wordId: 832,
@@ -7487,7 +7487,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "反覆地、真誠地、認真地"
+    meaning: "反复地、真诚地、认真地"
   },
   {
     wordId: 833,
@@ -7496,7 +7496,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "給予，讓某人擁有，為某人做"
+    meaning: "给予，让某人拥有，为某人做"
   },
   {
     wordId: 834,
@@ -7505,7 +7505,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "專家、專業、藝伎"
+    meaning: "专家、专业、艺伎"
   },
   {
     wordId: 835,
@@ -7514,7 +7514,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "黑色的平衡（圖）"
+    meaning: "黑色的平衡（图）"
   },
   {
     wordId: 836,
@@ -7523,7 +7523,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "nan",
-    meaning: "統治者，君主"
+    meaning: "统治者，君主"
   },
   {
     wordId: 837,
@@ -7532,7 +7532,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "刑罰，判決，懲罰"
+    meaning: "刑罚，判决，惩罚"
   },
   {
     wordId: 838,
@@ -7541,7 +7541,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "時間，大約，朝向"
+    meaning: "时间，大约，朝向"
   },
   {
     wordId: 839,
@@ -7550,7 +7550,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "傾斜，傾斜"
+    meaning: "倾斜，倾斜"
   },
   {
     wordId: 840,
@@ -7559,7 +7559,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "體系、宗族、群體"
+    meaning: "体系、宗族、群体"
   },
   {
     wordId: 841,
@@ -7568,7 +7568,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "經過、到期、進展"
+    meaning: "经过、到期、进展"
   },
   {
     wordId: 842,
@@ -7577,7 +7577,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "有節奏的（例如旋律）、隨興的（例如禮服）、輕鬆的"
+    meaning: "有节奏的（例如旋律）、随兴的（例如礼服）、轻松的"
   },
   {
     wordId: 843,
@@ -7586,7 +7586,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "警告、勸告、警惕"
+    meaning: "警告、劝告、警惕"
   },
   {
     wordId: 844,
@@ -7595,7 +7595,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "米，量規"
+    meaning: "米，量规"
   },
   {
     wordId: 845,
@@ -7604,7 +7604,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "機遇，機會"
+    meaning: "机遇，机会"
   },
   {
     wordId: 846,
@@ -7613,7 +7613,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "您忠誠的"
+    meaning: "您忠诚的"
   },
   {
     wordId: 847,
@@ -7622,7 +7622,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "減排"
+    meaning: "减排"
   },
   {
     wordId: 848,
@@ -7631,7 +7631,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "外觀（例如論文中的文章）"
+    meaning: "外观（例如论文中的文章）"
   },
   {
     wordId: 849,
@@ -7640,7 +7640,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "傾角，傾斜度，坡度"
+    meaning: "倾角，倾斜度，坡度"
   },
   {
     wordId: 850,
@@ -7658,7 +7658,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "條件、狀況、前景"
+    meaning: "条件、状况、前景"
   },
   {
     wordId: 852,
@@ -7667,7 +7667,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "魯莽的，輕率的，粗心的"
+    meaning: "鲁莽的，轻率的，粗心的"
   },
   {
     wordId: 853,
@@ -7676,7 +7676,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "攜帶某物"
+    meaning: "携带某物"
   },
   {
     wordId: 854,
@@ -7685,7 +7685,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "形式、形狀、圖形"
+    meaning: "形式、形状、图形"
   },
   {
     wordId: 855,
@@ -7694,7 +7694,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "判決、懲罰、刑罰"
+    meaning: "判决、惩罚、刑罚"
   },
   {
     wordId: 856,
@@ -7703,7 +7703,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "費用、成本、支出"
+    meaning: "费用、成本、支出"
   },
   {
     wordId: 857,
@@ -7721,7 +7721,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "蔑視，鄙視"
+    meaning: "蔑视，鄙视"
   },
   {
     wordId: 859,
@@ -7730,7 +7730,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "個人歷史、職業生涯"
+    meaning: "个人历史、职业生涯"
   },
   {
     wordId: 860,
@@ -7739,7 +7739,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "航線、路線、水道"
+    meaning: "航线、路线、水道"
   },
   {
     wordId: 861,
@@ -7748,7 +7748,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "使蒙羞，使丟臉"
+    meaning: "使蒙羞，使丢脸"
   },
   {
     wordId: 862,
@@ -7757,7 +7757,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "骯髒、不公平"
+    meaning: "肮脏、不公平"
   },
   {
     wordId: 863,
@@ -7766,7 +7766,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "不潔、不純潔、恥辱"
+    meaning: "不洁、不纯洁、耻辱"
   },
   {
     wordId: 864,
@@ -7775,7 +7775,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "變髒，變髒"
+    meaning: "变脏，变脏"
   },
   {
     wordId: 865,
@@ -7784,7 +7784,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "野獸，野蠻人"
+    meaning: "野兽，野蛮人"
   },
   {
     wordId: 866,
@@ -7793,7 +7793,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "吝嗇鬼, 吝嗇鬼, 吝嗇鬼"
+    meaning: "吝啬鬼, 吝啬鬼, 吝啬鬼"
   },
   {
     wordId: 867,
@@ -7811,7 +7811,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "決定，決心"
+    meaning: "决定，决心"
   },
   {
     wordId: 869,
@@ -7820,7 +7820,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "結核病，結核病"
+    meaning: "结核病，结核病"
   },
   {
     wordId: 870,
@@ -7838,7 +7838,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "決議、表決、決定"
+    meaning: "决议、表决、决定"
   },
   {
     wordId: 872,
@@ -7847,7 +7847,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "（堅決地）做，執行（計劃）"
+    meaning: "（坚决地）做，执行（计划）"
   },
   {
     wordId: 873,
@@ -7856,7 +7856,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "結合，聯合"
+    meaning: "结合，联合"
   },
   {
     wordId: 874,
@@ -7865,7 +7865,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "資產負債表、結算表"
+    meaning: "资产负债表、结算表"
   },
   {
     wordId: 875,
@@ -7874,7 +7874,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "比賽的決勝，（體育）決賽"
+    meaning: "比赛的决胜，（体育）决赛"
   },
   {
     wordId: 876,
@@ -7883,7 +7883,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "水晶，結晶"
+    meaning: "水晶，结晶"
   },
   {
     wordId: 877,
@@ -7901,7 +7901,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "聯合，團結"
+    meaning: "联合，团结"
   },
   {
     wordId: 879,
@@ -7910,7 +7910,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "決定，決心"
+    meaning: "决定，决心"
   },
   {
     wordId: 880,
@@ -7919,7 +7919,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "匱乏、短缺、飢荒"
+    meaning: "匮乏、短缺、饥荒"
   },
   {
     wordId: 881,
@@ -7928,7 +7928,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "踢開，踢開，踢（某人）"
+    meaning: "踢开，踢开，踢（某人）"
   },
   {
     wordId: 882,
@@ -7937,7 +7937,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "說壞話"
+    meaning: "说坏话"
   },
   {
     wordId: 883,
@@ -7946,7 +7946,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "煙霧繚繞，感覺尷尬"
+    meaning: "烟雾缭绕，感觉尴尬"
   },
   {
     wordId: 884,
@@ -7955,7 +7955,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "冒煙（例如火）"
+    meaning: "冒烟（例如火）"
   },
   {
     wordId: 885,
@@ -7964,7 +7964,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "家臣，扈從，僕人"
+    meaning: "家臣，扈从，仆人"
   },
   {
     wordId: 886,
@@ -7982,7 +7982,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "球體、圓圈、範圍"
+    meaning: "球体、圆圈、范围"
   },
   {
     wordId: 888,
@@ -7991,7 +7991,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "權力，（做某事）的權利"
+    meaning: "权力，（做某事）的权利"
   },
   {
     wordId: 889,
@@ -8000,7 +8000,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "權威、權力、影響力"
+    meaning: "权威、权力、影响力"
   },
   {
     wordId: 890,
@@ -8009,7 +8009,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "副業，第二職業"
+    meaning: "副业，第二职业"
   },
   {
     wordId: 891,
@@ -8018,7 +8018,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "權力、權威、管轄權"
+    meaning: "权力、权威、管辖权"
   },
   {
     wordId: 892,
@@ -8027,7 +8027,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "身體健康"
+    meaning: "身体健康"
   },
   {
     wordId: 893,
@@ -8036,7 +8036,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "檢察官"
+    meaning: "检察官"
   },
   {
     wordId: 894,
@@ -8045,7 +8045,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "提供獎品、獲勝、獎勵"
+    meaning: "提供奖品、获胜、奖励"
   },
   {
     wordId: 895,
@@ -8063,7 +8063,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "觀點看法"
+    meaning: "观点看法"
   },
   {
     wordId: 897,
@@ -8072,7 +8072,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "智慧、聰明、審慎"
+    meaning: "智慧、聪明、审慎"
   },
   {
     wordId: 898,
@@ -8081,7 +8081,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "節儉, 節儉, 勤儉"
+    meaning: "节俭, 节俭, 勤俭"
   },
   {
     wordId: 899,
@@ -8090,7 +8090,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "多用途, 混合使用, 組合"
+    meaning: "多用途, 混合使用, 组合"
   },
   {
     wordId: 900,
@@ -8099,7 +8099,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "nan",
-    meaning: "權力、權威、影響力"
+    meaning: "权力、权威、影响力"
   },
   {
     wordId: 901,
@@ -8117,7 +8117,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "房屋櫃檯"
+    meaning: "房屋柜台"
   },
   {
     wordId: 903,
@@ -8126,7 +8126,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "小孩，動物的幼崽"
+    meaning: "小孩，动物的幼崽"
   },
   {
     wordId: 904,
@@ -8135,7 +8135,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "大，大，偉大"
+    meaning: "大，大，伟大"
   },
   {
     wordId: 905,
@@ -8144,7 +8144,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "愛上，愛"
+    meaning: "爱上，爱"
   },
   {
     wordId: 906,
@@ -8153,7 +8153,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "10^38，一百億億（美製），一百六億億（英制）"
+    meaning: "10^38，一百亿亿（美制），一百六亿亿（英制）"
   },
   {
     wordId: 907,
@@ -8162,7 +8162,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "-學校，證明"
+    meaning: "-学校，证明"
   },
   {
     wordId: 908,
@@ -8171,7 +8171,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "善意、恩惠、禮貌"
+    meaning: "善意、恩惠、礼貌"
   },
   {
     wordId: 909,
@@ -8180,7 +8180,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "行為、舉動、舉止"
+    meaning: "行为、举动、举止"
   },
   {
     wordId: 910,
@@ -8189,7 +8189,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "銀行職員"
+    meaning: "银行职员"
   },
   {
     wordId: 911,
@@ -8198,7 +8198,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "貿易、商業"
+    meaning: "贸易、商业"
   },
   {
     wordId: 912,
@@ -8207,7 +8207,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "公開表演"
+    meaning: "公开表演"
   },
   {
     wordId: 913,
@@ -8216,7 +8216,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "後悔，悔改"
+    meaning: "后悔，悔改"
   },
   {
     wordId: 914,
@@ -8225,7 +8225,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "向公眾展示"
+    meaning: "向公众展示"
   },
   {
     wordId: 915,
@@ -8234,7 +8234,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "揚帆，航行"
+    meaning: "扬帆，航行"
   },
   {
     wordId: 916,
@@ -8252,7 +8252,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "抗議，反對"
+    meaning: "抗议，反对"
   },
   {
     wordId: 918,
@@ -8261,7 +8261,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "故宮"
+    meaning: "故宫"
   },
   {
     wordId: 919,
@@ -8270,7 +8270,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "繁榮昌盛，經濟健康"
+    meaning: "繁荣昌盛，经济健康"
   },
   {
     wordId: 920,
@@ -8279,7 +8279,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "礦業"
+    meaning: "矿业"
   },
   {
     wordId: 921,
@@ -8288,7 +8288,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "工業企業"
+    meaning: "工业企业"
   },
   {
     wordId: 922,
@@ -8324,7 +8324,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "考古學"
+    meaning: "考古学"
   },
   {
     wordId: 926,
@@ -8333,7 +8333,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "工作、建築、手工藝"
+    meaning: "工作、建筑、手工艺"
   },
   {
     wordId: 927,
@@ -8351,7 +8351,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "礦山（礦石）"
+    meaning: "矿山（矿石）"
   },
   {
     wordId: 929,
@@ -8360,7 +8360,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "短期課程，培訓"
+    meaning: "短期课程，培训"
   },
   {
     wordId: 930,
@@ -8369,7 +8369,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "口頭陳述"
+    meaning: "口头陈述"
   },
   {
     wordId: 931,
@@ -8378,7 +8378,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "補貼、扣除"
+    meaning: "补贴、扣除"
   },
   {
     wordId: 932,
@@ -8387,7 +8387,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "談判、討論、聯繫"
+    meaning: "谈判、讨论、联系"
   },
   {
     wordId: 933,
@@ -8396,7 +8396,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "高貴的，高貴的，精緻的"
+    meaning: "高贵的，高贵的，精致的"
   },
   {
     wordId: 934,
@@ -8414,7 +8414,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "遊行、閱兵"
+    meaning: "游行、阅兵"
   },
   {
     wordId: 936,
@@ -8450,7 +8450,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "公開的（例如秘密的）、公共的、官方的"
+    meaning: "公开的（例如秘密的）、公共的、官方的"
   },
   {
     wordId: 940,
@@ -8459,7 +8459,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "爭議、抵抗"
+    meaning: "争议、抵抗"
   },
   {
     wordId: 941,
@@ -8468,7 +8468,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "計劃、情節、主意"
+    meaning: "计划、情节、主意"
   },
   {
     wordId: 942,
@@ -8477,7 +8477,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "限制，約束"
+    meaning: "限制，约束"
   },
   {
     wordId: 943,
@@ -8486,7 +8486,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "撤退，退格鍵（BS）"
+    meaning: "撤退，退格键（BS）"
   },
   {
     wordId: 944,
@@ -8495,7 +8495,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "光彩，拋光，光澤"
+    meaning: "光彩，抛光，光泽"
   },
   {
     wordId: 945,
@@ -8513,7 +8513,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "有利的，有希望的，令人滿意的"
+    meaning: "有利的，有希望的，令人满意的"
   },
   {
     wordId: 947,
@@ -8531,7 +8531,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "閱讀、翻譯"
+    meaning: "阅读、翻译"
   },
   {
     wordId: 949,
@@ -8540,7 +8540,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "訂閱（例如雜誌）"
+    meaning: "订阅（例如杂志）"
   },
   {
     wordId: 950,
@@ -8549,7 +8549,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "購買，買"
+    meaning: "购买，买"
   },
   {
     wordId: 951,
@@ -8558,7 +8558,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "官方認可、授權、許可"
+    meaning: "官方认可、授权、许可"
   },
   {
     wordId: 952,
@@ -8576,7 +8576,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "廢墟"
+    meaning: "废墟"
   },
   {
     wordId: 954,
@@ -8585,7 +8585,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "購買，買"
+    meaning: "购买，买"
   },
   {
     wordId: 955,
@@ -8594,7 +8594,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "知名度，良好的聲譽"
+    meaning: "知名度，良好的声誉"
   },
   {
     wordId: 956,
@@ -8603,7 +8603,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "遞送、提供（及副本）"
+    meaning: "递送、提供（及副本）"
   },
   {
     wordId: 957,
@@ -8621,7 +8621,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "興奮、刺激、激動"
+    meaning: "兴奋、刺激、激动"
   },
   {
     wordId: 959,
@@ -8630,7 +8630,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "公眾呼籲、公眾貢獻"
+    meaning: "公众呼吁、公众贡献"
   },
   {
     wordId: 960,
@@ -8639,7 +8639,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "巧妙的，熟練的，聰明的"
+    meaning: "巧妙的，熟练的，聪明的"
   },
   {
     wordId: 961,
@@ -8648,7 +8648,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "政府事務、公共用途、公共開支"
+    meaning: "政府事务、公共用途、公共开支"
   },
   {
     wordId: 962,
@@ -8675,7 +8675,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "公（機構）"
+    meaning: "公（机构）"
   },
   {
     wordId: 965,
@@ -8684,7 +8684,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "短（構造）"
+    meaning: "短（构造）"
   },
   {
     wordId: 966,
@@ -8702,7 +8702,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "划船、搖槳、蹬踏板"
+    meaning: "划船、摇桨、蹬踏板"
   },
   {
     wordId: 968,
@@ -8711,7 +8711,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "國貨"
+    meaning: "国货"
   },
   {
     wordId: 969,
@@ -8720,7 +8720,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "國家資助的，全國性的"
+    meaning: "国家资助的，全国性的"
   },
   {
     wordId: 970,
@@ -8729,7 +8729,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "領域"
+    meaning: "领域"
   },
   {
     wordId: 971,
@@ -8738,7 +8738,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "懺悔，承認"
+    meaning: "忏悔，承认"
   },
   {
     wordId: 972,
@@ -8747,7 +8747,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "國防"
+    meaning: "国防"
   },
   {
     wordId: 973,
@@ -8756,7 +8756,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "國家自主權"
+    meaning: "国家自主权"
   },
   {
     wordId: 974,
@@ -8765,7 +8765,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "聯合國"
+    meaning: "联合国"
   },
   {
     wordId: 975,
@@ -8774,7 +8774,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "紅茶"
+    meaning: "红茶"
   },
   {
     wordId: 976,
@@ -8783,7 +8783,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "個人，一個接一個"
+    meaning: "个人，一个接一个"
   },
   {
     wordId: 977,
@@ -8792,7 +8792,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "個別的，分開的"
+    meaning: "个别的，分开的"
   },
   {
     wordId: 978,
@@ -8801,7 +8801,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "感覺、感受、心情"
+    meaning: "感觉、感受、心情"
   },
   {
     wordId: 979,
@@ -8810,7 +8810,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "凍結，凝結"
+    meaning: "冻结，凝结"
   },
   {
     wordId: 980,
@@ -8819,7 +8819,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "凝結，凍結"
+    meaning: "凝结，冻结"
   },
   {
     wordId: 981,
@@ -8828,7 +8828,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "知識、資訊"
+    meaning: "知识、资讯"
   },
   {
     wordId: 982,
@@ -8837,7 +8837,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "準備、意圖、目標"
+    meaning: "准备、意图、目标"
   },
   {
     wordId: 983,
@@ -8846,7 +8846,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "牢記，力求做到"
+    meaning: "牢记，力求做到"
   },
   {
     wordId: 984,
@@ -8855,7 +8855,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "意願、意圖、動機"
+    meaning: "意愿、意图、动机"
   },
   {
     wordId: 985,
@@ -8864,7 +8864,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "計劃、打算、渴望"
+    meaning: "计划、打算、渴望"
   },
   {
     wordId: 986,
@@ -8873,7 +8873,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "令人振奮，令人安心"
+    meaning: "令人振奋，令人安心"
   },
   {
     wordId: 987,
@@ -8882,7 +8882,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "無助的, 淒涼的, 絕望的"
+    meaning: "无助的, 凄凉的, 绝望的"
   },
   {
     wordId: 988,
@@ -8891,7 +8891,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "試驗，實驗"
+    meaning: "试验，实验"
   },
   {
     wordId: 989,
@@ -8900,7 +8900,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "嘗試，測試"
+    meaning: "尝试，测试"
   },
   {
     wordId: 990,
@@ -8918,7 +8918,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "孤兒"
+    meaning: "孤儿"
   },
   {
     wordId: 992,
@@ -8927,7 +8927,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "製造，製造"
+    meaning: "制造，制造"
   },
   {
     wordId: 993,
@@ -8936,7 +8936,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "變得複雜，變得更糟"
+    meaning: "变得复杂，变得更糟"
   },
   {
     wordId: 994,
@@ -8954,7 +8954,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "樹梢"
+    meaning: "树梢"
   },
   {
     wordId: 996,
@@ -8963,7 +8963,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "個性、性格、怪癖"
+    meaning: "个性、性格、怪癖"
   },
   {
     wordId: 997,
@@ -8972,7 +8972,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "人口普查、戶籍"
+    meaning: "人口普查、户籍"
   },
   {
     wordId: 998,
@@ -8981,7 +8981,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "硬幣、零錢"
+    meaning: "硬币、零钱"
   },
   {
     wordId: 999,
@@ -8990,7 +8990,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "固體）"
+    meaning: "固体）"
   },
   {
     wordId: 1000,
@@ -9008,7 +9008,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "答案，回應"
+    meaning: "答案，回应"
   },
   {
     wordId: 1002,
@@ -9026,7 +9026,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "帶加熱器的桌子，（原始）地板井中的木炭火盆"
+    meaning: "带加热器的桌子，（原始）地板井中的木炭火盆"
   },
   {
     wordId: 1004,
@@ -9035,7 +9035,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "為……操心，為……過度關注，為……擔心"
+    meaning: "为……操心，为……过度关注，为……担心"
   },
   {
     wordId: 1005,
@@ -9044,7 +9044,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "誇張"
+    meaning: "夸张"
   },
   {
     wordId: 1006,
@@ -9053,7 +9053,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "訣竅，技能"
+    meaning: "诀窍，技能"
   },
   {
     wordId: 1007,
@@ -9071,7 +9071,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "外交關係"
+    meaning: "外交关系"
   },
   {
     wordId: 1009,
@@ -9107,7 +9107,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "孤立、寂寞、孤獨"
+    meaning: "孤立、寂寞、孤独"
   },
   {
     wordId: 1013,
@@ -9125,7 +9125,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "聲明、傳聞"
+    meaning: "声明、传闻"
   },
   {
     wordId: 1015,
@@ -9143,7 +9143,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "視情況而定"
+    meaning: "视情况而定"
   },
   {
     wordId: 1017,
@@ -9161,7 +9161,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "這"
+    meaning: "这"
   },
   {
     wordId: 1019,
@@ -9170,7 +9170,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "前幾天，最近，最近"
+    meaning: "前几天，最近，最近"
   },
   {
     wordId: 1020,
@@ -9188,7 +9188,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "好的，可愛的，令人嚮往的"
+    meaning: "好的，可爱的，令人向往的"
   },
   {
     wordId: 1022,
@@ -9197,7 +9197,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "具體情況"
+    meaning: "具体情况"
   },
   {
     wordId: 1023,
@@ -9215,7 +9215,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "溢出，灑出"
+    meaning: "溢出，洒出"
   },
   {
     wordId: 1025,
@@ -9233,7 +9233,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "擁擠"
+    meaning: "拥挤"
   },
   {
     wordId: 1027,
@@ -9251,7 +9251,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "把自己隔離起來，被限制，被暗示"
+    meaning: "把自己隔离起来，被限制，被暗示"
   },
   {
     wordId: 1029,
@@ -9260,7 +9260,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "特色，傳統，奇特"
+    meaning: "特色，传统，奇特"
   },
   {
     wordId: 1030,
@@ -9269,7 +9269,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "就業（長期）、僱用"
+    meaning: "就业（长期）、雇用"
   },
   {
     wordId: 1031,
@@ -9278,7 +9278,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "日曆，年鑑"
+    meaning: "日历，年鉴"
   },
   {
     wordId: 1032,
@@ -9296,7 +9296,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "孤立無援"
+    meaning: "孤立无援"
   },
   {
     wordId: 1034,
@@ -9305,7 +9305,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "透過經驗學習，厭惡"
+    meaning: "透过经验学习，厌恶"
   },
   {
     wordId: 1035,
@@ -9314,7 +9314,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "這"
+    meaning: "这"
   },
   {
     wordId: 1036,
@@ -9323,7 +9323,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "這些"
+    meaning: "这些"
   },
   {
     wordId: 1037,
@@ -9332,7 +9332,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "靈魂，精神"
+    meaning: "灵魂，精神"
   },
   {
     wordId: 1038,
@@ -9350,7 +9350,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "基礎，根基"
+    meaning: "基础，根基"
   },
   {
     wordId: 1040,
@@ -9359,7 +9359,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "混血兒，混血兒"
+    meaning: "混血儿，混血儿"
   },
   {
     wordId: 1041,
@@ -9368,7 +9368,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "昆蟲，蟲子"
+    meaning: "昆虫，虫子"
   },
   {
     wordId: 1042,
@@ -9386,7 +9386,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "混淆、混合、合併"
+    meaning: "混淆、混合、合并"
   },
   {
     wordId: 1044,
@@ -9395,7 +9395,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "你好，美好的一天（白天問候 id）"
+    meaning: "你好，美好的一天（白天问候 id）"
   },
   {
     wordId: 1045,
@@ -9413,7 +9413,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "nan",
-    meaning: "起源、來源、基礎"
+    meaning: "起源、来源、基础"
   },
   {
     wordId: 1047,
@@ -9422,7 +9422,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "幫助"
+    meaning: "帮助"
   },
   {
     wordId: 1048,
@@ -9431,7 +9431,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "再一次，再一次，重複"
+    meaning: "再一次，再一次，重复"
   },
   {
     wordId: 1049,
@@ -9440,7 +9440,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "差異，差距"
+    meaning: "差异，差距"
   },
   {
     wordId: 1050,
@@ -9449,7 +9449,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "歳是用來表示年齡的單位"
+    meaning: "歳是用来表示年龄的单位"
   },
   {
     wordId: 1051,
@@ -9458,7 +9458,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "又一次見面，再次相聚，重逢"
+    meaning: "又一次见面，再次相聚，重逢"
   },
   {
     wordId: 1052,
@@ -9467,7 +9467,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "災禍、災禍、不幸"
+    meaning: "灾祸、灾祸、不幸"
   },
   {
     wordId: 1053,
@@ -9476,7 +9476,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "芽孢桿菌、細菌、病菌"
+    meaning: "芽孢杆菌、细菌、病菌"
   },
   {
     wordId: 1054,
@@ -9485,7 +9485,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "工作、工藝、策略"
+    meaning: "工作、工艺、策略"
   },
   {
     wordId: 1055,
@@ -9494,7 +9494,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "礦業"
+    meaning: "矿业"
   },
   {
     wordId: 1056,
@@ -9512,7 +9512,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "重建、改建、修復"
+    meaning: "重建、改建、修复"
   },
   {
     wordId: 1058,
@@ -9521,7 +9521,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "重現，再現，回歸"
+    meaning: "重现，再现，回归"
   },
   {
     wordId: 1059,
@@ -9530,7 +9530,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "利潤"
+    meaning: "利润"
   },
   {
     wordId: 1060,
@@ -9548,7 +9548,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "回放、再生、復甦"
+    meaning: "回放、再生、复苏"
   },
   {
     wordId: 1062,
@@ -9566,7 +9566,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "採用、選擇、挑選"
+    meaning: "采用、选择、挑选"
   },
   {
     wordId: 1064,
@@ -9584,7 +9584,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "復發、復發、再發生"
+    meaning: "复发、复发、再发生"
   },
   {
     wordId: 1066,
@@ -9593,7 +9593,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "細胞（生物學）"
+    meaning: "细胞（生物学）"
   },
   {
     wordId: 1067,
@@ -9602,7 +9602,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "使用，採用"
+    meaning: "使用，采用"
   },
   {
     wordId: 1068,
@@ -9611,7 +9611,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "打斷，攔截，阻礙"
+    meaning: "打断，拦截，阻碍"
   },
   {
     wordId: 1069,
@@ -9620,7 +9620,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "唱歌、鳴叫、嘰嘰喳喳"
+    meaning: "唱歌、鸣叫、叽叽喳喳"
   },
   {
     wordId: 1070,
@@ -9629,7 +9629,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "清澈、平靜、冷漠"
+    meaning: "清澈、平静、冷漠"
   },
   {
     wordId: 1071,
@@ -9638,7 +9638,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "桿，竿（例如用於晾曬衣物）"
+    meaning: "杆，竿（例如用于晾晒衣物）"
   },
   {
     wordId: 1072,
@@ -9647,7 +9647,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "繁榮昌盛"
+    meaning: "繁荣昌盛"
   },
   {
     wordId: 1073,
@@ -9656,7 +9656,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "餘額、差額、保證金"
+    meaning: "余额、差额、保证金"
   },
   {
     wordId: 1074,
@@ -9674,7 +9674,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "手倒立、頭倒立"
+    meaning: "手倒立、头倒立"
   },
   {
     wordId: 1076,
@@ -9683,7 +9683,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "回頭，逆流而上，追溯"
+    meaning: "回头，逆流而上，追溯"
   },
   {
     wordId: 1077,
@@ -9692,7 +9692,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "繁榮、興旺、交配（動物）"
+    meaning: "繁荣、兴旺、交配（动物）"
   },
   {
     wordId: 1078,
@@ -9701,7 +9701,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "垂下，減弱，退卻"
+    meaning: "垂下，减弱，退却"
   },
   {
     wordId: 1079,
@@ -9710,7 +9710,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "欺詐，詐騙"
+    meaning: "欺诈，诈骗"
   },
   {
     wordId: 1080,
@@ -9728,7 +9728,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "之前，早於，前面"
+    meaning: "之前，早于，前面"
   },
   {
     wordId: 1082,
@@ -9737,7 +9737,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "一份工作，一份收穫"
+    meaning: "一份工作，一份收获"
   },
   {
     wordId: 1083,
@@ -9746,7 +9746,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "計劃、政策"
+    meaning: "计划、政策"
   },
   {
     wordId: 1084,
@@ -9755,7 +9755,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "籬笆，柵欄"
+    meaning: "篱笆，栅栏"
   },
   {
     wordId: 1085,
@@ -9764,7 +9764,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "削減、減少、縮減"
+    meaning: "削减、减少、缩减"
   },
   {
     wordId: 1086,
@@ -9773,7 +9773,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "錯誤"
+    meaning: "错误"
   },
   {
     wordId: 1087,
@@ -9782,7 +9782,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "軍事或海軍行動、戰術、戰略"
+    meaning: "军事或海军行动、战术、战略"
   },
   {
     wordId: 1088,
@@ -9791,7 +9791,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "文學作品"
+    meaning: "文学作品"
   },
   {
     wordId: 1089,
@@ -9809,7 +9809,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "裂開，撕裂，爆裂"
+    meaning: "裂开，撕裂，爆裂"
   },
   {
     wordId: 1091,
@@ -9818,7 +9818,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "舉起，給予，提供"
+    meaning: "举起，给予，提供"
   },
   {
     wordId: 1092,
@@ -9827,7 +9827,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "一些小事或瑣事，瑣事"
+    meaning: "一些小事或琐事，琐事"
   },
   {
     wordId: 1093,
@@ -9854,7 +9854,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "呈交，遞交，投標"
+    meaning: "呈交，递交，投标"
   },
   {
     wordId: 1096,
@@ -9863,7 +9863,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "幹擾，妨礙，受阻"
+    meaning: "干扰，妨碍，受阻"
   },
   {
     wordId: 1097,
@@ -9881,7 +9881,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "授予，獎勵，教導"
+    meaning: "授予，奖励，教导"
   },
   {
     wordId: 1099,
@@ -9890,7 +9890,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "我確信，當然，毫無疑問"
+    meaning: "我确信，当然，毫无疑问"
   },
   {
     wordId: 1100,
@@ -9899,7 +9899,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "變得穩定，變得固定"
+    meaning: "变得稳定，变得固定"
   },
   {
     wordId: 1101,
@@ -9908,7 +9908,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "決定，建立，確定"
+    meaning: "决定，建立，确定"
   },
   {
     wordId: 1102,
@@ -9917,7 +9917,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "書櫃"
+    meaning: "书柜"
   },
   {
     wordId: 1103,
@@ -9926,7 +9926,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "視錯覺，幻覺"
+    meaning: "视错觉，幻觉"
   },
   {
     wordId: 1104,
@@ -9935,7 +9935,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "緊迫的"
+    meaning: "紧迫的"
   },
   {
     wordId: 1105,
@@ -9944,7 +9944,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "謀殺"
+    meaning: "谋杀"
   },
   {
     wordId: 1106,
@@ -9953,7 +9953,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "猜測、感覺、推測"
+    meaning: "猜测、感觉、推测"
   },
   {
     wordId: 1107,
@@ -9971,7 +9971,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "那麼，現在"
+    meaning: "那么，现在"
   },
   {
     wordId: 1109,
@@ -9980,7 +9980,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "獲得啟蒙、感知、理解"
+    meaning: "获得启蒙、感知、理解"
   },
   {
     wordId: 1110,
@@ -9989,7 +9989,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "真相，現實"
+    meaning: "真相，现实"
   },
   {
     wordId: 1111,
@@ -9998,7 +9998,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "判斷"
+    meaning: "判断"
   },
   {
     wordId: 1112,
@@ -10007,7 +10007,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "鐵鏽色"
+    meaning: "铁锈色"
   },
   {
     wordId: 1113,
@@ -10016,7 +10016,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "不怎麼、沒那麼"
+    meaning: "不怎么、没那么"
   },
   {
     wordId: 1114,
@@ -10025,7 +10025,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "先生或女士，禮貌，善良"
+    meaning: "先生或女士，礼貌，善良"
   },
   {
     wordId: 1115,
@@ -10034,7 +10034,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "三弦日本吉他、三味線"
+    meaning: "三弦日本吉他、三味线"
   },
   {
     wordId: 1116,
@@ -10043,7 +10043,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "武士，戰士"
+    meaning: "武士，战士"
   },
   {
     wordId: 1117,
@@ -10052,7 +10052,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "興致勃勃地，滿足地"
+    meaning: "兴致勃勃地，满足地"
   },
   {
     wordId: 1118,
@@ -10061,7 +10061,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "動作、作用、效果"
+    meaning: "动作、作用、效果"
   },
   {
     wordId: 1119,
@@ -10070,7 +10070,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "再見"
+    meaning: "再见"
   },
   {
     wordId: 1120,
@@ -10079,7 +10079,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "帶走，逃跑，綁架"
+    meaning: "带走，逃跑，绑架"
   },
   {
     wordId: 1121,
@@ -10088,7 +10088,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "新鮮的，清爽的，令人精神煥發的"
+    meaning: "新鲜的，清爽的，令人精神焕发的"
   },
   {
     wordId: 1122,
@@ -10097,7 +10097,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "妨礙，幹擾，影響"
+    meaning: "妨碍，干扰，影响"
   },
   {
     wordId: 1123,
@@ -10133,7 +10133,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "山脈"
+    meaning: "山脉"
   },
   {
     wordId: 1127,
@@ -10142,7 +10142,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "參議院"
+    meaning: "参议院"
   },
   {
     wordId: 1128,
@@ -10151,7 +10151,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "產假"
+    meaning: "产假"
   },
   {
     wordId: 1129,
@@ -10160,7 +10160,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "碼頭、橋樑、防波堤"
+    meaning: "码头、桥梁、防波堤"
   },
   {
     wordId: 1130,
@@ -10169,7 +10169,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "產後"
+    meaning: "产后"
   },
   {
     wordId: 1131,
@@ -10178,7 +10178,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "產量，生產"
+    meaning: "产量，生产"
   },
   {
     wordId: 1132,
@@ -10187,7 +10187,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "參考，諮詢，磋商"
+    meaning: "参考，咨询，磋商"
   },
   {
     wordId: 1133,
@@ -10196,7 +10196,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "拜訪，訪問"
+    meaning: "拜访，访问"
   },
   {
     wordId: 1134,
@@ -10205,7 +10205,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "贊同、同意、支持"
+    meaning: "赞同、同意、支持"
   },
   {
     wordId: 1135,
@@ -10214,7 +10214,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "讚美、崇拜、頌揚"
+    meaning: "赞美、崇拜、颂扬"
   },
   {
     wordId: 1136,
@@ -10232,7 +10232,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "婦產科"
+    meaning: "妇产科"
   },
   {
     wordId: 1138,
@@ -10241,7 +10241,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "產品，成果，果實"
+    meaning: "产品，成果，果实"
   },
   {
     wordId: 1139,
@@ -10250,7 +10250,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "nan",
-    meaning: "山脈"
+    meaning: "山脉"
   },
   {
     wordId: 1140,
@@ -10268,7 +10268,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "10^24（漢字為 JIS X 0212 kuten 4906）、七兆（美國）、四兆（英）"
+    meaning: "10^24（汉字为 JIS X 0212 kuten 4906）、七兆（美国）、四兆（英）"
   },
   {
     wordId: 1142,
@@ -10277,7 +10277,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "順序、序列、時間"
+    meaning: "顺序、序列、时间"
   },
   {
     wordId: 1143,
@@ -10286,7 +10286,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "完成，完結，結束"
+    meaning: "完成，完结，结束"
   },
   {
     wordId: 1144,
@@ -10295,7 +10295,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "結束，收尾工作，完工"
+    meaning: "结束，收尾工作，完工"
   },
   {
     wordId: 1145,
@@ -10304,7 +10304,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "完成，結束"
+    meaning: "完成，结束"
   },
   {
     wordId: 1146,
@@ -10313,7 +10313,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "後天兩天"
+    meaning: "后天两天"
   },
   {
     wordId: 1147,
@@ -10322,7 +10322,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "繁殖、飼養、養育"
+    meaning: "繁殖、饲养、养育"
   },
   {
     wordId: 1148,
@@ -10340,7 +10340,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "強迫，強迫，脅迫"
+    meaning: "强迫，强迫，胁迫"
   },
   {
     wordId: 1150,
@@ -10349,7 +10349,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "儲備庫存，補充庫存，採購"
+    meaning: "储备库存，补充库存，采购"
   },
   {
     wordId: 1151,
@@ -10358,7 +10358,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "寂靜無聲（如墳墓般），死一般的安靜"
+    meaning: "寂静无声（如坟墓般），死一般的安静"
   },
   {
     wordId: 1152,
@@ -10376,7 +10376,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "城區、街道、鎮"
+    meaning: "城区、街道、镇"
   },
   {
     wordId: 1154,
@@ -10385,7 +10385,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "資格、要求、能力"
+    meaning: "资格、要求、能力"
   },
   {
     wordId: 1155,
@@ -10394,7 +10394,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "視覺，視野"
+    meaning: "视觉，视野"
   },
   {
     wordId: 1156,
@@ -10403,7 +10403,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "裝置、詭計、機制"
+    meaning: "装置、诡计、机制"
   },
   {
     wordId: 1157,
@@ -10412,7 +10412,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "開始，佈設（地雷），設置（陷阱）"
+    meaning: "开始，布设（地雷），设置（陷阱）"
   },
   {
     wordId: 1158,
@@ -10430,7 +10430,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "儘管如此，但是"
+    meaning: "尽管如此，但是"
   },
   {
     wordId: 1160,
@@ -10439,7 +10439,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "此外，此外，儘管如此"
+    meaning: "此外，此外，尽管如此"
   },
   {
     wordId: 1161,
@@ -10457,7 +10457,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "顏色、色調、色澤"
+    meaning: "颜色、色调、色泽"
   },
   {
     wordId: 1163,
@@ -10466,7 +10466,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "禮堂，舉行儀式（如婚禮）的場所"
+    meaning: "礼堂，举行仪式（如婚礼）的场所"
   },
   {
     wordId: 1164,
@@ -10475,7 +10475,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "海關"
+    meaning: "海关"
   },
   {
     wordId: 1165,
@@ -10484,7 +10484,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "執行，實施，實行"
+    meaning: "执行，实施，实行"
   },
   {
     wordId: 1166,
@@ -10493,7 +10493,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "頻繁地，反覆地，不斷地"
+    meaning: "频繁地，反复地，不断地"
   },
   {
     wordId: 1167,
@@ -10502,7 +10502,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "劃分，劃分，劃出"
+    meaning: "划分，划分，划出"
   },
   {
     wordId: 1168,
@@ -10511,7 +10511,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "基金，資本"
+    meaning: "基金，资本"
   },
   {
     wordId: 1169,
@@ -10520,7 +10520,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "失敗，跌倒，失誤"
+    meaning: "失败，跌倒，失误"
   },
   {
     wordId: 1170,
@@ -10529,7 +10529,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "制定計劃、策劃、密謀"
+    meaning: "制定计划、策划、密谋"
   },
   {
     wordId: 1171,
@@ -10538,7 +10538,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "死刑，極刑"
+    meaning: "死刑，极刑"
   },
   {
     wordId: 1172,
@@ -10547,7 +10547,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "潮濕, 潮濕"
+    meaning: "潮湿, 潮湿"
   },
   {
     wordId: 1173,
@@ -10565,7 +10565,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "意圖，目的"
+    meaning: "意图，目的"
   },
   {
     wordId: 1175,
@@ -10583,7 +10583,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "檢查、觀察"
+    meaning: "检查、观察"
   },
   {
     wordId: 1177,
@@ -10592,7 +10592,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "財產、財富、手段"
+    meaning: "财产、财富、手段"
   },
   {
     wordId: 1178,
@@ -10601,7 +10601,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "支援、維護"
+    meaning: "支援、维护"
   },
   {
     wordId: 1179,
@@ -10610,7 +10610,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "指示、說明、指引"
+    meaning: "指示、说明、指引"
   },
   {
     wordId: 1180,
@@ -10619,7 +10619,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "刺繡"
+    meaning: "刺绣"
   },
   {
     wordId: 1181,
@@ -10637,7 +10637,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "沉沒，淹沒"
+    meaning: "沉没，淹没"
   },
   {
     wordId: 1183,
@@ -10646,7 +10646,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "機構、機關、設施"
+    meaning: "机构、机关、设施"
   },
   {
     wordId: 1184,
@@ -10655,7 +10655,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "兒子"
+    meaning: "儿子"
   },
   {
     wordId: 1185,
@@ -10664,7 +10664,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "嚮往、懷念、愛慕"
+    meaning: "向往、怀念、爱慕"
   },
   {
     wordId: 1186,
@@ -10682,7 +10682,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "秘密意圖、動機"
+    meaning: "秘密意图、动机"
   },
   {
     wordId: 1188,
@@ -10691,7 +10691,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "地基、基礎、傾向"
+    meaning: "地基、基础、倾向"
   },
   {
     wordId: 1189,
@@ -10700,7 +10700,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "與…親密，與…交朋友"
+    meaning: "与…亲密，与…交朋友"
   },
   {
     wordId: 1190,
@@ -10709,7 +10709,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "前期調查、準備"
+    meaning: "前期调查、准备"
   },
   {
     wordId: 1191,
@@ -10718,7 +10718,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "寫下來"
+    meaning: "写下来"
   },
   {
     wordId: 1192,
@@ -10727,7 +10727,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "裁縫，製作，準備"
+    meaning: "裁缝，制作，准备"
   },
   {
     wordId: 1193,
@@ -10736,7 +10736,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "以舊換新，部分交換"
+    meaning: "以旧换新，部分交换"
   },
   {
     wordId: 1194,
@@ -10745,7 +10745,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "燃燒殆盡，衰落，衰退"
+    meaning: "燃烧殆尽，衰落，衰退"
   },
   {
     wordId: 1195,
@@ -10754,7 +10754,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "房間"
+    meaning: "房间"
   },
   {
     wordId: 1196,
@@ -10763,7 +10763,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "取消資格、消除、喪失行為能力（法律）"
+    meaning: "取消资格、消除、丧失行为能力（法律）"
   },
   {
     wordId: 1197,
@@ -10772,7 +10772,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "牢固地，緊密地，可靠的"
+    meaning: "牢固地，紧密地，可靠的"
   },
   {
     wordId: 1198,
@@ -10781,7 +10781,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "問題"
+    meaning: "问题"
   },
   {
     wordId: 1199,
@@ -10790,7 +10790,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "家庭紀律、訓練、教養"
+    meaning: "家庭纪律、训练、教养"
   },
   {
     wordId: 1200,
@@ -10799,7 +10799,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "習慣某項工作，開始做，縫補"
+    meaning: "习惯某项工作，开始做，缝补"
   },
   {
     wordId: 1201,
@@ -10808,7 +10808,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "樸素、謙虛、節儉"
+    meaning: "朴素、谦虚、节俭"
   },
   {
     wordId: 1202,
@@ -10817,7 +10817,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "缺乏和諧"
+    meaning: "缺乏和谐"
   },
   {
     wordId: 1203,
@@ -10835,7 +10835,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "（動物的）尾巴"
+    meaning: "（动物的）尾巴"
   },
   {
     wordId: 1205,
@@ -10844,7 +10844,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "指出、識別"
+    meaning: "指出、识别"
   },
   {
     wordId: 1206,
@@ -10853,7 +10853,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "觀點、觀點、視角"
+    meaning: "观点、观点、视角"
   },
   {
     wordId: 1207,
@@ -10871,7 +10871,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "柔韌的，有彈性的，有彈性的"
+    meaning: "柔韧的，有弹性的，有弹性的"
   },
   {
     wordId: 1209,
@@ -10880,7 +10880,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "排泄物、未經處理的污水、人類排泄物"
+    meaning: "排泄物、未经处理的污水、人类排泄物"
   },
   {
     wordId: 1210,
@@ -10889,7 +10889,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "勝過，超越，忍受"
+    meaning: "胜过，超越，忍受"
   },
   {
     wordId: 1211,
@@ -10907,7 +10907,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "常，經常，屢次，頻繁"
+    meaning: "常，经常，屡次，频繁"
   },
   {
     wordId: 1213,
@@ -10916,7 +10916,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "首班火車"
+    meaning: "首班火车"
   },
   {
     wordId: 1214,
@@ -10925,7 +10925,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "一會兒"
+    meaning: "一会儿"
   },
   {
     wordId: 1215,
@@ -10934,7 +10934,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "變得麻木，陷入昏睡（即肢體）"
+    meaning: "变得麻木，陷入昏睡（即肢体）"
   },
   {
     wordId: 1216,
@@ -10943,7 +10943,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "有品味的（服裝），酷，有精緻的陽剛之氣"
+    meaning: "有品味的（服装），酷，有精致的阳刚之气"
   },
   {
     wordId: 1217,
@@ -10952,7 +10952,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "私人財產、個人物品"
+    meaning: "私人财产、个人物品"
   },
   {
     wordId: 1218,
@@ -10961,7 +10961,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "頑強的，固執的"
+    meaning: "顽强的，固执的"
   },
   {
     wordId: 1219,
@@ -10979,7 +10979,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "脂肪、油脂、鯨脂"
+    meaning: "脂肪、油脂、鲸脂"
   },
   {
     wordId: 1221,
@@ -10988,7 +10988,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "願望、渴望、野心"
+    meaning: "愿望、渴望、野心"
   },
   {
     wordId: 1222,
@@ -11006,7 +11006,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "結束，終止，非正式（能劇）"
+    meaning: "结束，终止，非正式（能剧）"
   },
   {
     wordId: 1224,
@@ -11015,7 +11015,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "完成、結束、徹底做完某件事"
+    meaning: "完成、结束、彻底做完某件事"
   },
   {
     wordId: 1225,
@@ -11024,7 +11024,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "管理、交易、結算"
+    meaning: "管理、交易、结算"
   },
   {
     wordId: 1226,
@@ -11033,7 +11033,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "該死的！"
+    meaning: "该死的！"
   },
   {
     wordId: 1227,
@@ -11042,7 +11042,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "敏銳地，深深地，衷心地"
+    meaning: "敏锐地，深深地，衷心地"
   },
   {
     wordId: 1228,
@@ -11051,7 +11051,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "刺穿，滲透"
+    meaning: "刺穿，渗透"
   },
   {
     wordId: 1229,
@@ -11060,7 +11060,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "使命、差事、訊息"
+    meaning: "使命、差事、讯息"
   },
   {
     wordId: 1230,
@@ -11069,7 +11069,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "關閉, 截斷, 結束"
+    meaning: "关闭, 截断, 结束"
   },
   {
     wordId: 1231,
@@ -11078,7 +11078,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "男僕，（上帝的）僕人"
+    meaning: "男仆，（上帝的）仆人"
   },
   {
     wordId: 1232,
@@ -11087,7 +11087,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "視野、展望"
+    meaning: "视野、展望"
   },
   {
     wordId: 1233,
@@ -11105,7 +11105,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "拒絕"
+    meaning: "拒绝"
   },
   {
     wordId: 1235,
@@ -11114,7 +11114,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "公司擁有的房子"
+    meaning: "公司拥有的房子"
   },
   {
     wordId: 1236,
@@ -11132,7 +11132,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "說話、閒聊、喋喋不休"
+    meaning: "说话、闲聊、喋喋不休"
   },
   {
     wordId: 1238,
@@ -11150,7 +11150,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "坦率，開朗"
+    meaning: "坦率，开朗"
   },
   {
     wordId: 1240,
@@ -11159,7 +11159,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "開玩笑、玩文字遊戲、穿得時尚"
+    meaning: "开玩笑、玩文字游戏、穿得时尚"
   },
   {
     wordId: 1241,
@@ -11168,7 +11168,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "種類，品種，物種"
+    meaning: "种类，品种，物种"
   },
   {
     wordId: 1242,
@@ -11177,7 +11177,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "群眾，大量，人民"
+    meaning: "群众，大量，人民"
   },
   {
     wordId: 1243,
@@ -11186,7 +11186,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "圈數、圈數、週長"
+    meaning: "圈数、圈数、周长"
   },
   {
     wordId: 1244,
@@ -11195,7 +11195,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "私有製"
+    meaning: "私有制"
   },
   {
     wordId: 1245,
@@ -11204,7 +11204,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "收益、收益、回報"
+    meaning: "收益、收益、回报"
   },
   {
     wordId: 1246,
@@ -11213,7 +11213,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "學習"
+    meaning: "学习"
   },
   {
     wordId: 1247,
@@ -11222,7 +11222,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "週期，時期"
+    meaning: "周期，时期"
   },
   {
     wordId: 1248,
@@ -11231,7 +11231,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "眾議院、眾議院"
+    meaning: "众议院、众议院"
   },
   {
     wordId: 1249,
@@ -11240,7 +11240,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "就業、開始工作"
+    meaning: "就业、开始工作"
   },
   {
     wordId: 1250,
@@ -11249,7 +11249,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "追求知識、學習、研習"
+    meaning: "追求知识、学习、研习"
   },
   {
     wordId: 1251,
@@ -11258,7 +11258,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "總計，總計"
+    meaning: "总计，总计"
   },
   {
     wordId: 1252,
@@ -11267,7 +11267,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "進攻、衝鋒、突襲"
+    meaning: "进攻、冲锋、突袭"
   },
   {
     wordId: 1253,
@@ -11285,7 +11285,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "從頭到尾，從頭到尾，從頭到尾都做一件事"
+    meaning: "从头到尾，从头到尾，从头到尾都做一件事"
   },
   {
     wordId: 1255,
@@ -11294,7 +11294,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "碩士學位課程"
+    meaning: "硕士学位课程"
   },
   {
     wordId: 1256,
@@ -11312,7 +11312,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "附著力、黏著力、韌性"
+    meaning: "附著力、黏著力、韧性"
   },
   {
     wordId: 1258,
@@ -11321,7 +11321,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "聚集，收集，積累"
+    meaning: "聚集，收集，积累"
   },
   {
     wordId: 1259,
@@ -11330,7 +11330,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "裝飾物，點綴物，裝潢"
+    meaning: "装饰物，点缀物，装潢"
   },
   {
     wordId: 1260,
@@ -11348,7 +11348,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "完成（課程）"
+    meaning: "完成（课程）"
   },
   {
     wordId: 1262,
@@ -11357,7 +11357,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "保安，門衛"
+    meaning: "保安，门卫"
   },
   {
     wordId: 1263,
@@ -11375,7 +11375,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "主體性、主體、自我"
+    meaning: "主体性、主体、自我"
   },
   {
     wordId: 1265,
@@ -11384,7 +11384,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "慶祝，祝賀"
+    meaning: "庆祝，祝贺"
   },
   {
     wordId: 1266,
@@ -11393,7 +11393,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "命運、宿命、宿命"
+    meaning: "命运、宿命、宿命"
   },
   {
     wordId: 1267,
@@ -11402,7 +11402,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "手工藝品"
+    meaning: "手工艺品"
   },
   {
     wordId: 1268,
@@ -11411,7 +11411,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "主權、至高無上、統治權"
+    meaning: "主权、至高无上、统治权"
   },
   {
     wordId: 1269,
@@ -11420,7 +11420,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "組織、贊助"
+    meaning: "组织、赞助"
   },
   {
     wordId: 1270,
@@ -11429,7 +11429,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "選擇主題，收集數據"
+    meaning: "选择主题，收集数据"
   },
   {
     wordId: 1271,
@@ -11438,7 +11438,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "對象，意義"
+    meaning: "对象，意义"
   },
   {
     wordId: 1272,
@@ -11465,7 +11465,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "主體，主要成分"
+    meaning: "主体，主要成分"
   },
   {
     wordId: 1275,
@@ -11474,7 +11474,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "主題，題材，主題"
+    meaning: "主题，题材，主题"
   },
   {
     wordId: 1276,
@@ -11501,7 +11501,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "（孩子）出生、分娩、生產（貨物）"
+    meaning: "（孩子）出生、分娩、生产（货物）"
   },
   {
     wordId: 1279,
@@ -11510,7 +11510,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "抵達（工作地等）"
+    meaning: "抵达（工作地等）"
   },
   {
     wordId: 1280,
@@ -11528,7 +11528,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "升遷、事業有成、聲望顯赫"
+    meaning: "升迁、事业有成、声望显赫"
   },
   {
     wordId: 1282,
@@ -11537,7 +11537,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "提出問題"
+    meaning: "提出问题"
   },
   {
     wordId: 1283,
@@ -11546,7 +11546,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "航海、行軍、外出"
+    meaning: "航海、行军、外出"
   },
   {
     wordId: 1284,
@@ -11555,7 +11555,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "費用、支出"
+    meaning: "费用、支出"
   },
   {
     wordId: 1285,
@@ -11564,7 +11564,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "展覽，展示"
+    meaning: "展览，展示"
   },
   {
     wordId: 1286,
@@ -11573,7 +11573,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "主要領導"
+    meaning: "主要领导"
   },
   {
     wordId: 1287,
@@ -11582,7 +11582,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "負責人，負責官員"
+    meaning: "负责人，负责官员"
   },
   {
     wordId: 1288,
@@ -11591,7 +11591,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "頭部、大腦"
+    meaning: "头部、大脑"
   },
   {
     wordId: 1289,
@@ -11600,7 +11600,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "防禦"
+    meaning: "防御"
   },
   {
     wordId: 1290,
@@ -11618,7 +11618,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "各種各樣，許多，幾個"
+    meaning: "各种各样，许多，几个"
   },
   {
     wordId: 1292,
@@ -11627,7 +11627,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "背負，扛在肩上"
+    meaning: "背负，扛在肩上"
   },
   {
     wordId: 1293,
@@ -11636,7 +11636,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "現象"
+    meaning: "现象"
   },
   {
     wordId: 1294,
@@ -11645,7 +11645,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "身體不適"
+    meaning: "身体不适"
   },
   {
     wordId: 1295,
@@ -11654,7 +11654,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "傷口，損傷，受傷"
+    meaning: "伤口，损伤，受伤"
   },
   {
     wordId: 1296,
@@ -11672,7 +11672,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "個人使用，私人業務"
+    meaning: "个人使用，私人业务"
   },
   {
     wordId: 1298,
@@ -11681,7 +11681,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "方式、方法、資源"
+    meaning: "方式、方法、资源"
   },
   {
     wordId: 1299,
@@ -11699,7 +11699,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "衝擊、碰撞、撞擊"
+    meaning: "冲击、碰撞、撞击"
   },
   {
     wordId: 1301,
@@ -11708,7 +11708,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "證據、證詞"
+    meaning: "证据、证词"
   },
   {
     wordId: 1302,
@@ -11717,7 +11717,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "證據，證明"
+    meaning: "证据，证明"
   },
   {
     wordId: 1303,
@@ -11726,7 +11726,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "疲憊，消耗"
+    meaning: "疲惫，消耗"
   },
   {
     wordId: 1304,
@@ -11735,7 +11735,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "整理、比較"
+    meaning: "整理、比较"
   },
   {
     wordId: 1305,
@@ -11744,7 +11744,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "細節，詳情"
+    meaning: "细节，详情"
   },
   {
     wordId: 1306,
@@ -11753,7 +11753,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "晉升"
+    meaning: "晋升"
   },
   {
     wordId: 1307,
@@ -11762,7 +11762,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "少數, 少數"
+    meaning: "少数, 少数"
   },
   {
     wordId: 1308,
@@ -11771,7 +11771,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "假裝，冒充，佯裝"
+    meaning: "假装，冒充，佯装"
   },
   {
     wordId: 1309,
@@ -11780,7 +11780,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "新聞、信件、狀況"
+    meaning: "新闻、信件、状况"
   },
   {
     wordId: 1310,
@@ -11789,7 +11789,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "同意、默許、贊同"
+    meaning: "同意、默许、赞同"
   },
   {
     wordId: 1311,
@@ -11798,7 +11798,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "象徵"
+    meaning: "象征"
   },
   {
     wordId: 1312,
@@ -11807,7 +11807,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "兒科"
+    meaning: "儿科"
   },
   {
     wordId: 1313,
@@ -11816,7 +11816,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "證人"
+    meaning: "证人"
   },
   {
     wordId: 1314,
@@ -11825,7 +11825,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "僱員，僕人"
+    meaning: "雇员，仆人"
   },
   {
     wordId: 1315,
@@ -11843,7 +11843,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "勝利、凱旋、征服"
+    meaning: "胜利、凯旋、征服"
   },
   {
     wordId: 1317,
@@ -11852,7 +11852,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "鼓勵、宣傳、訊息"
+    meaning: "鼓励、宣传、讯息"
   },
   {
     wordId: 1318,
@@ -11861,7 +11861,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "工作人員"
+    meaning: "工作人员"
   },
   {
     wordId: 1319,
@@ -11879,7 +11879,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "專業職責"
+    meaning: "专业职责"
   },
   {
     wordId: 1321,
@@ -11888,7 +11888,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "先生們！女士們！"
+    meaning: "先生们！女士们！"
   },
   {
     wordId: 1322,
@@ -11906,7 +11906,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "佔有，擁有"
+    meaning: "占有，拥有"
   },
   {
     wordId: 1324,
@@ -11915,7 +11915,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "各處，（某物的）某些部分"
+    meaning: "各处，（某物的）某些部分"
   },
   {
     wordId: 1325,
@@ -11924,7 +11924,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "附屬於，屬於"
+    meaning: "附属于，属于"
   },
   {
     wordId: 1326,
@@ -11933,7 +11933,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "治療"
+    meaning: "治疗"
   },
   {
     wordId: 1327,
@@ -11942,7 +11942,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "總是，不斷地"
+    meaning: "总是，不断地"
   },
   {
     wordId: 1328,
@@ -11951,7 +11951,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "固定的，規定的"
+    meaning: "固定的，规定的"
   },
   {
     wordId: 1329,
@@ -11969,7 +11969,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "懲罰"
+    meaning: "惩罚"
   },
   {
     wordId: 1331,
@@ -11987,7 +11987,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "書評"
+    meaning: "书评"
   },
   {
     wordId: 1333,
@@ -11996,7 +11996,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "處置、處理、懲罰"
+    meaning: "处置、处理、惩罚"
   },
   {
     wordId: 1334,
@@ -12005,7 +12005,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "群眾、一般民眾"
+    meaning: "群众、一般民众"
   },
   {
     wordId: 1335,
@@ -12014,7 +12014,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "事務"
+    meaning: "事务"
   },
   {
     wordId: 1336,
@@ -12023,7 +12023,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "準備、調查、檢查"
+    meaning: "准备、调查、检查"
   },
   {
     wordId: 1337,
@@ -12050,7 +12050,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "擊退，趕走"
+    meaning: "击退，赶走"
   },
   {
     wordId: 1340,
@@ -12059,7 +12059,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "記下，寫下來"
+    meaning: "记下，写下来"
   },
   {
     wordId: 1341,
@@ -12077,7 +12077,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "價格、材料、替代品"
+    meaning: "价格、材料、替代品"
   },
   {
     wordId: 1343,
@@ -12086,7 +12086,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "皺紋、摺痕"
+    meaning: "皱纹、折痕"
   },
   {
     wordId: 1344,
@@ -12104,7 +12104,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "進化、進步"
+    meaning: "进化、进步"
   },
   {
     wordId: 1346,
@@ -12113,7 +12113,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "後部、後部裝置護罩"
+    meaning: "后部、后部装置护罩"
   },
   {
     wordId: 1347,
@@ -12122,7 +12122,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "審議"
+    meaning: "审议"
   },
   {
     wordId: 1348,
@@ -12131,7 +12131,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "進步"
+    meaning: "进步"
   },
   {
     wordId: 1349,
@@ -12140,7 +12140,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "正在興起、正在發展、正在出現"
+    meaning: "正在兴起、正在发展、正在出现"
   },
   {
     wordId: 1350,
@@ -12149,7 +12149,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "促進、鼓勵"
+    meaning: "促进、鼓励"
   },
   {
     wordId: 1351,
@@ -12158,7 +12158,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "申報、聲明、提交申報表"
+    meaning: "申报、声明、提交申报表"
   },
   {
     wordId: 1352,
@@ -12176,7 +12176,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "判斷、檢查、檢驗"
+    meaning: "判断、检查、检验"
   },
   {
     wordId: 1354,
@@ -12185,7 +12185,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "紳士"
+    meaning: "绅士"
   },
   {
     wordId: 1355,
@@ -12194,7 +12194,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "信徒，追隨者，虔誠者"
+    meaning: "信徒，追随者，虔诚者"
   },
   {
     wordId: 1356,
@@ -12212,7 +12212,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "雙人自殺，戀人自殺"
+    meaning: "双人自杀，恋人自杀"
   },
   {
     wordId: 1358,
@@ -12221,7 +12221,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "前進，前進"
+    meaning: "前进，前进"
   },
   {
     wordId: 1359,
@@ -12248,7 +12248,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "神聖性、莊嚴性、尊嚴性"
+    meaning: "神圣性、庄严性、尊严性"
   },
   {
     wordId: 1362,
@@ -12257,7 +12257,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "友誼"
+    meaning: "友谊"
   },
   {
     wordId: 1363,
@@ -12266,7 +12266,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "真相，真實情況"
+    meaning: "真相，真实情况"
   },
   {
     wordId: 1364,
@@ -12275,7 +12275,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "新建築，新建築"
+    meaning: "新建筑，新建筑"
   },
   {
     wordId: 1365,
@@ -12284,7 +12284,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "推介會"
+    meaning: "推介会"
   },
   {
     wordId: 1366,
@@ -12293,7 +12293,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "進步、發展"
+    meaning: "进步、发展"
   },
   {
     wordId: 1367,
@@ -12302,7 +12302,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "寺廟，聖地"
+    meaning: "寺庙，圣地"
   },
   {
     wordId: 1368,
@@ -12311,7 +12311,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "進步"
+    meaning: "进步"
   },
   {
     wordId: 1369,
@@ -12320,7 +12320,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "振盪、振動"
+    meaning: "振荡、振动"
   },
   {
     wordId: 1370,
@@ -12329,7 +12329,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "新生，一年級學生"
+    meaning: "新生，一年级学生"
   },
   {
     wordId: 1371,
@@ -12338,7 +12338,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "信任、信心、信賴"
+    meaning: "信任、信心、信赖"
   },
   {
     wordId: 1372,
@@ -12347,7 +12347,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "裁判、審判、判決"
+    meaning: "裁判、审判、判决"
   },
   {
     wordId: 1373,
@@ -12383,7 +12383,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "侵略、入侵、襲擊"
+    meaning: "侵略、入侵、袭击"
   },
   {
     wordId: 1377,
@@ -12392,7 +12392,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "醫療檢查及治療、診斷"
+    meaning: "医疗检查及治疗、诊断"
   },
   {
     wordId: 1378,
@@ -12401,7 +12401,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "nan",
-    meaning: "航線，路線"
+    meaning: "航线，路线"
   },
   {
     wordId: 1379,
@@ -12410,7 +12410,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "濕氣，潮氣，水汽"
+    meaning: "湿气，潮气，水汽"
   },
   {
     wordId: 1380,
@@ -12419,7 +12419,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "河流的源頭，泉源"
+    meaning: "河流的源头，泉源"
   },
   {
     wordId: 1381,
@@ -12428,7 +12428,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "推進力，驅動力"
+    meaning: "推进力，驱动力"
   },
   {
     wordId: 1382,
@@ -12437,7 +12437,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "沖洗"
+    meaning: "冲洗"
   },
   {
     wordId: 1383,
@@ -12446,7 +12446,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "演奏管樂器"
+    meaning: "演奏管乐器"
   },
   {
     wordId: 1384,
@@ -12455,7 +12455,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "猜測，推測"
+    meaning: "猜测，推测"
   },
   {
     wordId: 1385,
@@ -12473,7 +12473,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "推理、推論、神祕或偵探類型（電影小說等）"
+    meaning: "推理、推论、神秘或侦探类型（电影小说等）"
   },
   {
     wordId: 1387,
@@ -12482,7 +12482,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "數位"
+    meaning: "数位"
   },
   {
     wordId: 1388,
@@ -12491,7 +12491,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "崇拜、愛慕、欽佩"
+    meaning: "崇拜、爱慕、钦佩"
   },
   {
     wordId: 1389,
@@ -12500,7 +12500,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "安裝，裝備，組裝"
+    meaning: "安装，装备，组装"
   },
   {
     wordId: 1390,
@@ -12509,7 +12509,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "擺放（桌子）、安置（地基）、放置（槍）"
+    meaning: "摆放（桌子）、安置（地基）、放置（枪）"
   },
   {
     wordId: 1391,
@@ -12527,7 +12527,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "過去，之後"
+    meaning: "过去，之后"
   },
   {
     wordId: 1393,
@@ -12536,7 +12536,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "立刻，很快，輕易"
+    meaning: "立刻，很快，轻易"
   },
   {
     wordId: 1394,
@@ -12545,7 +12545,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "幫助、援助、救濟"
+    meaning: "帮助、援助、救济"
   },
   {
     wordId: 1395,
@@ -12581,7 +12581,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "沖洗，洗掉"
+    meaning: "冲洗，洗掉"
   },
   {
     wordId: 1399,
@@ -12590,7 +12590,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "進步"
+    meaning: "进步"
   },
   {
     wordId: 1400,
@@ -12599,7 +12599,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "推薦、建議、鼓勵"
+    meaning: "推荐、建议、鼓励"
   },
   {
     wordId: 1401,
@@ -12608,7 +12608,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "（褲）袖口、（裙）下擺、髮型的剪裁"
+    meaning: "（裤）袖口、（裙）下摆、发型的剪裁"
   },
   {
     wordId: 1402,
@@ -12617,7 +12617,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "不再使用，變得過時，消亡"
+    meaning: "不再使用，变得过时，消亡"
   },
   {
     wordId: 1403,
@@ -12635,7 +12635,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "可愛、夢幻、美麗"
+    meaning: "可爱、梦幻、美丽"
   },
   {
     wordId: 1405,
@@ -12644,7 +12644,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "也就是說，即，即。"
+    meaning: "也就是说，即，即。"
   },
   {
     wordId: 1406,
@@ -12653,7 +12653,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "敏捷，聰明，快速"
+    meaning: "敏捷，聪明，快速"
   },
   {
     wordId: 1407,
@@ -12671,7 +12671,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "結束，解決，解決"
+    meaning: "结束，解决，解决"
   },
   {
     wordId: 1409,
@@ -12680,7 +12680,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "澄清，使清楚，鎮定"
+    meaning: "澄清，使清楚，镇定"
   },
   {
     wordId: 1410,
@@ -12689,7 +12689,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "抱歉（短語）"
+    meaning: "抱歉（短语）"
   },
   {
     wordId: 1411,
@@ -12698,7 +12698,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "抱歉，打擾一下"
+    meaning: "抱歉，打扰一下"
   },
   {
     wordId: 1412,
@@ -12725,7 +12725,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "刮鬍子"
+    meaning: "刮胡子"
   },
   {
     wordId: 1415,
@@ -12743,7 +12743,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "彼此擦肩而過，意見不合，彼此錯過"
+    meaning: "彼此擦肩而过，意见不合，彼此错过"
   },
   {
     wordId: 1417,
@@ -12752,7 +12752,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "摩擦，磨損，磨損"
+    meaning: "摩擦，磨损，磨损"
   },
   {
     wordId: 1418,
@@ -12761,7 +12761,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "nan",
-    meaning: "無異議通過，苗條，纖細"
+    meaning: "无异议通过，苗条，纤细"
   },
   {
     wordId: 1419,
@@ -12770,7 +12770,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "制度、組織、帝國命令"
+    meaning: "制度、组织、帝国命令"
   },
   {
     wordId: 1420,
@@ -12779,7 +12779,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "製造，製作"
+    meaning: "制造，制作"
   },
   {
     wordId: 1421,
@@ -12788,7 +12788,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "生長、發育、繁殖"
+    meaning: "生长、发育、繁殖"
   },
   {
     wordId: 1422,
@@ -12797,7 +12797,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "結果，果實"
+    meaning: "结果，果实"
   },
   {
     wordId: 1423,
@@ -12806,7 +12806,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "正確，正確，正確的解釋（答案解答）"
+    meaning: "正确，正确，正确的解释（答案解答）"
   },
   {
     wordId: 1424,
@@ -12815,7 +12815,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "正規的，合法的，正式的"
+    meaning: "正规的，合法的，正式的"
   },
   {
     wordId: 1425,
@@ -12824,7 +12824,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "正義、公正、正直"
+    meaning: "正义、公正、正直"
   },
   {
     wordId: 1426,
@@ -12833,7 +12833,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "生計，生活"
+    meaning: "生计，生活"
   },
   {
     wordId: 1427,
@@ -12842,7 +12842,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "行政、政治權力"
+    meaning: "行政、政治权力"
   },
   {
     wordId: 1428,
@@ -12851,7 +12851,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "精緻的，精巧的，精美的"
+    meaning: "精致的，精巧的，精美的"
   },
   {
     wordId: 1429,
@@ -12869,7 +12869,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "約束、制裁、懲罰"
+    meaning: "约束、制裁、惩罚"
   },
   {
     wordId: 1431,
@@ -12887,7 +12887,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "清算、結算"
+    meaning: "清算、结算"
   },
   {
     wordId: 1433,
@@ -12905,7 +12905,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "靜止、休息、靜止不動"
+    meaning: "静止、休息、静止不动"
   },
   {
     wordId: 1435,
@@ -12914,7 +12914,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "真誠、誠實、忠誠"
+    meaning: "真诚、诚实、忠诚"
   },
   {
     wordId: 1436,
@@ -12932,7 +12932,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "青春期, 青春年華, 青春期"
+    meaning: "青春期, 青春年华, 青春期"
   },
   {
     wordId: 1438,
@@ -12941,7 +12941,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "純潔，天真"
+    meaning: "纯洁，天真"
   },
   {
     wordId: 1439,
@@ -12950,7 +12950,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "聖經、經文"
+    meaning: "圣经、经文"
   },
   {
     wordId: 1440,
@@ -12959,7 +12959,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "常態，正常，正常"
+    meaning: "常态，正常，正常"
   },
   {
     wordId: 1441,
@@ -12968,7 +12968,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "控制、指揮、戰勝"
+    meaning: "控制、指挥、战胜"
   },
   {
     wordId: 1442,
@@ -12977,7 +12977,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "有序的，有規律的，組織良好的"
+    meaning: "有序的，有规律的，组织良好的"
   },
   {
     wordId: 1443,
@@ -12986,7 +12986,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "盛裝打扮，穿著華麗的衣服"
+    meaning: "盛装打扮，穿著华丽的衣服"
   },
   {
     wordId: 1444,
@@ -12995,7 +12995,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "盛大、繁榮、壯麗"
+    meaning: "盛大、繁荣、壮丽"
   },
   {
     wordId: 1445,
@@ -13004,7 +13004,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "善與惡，純潔與不純潔"
+    meaning: "善与恶，纯洁与不纯洁"
   },
   {
     wordId: 1446,
@@ -13013,7 +13013,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "制定、設立、創立"
+    meaning: "制定、设立、创立"
   },
   {
     wordId: 1447,
@@ -13022,7 +13022,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "靜止的"
+    meaning: "静止的"
   },
   {
     wordId: 1448,
@@ -13031,7 +13031,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "鐵製造"
+    meaning: "铁制造"
   },
   {
     wordId: 1449,
@@ -13040,7 +13040,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "天氣晴朗"
+    meaning: "天气晴朗"
   },
   {
     wordId: 1450,
@@ -13049,7 +13049,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "正當的，合理的，正確的"
+    meaning: "正当的，合理的，正确的"
   },
   {
     wordId: 1451,
@@ -13058,7 +13058,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "大多數，成年年齡"
+    meaning: "大多数，成年年龄"
   },
   {
     wordId: 1452,
@@ -13076,7 +13076,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "征服、鎮壓、克服"
+    meaning: "征服、镇压、克服"
   },
   {
     wordId: 1454,
@@ -13085,7 +13085,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "製造方法、配方、配方"
+    meaning: "制造方法、配方、配方"
   },
   {
     wordId: 1455,
@@ -13094,7 +13094,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "精確、準確、詳細"
+    meaning: "精确、准确、详细"
   },
   {
     wordId: 1456,
@@ -13103,7 +13103,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "宣言、聲明、聲明"
+    meaning: "宣言、声明、声明"
   },
   {
     wordId: 1457,
@@ -13121,7 +13121,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "限制，約束，條件"
+    meaning: "限制，约束，条件"
   },
   {
     wordId: 1459,
@@ -13130,7 +13130,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "生理學、月經"
+    meaning: "生理学、月经"
   },
   {
     wordId: 1460,
@@ -13139,7 +13139,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "影響力、權力、威力"
+    meaning: "影响力、权力、威力"
   },
   {
     wordId: 1461,
@@ -13166,7 +13166,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "兒子，我的兒子"
+    meaning: "儿子，我的儿子"
   },
   {
     wordId: 1464,
@@ -13175,7 +13175,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "職責，義務"
+    meaning: "职责，义务"
   },
   {
     wordId: 1465,
@@ -13184,7 +13184,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "奉承，讚美"
+    meaning: "奉承，赞美"
   },
   {
     wordId: 1466,
@@ -13202,7 +13202,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "世代、世界、時代"
+    meaning: "世代、世界、时代"
   },
   {
     wordId: 1468,
@@ -13211,7 +13211,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "節點、部分、場合"
+    meaning: "节点、部分、场合"
   },
   {
     wordId: 1469,
@@ -13220,7 +13220,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "清理（​​土地）、開闢、開闢"
+    meaning: "清理（​​土地）、开辟、开辟"
   },
   {
     wordId: 1470,
@@ -13229,7 +13229,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "令人信服的，嚴重的，嚴重的"
+    meaning: "令人信服的，严重的，严重的"
   },
   {
     wordId: 1471,
@@ -13238,7 +13238,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "觸摸，接觸"
+    meaning: "触摸，接触"
   },
   {
     wordId: 1472,
@@ -13247,7 +13247,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "連接詞"
+    meaning: "连接词"
   },
   {
     wordId: 1473,
@@ -13256,7 +13256,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "機構，機關"
+    meaning: "机构，机关"
   },
   {
     wordId: 1474,
@@ -13265,7 +13265,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "妥協、交叉、融合"
+    meaning: "妥协、交叉、融合"
   },
   {
     wordId: 1475,
@@ -13274,7 +13274,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "建立、創立"
+    meaning: "建立、创立"
   },
   {
     wordId: 1476,
@@ -13283,7 +13283,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "勸說"
+    meaning: "劝说"
   },
   {
     wordId: 1477,
@@ -13292,7 +13292,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "痛苦、艱難、壓抑"
+    meaning: "痛苦、艰难、压抑"
   },
   {
     wordId: 1478,
@@ -13301,7 +13301,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "機構，基金會，機關"
+    meaning: "机构，基金会，机关"
   },
   {
     wordId: 1479,
@@ -13310,7 +13310,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "攻擊，進攻"
+    meaning: "攻击，进攻"
   },
   {
     wordId: 1480,
@@ -13319,7 +13319,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "輿論"
+    meaning: "舆论"
   },
   {
     wordId: 1481,
@@ -13328,7 +13328,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "隱士、巫師"
+    meaning: "隐士、巫师"
   },
   {
     wordId: 1482,
@@ -13346,7 +13346,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "纖維, 纖維, 紡織品"
+    meaning: "纤维, 纤维, 纺织品"
   },
   {
     wordId: 1484,
@@ -13355,7 +13355,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "選舉"
+    meaning: "选举"
   },
   {
     wordId: 1485,
@@ -13391,7 +13391,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "選擇、篩選"
+    meaning: "选择、筛选"
   },
   {
     wordId: 1489,
@@ -13400,7 +13400,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "戰爭破壞"
+    meaning: "战争破坏"
   },
   {
     wordId: 1490,
@@ -13409,7 +13409,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "專業化"
+    meaning: "专业化"
   },
   {
     wordId: 1491,
@@ -13427,7 +13427,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "潛水"
+    meaning: "潜水"
   },
   {
     wordId: 1493,
@@ -13436,7 +13436,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "上個月"
+    meaning: "上个月"
   },
   {
     wordId: 1494,
@@ -13445,7 +13445,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "前上週"
+    meaning: "前上周"
   },
   {
     wordId: 1495,
@@ -13454,7 +13454,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "家族前輩、上一輩、上一代"
+    meaning: "家族前辈、上一辈、上一代"
   },
   {
     wordId: 1496,
@@ -13463,7 +13463,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "最近，前幾天"
+    meaning: "最近，前几天"
   },
   {
     wordId: 1497,
@@ -13472,7 +13472,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "首次抵達"
+    meaning: "首次抵达"
   },
   {
     wordId: 1498,
@@ -13490,7 +13490,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "戰鬥， ..."
+    meaning: "战斗， ..."
   },
   {
     wordId: 1500,
@@ -13499,7 +13499,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "滲透、潛入"
+    meaning: "渗透、潜入"
   },
   {
     wordId: 1501,
@@ -13517,7 +13517,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "獨家使用，個人使用"
+    meaning: "独家使用，个人使用"
   },
   {
     wordId: 1503,
@@ -13526,7 +13526,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "佔領、捕獲、佔有"
+    meaning: "占领、捕获、占有"
   },
   {
     wordId: 1504,
@@ -13535,7 +13535,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "nan",
-    meaning: "戰爭潛力"
+    meaning: "战争潜力"
   },
   {
     wordId: 1505,
@@ -13544,7 +13544,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "僧侶，牧師"
+    meaning: "僧侣，牧师"
   },
   {
     wordId: 1506,
@@ -13553,7 +13553,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "奔跑，跟隨"
+    meaning: "奔跑，跟随"
   },
   {
     wordId: 1507,
@@ -13562,7 +13562,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "陪伴、結婚、遵守"
+    meaning: "陪伴、结婚、遵守"
   },
   {
     wordId: 1508,
@@ -13571,7 +13571,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "全部的，全部的，整體的"
+    meaning: "全部的，全部的，整体的"
   },
   {
     wordId: 1509,
@@ -13580,7 +13580,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "適合性，健身"
+    meaning: "适合性，健身"
   },
   {
     wordId: 1510,
@@ -13589,7 +13589,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "大會"
+    meaning: "大会"
   },
   {
     wordId: 1511,
@@ -13598,7 +13598,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "發行（例如報紙）、創刊號"
+    meaning: "发行（例如报纸）、创刊号"
   },
   {
     wordId: 1512,
@@ -13607,7 +13607,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "匯款，寄錢"
+    meaning: "汇款，寄钱"
   },
   {
     wordId: 1513,
@@ -13616,7 +13616,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "駕駛有輪子的車輛（例如汽車）、行駛"
+    meaning: "驾驶有轮子的车辆（例如汽车）、行驶"
   },
   {
     wordId: 1514,
@@ -13625,7 +13625,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "綜合、協調、整合"
+    meaning: "综合、协调、整合"
   },
   {
     wordId: 1515,
@@ -13634,7 +13634,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "搜索（特別是在刑事調查中），調查"
+    meaning: "搜索（特别是在刑事调查中），调查"
   },
   {
     wordId: 1516,
@@ -13643,7 +13643,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "搜尋（尤指尋找失蹤的人或物）、調查"
+    meaning: "搜寻（尤指寻找失踪的人或物）、调查"
   },
   {
     wordId: 1517,
@@ -13652,7 +13652,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "並且，就像這樣"
+    meaning: "并且，就像这样"
   },
   {
     wordId: 1518,
@@ -13661,7 +13661,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "管理、處理、控制"
+    meaning: "管理、处理、控制"
   },
   {
     wordId: 1519,
@@ -13670,7 +13670,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "裝飾品"
+    meaning: "装饰品"
   },
   {
     wordId: 1520,
@@ -13679,7 +13679,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "創建"
+    meaning: "创建"
   },
   {
     wordId: 1521,
@@ -13688,7 +13688,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "宏偉的，壯麗的，雄偉的"
+    meaning: "宏伟的，壮丽的，雄伟的"
   },
   {
     wordId: 1522,
@@ -13697,7 +13697,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "衝突、暴動、叛亂"
+    meaning: "冲突、暴动、叛乱"
   },
   {
     wordId: 1523,
@@ -13706,7 +13706,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "災難、沉船、事故"
+    meaning: "灾难、沉船、事故"
   },
   {
     wordId: 1524,
@@ -13715,7 +13715,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "市場價格、猜測、估計"
+    meaning: "市场价格、猜测、估计"
   },
   {
     wordId: 1525,
@@ -13724,7 +13724,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "裝置"
+    meaning: "装置"
   },
   {
     wordId: 1526,
@@ -13733,7 +13733,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "建立，創立，組織"
+    meaning: "建立，创立，组织"
   },
   {
     wordId: 1527,
@@ -13760,7 +13760,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "晉升、加速、鼓勵"
+    meaning: "晋升、加速、鼓励"
   },
   {
     wordId: 1530,
@@ -13769,7 +13769,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "符合，同意，適應"
+    meaning: "符合，同意，适应"
   },
   {
     wordId: 1531,
@@ -13778,7 +13778,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "束縛，枷鎖，限制"
+    meaning: "束缚，枷锁，限制"
   },
   {
     wordId: 1532,
@@ -13787,7 +13787,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "側面，側翼，側光"
+    meaning: "侧面，侧翼，侧光"
   },
   {
     wordId: 1533,
@@ -13796,7 +13796,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "那個地方，那裡"
+    meaning: "那个地方，那里"
   },
   {
     wordId: 1534,
@@ -13805,7 +13805,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "所以（連接詞），因此，現在"
+    meaning: "所以（连接词），因此，现在"
   },
   {
     wordId: 1535,
@@ -13814,7 +13814,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "傷害，傷害，損傷"
+    meaning: "伤害，伤害，损伤"
   },
   {
     wordId: 1536,
@@ -13823,7 +13823,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "各處，某處，約"
+    meaning: "各处，某处，约"
   },
   {
     wordId: 1537,
@@ -13832,7 +13832,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "原料、主題"
+    meaning: "原料、主题"
   },
   {
     wordId: 1538,
@@ -13841,7 +13841,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "阻礙，阻撓，妨礙"
+    meaning: "阻碍，阻挠，妨碍"
   },
   {
     wordId: 1539,
@@ -13859,7 +13859,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "訴訟，官司"
+    meaning: "诉讼，官司"
   },
   {
     wordId: 1541,
@@ -13868,7 +13868,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "繁殖、生長"
+    meaning: "繁殖、生长"
   },
   {
     wordId: 1542,
@@ -13877,7 +13877,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "測量，步驟"
+    meaning: "测量，步骤"
   },
   {
     wordId: 1543,
@@ -13886,7 +13886,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "在那裡，另一個"
+    meaning: "在那里，另一个"
   },
   {
     wordId: 1544,
@@ -13895,7 +13895,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "冷淡、簡短、生硬"
+    meaning: "冷淡、简短、生硬"
   },
   {
     wordId: 1545,
@@ -13904,7 +13904,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "坦率、坦誠、開朗"
+    meaning: "坦率、坦诚、开朗"
   },
   {
     wordId: 1546,
@@ -13913,7 +13913,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "看向另一邊（或轉向另一邊）"
+    meaning: "看向另一边（或转向另一边）"
   },
   {
     wordId: 1547,
@@ -13922,7 +13922,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "提供，供給，裝備"
+    meaning: "提供，供给，装备"
   },
   {
     wordId: 1548,
@@ -13931,7 +13931,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "配備，擁有，擁有"
+    meaning: "配备，拥有，拥有"
   },
   {
     wordId: 1549,
@@ -13940,7 +13940,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "花園、公園、種植園"
+    meaning: "花园、公园、种植园"
   },
   {
     wordId: 1550,
@@ -13958,7 +13958,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "最終，遲早，前面提到的"
+    meaning: "最终，迟早，前面提到的"
   },
   {
     wordId: 1552,
@@ -13976,7 +13976,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "此外，此外，其餘的"
+    meaning: "此外，此外，其余的"
   },
   {
     wordId: 1554,
@@ -13985,7 +13985,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "保持不變，保持原樣（即現在）"
+    meaning: "保持不变，保持原样（即现在）"
   },
   {
     wordId: 1555,
@@ -13994,7 +13994,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "升起，聳立，翱翔"
+    meaning: "升起，耸立，翱翔"
   },
   {
     wordId: 1556,
@@ -14003,7 +14003,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "簡單、樸實、天真"
+    meaning: "简单、朴实、天真"
   },
   {
     wordId: 1557,
@@ -14021,7 +14021,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "違背，反對，不服從"
+    meaning: "违背，反对，不服从"
   },
   {
     wordId: 1559,
@@ -14039,7 +14039,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "轉身離開，避開"
+    meaning: "转身离开，避开"
   },
   {
     wordId: 1561,
@@ -14048,7 +14048,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "彎曲, 曲率, 曲線"
+    meaning: "弯曲, 曲率, 曲线"
   },
   {
     wordId: 1562,
@@ -14066,7 +14066,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "然後，在那之後"
+    meaning: "然后，在那之后"
   },
   {
     wordId: 1564,
@@ -14075,7 +14075,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "每一個，每一個，或者"
+    meaning: "每一个，每一个，或者"
   },
   {
     wordId: 1565,
@@ -14084,7 +14084,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "並且（連接詞），因此，由於"
+    meaning: "并且（连接词），因此，由于"
   },
   {
     wordId: 1566,
@@ -14093,7 +14093,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "在那種情況下，那麼..."
+    meaning: "在那种情况下，那么..."
   },
   {
     wordId: 1567,
@@ -14102,7 +14102,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "但（仍然）然而，儘管如此"
+    meaning: "但（仍然）然而，尽管如此"
   },
   {
     wordId: 1568,
@@ -14129,7 +14129,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "到那個程度，程度"
+    meaning: "到那个程度，程度"
   },
   {
     wordId: 1571,
@@ -14138,7 +14138,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "因此，出於這個原因，"
+    meaning: "因此，出于这个原因，"
   },
   {
     wordId: 1572,
@@ -14147,7 +14147,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "套裝、西裝、制服"
+    meaning: "套装、西装、制服"
   },
   {
     wordId: 1573,
@@ -14156,7 +14156,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "逐漸地,穩定地,悄悄地"
+    meaning: "逐渐地,稳定地,悄悄地"
   },
   {
     wordId: 1574,
@@ -14165,7 +14165,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "損失"
+    meaning: "损失"
   },
   {
     wordId: 1575,
@@ -14174,7 +14174,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "nan",
-    meaning: "持續時間，持續性"
+    meaning: "持续时间，持续性"
   },
   {
     wordId: 1576,
@@ -14183,7 +14183,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "惡意、惡意、其他意圖"
+    meaning: "恶意、恶意、其他意图"
   },
   {
     wordId: 1577,
@@ -14192,7 +14192,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "互動、溝通、應對"
+    meaning: "互动、沟通、应对"
   },
   {
     wordId: 1578,
@@ -14210,7 +14210,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "整體來說，主要是"
+    meaning: "整体来说，主要是"
   },
   {
     wordId: 1580,
@@ -14219,7 +14219,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "體格，體質"
+    meaning: "体格，体质"
   },
   {
     wordId: 1581,
@@ -14228,7 +14228,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "輟學"
+    meaning: "辍学"
   },
   {
     wordId: 1582,
@@ -14246,7 +14246,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "治療、接待"
+    meaning: "治疗、接待"
   },
   {
     wordId: 1584,
@@ -14255,7 +14255,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "對抗，攤牌"
+    meaning: "对抗，摊牌"
   },
   {
     wordId: 1585,
@@ -14264,7 +14264,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "個人經歷"
+    meaning: "个人经历"
   },
   {
     wordId: 1586,
@@ -14273,7 +14273,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "反對，對抗"
+    meaning: "反对，对抗"
   },
   {
     wordId: 1587,
@@ -14282,7 +14282,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "滅絕"
+    meaning: "灭绝"
   },
   {
     wordId: 1588,
@@ -14291,7 +14291,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "對於，關於，每"
+    meaning: "对于，关于，每"
   },
   {
     wordId: 1589,
@@ -14300,7 +14300,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "普通大眾"
+    meaning: "普通大众"
   },
   {
     wordId: 1590,
@@ -14309,7 +14309,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "應付，應對"
+    meaning: "应付，应对"
   },
   {
     wordId: 1591,
@@ -14327,7 +14327,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "態度、條件、準備"
+    meaning: "态度、条件、准备"
   },
   {
     wordId: 1593,
@@ -14336,7 +14336,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "談話、對話、交談"
+    meaning: "谈话、对话、交谈"
   },
   {
     wordId: 1594,
@@ -14354,7 +14354,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "不付款，違約"
+    meaning: "不付款，违约"
   },
   {
     wordId: 1596,
@@ -14363,7 +14363,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "對比，比較"
+    meaning: "对比，比较"
   },
   {
     wordId: 1597,
@@ -14372,7 +14372,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "大多數（例如大部分）、更大、相當"
+    meaning: "大多数（例如大部分）、更大、相当"
   },
   {
     wordId: 1598,
@@ -14381,7 +14381,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "（幾何）對面"
+    meaning: "（几何）对面"
   },
   {
     wordId: 1599,
@@ -14408,7 +14408,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "面試、會議"
+    meaning: "面试、会议"
   },
   {
     wordId: 1602,
@@ -14417,7 +14417,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "對抗、反對、對抗"
+    meaning: "对抗、反对、对抗"
   },
   {
     wordId: 1603,
@@ -14426,7 +14426,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "體力"
+    meaning: "体力"
   },
   {
     wordId: 1604,
@@ -14435,7 +14435,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "互動, 互動, 對話"
+    meaning: "互动, 互动, 对话"
   },
   {
     wordId: 1605,
@@ -14453,7 +14453,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "消亡，逐漸消失，滅絕"
+    meaning: "消亡，逐渐消失，灭绝"
   },
   {
     wordId: 1607,
@@ -14471,7 +14471,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "數量，金額，體積"
+    meaning: "数量，金额，体积"
   },
   {
     wordId: 1609,
@@ -14480,7 +14480,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "上升，膨脹，晉升"
+    meaning: "上升，膨胀，晋升"
   },
   {
     wordId: 1610,
@@ -14489,7 +14489,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "（開火"
+    meaning: "（开火"
   },
   {
     wordId: 1611,
@@ -14498,7 +14498,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "一種"
+    meaning: "一种"
   },
   {
     wordId: 1612,
@@ -14516,7 +14516,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "魁梧的，強壯的，堅固的"
+    meaning: "魁梧的，强壮的，坚固的"
   },
   {
     wordId: 1614,
@@ -14525,7 +14525,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "技能，聰明才智"
+    meaning: "技能，聪明才智"
   },
   {
     wordId: 1615,
@@ -14534,7 +14534,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "身高、身材、身長"
+    meaning: "身高、身材、身长"
   },
   {
     wordId: 1616,
@@ -14552,7 +14552,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "多數規則"
+    meaning: "多数规则"
   },
   {
     wordId: 1618,
@@ -14561,7 +14561,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "協助"
+    meaning: "协助"
   },
   {
     wordId: 1619,
@@ -14570,7 +14570,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "參與，參加"
+    meaning: "参与，参加"
   },
   {
     wordId: 1620,
@@ -14579,7 +14579,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "飄浮，漂浮，懸在空中"
+    meaning: "飘浮，漂浮，悬在空中"
   },
   {
     wordId: 1621,
@@ -14597,7 +14597,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "藝伎舞蹈"
+    meaning: "艺伎舞蹈"
   },
   {
     wordId: 1623,
@@ -14606,7 +14606,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "立刻，霎時間，突然"
+    meaning: "立刻，霎时间，突然"
   },
   {
     wordId: 1624,
@@ -14615,7 +14615,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "順便拜訪，短暫拜訪"
+    meaning: "顺便拜访，短暂拜访"
   },
   {
     wordId: 1625,
@@ -14624,7 +14624,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "切斷，阻斷，壓制"
+    meaning: "切断，阻断，压制"
   },
   {
     wordId: 1626,
@@ -14633,7 +14633,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "技能嫻熟，身體健康"
+    meaning: "技能娴熟，身体健康"
   },
   {
     wordId: 1627,
@@ -14651,7 +14651,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "僅僅、僅僅、但是"
+    meaning: "仅仅、仅仅、但是"
   },
   {
     wordId: 1629,
@@ -14660,7 +14660,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "珍貴的，有價值的，無價的"
+    meaning: "珍贵的，有价值的，无价的"
   },
   {
     wordId: 1630,
@@ -14669,7 +14669,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "珍貴的，有價值的，無價的"
+    meaning: "珍贵的，有价值的，无价的"
   },
   {
     wordId: 1631,
@@ -14678,7 +14678,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "重視，珍視，尊重"
+    meaning: "重视，珍视，尊重"
   },
   {
     wordId: 1632,
@@ -14687,7 +14687,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "盾牌、小圓盾、盾形飾板"
+    meaning: "盾牌、小圆盾、盾形饰板"
   },
   {
     wordId: 1633,
@@ -14696,7 +14696,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "面子、官方立場、公開立場或態度（與私人想法相對）"
+    meaning: "面子、官方立场、公开立场或态度（与私人想法相对）"
   },
   {
     wordId: 1634,
@@ -14705,7 +14705,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "提供、獻身、崇敬"
+    meaning: "提供、献身、崇敬"
   },
   {
     wordId: 1635,
@@ -14714,7 +14714,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "及物動詞（直接受詞）"
+    meaning: "及物动词（直接受词）"
   },
   {
     wordId: 1636,
@@ -14741,7 +14741,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "摸索著前進，奮鬥著，經過一番奮鬥到達某處"
+    meaning: "摸索著前进，奋斗著，经过一番奋斗到达某处"
   },
   {
     wordId: 1639,
@@ -14750,7 +14750,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "跟隨（道路）、跟隨（路線）、跟進"
+    meaning: "跟随（道路）、跟随（路线）、跟进"
   },
   {
     wordId: 1640,
@@ -14777,7 +14777,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "請求、恩惠、依賴"
+    meaning: "请求、恩惠、依赖"
   },
   {
     wordId: 1643,
@@ -14786,7 +14786,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "煙草、香煙"
+    meaning: "烟草、香烟"
   },
   {
     wordId: 1644,
@@ -14795,7 +14795,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "常，反覆，頻繁"
+    meaning: "常，反复，频繁"
   },
   {
     wordId: 1645,
@@ -14804,7 +14804,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "另一側，不同的方向，（另一方面）"
+    meaning: "另一侧，不同的方向，（另一方面）"
   },
   {
     wordId: 1646,
@@ -14813,7 +14813,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "忙碌、工作壓力"
+    meaning: "忙碌、工作压力"
   },
   {
     wordId: 1647,
@@ -14831,7 +14831,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "偶爾，偶爾"
+    meaning: "偶尔，偶尔"
   },
   {
     wordId: 1649,
@@ -14840,7 +14840,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "無法忍受的，難以忍受的，難以忍受的"
+    meaning: "无法忍受的，难以忍受的，难以忍受的"
   },
   {
     wordId: 1650,
@@ -14849,7 +14849,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "收集的東西，聚集地，欠款"
+    meaning: "收集的东西，聚集地，欠款"
   },
   {
     wordId: 1651,
@@ -14858,7 +14858,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "授予，贈予"
+    meaning: "授予，赠予"
   },
   {
     wordId: 1652,
@@ -14876,7 +14876,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "猶豫"
+    meaning: "犹豫"
   },
   {
     wordId: 1654,
@@ -14894,7 +14894,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "容易，簡單，輕鬆"
+    meaning: "容易，简单，轻松"
   },
   {
     wordId: 1656,
@@ -14903,7 +14903,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "多樣性，種類"
+    meaning: "多样性，种类"
   },
   {
     wordId: 1657,
@@ -14912,7 +14912,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "鬆弛，鬆懈，遲鈍"
+    meaning: "松弛，松懈，迟钝"
   },
   {
     wordId: 1658,
@@ -14921,7 +14921,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "放鬆，鬆開，鬆弛"
+    meaning: "放松，松开，松弛"
   },
   {
     wordId: 1659,
@@ -14930,7 +14930,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "人的形容詞後綴"
+    meaning: "人的形容词后缀"
   },
   {
     wordId: 1660,
@@ -14939,7 +14939,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "懸掛，下垂，掉落"
+    meaning: "悬挂，下垂，掉落"
   },
   {
     wordId: 1661,
@@ -14948,7 +14948,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "悲痛、嘆息、悲嘆"
+    meaning: "悲痛、叹息、悲叹"
   },
   {
     wordId: 1662,
@@ -14957,7 +14957,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "一捲布（約10碼），0.245英畝，300坪"
+    meaning: "一卷布（约10码），0.245英亩，300坪"
   },
   {
     wordId: 1663,
@@ -14966,7 +14966,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "單一的，簡單的，唯一的"
+    meaning: "单一的，简单的，唯一的"
   },
   {
     wordId: 1664,
@@ -14975,7 +14975,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "短歌，31 音節的日本詩歌"
+    meaning: "短歌，31 音节的日本诗歌"
   },
   {
     wordId: 1665,
@@ -14984,7 +14984,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "擔架、擔架"
+    meaning: "担架、担架"
   },
   {
     wordId: 1666,
@@ -14993,7 +14993,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "脾氣暴躁"
+    meaning: "脾气暴躁"
   },
   {
     wordId: 1667,
@@ -15002,7 +15002,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "探索、探險"
+    meaning: "探索、探险"
   },
   {
     wordId: 1668,
@@ -15011,7 +15011,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "縮短、縮略、減少"
+    meaning: "缩短、缩略、减少"
   },
   {
     wordId: 1669,
@@ -15020,7 +15020,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "抽屜櫃"
+    meaning: "抽屉柜"
   },
   {
     wordId: 1670,
@@ -15038,7 +15038,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "專科學校"
+    meaning: "专科学校"
   },
   {
     wordId: 1672,
@@ -15047,7 +15047,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "單調, 單調, 沉悶"
+    meaning: "单调, 单调, 沉闷"
   },
   {
     wordId: 1673,
@@ -15056,7 +15056,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "唯一的, 獨立的, 單身的"
+    meaning: "唯一的, 独立的, 单身的"
   },
   {
     wordId: 1674,
@@ -15074,7 +15074,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "nan",
-    meaning: "蛋白質"
+    meaning: "蛋白质"
   },
   {
     wordId: 1676,
@@ -15092,7 +15092,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "改變"
+    meaning: "改变"
   },
   {
     wordId: 1678,
@@ -15110,7 +15110,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "承諾，許諾，發誓"
+    meaning: "承诺，许诺，发誓"
   },
   {
     wordId: 1680,
@@ -15119,7 +15119,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "畜牧業"
+    meaning: "畜牧业"
   },
   {
     wordId: 1681,
@@ -15128,7 +15128,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "野獸，畜生，該死"
+    meaning: "野兽，畜生，该死"
   },
   {
     wordId: 1682,
@@ -15137,7 +15137,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "積累，累積，儲存"
+    meaning: "积累，累积，储存"
   },
   {
     wordId: 1683,
@@ -15155,7 +15155,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "牛奶、乳房、環"
+    meaning: "牛奶、乳房、环"
   },
   {
     wordId: 1685,
@@ -15164,7 +15164,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "父親和母親，父母"
+    meaning: "父亲和母亲，父母"
   },
   {
     wordId: 1686,
@@ -15173,7 +15173,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "縮短，收縮，縮小"
+    meaning: "缩短，收缩，缩小"
   },
   {
     wordId: 1687,
@@ -15182,7 +15182,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "秩序、規律、系統"
+    meaning: "秩序、规律、系统"
   },
   {
     wordId: 1688,
@@ -15200,7 +15200,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "一點也不（否定動詞）"
+    meaning: "一点也不（否定动词）"
   },
   {
     wordId: 1690,
@@ -15209,7 +15209,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "知識分子"
+    meaning: "知识分子"
   },
   {
     wordId: 1691,
@@ -15218,7 +15218,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "西服櫃檯，到達.."
+    meaning: "西服柜台，到达.."
   },
   {
     wordId: 1692,
@@ -15227,7 +15227,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "西服櫃檯，到達.."
+    meaning: "西服柜台，到达.."
   },
   {
     wordId: 1693,
@@ -15272,7 +15272,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "著陸, 降落, 著地"
+    meaning: "著陆, 降落, 著地"
   },
   {
     wordId: 1698,
@@ -15281,7 +15281,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "開工"
+    meaning: "开工"
   },
   {
     wordId: 1699,
@@ -15290,7 +15290,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "客廳（日式）"
+    meaning: "客厅（日式）"
   },
   {
     wordId: 1700,
@@ -15308,7 +15308,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "縱容，寵壞，寵壞"
+    meaning: "纵容，宠坏，宠坏"
   },
   {
     wordId: 1702,
@@ -15335,7 +15335,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "繼電器，連接"
+    meaning: "继电器，连接"
   },
   {
     wordId: 1705,
@@ -15344,7 +15344,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "建議、警告"
+    meaning: "建议、警告"
   },
   {
     wordId: 1706,
@@ -15362,7 +15362,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "忠誠，忠實"
+    meaning: "忠诚，忠实"
   },
   {
     wordId: 1708,
@@ -15371,7 +15371,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "誹謗、誹謗、中傷"
+    meaning: "诽谤、诽谤、中伤"
   },
   {
     wordId: 1709,
@@ -15380,7 +15380,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "中心，樞紐，支柱"
+    meaning: "中心，枢纽，支柱"
   },
   {
     wordId: 1710,
@@ -15389,7 +15389,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "彩票，抽獎，抽籤"
+    meaning: "彩票，抽奖，抽签"
   },
   {
     wordId: 1711,
@@ -15398,7 +15398,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "中斷、暫停、休息"
+    meaning: "中断、暂停、休息"
   },
   {
     wordId: 1712,
@@ -15407,7 +15407,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "惱怒，被冒犯"
+    meaning: "恼怒，被冒犯"
   },
   {
     wordId: 1713,
@@ -15461,7 +15461,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "內臟、腸子、腸子"
+    meaning: "内脏、肠子、肠子"
   },
   {
     wordId: 1719,
@@ -15479,7 +15479,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "超、極、超"
+    meaning: "超、极、超"
   },
   {
     wordId: 1721,
@@ -15488,7 +15488,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "政府辦公室"
+    meaning: "政府办公室"
   },
   {
     wordId: 1722,
@@ -15497,7 +15497,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "簽名、簽名、蓋章"
+    meaning: "签名、签名、盖章"
   },
   {
     wordId: 1723,
@@ -15506,7 +15506,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "聽覺"
+    meaning: "听觉"
   },
   {
     wordId: 1724,
@@ -15515,7 +15515,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "首席（政府）秘書"
+    meaning: "首席（政府）秘书"
   },
   {
     wordId: 1725,
@@ -15524,7 +15524,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "聽課、旁聽"
+    meaning: "听课、旁听"
   },
   {
     wordId: 1726,
@@ -15533,7 +15533,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "徵收，徵稅"
+    meaning: "征收，征税"
   },
   {
     wordId: 1727,
@@ -15542,7 +15542,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "聽診器"
+    meaning: "听诊器"
   },
   {
     wordId: 1728,
@@ -15551,7 +15551,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "挑戰，反抗"
+    meaning: "挑战，反抗"
   },
   {
     wordId: 1729,
@@ -15560,7 +15560,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "很長，很長"
+    meaning: "很长，很长"
   },
   {
     wordId: 1730,
@@ -15569,7 +15569,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "仲裁、調解、調停"
+    meaning: "仲裁、调解、调停"
   },
   {
     wordId: 1731,
@@ -15578,7 +15578,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "正好，正確，確實"
+    meaning: "正好，正确，确实"
   },
   {
     wordId: 1732,
@@ -15587,7 +15587,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "長篇（例如小說電影）"
+    meaning: "长篇（例如小说电影）"
   },
   {
     wordId: 1733,
@@ -15596,7 +15596,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "城鎮的區域、城市街區（大小不規則）"
+    meaning: "城镇的区域、城市街区（大小不规则）"
   },
   {
     wordId: 1734,
@@ -15605,7 +15605,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "烹飪"
+    meaning: "烹饪"
   },
   {
     wordId: 1735,
@@ -15614,7 +15614,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "和諧"
+    meaning: "和谐"
   },
   {
     wordId: 1736,
@@ -15623,7 +15623,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "常，經常，偶爾"
+    meaning: "常，经常，偶尔"
   },
   {
     wordId: 1737,
@@ -15632,7 +15632,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "對抗"
+    meaning: "对抗"
   },
   {
     wordId: 1738,
@@ -15641,7 +15641,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "文學作品，書籍"
+    meaning: "文学作品，书籍"
   },
   {
     wordId: 1739,
@@ -15650,7 +15650,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "儲蓄"
+    meaning: "储蓄"
   },
   {
     wordId: 1740,
@@ -15659,7 +15659,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "直覺"
+    meaning: "直觉"
   },
   {
     wordId: 1741,
@@ -15668,7 +15668,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "稍等片刻，片刻，一會兒"
+    meaning: "稍等片刻，片刻，一会儿"
   },
   {
     wordId: 1742,
@@ -15704,7 +15704,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "醫療"
+    meaning: "医疗"
   },
   {
     wordId: 1746,
@@ -15713,7 +15713,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "薪資"
+    meaning: "薪资"
   },
   {
     wordId: 1747,
@@ -15731,7 +15731,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "沉沒，沉沒"
+    meaning: "沉没，沉没"
   },
   {
     wordId: 1749,
@@ -15740,7 +15740,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "沉默，緘默"
+    meaning: "沉默，缄默"
   },
   {
     wordId: 1750,
@@ -15749,7 +15749,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "nan",
-    meaning: "展覽、展示、演出"
+    meaning: "展览、展示、演出"
   },
   {
     wordId: 1751,
@@ -15758,7 +15758,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "追捕、實施、偵破（犯罪）"
+    meaning: "追捕、实施、侦破（犯罪）"
   },
   {
     wordId: 1752,
@@ -15776,7 +15776,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "其次，其次，隨後"
+    meaning: "其次，其次，随后"
   },
   {
     wordId: 1754,
@@ -15794,7 +15794,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "花費，投入，浪費"
+    meaning: "花费，投入，浪费"
   },
   {
     wordId: 1756,
@@ -15803,7 +15803,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "墜落、墜毀"
+    meaning: "坠落、坠毁"
   },
   {
     wordId: 1757,
@@ -15812,7 +15812,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "鑑賞家、信件計數器"
+    meaning: "鉴赏家、信件计数器"
   },
   {
     wordId: 1758,
@@ -15821,7 +15821,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "敏銳地感受到，充分意識到"
+    meaning: "敏锐地感受到，充分意识到"
   },
   {
     wordId: 1759,
@@ -15830,7 +15830,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "常見的，一般的，通常的"
+    meaning: "常见的，一般的，通常的"
   },
   {
     wordId: 1760,
@@ -15839,7 +15839,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "敏銳的，敏銳的"
+    meaning: "敏锐的，敏锐的"
   },
   {
     wordId: 1761,
@@ -15857,7 +15857,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "使命，簡單任務，做"
+    meaning: "使命，简单任务，做"
   },
   {
     wordId: 1763,
@@ -15875,7 +15875,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "為…服務，為…工作"
+    meaning: "为…服务，为…工作"
   },
   {
     wordId: 1765,
@@ -15884,7 +15884,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "統治，治理，管理"
+    meaning: "统治，治理，管理"
   },
   {
     wordId: 1766,
@@ -15893,7 +15893,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "片刻，短暫的時間，短暫的"
+    meaning: "片刻，短暂的时间，短暂的"
   },
   {
     wordId: 1767,
@@ -15902,7 +15902,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "依附、印象、社會性"
+    meaning: "依附、印象、社会性"
   },
   {
     wordId: 1768,
@@ -15911,7 +15911,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "與…交往，與…相處，與…相處"
+    meaning: "与…交往，与…相处，与…相处"
   },
   {
     wordId: 1769,
@@ -15920,7 +15920,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "每個月，常見"
+    meaning: "每个月，常见"
   },
   {
     wordId: 1770,
@@ -15929,7 +15929,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "關節，連接點"
+    meaning: "关节，连接点"
   },
   {
     wordId: 1771,
@@ -15938,7 +15938,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "用盡，耗盡，耗盡"
+    meaning: "用尽，耗尽，耗尽"
   },
   {
     wordId: 1772,
@@ -15947,7 +15947,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "呼吸， 說謊， 嘔吐"
+    meaning: "呼吸， 说谎， 呕吐"
   },
   {
     wordId: 1773,
@@ -15956,7 +15956,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "連接、拼湊、固定（骨頭）"
+    meaning: "连接、拼凑、固定（骨头）"
   },
   {
     wordId: 1774,
@@ -15974,7 +15974,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "用盡，用盡，為（某人）服務"
+    meaning: "用尽，用尽，为（某人）服务"
   },
   {
     wordId: 1776,
@@ -15983,7 +15983,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "化妝品、生魚片"
+    meaning: "化妆品、生鱼片"
   },
   {
     wordId: 1777,
@@ -15992,7 +15992,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "構成、結構、體格"
+    meaning: "构成、结构、体格"
   },
   {
     wordId: 1778,
@@ -16001,7 +16001,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "製造，創造，製造"
+    meaning: "制造，创造，制造"
   },
   {
     wordId: 1779,
@@ -16010,7 +16010,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "修補，修理，修復"
+    meaning: "修补，修理，修复"
   },
   {
     wordId: 1780,
@@ -16019,7 +16019,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "將一件事添加到另一件事上"
+    meaning: "将一件事添加到另一件事上"
   },
   {
     wordId: 1781,
@@ -16037,7 +16037,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "連貫性、一致性"
+    meaning: "连贯性、一致性"
   },
   {
     wordId: 1783,
@@ -16064,7 +16064,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "槍"
+    meaning: "枪"
   },
   {
     wordId: 1786,
@@ -16073,7 +16073,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "刺，擊，攻擊"
+    meaning: "刺，击，攻击"
   },
   {
     wordId: 1787,
@@ -16082,7 +16082,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "要小心，要貞潔或謹慎，要戒除或克制"
+    meaning: "要小心，要贞洁或谨慎，要戒除或克制"
   },
   {
     wordId: 1788,
@@ -16091,7 +16091,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "支撐，變得僵硬，變得繃緊"
+    meaning: "支撑，变得僵硬，变得绷紧"
   },
   {
     wordId: 1789,
@@ -16100,7 +16100,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "口頭訊息、謠言、話語"
+    meaning: "口头讯息、谣言、话语"
   },
   {
     wordId: 1790,
@@ -16109,7 +16109,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "適合，等於，正常運作"
+    meaning: "适合，等于，正常运作"
   },
   {
     wordId: 1791,
@@ -16118,7 +16118,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "工作地點"
+    meaning: "工作地点"
   },
   {
     wordId: 1792,
@@ -16136,7 +16136,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "海嘯、潮汐"
+    meaning: "海啸、潮汐"
   },
   {
     wordId: 1794,
@@ -16154,7 +16154,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "邀請、徵求幫助參與等"
+    meaning: "邀请、征求帮助参与等"
   },
   {
     wordId: 1796,
@@ -16172,7 +16172,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "低聲說，低語"
+    meaning: "低声说，低语"
   },
   {
     wordId: 1798,
@@ -16181,7 +16181,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "閉上眼睛"
+    meaning: "闭上眼睛"
   },
   {
     wordId: 1799,
@@ -16190,7 +16190,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "壺、壺、花瓶"
+    meaning: "壶、壶、花瓶"
   },
   {
     wordId: 1800,
@@ -16208,7 +16208,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "絆倒，絆倒"
+    meaning: "绊倒，绊倒"
   },
   {
     wordId: 1802,
@@ -16217,7 +16217,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "捏、握、撿"
+    meaning: "捏、握、捡"
   },
   {
     wordId: 1803,
@@ -16226,7 +16226,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "無關緊要的，無聊的，瑣碎的"
+    meaning: "无关紧要的，无聊的，琐碎的"
   },
   {
     wordId: 1804,
@@ -16235,7 +16235,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "簡而言之，簡而言之，換句話說"
+    meaning: "简而言之，简而言之，换句话说"
   },
   {
     wordId: 1805,
@@ -16244,7 +16244,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "意圖、計劃"
+    meaning: "意图、计划"
   },
   {
     wordId: 1806,
@@ -16262,7 +16262,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "變得強壯，獲得力量"
+    meaning: "变得强壮，获得力量"
   },
   {
     wordId: 1808,
@@ -16271,7 +16271,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "加強，強調"
+    meaning: "加强，强调"
   },
   {
     wordId: 1809,
@@ -16289,7 +16289,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "經歷"
+    meaning: "经历"
   },
   {
     wordId: 1811,
@@ -16298,7 +16298,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "連接，結合，拼湊"
+    meaning: "连接，结合，拼凑"
   },
   {
     wordId: 1812,
@@ -16307,7 +16307,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "釣魚，釣魚"
+    meaning: "钓鱼，钓鱼"
   },
   {
     wordId: 1813,
@@ -16316,7 +16316,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "吊鈴"
+    meaning: "吊铃"
   },
   {
     wordId: 1814,
@@ -16325,7 +16325,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "帶子"
+    meaning: "带子"
   },
   {
     wordId: 1815,
@@ -16334,7 +16334,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "nan",
-    meaning: "掛"
+    meaning: "挂"
   },
   {
     wordId: 1816,
@@ -16343,7 +16343,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "津貼、補償、待遇"
+    meaning: "津贴、补偿、待遇"
   },
   {
     wordId: 1817,
@@ -16352,7 +16352,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "外觀、氣質、狀況"
+    meaning: "外观、气质、状况"
   },
   {
     wordId: 1818,
@@ -16361,7 +16361,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "定義"
+    meaning: "定义"
   },
   {
     wordId: 1819,
@@ -16370,7 +16370,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "報價、投標、專案贊助"
+    meaning: "报价、投标、专案赞助"
   },
   {
     wordId: 1820,
@@ -16379,7 +16379,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "合作、聯手、合資"
+    meaning: "合作、联手、合资"
   },
   {
     wordId: 1821,
@@ -16388,7 +16388,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "禮儀、風格、形式"
+    meaning: "礼仪、风格、形式"
   },
   {
     wordId: 1822,
@@ -16397,7 +16397,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "梯子、樓梯"
+    meaning: "梯子、楼梯"
   },
   {
     wordId: 1823,
@@ -16406,7 +16406,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "演示、展覽、建議"
+    meaning: "演示、展览、建议"
   },
   {
     wordId: 1824,
@@ -16415,7 +16415,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "套餐、特價菜"
+    meaning: "套餐、特价菜"
   },
   {
     wordId: 1825,
@@ -16424,7 +16424,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "修正、修訂"
+    meaning: "修正、修订"
   },
   {
     wordId: 1826,
@@ -16433,7 +16433,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "停滯、阻塞、擁堵"
+    meaning: "停滞、阻塞、拥堵"
   },
   {
     wordId: 1827,
@@ -16451,7 +16451,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "退休年齡"
+    meaning: "退休年龄"
   },
   {
     wordId: 1829,
@@ -16469,7 +16469,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "治療太晚，治療遲"
+    meaning: "治疗太晚，治疗迟"
   },
   {
     wordId: 1831,
@@ -16478,7 +16478,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "接觸、蹤跡、氣味"
+    meaning: "接触、踪迹、气味"
   },
   {
     wordId: 1832,
@@ -16487,7 +16487,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "處理、管理、與…合作"
+    meaning: "处理、管理、与…合作"
   },
   {
     wordId: 1833,
@@ -16496,7 +16496,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "移動次數，麻煩"
+    meaning: "移动次数，麻烦"
   },
   {
     wordId: 1834,
@@ -16505,7 +16505,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "輕鬆、簡單、非正式"
+    meaning: "轻松、简单、非正式"
   },
   {
     wordId: 1835,
@@ -16523,7 +16523,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "適應、順應、一致"
+    meaning: "适应、顺应、一致"
   },
   {
     wordId: 1837,
@@ -16532,7 +16532,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "適應性"
+    meaning: "适应性"
   },
   {
     wordId: 1838,
@@ -16541,7 +16541,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "資質"
+    meaning: "资质"
   },
   {
     wordId: 1839,
@@ -16550,7 +16550,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "表現、技巧、機智"
+    meaning: "表现、技巧、机智"
   },
   {
     wordId: 1840,
@@ -16559,7 +16559,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "流程、程序、協議"
+    meaning: "流程、程序、协议"
   },
   {
     wordId: 1841,
@@ -16568,7 +16568,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "手銬、手銬"
+    meaning: "手铐、手铐"
   },
   {
     wordId: 1842,
@@ -16586,7 +16586,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "確實地，當然地，毫無疑問地"
+    meaning: "确实地，当然地，毫无疑问地"
   },
   {
     wordId: 1844,
@@ -16595,7 +16595,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "鋼鐵"
+    meaning: "钢铁"
   },
   {
     wordId: 1845,
@@ -16613,7 +16613,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "鐵屑"
+    meaning: "铁屑"
   },
   {
     wordId: 1847,
@@ -16631,7 +16631,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "安排，計劃，方案"
+    meaning: "安排，计划，方案"
   },
   {
     wordId: 1849,
@@ -16640,7 +16640,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "指導，嚮導，介紹"
+    meaning: "指导，向导，介绍"
   },
   {
     wordId: 1850,
@@ -16649,7 +16649,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "模型，圖案"
+    meaning: "模型，图案"
   },
   {
     wordId: 1851,
@@ -16658,7 +16658,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "準備、安排"
+    meaning: "准备、安排"
   },
   {
     wordId: 1852,
@@ -16667,7 +16667,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "在手邊，在手邊，在家"
+    meaning: "在手边，在手边，在家"
   },
   {
     wordId: 1853,
@@ -16676,7 +16676,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "反射，反射光線"
+    meaning: "反射，反射光线"
   },
   {
     wordId: 1854,
@@ -16694,7 +16694,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "商店，店鋪，機構"
+    meaning: "商店，店铺，机构"
   },
   {
     wordId: 1856,
@@ -16703,7 +16703,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "點火，點燃，放火"
+    meaning: "点火，点燃，放火"
   },
   {
     wordId: 1857,
@@ -16712,7 +16712,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "公轉、自轉"
+    meaning: "公转、自转"
   },
   {
     wordId: 1858,
@@ -16721,7 +16721,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "轉換，轉移"
+    meaning: "转换，转移"
   },
   {
     wordId: 1859,
@@ -16730,7 +16730,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "搬家、更換住所"
+    meaning: "搬家、更换住所"
   },
   {
     wordId: 1860,
@@ -16739,7 +16739,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "轉移，傳輸"
+    meaning: "转移，传输"
   },
   {
     wordId: 1861,
@@ -16748,7 +16748,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "檢查、考核、檢驗"
+    meaning: "检查、考核、检验"
   },
   {
     wordId: 1862,
@@ -16757,7 +16757,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "轉學"
+    meaning: "转学"
   },
   {
     wordId: 1863,
@@ -16766,7 +16766,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "樂園、天國、天國"
+    meaning: "乐园、天国、天国"
   },
   {
     wordId: 1864,
@@ -16775,7 +16775,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "天才，神童，天賦"
+    meaning: "天才，神童，天赋"
   },
   {
     wordId: 1865,
@@ -16784,7 +16784,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "自然災害"
+    meaning: "自然灾害"
   },
   {
     wordId: 1866,
@@ -16793,7 +16793,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "展覽，展示"
+    meaning: "展览，展示"
   },
   {
     wordId: 1867,
@@ -16802,7 +16802,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "最高限價，最高限價"
+    meaning: "最高限价，最高限价"
   },
   {
     wordId: 1868,
@@ -16811,7 +16811,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "轉動，轉移，改變"
+    meaning: "转动，转移，改变"
   },
   {
     wordId: 1869,
@@ -16820,7 +16820,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "虛線、穿孔線"
+    meaning: "虚线、穿孔线"
   },
   {
     wordId: 1870,
@@ -16847,7 +16847,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "滾動，從一個地方移動到另一個地方，被反覆傳遞"
+    meaning: "滚动，从一个地方移动到另一个地方，被反复传递"
   },
   {
     wordId: 1873,
@@ -16856,7 +16856,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "職位變動"
+    meaning: "职位变动"
   },
   {
     wordId: 1874,
@@ -16865,7 +16865,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "nan",
-    meaning: "觀點、展望、前景"
+    meaning: "观点、展望、前景"
   },
   {
     wordId: 1875,
@@ -16883,7 +16883,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "if（連接詞）， 升級兵（將棋）（縮寫）"
+    meaning: "if（连接词）， 升级兵（将棋）（缩写）"
   },
   {
     wordId: 1877,
@@ -16892,7 +16892,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "詢問，尋求信息"
+    meaning: "询问，寻求信息"
   },
   {
     wordId: 1878,
@@ -16901,7 +16901,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "批發商店"
+    meaning: "批发商店"
   },
   {
     wordId: 1879,
@@ -16910,7 +16910,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "詢問、質問、指控（如犯罪）"
+    meaning: "询问、质问、指控（如犯罪）"
   },
   {
     wordId: 1880,
@@ -16919,7 +16919,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "地點、區域、建築物"
+    meaning: "地点、区域、建筑物"
   },
   {
     wordId: 1881,
@@ -16946,7 +16946,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "辯論、討論"
+    meaning: "辩论、讨论"
   },
   {
     wordId: 1884,
@@ -16955,7 +16955,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "年級、班級"
+    meaning: "年级、班级"
   },
   {
     wordId: 1885,
@@ -16973,7 +16973,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "整合、統一、綜合"
+    meaning: "整合、统一、综合"
   },
   {
     wordId: 1887,
@@ -16982,7 +16982,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "破產、無力償債"
+    meaning: "破产、无力偿债"
   },
   {
     wordId: 1888,
@@ -16991,7 +16991,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "投資"
+    meaning: "投资"
   },
   {
     wordId: 1889,
@@ -17000,7 +17000,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "統治，統治，政府"
+    meaning: "统治，统治，政府"
   },
   {
     wordId: 1890,
@@ -17009,7 +17009,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "調節、控制"
+    meaning: "调节、控制"
   },
   {
     wordId: 1891,
@@ -17018,7 +17018,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "當選、獲獎"
+    meaning: "当选、获奖"
   },
   {
     wordId: 1892,
@@ -17027,7 +17027,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "逃跑、開小差、逃走"
+    meaning: "逃跑、开小差、逃走"
   },
   {
     wordId: 1893,
@@ -17036,7 +17036,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "指揮，領導，將領"
+    meaning: "指挥，领导，将领"
   },
   {
     wordId: 1894,
@@ -17045,7 +17045,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "到達、取得、抵達"
+    meaning: "到达、取得、抵达"
   },
   {
     wordId: 1895,
@@ -17054,7 +17054,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "不可能、表示不可能或極難實現"
+    meaning: "不可能、表示不可能或极难实现"
   },
   {
     wordId: 1896,
@@ -17063,7 +17063,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "刀劍碰撞、樹木砍伐、斧頭敲響"
+    meaning: "刀剑碰撞、树木砍伐、斧头敲响"
   },
   {
     wordId: 1897,
@@ -17072,7 +17072,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "投入、投入、製造（電路）"
+    meaning: "投入、投入、制造（电路）"
   },
   {
     wordId: 1898,
@@ -17081,7 +17081,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "當事人，上述人員"
+    meaning: "当事人，上述人员"
   },
   {
     wordId: 1899,
@@ -17090,7 +17090,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "逃脫"
+    meaning: "逃脱"
   },
   {
     wordId: 1900,
@@ -17108,7 +17108,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "登記, 登記, 進入"
+    meaning: "登记, 登记, 进入"
   },
   {
     wordId: 1902,
@@ -17117,7 +17117,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "辯論、討論"
+    meaning: "辩论、讨论"
   },
   {
     wordId: 1903,
@@ -17126,7 +17126,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "走遠"
+    meaning: "走远"
   },
   {
     wordId: 1904,
@@ -17135,7 +17135,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "繞行，迂迴"
+    meaning: "绕行，迂回"
   },
   {
     wordId: 1905,
@@ -17144,7 +17144,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "剛好路過"
+    meaning: "刚好路过"
   },
   {
     wordId: 1906,
@@ -17153,7 +17153,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "無論如何, 無論如何, 無論如何"
+    meaning: "无论如何, 无论如何, 无论如何"
   },
   {
     wordId: 1907,
@@ -17162,7 +17162,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "責備，挑錯，批評某人"
+    meaning: "责备，挑错，批评某人"
   },
   {
     wordId: 1908,
@@ -17171,7 +17171,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "有時"
+    meaning: "有时"
   },
   {
     wordId: 1909,
@@ -17180,7 +17180,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "暫停，被打斷"
+    meaning: "暂停，被打断"
   },
   {
     wordId: 1910,
@@ -17189,7 +17189,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "解釋、提倡、宣揚"
+    meaning: "解释、提倡、宣扬"
   },
   {
     wordId: 1911,
@@ -17198,7 +17198,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "磨礪，磨礪，擦洗"
+    meaning: "磨砺，磨砺，擦洗"
   },
   {
     wordId: 1912,
@@ -17216,7 +17216,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "特產，特殊產品"
+    meaning: "特产，特殊产品"
   },
   {
     wordId: 1914,
@@ -17225,7 +17225,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "特寫（例如報紙）、特別版、報道"
+    meaning: "特写（例如报纸）、特别版、报道"
   },
   {
     wordId: 1915,
@@ -17234,7 +17234,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "分，所得分數，所得分數"
+    meaning: "分，所得分数，所得分数"
   },
   {
     wordId: 1916,
@@ -17252,7 +17252,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "特有、獨有（的特性）"
+    meaning: "特有、独有（的特性）"
   },
   {
     wordId: 1918,
@@ -17270,7 +17270,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "完成，取得，執行"
+    meaning: "完成，取得，执行"
   },
   {
     wordId: 1920,
@@ -17279,7 +17279,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "床、病床、壁龕"
+    meaning: "床、病床、壁龛"
   },
   {
     wordId: 1921,
@@ -17297,7 +17297,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "順便說一句，即使，無論怎樣"
+    meaning: "顺便说一句，即使，无论怎样"
   },
   {
     wordId: 1923,
@@ -17306,7 +17306,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "年齡、適婚年齡、青春期年齡"
+    meaning: "年龄、适婚年龄、青春期年龄"
   },
   {
     wordId: 1924,
@@ -17315,7 +17315,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "關閉並固定門"
+    meaning: "关闭并固定门"
   },
   {
     wordId: 1925,
@@ -17342,7 +17342,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "裝訂，歸檔"
+    meaning: "装订，归档"
   },
   {
     wordId: 1928,
@@ -17351,7 +17351,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "停止，終止，結束"
+    meaning: "停止，终止，结束"
   },
   {
     wordId: 1929,
@@ -17360,7 +17360,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "特別許可，專利"
+    meaning: "特别许可，专利"
   },
   {
     wordId: 1930,
@@ -17369,7 +17369,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "很久以前，已經，很久以前"
+    meaning: "很久以前，已经，很久以前"
   },
   {
     wordId: 1931,
@@ -17378,7 +17378,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "特權，特殊權利"
+    meaning: "特权，特殊权利"
   },
   {
     wordId: 1932,
@@ -17387,7 +17387,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "片刻，瞬間"
+    meaning: "片刻，瞬间"
   },
   {
     wordId: 1933,
@@ -17396,7 +17396,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "突然，突然間"
+    meaning: "突然，突然间"
   },
   {
     wordId: 1934,
@@ -17405,7 +17405,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "把手，手柄，旋鈕"
+    meaning: "把手，手柄，旋钮"
   },
   {
     wordId: 1935,
@@ -17414,7 +17414,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "突破，突破，滲透"
+    meaning: "突破，突破，渗透"
   },
   {
     wordId: 1936,
@@ -17423,7 +17423,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "非常、非常、極度"
+    meaning: "非常、非常、极度"
   },
   {
     wordId: 1937,
@@ -17432,7 +17432,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "報告、通知、登記"
+    meaning: "报告、通知、登记"
   },
   {
     wordId: 1938,
@@ -17441,7 +17441,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "停滯，延遲"
+    meaning: "停滞，延迟"
   },
   {
     wordId: 1939,
@@ -17450,7 +17450,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "整理，準備，安排"
+    meaning: "整理，准备，安排"
   },
   {
     wordId: 1940,
@@ -17459,7 +17459,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "僅限於"
+    meaning: "仅限于"
   },
   {
     wordId: 1941,
@@ -17468,7 +17468,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "停止，終止，結束"
+    meaning: "停止，终止，结束"
   },
   {
     wordId: 1942,
@@ -17477,7 +17477,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "停止，終止，結束"
+    meaning: "停止，终止，结束"
   },
   {
     wordId: 1943,
@@ -17486,7 +17486,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "吟誦、吟唱、呼喚"
+    meaning: "吟诵、吟唱、呼唤"
   },
   {
     wordId: 1944,
@@ -17495,7 +17495,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "無論如何, 無論如何, 無論如何"
+    meaning: "无论如何, 无论如何, 无论如何"
   },
   {
     wordId: 1945,
@@ -17504,7 +17504,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "封建領主"
+    meaning: "封建领主"
   },
   {
     wordId: 1946,
@@ -17513,7 +17513,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "帷幕、彩旗、表演（戲劇）"
+    meaning: "帷幕、彩旗、表演（戏剧）"
   },
   {
     wordId: 1947,
@@ -17522,7 +17522,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "窗簾"
+    meaning: "窗帘"
   },
   {
     wordId: 1948,
@@ -17531,7 +17531,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "門，打開"
+    meaning: "门，打开"
   },
   {
     wordId: 1949,
@@ -17540,7 +17540,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "行人徒步區"
+    meaning: "行人徒步区"
   },
   {
     wordId: 1950,
@@ -17558,7 +17558,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "財富，運勢"
+    meaning: "财富，运势"
   },
   {
     wordId: 1952,
@@ -17567,7 +17567,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "變得富有，變得富有"
+    meaning: "变得富有，变得富有"
   },
   {
     wordId: 1953,
@@ -17576,7 +17576,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "無論如何, 無論如何, 無論如何"
+    meaning: "无论如何, 无论如何, 无论如何"
   },
   {
     wordId: 1954,
@@ -17585,7 +17585,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "一起工作，（夫妻）一起謀生"
+    meaning: "一起工作，（夫妻）一起谋生"
   },
   {
     wordId: 1955,
@@ -17603,7 +17603,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "伴隨，帶來，伴隨"
+    meaning: "伴随，带来，伴随"
   },
   {
     wordId: 1957,
@@ -17612,7 +17612,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "雙收入"
+    meaning: "双收入"
   },
   {
     wordId: 1958,
@@ -17621,7 +17621,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "奪取，抓住，捕獲"
+    meaning: "夺取，抓住，捕获"
   },
   {
     wordId: 1959,
@@ -17630,7 +17630,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "立即，首先，暫時"
+    meaning: "立即，首先，暂时"
   },
   {
     wordId: 1960,
@@ -17639,7 +17639,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "待遇、服務、處理"
+    meaning: "待遇、服务、处理"
   },
   {
     wordId: 1961,
@@ -17648,7 +17648,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "對待，處理，經營"
+    meaning: "对待，处理，经营"
   },
   {
     wordId: 1962,
@@ -17657,7 +17657,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "鳥居（神社拱門）"
+    meaning: "鸟居（神社拱门）"
   },
   {
     wordId: 1963,
@@ -17666,7 +17666,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "換易，交換"
+    meaning: "换易，交换"
   },
   {
     wordId: 1964,
@@ -17675,7 +17675,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "解決，搏鬥，參加比賽"
+    meaning: "解决，搏斗，参加比赛"
   },
   {
     wordId: 1965,
@@ -17684,7 +17684,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "控制、管理、監督"
+    meaning: "控制、管理、监督"
   },
   {
     wordId: 1966,
@@ -17693,7 +17693,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "管理、控制、監督"
+    meaning: "管理、控制、监督"
   },
   {
     wordId: 1967,
@@ -17702,7 +17702,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "調查，審查"
+    meaning: "调查，审查"
   },
   {
     wordId: 1968,
@@ -17720,7 +17720,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "代理、宣告（某人）、傳達（訊息）"
+    meaning: "代理、宣告（某人）、传达（讯息）"
   },
   {
     wordId: 1970,
@@ -17729,7 +17729,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "除去，拿走，分開"
+    meaning: "除去，拿走，分开"
   },
   {
     wordId: 1971,
@@ -17738,7 +17738,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "交易、往來、生意"
+    meaning: "交易、往来、生意"
   },
   {
     wordId: 1972,
@@ -17747,7 +17747,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "包圍，圈出，圍住"
+    meaning: "包围，圈出，围住"
   },
   {
     wordId: 1973,
@@ -17765,7 +17765,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "收回，重新獲得"
+    meaning: "收回，重新获得"
   },
   {
     wordId: 1975,
@@ -17774,7 +17774,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "訂購，寄送"
+    meaning: "订购，寄送"
   },
   {
     wordId: 1976,
@@ -17810,7 +17810,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "nan",
-    meaning: "可怕的，可怕的，嚴重的"
+    meaning: "可怕的，可怕的，严重的"
   },
   {
     wordId: 1980,
@@ -17819,7 +17819,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "內閣、（政府）部會"
+    meaning: "内阁、（政府）部会"
   },
   {
     wordId: 1981,
@@ -17828,7 +17828,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "從...到、在...之間、和、或"
+    meaning: "从...到、在...之间、和、或"
   },
   {
     wordId: 1982,
@@ -17837,7 +17837,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "內臟、腸、內臟"
+    meaning: "内脏、肠、内脏"
   },
   {
     wordId: 1983,
@@ -17846,7 +17846,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "內部, 內部, 內部"
+    meaning: "内部, 内部, 内部"
   },
   {
     wordId: 1984,
@@ -17855,7 +17855,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "內戰、起義、叛亂"
+    meaning: "内战、起义、叛乱"
   },
   {
     wordId: 1985,
@@ -17864,7 +17864,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "內陸"
+    meaning: "内陆"
   },
   {
     wordId: 1986,
@@ -17891,7 +17891,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "更何況"
+    meaning: "更何况"
   },
   {
     wordId: 1989,
@@ -17909,7 +17909,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "很長的，冗長的，很長的"
+    meaning: "很长的，冗长的，很长的"
   },
   {
     wordId: 1991,
@@ -17918,7 +17918,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "中間，中間"
+    meaning: "中间，中间"
   },
   {
     wordId: 1992,
@@ -17927,7 +17927,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "擊打，擊中"
+    meaning: "击打，击中"
   },
   {
     wordId: 1993,
@@ -17936,7 +17936,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "嘆息，悲嘆，悲傷"
+    meaning: "叹息，悲叹，悲伤"
   },
   {
     wordId: 1994,
@@ -17945,7 +17945,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "推倒，拋棄，犧牲"
+    meaning: "推倒，抛弃，牺牲"
   },
   {
     wordId: 1995,
@@ -17954,7 +17954,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "溫和的，平靜的，柔和的"
+    meaning: "温和的，平静的，柔和的"
   },
   {
     wordId: 1996,
@@ -17963,7 +17963,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "遺跡、痕跡、記憶"
+    meaning: "遗迹、痕迹、记忆"
   },
   {
     wordId: 1997,
@@ -17972,7 +17972,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "同情，憐憫"
+    meaning: "同情，怜悯"
   },
   {
     wordId: 1998,
@@ -17999,7 +17999,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "斥責，責罵，訓斥"
+    meaning: "斥责，责骂，训斥"
   },
   {
     wordId: 2001,
@@ -18008,7 +18008,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "為什麼，如何"
+    meaning: "为什么，如何"
   },
   {
     wordId: 2002,
@@ -18017,7 +18017,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "因為"
+    meaning: "因为"
   },
   {
     wordId: 2003,
@@ -18044,7 +18044,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "產生感情依戀"
+    meaning: "产生感情依恋"
   },
   {
     wordId: 2006,
@@ -18062,7 +18062,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "漫不經心，漫不經心"
+    meaning: "漫不经心，漫不经心"
   },
   {
     wordId: 2008,
@@ -18071,7 +18071,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "無論如何, 無論如何, 無論如何"
+    meaning: "无论如何, 无论如何, 无论如何"
   },
   {
     wordId: 2009,
@@ -18080,7 +18080,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "請"
+    meaning: "请"
   },
   {
     wordId: 2010,
@@ -18089,7 +18089,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "沒有什麼"
+    meaning: "没有什么"
   },
   {
     wordId: 2011,
@@ -18107,7 +18107,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "七天，（一個月的）第七天"
+    meaning: "七天，（一个月的）第七天"
   },
   {
     wordId: 2013,
@@ -18116,7 +18116,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "姓名牌，姓名標籤"
+    meaning: "姓名牌，姓名标签"
   },
   {
     wordId: 2014,
@@ -18125,7 +18125,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "有魚腥味、血腥味、魚腥味或肉腥味"
+    meaning: "有鱼腥味、血腥味、鱼腥味或肉腥味"
   },
   {
     wordId: 2015,
@@ -18134,7 +18134,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "不冷不熱，半心半意"
+    meaning: "不冷不热，半心半意"
   },
   {
     wordId: 2016,
@@ -18143,7 +18143,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "活生生的肉體，血肉之軀，"
+    meaning: "活生生的肉体，血肉之躯，"
   },
   {
     wordId: 2017,
@@ -18152,7 +18152,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "鉛（金屬）"
+    meaning: "铅（金属）"
   },
   {
     wordId: 2018,
@@ -18161,7 +18161,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "能力下降，變得遲鈍，變得遲鈍"
+    meaning: "能力下降，变得迟钝，变得迟钝"
   },
   {
     wordId: 2019,
@@ -18188,7 +18188,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "舔，嘗，體驗"
+    meaning: "舔，尝，体验"
   },
   {
     wordId: 2022,
@@ -18197,7 +18197,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "誘人、憂鬱、慵懶"
+    meaning: "诱人、忧郁、慵懒"
   },
   {
     wordId: 2023,
@@ -18206,7 +18206,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "折磨，折磨，騷擾"
+    meaning: "折磨，折磨，骚扰"
   },
   {
     wordId: 2024,
@@ -18215,7 +18215,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "煩惱、憂慮、苦惱"
+    meaning: "烦恼、忧虑、苦恼"
   },
   {
     wordId: 2025,
@@ -18233,7 +18233,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "習慣"
+    meaning: "习惯"
   },
   {
     wordId: 2027,
@@ -18242,7 +18242,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "馴服，馴服"
+    meaning: "驯服，驯服"
   },
   {
     wordId: 2028,
@@ -18260,7 +18260,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "總結，由…組成，切實可行（邏輯上可行）"
+    meaning: "总结，由…组成，切实可行（逻辑上可行）"
   },
   {
     wordId: 2030,
@@ -18269,7 +18269,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "如果可能的話，盡可能"
+    meaning: "如果可能的话，尽可能"
   },
   {
     wordId: 2031,
@@ -18278,7 +18278,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "盡量"
+    meaning: "尽量"
   },
   {
     wordId: 2032,
@@ -18287,7 +18287,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "實務、經驗"
+    meaning: "实务、经验"
   },
   {
     wordId: 2033,
@@ -18296,7 +18296,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "過於熟悉"
+    meaning: "过于熟悉"
   },
   {
     wordId: 2034,
@@ -18305,7 +18305,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "困難、艱辛、缺陷"
+    meaning: "困难、艰辛、缺陷"
   },
   {
     wordId: 2035,
@@ -18323,7 +18323,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "諸如...之類的事情，或類似的東西..（通常帶有貶義）"
+    meaning: "诸如...之类的事情，或类似的东西..（通常带有贬义）"
   },
   {
     wordId: 2037,
@@ -18332,7 +18332,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "有一點，有點，不知怎麼地"
+    meaning: "有一点，有点，不知怎么地"
   },
   {
     wordId: 2038,
@@ -18350,7 +18350,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "怎麼！ ，什麼！"
+    meaning: "怎么！ ，什么！"
   },
   {
     wordId: 2040,
@@ -18359,7 +18359,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "什麼、如何、無論什麼"
+    meaning: "什么、如何、无论什么"
   },
   {
     wordId: 2041,
@@ -18368,7 +18368,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "不管怎樣,由於某種原因"
+    meaning: "不管怎样,由于某种原因"
   },
   {
     wordId: 2042,
@@ -18377,7 +18377,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "沒什麼（與否定動詞連用），相當，一點也沒有"
+    meaning: "没什么（与否定动词连用），相当，一点也没有"
   },
   {
     wordId: 2043,
@@ -18386,7 +18386,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "nan",
-    meaning: "任何，任何事，無論什麼"
+    meaning: "任何，任何事，无论什么"
   },
   {
     wordId: 2044,
@@ -18395,7 +18395,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "裝載，行李，貨物"
+    meaning: "装载，行李，货物"
   },
   {
     wordId: 2045,
@@ -18413,7 +18413,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "粉刺、痤瘡"
+    meaning: "粉刺、痤疮"
   },
   {
     wordId: 2047,
@@ -18422,7 +18422,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "繁榮昌盛，生意興隆"
+    meaning: "繁荣昌盛，生意兴隆"
   },
   {
     wordId: 2048,
@@ -18431,7 +18431,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "可惡的，令人憎惡的，醜陋的"
+    meaning: "可恶的，令人憎恶的，丑陋的"
   },
   {
     wordId: 2049,
@@ -18449,7 +18449,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "血緣關係，血親"
+    meaning: "血缘关系，血亲"
   },
   {
     wordId: 2051,
@@ -18458,7 +18458,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "身體，肉體"
+    meaning: "身体，肉体"
   },
   {
     wordId: 2052,
@@ -18467,7 +18467,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "逃跑，逃離"
+    meaning: "逃跑，逃离"
   },
   {
     wordId: 2053,
@@ -18476,7 +18476,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "西斜的太陽"
+    meaning: "西斜的太阳"
   },
   {
     wordId: 2054,
@@ -18494,7 +18494,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "日日夜夜，始終如一"
+    meaning: "日日夜夜，始终如一"
   },
   {
     wordId: 2056,
@@ -18503,7 +18503,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "包裝、打包、裝箱"
+    meaning: "包装、打包、装箱"
   },
   {
     wordId: 2057,
@@ -18512,7 +18512,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "每日津貼"
+    meaning: "每日津贴"
   },
   {
     wordId: 2058,
@@ -18521,7 +18521,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "扛在肩上，承擔（負擔），扛（槍）"
+    meaning: "扛在肩上，承担（负担），扛（枪）"
   },
   {
     wordId: 2059,
@@ -18530,7 +18530,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "兩人, 兩人, 一對"
+    meaning: "两人, 两人, 一对"
   },
   {
     wordId: 2060,
@@ -18539,7 +18539,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "儘管，儘管如此"
+    meaning: "尽管，尽管如此"
   },
   {
     wordId: 2061,
@@ -18548,7 +18548,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "獲得，到手"
+    meaning: "获得，到手"
   },
   {
     wordId: 2062,
@@ -18557,7 +18557,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "贏得獎品或名次（在比賽中）"
+    meaning: "赢得奖品或名次（在比赛中）"
   },
   {
     wordId: 2063,
@@ -18584,7 +18584,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "突然的，突如其來的，出乎意料的"
+    meaning: "突然的，突如其来的，出乎意料的"
   },
   {
     wordId: 2066,
@@ -18593,7 +18593,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "承認，認知"
+    meaning: "承认，认知"
   },
   {
     wordId: 2067,
@@ -18611,7 +18611,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "受孕，懷孕"
+    meaning: "受孕，怀孕"
   },
   {
     wordId: 2069,
@@ -18620,7 +18620,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "nan",
-    meaning: "職責，職能，職務"
+    meaning: "职责，职能，职务"
   },
   {
     wordId: 2070,
@@ -18656,7 +18656,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 23,
     letter: "ぬ",
     type: "nan",
-    meaning: "偷竊"
+    meaning: "偷窃"
   },
   {
     wordId: 2074,
@@ -18665,7 +18665,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 23,
     letter: "ぬ",
     type: "nan",
-    meaning: "沼澤、泥沼、池塘"
+    meaning: "沼泽、泥沼、池塘"
   },
   {
     wordId: 2075,
@@ -18674,7 +18674,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "聲音，音符"
+    meaning: "声音，音符"
   },
   {
     wordId: 2076,
@@ -18683,7 +18683,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "價值，價值，價格"
+    meaning: "价值，价值，价格"
   },
   {
     wordId: 2077,
@@ -18692,7 +18692,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "放置、躺下、發酵"
+    meaning: "放置、躺下、发酵"
   },
   {
     wordId: 2078,
@@ -18701,7 +18701,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "螺絲, 螺旋線, 螺旋線"
+    meaning: "螺丝, 螺旋线, 螺旋线"
   },
   {
     wordId: 2079,
@@ -18710,7 +18710,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "螺絲起子"
+    meaning: "螺丝起子"
   },
   {
     wordId: 2080,
@@ -18719,7 +18719,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "扭動，擰緊，擰緊"
+    meaning: "扭动，拧紧，拧紧"
   },
   {
     wordId: 2081,
@@ -18737,7 +18737,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "嫉妒，羨慕"
+    meaning: "嫉妒，羡慕"
   },
   {
     wordId: 2083,
@@ -18746,7 +18746,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "戲弄、哄騙、懇求"
+    meaning: "戏弄、哄骗、恳求"
   },
   {
     wordId: 2084,
@@ -18755,7 +18755,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "熱情，熱情"
+    meaning: "热情，热情"
   },
   {
     wordId: 2085,
@@ -18764,7 +18764,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "開水"
+    meaning: "开水"
   },
   {
     wordId: 2086,
@@ -18773,7 +18773,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "溫度"
+    meaning: "温度"
   },
   {
     wordId: 2087,
@@ -18800,7 +18800,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "降價，折扣"
+    meaning: "降价，折扣"
   },
   {
     wordId: 2090,
@@ -18818,7 +18818,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "睏"
+    meaning: "困"
   },
   {
     wordId: 2092,
@@ -18827,7 +18827,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "揉捏、打磨、拋光"
+    meaning: "揉捏、打磨、抛光"
   },
   {
     wordId: 2093,
@@ -18836,7 +18836,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "感覺、觀念、思想"
+    meaning: "感觉、观念、思想"
   },
   {
     wordId: 2094,
@@ -18845,7 +18845,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "年鑑"
+    meaning: "年鉴"
   },
   {
     wordId: 2095,
@@ -18854,7 +18854,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "時代名稱、年份"
+    meaning: "时代名称、年份"
   },
   {
     wordId: 2096,
@@ -18863,7 +18863,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "燃燒，燃燒"
+    meaning: "燃烧，燃烧"
   },
   {
     wordId: 2097,
@@ -18872,7 +18872,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "....年的小學生，....年的學生"
+    meaning: "....年的小学生，....年的学生"
   },
   {
     wordId: 2098,
@@ -18881,7 +18881,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "資歷"
+    meaning: "资历"
   },
   {
     wordId: 2099,
@@ -18899,7 +18899,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "nan",
-    meaning: "樹木年輪"
+    meaning: "树木年轮"
   },
   {
     wordId: 2101,
@@ -18908,7 +18908,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "大腦，記憶"
+    meaning: "大脑，记忆"
   },
   {
     wordId: 2102,
@@ -18917,7 +18917,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "農耕、耕作"
+    meaning: "农耕、耕作"
   },
   {
     wordId: 2103,
@@ -18926,7 +18926,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "農場"
+    meaning: "农场"
   },
   {
     wordId: 2104,
@@ -18935,7 +18935,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "農業用地"
+    meaning: "农业用地"
   },
   {
     wordId: 2105,
@@ -18944,7 +18944,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "付款、供應"
+    meaning: "付款、供应"
   },
   {
     wordId: 2106,
@@ -18953,7 +18953,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "放開，釋放，讓其逃脫"
+    meaning: "放开，释放，让其逃脱"
   },
   {
     wordId: 2107,
@@ -18980,7 +18980,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "鋸"
+    meaning: "锯"
   },
   {
     wordId: 2110,
@@ -18998,7 +18998,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "注意、面對、處理"
+    meaning: "注意、面对、处理"
   },
   {
     wordId: 2112,
@@ -19007,7 +19007,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "奪取、佔領、篡奪"
+    meaning: "夺取、占领、篡夺"
   },
   {
     wordId: 2113,
@@ -19016,7 +19016,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "寧靜的，平靜的，安靜的"
+    meaning: "宁静的，平静的，安静的"
   },
   {
     wordId: 2114,
@@ -19025,7 +19025,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "說壞話，辱罵"
+    meaning: "说坏话，辱骂"
   },
   {
     wordId: 2115,
@@ -19034,7 +19034,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "期貨、信貸（購買）、延伸"
+    meaning: "期货、信贷（购买）、延伸"
   },
   {
     wordId: 2116,
@@ -19043,7 +19043,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "吞嚥，深深地嚥下去，理解"
+    meaning: "吞咽，深深地咽下去，理解"
   },
   {
     wordId: 2117,
@@ -19052,7 +19052,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "換乘（火車、公車等）"
+    meaning: "换乘（火车、公车等）"
   },
   {
     wordId: 2118,
@@ -19061,7 +19061,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "nan",
-    meaning: "登上、上車、進入（汽車）"
+    meaning: "登上、上车、进入（汽车）"
   },
   {
     wordId: 2119,
@@ -19070,7 +19070,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "（劍的）邊緣"
+    meaning: "（剑的）边缘"
   },
   {
     wordId: 2120,
@@ -19079,7 +19079,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "派系，團體，流派"
+    meaning: "派系，团体，流派"
   },
   {
     wordId: 2121,
@@ -19106,7 +19106,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "廢除、處置、放棄"
+    meaning: "废除、处置、放弃"
   },
   {
     wordId: 2124,
@@ -19115,7 +19115,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "散佈（例如電影、米）"
+    meaning: "散布（例如电影、米）"
   },
   {
     wordId: 2125,
@@ -19133,7 +19133,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "親愛的（某某）"
+    meaning: "亲爱的（某某）"
   },
   {
     wordId: 2127,
@@ -19142,7 +19142,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "背景、風景、場景"
+    meaning: "背景、风景、场景"
   },
   {
     wordId: 2128,
@@ -19151,7 +19151,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "後部，後方"
+    meaning: "后部，后方"
   },
   {
     wordId: 2129,
@@ -19160,7 +19160,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "煙灰缸"
+    meaning: "烟灰缸"
   },
   {
     wordId: 2130,
@@ -19169,7 +19169,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "廢除，廢止"
+    meaning: "废除，废止"
   },
   {
     wordId: 2131,
@@ -19187,7 +19187,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "排除、移除、拒絕"
+    meaning: "排除、移除、拒绝"
   },
   {
     wordId: 2133,
@@ -19205,7 +19205,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "失敗，輸掉戰爭"
+    meaning: "失败，输掉战争"
   },
   {
     wordId: 2135,
@@ -19214,7 +19214,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "（資源的）安排、處置"
+    meaning: "（资源的）安排、处置"
   },
   {
     wordId: 2136,
@@ -19232,7 +19232,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "分配，配給"
+    meaning: "分配，配给"
   },
   {
     wordId: 2138,
@@ -19241,7 +19241,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "考慮、關心、深思熟慮"
+    meaning: "考虑、关心、深思熟虑"
   },
   {
     wordId: 2139,
@@ -19250,7 +19250,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "排列，陣列（程式設計）"
+    meaning: "排列，阵列（程式设计）"
   },
   {
     wordId: 2140,
@@ -19259,7 +19259,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "閃耀, 顯得有魅力, 看上去漂亮"
+    meaning: "闪耀, 显得有魅力, 看上去漂亮"
   },
   {
     wordId: 2141,
@@ -19268,7 +19268,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "破壞"
+    meaning: "破坏"
   },
   {
     wordId: 2142,
@@ -19277,7 +19277,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "撕掉，剝落，撕掉"
+    meaning: "撕掉，剥落，撕掉"
   },
   {
     wordId: 2143,
@@ -19295,7 +19295,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "取得進展；（工作）向前推進；前進"
+    meaning: "取得进展；（工作）向前推进；前进"
   },
   {
     wordId: 2145,
@@ -19304,7 +19304,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "短暫的，瞬息萬變的，短暫的"
+    meaning: "短暂的，瞬息万变的，短暂的"
   },
   {
     wordId: 2146,
@@ -19313,7 +19313,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "商議，商議"
+    meaning: "商议，商议"
   },
   {
     wordId: 2147,
@@ -19322,7 +19322,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "策劃，嘗試，計劃"
+    meaning: "策划，尝试，计划"
   },
   {
     wordId: 2148,
@@ -19331,7 +19331,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "撤銷、廢止、違反（例如條約）"
+    meaning: "撤销、废止、违反（例如条约）"
   },
   {
     wordId: 2149,
@@ -19340,7 +19340,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "住宿晚數計數器"
+    meaning: "住宿晚数计数器"
   },
   {
     wordId: 2150,
@@ -19349,7 +19349,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "撕掉，剝落，撕掉"
+    meaning: "撕掉，剥落，撕掉"
   },
   {
     wordId: 2151,
@@ -19367,7 +19367,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "虛弱，無力，軟弱"
+    meaning: "虚弱，无力，软弱"
   },
   {
     wordId: 2153,
@@ -19376,7 +19376,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "懺悔"
+    meaning: "忏悔"
   },
   {
     wordId: 2154,
@@ -19385,7 +19385,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "鼓勵，鼓舞，提高（聲音）"
+    meaning: "鼓励，鼓舞，提高（声音）"
   },
   {
     wordId: 2155,
@@ -19394,7 +19394,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "充滿熱情，振作精神，努力奮鬥"
+    meaning: "充满热情，振作精神，努力奋斗"
   },
   {
     wordId: 2156,
@@ -19403,7 +19403,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "脫落，磨損，褪色"
+    meaning: "脱落，磨损，褪色"
   },
   {
     wordId: 2157,
@@ -19412,7 +19412,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "派遣，發送"
+    meaning: "派遣，发送"
   },
   {
     wordId: 2158,
@@ -19430,7 +19430,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "羞恥、尷尬"
+    meaning: "羞耻、尴尬"
   },
   {
     wordId: 2160,
@@ -19439,7 +19439,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "翻轉，折斷"
+    meaning: "翻转，折断"
   },
   {
     wordId: 2161,
@@ -19448,7 +19448,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "開始，起始，起源"
+    meaning: "开始，起始，起源"
   },
   {
     wordId: 2162,
@@ -19457,7 +19457,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "你好嗎？很高興認識你。"
+    meaning: "你好吗？很高兴认识你。"
   },
   {
     wordId: 2163,
@@ -19475,7 +19475,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "感到害羞，害羞，臉紅"
+    meaning: "感到害羞，害羞，脸红"
   },
   {
     wordId: 2165,
@@ -19493,7 +19493,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "搭建橋樑、調解"
+    meaning: "搭建桥梁、调解"
   },
   {
     wordId: 2167,
@@ -19502,7 +19502,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "蓮花"
+    meaning: "莲花"
   },
   {
     wordId: 2168,
@@ -19511,7 +19511,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "應該如此"
+    meaning: "应该如此"
   },
   {
     wordId: 2169,
@@ -19520,7 +19520,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "彈起，跳躍，反彈"
+    meaning: "弹起，跳跃，反弹"
   },
   {
     wordId: 2170,
@@ -19529,7 +19529,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "損害"
+    meaning: "损害"
   },
   {
     wordId: 2171,
@@ -19538,7 +19538,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "織布機"
+    meaning: "织布机"
   },
   {
     wordId: 2172,
@@ -19547,7 +19547,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "赤腳"
+    meaning: "赤脚"
   },
   {
     wordId: 2173,
@@ -19565,7 +19565,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "完成，履行，實行"
+    meaning: "完成，履行，实行"
   },
   {
     wordId: 2175,
@@ -19592,7 +19592,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "出發，開始，槍聲的反擊"
+    meaning: "出发，开始，枪声的反击"
   },
   {
     wordId: 2178,
@@ -19601,7 +19601,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "（身體）成長、發育"
+    meaning: "（身体）成长、发育"
   },
   {
     wordId: 2179,
@@ -19610,7 +19610,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "蓬勃發展"
+    meaning: "蓬勃发展"
   },
   {
     wordId: 2180,
@@ -19628,7 +19628,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "言論、演講、提議"
+    meaning: "言论、演讲、提议"
   },
   {
     wordId: 2182,
@@ -19637,7 +19637,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "爆發，湧現，發生"
+    meaning: "爆发，涌现，发生"
   },
   {
     wordId: 2183,
@@ -19646,7 +19646,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "開始，就職典禮"
+    meaning: "开始，就职典礼"
   },
   {
     wordId: 2184,
@@ -19655,7 +19655,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "攻擊（疾病）"
+    meaning: "攻击（疾病）"
   },
   {
     wordId: 2185,
@@ -19664,7 +19664,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "第一次聽到的東西"
+    meaning: "第一次听到的东西"
   },
   {
     wordId: 2186,
@@ -19673,7 +19673,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "終點、極端、極限"
+    meaning: "终点、极端、极限"
   },
   {
     wordId: 2187,
@@ -19682,7 +19682,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "結束，完結，筋疲力盡"
+    meaning: "结束，完结，筋疲力尽"
   },
   {
     wordId: 2188,
@@ -19691,7 +19691,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "討論、會議"
+    meaning: "讨论、会议"
   },
   {
     wordId: 2189,
@@ -19700,7 +19700,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "非常，極大，極其"
+    meaning: "非常，极大，极其"
   },
   {
     wordId: 2190,
@@ -19709,7 +19709,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "輝煌的, 壯麗的, 壯觀的"
+    meaning: "辉煌的, 壮丽的, 壮观的"
   },
   {
     wordId: 2191,
@@ -19727,7 +19727,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "歡快、炫耀、才華洋溢"
+    meaning: "欢快、炫耀、才华洋溢"
   },
   {
     wordId: 2193,
@@ -19736,7 +19736,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "阻止某人做某事，停止，預防"
+    meaning: "阻止某人做某事，停止，预防"
   },
   {
     wordId: 2194,
@@ -19745,7 +19745,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "海濱、沙灘"
+    meaning: "海滨、沙滩"
   },
   {
     wordId: 2195,
@@ -19754,7 +19754,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "海邊、海濱"
+    meaning: "海边、海滨"
   },
   {
     wordId: 2196,
@@ -19763,7 +19763,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "進入，進入，適應"
+    meaning: "进入，进入，适应"
   },
   {
     wordId: 2197,
@@ -19781,7 +19781,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "進入，插入，穿上"
+    meaning: "进入，插入，穿上"
   },
   {
     wordId: 2199,
@@ -19790,7 +19790,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "生長、培育、留鬍鬚"
+    meaning: "生长、培育、留胡须"
   },
   {
     wordId: 2200,
@@ -19808,7 +19808,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "時髦的，流行的，盛行的"
+    meaning: "时髦的，流行的，盛行的"
   },
   {
     wordId: 2202,
@@ -19817,7 +19817,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "憤怒"
+    meaning: "愤怒"
   },
   {
     wordId: 2203,
@@ -19826,7 +19826,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "空地，曠野，平原"
+    meaning: "空地，旷野，平原"
   },
   {
     wordId: 2204,
@@ -19835,7 +19835,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "紙質補丁、紙質背襯、海報"
+    meaning: "纸质补丁、纸质背衬、海报"
   },
   {
     wordId: 2205,
@@ -19844,7 +19844,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "遙遠的，遙遠的，遙遠的"
+    meaning: "遥远的，遥远的，遥远的"
   },
   {
     wordId: 2206,
@@ -19853,7 +19853,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "爆炸、破裂、斷裂"
+    meaning: "爆炸、破裂、断裂"
   },
   {
     wordId: 2207,
@@ -19862,7 +19862,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "（因發炎而）腫脹，變得腫脹"
+    meaning: "（因发炎而）肿胀，变得肿胀"
   },
   {
     wordId: 2208,
@@ -19871,7 +19871,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "團體、政黨、部門（軍事）"
+    meaning: "团体、政党、部门（军事）"
   },
   {
     wordId: 2209,
@@ -19880,7 +19880,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "印章、圖章、字母簽名"
+    meaning: "印章、图章、字母签名"
   },
   {
     wordId: 2210,
@@ -19898,7 +19898,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "興旺發達，繁榮昌盛"
+    meaning: "兴旺发达，繁荣昌盛"
   },
   {
     wordId: 2212,
@@ -19907,7 +19907,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "藝術印刷"
+    meaning: "艺术印刷"
   },
   {
     wordId: 2213,
@@ -19916,7 +19916,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "反感、反抗、敵意"
+    meaning: "反感、反抗、敌意"
   },
   {
     wordId: 2214,
@@ -19925,7 +19925,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "迴聲、混響、反響"
+    meaning: "回声、混响、反响"
   },
   {
     wordId: 2215,
@@ -19934,7 +19934,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "反擊，反攻，反擊"
+    meaning: "反击，反攻，反击"
   },
   {
     wordId: 2216,
@@ -19943,7 +19943,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "司法判決、判決、判決"
+    meaning: "司法判决、判决、判决"
   },
   {
     wordId: 2217,
@@ -19952,7 +19952,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "反射、殘響"
+    meaning: "反射、残响"
   },
   {
     wordId: 2218,
@@ -19961,7 +19961,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "繁榮昌盛，興旺發達"
+    meaning: "繁荣昌盛，兴旺发达"
   },
   {
     wordId: 2219,
@@ -19979,7 +19979,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "不一致，反對，矛盾"
+    meaning: "不一致，反对，矛盾"
   },
   {
     wordId: 2221,
@@ -19988,7 +19988,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "判決、決定、裁決"
+    meaning: "判决、决定、裁决"
   },
   {
     wordId: 2222,
@@ -19997,7 +19997,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "反應，回應"
+    meaning: "反应，回应"
   },
   {
     wordId: 2223,
@@ -20006,7 +20006,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "殘片，碎片，不完整的集合"
+    meaning: "残片，碎片，不完整的集合"
   },
   {
     wordId: 2224,
@@ -20015,7 +20015,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "擊退、反彈、恢復"
+    meaning: "击退、反弹、恢复"
   },
   {
     wordId: 2225,
@@ -20024,7 +20024,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "nan",
-    meaning: "叛亂、兵變、叛亂"
+    meaning: "叛乱、兵变、叛乱"
   },
   {
     wordId: 2226,
@@ -20042,7 +20042,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "有缺陷的，無"
+    meaning: "有缺陷的，无"
   },
   {
     wordId: 2228,
@@ -20051,7 +20051,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "成本，費用"
+    meaning: "成本，费用"
   },
   {
     wordId: 2229,
@@ -20060,7 +20060,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "不僅...而且, 此外, 因此"
+    meaning: "不仅...而且, 此外, 因此"
   },
   {
     wordId: 2230,
@@ -20069,7 +20069,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "候診室"
+    meaning: "候诊室"
   },
   {
     wordId: 2231,
@@ -20078,7 +20078,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "吸引、阻止、做筆記"
+    meaning: "吸引、阻止、做笔记"
   },
   {
     wordId: 2232,
@@ -20087,7 +20087,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "悲觀、失望"
+    meaning: "悲观、失望"
   },
   {
     wordId: 2233,
@@ -20096,7 +20096,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "頭、小動物計數器、布捲"
+    meaning: "头、小动物计数器、布卷"
   },
   {
     wordId: 2234,
@@ -20105,7 +20105,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "撤退，離開，退出"
+    meaning: "撤退，离开，退出"
   },
   {
     wordId: 2235,
@@ -20114,7 +20114,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "領導，帶領（一群人），指揮（部隊）"
+    meaning: "领导，带领（一群人），指挥（部队）"
   },
   {
     wordId: 2236,
@@ -20123,7 +20123,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "承擔，承擔，接管"
+    meaning: "承担，承担，接管"
   },
   {
     wordId: 2237,
@@ -20132,7 +20132,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "導致"
+    meaning: "导致"
   },
   {
     wordId: 2238,
@@ -20141,7 +20141,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "拉下，降低，減少"
+    meaning: "拉下，降低，减少"
   },
   {
     wordId: 2239,
@@ -20150,7 +20150,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "引誘，拖拉，拉扯"
+    meaning: "引诱，拖拉，拉扯"
   },
   {
     wordId: 2240,
@@ -20159,7 +20159,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "負責，接管，退居私人場所"
+    meaning: "负责，接管，退居私人场所"
   },
   {
     wordId: 2241,
@@ -20177,7 +20177,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "拒絕、否定、否決"
+    meaning: "拒绝、否定、否决"
   },
   {
     wordId: 2243,
@@ -20186,7 +20186,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "違法行為、不當行為"
+    meaning: "违法行为、不当行为"
   },
   {
     wordId: 2244,
@@ -20195,7 +20195,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "通常地，習慣地"
+    meaning: "通常地，习惯地"
   },
   {
     wordId: 2245,
@@ -20204,7 +20204,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "漫長的、延續的、古老的（故事）"
+    meaning: "漫长的、延续的、古老的（故事）"
   },
   {
     wordId: 2246,
@@ -20213,7 +20213,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "過了很久"
+    meaning: "过了很久"
   },
   {
     wordId: 2247,
@@ -20222,7 +20222,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "苦難"
+    meaning: "苦难"
   },
   {
     wordId: 2248,
@@ -20240,7 +20240,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "（私人）秘書"
+    meaning: "（私人）秘书"
   },
   {
     wordId: 2250,
@@ -20258,7 +20258,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "浸泡，浸沒，浸濕"
+    meaning: "浸泡，浸没，浸湿"
   },
   {
     wordId: 2252,
@@ -20267,7 +20267,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "切實"
+    meaning: "切实"
   },
   {
     wordId: 2253,
@@ -20285,7 +20285,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "抓癢"
+    meaning: "抓痒"
   },
   {
     wordId: 2255,
@@ -20294,7 +20294,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "把（某物）掛在（某物）上，穿上（衣服）， 鉤住"
+    meaning: "把（某物）挂在（某物）上，穿上（衣服）， 钩住"
   },
   {
     wordId: 2256,
@@ -20303,7 +20303,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "十二生肖第八宮（羊，六月下午 1 點至 3 點，西南偏南）"
+    meaning: "十二生肖第八宫（羊，六月下午 1 点至 3 点，西南偏南）"
   },
   {
     wordId: 2257,
@@ -20312,7 +20312,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "必填（主題）"
+    meaning: "必填（主题）"
   },
   {
     wordId: 2258,
@@ -20330,7 +20330,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "與…相比，與…匹配，與…競爭"
+    meaning: "与…相比，与…匹配，与…竞争"
   },
   {
     wordId: 2260,
@@ -20339,7 +20339,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "殘酷的，可怕的，嚴重的"
+    meaning: "残酷的，可怕的，严重的"
   },
   {
     wordId: 2261,
@@ -20348,7 +20348,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "浮腫，呼吸，停頓"
+    meaning: "浮肿，呼吸，停顿"
   },
   {
     wordId: 2262,
@@ -20357,7 +20357,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "單層"
+    meaning: "单层"
   },
   {
     wordId: 2263,
@@ -20366,7 +20366,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "個性、性格、外貌"
+    meaning: "个性、性格、外貌"
   },
   {
     wordId: 2264,
@@ -20375,7 +20375,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "曾經，不久前"
+    meaning: "曾经，不久前"
   },
   {
     wordId: 2265,
@@ -20384,7 +20384,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "人質，囚犯"
+    meaning: "人质，囚犯"
   },
   {
     wordId: 2266,
@@ -20393,7 +20393,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "一行，認真，盲目"
+    meaning: "一行，认真，盲目"
   },
   {
     wordId: 2267,
@@ -20402,7 +20402,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "目前，曾經，概述"
+    meaning: "目前，曾经，概述"
   },
   {
     wordId: 2268,
@@ -20420,7 +20420,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "自行地, 自動地, 自然地"
+    meaning: "自行地, 自动地, 自然地"
   },
   {
     wordId: 2270,
@@ -20429,7 +20429,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "幼鳥、小雞、洋娃娃"
+    meaning: "幼鸟、小鸡、洋娃娃"
   },
   {
     wordId: 2271,
@@ -20438,7 +20438,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "陽光充足的地方，在陽光下"
+    meaning: "阳光充足的地方，在阳光下"
   },
   {
     wordId: 2272,
@@ -20447,7 +20447,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "責備、攻擊、批評"
+    meaning: "责备、攻击、批评"
   },
   {
     wordId: 2273,
@@ -20456,7 +20456,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "避難，尋找庇護所"
+    meaning: "避难，寻找庇护所"
   },
   {
     wordId: 2274,
@@ -20465,7 +20465,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "日本國旗"
+    meaning: "日本国旗"
   },
   {
     wordId: 2275,
@@ -20483,7 +20483,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "每天，每日，日復一日"
+    meaning: "每天，每日，日复一日"
   },
   {
     wordId: 2277,
@@ -20501,7 +20501,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "開玩笑，取笑，嘲弄"
+    meaning: "开玩笑，取笑，嘲弄"
   },
   {
     wordId: 2279,
@@ -20510,7 +20510,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "曬斑"
+    meaning: "晒斑"
   },
   {
     wordId: 2280,
@@ -20519,7 +20519,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "百科全書"
+    meaning: "百科全书"
   },
   {
     wordId: 2281,
@@ -20528,7 +20528,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "百科全書"
+    meaning: "百科全书"
   },
   {
     wordId: 2282,
@@ -20537,7 +20537,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "標籤、選票、票證"
+    meaning: "标签、选票、票证"
   },
   {
     wordId: 2283,
@@ -20546,7 +20546,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "座右銘、口號、標語"
+    meaning: "座右铭、口号、标语"
   },
   {
     wordId: 2284,
@@ -20564,7 +20564,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "平坦的，均勻的，水平的"
+    meaning: "平坦的，均匀的，水平的"
   },
   {
     wordId: 2286,
@@ -20582,7 +20582,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "糞肥，肥料"
+    meaning: "粪肥，肥料"
   },
   {
     wordId: 2288,
@@ -20600,7 +20600,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "疲勞，倦怠"
+    meaning: "疲劳，倦怠"
   },
   {
     wordId: 2290,
@@ -20609,7 +20609,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "傳播，傳播"
+    meaning: "传播，传播"
   },
   {
     wordId: 2291,
@@ -20618,7 +20618,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "貧窮，缺乏"
+    meaning: "贫穷，缺乏"
   },
   {
     wordId: 2292,
@@ -20627,7 +20627,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "品質"
+    meaning: "品质"
   },
   {
     wordId: 2293,
@@ -20636,7 +20636,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "貧窮的，微薄的，無足輕重的"
+    meaning: "贫穷的，微薄的，无足轻重的"
   },
   {
     wordId: 2294,
@@ -20645,7 +20645,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "品牌、種類、描述"
+    meaning: "品牌、种类、描述"
   },
   {
     wordId: 2295,
@@ -20654,7 +20654,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "nan",
-    meaning: "頻率"
+    meaning: "频率"
   },
   {
     wordId: 2296,
@@ -20663,7 +20663,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "棋子（在西洋棋或將棋中）"
+    meaning: "棋子（在西洋棋或将棋中）"
   },
   {
     wordId: 2297,
@@ -20672,7 +20672,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "突然的，突如其來的，出乎意料的"
+    meaning: "突然的，突如其来的，出乎意料的"
   },
   {
     wordId: 2298,
@@ -20690,7 +20690,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "封鎖、凍結（資金）"
+    meaning: "封锁、冻结（资金）"
   },
   {
     wordId: 2300,
@@ -20699,7 +20699,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "風俗"
+    meaning: "风俗"
   },
   {
     wordId: 2301,
@@ -20708,7 +20708,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "禮儀、習俗， 性服務"
+    meaning: "礼仪、习俗， 性服务"
   },
   {
     wordId: 2302,
@@ -20717,7 +20717,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "自然特徵、地形、氣候"
+    meaning: "自然特征、地形、气候"
   },
   {
     wordId: 2303,
@@ -20735,7 +20735,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "加深，提高，強化"
+    meaning: "加深，提高，强化"
   },
   {
     wordId: 2305,
@@ -20744,7 +20744,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "不祥的，險惡的，壞運氣"
+    meaning: "不祥的，险恶的，坏运气"
   },
   {
     wordId: 2306,
@@ -20753,7 +20753,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "衰退、蕭條、衰退"
+    meaning: "衰退、萧条、衰退"
   },
   {
     wordId: 2307,
@@ -20780,7 +20780,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "修復，恢復，復原"
+    meaning: "修复，恢复，复原"
   },
   {
     wordId: 2310,
@@ -20789,7 +20789,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "複合的，複雜的"
+    meaning: "复合的，复杂的"
   },
   {
     wordId: 2311,
@@ -20807,7 +20807,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "面具、面紗、偽裝"
+    meaning: "面具、面纱、伪装"
   },
   {
     wordId: 2313,
@@ -20816,7 +20816,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "生氣，生氣，發怒"
+    meaning: "生气，生气，发怒"
   },
   {
     wordId: 2314,
@@ -20825,7 +20825,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "商業衰退、困難時期、蕭條"
+    meaning: "商业衰退、困难时期、萧条"
   },
   {
     wordId: 2315,
@@ -20834,7 +20834,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "年齡"
+    meaning: "年龄"
   },
   {
     wordId: 2316,
@@ -20843,7 +20843,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "富人，百萬富翁"
+    meaning: "富人，百万富翁"
   },
   {
     wordId: 2317,
@@ -20852,7 +20852,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "法令、條例、公告"
+    meaning: "法令、条例、公告"
   },
   {
     wordId: 2318,
@@ -20861,7 +20861,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "債務、負債"
+    meaning: "债务、负债"
   },
   {
     wordId: 2319,
@@ -20879,7 +20879,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "嬉戲，嬉戲，嬉戲"
+    meaning: "嬉戏，嬉戏，嬉戏"
   },
   {
     wordId: 2321,
@@ -20888,7 +20888,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "合適的"
+    meaning: "合适的"
   },
   {
     wordId: 2322,
@@ -20897,7 +20897,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "不規則性，不合時宜"
+    meaning: "不规则性，不合时宜"
   },
   {
     wordId: 2323,
@@ -20906,7 +20906,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "受傷，傷口"
+    meaning: "受伤，伤口"
   },
   {
     wordId: 2324,
@@ -20915,7 +20915,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "不完全的理解、懷疑、問題"
+    meaning: "不完全的理解、怀疑、问题"
   },
   {
     wordId: 2325,
@@ -20924,7 +20924,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "沉悶、憂鬱、萎靡"
+    meaning: "沉闷、忧郁、萎靡"
   },
   {
     wordId: 2326,
@@ -20933,7 +20933,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "附屬的，附屬的，有聯繫的"
+    meaning: "附属的，附属的，有联系的"
   },
   {
     wordId: 2327,
@@ -20942,7 +20942,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "負擔，負擔，責任"
+    meaning: "负担，负担，责任"
   },
   {
     wordId: 2328,
@@ -20951,7 +20951,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "情況不好，無法達成（交易），意見不合"
+    meaning: "情况不好，无法达成（交易），意见不合"
   },
   {
     wordId: 2329,
@@ -20960,7 +20960,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "法語"
+    meaning: "法语"
   },
   {
     wordId: 2330,
@@ -20969,7 +20969,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "復興（例如音樂劇）、修復"
+    meaning: "复兴（例如音乐剧）、修复"
   },
   {
     wordId: 2331,
@@ -20978,7 +20978,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "復興、文藝復興、重建"
+    meaning: "复兴、文艺复兴、重建"
   },
   {
     wordId: 2332,
@@ -20987,7 +20987,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "沸騰，沸騰"
+    meaning: "沸腾，沸腾"
   },
   {
     wordId: 2333,
@@ -21005,7 +21005,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "不公正、不當、不合理"
+    meaning: "不公正、不当、不合理"
   },
   {
     wordId: 2335,
@@ -21014,7 +21014,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "房地產"
+    meaning: "房地产"
   },
   {
     wordId: 2336,
@@ -21023,7 +21023,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "（進行）新的任命"
+    meaning: "（进行）新的任命"
   },
   {
     wordId: 2337,
@@ -21032,7 +21032,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "腐朽，墮落"
+    meaning: "腐朽，堕落"
   },
   {
     wordId: 2338,
@@ -21041,7 +21041,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "壞名聲、恥辱、不受歡迎"
+    meaning: "坏名声、耻辱、不受欢迎"
   },
   {
     wordId: 2339,
@@ -21050,7 +21050,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "憐憫、同情"
+    meaning: "怜悯、同情"
   },
   {
     wordId: 2340,
@@ -21059,7 +21059,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "不滿、不滿、不贊同"
+    meaning: "不满、不满、不赞同"
   },
   {
     wordId: 2341,
@@ -21068,7 +21068,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "普遍性、普遍性、無所不在"
+    meaning: "普遍性、普遍性、无所不在"
   },
   {
     wordId: 2342,
@@ -21077,7 +21077,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "基於，起源於"
+    meaning: "基于，起源于"
   },
   {
     wordId: 2343,
@@ -21095,7 +21095,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "未知的，模糊的，不明確的"
+    meaning: "未知的，模糊的，不明确的"
   },
   {
     wordId: 2345,
@@ -21104,7 +21104,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "支援、維護"
+    meaning: "支援、维护"
   },
   {
     wordId: 2346,
@@ -21113,7 +21113,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "偽裝、表演、外表"
+    meaning: "伪装、表演、外表"
   },
   {
     wordId: 2347,
@@ -21122,7 +21122,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "開始、起點、繪製或發布（草稿）"
+    meaning: "开始、起点、绘制或发布（草稿）"
   },
   {
     wordId: 2348,
@@ -21131,7 +21131,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "壞事，不良行為，自卑"
+    meaning: "坏事，不良行为，自卑"
   },
   {
     wordId: 2349,
@@ -21140,7 +21140,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "浮力、浮動力"
+    meaning: "浮力、浮动力"
   },
   {
     wordId: 2350,
@@ -21149,7 +21149,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "顫抖，顫抖"
+    meaning: "颤抖，颤抖"
   },
   {
     wordId: 2351,
@@ -21158,7 +21158,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "附錄、補編"
+    meaning: "附录、补编"
   },
   {
     wordId: 2352,
@@ -21167,7 +21167,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "分分鐘"
+    meaning: "分分钟"
   },
   {
     wordId: 2353,
@@ -21176,7 +21176,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "憤慨、怨恨"
+    meaning: "愤慨、怨恨"
   },
   {
     wordId: 2354,
@@ -21185,7 +21185,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "失去了一些東西"
+    meaning: "失去了一些东西"
   },
   {
     wordId: 2355,
@@ -21194,7 +21194,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "噴湧，噴湧，噴湧"
+    meaning: "喷涌，喷涌，喷涌"
   },
   {
     wordId: 2356,
@@ -21203,7 +21203,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "爭議、麻煩、紛爭"
+    meaning: "争议、麻烦、纷争"
   },
   {
     wordId: 2357,
@@ -21212,7 +21212,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "豐富的，充足的，奢華的"
+    meaning: "丰富的，充足的，奢华的"
   },
   {
     wordId: 2358,
@@ -21221,7 +21221,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "辛苦，奮力拼搏"
+    meaning: "辛苦，奋力拼搏"
   },
   {
     wordId: 2359,
@@ -21230,7 +21230,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "nan",
-    meaning: "細粉"
+    meaning: "细粉"
   },
   {
     wordId: 2360,
@@ -21239,7 +21239,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "武器、武器、條例"
+    meaning: "武器、武器、条例"
   },
   {
     wordId: 2361,
@@ -21248,7 +21248,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "閉嘴"
+    meaning: "闭嘴"
   },
   {
     wordId: 2362,
@@ -21257,7 +21257,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "（並排）, 同時, 並行"
+    meaning: "（并排）, 同时, 并行"
   },
   {
     wordId: 2363,
@@ -21266,7 +21266,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "關閉, 歇業, 停業"
+    meaning: "关闭, 歇业, 停业"
   },
   {
     wordId: 2364,
@@ -21302,7 +21302,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "排列，平行，並排"
+    meaning: "排列，平行，并排"
   },
   {
     wordId: 2368,
@@ -21311,7 +21311,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "畏縮，退縮，屈服於"
+    meaning: "畏缩，退缩，屈服于"
   },
   {
     wordId: 2369,
@@ -21320,7 +21320,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "肚臍"
+    meaning: "肚脐"
   },
   {
     wordId: 2370,
@@ -21329,7 +21329,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "疏遠"
+    meaning: "疏远"
   },
   {
     wordId: 2371,
@@ -21338,7 +21338,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "貶低自己並讚揚聽者"
+    meaning: "贬低自己并赞扬听者"
   },
   {
     wordId: 2372,
@@ -21347,7 +21347,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "經過，逝去，經歷"
+    meaning: "经过，逝去，经历"
   },
   {
     wordId: 2373,
@@ -21356,7 +21356,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "彙編、編輯、完成的詩歌"
+    meaning: "汇编、编辑、完成的诗歌"
   },
   {
     wordId: 2374,
@@ -21365,7 +21365,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "側面，左邊偏斜"
+    meaning: "侧面，左边偏斜"
   },
   {
     wordId: 2375,
@@ -21374,7 +21374,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "變革、改革、革命"
+    meaning: "变革、改革、革命"
   },
   {
     wordId: 2376,
@@ -21383,7 +21383,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "返回，恢復"
+    meaning: "返回，恢复"
   },
   {
     wordId: 2377,
@@ -21392,7 +21392,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "偏見，狹隘的視野"
+    meaning: "偏见，狭隘的视野"
   },
   {
     wordId: 2378,
@@ -21401,7 +21401,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "還款"
+    meaning: "还款"
   },
   {
     wordId: 2379,
@@ -21410,7 +21410,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "變化、轉變、滄桑"
+    meaning: "变化、转变、沧桑"
   },
   {
     wordId: 2380,
@@ -21419,7 +21419,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "回覆"
+    meaning: "回复"
   },
   {
     wordId: 2381,
@@ -21428,7 +21428,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "nan",
-    meaning: "變化，波動"
+    meaning: "变化，波动"
   },
   {
     wordId: 2382,
@@ -21437,7 +21437,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "（植物的）穗，（植物的）頭"
+    meaning: "（植物的）穗，（植物的）头"
   },
   {
     wordId: 2383,
@@ -21446,7 +21446,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "護理、養育、撫養"
+    meaning: "护理、养育、抚养"
   },
   {
     wordId: 2384,
@@ -21473,7 +21473,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "崩塌，衰變（物理學），破碎"
+    meaning: "崩塌，衰变（物理学），破碎"
   },
   {
     wordId: 2387,
@@ -21482,7 +21482,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "法律、法理學"
+    meaning: "法律、法理学"
   },
   {
     wordId: 2388,
@@ -21491,7 +21491,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "放棄、放棄、退位（責任權）"
+    meaning: "放弃、放弃、退位（责任权）"
   },
   {
     wordId: 2389,
@@ -21500,7 +21500,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "珍貴的物品或器皿，傑出的個人"
+    meaning: "珍贵的物品或器皿，杰出的个人"
   },
   {
     wordId: 2390,
@@ -21509,7 +21509,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "封建主義"
+    meaning: "封建主义"
   },
   {
     wordId: 2391,
@@ -21518,7 +21518,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "豐收"
+    meaning: "丰收"
   },
   {
     wordId: 2392,
@@ -21527,7 +21527,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "計劃、政策"
+    meaning: "计划、政策"
   },
   {
     wordId: 2393,
@@ -21536,7 +21536,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "出席，服務"
+    meaning: "出席，服务"
   },
   {
     wordId: 2394,
@@ -21545,7 +21545,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "形式、方法、系統"
+    meaning: "形式、方法、系统"
   },
   {
     wordId: 2395,
@@ -21554,7 +21554,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "輻射、發射"
+    meaning: "辐射、发射"
   },
   {
     wordId: 2396,
@@ -21572,7 +21572,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "酬金，酬勞，獎勵"
+    meaning: "酬金，酬劳，奖励"
   },
   {
     wordId: 2398,
@@ -21581,7 +21581,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "釋放，發出"
+    meaning: "释放，发出"
   },
   {
     wordId: 2399,
@@ -21590,7 +21590,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "告知，報告"
+    meaning: "告知，报告"
   },
   {
     wordId: 2400,
@@ -21599,7 +21599,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "告知，報告"
+    meaning: "告知，报告"
   },
   {
     wordId: 2401,
@@ -21608,7 +21608,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "保持原樣, 聽天由命, 不管"
+    meaning: "保持原样, 听天由命, 不管"
   },
   {
     wordId: 2402,
@@ -21626,7 +21626,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "資訊、報告"
+    meaning: "资讯、报告"
   },
   {
     wordId: 2404,
@@ -21635,7 +21635,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "獎勵，獎品"
+    meaning: "奖励，奖品"
   },
   {
     wordId: 2405,
@@ -21662,7 +21662,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "扔掉，燒掉，驅逐"
+    meaning: "扔掉，烧掉，驱逐"
   },
   {
     wordId: 2408,
@@ -21671,7 +21671,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "飽和"
+    meaning: "饱和"
   },
   {
     wordId: 2409,
@@ -21680,7 +21680,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "保暖，保溫，隔熱"
+    meaning: "保暖，保温，隔热"
   },
   {
     wordId: 2410,
@@ -21689,7 +21689,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "捕獲，扣押"
+    meaning: "捕获，扣押"
   },
   {
     wordId: 2411,
@@ -21698,7 +21698,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "押記、保管、保管"
+    meaning: "押记、保管、保管"
   },
   {
     wordId: 2412,
@@ -21707,7 +21707,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "供給，供應，補給"
+    meaning: "供给，供应，补给"
   },
   {
     wordId: 2413,
@@ -21716,7 +21716,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "補償、強化"
+    meaning: "补偿、强化"
   },
   {
     wordId: 2414,
@@ -21725,7 +21725,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "捕鯨，捕鯨"
+    meaning: "捕鲸，捕鲸"
   },
   {
     wordId: 2415,
@@ -21734,7 +21734,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "保險，擔保"
+    meaning: "保险，担保"
   },
   {
     wordId: 2416,
@@ -21743,7 +21743,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "照顧、保護、庇護"
+    meaning: "照顾、保护、庇护"
   },
   {
     wordId: 2417,
@@ -21752,7 +21752,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "誇耀，自豪"
+    meaning: "夸耀，自豪"
   },
   {
     wordId: 2418,
@@ -21761,7 +21761,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "從接縫處分開，開始打開，開懷大笑"
+    meaning: "从接缝处分开，开始打开，开怀大笑"
   },
   {
     wordId: 2419,
@@ -21770,7 +21770,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "乾燥，固化"
+    meaning: "干燥，固化"
   },
   {
     wordId: 2420,
@@ -21779,7 +21779,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "乾洗的衣服"
+    meaning: "干洗的衣服"
   },
   {
     wordId: 2421,
@@ -21788,7 +21788,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "保守，維持"
+    meaning: "保守，维持"
   },
   {
     wordId: 2422,
@@ -21797,7 +21797,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "補充，補充，補給"
+    meaning: "补充，补充，补给"
   },
   {
     wordId: 2423,
@@ -21815,7 +21815,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "保證，安全，擔保"
+    meaning: "保证，安全，担保"
   },
   {
     wordId: 2425,
@@ -21824,7 +21824,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "補償，賠償"
+    meaning: "补偿，赔偿"
   },
   {
     wordId: 2426,
@@ -21842,7 +21842,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "補充，補足"
+    meaning: "补充，补足"
   },
   {
     wordId: 2428,
@@ -21851,7 +21851,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "痙攣"
+    meaning: "痉挛"
   },
   {
     wordId: 2429,
@@ -21860,7 +21860,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "感到寬慰"
+    meaning: "感到宽慰"
   },
   {
     wordId: 2430,
@@ -21869,7 +21869,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "臉頰"
+    meaning: "脸颊"
   },
   {
     wordId: 2431,
@@ -21878,7 +21878,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "解開"
+    meaning: "解开"
   },
   {
     wordId: 2432,
@@ -21887,7 +21887,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "捐贈、給予、進行"
+    meaning: "捐赠、给予、进行"
   },
   {
     wordId: 2433,
@@ -21896,7 +21896,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "大部分，幾乎"
+    meaning: "大部分，几乎"
   },
   {
     wordId: 2434,
@@ -21905,7 +21905,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "幼兒園、保育園等的保育員"
+    meaning: "幼儿园、保育园等的保育员"
   },
   {
     wordId: 2435,
@@ -21914,7 +21914,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "養生、療養、休閒"
+    meaning: "养生、疗养、休闲"
   },
   {
     wordId: 2436,
@@ -21932,7 +21932,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "戰俘"
+    meaning: "战俘"
   },
   {
     wordId: 2438,
@@ -21941,7 +21941,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "毀滅，沉淪，滅亡"
+    meaning: "毁灭，沉沦，灭亡"
   },
   {
     wordId: 2439,
@@ -21950,7 +21950,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "摧毀，推翻，毀壞"
+    meaning: "摧毁，推翻，毁坏"
   },
   {
     wordId: 2440,
@@ -21959,7 +21959,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "禮儀，基本規則"
+    meaning: "礼仪，基本规则"
   },
   {
     wordId: 2441,
@@ -21968,7 +21968,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "主樓"
+    meaning: "主楼"
   },
   {
     wordId: 2442,
@@ -21977,7 +21977,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "嚴肅性、真理性、神聖性"
+    meaning: "严肃性、真理性、神圣性"
   },
   {
     wordId: 2443,
@@ -21986,7 +21986,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "本質、真諦、現實"
+    meaning: "本质、真谛、现实"
   },
   {
     wordId: 2444,
@@ -21995,7 +21995,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "實體，真實形式，崇拜的對象"
+    meaning: "实体，真实形式，崇拜的对象"
   },
   {
     wordId: 2445,
@@ -22004,7 +22004,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "真實意圖、動機"
+    meaning: "真实意图、动机"
   },
   {
     wordId: 2446,
@@ -22013,7 +22013,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "僅僅、僅僅、只是"
+    meaning: "仅仅、仅仅、只是"
   },
   {
     wordId: 2447,
@@ -22031,7 +22031,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "家、棲息地、中心"
+    meaning: "家、栖息地、中心"
   },
   {
     wordId: 2449,
@@ -22040,7 +22040,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "文章或書的主要內容，（信件）正文"
+    meaning: "文章或书的主要内容，（信件）正文"
   },
   {
     wordId: 2450,
@@ -22049,7 +22049,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "nan",
-    meaning: "真實姓名"
+    meaning: "真实姓名"
   },
   {
     wordId: 2451,
@@ -22058,7 +22058,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "用於測量扁平物體（例如紙張）的計數器"
+    meaning: "用于测量扁平物体（例如纸张）的计数器"
   },
   {
     wordId: 2452,
@@ -22067,7 +22067,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "埋藏的財物，寶藏"
+    meaning: "埋藏的财物，宝藏"
   },
   {
     wordId: 2453,
@@ -22076,7 +22076,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "跳舞、飄動、旋轉"
+    meaning: "跳舞、飘动、旋转"
   },
   {
     wordId: 2454,
@@ -22094,7 +22094,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "預售，預訂"
+    meaning: "预售，预订"
   },
   {
     wordId: 2456,
@@ -22103,7 +22103,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "序言，介紹"
+    meaning: "序言，介绍"
   },
   {
     wordId: 2457,
@@ -22121,7 +22121,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "委託，留給某人"
+    meaning: "委托，留给某人"
   },
   {
     wordId: 2459,
@@ -22130,7 +22130,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "擊敗"
+    meaning: "击败"
   },
   {
     wordId: 2460,
@@ -22148,7 +22148,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "轉動，彎曲"
+    meaning: "转动，弯曲"
   },
   {
     wordId: 2462,
@@ -22157,7 +22157,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "體積"
+    meaning: "体积"
   },
   {
     wordId: 2463,
@@ -22166,7 +22166,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "令人困惑、誤導、模稜兩可"
+    meaning: "令人困惑、误导、模棱两可"
   },
   {
     wordId: 2464,
@@ -22175,7 +22175,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "轉移注意力，陷入"
+    meaning: "转移注意力，陷入"
   },
   {
     wordId: 2465,
@@ -22193,7 +22193,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "動詞後綴，表示不顧一切地放棄活動"
+    meaning: "动词后缀，表示不顾一切地放弃活动"
   },
   {
     wordId: 2467,
@@ -22202,7 +22202,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "真誠、奉獻"
+    meaning: "真诚、奉献"
   },
   {
     wordId: 2468,
@@ -22211,7 +22211,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "感到困惑，慌亂"
+    meaning: "感到困惑，慌乱"
   },
   {
     wordId: 2469,
@@ -22220,7 +22220,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "真理、信仰、忠誠"
+    meaning: "真理、信仰、忠诚"
   },
   {
     wordId: 2470,
@@ -22229,7 +22229,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "確實、事實上、真的"
+    meaning: "确实、事实上、真的"
   },
   {
     wordId: 2471,
@@ -22238,7 +22238,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "無疑地，毫無疑問地，顯然地"
+    meaning: "无疑地，毫无疑问地，显然地"
   },
   {
     wordId: 2472,
@@ -22247,7 +22247,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "正確地, 當然"
+    meaning: "正确地, 当然"
   },
   {
     wordId: 2473,
@@ -22256,7 +22256,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "勝過，超越，勝過"
+    meaning: "胜过，超越，胜过"
   },
   {
     wordId: 2474,
@@ -22265,7 +22265,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "額外的，附加的，不太令人反感的"
+    meaning: "额外的，附加的，不太令人反感的"
   },
   {
     wordId: 2475,
@@ -22274,7 +22274,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "混合、交談、交叉（劍）"
+    meaning: "混合、交谈、交叉（剑）"
   },
   {
     wordId: 2476,
@@ -22292,7 +22292,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "更甚，更甚（與否定動詞連用），更不用說"
+    meaning: "更甚，更甚（与否定动词连用），更不用说"
   },
   {
     wordId: 2478,
@@ -22301,7 +22301,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "交叉，相交，關聯"
+    meaning: "交叉，相交，关联"
   },
   {
     wordId: 2479,
@@ -22319,7 +22319,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "倒胃口的，令人不快的（味道外觀狀況），醜陋的"
+    meaning: "倒胃口的，令人不快的（味道外观状况），丑陋的"
   },
   {
     wordId: 2481,
@@ -22328,7 +22328,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "越來越"
+    meaning: "越来越"
   },
   {
     wordId: 2482,
@@ -22337,7 +22337,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "腹股溝、胯部、大腿"
+    meaning: "腹股沟、胯部、大腿"
   },
   {
     wordId: 2483,
@@ -22346,7 +22346,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "延伸至或進入，跨過"
+    meaning: "延伸至或进入，跨过"
   },
   {
     wordId: 2484,
@@ -22364,7 +22364,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "眨眼、閃爍（星星）、搖曳（光）"
+    meaning: "眨眼、闪烁（星星）、摇曳（光）"
   },
   {
     wordId: 2486,
@@ -22373,7 +22373,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "預約"
+    meaning: "预约"
   },
   {
     wordId: 2487,
@@ -22382,7 +22382,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "犯錯，不正確，誤解"
+    meaning: "犯错，不正确，误解"
   },
   {
     wordId: 2488,
@@ -22400,7 +22400,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "焦急地尋找，熱切地等待"
+    meaning: "焦急地寻找，热切地等待"
   },
   {
     wordId: 2490,
@@ -22409,7 +22409,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "數個，各種，不同的"
+    meaning: "数个，各种，不同的"
   },
   {
     wordId: 2491,
@@ -22418,7 +22418,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "結束年份（期間天數），最後階段"
+    meaning: "结束年份（期间天数），最后阶段"
   },
   {
     wordId: 2492,
@@ -22427,7 +22427,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "分成兩等份"
+    meaning: "分成两等份"
   },
   {
     wordId: 2493,
@@ -22436,7 +22436,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "標記，目標"
+    meaning: "标记，目标"
   },
   {
     wordId: 2494,
@@ -22445,7 +22445,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "結論、解決、一致性"
+    meaning: "结论、解决、一致性"
   },
   {
     wordId: 2495,
@@ -22454,7 +22454,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "和解，結論"
+    meaning: "和解，结论"
   },
   {
     wordId: 2496,
@@ -22463,7 +22463,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "逃離，獲救，避免"
+    meaning: "逃离，获救，避免"
   },
   {
     wordId: 2497,
@@ -22472,7 +22472,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "邀請"
+    meaning: "邀请"
   },
   {
     wordId: 2498,
@@ -22481,7 +22481,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "癱瘓、麻痺、麻木"
+    meaning: "瘫痪、麻痺、麻木"
   },
   {
     wordId: 2499,
@@ -22490,7 +22490,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "耀眼奪目，光芒四射"
+    meaning: "耀眼夺目，光芒四射"
   },
   {
     wordId: 2500,
@@ -22508,7 +22508,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "偶爾，經常"
+    meaning: "偶尔，经常"
   },
   {
     wordId: 2502,
@@ -22517,7 +22517,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "很快，不久，短時間內"
+    meaning: "很快，不久，短时间内"
   },
   {
     wordId: 2503,
@@ -22562,7 +22562,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "相當, 完全, 徹底"
+    meaning: "相当, 完全, 彻底"
   },
   {
     wordId: 2508,
@@ -22580,7 +22580,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "使成圓形，使圓整，捲起"
+    meaning: "使成圆形，使圆整，卷起"
   },
   {
     wordId: 2510,
@@ -22589,7 +22589,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "滿月"
+    meaning: "满月"
   },
   {
     wordId: 2511,
@@ -22598,7 +22598,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "全場一致"
+    meaning: "全场一致"
   },
   {
     wordId: 2512,
@@ -22607,7 +22607,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "中間，中央，中間"
+    meaning: "中间，中央，中间"
   },
   {
     wordId: 2513,
@@ -22625,7 +22625,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "nan",
-    meaning: "完美的圓形"
+    meaning: "完美的圆形"
   },
   {
     wordId: 2515,
@@ -22634,7 +22634,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "（數字）三"
+    meaning: "（数字）三"
   },
   {
     wordId: 2516,
@@ -22643,7 +22643,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "正式婚姻面試"
+    meaning: "正式婚姻面试"
   },
   {
     wordId: 2517,
@@ -22652,7 +22652,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "交換眼神，推遲，暫停行動"
+    meaning: "交换眼神，推迟，暂停行动"
   },
   {
     wordId: 2518,
@@ -22661,7 +22661,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "忽視，沒有註意到"
+    meaning: "忽视，没有注意到"
   },
   {
     wordId: 2519,
@@ -22670,7 +22670,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "蠻荒之地，落後地區，未開化的"
+    meaning: "蛮荒之地，落后地区，未开化的"
   },
   {
     wordId: 2520,
@@ -22679,7 +22679,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "味覺，口感，味覺"
+    meaning: "味觉，口感，味觉"
   },
   {
     wordId: 2521,
@@ -22688,7 +22688,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "（碰巧）看到，注意到，看見"
+    meaning: "（碰巧）看到，注意到，看见"
   },
   {
     wordId: 2522,
@@ -22706,7 +22706,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "觀點"
+    meaning: "观点"
   },
   {
     wordId: 2524,
@@ -22715,7 +22715,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "難看的，醜的"
+    meaning: "难看的，丑的"
   },
   {
     wordId: 2525,
@@ -22742,7 +22742,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "悲慘的"
+    meaning: "悲惨的"
   },
   {
     wordId: 2528,
@@ -22751,7 +22751,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "缺乏經驗，不成熟，生澀"
+    meaning: "缺乏经验，不成熟，生涩"
   },
   {
     wordId: 2529,
@@ -22769,7 +22769,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "破舊的，骯髒的"
+    meaning: "破旧的，肮脏的"
   },
   {
     wordId: 2531,
@@ -22787,7 +22787,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "表演，展覽"
+    meaning: "表演，展览"
   },
   {
     wordId: 2533,
@@ -22796,7 +22796,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "滿足, 討好, 填補"
+    meaning: "满足, 讨好, 填补"
   },
   {
     wordId: 2534,
@@ -22805,7 +22805,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "擾亂, 打亂, 擾亂"
+    meaning: "扰乱, 打乱, 扰乱"
   },
   {
     wordId: 2535,
@@ -22814,7 +22814,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "感到困惑，混亂，不安"
+    meaning: "感到困惑，混乱，不安"
   },
   {
     wordId: 2536,
@@ -22832,7 +22832,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "靠近自己，親近某人，熟悉"
+    meaning: "靠近自己，亲近某人，熟悉"
   },
   {
     wordId: 2538,
@@ -22841,7 +22841,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "被引導，被展示"
+    meaning: "被引导，被展示"
   },
   {
     wordId: 2539,
@@ -22859,7 +22859,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "人群, 密集隊形, 密集"
+    meaning: "人群, 密集队形, 密集"
   },
   {
     wordId: 2541,
@@ -22868,7 +22868,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "相關的，相連的，密切的"
+    meaning: "相关的，相连的，密切的"
   },
   {
     wordId: 2542,
@@ -22886,7 +22886,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "可恥的，下流的"
+    meaning: "可耻的，下流的"
   },
   {
     wordId: 2544,
@@ -22895,7 +22895,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "估價、報價"
+    meaning: "估价、报价"
   },
   {
     wordId: 2545,
@@ -22904,7 +22904,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "尚未確定，尚未決定，待定"
+    meaning: "尚未确定，尚未决定，待定"
   },
   {
     wordId: 2546,
@@ -22913,7 +22913,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "視角，無遮蔽的視野，遠景"
+    meaning: "视角，无遮蔽的视野，远景"
   },
   {
     wordId: 2547,
@@ -22922,7 +22922,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "來源，起源"
+    meaning: "来源，起源"
   },
   {
     wordId: 2548,
@@ -22931,7 +22931,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "個人形象"
+    meaning: "个人形象"
   },
   {
     wordId: 2549,
@@ -22949,7 +22949,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "錯過，忽視，放過"
+    meaning: "错过，忽视，放过"
   },
   {
     wordId: 2551,
@@ -22967,7 +22967,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "手勢"
+    meaning: "手势"
   },
   {
     wordId: 2553,
@@ -22976,7 +22976,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "詢問、表示同情、表示關心"
+    meaning: "询问、表示同情、表示关心"
   },
   {
     wordId: 2554,
@@ -22985,7 +22985,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "脈衝"
+    meaning: "脉冲"
   },
   {
     wordId: 2555,
@@ -22994,7 +22994,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "留戀、眷戀、遺憾"
+    meaning: "留恋、眷恋、遗憾"
   },
   {
     wordId: 2556,
@@ -23003,7 +23003,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "眺望，勘察（場景），廣泛觀察"
+    meaning: "眺望，勘察（场景），广泛观察"
   },
   {
     wordId: 2557,
@@ -23012,7 +23012,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "民主國家元首"
+    meaning: "民主国家元首"
   },
   {
     wordId: 2558,
@@ -23021,7 +23021,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "為旅客提供住宿的私人住宅"
+    meaning: "为旅客提供住宿的私人住宅"
   },
   {
     wordId: 2559,
@@ -23030,7 +23030,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "人民、種族、國家"
+    meaning: "人民、种族、国家"
   },
   {
     wordId: 2560,
@@ -23039,7 +23039,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "nan",
-    meaning: "人民、種族、國家"
+    meaning: "人民、种族、国家"
   },
   {
     wordId: 2561,
@@ -23048,7 +23048,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "（數字）六"
+    meaning: "（数字）六"
   },
   {
     wordId: 2562,
@@ -23057,7 +23057,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "胡說八道，毫無意義"
+    meaning: "胡说八道，毫无意义"
   },
   {
     wordId: 2563,
@@ -23066,7 +23066,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "方向、情況、暴露"
+    meaning: "方向、情况、暴露"
   },
   {
     wordId: 2564,
@@ -23102,7 +23102,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "無效，無效果，不可用"
+    meaning: "无效，无效果，不可用"
   },
   {
     wordId: 2568,
@@ -23120,7 +23120,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "純真，頭腦簡單"
+    meaning: "纯真，头脑简单"
   },
   {
     wordId: 2570,
@@ -23138,7 +23138,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "結局、結論、結合"
+    meaning: "结局、结论、结合"
   },
   {
     wordId: 2572,
@@ -23147,7 +23147,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "連接，關係"
+    meaning: "连接，关系"
   },
   {
     wordId: 2573,
@@ -23156,7 +23156,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "連結或相關，結合在一起"
+    meaning: "连结或相关，结合在一起"
   },
   {
     wordId: 2574,
@@ -23165,7 +23165,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "結合，連接，繫上"
+    meaning: "结合，连接，系上"
   },
   {
     wordId: 2575,
@@ -23174,7 +23174,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "無線電"
+    meaning: "无线电"
   },
   {
     wordId: 2576,
@@ -23183,7 +23183,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "浪費錢，浪費金錢，徒勞無功"
+    meaning: "浪费钱，浪费金钱，徒劳无功"
   },
   {
     wordId: 2577,
@@ -23192,7 +23192,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "未經許可，未經通知"
+    meaning: "未经许可，未经通知"
   },
   {
     wordId: 2578,
@@ -23201,7 +23201,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "無知"
+    meaning: "无知"
   },
   {
     wordId: 2579,
@@ -23210,7 +23210,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "荒謬的，不合理的，過分的"
+    meaning: "荒谬的，不合理的，过分的"
   },
   {
     wordId: 2580,
@@ -23219,7 +23219,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "混亂的, 雜亂的, 混雜的"
+    meaning: "混乱的, 杂乱的, 混杂的"
   },
   {
     wordId: 2581,
@@ -23228,7 +23228,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "空虛的，無用的，徒勞的"
+    meaning: "空虚的，无用的，徒劳的"
   },
   {
     wordId: 2582,
@@ -23237,7 +23237,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "懊惱、遺憾"
+    meaning: "懊恼、遗憾"
   },
   {
     wordId: 2583,
@@ -23255,7 +23255,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "不合理地，荒謬地，魯莽地"
+    meaning: "不合理地，荒谬地，鲁莽地"
   },
   {
     wordId: 2585,
@@ -23264,7 +23264,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "無用的，無用的，不必要的"
+    meaning: "无用的，无用的，不必要的"
   },
   {
     wordId: 2586,
@@ -23273,7 +23273,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "蜂擁而至，聚集"
+    meaning: "蜂拥而至，聚集"
   },
   {
     wordId: 2587,
@@ -23282,7 +23282,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "nan",
-    meaning: "當然，自然"
+    meaning: "当然，自然"
   },
   {
     wordId: 2588,
@@ -23291,7 +23291,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "知名產品"
+    meaning: "知名产品"
   },
   {
     wordId: 2589,
@@ -23309,7 +23309,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "熱門"
+    meaning: "热门"
   },
   {
     wordId: 2591,
@@ -23318,7 +23318,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "姓名登記冊"
+    meaning: "姓名登记册"
   },
   {
     wordId: 2592,
@@ -23327,7 +23327,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "榮譽、信譽、威望"
+    meaning: "荣誉、信誉、威望"
   },
   {
     wordId: 2593,
@@ -23345,7 +23345,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "明亮、清晰、歡快"
+    meaning: "明亮、清晰、欢快"
   },
   {
     wordId: 2595,
@@ -23372,7 +23372,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "祝福，憐憫"
+    meaning: "祝福，怜悯"
   },
   {
     wordId: 2598,
@@ -23381,7 +23381,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "輝煌的，出色的，引人注目的"
+    meaning: "辉煌的，出色的，引人注目的"
   },
   {
     wordId: 2599,
@@ -23390,7 +23390,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "醒來"
+    meaning: "醒来"
   },
   {
     wordId: 2600,
@@ -23399,7 +23399,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "打電話、派人去請、穿上"
+    meaning: "打电话、派人去请、穿上"
   },
   {
     wordId: 2601,
@@ -23408,7 +23408,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "雌性（動物）"
+    meaning: "雌性（动物）"
   },
   {
     wordId: 2602,
@@ -23417,7 +23417,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "荒謬的，不合理的，過分的"
+    meaning: "荒谬的，不合理的，过分的"
   },
   {
     wordId: 2603,
@@ -23435,7 +23435,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "垮台，毀滅，崩潰"
+    meaning: "垮台，毁灭，崩溃"
   },
   {
     wordId: 2605,
@@ -23453,7 +23453,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "頭暈，眩暈"
+    meaning: "头晕，眩晕"
   },
   {
     wordId: 2607,
@@ -23462,7 +23462,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "尺度、層次"
+    meaning: "尺度、层次"
   },
   {
     wordId: 2608,
@@ -23471,7 +23471,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "面試"
+    meaning: "面试"
   },
   {
     wordId: 2609,
@@ -23489,7 +23489,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "面對，注視"
+    meaning: "面对，注视"
   },
   {
     wordId: 2611,
@@ -23498,7 +23498,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "nan",
-    meaning: "面子、榮譽、名譽"
+    meaning: "面子、荣誉、名誉"
   },
   {
     wordId: 2612,
@@ -23507,7 +23507,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "創造，建立"
+    meaning: "创造，建立"
   },
   {
     wordId: 2613,
@@ -23516,7 +23516,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "提議，建議"
+    meaning: "提议，建议"
   },
   {
     wordId: 2614,
@@ -23525,7 +23525,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "申請、進入、請求"
+    meaning: "申请、进入、请求"
   },
   {
     wordId: 2615,
@@ -23534,7 +23534,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "建議、請求、主張"
+    meaning: "建议、请求、主张"
   },
   {
     wordId: 2616,
@@ -23543,7 +23543,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "報告、告知、建議"
+    meaning: "报告、告知、建议"
   },
   {
     wordId: 2617,
@@ -23552,7 +23552,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "反對意見、缺點"
+    meaning: "反对意见、缺点"
   },
   {
     wordId: 2618,
@@ -23561,7 +23561,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "盲點"
+    meaning: "盲点"
   },
   {
     wordId: 2619,
@@ -23570,7 +23570,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "暴力、激烈、憤怒"
+    meaning: "暴力、激烈、愤怒"
   },
   {
     wordId: 2620,
@@ -23579,7 +23579,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "掙扎、扭動、不耐煩"
+    meaning: "挣扎、扭动、不耐烦"
   },
   {
     wordId: 2621,
@@ -23588,7 +23588,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "目錄，目錄，清單"
+    meaning: "目录，目录，清单"
   },
   {
     wordId: 2622,
@@ -23597,7 +23597,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "計劃、方案、項目"
+    meaning: "计划、方案、项目"
   },
   {
     wordId: 2623,
@@ -23606,7 +23606,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "模型, 假人, 設計模型"
+    meaning: "模型, 假人, 设计模型"
   },
   {
     wordId: 2624,
@@ -23624,7 +23624,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "如果，假設，假設"
+    meaning: "如果，假设，假设"
   },
   {
     wordId: 2626,
@@ -23633,7 +23633,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "或許，也許，偶然"
+    meaning: "或许，也许，偶然"
   },
   {
     wordId: 2627,
@@ -23642,7 +23642,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "或許，可能"
+    meaning: "或许，可能"
   },
   {
     wordId: 2628,
@@ -23651,7 +23651,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "或許，也許，偶然"
+    meaning: "或许，也许，偶然"
   },
   {
     wordId: 2629,
@@ -23660,7 +23660,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "或者，否則"
+    meaning: "或者，否则"
   },
   {
     wordId: 2630,
@@ -23678,7 +23678,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "帶來，採取，引起"
+    meaning: "带来，采取，引起"
   },
   {
     wordId: 2632,
@@ -23696,7 +23696,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "持球，進攻，保持控球"
+    meaning: "持球，进攻，保持控球"
   },
   {
     wordId: 2634,
@@ -23705,7 +23705,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "熱門話題，城中熱議話題"
+    meaning: "热门话题，城中热议话题"
   },
   {
     wordId: 2635,
@@ -23714,7 +23714,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "太好了，超過了應得的，浪費"
+    meaning: "太好了，超过了应得的，浪费"
   },
   {
     wordId: 2636,
@@ -23723,7 +23723,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "用、通過、借助"
+    meaning: "用、通过、借助"
   },
   {
     wordId: 2637,
@@ -23732,7 +23732,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "全部地, 僅僅, 完全地"
+    meaning: "全部地, 仅仅, 完全地"
   },
   {
     wordId: 2638,
@@ -23741,7 +23741,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "招待，歡迎"
+    meaning: "招待，欢迎"
   },
   {
     wordId: 2639,
@@ -23750,7 +23750,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "受人喜愛，受歡迎"
+    meaning: "受人喜爱，受欢迎"
   },
   {
     wordId: 2640,
@@ -23759,7 +23759,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "基礎"
+    meaning: "基础"
   },
   {
     wordId: 2641,
@@ -23768,7 +23768,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "庫房"
+    meaning: "库房"
   },
   {
     wordId: 2642,
@@ -23786,7 +23786,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "不滿意，不令人滿意"
+    meaning: "不满意，不令人满意"
   },
   {
     wordId: 2644,
@@ -23795,7 +23795,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "已經，現在"
+    meaning: "已经，现在"
   },
   {
     wordId: 2645,
@@ -23804,7 +23804,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "範例, 範例, 範例"
+    meaning: "范例, 范例, 范例"
   },
   {
     wordId: 2646,
@@ -23813,7 +23813,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "模仿、抄襲"
+    meaning: "模仿、抄袭"
   },
   {
     wordId: 2647,
@@ -23822,7 +23822,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "不同意，爭論"
+    meaning: "不同意，争论"
   },
   {
     wordId: 2648,
@@ -23840,7 +23840,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "舉行（會議）、舉辦（晚宴）、感受"
+    meaning: "举行（会议）、举办（晚宴）、感受"
   },
   {
     wordId: 2650,
@@ -23849,7 +23849,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "洩露，揭露"
+    meaning: "泄露，揭露"
   },
   {
     wordId: 2651,
@@ -23858,7 +23858,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "喚醒，膨脹，上升"
+    meaning: "唤醒，膨胀，上升"
   },
   {
     wordId: 2652,
@@ -23867,7 +23867,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "洩漏，用完"
+    meaning: "泄漏，用完"
   },
   {
     wordId: 2653,
@@ -23876,7 +23876,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "漏出，逃出，透過"
+    meaning: "漏出，逃出，透过"
   },
   {
     wordId: 2654,
@@ -23885,7 +23885,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "脆弱的，易碎的，心軟的"
+    meaning: "脆弱的，易碎的，心软的"
   },
   {
     wordId: 2655,
@@ -23903,7 +23903,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "nan",
-    meaning: "問題，疑問"
+    meaning: "问题，疑问"
   },
   {
     wordId: 2657,
@@ -23921,7 +23921,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "問號"
+    meaning: "问号"
   },
   {
     wordId: 2659,
@@ -23930,7 +23930,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "田野、郊區、露天"
+    meaning: "田野、郊区、露天"
   },
   {
     wordId: 2660,
@@ -23939,7 +23939,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "不久，很快，終於"
+    meaning: "不久，很快，终于"
   },
   {
     wordId: 2661,
@@ -23948,7 +23948,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "吵鬧、嚴格、挑剔"
+    meaning: "吵闹、严格、挑剔"
   },
   {
     wordId: 2662,
@@ -23957,7 +23957,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "夜間散步、夜間火車、夜間旅行"
+    meaning: "夜间散步、夜间火车、夜间旅行"
   },
   {
     wordId: 2663,
@@ -23966,7 +23966,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "寢具"
+    meaning: "寝具"
   },
   {
     wordId: 2664,
@@ -23975,7 +23975,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "職位，管理職位，官職"
+    meaning: "职位，管理职位，官职"
   },
   {
     wordId: 2665,
@@ -23984,7 +23984,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "有用，有幫助，達到目的"
+    meaning: "有用，有帮助，达到目的"
   },
   {
     wordId: 2666,
@@ -23993,7 +23993,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "市政廳"
+    meaning: "市政厅"
   },
   {
     wordId: 2667,
@@ -24002,7 +24002,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "溫柔，深情"
+    meaning: "温柔，深情"
   },
   {
     wordId: 2668,
@@ -24011,7 +24011,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "大廈"
+    meaning: "大厦"
   },
   {
     wordId: 2669,
@@ -24020,7 +24020,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "養育，維持，培育"
+    meaning: "养育，维持，培育"
   },
   {
     wordId: 2670,
@@ -24038,7 +24038,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "抱負、志向、計劃"
+    meaning: "抱负、志向、计划"
   },
   {
     wordId: 2672,
@@ -24047,7 +24047,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "簡單的"
+    meaning: "简单的"
   },
   {
     wordId: 2673,
@@ -24056,7 +24056,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "廉價的，俗氣的，無足輕重的"
+    meaning: "廉价的，俗气的，无足轻重的"
   },
   {
     wordId: 2674,
@@ -24065,7 +24065,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "休息，暫停，緩解"
+    meaning: "休息，暂停，缓解"
   },
   {
     wordId: 2675,
@@ -24083,7 +24083,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "隨機地、魯莽地、盲目地"
+    meaning: "随机地、鲁莽地、盲目地"
   },
   {
     wordId: 2677,
@@ -24101,7 +24101,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "僕人，同伴"
+    meaning: "仆人，同伴"
   },
   {
     wordId: 2679,
@@ -24110,7 +24110,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "擊敗"
+    meaning: "击败"
   },
   {
     wordId: 2680,
@@ -24128,7 +24128,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "反對黨"
+    meaning: "反对党"
   },
   {
     wordId: 2682,
@@ -24146,7 +24146,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "黑暗，暗處，黑市交易"
+    meaning: "黑暗，暗处，黑市交易"
   },
   {
     wordId: 2684,
@@ -24164,7 +24164,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "無可避免"
+    meaning: "无可避免"
   },
   {
     wordId: 2686,
@@ -24173,7 +24173,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "有一點，部分地，有點"
+    meaning: "有一点，部分地，有点"
   },
   {
     wordId: 2687,
@@ -24182,7 +24182,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "令人困惑的，糾結的，複雜的"
+    meaning: "令人困惑的，纠结的，复杂的"
   },
   {
     wordId: 2688,
@@ -24191,7 +24191,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "貫徹、實現、完成"
+    meaning: "贯彻、实现、完成"
   },
   {
     wordId: 2689,
@@ -24209,7 +24209,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "做、發生性關係、殺人"
+    meaning: "做、发生性关系、杀人"
   },
   {
     wordId: 2691,
@@ -24218,7 +24218,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "nan",
-    meaning: "軟化，緩和，緩解"
+    meaning: "软化，缓和，缓解"
   },
   {
     wordId: 2692,
@@ -24227,7 +24227,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "優勢，支配，優越"
+    meaning: "优势，支配，优越"
   },
   {
     wordId: 2693,
@@ -24236,7 +24236,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "沮喪、憂鬱、失落"
+    meaning: "沮丧、忧郁、失落"
   },
   {
     wordId: 2694,
@@ -24245,7 +24245,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "有益的，有利可圖的"
+    meaning: "有益的，有利可图的"
   },
   {
     wordId: 2695,
@@ -24254,7 +24254,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "至高無上，占主導地位，優於"
+    meaning: "至高无上，占主导地位，优于"
   },
   {
     wordId: 2696,
@@ -24263,7 +24263,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "勇敢、英雄氣概、英勇"
+    meaning: "勇敢、英雄气概、英勇"
   },
   {
     wordId: 2697,
@@ -24272,7 +24272,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "有機的"
+    meaning: "有机的"
   },
   {
     wordId: 2698,
@@ -24281,7 +24281,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "傍晚，（傍晚）黃昏"
+    meaning: "傍晚，（傍晚）黄昏"
   },
   {
     wordId: 2699,
@@ -24290,7 +24290,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "融資，貸款"
+    meaning: "融资，贷款"
   },
   {
     wordId: 2700,
@@ -24299,7 +24299,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "借貸（錢）、便利、適應性"
+    meaning: "借贷（钱）、便利、适应性"
   },
   {
     wordId: 2701,
@@ -24308,7 +24308,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "擁有，被賦予"
+    meaning: "拥有，被赋予"
   },
   {
     wordId: 2702,
@@ -24317,7 +24317,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "優越性，超強的力量，優勢"
+    meaning: "优越性，超强的力量，优势"
   },
   {
     wordId: 2703,
@@ -24326,7 +24326,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "偏好，優先權"
+    meaning: "偏好，优先权"
   },
   {
     wordId: 2704,
@@ -24335,7 +24335,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "引導、領導、誘導"
+    meaning: "引导、领导、诱导"
   },
   {
     wordId: 2705,
@@ -24344,7 +24344,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "優雅、精緻、優雅"
+    meaning: "优雅、精致、优雅"
   },
   {
     wordId: 2706,
@@ -24353,7 +24353,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "前景光明，充滿希望，充滿希望"
+    meaning: "前景光明，充满希望，充满希望"
   },
   {
     wordId: 2707,
@@ -24362,7 +24362,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "游牧主義"
+    meaning: "游牧主义"
   },
   {
     wordId: 2708,
@@ -24380,7 +24380,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "影響力，突出地位， 強大的"
+    meaning: "影响力，突出地位， 强大的"
   },
   {
     wordId: 2710,
@@ -24389,7 +24389,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "鬼魂、幽靈、幽靈"
+    meaning: "鬼魂、幽灵、幽灵"
   },
   {
     wordId: 2711,
@@ -24398,7 +24398,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "誘惑、引誘、引誘"
+    meaning: "诱惑、引诱、引诱"
   },
   {
     wordId: 2712,
@@ -24407,7 +24407,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "搖晃，震動，搖晃"
+    meaning: "摇晃，震动，摇晃"
   },
   {
     wordId: 2713,
@@ -24425,7 +24425,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "儲備，富裕，房間"
+    meaning: "储备，富裕，房间"
   },
   {
     wordId: 2715,
@@ -24452,7 +24452,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "擺動，搖晃，搖晃"
+    meaning: "摆动，摇晃，摇晃"
   },
   {
     wordId: 2718,
@@ -24461,7 +24461,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "變得鬆弛，變松"
+    meaning: "变得松弛，变松"
   },
   {
     wordId: 2719,
@@ -24470,7 +24470,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "放鬆，放慢速度"
+    meaning: "放松，放慢速度"
   },
   {
     wordId: 2720,
@@ -24479,7 +24479,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "nan",
-    meaning: "寬容"
+    meaning: "宽容"
   },
   {
     wordId: 2721,
@@ -24488,7 +24488,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "世界、社會、時代"
+    meaning: "世界、社会、时代"
   },
   {
     wordId: 2722,
@@ -24515,7 +24515,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "溶液（液體）"
+    meaning: "溶液（液体）"
   },
   {
     wordId: 2725,
@@ -24524,7 +24524,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "商業"
+    meaning: "商业"
   },
   {
     wordId: 2726,
@@ -24533,7 +24533,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "保護、護理、防護護理"
+    meaning: "保护、护理、防护护理"
   },
   {
     wordId: 2727,
@@ -24551,7 +24551,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "風格、形式、圖案"
+    meaning: "风格、形式、图案"
   },
   {
     wordId: 2729,
@@ -24560,7 +24560,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "要求，需要，採取"
+    meaning: "要求，需要，采取"
   },
   {
     wordId: 2730,
@@ -24569,7 +24569,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "索取，要求，請求"
+    meaning: "索取，要求，请求"
   },
   {
     wordId: 2731,
@@ -24578,7 +24578,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "培訓、發展"
+    meaning: "培训、发展"
   },
   {
     wordId: 2732,
@@ -24614,7 +24614,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "說明、使用規則"
+    meaning: "说明、使用规则"
   },
   {
     wordId: 2736,
@@ -24623,7 +24623,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "需求，請求"
+    meaning: "需求，请求"
   },
   {
     wordId: 2737,
@@ -24632,7 +24632,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "閒暇，閒暇時間，空閒時間"
+    meaning: "闲暇，闲暇时间，空闲时间"
   },
   {
     wordId: 2738,
@@ -24641,7 +24641,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "預感，預感"
+    meaning: "预感，预感"
   },
   {
     wordId: 2739,
@@ -24650,7 +24650,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "雜耍、娛樂"
+    meaning: "杂耍、娱乐"
   },
   {
     wordId: 2740,
@@ -24659,7 +24659,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "存款，銀行帳戶"
+    meaning: "存款，银行帐户"
   },
   {
     wordId: 2741,
@@ -24668,7 +24668,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "制約、抑制、壓迫"
+    meaning: "制约、抑制、压迫"
   },
   {
     wordId: 2742,
@@ -24695,7 +24695,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "貪婪的"
+    meaning: "贪婪的"
   },
   {
     wordId: 2745,
@@ -24704,7 +24704,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "慾望，胃口"
+    meaning: "欲望，胃口"
   },
   {
     wordId: 2746,
@@ -24713,7 +24713,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "發送，轉發"
+    meaning: "发送，转发"
   },
   {
     wordId: 2747,
@@ -24722,7 +24722,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "相撲大冠軍"
+    meaning: "相扑大冠军"
   },
   {
     wordId: 2748,
@@ -24731,7 +24731,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "蘆葦，香蒲"
+    meaning: "芦苇，香蒲"
   },
   {
     wordId: 2749,
@@ -24740,7 +24740,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "好或壞，優點或缺點，品質"
+    meaning: "好或坏，优点或缺点，品质"
   },
   {
     wordId: 2750,
@@ -24749,7 +24749,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "期望、預期、預測"
+    meaning: "期望、预期、预测"
   },
   {
     wordId: 2751,
@@ -24758,7 +24758,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "看向別處，看向一邊"
+    meaning: "看向别处，看向一边"
   },
   {
     wordId: 2752,
@@ -24767,7 +24767,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "地點、房間、邊距"
+    meaning: "地点、房间、边距"
   },
   {
     wordId: 2753,
@@ -24785,7 +24785,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "非常，極大，很多"
+    meaning: "非常，极大，很多"
   },
   {
     wordId: 2755,
@@ -24794,7 +24794,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "執政黨，執政黨，政府"
+    meaning: "执政党，执政党，政府"
   },
   {
     wordId: 2756,
@@ -24803,7 +24803,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "挑戰，叫某人停止"
+    meaning: "挑战，叫某人停止"
   },
   {
     wordId: 2757,
@@ -24830,7 +24830,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "大聲（清晰地）朗讀，點名"
+    meaning: "大声（清晰地）朗读，点名"
   },
   {
     wordId: 2760,
@@ -24848,7 +24848,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "很好，恰當，合適"
+    meaning: "很好，恰当，合适"
   },
   {
     wordId: 2762,
@@ -24857,7 +24857,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "減弱，減弱，消瘦"
+    meaning: "减弱，减弱，消瘦"
   },
   {
     wordId: 2763,
@@ -24875,7 +24875,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "nan",
-    meaning: "變得虛弱，變得困擾，變得沮喪"
+    meaning: "变得虚弱，变得困扰，变得沮丧"
   },
   {
     wordId: 2765,
@@ -24893,7 +24893,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 39,
     letter: "ら",
     type: "nan",
-    meaning: "乳牛場）"
+    meaning: "乳牛场）"
   },
   {
     wordId: 2767,
@@ -24902,7 +24902,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 39,
     letter: "ら",
     type: "nan",
-    meaning: "跌倒，掉落，墜落"
+    meaning: "跌倒，掉落，坠落"
   },
   {
     wordId: 2768,
@@ -24911,7 +24911,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 39,
     letter: "ら",
     type: "nan",
-    meaning: "樂觀"
+    meaning: "乐观"
   },
   {
     wordId: 2769,
@@ -24920,7 +24920,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 39,
     letter: "ら",
     type: "nan",
-    meaning: "濫用、誤用、盜用"
+    meaning: "滥用、误用、盗用"
   },
   {
     wordId: 2770,
@@ -24929,7 +24929,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "理論、理由"
+    meaning: "理论、理由"
   },
   {
     wordId: 2771,
@@ -24947,7 +24947,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "利息（銀行）"
+    meaning: "利息（银行）"
   },
   {
     wordId: 2773,
@@ -24956,7 +24956,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "利潤、回報"
+    meaning: "利润、回报"
   },
   {
     wordId: 2774,
@@ -24965,7 +24965,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "理由，感覺"
+    meaning: "理由，感觉"
   },
   {
     wordId: 2775,
@@ -24974,7 +24974,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "利息（銀行）"
+    meaning: "利息（银行）"
   },
   {
     wordId: 2776,
@@ -24983,7 +24983,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "固體"
+    meaning: "固体"
   },
   {
     wordId: 2777,
@@ -25001,7 +25001,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "優點，贊成的觀點"
+    meaning: "优点，赞成的观点"
   },
   {
     wordId: 2779,
@@ -25010,7 +25010,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "縮寫，首字母縮寫詞"
+    meaning: "缩写，首字母缩写词"
   },
   {
     wordId: 2780,
@@ -25019,7 +25019,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "掠奪，搶劫，劫掠"
+    meaning: "掠夺，抢劫，劫掠"
   },
   {
     wordId: 2781,
@@ -25028,7 +25028,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "風格，方法，方式"
+    meaning: "风格，方法，方式"
   },
   {
     wordId: 2782,
@@ -25037,7 +25037,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "貨幣或商品的流通、水或空氣的流動、分配"
+    meaning: "货币或商品的流通、水或空气的流动、分配"
   },
   {
     wordId: 2783,
@@ -25055,7 +25055,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "材料、費用、費率"
+    meaning: "材料、费用、费率"
   },
   {
     wordId: 2785,
@@ -25064,7 +25064,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "區域、領域、疆土"
+    meaning: "区域、领域、疆土"
   },
   {
     wordId: 2786,
@@ -25073,7 +25073,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "理解、同意、諒解"
+    meaning: "理解、同意、谅解"
   },
   {
     wordId: 2787,
@@ -25082,7 +25082,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "領海"
+    meaning: "领海"
   },
   {
     wordId: 2788,
@@ -25091,7 +25091,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "兩端、北極和南極、正極和負極"
+    meaning: "两端、北极和南极、正极和负极"
   },
   {
     wordId: 2789,
@@ -25100,7 +25100,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "有利的，令人滿意的"
+    meaning: "有利的，令人满意的"
   },
   {
     wordId: 2790,
@@ -25109,7 +25109,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "良好的意識"
+    meaning: "良好的意识"
   },
   {
     wordId: 2791,
@@ -25118,7 +25118,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "優良品質，卓越品質"
+    meaning: "优良品质，卓越品质"
   },
   {
     wordId: 2792,
@@ -25127,7 +25127,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "確認、理解（例如，請理解我們裝修期間造成的混亂）"
+    meaning: "确认、理解（例如，请理解我们装修期间造成的混乱）"
   },
   {
     wordId: 2793,
@@ -25145,7 +25145,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "領土，統治"
+    meaning: "领土，统治"
   },
   {
     wordId: 2795,
@@ -25154,7 +25154,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "統治、領土、佔有"
+    meaning: "统治、领土、占有"
   },
   {
     wordId: 2796,
@@ -25163,7 +25163,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "相容、共存、團結"
+    meaning: "相容、共存、团结"
   },
   {
     wordId: 2797,
@@ -25181,7 +25181,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "護照"
+    meaning: "护照"
   },
   {
     wordId: 2799,
@@ -25190,7 +25190,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "個人歷史、背景、職業"
+    meaning: "个人历史、背景、职业"
   },
   {
     wordId: 2800,
@@ -25199,7 +25199,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "理論"
+    meaning: "理论"
   },
   {
     wordId: 2801,
@@ -25208,7 +25208,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "車輪和鮮花的櫃檯"
+    meaning: "车轮和鲜花的柜台"
   },
   {
     wordId: 2802,
@@ -25217,7 +25217,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "nan",
-    meaning: "林業"
+    meaning: "林业"
   },
   {
     wordId: 2803,
@@ -25226,7 +25226,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 41,
     letter: "る",
     type: "nan",
-    meaning: "類似的"
+    meaning: "类似的"
   },
   {
     wordId: 2804,
@@ -25235,7 +25235,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 41,
     letter: "る",
     type: "nan",
-    meaning: "類比"
+    meaning: "类比"
   },
   {
     wordId: 2805,
@@ -25244,7 +25244,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "nan",
-    meaning: "殘忍、冷酷、無情"
+    meaning: "残忍、冷酷、无情"
   },
   {
     wordId: 2806,
@@ -25253,7 +25253,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "nan",
-    meaning: "冷藏、冷凍"
+    meaning: "冷藏、冷冻"
   },
   {
     wordId: 2807,
@@ -25271,7 +25271,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "nan",
-    meaning: "愛、做愛、激情"
+    meaning: "爱、做爱、激情"
   },
   {
     wordId: 2809,
@@ -25280,7 +25280,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "nan",
-    meaning: "連續假期"
+    meaning: "连续假期"
   },
   {
     wordId: 2810,
@@ -25289,7 +25289,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "nan",
-    meaning: "每天，長期"
+    meaning: "每天，长期"
   },
   {
     wordId: 2811,
@@ -25307,7 +25307,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "nan",
-    meaning: "團結"
+    meaning: "团结"
   },
   {
     wordId: 2813,
@@ -25316,7 +25316,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "nan",
-    meaning: "英聯邦，聯邦"
+    meaning: "英联邦，联邦"
   },
   {
     wordId: 2814,
@@ -25325,7 +25325,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "nan",
-    meaning: "聯盟，聯合會，同盟"
+    meaning: "联盟，联合会，同盟"
   },
   {
     wordId: 2815,
@@ -25343,7 +25343,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 43,
     letter: "ろ",
     type: "nan",
-    meaning: "朗讀、背誦"
+    meaning: "朗读、背诵"
   },
   {
     wordId: 2817,
@@ -25352,7 +25352,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 43,
     letter: "ろ",
     type: "nan",
-    meaning: "浪費、奢侈"
+    meaning: "浪费、奢侈"
   },
   {
     wordId: 2818,
@@ -25361,7 +25361,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 43,
     letter: "ろ",
     type: "nan",
-    meaning: "勞動、努力、辛勞"
+    meaning: "劳动、努力、辛劳"
   },
   {
     wordId: 2819,
@@ -25370,7 +25370,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 43,
     letter: "ろ",
     type: "nan",
-    meaning: "令人滿意的，不錯的"
+    meaning: "令人满意的，不错的"
   },
   {
     wordId: 2820,
@@ -25379,7 +25379,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 43,
     letter: "ろ",
     type: "nan",
-    meaning: "嗯，夠了，夠了"
+    meaning: "嗯，够了，够了"
   },
   {
     wordId: 2821,
@@ -25388,7 +25388,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 43,
     letter: "ろ",
     type: "nan",
-    meaning: "坦率的，直率的，樸素的"
+    meaning: "坦率的，直率的，朴素的"
   },
   {
     wordId: 2822,
@@ -25397,7 +25397,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 43,
     letter: "ろ",
     type: "nan",
-    meaning: "討論"
+    meaning: "讨论"
   },
   {
     wordId: 2823,
@@ -25406,7 +25406,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 43,
     letter: "ろ",
     type: "nan",
-    meaning: "邏輯"
+    meaning: "逻辑"
   },
   {
     wordId: 2824,
@@ -25415,7 +25415,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "總和、和諧、和平"
+    meaning: "总和、和谐、和平"
   },
   {
     wordId: 2825,
@@ -25424,7 +25424,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "自私、利己主義、任性"
+    meaning: "自私、利己主义、任性"
   },
   {
     wordId: 2826,
@@ -25433,7 +25433,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "框架，滑動"
+    meaning: "框架，滑动"
   },
   {
     wordId: 2827,
@@ -25451,7 +25451,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "藝術、技術"
+    meaning: "艺术、技术"
   },
   {
     wordId: 2829,
@@ -25469,7 +25469,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "明確地、特別地、特別地而不是偶然地做某事"
+    meaning: "明确地、特别地、特别地而不是偶然地做某事"
   },
   {
     wordId: 2831,
@@ -25478,7 +25478,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "麻煩的，惱人的，複雜的"
+    meaning: "麻烦的，恼人的，复杂的"
   },
   {
     wordId: 2832,
@@ -25487,7 +25487,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "候鳥，過境鳥"
+    meaning: "候鸟，过境鸟"
   },
   {
     wordId: 2833,
@@ -25505,7 +25505,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "日式風格"
+    meaning: "日式风格"
   },
   {
     wordId: 2835,
@@ -25532,7 +25532,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "比較"
+    meaning: "比较"
   },
   {
     wordId: 2838,
@@ -25541,7 +25541,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "分配, 委派, 撥出"
+    meaning: "分配, 委派, 拨出"
   },
   {
     wordId: 2839,
@@ -25550,7 +25550,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "插入，擠入，楔入"
+    meaning: "插入，挤入，楔入"
   },
   {
     wordId: 2840,
@@ -25559,7 +25559,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "除法（數學）"
+    meaning: "除法（数学）"
   },
   {
     wordId: 2841,
@@ -25568,7 +25568,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "折扣、減價、回扣"
+    meaning: "折扣、减价、回扣"
   },
   {
     wordId: 2842,
@@ -25577,7 +25577,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "nan",
-    meaning: "壞傢伙，惡棍，惡棍"
+    meaning: "坏家伙，恶棍，恶棍"
   },
   {
     wordId: 2843,
@@ -25586,7 +25586,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "蓋子，蓋，帽"
+    meaning: "盖子，盖，帽"
   },
   {
     wordId: 2844,
@@ -25604,7 +25604,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "進口商品、外國貨幣"
+    meaning: "进口商品、外国货币"
   },
   {
     wordId: 2846,
@@ -25613,7 +25613,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "外觀, 外表, 立面"
+    meaning: "外观, 外表, 立面"
   },
   {
     wordId: 2847,
@@ -25622,7 +25622,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "外長"
+    meaning: "外长"
   },
   {
     wordId: 2848,
@@ -25631,7 +25631,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "傷害，損害，損害"
+    meaning: "伤害，损害，损害"
   },
   {
     wordId: 2849,
@@ -25640,7 +25640,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "總體陳述，提綱"
+    meaning: "总体陈述，提纲"
   },
   {
     wordId: 2850,
@@ -25649,7 +25649,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "對應，對應，服從"
+    meaning: "对应，对应，服从"
   },
   {
     wordId: 2851,
@@ -25667,7 +25667,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "一般觀念、概念、觀點"
+    meaning: "一般观念、概念、观点"
   },
   {
     wordId: 2853,
@@ -25676,7 +25676,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "進口，門診"
+    meaning: "进口，门诊"
   },
   {
     wordId: 2854,
@@ -25685,7 +25685,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "提綱、概要、要點"
+    meaning: "提纲、概要、要点"
   },
   {
     wordId: 2855,
@@ -25694,7 +25694,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "藝術與科學，文科"
+    meaning: "艺术与科学，文科"
   },
   {
     wordId: 2856,
@@ -25703,7 +25703,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "大學畢業生"
+    meaning: "大学毕业生"
   },
   {
     wordId: 2857,
@@ -25712,7 +25712,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "理論"
+    meaning: "理论"
   },
   {
     wordId: 2858,
@@ -25721,7 +25721,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "樂譜"
+    meaning: "乐谱"
   },
   {
     wordId: 2859,
@@ -25730,7 +25730,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "學術背景"
+    meaning: "学术背景"
   },
   {
     wordId: 2860,
@@ -25739,7 +25739,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "懸崖"
+    meaning: "悬崖"
   },
   {
     wordId: 2861,
@@ -25748,7 +25748,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "藝術性、高品味、優雅"
+    meaning: "艺术性、高品味、优雅"
   },
   {
     wordId: 2862,
@@ -25757,7 +25757,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "腸斷"
+    meaning: "肠断"
   },
   {
     wordId: 2863,
@@ -25775,7 +25775,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "堅定地，堅固地，堅韌地"
+    meaning: "坚定地，坚固地，坚韧地"
   },
   {
     wordId: 2865,
@@ -25784,7 +25784,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "同意、贊同、遵從"
+    meaning: "同意、赞同、遵从"
   },
   {
     wordId: 2866,
@@ -25793,7 +25793,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "堅固、嚴密、精明"
+    meaning: "坚固、严密、精明"
   },
   {
     wordId: 2867,
@@ -25811,7 +25811,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "聯合、合併、合併"
+    meaning: "联合、合并、合并"
   },
   {
     wordId: 2869,
@@ -25820,7 +25820,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "感覺"
+    meaning: "感觉"
   },
   {
     wordId: 2870,
@@ -25829,7 +25829,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "側面、行、周圍環境"
+    meaning: "侧面、行、周围环境"
   },
   {
     wordId: 2871,
@@ -25865,7 +25865,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "眼鏡，眼鏡"
+    meaning: "眼镜，眼镜"
   },
   {
     wordId: 2875,
@@ -25874,7 +25874,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "固執，固執"
+    meaning: "固执，固执"
   },
   {
     wordId: 2876,
@@ -25883,7 +25883,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "書面申請或請願"
+    meaning: "书面申请或请愿"
   },
   {
     wordId: 2877,
@@ -25892,7 +25892,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "堅實的，堅固的，結實的"
+    meaning: "坚实的，坚固的，结实的"
   },
   {
     wordId: 2878,
@@ -25910,7 +25910,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "（特定統治時期的）第一年"
+    meaning: "（特定统治时期的）第一年"
   },
   {
     wordId: 2880,
@@ -25919,7 +25919,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "仿造品、贗品、偽造品"
+    meaning: "仿造品、赝品、伪造品"
   },
   {
     wordId: 2881,
@@ -25928,7 +25928,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 47,
     letter: "か",
     type: "nan",
-    meaning: "原本地，主要地，本質上地"
+    meaning: "原本地，主要地，本质上地"
   },
   {
     wordId: 2882,
@@ -25946,7 +25946,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "戲劇，戲劇"
+    meaning: "戏剧，戏剧"
   },
   {
     wordId: 2884,
@@ -25955,7 +25955,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "決議、決定、表決"
+    meaning: "决议、决定、表决"
   },
   {
     wordId: 2885,
@@ -25964,7 +25964,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "國會大廈"
+    meaning: "国会大厦"
   },
   {
     wordId: 2886,
@@ -25973,7 +25973,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "犧牲"
+    meaning: "牺牲"
   },
   {
     wordId: 2887,
@@ -25982,7 +25982,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "偽造、竄改、捏造"
+    meaning: "伪造、窜改、捏造"
   },
   {
     wordId: 2888,
@@ -25991,7 +25991,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "討論議題、議程"
+    meaning: "讨论议题、议程"
   },
   {
     wordId: 2889,
@@ -26000,7 +26000,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "技術技能、能力、容量"
+    meaning: "技术技能、能力、容量"
   },
   {
     wordId: 2890,
@@ -26009,7 +26009,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "逆轉、反轉"
+    meaning: "逆转、反转"
   },
   {
     wordId: 2891,
@@ -26018,7 +26018,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "行、列、詩句"
+    meaning: "行、列、诗句"
   },
   {
     wordId: 2892,
@@ -26045,7 +26045,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "成就、表現、結果"
+    meaning: "成就、表现、结果"
   },
   {
     wordId: 2895,
@@ -26054,7 +26054,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "業務、事務、職責"
+    meaning: "业务、事务、职责"
   },
   {
     wordId: 2896,
@@ -26063,7 +26063,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "王（將棋）"
+    meaning: "王（将棋）"
   },
   {
     wordId: 2897,
@@ -26072,7 +26072,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "漁船"
+    meaning: "渔船"
   },
   {
     wordId: 2898,
@@ -26081,7 +26081,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "漁村"
+    meaning: "渔村"
   },
   {
     wordId: 2899,
@@ -26090,7 +26090,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "責任、義務感、榮譽感"
+    meaning: "责任、义务感、荣誉感"
   },
   {
     wordId: 2900,
@@ -26099,7 +26099,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "懷疑、疑慮、不信任"
+    meaning: "怀疑、疑虑、不信任"
   },
   {
     wordId: 2901,
@@ -26108,7 +26108,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 48,
     letter: "き",
     type: "nan",
-    meaning: "測試、審查、仔細調查"
+    meaning: "测试、审查、仔细调查"
   },
   {
     wordId: 2902,
@@ -26117,7 +26117,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 49,
     letter: "く",
     type: "nan",
-    meaning: "無謂的抱怨，牢騷"
+    meaning: "无谓的抱怨，牢骚"
   },
   {
     wordId: 2903,
@@ -26126,7 +26126,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 49,
     letter: "く",
     type: "nan",
-    meaning: "堅定、迅速、多"
+    meaning: "坚定、迅速、多"
   },
   {
     wordId: 2904,
@@ -26135,7 +26135,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 49,
     letter: "く",
     type: "nan",
-    meaning: "大約"
+    meaning: "大约"
   },
   {
     wordId: 2905,
@@ -26144,7 +26144,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 49,
     letter: "く",
     type: "nan",
-    meaning: "組（數學）"
+    meaning: "组（数学）"
   },
   {
     wordId: 2906,
@@ -26153,7 +26153,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 49,
     letter: "く",
     type: "nan",
-    meaning: "軍艦，戰艦"
+    meaning: "军舰，战舰"
   },
   {
     wordId: 2907,
@@ -26162,7 +26162,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 49,
     letter: "く",
     type: "nan",
-    meaning: "軍事"
+    meaning: "军事"
   },
   {
     wordId: 2908,
@@ -26171,7 +26171,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 49,
     letter: "く",
     type: "nan",
-    meaning: "（社交）群體，人群，群眾"
+    meaning: "（社交）群体，人群，群众"
   },
   {
     wordId: 2909,
@@ -26180,7 +26180,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 49,
     letter: "く",
     type: "nan",
-    meaning: "軍備、軍事準備"
+    meaning: "军备、军事准备"
   },
   {
     wordId: 2910,
@@ -26189,7 +26189,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 49,
     letter: "く",
     type: "nan",
-    meaning: "軍裝或海軍制服"
+    meaning: "军装或海军制服"
   },
   {
     wordId: 2911,
@@ -26198,7 +26198,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "劇團，戲劇公司"
+    meaning: "剧团，戏剧公司"
   },
   {
     wordId: 2912,
@@ -26207,7 +26207,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "鼓勵"
+    meaning: "鼓励"
   },
   {
     wordId: 2913,
@@ -26216,7 +26216,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "每月學費"
+    meaning: "每月学费"
   },
   {
     wordId: 2914,
@@ -26225,7 +26225,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "灰心喪氣，體重下降"
+    meaning: "灰心丧气，体重下降"
   },
   {
     wordId: 2915,
@@ -26243,7 +26243,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "腹瀉"
+    meaning: "腹泻"
   },
   {
     wordId: 2917,
@@ -26270,7 +26270,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "目前, 現行, 運行中"
+    meaning: "目前, 现行, 运行中"
   },
   {
     wordId: 2920,
@@ -26297,7 +26297,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "統治者，君主"
+    meaning: "统治者，君主"
   },
   {
     wordId: 2923,
@@ -26315,7 +26315,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "減少，減少，衰落"
+    meaning: "减少，减少，衰落"
   },
   {
     wordId: 2925,
@@ -26324,7 +26324,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "實際地點、現場、犯罪現場"
+    meaning: "实际地点、现场、犯罪现场"
   },
   {
     wordId: 2926,
@@ -26333,7 +26333,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "化學元素"
+    meaning: "化学元素"
   },
   {
     wordId: 2927,
@@ -26342,7 +26342,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "沖洗（膠片）"
+    meaning: "冲洗（胶片）"
   },
   {
     wordId: 2928,
@@ -26351,7 +26351,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "原則，一般規則"
+    meaning: "原则，一般规则"
   },
   {
     wordId: 2929,
@@ -26360,7 +26360,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "實際地點，當地"
+    meaning: "实际地点，当地"
   },
   {
     wordId: 2930,
@@ -26378,7 +26378,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "原點（座標），起點"
+    meaning: "原点（座标），起点"
   },
   {
     wordId: 2932,
@@ -26396,7 +26396,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "減去，記過"
+    meaning: "减去，记过"
   },
   {
     wordId: 2934,
@@ -26405,7 +26405,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "原子彈"
+    meaning: "原子弹"
   },
   {
     wordId: 2935,
@@ -26423,7 +26423,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "嚴格、緊密"
+    meaning: "严格、紧密"
   },
   {
     wordId: 2937,
@@ -26441,7 +26441,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 50,
     letter: "け",
     type: "nan",
-    meaning: "討論"
+    meaning: "讨论"
   },
   {
     wordId: 2939,
@@ -26450,7 +26450,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "去，光榮的"
+    meaning: "去，光荣的"
   },
   {
     wordId: 2940,
@@ -26459,7 +26459,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "詞彙表，詞彙表"
+    meaning: "词汇表，词汇表"
   },
   {
     wordId: 2941,
@@ -26468,7 +26468,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "護城河"
+    meaning: "护城河"
   },
   {
     wordId: 2942,
@@ -26477,7 +26477,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "佛教的業力，前世所造之業"
+    meaning: "佛教的业力，前世所造之业"
   },
   {
     wordId: 2943,
@@ -26486,7 +26486,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "編號、發行"
+    meaning: "编号、发行"
   },
   {
     wordId: 2944,
@@ -26495,7 +26495,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "協議、同意、相互理解"
+    meaning: "协议、同意、相互理解"
   },
   {
     wordId: 2945,
@@ -26504,7 +26504,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "諮詢、會議"
+    meaning: "咨询、会议"
   },
   {
     wordId: 2946,
@@ -26513,7 +26513,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "偉大，宏偉"
+    meaning: "伟大，宏伟"
   },
   {
     wordId: 2947,
@@ -26531,7 +26531,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "警衛, 護送, 護衛隊"
+    meaning: "警卫, 护送, 护卫队"
   },
   {
     wordId: 2949,
@@ -26540,7 +26540,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "單字、片語"
+    meaning: "单字、片语"
   },
   {
     wordId: 2950,
@@ -26558,7 +26558,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "非常感謝您的....."
+    meaning: "非常感谢您的....."
   },
   {
     wordId: 2952,
@@ -26576,7 +26576,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "錯誤"
+    meaning: "错误"
   },
   {
     wordId: 2954,
@@ -26585,7 +26585,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "（禮貌的），存在"
+    meaning: "（礼貌的），存在"
   },
   {
     wordId: 2955,
@@ -26594,7 +26594,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "宴請，款待（某人）"
+    meaning: "宴请，款待（某人）"
   },
   {
     wordId: 2956,
@@ -26612,7 +26612,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "分別"
+    meaning: "分别"
   },
   {
     wordId: 2958,
@@ -26621,7 +26621,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "圍棋盤"
+    meaning: "围棋盘"
   },
   {
     wordId: 2959,
@@ -26630,7 +26630,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "有一段時間沒有寫信或聯繫"
+    meaning: "有一段时间没有写信或联系"
   },
   {
     wordId: 2960,
@@ -26639,7 +26639,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "欺騙、偽造、歪曲"
+    meaning: "欺骗、伪造、歪曲"
   },
   {
     wordId: 2961,
@@ -26648,7 +26648,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "我可以進來嗎？"
+    meaning: "我可以进来吗？"
   },
   {
     wordId: 2962,
@@ -26657,7 +26657,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "對不起，請原諒"
+    meaning: "对不起，请原谅"
   },
   {
     wordId: 2963,
@@ -26666,7 +26666,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 51,
     letter: "こ",
     type: "nan",
-    meaning: "（請）看，（請）嘗試做"
+    meaning: "（请）看，（请）尝试做"
   },
   {
     wordId: 2964,
@@ -26675,7 +26675,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "財富"
+    meaning: "财富"
   },
   {
     wordId: 2965,
@@ -26684,7 +26684,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "資金來源、資源、財政"
+    meaning: "资金来源、资源、财政"
   },
   {
     wordId: 2966,
@@ -26693,7 +26693,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "庫存，存貨"
+    meaning: "库存，存货"
   },
   {
     wordId: 2967,
@@ -26702,7 +26702,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "經濟、金融"
+    meaning: "经济、金融"
   },
   {
     wordId: 2968,
@@ -26711,7 +26711,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "研討會、圓桌討論"
+    meaning: "研讨会、圆桌讨论"
   },
   {
     wordId: 2969,
@@ -26720,7 +26720,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "粗糙的，粗魯的"
+    meaning: "粗糙的，粗鲁的"
   },
   {
     wordId: 2970,
@@ -26729,7 +26729,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "雜貨、一般商品、雜貨"
+    meaning: "杂货、一般商品、杂货"
   },
   {
     wordId: 2971,
@@ -26738,7 +26738,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "閒聊，閒聊"
+    meaning: "闲聊，闲聊"
   },
   {
     wordId: 2972,
@@ -26747,7 +26747,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "各種小樹、雜樹"
+    meaning: "各种小树、杂树"
   },
   {
     wordId: 2973,
@@ -26756,7 +26756,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "座標"
+    meaning: "座标"
   },
   {
     wordId: 2974,
@@ -26765,7 +26765,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "剩餘的錢"
+    meaning: "剩余的钱"
   },
   {
     wordId: 2975,
@@ -26774,7 +26774,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "殘酷，嚴酷"
+    meaning: "残酷，严酷"
   },
   {
     wordId: 2976,
@@ -26783,7 +26783,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 52,
     letter: "さ",
     type: "nan",
-    meaning: "（銀行）餘額，餘額"
+    meaning: "（银行）余额，余额"
   },
   {
     wordId: 2977,
@@ -26801,7 +26801,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "自我意識"
+    meaning: "自我意识"
   },
   {
     wordId: 2979,
@@ -26810,7 +26810,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "地區，地方，行政區"
+    meaning: "地区，地方，行政区"
   },
   {
     wordId: 2980,
@@ -26828,7 +26828,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "瓷器，中國"
+    meaning: "瓷器，中国"
   },
   {
     wordId: 2982,
@@ -26837,7 +26837,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "專案、企業、業務"
+    meaning: "专案、企业、业务"
   },
   {
     wordId: 2983,
@@ -26846,7 +26846,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "地形，地理特徵，地勢"
+    meaning: "地形，地理特征，地势"
   },
   {
     wordId: 2984,
@@ -26855,7 +26855,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "軸，桿，軸"
+    meaning: "轴，杆，轴"
   },
   {
     wordId: 2985,
@@ -26873,7 +26873,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "事情，事項，事實"
+    meaning: "事情，事项，事实"
   },
   {
     wordId: 2987,
@@ -26882,7 +26882,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "地獄"
+    meaning: "地狱"
   },
   {
     wordId: 2988,
@@ -26891,7 +26891,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "表格、圖表、圖解"
+    meaning: "表格、图表、图解"
   },
   {
     wordId: 2989,
@@ -26900,7 +26900,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "時差"
+    meaning: "时差"
   },
   {
     wordId: 2990,
@@ -26909,7 +26909,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "自由地, 隨意地"
+    meaning: "自由地, 随意地"
   },
   {
     wordId: 2991,
@@ -26918,7 +26918,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "獨立、自治"
+    meaning: "独立、自治"
   },
   {
     wordId: 2992,
@@ -26927,7 +26927,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "投降，放棄自己"
+    meaning: "投降，放弃自己"
   },
   {
     wordId: 2993,
@@ -26936,7 +26936,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "辭職"
+    meaning: "辞职"
   },
   {
     wordId: 2994,
@@ -26963,7 +26963,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "延續"
+    meaning: "延续"
   },
   {
     wordId: 2997,
@@ -26972,7 +26972,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "自尊，自負"
+    meaning: "自尊，自负"
   },
   {
     wordId: 2998,
@@ -26981,7 +26981,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "類型、字體、刻字"
+    meaning: "类型、字体、刻字"
   },
   {
     wordId: 2999,
@@ -26990,7 +26990,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "拒絕"
+    meaning: "拒绝"
   },
   {
     wordId: 3000,
@@ -26999,7 +26999,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "真理、現實、真誠"
+    meaning: "真理、现实、真诚"
   },
   {
     wordId: 3001,
@@ -27008,7 +27008,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "實業家，商人"
+    meaning: "实业家，商人"
   },
   {
     wordId: 3002,
@@ -27026,7 +27026,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "物質，本質"
+    meaning: "物质，本质"
   },
   {
     wordId: 3004,
@@ -27035,7 +27035,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "真實情況、實際情況、實際狀況"
+    meaning: "真实情况、实际情况、实际状况"
   },
   {
     wordId: 3005,
@@ -27044,7 +27044,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "實踐，付諸實踐"
+    meaning: "实践，付诸实践"
   },
   {
     wordId: 3006,
@@ -27053,7 +27053,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "真相，事實"
+    meaning: "真相，事实"
   },
   {
     wordId: 3007,
@@ -27062,7 +27062,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "實際費用，成本價"
+    meaning: "实际费用，成本价"
   },
   {
     wordId: 3008,
@@ -27071,7 +27071,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "10分鐘"
+    meaning: "10分钟"
   },
   {
     wordId: 3009,
@@ -27080,7 +27080,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "旋轉，自旋"
+    meaning: "旋转，自旋"
   },
   {
     wordId: 3010,
@@ -27089,7 +27089,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "不及物動詞（沒有直接受詞）"
+    meaning: "不及物动词（没有直接受词）"
   },
   {
     wordId: 3011,
@@ -27098,7 +27098,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "房東"
+    meaning: "房东"
   },
   {
     wordId: 3012,
@@ -27116,7 +27116,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "當地的"
+    meaning: "当地的"
   },
   {
     wordId: 3014,
@@ -27125,7 +27125,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "弱點，弱者，"
+    meaning: "弱点，弱者，"
   },
   {
     wordId: 3015,
@@ -27134,7 +27134,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "一些，少數，數量"
+    meaning: "一些，少数，数量"
   },
   {
     wordId: 3016,
@@ -27143,7 +27143,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "礫石、道碴、鵝卵石"
+    meaning: "砾石、道碴、鹅卵石"
   },
   {
     wordId: 3017,
@@ -27152,7 +27152,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "石頭剪刀布遊戲"
+    meaning: "石头剪刀布游戏"
   },
   {
     wordId: 3018,
@@ -27170,7 +27170,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "僱員，工人"
+    meaning: "雇员，工人"
   },
   {
     wordId: 3020,
@@ -27179,7 +27179,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "參與、追求、追隨"
+    meaning: "参与、追求、追随"
   },
   {
     wordId: 3021,
@@ -27188,7 +27188,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "豐滿、完成、完美"
+    meaning: "丰满、完成、完美"
   },
   {
     wordId: 3022,
@@ -27215,7 +27215,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "靈活，輕盈"
+    meaning: "灵活，轻盈"
   },
   {
     wordId: 3025,
@@ -27224,7 +27224,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "重複、重複、重疊"
+    meaning: "重复、重复、重叠"
   },
   {
     wordId: 3026,
@@ -27233,7 +27233,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "無價之寶、便利、實用"
+    meaning: "无价之宝、便利、实用"
   },
   {
     wordId: 3027,
@@ -27242,7 +27242,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "到目前為止，傳統的"
+    meaning: "到目前为止，传统的"
   },
   {
     wordId: 3028,
@@ -27251,7 +27251,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "輔導學校，課程"
+    meaning: "辅导学校，课程"
   },
   {
     wordId: 3029,
@@ -27260,7 +27260,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "喬木、灌木、涼亭"
+    meaning: "乔木、灌木、凉亭"
   },
   {
     wordId: 3030,
@@ -27269,7 +27269,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "建立，創造"
+    meaning: "建立，创造"
   },
   {
     wordId: 3031,
@@ -27278,7 +27278,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "本地特快列車（比特快列車慢）"
+    meaning: "本地特快列车（比特快列车慢）"
   },
   {
     wordId: 3032,
@@ -27287,7 +27287,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "遵循、遵從、適用"
+    meaning: "遵循、遵从、适用"
   },
   {
     wordId: 3033,
@@ -27296,7 +27296,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "相應地應用，對應於，與...成比例"
+    meaning: "相应地应用，对应于，与...成比例"
   },
   {
     wordId: 3034,
@@ -27305,7 +27305,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "幫助、救援、助手"
+    meaning: "帮助、救援、助手"
   },
   {
     wordId: 3035,
@@ -27314,7 +27314,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "感覺、情緒、激情"
+    meaning: "感觉、情绪、激情"
   },
   {
     wordId: 3036,
@@ -27323,7 +27323,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "畳原本指日本傳統的榻榻米,「畳」也用來表示房間面積的大小"
+    meaning: "畳原本指日本传统的榻榻米,「畳」也用来表示房间面积的大小"
   },
   {
     wordId: 3037,
@@ -27332,7 +27332,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "獄卒、老人、等級"
+    meaning: "狱卒、老人、等级"
   },
   {
     wordId: 3038,
@@ -27341,7 +27341,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "年輕女子"
+    meaning: "年轻女子"
   },
   {
     wordId: 3039,
@@ -27350,7 +27350,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "形狀"
+    meaning: "形状"
   },
   {
     wordId: 3040,
@@ -27359,7 +27359,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "上級（等級而非類別），更高階（例如位元組），主機（連接設備）"
+    meaning: "上级（等级而非类别），更高阶（例如位元组），主机（连接设备）"
   },
   {
     wordId: 3041,
@@ -27368,7 +27368,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "表演（例如音樂）"
+    meaning: "表演（例如音乐）"
   },
   {
     wordId: 3042,
@@ -27404,7 +27404,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "上級主管，老闆"
+    meaning: "上级主管，老板"
   },
   {
     wordId: 3046,
@@ -27413,7 +27413,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "情緒，感覺"
+    meaning: "情绪，感觉"
   },
   {
     wordId: 3047,
@@ -27431,7 +27431,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "事物的狀態、條件、情形"
+    meaning: "事物的状态、条件、情形"
   },
   {
     wordId: 3049,
@@ -27440,7 +27440,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "激情、熱情、熱忱"
+    meaning: "激情、热情、热忱"
   },
   {
     wordId: 3050,
@@ -27449,7 +27449,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "英雄，紳士，戰士"
+    meaning: "英雄，绅士，战士"
   },
   {
     wordId: 3051,
@@ -27458,7 +27458,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "讓步、和解、妥協"
+    meaning: "让步、和解、妥协"
   },
   {
     wordId: 3052,
@@ -27467,7 +27467,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "條約、協定"
+    meaning: "条约、协定"
   },
   {
     wordId: 3053,
@@ -27476,7 +27476,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "登陸、下船"
+    meaning: "登陆、下船"
   },
   {
     wordId: 3054,
@@ -27485,7 +27485,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "蒸餾"
+    meaning: "蒸馏"
   },
   {
     wordId: 3055,
@@ -27503,7 +27503,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "忠告，建議"
+    meaning: "忠告，建议"
   },
   {
     wordId: 3057,
@@ -27521,7 +27521,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "多發性硬化症。"
+    meaning: "多发性硬化症。"
   },
   {
     wordId: 3059,
@@ -27530,7 +27530,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "助詞，後置詞"
+    meaning: "助词，后置词"
   },
   {
     wordId: 3060,
@@ -27539,7 +27539,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "助動詞"
+    meaning: "助动词"
   },
   {
     wordId: 3061,
@@ -27548,7 +27548,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "獨立、自力更生"
+    meaning: "独立、自力更生"
   },
   {
     wordId: 3062,
@@ -27557,7 +27557,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "男人、人、人們"
+    meaning: "男人、人、人们"
   },
   {
     wordId: 3063,
@@ -27566,7 +27566,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "個性、性格、個性"
+    meaning: "个性、性格、个性"
   },
   {
     wordId: 3064,
@@ -27575,7 +27575,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "才華洋溢的人"
+    meaning: "才华洋溢的人"
   },
   {
     wordId: 3065,
@@ -27593,7 +27593,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "人體"
+    meaning: "人体"
   },
   {
     wordId: 3067,
@@ -27602,7 +27602,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "人民、公眾"
+    meaning: "人民、公众"
   },
   {
     wordId: 3068,
@@ -27611,7 +27611,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 53,
     letter: "し",
     type: "nan",
-    meaning: "一瞥，公眾目光"
+    meaning: "一瞥，公众目光"
   },
   {
     wordId: 3069,
@@ -27620,7 +27620,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 54,
     letter: "す",
     type: "nan",
-    meaning: "厚顏無恥，無恥"
+    meaning: "厚颜无耻，无耻"
   },
   {
     wordId: 3070,
@@ -27629,7 +27629,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 54,
     letter: "す",
     type: "nan",
-    meaning: "果斷地，堅決地，一勞永逸地"
+    meaning: "果断地，坚决地，一劳永逸地"
   },
   {
     wordId: 3071,
@@ -27638,7 +27638,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 54,
     letter: "す",
     type: "nan",
-    meaning: "濕透了，濕透了"
+    meaning: "湿透了，湿透了"
   },
   {
     wordId: 3072,
@@ -27656,7 +27656,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 54,
     letter: "す",
     type: "nan",
-    meaning: "拖曳的聲音或行為，鬆散的，不確定的但不受歡迎的情況"
+    meaning: "拖曳的声音或行为，松散的，不确定的但不受欢迎的情况"
   },
   {
     wordId: 3074,
@@ -27665,7 +27665,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 54,
     letter: "す",
     type: "nan",
-    meaning: "間隙，滑移"
+    meaning: "间隙，滑移"
   },
   {
     wordId: 3075,
@@ -27683,7 +27683,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 55,
     letter: "せ",
     type: "nan",
-    meaning: "稅務局"
+    meaning: "税务局"
   },
   {
     wordId: 3077,
@@ -27692,7 +27692,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 55,
     letter: "せ",
     type: "nan",
-    meaning: "修正、修訂"
+    meaning: "修正、修订"
   },
   {
     wordId: 3078,
@@ -27701,7 +27701,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 55,
     letter: "せ",
     type: "nan",
-    meaning: "絕版"
+    meaning: "绝版"
   },
   {
     wordId: 3079,
@@ -27710,7 +27710,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 55,
     letter: "せ",
     type: "nan",
-    meaning: "絕望，無助"
+    meaning: "绝望，无助"
   },
   {
     wordId: 3080,
@@ -27719,7 +27719,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 55,
     letter: "せ",
     type: "nan",
-    meaning: "當然可以（不接受否定的回答）"
+    meaning: "当然可以（不接受否定的回答）"
   },
   {
     wordId: 3081,
@@ -27728,7 +27728,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 55,
     letter: "せ",
     type: "nan",
-    meaning: "餐、飯食"
+    meaning: "餐、饭食"
   },
   {
     wordId: 3082,
@@ -27737,7 +27737,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 55,
     letter: "せ",
     type: "nan",
-    meaning: "禪）"
+    meaning: "禅）"
   },
   {
     wordId: 3083,
@@ -27746,7 +27746,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 55,
     letter: "せ",
     type: "nan",
-    meaning: "完全康復"
+    meaning: "完全康复"
   },
   {
     wordId: 3084,
@@ -27755,7 +27755,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 55,
     letter: "せ",
     type: "nan",
-    meaning: "繁榮頂峰"
+    meaning: "繁荣顶峰"
   },
   {
     wordId: 3085,
@@ -27773,7 +27773,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 55,
     letter: "せ",
     type: "nan",
-    meaning: "未來前景、展望、前進的旅程"
+    meaning: "未来前景、展望、前进的旅程"
   },
   {
     wordId: 3087,
@@ -27782,7 +27782,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 55,
     letter: "せ",
     type: "nan",
-    meaning: "湮滅"
+    meaning: "湮灭"
   },
   {
     wordId: 3088,
@@ -27818,7 +27818,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 56,
     letter: "そ",
     type: "nan",
-    meaning: "雕像、圖像、人物"
+    meaning: "雕像、图像、人物"
   },
   {
     wordId: 3092,
@@ -27827,7 +27827,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 56,
     letter: "そ",
     type: "nan",
-    meaning: "增加，加強，增加"
+    meaning: "增加，加强，增加"
   },
   {
     wordId: 3093,
@@ -27836,7 +27836,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 56,
     letter: "そ",
     type: "nan",
-    meaning: "財政部長"
+    meaning: "财政部长"
   },
   {
     wordId: 3094,
@@ -27845,7 +27845,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 56,
     letter: "そ",
     type: "nan",
-    meaning: "促進、增加、推進"
+    meaning: "促进、增加、推进"
   },
   {
     wordId: 3095,
@@ -27854,7 +27854,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 56,
     letter: "そ",
     type: "nan",
-    meaning: "粗魯、粗心、邋遢"
+    meaning: "粗鲁、粗心、邋遢"
   },
   {
     wordId: 3096,
@@ -27863,7 +27863,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "序數"
+    meaning: "序数"
   },
   {
     wordId: 3097,
@@ -27881,7 +27881,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "大膽的，勇敢的，無畏的"
+    meaning: "大胆的，勇敢的，无畏的"
   },
   {
     wordId: 3099,
@@ -27890,7 +27890,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "混亂，損壞，一無所獲"
+    meaning: "混乱，损坏，一无所获"
   },
   {
     wordId: 3100,
@@ -27899,7 +27899,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "糞便, 排泄物, 屎"
+    meaning: "粪便, 排泄物, 屎"
   },
   {
     wordId: 3101,
@@ -27908,7 +27908,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "代理付款，代表他人行事，代表他人發言"
+    meaning: "代理付款，代表他人行事，代表他人发言"
   },
   {
     wordId: 3102,
@@ -27917,7 +27917,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "劇本、場景"
+    meaning: "剧本、场景"
   },
   {
     wordId: 3103,
@@ -27944,7 +27944,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "妥協，讓步"
+    meaning: "妥协，让步"
   },
   {
     wordId: 3106,
@@ -27953,7 +27953,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "僅僅、僅僅、作為"
+    meaning: "仅仅、仅仅、作为"
   },
   {
     wordId: 3107,
@@ -27962,7 +27962,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "打擊，衝擊，撞擊"
+    meaning: "打击，冲击，撞击"
   },
   {
     wordId: 3108,
@@ -27971,7 +27971,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "協定"
+    meaning: "协定"
   },
   {
     wordId: 3109,
@@ -27989,7 +27989,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "逃脫"
+    meaning: "逃脱"
   },
   {
     wordId: 3111,
@@ -27998,7 +27998,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "逃離，逃出"
+    meaning: "逃离，逃出"
   },
   {
     wordId: 3112,
@@ -28007,7 +28007,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "分裂國家"
+    meaning: "分裂国家"
   },
   {
     wordId: 3113,
@@ -28016,7 +28016,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "寬鬆的，鬆垮的"
+    meaning: "宽松的，松垮的"
   },
   {
     wordId: 3114,
@@ -28025,7 +28025,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "欺騙，詐騙，欺詐"
+    meaning: "欺骗，诈骗，欺诈"
   },
   {
     wordId: 3115,
@@ -28034,7 +28034,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "（消極地）暗示某物充滿了例如錯誤"
+    meaning: "（消极地）暗示某物充满了例如错误"
   },
   {
     wordId: 3116,
@@ -28043,7 +28043,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "呆滯、感覺沉重、無力"
+    meaning: "呆滞、感觉沉重、无力"
   },
   {
     wordId: 3117,
@@ -28052,7 +28052,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "講台，頒獎台，講台"
+    meaning: "讲台，颁奖台，讲台"
   },
   {
     wordId: 3118,
@@ -28061,7 +28061,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "團結、聯合、結合"
+    meaning: "团结、联合、结合"
   },
   {
     wordId: 3119,
@@ -28070,7 +28070,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "聲明、肯定"
+    meaning: "声明、肯定"
   },
   {
     wordId: 3120,
@@ -28079,7 +28079,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "堅決地，絕對地，肯定地"
+    meaning: "坚决地，绝对地，肯定地"
   },
   {
     wordId: 3121,
@@ -28088,7 +28088,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "逐漸地, 逐漸地"
+    meaning: "逐渐地, 逐渐地"
   },
   {
     wordId: 3122,
@@ -28097,7 +28097,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "丈夫、主人、老闆"
+    meaning: "丈夫、主人、老板"
   },
   {
     wordId: 3123,
@@ -28106,7 +28106,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "橫斷面"
+    meaning: "横断面"
   },
   {
     wordId: 3124,
@@ -28115,7 +28115,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 57,
     letter: "た",
     type: "nan",
-    meaning: "彈性，柔韌性"
+    meaning: "弹性，柔韧性"
   },
   {
     wordId: 3125,
@@ -28124,7 +28124,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "偶然遇見，偶然遇到，偶然遇到"
+    meaning: "偶然遇见，偶然遇到，偶然遇到"
   },
   {
     wordId: 3126,
@@ -28151,7 +28151,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "能人、腫瘤、生長"
+    meaning: "能人、肿瘤、生长"
   },
   {
     wordId: 3129,
@@ -28160,7 +28160,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "失去，手邊沒有更多"
+    meaning: "失去，手边没有更多"
   },
   {
     wordId: 3130,
@@ -28169,7 +28169,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "偶然遇見"
+    meaning: "偶然遇见"
   },
   {
     wordId: 3131,
@@ -28178,7 +28178,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "不負責任的言論，胡言亂語，無意義的"
+    meaning: "不负责任的言论，胡言乱语，无意义的"
   },
   {
     wordId: 3132,
@@ -28187,7 +28187,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "調整、潤飾"
+    meaning: "调整、润饰"
   },
   {
     wordId: 3133,
@@ -28196,7 +28196,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "國家、農村地區"
+    meaning: "国家、农村地区"
   },
   {
     wordId: 3134,
@@ -28205,7 +28205,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "電源、動力（電視上的按鈕等）"
+    meaning: "电源、动力（电视上的按钮等）"
   },
   {
     wordId: 3135,
@@ -28214,7 +28214,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "傳統、傳說、民間傳說"
+    meaning: "传统、传说、民间传说"
   },
   {
     wordId: 3136,
@@ -28223,7 +28223,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "電線"
+    meaning: "电线"
   },
   {
     wordId: 3137,
@@ -28232,7 +28232,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "傳輸（例如新聞）、通訊、傳遞"
+    meaning: "传输（例如新闻）、通讯、传递"
   },
   {
     wordId: 3138,
@@ -28241,7 +28241,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 60,
     letter: "て",
     type: "nan",
-    meaning: "祖傳的，遺傳的，進口的"
+    meaning: "祖传的，遗传的，进口的"
   },
   {
     wordId: 3139,
@@ -28250,7 +28250,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "後車廂、車身、車架"
+    meaning: "后车厢、车身、车架"
   },
   {
     wordId: 3140,
@@ -28259,7 +28259,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "工作，勞動"
+    meaning: "工作，劳动"
   },
   {
     wordId: 3141,
@@ -28277,7 +28277,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "同意，贊同，意思相同"
+    meaning: "同意，赞同，意思相同"
   },
   {
     wordId: 3143,
@@ -28286,7 +28286,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "動員"
+    meaning: "动员"
   },
   {
     wordId: 3144,
@@ -28295,7 +28295,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "同意，相同意見，相同感受"
+    meaning: "同意，相同意见，相同感受"
   },
   {
     wordId: 3145,
@@ -28304,7 +28304,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "動機，激勵"
+    meaning: "动机，激励"
   },
   {
     wordId: 3146,
@@ -28313,7 +28313,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "同一年級，同一班級"
+    meaning: "同一年级，同一班级"
   },
   {
     wordId: 3147,
@@ -28331,7 +28331,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "趨勢、傾向、動向"
+    meaning: "趋势、倾向、动向"
   },
   {
     wordId: 3149,
@@ -28340,7 +28340,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "同伴，夥伴，同志"
+    meaning: "同伴，伙伴，同志"
   },
   {
     wordId: 3150,
@@ -28358,7 +28358,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "為什麼？出於什麼原因？如何"
+    meaning: "为什么？出于什么原因？如何"
   },
   {
     wordId: 3152,
@@ -28367,7 +28367,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "無論如何，無論如何，"
+    meaning: "无论如何，无论如何，"
   },
   {
     wordId: 3153,
@@ -28376,7 +28376,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "同情，憐憫，同情"
+    meaning: "同情，怜悯，同情"
   },
   {
     wordId: 3154,
@@ -28385,7 +28385,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "道場，用於武術訓練的大廳，曼陀羅"
+    meaning: "道场，用于武术训练的大厅，曼陀罗"
   },
   {
     wordId: 3155,
@@ -28394,7 +28394,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "請，請，無論如何"
+    meaning: "请，请，无论如何"
   },
   {
     wordId: 3156,
@@ -28403,7 +28403,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "很高興認識你"
+    meaning: "很高兴认识你"
   },
   {
     wordId: 3157,
@@ -28421,7 +28421,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "動態的，運動的"
+    meaning: "动态的，运动的"
   },
   {
     wordId: 3159,
@@ -28430,7 +28430,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "平等、平等、同等權利"
+    meaning: "平等、平等、同等权利"
   },
   {
     wordId: 3160,
@@ -28439,7 +28439,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "宏偉的，宏偉的，令人印象深刻的"
+    meaning: "宏伟的，宏伟的，令人印象深刻的"
   },
   {
     wordId: 3161,
@@ -28448,7 +28448,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "以某種方式,無論如何"
+    meaning: "以某种方式,无论如何"
   },
   {
     wordId: 3162,
@@ -28457,7 +28457,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "引入，引進，帶領"
+    meaning: "引入，引进，带领"
   },
   {
     wordId: 3163,
@@ -28475,7 +28475,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "同盟, 聯盟, 聯盟"
+    meaning: "同盟, 联盟, 联盟"
   },
   {
     wordId: 3165,
@@ -28493,7 +28493,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "騷亂、動亂、震動"
+    meaning: "骚乱、动乱、震动"
   },
   {
     wordId: 3167,
@@ -28502,7 +28502,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "動力，動力，動力"
+    meaning: "动力，动力，动力"
   },
   {
     wordId: 3168,
@@ -28511,7 +28511,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "獨裁，專制"
+    meaning: "独裁，专制"
   },
   {
     wordId: 3169,
@@ -28520,7 +28520,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "原始的，獨特的，有特色的"
+    meaning: "原始的，独特的，有特色的"
   },
   {
     wordId: 3170,
@@ -28529,7 +28529,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "讀者"
+    meaning: "读者"
   },
   {
     wordId: 3171,
@@ -28538,7 +28538,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "壟斷"
+    meaning: "垄断"
   },
   {
     wordId: 3172,
@@ -28547,7 +28547,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "獨創性"
+    meaning: "独创性"
   },
   {
     wordId: 3173,
@@ -28556,7 +28556,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "哪裡，什麼地方"
+    meaning: "哪里，什么地方"
   },
   {
     wordId: 3174,
@@ -28565,7 +28565,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "某處、任何地方、在某些方面"
+    meaning: "某处、任何地方、在某些方面"
   },
   {
     wordId: 3175,
@@ -28574,7 +28574,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "土地的產物"
+    meaning: "土地的产物"
   },
   {
     wordId: 3176,
@@ -28592,7 +28592,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "哪個，誰"
+    meaning: "哪个，谁"
   },
   {
     wordId: 3178,
@@ -28610,7 +28610,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "世界衛生組織?"
+    meaning: "世界卫生组织?"
   },
   {
     wordId: 3180,
@@ -28628,7 +28628,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "哪個，什麼"
+    meaning: "哪个，什么"
   },
   {
     wordId: 3182,
@@ -28637,7 +28637,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "競技場"
+    meaning: "竞技场"
   },
   {
     wordId: 3183,
@@ -28655,7 +28655,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "好吧，現在讓我看看"
+    meaning: "好吧，现在让我看看"
   },
   {
     wordId: 3185,
@@ -28664,7 +28664,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "哪個（強調）"
+    meaning: "哪个（强调）"
   },
   {
     wordId: 3186,
@@ -28673,7 +28673,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "記憶喪失，暫時忘記"
+    meaning: "记忆丧失，暂时忘记"
   },
   {
     wordId: 3187,
@@ -28682,7 +28682,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 61,
     letter: "と",
     type: "nan",
-    meaning: "愚鈍，冷漠"
+    meaning: "愚钝，冷漠"
   },
   {
     wordId: 3188,
@@ -28691,7 +28691,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "細菌、病菌"
+    meaning: "细菌、病菌"
   },
   {
     wordId: 3189,
@@ -28700,7 +28700,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "賠償、補償、補償金"
+    meaning: "赔偿、补偿、补偿金"
   },
   {
     wordId: 3190,
@@ -28709,7 +28709,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "直徑、放大倍率"
+    meaning: "直径、放大倍率"
   },
   {
     wordId: 3191,
@@ -28727,7 +28727,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "荒誕"
+    meaning: "荒诞"
   },
   {
     wordId: 3193,
@@ -28736,7 +28736,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "模糊的，含糊的，模稜兩可的"
+    meaning: "模糊的，含糊的，模棱两可的"
   },
   {
     wordId: 3194,
@@ -28745,7 +28745,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "炸彈"
+    meaning: "炸弹"
   },
   {
     wordId: 3195,
@@ -28754,7 +28754,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "爆炸, 爆破, 炸毀"
+    meaning: "爆炸, 爆破, 炸毁"
   },
   {
     wordId: 3196,
@@ -28772,7 +28772,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "偽裝出現，變成，變得更糟"
+    meaning: "伪装出现，变成，变得更糟"
   },
   {
     wordId: 3198,
@@ -28781,7 +28781,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "懲罰、詛咒、報應"
+    meaning: "惩罚、诅咒、报应"
   },
   {
     wordId: 3199,
@@ -28790,7 +28790,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "打擊、攻擊、懲罰"
+    meaning: "打击、攻击、惩罚"
   },
   {
     wordId: 3200,
@@ -28799,7 +28799,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "精疲力竭，筋疲力盡"
+    meaning: "精疲力竭，筋疲力尽"
   },
   {
     wordId: 3201,
@@ -28808,7 +28808,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "彈簧（例如線圈片）"
+    meaning: "弹簧（例如线圈片）"
   },
   {
     wordId: 3202,
@@ -28817,7 +28817,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "傳播，散佈，免費贈予金錢"
+    meaning: "传播，散布，免费赠予金钱"
   },
   {
     wordId: 3203,
@@ -28826,7 +28826,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "（紙張或書籍）尺寸"
+    meaning: "（纸张或书籍）尺寸"
   },
   {
     wordId: 3204,
@@ -28835,7 +28835,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "許多，全部"
+    meaning: "许多，全部"
   },
   {
     wordId: 3205,
@@ -28844,7 +28844,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "所有人，每個人，10000 人"
+    meaning: "所有人，每个人，10000 人"
   },
   {
     wordId: 3206,
@@ -28853,7 +28853,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "萬能的，萬能的，萬能的"
+    meaning: "万能的，万能的，万能的"
   },
   {
     wordId: 3207,
@@ -28862,7 +28862,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 62,
     letter: "は",
     type: "nan",
-    meaning: "基數後綴"
+    meaning: "基数后缀"
   },
   {
     wordId: 3208,
@@ -28871,7 +28871,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 63,
     letter: "ひ",
     type: "nan",
-    meaning: "美麗"
+    meaning: "美丽"
   },
   {
     wordId: 3209,
@@ -28880,7 +28880,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 63,
     letter: "ひ",
     type: "nan",
-    meaning: "藝術、美術"
+    meaning: "艺术、美术"
   },
   {
     wordId: 3210,
@@ -28898,7 +28898,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 63,
     letter: "ひ",
     type: "nan",
-    meaning: "感到驚訝、驚訝、害怕"
+    meaning: "感到惊讶、惊讶、害怕"
   },
   {
     wordId: 3212,
@@ -28907,7 +28907,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 63,
     letter: "ひ",
     type: "nan",
-    meaning: "濕透，濕透"
+    meaning: "湿透，湿透"
   },
   {
     wordId: 3213,
@@ -28916,7 +28916,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 63,
     letter: "ひ",
     type: "nan",
-    meaning: "描寫，描述，描繪"
+    meaning: "描写，描述，描绘"
   },
   {
     wordId: 3214,
@@ -28925,7 +28925,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 63,
     letter: "ひ",
     type: "nan",
-    meaning: "列表最後，在底部"
+    meaning: "列表最后，在底部"
   },
   {
     wordId: 3215,
@@ -28934,7 +28934,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 63,
     letter: "ひ",
     type: "nan",
-    meaning: "極少量，極少量"
+    meaning: "极少量，极少量"
   },
   {
     wordId: 3216,
@@ -28943,7 +28943,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 63,
     letter: "ひ",
     type: "nan",
-    meaning: "敏感性，易感性，敏感（對...敏感）"
+    meaning: "敏感性，易感性，敏感（对...敏感）"
   },
   {
     wordId: 3217,
@@ -28952,7 +28952,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 63,
     letter: "ひ",
     type: "nan",
-    meaning: "貧窮, 赤貧, 貧困"
+    meaning: "贫穷, 赤贫, 贫困"
   },
   {
     wordId: 3218,
@@ -28961,7 +28961,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "部門、部分、類別"
+    meaning: "部门、部分、类别"
   },
   {
     wordId: 3219,
@@ -28970,7 +28970,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "下屬"
+    meaning: "下属"
   },
   {
     wordId: 3220,
@@ -28979,7 +28979,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "太大、太寬鬆"
+    meaning: "太大、太宽松"
   },
   {
     wordId: 3221,
@@ -28988,7 +28988,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "侮辱、蔑視、輕視"
+    meaning: "侮辱、蔑视、轻视"
   },
   {
     wordId: 3222,
@@ -28997,7 +28997,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "武器，軍備，武裝"
+    meaning: "武器，军备，武装"
   },
   {
     wordId: 3223,
@@ -29006,7 +29006,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "斑點、斑紋、斑點"
+    meaning: "斑点、斑纹、斑点"
   },
   {
     wordId: 3224,
@@ -29015,7 +29015,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "公開討論（批評）"
+    meaning: "公开讨论（批评）"
   },
   {
     wordId: 3225,
@@ -29024,7 +29024,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "敲、撞、釘"
+    meaning: "敲、撞、钉"
   },
   {
     wordId: 3226,
@@ -29033,7 +29033,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "貨物、材料"
+    meaning: "货物、材料"
   },
   {
     wordId: 3227,
@@ -29051,7 +29051,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "身體、物體"
+    meaning: "身体、物体"
   },
   {
     wordId: 3229,
@@ -29069,7 +29069,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "班級、團體、類別"
+    meaning: "班级、团体、类别"
   },
   {
     wordId: 3231,
@@ -29078,7 +29078,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "懸掛，懸垂，懸垂"
+    meaning: "悬挂，悬垂，悬垂"
   },
   {
     wordId: 3232,
@@ -29087,7 +29087,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "沉重地懸掛、擺動、來回搖擺"
+    meaning: "沉重地悬挂、摆动、来回摇摆"
   },
   {
     wordId: 3233,
@@ -29096,7 +29096,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "武裝力量、軍事力量、劍"
+    meaning: "武装力量、军事力量、剑"
   },
   {
     wordId: 3234,
@@ -29105,7 +29105,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "不禮貌的，粗魯的"
+    meaning: "不礼貌的，粗鲁的"
   },
   {
     wordId: 3235,
@@ -29114,7 +29114,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "文化資產, 文化財產"
+    meaning: "文化资产, 文化财产"
   },
   {
     wordId: 3236,
@@ -29123,7 +29123,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "分工、專業化、流水線生產"
+    meaning: "分工、专业化、流水线生产"
   },
   {
     wordId: 3237,
@@ -29132,7 +29132,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "書寫語言、文學語言"
+    meaning: "书写语言、文学语言"
   },
   {
     wordId: 3238,
@@ -29141,7 +29141,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "分散、分散化、變異數（統計）"
+    meaning: "分散、分散化、变异数（统计）"
   },
   {
     wordId: 3239,
@@ -29195,7 +29195,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 64,
     letter: "ふ",
     type: "nan",
-    meaning: "分離，分離，隔離"
+    meaning: "分离，分离，隔离"
   },
   {
     wordId: 3245,
@@ -29213,7 +29213,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 65,
     letter: "へ",
     type: "nan",
-    meaning: "解釋、辯解、辯護"
+    meaning: "解释、辩解、辩护"
   },
   {
     wordId: 3247,
@@ -29222,7 +29222,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 65,
     letter: "へ",
     type: "nan",
-    meaning: "便利、住宿、優勢"
+    meaning: "便利、住宿、优势"
   },
   {
     wordId: 3248,
@@ -29231,7 +29231,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 65,
     letter: "へ",
     type: "nan",
-    meaning: "辯護、申辯、辯護"
+    meaning: "辩护、申辩、辩护"
   },
   {
     wordId: 3249,
@@ -29240,7 +29240,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 65,
     letter: "へ",
     type: "nan",
-    meaning: "下一個詞，補償，賠償"
+    meaning: "下一个词，补偿，赔偿"
   },
   {
     wordId: 3250,
@@ -29249,7 +29249,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 65,
     letter: "へ",
     type: "nan",
-    meaning: "討論、辯論、爭論"
+    meaning: "讨论、辩论、争论"
   },
   {
     wordId: 3251,
@@ -29258,7 +29258,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "十二生肖中的第四個星座（兔子，二月東部時間早上 5 點至早上 7 點）"
+    meaning: "十二生肖中的第四个星座（兔子，二月东部时间早上 5 点至早上 7 点）"
   },
   {
     wordId: 3252,
@@ -29267,7 +29267,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "防禦、保護、自衛"
+    meaning: "防御、保护、自卫"
   },
   {
     wordId: 3253,
@@ -29276,7 +29276,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "防火, 滅火, 防火"
+    meaning: "防火, 灭火, 防火"
   },
   {
     wordId: 3254,
@@ -29285,7 +29285,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "幹擾、阻礙、妨礙"
+    meaning: "干扰、阻碍、妨碍"
   },
   {
     wordId: 3255,
@@ -29294,7 +29294,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "紡紗"
+    meaning: "纺纱"
   },
   {
     wordId: 3256,
@@ -29303,7 +29303,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "驚呆了，驚訝不已，茫然無措"
+    meaning: "惊呆了，惊讶不已，茫然无措"
   },
   {
     wordId: 3257,
@@ -29312,7 +29312,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "擴張、腫脹、增大"
+    meaning: "扩张、肿胀、增大"
   },
   {
     wordId: 3258,
@@ -29321,7 +29321,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "開始，開始，起初"
+    meaning: "开始，开始，起初"
   },
   {
     wordId: 3259,
@@ -29330,7 +29330,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "起義、叛亂、反抗"
+    meaning: "起义、叛乱、反抗"
   },
   {
     wordId: 3260,
@@ -29339,7 +29339,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "暴風雨，暴風雨，強風"
+    meaning: "暴风雨，暴风雨，强风"
   },
   {
     wordId: 3261,
@@ -29357,7 +29357,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "籌款，籌集資金"
+    meaning: "筹款，筹集资金"
   },
   {
     wordId: 3263,
@@ -29366,7 +29366,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "牧師，傳教士，神職人員"
+    meaning: "牧师，传教士，神职人员"
   },
   {
     wordId: 3264,
@@ -29384,7 +29384,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "沒收"
+    meaning: "没收"
   },
   {
     wordId: 3266,
@@ -29393,7 +29393,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "少爺、小少爺"
+    meaning: "少爷、小少爷"
   },
   {
     wordId: 3267,
@@ -29402,7 +29402,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "漸漸地，這裡那裡，出現斑點"
+    meaning: "渐渐地，这里那里，出现斑点"
   },
   {
     wordId: 3268,
@@ -29411,7 +29411,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "毀滅、倒塌、崩潰"
+    meaning: "毁灭、倒塌、崩溃"
   },
   {
     wordId: 3269,
@@ -29420,7 +29420,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "發牢騷，抱怨"
+    meaning: "发牢骚，抱怨"
   },
   {
     wordId: 3270,
@@ -29429,7 +29429,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "變得暗淡，變得模糊"
+    meaning: "变得暗淡，变得模糊"
   },
   {
     wordId: 3271,
@@ -29438,7 +29438,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 66,
     letter: "ほ",
     type: "nan",
-    meaning: "破布，碎布，破爛的衣服"
+    meaning: "破布，碎布，破烂的衣服"
   },
   {
     wordId: 3272,
@@ -29447,7 +29447,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 70,
     letter: "へ",
     type: "nan",
-    meaning: "小鹿，非常餓"
+    meaning: "小鹿，非常饿"
   },
   {
     wordId: 3273,
@@ -29483,7 +29483,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 72,
     letter: "あ",
     type: "nan",
-    meaning: "（高爾夫運動）進場"
+    meaning: "（高尔夫运动）进场"
   },
   {
     wordId: 3277,
@@ -29492,7 +29492,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 72,
     letter: "あ",
     type: "nan",
-    meaning: "業餘"
+    meaning: "业余"
   },
   {
     wordId: 3278,
@@ -29510,7 +29510,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 72,
     letter: "あ",
     type: "nan",
-    meaning: "鹼"
+    meaning: "碱"
   },
   {
     wordId: 3280,
@@ -29519,7 +29519,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 72,
     letter: "あ",
     type: "nan",
-    meaning: "鋁（Al），鋁"
+    meaning: "铝（Al），铝"
   },
   {
     wordId: 3281,
@@ -29528,7 +29528,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 72,
     letter: "あ",
     type: "nan",
-    meaning: "小時"
+    meaning: "小时"
   },
   {
     wordId: 3282,
@@ -29537,7 +29537,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 72,
     letter: "あ",
     type: "nan",
-    meaning: "問卷、調查"
+    meaning: "问卷、调查"
   },
   {
     wordId: 3283,
@@ -29546,7 +29546,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 72,
     letter: "あ",
     type: "nan",
-    meaning: "再來一次"
+    meaning: "再来一次"
   },
   {
     wordId: 3284,
@@ -29555,7 +29555,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 73,
     letter: "い",
     type: "nan",
-    meaning: "耶穌，是的"
+    meaning: "耶稣，是的"
   },
   {
     wordId: 3285,
@@ -29564,7 +29564,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 73,
     letter: "い",
     type: "nan",
-    meaning: "換乘"
+    meaning: "换乘"
   },
   {
     wordId: 3286,
@@ -29573,7 +29573,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 73,
     letter: "い",
     type: "nan",
-    meaning: "國際的"
+    meaning: "国际的"
   },
   {
     wordId: 3287,
@@ -29582,7 +29582,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 73,
     letter: "い",
     type: "nan",
-    meaning: "對講機"
+    meaning: "对讲机"
   },
   {
     wordId: 3288,
@@ -29591,7 +29591,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 73,
     letter: "い",
     type: "nan",
-    meaning: "知識分子"
+    meaning: "知识分子"
   },
   {
     wordId: 3289,
@@ -29600,7 +29600,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 73,
     letter: "い",
     type: "nan",
-    meaning: "資訊"
+    meaning: "资讯"
   },
   {
     wordId: 3290,
@@ -29609,7 +29609,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 73,
     letter: "い",
     type: "nan",
-    meaning: "通貨膨脹"
+    meaning: "通货膨胀"
   },
   {
     wordId: 3291,
@@ -29618,7 +29618,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 74,
     letter: "う",
     type: "nan",
-    meaning: "女服務生"
+    meaning: "女服务生"
   },
   {
     wordId: 3292,
@@ -29627,7 +29627,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 75,
     letter: "え",
     type: "nan",
-    meaning: "航空郵件"
+    meaning: "航空邮件"
   },
   {
     wordId: 3293,
@@ -29636,7 +29636,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 75,
     letter: "え",
     type: "nan",
-    meaning: "優雅的"
+    meaning: "优雅的"
   },
   {
     wordId: 3294,
@@ -29645,7 +29645,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 75,
     letter: "え",
     type: "nan",
-    meaning: "工程師"
+    meaning: "工程师"
   },
   {
     wordId: 3295,
@@ -29663,7 +29663,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 76,
     letter: "お",
     type: "nan",
-    meaning: "自動的"
+    meaning: "自动的"
   },
   {
     wordId: 3297,
@@ -29672,7 +29672,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 76,
     letter: "お",
     type: "nan",
-    meaning: "打開"
+    meaning: "打开"
   },
   {
     wordId: 3298,
@@ -29690,7 +29690,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 76,
     letter: "お",
     type: "nan",
-    meaning: "一個橘子"
+    meaning: "一个橘子"
   },
   {
     wordId: 3300,
@@ -29699,7 +29699,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 76,
     letter: "お",
     type: "nan",
-    meaning: "在線的"
+    meaning: "在线的"
   },
   {
     wordId: 3301,
@@ -29717,7 +29717,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 77,
     letter: "か",
     type: "nan",
-    meaning: "雞尾酒"
+    meaning: "鸡尾酒"
   },
   {
     wordId: 3303,
@@ -29735,7 +29735,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 77,
     letter: "か",
     type: "nan",
-    meaning: "類別"
+    meaning: "类别"
   },
   {
     wordId: 3305,
@@ -29744,7 +29744,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 77,
     letter: "か",
     type: "nan",
-    meaning: "回歸"
+    meaning: "回归"
   },
   {
     wordId: 3306,
@@ -29753,7 +29753,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 77,
     letter: "か",
     type: "nan",
-    meaning: "攝影師"
+    meaning: "摄影师"
   },
   {
     wordId: 3307,
@@ -29762,7 +29762,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 77,
     letter: "か",
     type: "nan",
-    meaning: "臨床記錄"
+    meaning: "临床记录"
   },
   {
     wordId: 3308,
@@ -29771,7 +29771,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 77,
     letter: "か",
     type: "nan",
-    meaning: "狡猾，欺騙"
+    meaning: "狡猾，欺骗"
   },
   {
     wordId: 3309,
@@ -29789,7 +29789,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 78,
     letter: "き",
     type: "nan",
-    meaning: "職業，職業政府僱員"
+    meaning: "职业，职业政府雇员"
   },
   {
     wordId: 3311,
@@ -29798,7 +29798,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 79,
     letter: "く",
     type: "nan",
-    meaning: "測驗"
+    meaning: "测验"
   },
   {
     wordId: 3312,
@@ -29807,7 +29807,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 79,
     letter: "く",
     type: "nan",
-    meaning: "俱樂部, 螃蟹"
+    meaning: "俱乐部, 螃蟹"
   },
   {
     wordId: 3313,
@@ -29816,7 +29816,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 79,
     letter: "く",
     type: "nan",
-    meaning: "起重機"
+    meaning: "起重机"
   },
   {
     wordId: 3314,
@@ -29834,7 +29834,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 81,
     letter: "こ",
     type: "nan",
-    meaning: "一則商業廣告"
+    meaning: "一则商业广告"
   },
   {
     wordId: 3316,
@@ -29843,7 +29843,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 81,
     letter: "こ",
     type: "nan",
-    meaning: "溝通"
+    meaning: "沟通"
   },
   {
     wordId: 3317,
@@ -29852,7 +29852,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 81,
     letter: "こ",
     type: "nan",
-    meaning: "評論"
+    meaning: "评论"
   },
   {
     wordId: 3318,
@@ -29861,7 +29861,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 81,
     letter: "こ",
     type: "nan",
-    meaning: "隱形眼鏡，隱形眼鏡"
+    meaning: "隐形眼镜，隐形眼镜"
   },
   {
     wordId: 3319,
@@ -29870,7 +29870,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 81,
     letter: "こ",
     type: "nan",
-    meaning: "競賽"
+    meaning: "竞赛"
   },
   {
     wordId: 3320,
@@ -29879,7 +29879,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 81,
     letter: "こ",
     type: "nan",
-    meaning: "對比"
+    meaning: "对比"
   },
   {
     wordId: 3321,
@@ -29897,7 +29897,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 81,
     letter: "こ",
     type: "nan",
-    meaning: "羅盤"
+    meaning: "罗盘"
   },
   {
     wordId: 3323,
@@ -29906,7 +29906,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 82,
     letter: "さ",
     type: "nan",
-    meaning: "循環"
+    meaning: "循环"
   },
   {
     wordId: 3324,
@@ -29924,7 +29924,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 82,
     letter: "さ",
     type: "nan",
-    meaning: "逃學、懶惰、怠工"
+    meaning: "逃学、懒惰、怠工"
   },
   {
     wordId: 3326,
@@ -29933,7 +29933,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 82,
     letter: "さ",
     type: "nan",
-    meaning: "謝謝"
+    meaning: "谢谢"
   },
   {
     wordId: 3327,
@@ -29942,7 +29942,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 82,
     letter: "さ",
     type: "nan",
-    meaning: "聖誕老公公"
+    meaning: "圣诞老公公"
   },
   {
     wordId: 3328,
@@ -29951,7 +29951,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 83,
     letter: "し",
     type: "nan",
-    meaning: "座椅、床單"
+    meaning: "座椅、床单"
   },
   {
     wordId: 3329,
@@ -29960,7 +29960,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 83,
     letter: "し",
     type: "nan",
-    meaning: "系統"
+    meaning: "系统"
   },
   {
     wordId: 3330,
@@ -29969,7 +29969,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 83,
     letter: "し",
     type: "nan",
-    meaning: "別緻"
+    meaning: "别致"
   },
   {
     wordId: 3331,
@@ -29978,7 +29978,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 83,
     letter: "し",
     type: "nan",
-    meaning: "設想"
+    meaning: "设想"
   },
   {
     wordId: 3332,
@@ -29996,7 +29996,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 83,
     letter: "し",
     type: "nan",
-    meaning: "震驚"
+    meaning: "震惊"
   },
   {
     wordId: 3334,
@@ -30014,7 +30014,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 84,
     letter: "す",
     type: "nan",
-    meaning: "蒸氣"
+    meaning: "蒸气"
   },
   {
     wordId: 3336,
@@ -30023,7 +30023,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 84,
     letter: "す",
     type: "nan",
-    meaning: "罷工"
+    meaning: "罢工"
   },
   {
     wordId: 3337,
@@ -30032,7 +30032,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 84,
     letter: "す",
     type: "nan",
-    meaning: "壓力"
+    meaning: "压力"
   },
   {
     wordId: 3338,
@@ -30050,7 +30050,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 84,
     letter: "す",
     type: "nan",
-    meaning: "頻閃儀（字面意思是：頻閃），閃光燈，頻閃燈"
+    meaning: "频闪仪（字面意思是：频闪），闪光灯，频闪灯"
   },
   {
     wordId: 3340,
@@ -30077,7 +30077,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 84,
     letter: "す",
     type: "nan",
-    meaning: "空間"
+    meaning: "空间"
   },
   {
     wordId: 3343,
@@ -30086,7 +30086,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 84,
     letter: "す",
     type: "nan",
-    meaning: "跑車"
+    meaning: "跑车"
   },
   {
     wordId: 3344,
@@ -30095,7 +30095,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 84,
     letter: "す",
     type: "nan",
-    meaning: "休閒褲"
+    meaning: "休闲裤"
   },
   {
     wordId: 3345,
@@ -30104,7 +30104,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 85,
     letter: "せ",
     type: "nan",
-    meaning: "銷售"
+    meaning: "销售"
   },
   {
     wordId: 3346,
@@ -30131,7 +30131,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 85,
     letter: "せ",
     type: "nan",
-    meaning: "儀式"
+    meaning: "仪式"
   },
   {
     wordId: 3349,
@@ -30140,7 +30140,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 85,
     letter: "せ",
     type: "nan",
-    meaning: "良好的意識（例如音樂風格、技巧等）"
+    meaning: "良好的意识（例如音乐风格、技巧等）"
   },
   {
     wordId: 3350,
@@ -30149,7 +30149,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 86,
     letter: "そ",
     type: "nan",
-    meaning: "來源"
+    meaning: "来源"
   },
   {
     wordId: 3351,
@@ -30158,7 +30158,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 86,
     letter: "そ",
     type: "nan",
-    meaning: "襪子"
+    meaning: "袜子"
   },
   {
     wordId: 3352,
@@ -30167,7 +30167,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 86,
     letter: "そ",
     type: "nan",
-    meaning: "獨奏"
+    meaning: "独奏"
   },
   {
     wordId: 3353,
@@ -30176,7 +30176,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 87,
     letter: "た",
     type: "nan",
-    meaning: "標題"
+    meaning: "标题"
   },
   {
     wordId: 3354,
@@ -30185,7 +30185,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 87,
     letter: "た",
     type: "nan",
-    meaning: "打字員"
+    meaning: "打字员"
   },
   {
     wordId: 3355,
@@ -30194,7 +30194,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 87,
     letter: "た",
     type: "nan",
-    meaning: "計時器"
+    meaning: "计时器"
   },
   {
     wordId: 3356,
@@ -30203,7 +30203,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 87,
     letter: "た",
     type: "nan",
-    meaning: "定時"
+    meaning: "定时"
   },
   {
     wordId: 3357,
@@ -30212,7 +30212,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 87,
     letter: "た",
     type: "nan",
-    meaning: "時間"
+    meaning: "时间"
   },
   {
     wordId: 3358,
@@ -30221,7 +30221,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 87,
     letter: "た",
     type: "nan",
-    meaning: "及時, 跑壘 (棒球), RBI"
+    meaning: "及时, 跑垒 (棒球), RBI"
   },
   {
     wordId: 3359,
@@ -30230,7 +30230,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 87,
     letter: "た",
     type: "nan",
-    meaning: "輪胎，輪胎"
+    meaning: "轮胎，轮胎"
   },
   {
     wordId: 3360,
@@ -30248,7 +30248,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 87,
     letter: "た",
     type: "nan",
-    meaning: "才藝、明星、個性"
+    meaning: "才艺、明星、个性"
   },
   {
     wordId: 3362,
@@ -30266,7 +30266,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 88,
     letter: "ち",
     type: "nan",
-    meaning: "團隊合作"
+    meaning: "团队合作"
   },
   {
     wordId: 3364,
@@ -30275,7 +30275,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 88,
     letter: "ち",
     type: "nan",
-    meaning: "改變"
+    meaning: "改变"
   },
   {
     wordId: 3365,
@@ -30284,7 +30284,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 88,
     letter: "ち",
     type: "nan",
-    meaning: "鐘聲"
+    meaning: "钟声"
   },
   {
     wordId: 3366,
@@ -30293,7 +30293,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 88,
     letter: "ち",
     type: "nan",
-    meaning: "一個頻道"
+    meaning: "一个频道"
   },
   {
     wordId: 3367,
@@ -30302,7 +30302,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 90,
     letter: "て",
     type: "nan",
-    meaning: "棉紙"
+    meaning: "棉纸"
   },
   {
     wordId: 3368,
@@ -30311,7 +30311,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 90,
     letter: "て",
     type: "nan",
-    meaning: "電傳，電傳打字機交換"
+    meaning: "电传，电传打字机交换"
   },
   {
     wordId: 3369,
@@ -30320,7 +30320,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 91,
     letter: "と",
     type: "nan",
-    meaning: "語氣"
+    meaning: "语气"
   },
   {
     wordId: 3370,
@@ -30329,7 +30329,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 91,
     letter: "と",
     type: "nan",
-    meaning: "麻煩（有時用作動詞）"
+    meaning: "麻烦（有时用作动词）"
   },
   {
     wordId: 3371,
@@ -30338,7 +30338,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 91,
     letter: "と",
     type: "nan",
-    meaning: "電晶體"
+    meaning: "电晶体"
   },
   {
     wordId: 3372,
@@ -30347,7 +30347,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 92,
     letter: "な",
     type: "nan",
-    meaning: "燈光下的比賽（例如棒球）（字面意思：夜間比賽），夜間比賽"
+    meaning: "灯光下的比赛（例如棒球）（字面意思：夜间比赛），夜间比赛"
   },
   {
     wordId: 3373,
@@ -30365,7 +30365,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 92,
     letter: "な",
     type: "nan",
-    meaning: "廢話"
+    meaning: "废话"
   },
   {
     wordId: 3375,
@@ -30374,7 +30374,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 93,
     letter: "に",
     type: "nan",
-    meaning: "細微差別"
+    meaning: "细微差别"
   },
   {
     wordId: 3376,
@@ -30392,7 +30392,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 95,
     letter: "ね",
     type: "nan",
-    meaning: "（攝影）底片"
+    meaning: "（摄影）底片"
   },
   {
     wordId: 3378,
@@ -30401,7 +30401,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 96,
     letter: "の",
     type: "nan",
-    meaning: "神經症"
+    meaning: "神经症"
   },
   {
     wordId: 3379,
@@ -30410,7 +30410,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 97,
     letter: "は",
     type: "nan",
-    meaning: "衣架，衣架，飢餓"
+    meaning: "衣架，衣架，饥饿"
   },
   {
     wordId: 3380,
@@ -30428,7 +30428,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 99,
     letter: "ふ",
     type: "nan",
-    meaning: "鬥爭"
+    meaning: "斗争"
   },
   {
     wordId: 3382,
@@ -30446,7 +30446,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 99,
     letter: "ふ",
     type: "nan",
-    meaning: "粉絲, 樂趣"
+    meaning: "粉丝, 乐趣"
   },
   {
     wordId: 3384,
@@ -30455,7 +30455,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 99,
     letter: "ふ",
     type: "nan",
-    meaning: "（相機）濾鏡"
+    meaning: "（相机）滤镜"
   },
   {
     wordId: 3385,
@@ -30464,7 +30464,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 99,
     letter: "ふ",
     type: "nan",
-    meaning: "渡輪"
+    meaning: "渡轮"
   },
   {
     wordId: 3386,
@@ -30491,7 +30491,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 101,
     letter: "ほ",
     type: "nan",
-    meaning: "軟管"
+    meaning: "软管"
   },
   {
     wordId: 3389,
@@ -30500,7 +30500,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 101,
     letter: "ほ",
     type: "nan",
-    meaning: "廳堂、洞"
+    meaning: "厅堂、洞"
   },
   {
     wordId: 3390,
@@ -30509,7 +30509,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 102,
     letter: "ま",
     type: "nan",
-    meaning: "標記"
+    meaning: "标记"
   },
   {
     wordId: 3391,
@@ -30518,7 +30518,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 102,
     letter: "ま",
     type: "nan",
-    meaning: "大眾傳播"
+    meaning: "大众传播"
   },
   {
     wordId: 3392,
@@ -30536,7 +30536,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 103,
     letter: "み",
     type: "nan",
-    meaning: "印刷錯誤"
+    meaning: "印刷错误"
   },
   {
     wordId: 3394,
@@ -30554,7 +30554,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 103,
     letter: "み",
     type: "nan",
-    meaning: "音樂"
+    meaning: "音乐"
   },
   {
     wordId: 3396,
@@ -30572,7 +30572,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 104,
     letter: "む",
     type: "nan",
-    meaning: "情緒"
+    meaning: "情绪"
   },
   {
     wordId: 3398,
@@ -30581,7 +30581,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 105,
     letter: "め",
     type: "nan",
-    meaning: "製造商"
+    meaning: "制造商"
   },
   {
     wordId: 3399,
@@ -30590,7 +30590,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 105,
     letter: "め",
     type: "nan",
-    meaning: "訊息"
+    meaning: "讯息"
   },
   {
     wordId: 3400,
@@ -30599,7 +30599,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 105,
     letter: "め",
     type: "nan",
-    meaning: "媒體"
+    meaning: "媒体"
   },
   {
     wordId: 3401,
@@ -30617,7 +30617,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 106,
     letter: "も",
     type: "nan",
-    meaning: "汽車旅館"
+    meaning: "汽车旅馆"
   },
   {
     wordId: 3403,
@@ -30626,7 +30626,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 106,
     letter: "も",
     type: "nan",
-    meaning: "（電腦）顯示器"
+    meaning: "（电脑）显示器"
   },
   {
     wordId: 3404,
@@ -30635,7 +30635,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 107,
     letter: "や",
     type: "nan",
-    meaning: "年輕的"
+    meaning: "年轻的"
   },
   {
     wordId: 3405,
@@ -30644,7 +30644,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 108,
     letter: "ゆ",
     type: "nan",
-    meaning: "獨特的"
+    meaning: "独特的"
   },
   {
     wordId: 3406,
@@ -30671,7 +30671,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 110,
     letter: "ら",
     type: "nan",
-    meaning: "標籤"
+    meaning: "标签"
   },
   {
     wordId: 3409,
@@ -30680,7 +30680,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 110,
     letter: "ら",
     type: "nan",
-    meaning: "燈、坡道、前燈"
+    meaning: "灯、坡道、前灯"
   },
   {
     wordId: 3410,
@@ -30689,7 +30689,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 112,
     letter: "る",
     type: "nan",
-    meaning: "鬆動的"
+    meaning: "松动的"
   },
   {
     wordId: 3411,
@@ -30698,7 +30698,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 112,
     letter: "る",
     type: "nan",
-    meaning: "規則"
+    meaning: "规则"
   },
   {
     wordId: 3412,
@@ -30707,7 +30707,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 113,
     letter: "れ",
     type: "nan",
-    meaning: "種族，花邊"
+    meaning: "种族，花边"
   },
   {
     wordId: 3413,
@@ -30716,7 +30716,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 113,
     letter: "れ",
     type: "nan",
-    meaning: "常規的"
+    meaning: "常规的"
   },
   {
     wordId: 3414,
@@ -30725,7 +30725,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 113,
     letter: "れ",
     type: "nan",
-    meaning: "娛樂"
+    meaning: "娱乐"
   },
   {
     wordId: 3415,
@@ -30734,7 +30734,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 113,
     letter: "れ",
     type: "nan",
-    meaning: "課"
+    meaning: "课"
   },
   {
     wordId: 3416,
@@ -30752,7 +30752,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 113,
     letter: "れ",
     type: "nan",
-    meaning: "槓桿，肝臟"
+    meaning: "杠杆，肝脏"
   },
   {
     wordId: 3418,
@@ -30761,7 +30761,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 113,
     letter: "れ",
     type: "nan",
-    meaning: "爐灶，火爐"
+    meaning: "炉灶，火炉"
   },
   {
     wordId: 3419,
@@ -30770,7 +30770,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 113,
     letter: "れ",
     type: "nan",
-    meaning: "租車（字面意思：租車）"
+    meaning: "租车（字面意思：租车）"
   },
   {
     wordId: 3420,
@@ -30779,7 +30779,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 113,
     letter: "れ",
     type: "nan",
-    meaning: "X射線（字面意思：倫琴）"
+    meaning: "X射线（字面意思：伦琴）"
   },
   {
     wordId: 3421,
@@ -30788,7 +30788,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 114,
     letter: "ろ",
     type: "nan",
-    meaning: "繩索"
+    meaning: "绳索"
   },
   {
     wordId: 3422,
@@ -30797,7 +30797,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 114,
     letter: "ろ",
     type: "nan",
-    meaning: "羅馬化，羅馬字母"
+    meaning: "罗马化，罗马字母"
   },
   {
     wordId: 3423,
@@ -30824,7 +30824,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 118,
     letter: "か",
     type: "nan",
-    meaning: "導遊"
+    meaning: "导游"
   },
   {
     wordId: 3426,
@@ -30842,7 +30842,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 118,
     letter: "か",
     type: "nan",
-    meaning: "（家裡的）車庫"
+    meaning: "（家里的）车库"
   },
   {
     wordId: 3428,
@@ -30851,7 +30851,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 120,
     letter: "く",
     type: "nan",
-    meaning: "圖形"
+    meaning: "图形"
   },
   {
     wordId: 3429,
@@ -30878,7 +30878,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 124,
     letter: "し",
     type: "nan",
-    meaning: "牛仔褲（字面意思：牛仔褲）、工人褲"
+    meaning: "牛仔裤（字面意思：牛仔裤）、工人裤"
   },
   {
     wordId: 3432,
@@ -30887,7 +30887,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 124,
     letter: "し",
     type: "nan",
-    meaning: "爵士樂"
+    meaning: "爵士乐"
   },
   {
     wordId: 3433,
@@ -30896,7 +30896,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 124,
     letter: "し",
     type: "nan",
-    meaning: "夾克，套衫"
+    meaning: "夹克，套衫"
   },
   {
     wordId: 3434,
@@ -30923,7 +30923,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 124,
     letter: "し",
     type: "nan",
-    meaning: "類型"
+    meaning: "类型"
   },
   {
     wordId: 3437,
@@ -30932,7 +30932,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 126,
     letter: "せ",
     type: "nan",
-    meaning: "果凍， 傑瑞"
+    meaning: "果冻， 杰瑞"
   },
   {
     wordId: 3438,
@@ -30959,7 +30959,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 128,
     letter: "た",
     type: "nan",
-    meaning: "重疊（同一天）、擁有兩件東西、失敗後重讀一學年"
+    meaning: "重叠（同一天）、拥有两件东西、失败后重读一学年"
   },
   {
     wordId: 3441,
@@ -30968,7 +30968,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 128,
     letter: "た",
     type: "nan",
-    meaning: "傾倒"
+    meaning: "倾倒"
   },
   {
     wordId: 3442,
@@ -30977,7 +30977,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 131,
     letter: "て",
     type: "nan",
-    meaning: "數據"
+    meaning: "数据"
   },
   {
     wordId: 3443,
@@ -30986,7 +30986,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 131,
     letter: "て",
     type: "nan",
-    meaning: "裝飾"
+    meaning: "装饰"
   },
   {
     wordId: 3444,
@@ -30995,7 +30995,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 131,
     letter: "て",
     type: "nan",
-    meaning: "甜點"
+    meaning: "甜点"
   },
   {
     wordId: 3445,
@@ -31004,7 +31004,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 131,
     letter: "て",
     type: "nan",
-    meaning: "設計"
+    meaning: "设计"
   },
   {
     wordId: 3446,
@@ -31013,7 +31013,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 131,
     letter: "て",
     type: "nan",
-    meaning: "草圖、素描、寫生"
+    meaning: "草图、素描、写生"
   },
   {
     wordId: 3447,
@@ -31022,7 +31022,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 131,
     letter: "て",
     type: "nan",
-    meaning: "示範"
+    meaning: "示范"
   },
   {
     wordId: 3448,
@@ -31031,7 +31031,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 132,
     letter: "と",
     type: "nan",
-    meaning: "乾燥"
+    meaning: "干燥"
   },
   {
     wordId: 3449,
@@ -31040,7 +31040,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 132,
     letter: "と",
     type: "nan",
-    meaning: "乾洗"
+    meaning: "干洗"
   },
   {
     wordId: 3450,
@@ -31049,7 +31049,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 132,
     letter: "と",
     type: "nan",
-    meaning: "螺絲刀，起子"
+    meaning: "螺丝刀，起子"
   },
   {
     wordId: 3451,
@@ -31058,7 +31058,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 132,
     letter: "と",
     type: "nan",
-    meaning: "開車進去"
+    meaning: "开车进去"
   },
   {
     wordId: 3452,
@@ -31067,7 +31067,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 132,
     letter: "と",
     type: "nan",
-    meaning: "鑽頭"
+    meaning: "钻头"
   },
   {
     wordId: 3453,
@@ -31112,7 +31112,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 134,
     letter: "ひ",
     type: "nan",
-    meaning: "商業"
+    meaning: "商业"
   },
   {
     wordId: 3458,
@@ -31130,7 +31130,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 135,
     letter: "ふ",
     type: "nan",
-    meaning: "繁榮"
+    meaning: "繁荣"
   },
   {
     wordId: 3460,
@@ -31139,7 +31139,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 135,
     letter: "ふ",
     type: "nan",
-    meaning: "蜂鳴器"
+    meaning: "蜂鸣器"
   },
   {
     wordId: 3461,
@@ -31148,7 +31148,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 135,
     letter: "ふ",
     type: "nan",
-    meaning: "藍色的"
+    meaning: "蓝色的"
   },
   {
     wordId: 3462,
@@ -31157,7 +31157,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 136,
     letter: "へ",
     type: "nan",
-    meaning: "低音，貝斯"
+    meaning: "低音，贝斯"
   },
   {
     wordId: 3463,
@@ -31175,7 +31175,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 136,
     letter: "へ",
     type: "nan",
-    meaning: "暢銷書"
+    meaning: "畅销书"
   },
   {
     wordId: 3465,
@@ -31184,7 +31184,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 137,
     letter: "ほ",
     type: "nan",
-    meaning: "聯合抵制"
+    meaning: "联合抵制"
   },
   {
     wordId: 3466,
@@ -31202,7 +31202,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 138,
     letter: "は",
     type: "nan",
-    meaning: "睡衣，睡衣褲"
+    meaning: "睡衣，睡衣裤"
   },
   {
     wordId: 3468,
@@ -31211,7 +31211,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 138,
     letter: "は",
     type: "nan",
-    meaning: "彈珠台（日式彈珠台）"
+    meaning: "弹珠台（日式弹珠台）"
   },
   {
     wordId: 3469,
@@ -31220,7 +31220,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 138,
     letter: "は",
     type: "nan",
-    meaning: "巡邏車"
+    meaning: "巡逻车"
   },
   {
     wordId: 3470,
@@ -31229,7 +31229,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 138,
     letter: "は",
     type: "nan",
-    meaning: "（縮寫）穿孔，爆裂，龐克"
+    meaning: "（缩写）穿孔，爆裂，庞克"
   },
   {
     wordId: 3471,
@@ -31238,7 +31238,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 141,
     letter: "へ",
     type: "nan",
-    meaning: "一對，梨"
+    meaning: "一对，梨"
   },
   {
     wordId: 3472,
@@ -31247,7 +31247,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 142,
     letter: "ほ",
     type: "nan",
-    meaning: "觀點"
+    meaning: "观点"
   },
   {
     wordId: 3473,
@@ -31256,7 +31256,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 142,
     letter: "ほ",
     type: "nan",
-    meaning: "暫停"
+    meaning: "暂停"
   },
   {
     wordId: 3474,
@@ -31274,7 +31274,7 @@ const n1WordsZhTW: WordData[] = [
     letterOrder: 142,
     letter: "ほ",
     type: "nan",
-    meaning: "鍋"
+    meaning: "锅"
   },
   {
     wordId: 3476,
@@ -31287,4 +31287,4 @@ const n1WordsZhTW: WordData[] = [
   }
 ];
 
-export default n1WordsZhTW;
+export default n1WordsZhCN;

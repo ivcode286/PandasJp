@@ -1,6 +1,6 @@
 import { WordData } from "../../types/translation";
 
-const n5KanjiWordsZhTW: WordData[] = [
+const n2WordsZhTW: WordData[] = [
   {
     wordId: 1,
     words: "あいかわらず",
@@ -16491,14 +16491,4 @@ const n5KanjiWordsZhTW: WordData[] = [
   }
 ];
 
-export interface WordData {
-  wordId: number;
-  words: string;
-  pron: string;
-  letterOrder: number;
-  letter: string;
-  type: string;
-  meaning: string;
-}
-
-export default n5KanjiWordsZhTW;
+export default n2WordsZhTW;

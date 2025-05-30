@@ -111,6 +111,7 @@ export default function WordsScreen({
     [LEVELS.N4]: 'words_n4',
     [LEVELS.N3]: 'words_n3',
     [LEVELS.N2]: 'words_n2',
+    [LEVELS.N1]: 'words_n1',
     [LEVELS.N5_KANJI]: 'kanji_n5',
   };
 
@@ -177,6 +178,7 @@ export default function WordsScreen({
         else if (level === LEVELS.N4) key = 'n4';
         else if (level === LEVELS.N3) key = 'n3';
         else if (level === LEVELS.N2) key = 'n2';
+        else if (level === LEVELS.N1) key = 'n1';
         else {
           console.error(`Invalid level: ${level}`);
           setSections([]);

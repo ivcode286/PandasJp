@@ -61,8 +61,9 @@ import n3WordsZhTW from './zh-TW/N3Words';
 import n4WordsZhCN from './zh-CN/N4Words';
 import n3WordsZhCN from './zh-CN/N3Words';
 import n2WordsZhTW from './zh-TW/N2Words';
-import n2WordsZhCN from './zh-CN/N2Word';
+import n2WordsZhCN from './zh-CN/N2Words';
 import n1WordsZhTW from './zh-TW/N1Words';
+import n1WordsZhCN from './zh-CN/N1Words';
 
 
 
@@ -132,6 +133,7 @@ const resources = {
       n4: n4WordsZhCN,
       n3: n3WordsZhCN,
       n2: n2WordsZhCN,
+      n1: n1WordsZhCN,
     },
     common: commonZhCN,
     settings: settingsZhCN,
