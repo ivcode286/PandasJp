@@ -92,7 +92,7 @@ export default function WordsScreen({
 }) {
   const { level: paramLevel, lang } = useLocalSearchParams();
   const router = useRouter();
-  const { t } = useTranslation(['words', 'common', 'home']); // Add 'home' namespace
+  const { t } = useTranslation(['words', 'common', 'home']);
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<Section[]>(staticSections || []);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -233,7 +233,10 @@ export default function WordsScreen({
               keyExtractor={(item, index) => item.wordId + index.toString()}
               renderItem={({ item }) => (
                 <View style={styles.item}>
-                  <Text style={styles.words}>{item.words}</Text>
+                  <View style={styles.wordRow}>
+                    <Text style={styles.wordId}>{item.wordId}</Text>
+                    <Text style={styles.words}>{item.words}</Text>
+                  </View>
                   <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
                   <View style={styles.row}>
                     <Text style={styles.reading}>{item.pron}</Text>
@@ -366,10 +369,23 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     color: '#ffcc00',
   },
+  wordRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  wordId: {
+    fontSize: 16,
+    color: '#b0b0b0',
+    marginRight: 8,
+    width: 40,
+    textAlign: 'right',
+  },
   words: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#ffffff',
+    flex: 1,
   },
   reading: {
     fontSize: 18,
