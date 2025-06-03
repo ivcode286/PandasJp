@@ -13,26 +13,45 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def clean_meaning(text: str) -> str:
     """
-    Clean the meaning field by removing unwanted artifacts and normalizing newlines to \n.
+    Clean the meaning field by removing unwanted artifacts, merging newlines into a single line,
+    and ensuring proper encoding for TypeScript.
     
     Args:
         text (str): Input text from meaning column
     Returns:
-        str: Cleaned text with newlines converted to \n for TypeScript
+        str: Cleaned text with newlines removed and special characters escaped
     """
     if pd.isna(text):
         return ""
-    # Convert text to string and remove _x000D_, \r, and other artifacts
-    text = re.sub(r'_x000D_|\r', '', str(text))
-    # Replace multiple newlines with a single \n
-    text = re.sub(r'\n+', '\n', text)
+    # Convert text to string, ensuring UTF-8 encoding
+    text = str(text)
+    # Remove unwanted artifacts like _x000D_ and \r
+    text = re.sub(r'_x000D_|\r', '', text)
+    # Remove newlines to merge content into a single line
+    text = re.sub(r'\n+', '', text)
     # Remove leading/trailing whitespace
     text = text.strip()
+    # Escape special characters for TypeScript string literals
+    text = text.replace('"', '\\"').replace('\\', '\\\\').replace('\t', '\\t')
     return text
+
+def get_constant_name(filename: str) -> str:
+    """
+    Generate TypeScript constant name based on input filename.
+    e.g., N1Words -> n1WordsZhTW, N2Words -> n2WordsZhTW
+    
+    Args:
+        filename (str): Input filename without extension
+    Returns:
+        str: Formatted constant name
+    """
+    # Convert first character to lowercase and append 'ZhTW'
+    constant_name = filename[0].lower() + filename[1:] + 'ZhTW'
+    return constant_name
 
 def convert_file_to_typescript(file_path: str, output_dir: str) -> None:
     """
-    Convert a CSV or XLSX file to TypeScript format with WordData interface and array.
+    Convert a CSV or XLSX file to TypeScript format with WordData array.
     
     Args:
         file_path (str): Path to input CSV or XLSX file
@@ -54,27 +73,42 @@ def convert_file_to_typescript(file_path: str, output_dir: str) -> None:
         print(f"Error reading {file_path}: {e}")
         return
     
+    # Verify required columns exist
+    required_columns = ["word_id", "words", "pron", "letter_order", "letter", "type", "meaning"]
+    missing_columns = [col for col in required_columns if col not in df.columns]
+    if missing_columns:
+        print(f"Missing columns in {file_path}: {missing_columns}")
+        return
+    
+    # Get constant name based on filename
+    base_name = Path(file_path).stem
+    constant_name = get_constant_name(base_name)
+    
     # Prepare TypeScript content
     ts_content = [
         'import { WordData } from "../../types/translation";',
         '',
-        'const n5KanjiWordsZhTW: WordData[] = ['
+        f'const {constant_name}: WordData[] = ['
     ]
     
     # Convert each row to TypeScript object
     for _, row in df.iterrows():
         # Clean the meaning field
         cleaned_meaning = clean_meaning(row["meaning"])
-        # Escape quotes and backslashes in meaning for TypeScript
-        cleaned_meaning = cleaned_meaning.replace('"', '\\"').replace('\\', '\\\\')
+        # Handle other fields, ensuring they are strings and escaped properly
+        words = str(row["words"]).replace('"', '\\"').replace('\\', '\\\\').replace('\t', '\\t')
+        pron = str(row["pron"]).replace('"', '\\"').replace('\\', '\\\\').replace('\t', '\\t')
+        letter = str(row["letter"]).replace('"', '\\"').replace('\\', '\\\\').replace('\t', '\\t')
+        type_val = str(row["type"]).replace('"', '\\"').replace('\\', '\\\\').replace('\t', '\\t')
+        
         word_entry = [
             '  {',
             f'    wordId: {row["word_id"]},',
-            f'    words: "{row["words"]}",',
-            f'    pron: "{row["pron"]}",',
+            f'    words: "{words}",',
+            f'    pron: "{pron}",',
             f'    letterOrder: {row["letter_order"]},',
-            f'    letter: "{row["letter"]}",',
-            f'    type: "{row["type"]}",',
+            f'    letter: "{letter}",',
+            f'    type: "{type_val}",',
             f'    meaning: "{cleaned_meaning}"',
             '  },'
         ]
@@ -84,28 +118,17 @@ def convert_file_to_typescript(file_path: str, output_dir: str) -> None:
     if ts_content[-1].endswith(','):
         ts_content[-1] = ts_content[-1][:-1]
     
-    # Close the array and add interface
+    # Close the array
     ts_content.extend([
         '];',
         '',
-        'export interface WordData {',
-        '  wordId: number;',
-        '  words: string;',
-        '  pron: string;',
-        '  letterOrder: number;',
-        '  letter: string;',
-        '  type: string;',
-        '  meaning: string;',
-        '}',
-        '',
-        'export default n5KanjiWordsZhTW;'
+        f'export default {constant_name};'
     ])
     
     # Generate output file name
-    base_name = Path(file_path).stem
     output_file = os.path.join(output_dir, f"{base_name}.ts")
     
-    # Write to TypeScript file
+    # Write to TypeScript file with UTF-8 encoding
     try:
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write('\n'.join(ts_content))

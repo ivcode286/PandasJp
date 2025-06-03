@@ -1,6 +1,6 @@
 import { WordData } from "../../types/translation";
 
-const n5KanjiWordsZhTW: WordData[] = [
+const n5WordsZhTW: WordData[] = [
   {
     wordId: 1,
     words: "挨拶",
@@ -2132,7 +2132,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "起點助詞",
-    meaning: "起點、來源、理由;\\n如:東京から来ました。（從東京來的。）"
+    meaning: "起點、來源、理由如:東京から来ました。（從東京來的。）"
   },
   {
     wordId: 238,
@@ -2147,8 +2147,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 239,
     words: "外国",
     pron: "がいこく",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名",
     meaning: "外國"
   },
@@ -2156,8 +2156,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 240,
     words: "学生",
     pron: "がくせい",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名",
     meaning: "學生"
   },
@@ -2165,8 +2165,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 241,
     words: "学校",
     pron: "がっこう",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名",
     meaning: "學校"
   },
@@ -2174,8 +2174,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 242,
     words: "外国人",
     pron: "がいこくじん",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "人",
     meaning: "外國人"
   },
@@ -2183,10 +2183,10 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 243,
     words: "が",
     pron: "が",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "主語助詞",
-    meaning: "強調主語、表示新資訊;\\n如:犬が好きです。（我喜歡狗。）"
+    meaning: "強調主語、表示新資訊如:犬が好きです。（我喜歡狗。）"
   },
   {
     wordId: 244,
@@ -2444,8 +2444,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 272,
     words: "銀行員",
     pron: "ぎんこういん",
-    letterOrder: 48,
-    letter: "ぎ",
+    letterOrder: 7,
+    letter: "き",
     type: "職業",
     meaning: "銀行職員"
   },
@@ -2453,8 +2453,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 273,
     words: "銀行",
     pron: "ぎんこう",
-    letterOrder: 48,
-    letter: "ぎ",
+    letterOrder: 7,
+    letter: "き",
     type: "設施",
     meaning: "銀行"
   },
@@ -2678,8 +2678,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 298,
     words: "元気",
     pron: "げんき",
-    letterOrder: 50,
-    letter: "げ",
+    letterOrder: 9,
+    letter: "け",
     type: "名，形動",
     meaning: "有活力；健康"
   },
@@ -2687,8 +2687,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 299,
     words: "玄関",
     pron: "げんかん",
-    letterOrder: 50,
-    letter: "げ",
+    letterOrder: 9,
+    letter: "け",
     type: "場所",
     meaning: "玄關"
   },
@@ -2696,8 +2696,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 300,
     words: "月曜日",
     pron: "げつようび",
-    letterOrder: 50,
-    letter: "げ",
+    letterOrder: 9,
+    letter: "け",
     type: " 一週",
     meaning: "星期一"
   },
@@ -2705,8 +2705,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 301,
     words: "コンビニ",
     pron: "コンビニ",
-    letterOrder: 81,
-    letter: "コ",
+    letterOrder: 10,
+    letter: "こ",
     type: "場所",
     meaning: "便利商店"
   },
@@ -2903,8 +2903,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 323,
     words: "午後",
     pron: "ごご",
-    letterOrder: 51,
-    letter: "ご",
+    letterOrder: 10,
+    letter: "こ",
     type: "名",
     meaning: "午後、下午"
   },
@@ -2912,8 +2912,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 324,
     words: "ご飯",
     pron: "ごはん",
-    letterOrder: 51,
-    letter: "ご",
+    letterOrder: 10,
+    letter: "こ",
     type: "名",
     meaning: "飯"
   },
@@ -2921,8 +2921,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 325,
     words: "ご主人",
     pron: "ごしゅじん",
-    letterOrder: 51,
-    letter: "ご",
+    letterOrder: 10,
+    letter: "こ",
     type: "別人家人",
     meaning: "（您的）丈夫"
   },
@@ -2930,8 +2930,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 326,
     words: "五",
     pron: "ご",
-    letterOrder: 51,
-    letter: "ご",
+    letterOrder: 10,
+    letter: "こ",
     type: "數字",
     meaning: "五"
   },
@@ -2939,8 +2939,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 327,
     words: "午前",
     pron: "ごぜん",
-    letterOrder: 51,
-    letter: "ご",
+    letterOrder: 10,
+    letter: "こ",
     type: "時間",
     meaning: "上午"
   },
@@ -3119,8 +3119,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 347,
     words: "残業する",
     pron: "ざんぎょうする",
-    letterOrder: 52,
-    letter: "ざ",
+    letterOrder: 11,
+    letter: "さ",
     type: "工作相關動詞",
     meaning: "加班"
   },
@@ -3416,8 +3416,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 380,
     words: "時間",
     pron: "じかん",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名",
     meaning: "小時；時間、光陰；時刻"
   },
@@ -3425,8 +3425,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 381,
     words: "神社",
     pron: "じんじゃ",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "設施",
     meaning: "神社（日本神道）"
   },
@@ -3434,8 +3434,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 382,
     words: "十",
     pron: "じゅう",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "數字",
     meaning: "十"
   },
@@ -3443,8 +3443,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 383,
     words: "～時間",
     pron: "～じかん",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "助数詞",
     meaning: "時間（小時）"
   },
@@ -3452,8 +3452,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 384,
     words: "準備する",
     pron: "じゅんびする",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "工作相關動詞",
     meaning: "準備"
   },
@@ -3461,8 +3461,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 385,
     words: "重要",
     pron: "じゅうよう",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "な形容詞",
     meaning: "重要的"
   },
@@ -3470,8 +3470,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 386,
     words: "上手",
     pron: "じょうず",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "な形容詞",
     meaning: "擅長的"
   },
@@ -3650,8 +3650,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 406,
     words: "全然",
     pron: "ぜんぜん",
-    letterOrder: 55,
-    letter: "ぜ",
+    letterOrder: 14,
+    letter: "せ",
     type: "頻率副詞",
     meaning: "完全不（與否定一起用）"
   },
@@ -3659,8 +3659,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 407,
     words: "全部",
     pron: "ぜんぶ",
-    letterOrder: 55,
-    letter: "ぜ",
+    letterOrder: 14,
+    letter: "せ",
     type: "程度副詞",
     meaning: "全部"
   },
@@ -3839,8 +3839,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 427,
     words: "象",
     pron: "ぞう",
-    letterOrder: 56,
-    letter: "ぞ",
+    letterOrder: 15,
+    letter: "そ",
     type: "動物",
     meaning: "大象"
   },
@@ -3965,8 +3965,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 441,
     words: "誰",
     pron: "だれ",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "代",
     meaning: "誰"
   },
@@ -3974,8 +3974,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 442,
     words: "大学生",
     pron: "だいがくせい",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "職業",
     meaning: "大學生"
   },
@@ -3983,8 +3983,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 443,
     words: "台所",
     pron: "だいどころ",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "場所",
     meaning: "廚房"
   },
@@ -3992,8 +3992,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 444,
     words: "大学",
     pron: "だいがく",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "設施",
     meaning: "大學"
   },
@@ -4001,8 +4001,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 445,
     words: "～台",
     pron: "～だい",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "助数詞",
     meaning: "機械、車輛"
   },
@@ -4010,8 +4010,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 446,
     words: "大好き",
     pron: "だいすき",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "な形容詞",
     meaning: "非常喜歡的"
   },
@@ -4019,8 +4019,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 447,
     words: "大嫌い",
     pron: "だいきらい",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "な形容詞",
     meaning: "非常討厭的"
   },
@@ -4028,8 +4028,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 448,
     words: "だれ / 誰",
     pron: "だれ",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "疑問代名詞",
     meaning: "誰"
   },
@@ -4037,8 +4037,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 449,
     words: "だから",
     pron: "だから",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "因果關係連接詞",
     meaning: "所以、因此(口語中常用)"
   },
@@ -4046,8 +4046,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 450,
     words: "だけ",
     pron: "だけ",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "強調助詞",
     meaning: "只有、僅(水だけ飲みます。（只喝水。）)"
   },
@@ -4325,8 +4325,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 481,
     words: "出来る",
     pron: "できる",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "自上一",
     meaning: "做好、做完；製作、製造；出產；形成、出現；天生的；設立、成立；可能；好、不錯；有"
   },
@@ -4334,8 +4334,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 482,
     words: "でも",
     pron: "でも",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "接続",
     meaning: "但是、可是、不過"
   },
@@ -4343,8 +4343,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 483,
     words: "出る",
     pron: "でる",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "自下一",
     meaning: "外出；邁出；出發、離去；出現；突出、露出；流出；出席；接電話；到達；超過；出版、"
   },
@@ -4352,8 +4352,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 484,
     words: "電話",
     pron: "でんわ",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "名，サ変",
     meaning: "電話（機）；（打）電話"
   },
@@ -4361,8 +4361,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 485,
     words: "デパート",
     pron: "でぱーと",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "商業場所",
     meaning: "百貨公司"
   },
@@ -4370,8 +4370,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 486,
     words: "ですから",
     pron: "ですから",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "因果關係連接詞",
     meaning: "所以、因此(較正式，適合商務或敬語)"
   },
@@ -4379,8 +4379,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 487,
     words: "では",
     pron: "では",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "轉話題連接詞",
     meaning: "那麼(「それでは」的縮略形式，口語更常用)"
   },
@@ -4388,10 +4388,10 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 488,
     words: "で",
     pron: "で",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "方位助詞",
-    meaning: "表示動作發生的地點、手段;\\n如:バスで行きます。（搭公車去。）"
+    meaning: "表示動作發生的地點、手段如:バスで行きます。（搭公車去。）"
   },
   {
     wordId: 489,
@@ -4577,8 +4577,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 509,
     words: "どう",
     pron: "どう",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "副",
     meaning: "怎麼樣、怎麼、如何"
   },
@@ -4586,8 +4586,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 510,
     words: "どうして",
     pron: "どうして",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "副，感",
     meaning: "怎樣；為什麼；哪裡"
   },
@@ -4595,8 +4595,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 511,
     words: "どうぞ",
     pron: "どうぞ",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "副",
     meaning: "設法；請；請吧"
   },
@@ -4604,8 +4604,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 512,
     words: "どうも",
     pron: "どうも",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "副",
     meaning: "怎麼也；總覺得；實在；（用來打招呼或表示）感謝、歉意"
   },
@@ -4613,8 +4613,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 513,
     words: "何処",
     pron: "どこ",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "代",
     meaning: "哪兒"
   },
@@ -4622,8 +4622,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 514,
     words: "どの",
     pron: "どの",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "連体",
     meaning: "哪個"
   },
@@ -4631,8 +4631,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 515,
     words: "動物",
     pron: "どうぶつ",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "動物",
     meaning: "動物"
   },
@@ -4640,8 +4640,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 516,
     words: "動物園",
     pron: "どうぶつえん",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "商業場所",
     meaning: "動物園"
   },
@@ -4649,8 +4649,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 517,
     words: "土曜日",
     pron: "どようび",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: " 一週",
     meaning: "星期六"
   },
@@ -4658,8 +4658,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 518,
     words: "哪個（疑問）",
     pron: "どれ",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "事物和方向",
     meaning: "哪個（事物）"
   },
@@ -4667,8 +4667,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 519,
     words: "怎樣（疑問）",
     pron: "どう",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "事物和方向",
     meaning: "怎樣"
   },
@@ -4676,8 +4676,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 520,
     words: "哪邊（疑問）",
     pron: "どちら / どっち",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "事物和方向",
     meaning: "哪邊（方向、人）"
   },
@@ -4685,8 +4685,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 521,
     words: "どこ",
     pron: "どこ",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "疑問代名詞",
     meaning: "哪裡、哪個地方"
   },
@@ -4694,8 +4694,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 522,
     words: "どれ",
     pron: "どれ",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "疑問代名詞",
     meaning: "哪個（在三個或以上選擇時使用）"
   },
@@ -4703,8 +4703,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 523,
     words: "どちら",
     pron: "どちら",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "疑問代名詞",
     meaning: "哪邊、哪個（較正式）"
   },
@@ -4712,8 +4712,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 524,
     words: "どんな",
     pron: "どんな",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "疑問代名詞",
     meaning: "什麼樣的"
   },
@@ -4958,7 +4958,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "方位助詞",
-    meaning: "表示時間、地點、方向;\\n如:学校に行きます。（去學校。）"
+    meaning: "表示時間、地點、方向如:学校に行きます。（去學校。）"
   },
   {
     wordId: 552,
@@ -5354,14 +5354,14 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "主語助詞",
-    meaning: "主題標示，強調後面的內容;\\n如:私は学生です。（我是學生。）"
+    meaning: "主題標示，強調後面的內容如:私は学生です。（我是學生。）"
   },
   {
     wordId: 596,
     words: "場所",
     pron: "ばしょ",
-    letterOrder: 62,
-    letter: "ば",
+    letterOrder: 26,
+    letter: "は",
     type: "名",
     meaning: "場所、地方；所占的位置；相撲賽季"
   },
@@ -5369,8 +5369,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 597,
     words: "バス停",
     pron: "ばすてい",
-    letterOrder: 62,
-    letter: "ば",
+    letterOrder: 26,
+    letter: "は",
     type: "交通",
     meaning: "公車站"
   },
@@ -5378,8 +5378,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 598,
     words: "ばかり",
     pron: "ばかり",
-    letterOrder: 62,
-    letter: "ば",
+    letterOrder: 26,
+    letter: "は",
     type: "強調助詞",
     meaning: "只、剛剛(ゲームばかりしています。（只在玩遊戲。）)"
   },
@@ -5387,8 +5387,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 599,
     words: "パン屋",
     pron: "ぱんや",
-    letterOrder: 67,
-    letter: "ぱ",
+    letterOrder: 26,
+    letter: "は",
     type: "商業場所",
     meaning: "麵包店"
   },
@@ -5540,8 +5540,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 616,
     words: "美容師",
     pron: "びようし",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "職業",
     meaning: "美容師"
   },
@@ -5549,8 +5549,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 617,
     words: "病院",
     pron: "びょういん",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "設施",
     meaning: "醫院"
   },
@@ -5558,8 +5558,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 618,
     words: "美術館",
     pron: "びじゅつかん",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "設施",
     meaning: "美術館"
   },
@@ -5567,8 +5567,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 619,
     words: "秒",
     pron: "びょう",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "時間",
     meaning: "秒"
   },
@@ -5576,8 +5576,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 620,
     words: "病気",
     pron: "びょうき",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "身體狀態",
     meaning: "生病"
   },
@@ -5702,8 +5702,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 634,
     words: "豚",
     pron: "ぶた",
-    letterOrder: 64,
-    letter: "ぶ",
+    letterOrder: 28,
+    letter: "ふ",
     type: "名",
     meaning: "豬"
   },
@@ -5741,14 +5741,14 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "方位助詞",
-    meaning: "表示方向（「に」的替代用法）;\\n如:日本へ行きます。（去日本。）"
+    meaning: "表示方向（「に」的替代用法）如:日本へ行きます。（去日本。）"
   },
   {
     wordId: 639,
     words: "勉強",
     pron: "べんきょう",
-    letterOrder: 65,
-    letter: "べ",
+    letterOrder: 29,
+    letter: "へ",
     type: "名，サ変",
     meaning: "學習；賤賣、便宜"
   },
@@ -5756,8 +5756,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 640,
     words: "弁護士",
     pron: "べんごし",
-    letterOrder: 65,
-    letter: "べ",
+    letterOrder: 29,
+    letter: "へ",
     type: "職業",
     meaning: "律師"
   },
@@ -5765,8 +5765,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 641,
     words: "ベランダ",
     pron: "べらんだ",
-    letterOrder: 65,
-    letter: "べ",
+    letterOrder: 29,
+    letter: "へ",
     type: "場所",
     meaning: "陽台"
   },
@@ -5774,8 +5774,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 642,
     words: "勉強する",
     pron: "べんきょうする",
-    letterOrder: 65,
-    letter: "べ",
+    letterOrder: 29,
+    letter: "へ",
     type: "一般動作",
     meaning: "學習、讀書"
   },
@@ -5783,8 +5783,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 643,
     words: "便利",
     pron: "べんり",
-    letterOrder: 65,
-    letter: "べ",
+    letterOrder: 29,
+    letter: "へ",
     type: "な形容詞",
     meaning: "方便的"
   },
@@ -5864,8 +5864,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 652,
     words: "僕",
     pron: "ぼく",
-    letterOrder: 66,
-    letter: "ぼ",
+    letterOrder: 30,
+    letter: "ほ",
     type: "人稱代名詞",
     meaning: "我（男性常用，較溫和）"
   },
@@ -5873,8 +5873,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 653,
     words: "僕たち / 僕ら",
     pron: "ぼくたち / ぼくら",
-    letterOrder: 66,
-    letter: "ぼ",
+    letterOrder: 30,
+    letter: "ほ",
     type: "人稱代名詞",
     meaning: "我們（男性）"
   },
@@ -6011,7 +6011,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "起點助詞",
-    meaning: "終點、範圍;\\n如:駅まで歩きます。（走到車站。）"
+    meaning: "終點、範圍如:駅まで歩きます。（走到車站。）"
   },
   {
     wordId: 669,
@@ -6299,7 +6299,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "假設連接詞",
-    meaning: "如果、假如;\\n(假設條件，常與「～なら」「～たら」一起用)"
+    meaning: "如果、假如(假設條件，常與「～なら」「～たら」一起用)"
   },
   {
     wordId: 701,
@@ -6722,10 +6722,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 45,
     letter: "を",
     type: "目的語助詞",
-    meaning: "直接受詞標示（動作的對象;\\n如:本を読みます。（讀書。）"
+    meaning: "直接受詞標示（動作的對象）如:本を読みます。（讀書。）"
   }
 ];
 
-
-
-export default n5KanjiWordsZhTW;
+export default n5WordsZhTW;
