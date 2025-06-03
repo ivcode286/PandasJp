@@ -3,13 +3,19 @@ import pandas as pd
 import os
 from pathlib import Path
 import re
+from opencc import OpenCC
 
 # Define input and output directories
 INPUT_DIR = "input"
-OUTPUT_DIR = "output"
+OUTPUT_DIR_TW = "output_tw"
+OUTPUT_DIR_CN = "output_cn"
 
-# Ensure output directory exists
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+# Ensure output directories exist
+os.makedirs(OUTPUT_DIR_TW, exist_ok=True)
+os.makedirs(OUTPUT_DIR_CN, exist_ok=True)
+
+# Initialize OpenCC for Traditional to Simplified Chinese conversion
+cc = OpenCC('t2s')
 
 def clean_meaning(text: str) -> str:
     """
@@ -35,27 +41,29 @@ def clean_meaning(text: str) -> str:
     text = text.replace('"', '\\"').replace('\\', '\\\\').replace('\t', '\\t')
     return text
 
-def get_constant_name(filename: str) -> str:
+def get_constant_name(filename: str, lang: str) -> str:
     """
-    Generate TypeScript constant name based on input filename.
-    e.g., N1Words -> n1WordsZhTW, N2Words -> n2WordsZhTW
+    Generate TypeScript constant name based on input filename and language.
+    e.g., N5Words -> n5WordsZhTW for Traditional, n5WordsZhCN for Simplified
     
     Args:
         filename (str): Input filename without extension
+        lang (str): Language code ('ZhTW' or 'ZhCN')
     Returns:
         str: Formatted constant name
     """
-    # Convert first character to lowercase and append 'ZhTW'
-    constant_name = filename[0].lower() + filename[1:] + 'ZhTW'
+    # Convert first character to lowercase and append language code
+    constant_name = filename[0].lower() + filename[1:] + lang
     return constant_name
 
-def convert_file_to_typescript(file_path: str, output_dir: str) -> None:
+def convert_file_to_typescript(file_path: str, output_dir_tw: str, output_dir_cn: str) -> None:
     """
-    Convert a CSV or XLSX file to TypeScript format with WordData array.
+    Convert a CSV or XLSX file to TypeScript format with WordData array for both Traditional and Simplified Chinese.
     
     Args:
         file_path (str): Path to input CSV or XLSX file
-        output_dir (str): Path to output directory
+        output_dir_tw (str): Path to output directory for Traditional Chinese
+        output_dir_cn (str): Path to output directory for Simplified Chinese
     """
     # Check file extension
     file_ext = Path(file_path).suffix.lower()
@@ -80,27 +88,38 @@ def convert_file_to_typescript(file_path: str, output_dir: str) -> None:
         print(f"Missing columns in {file_path}: {missing_columns}")
         return
     
-    # Get constant name based on filename
+    # Get base filename
     base_name = Path(file_path).stem
-    constant_name = get_constant_name(base_name)
     
-    # Prepare TypeScript content
-    ts_content = [
+    # Prepare TypeScript content for Traditional Chinese (ZhTW)
+    constant_name_tw = get_constant_name(base_name, 'ZhTW')
+    ts_content_tw = [
         'import { WordData } from "../../types/translation";',
         '',
-        f'const {constant_name}: WordData[] = ['
+        f'const {constant_name_tw}: WordData[] = ['
+    ]
+    
+    # Prepare TypeScript content for Simplified Chinese (ZhCN)
+    constant_name_cn = get_constant_name(base_name, 'ZhCN')
+    ts_content_cn = [
+        'import { WordData } from "../../types/translation";',
+        '',
+        f'const {constant_name_cn}: WordData[] = ['
     ]
     
     # Convert each row to TypeScript object
     for _, row in df.iterrows():
-        # Clean the meaning field
-        cleaned_meaning = clean_meaning(row["meaning"])
+        # Clean the meaning field (Traditional Chinese)
+        cleaned_meaning_tw = clean_meaning(row["meaning"])
+        # Convert to Simplified Chinese
+        cleaned_meaning_cn = cc.convert(cleaned_meaning_tw)
         # Handle other fields, ensuring they are strings and escaped properly
         words = str(row["words"]).replace('"', '\\"').replace('\\', '\\\\').replace('\t', '\\t')
         pron = str(row["pron"]).replace('"', '\\"').replace('\\', '\\\\').replace('\t', '\\t')
         letter = str(row["letter"]).replace('"', '\\"').replace('\\', '\\\\').replace('\t', '\\t')
         type_val = str(row["type"]).replace('"', '\\"').replace('\\', '\\\\').replace('\t', '\\t')
         
+        # Common word entry for both outputs
         word_entry = [
             '  {',
             f'    wordId: {row["word_id"]},',
@@ -109,32 +128,58 @@ def convert_file_to_typescript(file_path: str, output_dir: str) -> None:
             f'    letterOrder: {row["letter_order"]},',
             f'    letter: "{letter}",',
             f'    type: "{type_val}",',
-            f'    meaning: "{cleaned_meaning}"',
+        ]
+        
+        # Add meaning for Traditional Chinese
+        word_entry_tw = word_entry + [
+            f'    meaning: "{cleaned_meaning_tw}"',
             '  },'
         ]
-        ts_content.extend(word_entry)
+        ts_content_tw.extend(word_entry_tw)
+        
+        # Add meaning for Simplified Chinese
+        word_entry_cn = word_entry + [
+            f'    meaning: "{cleaned_meaning_cn}"',
+            '  },'
+        ]
+        ts_content_cn.extend(word_entry_cn)
     
-    # Remove the last comma
-    if ts_content[-1].endswith(','):
-        ts_content[-1] = ts_content[-1][:-1]
+    # Remove the last comma for both
+    if ts_content_tw[-1].endswith(','):
+        ts_content_tw[-1] = ts_content_tw[-1][:-1]
+    if ts_content_cn[-1].endswith(','):
+        ts_content_cn[-1] = ts_content_cn[-1][:-1]
     
-    # Close the array
-    ts_content.extend([
+    # Close the array for both
+    ts_content_tw.extend([
         '];',
         '',
-        f'export default {constant_name};'
+        f'export default {constant_name_tw};'
+    ])
+    ts_content_cn.extend([
+        '];',
+        '',
+        f'export default {constant_name_cn};'
     ])
     
-    # Generate output file name
-    output_file = os.path.join(output_dir, f"{base_name}.ts")
+    # Generate output file names
+    output_file_tw = os.path.join(output_dir_tw, f"{base_name}.ts")
+    output_file_cn = os.path.join(output_dir_cn, f"{base_name}.ts")
     
-    # Write to TypeScript file with UTF-8 encoding
+    # Write to TypeScript files with UTF-8 encoding
     try:
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(ts_content))
-        print(f"Generated {base_name}.ts in output directory")
+        with open(output_file_tw, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(ts_content_tw))
+        print(f"Generated {base_name}.ts in {output_dir_tw}")
     except Exception as e:
-        print(f"Error writing {output_file}: {e}")
+        print(f"Error writing {output_file_tw}: {e}")
+    
+    try:
+        with open(output_file_cn, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(ts_content_cn))
+        print(f"Generated {base_name}.ts in {output_dir_cn}")
+    except Exception as e:
+        print(f"Error writing {output_file_cn}: {e}")
 
 def main():
     """
@@ -152,7 +197,7 @@ def main():
     for file in files:
         file_path = os.path.join(INPUT_DIR, file)
         print(f"Processing {file}...")
-        convert_file_to_typescript(file_path, OUTPUT_DIR)
+        convert_file_to_typescript(file_path, OUTPUT_DIR_TW, OUTPUT_DIR_CN)
 
 if __name__ == "__main__":
     main()
