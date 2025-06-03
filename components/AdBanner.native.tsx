@@ -7,12 +7,17 @@ interface AdBannerProps {
 }
 
 const AdBanner: React.FC<AdBannerProps> = ({ style }) => {
-  // 根據平台和環境選擇廣告單元 ID
-  const adUnitId = __DEV__ 
+  // 根據平台和環境選擇是否顯示廣告
+  const adUnitId = __DEV__
     ? TestIds.BANNER // 開發環境使用測試 ID
     : Platform.OS === 'ios'
       ? 'ca-app-pub-8778852534152395/1650541289' // iOS 使用 production ID
-      : TestIds.BANNER; // Android 使用測試 ID（因尚未審批）
+      : null; // Android 不顯示廣告
+
+  // 如果 adUnitId 為 null，則不渲染廣告
+  if (!adUnitId) {
+    return null;
+  }
 
   return (
     <View style={[styles.container, style]}>
