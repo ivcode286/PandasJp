@@ -1,4 +1,4 @@
-// app/[lang]/screens/WordsScreen.tsx
+// WordsScreen.tsx - Screen component for displaying words grouped by letter
 import React, { useEffect, useState } from 'react';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import {
@@ -25,6 +25,7 @@ import Animated, {
   runOnJS,
 } from 'react-native-reanimated';
 
+// Define Word interface
 interface Word {
   wordId: number;
   letter: string;
@@ -35,19 +36,24 @@ interface Word {
   meaning_zh?: string;
 }
 
+// Define Section interface
 interface Section {
   title: string;
   data: Word[];
   letterOrder: number;
 }
 
+// Create ref for SectionList
 export const sectionListRef = React.createRef<SectionList<Word>>();
+// Global sections array
 export let globalSections: Section[] = [];
 
+// Constants for layout
 const SECTION_HEADER_HEIGHT = 40;
 const ITEM_HEIGHT = 140;
 const ITEM_MARGIN = 8;
 
+// Group words by letter
 const groupWordsByLetter = (words: Word[]): Section[] => {
   const groups: { [letter: string]: { order: number; words: Word[] } } = {};
   words.forEach((word) => {
@@ -66,11 +72,13 @@ const groupWordsByLetter = (words: Word[]): Section[] => {
     .sort((a, b) => a.letterOrder - b.letterOrder);
 };
 
+// Configure item layout for SectionList
 const getItemLayout = sectionListGetItemLayout({
   getItemHeight: () => ITEM_HEIGHT + ITEM_MARGIN,
   getSectionHeaderHeight: () => SECTION_HEADER_HEIGHT,
 });
 
+// Scroll to specific section
 export const scrollToSection = (title: string): void => {
   const sectionIndex = globalSections.findIndex((section) => section.title === title);
   if (sectionIndex !== -1 && sectionListRef.current) {
@@ -83,6 +91,7 @@ export const scrollToSection = (title: string): void => {
   }
 };
 
+// WordsScreen component
 export default function WordsScreen({
   level: staticLevel,
   sections: staticSections,
@@ -90,6 +99,7 @@ export default function WordsScreen({
   level?: string;
   sections?: Section[];
 }) {
+  // Hooks
   const { level: paramLevel, lang } = useLocalSearchParams();
   const router = useRouter();
   const { t } = useTranslation(['words', 'common', 'home']);
@@ -98,6 +108,7 @@ export default function WordsScreen({
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
+  // Determine level
   const level = staticLevel || paramLevel || '';
   const levelString = Array.isArray(level) ? level[0] : level;
   const effectiveLang = typeof lang === 'string' ? lang : 'zh-tw';
@@ -115,21 +126,25 @@ export default function WordsScreen({
     [LEVELS.N5_KANJI]: 'kanji_n5',
   };
 
-  // Get header title from translation
+  // Get header title
   const headerTitle = levelString && levelToTranslationKey[levelString]
     ? t(`home:menu.${levelToTranslationKey[levelString]}`, 'Words')
     : 'Words';
 
+  // Toggle drawer
   const toggleDrawer = (open: boolean) => {
+    // Log drawer toggle
     console.log('Toggling drawer to:', open, 'Platform:', Platform.OS, 'isAnimating:', isAnimating);
     setDrawerOpen(open);
     setIsAnimating(true);
     translateX.value = withTiming(open ? 0 : drawerWidth, { duration: 300 }, () => {
       runOnJS(setIsAnimating)(false);
+      // Log animation completion
       console.log('Animation finished, isAnimating set to false, drawerOpen:', open);
     });
   };
 
+  // Handle back navigation
   const handleBackPress = () => {
     if (Platform.OS === 'web' && !router.canGoBack()) {
       router.replace(`/${effectiveLang}/(tabs)`);
@@ -138,18 +153,22 @@ export default function WordsScreen({
     }
   };
 
+  // Configure pan gesture for drawer
   const panGesture = Gesture.Pan()
     .enabled(!isAnimating && Platform.OS !== 'web')
     .onStart((event) => {
+      // Log gesture start
       console.log('Gesture started, drawerOpen:', drawerOpen, 'Platform:', Platform.OS, 'x:', event.x);
     })
     .onUpdate((event) => {
       const offset = drawerOpen ? 0 : drawerWidth;
       const newX = Math.max(0, Math.min(event.translationX + offset, drawerWidth));
       translateX.value = newX;
+      // Log gesture update
       console.log('Gesture updating, translationX:', event.translationX, 'newX:', newX);
     })
     .onEnd((event) => {
+      // Log gesture end
       console.log('Gesture ended, translationX:', event.translationX);
       const threshold = drawerWidth * 0.1;
       const shouldOpen = drawerOpen
@@ -158,16 +177,20 @@ export default function WordsScreen({
       runOnJS(toggleDrawer)(shouldOpen);
     });
 
+  // Animated style for drawer
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ translateX: translateX.value }],
   }));
 
+  // Load words data
   useEffect(() => {
+    // Log current level
     console.log(`Current Level in WordsScreen: ${level}, Platform: ${Platform.OS}`);
     translateX.value = drawerWidth;
     if (!staticSections) {
       const loadWords = () => {
         if (!level || typeof level !== 'string') {
+          // Log error if level is invalid
           console.error('Level is undefined or not a string');
           setSections([]);
           return;
@@ -180,12 +203,14 @@ export default function WordsScreen({
         else if (level === LEVELS.N2) key = 'n2';
         else if (level === LEVELS.N1) key = 'n1';
         else {
+          // Log error for invalid level
           console.error(`Invalid level: ${level}`);
           setSections([]);
           return;
         }
         const words = t(`words:${key}`, { returnObjects: true }) as Word[];
         if (!Array.isArray(words)) {
+          // Log error if words is not an array
           console.error(`t('words:${key}') did not return an array:`, words);
           setSections([]);
           return;
@@ -204,9 +229,11 @@ export default function WordsScreen({
     }
   }, [level, t, staticSections]);
 
+  // Drawer items
   const drawerItems =
     (t(`common:drawer.${levelString?.toUpperCase()}`, { returnObjects: true }) as string[]) || [];
 
+  // Render component
   return (
     <SafeAreaProvider>
       <StatusBar barStyle="light-content" backgroundColor="#121212" />
@@ -287,6 +314,7 @@ export default function WordsScreen({
   );
 }
 
+// Styles
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -353,7 +381,8 @@ const styles = StyleSheet.create({
   },
   item: {
     backgroundColor: '#1e1e1e',
-    padding: 20,
+    paddingVertical: 20, // Vertical padding only
+    paddingHorizontal: 10, // Reduced horizontal padding
     height: ITEM_HEIGHT,
     borderRadius: 8,
     marginBottom: ITEM_MARGIN,
@@ -373,13 +402,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 8,
+    marginLeft: 0, // Ensure no left margin
   },
   wordId: {
     fontSize: 16,
     color: '#b0b0b0',
     marginRight: 8,
-    width: 40,
-    textAlign: 'right',
+    textAlign: 'right', // Align text to right
   },
   words: {
     fontSize: 24,
@@ -396,6 +425,7 @@ const styles = StyleSheet.create({
   meaning: {
     fontSize: 16,
     color: '#b0b0b0',
+    marginLeft: 0, // Ensure no left margin
   },
   row: {
     flexDirection: 'row',
