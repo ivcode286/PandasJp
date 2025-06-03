@@ -16,8 +16,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { debounce } from 'lodash';
 import { GRAMMAR_LEVELS } from '@/src/utils/constants';
 
-
-
 // Placeholder for web SEO (replace with react-helmet or expo-router's <Head> in a real app)
 const Head = Platform.OS === 'web' ? ({ children }: { children: React.ReactNode }) => <>{children}</> : () => null;
 
@@ -37,99 +35,111 @@ export default function HomeScreen() {
   const router = useRouter();
   const isWeb = Platform.OS === 'web';
 
-  // Memoize getLangHref to avoid recreating function on every render
+  // Comment: Memoize getLangHref to avoid recreating function on every render
   const getLangHref = useCallback(
     (path: string): Href =>
       `${langPrefix}${path.startsWith('/') ? path : `/${path}`}` as Href,
     [langPrefix]
   );
 
-  // Define menu items for N5 and N4 sections
+  // Comment: Process menu titles to remove text after ' - ' on mobile
+  const getMenuTitle = (title: string) => {
+    if (Platform.OS !== 'web') {
+      return title.split(' - ')[0];
+    }
+    return title;
+  };
+
+  // Comment: Define N5 menu items with processed titles
   const menuItems: MenuItem[] = [
-    { title: t('menu.hiragana'), href: getLangHref('/hiragana') },
-    { title: t('menu.katakana'), href: getLangHref('/katakana') },
-    { title: t('menu.kana_comparison'), href: getLangHref('/kana-comparison') },
-    { title: t('menu.phonetics'), href: getLangHref('/phonetics') },
-    { title: t('menu.words_n5'), href: getLangHref('/words/n5') },
-    { title: t('menu.kanji_n5'), href: getLangHref('/words/n5-kanji') },
-    { title: t('menu.n5_concepts'), href: getLangHref('/n5-concepts') },
-    { title: t('menu.grammar_concepts'), href: getLangHref('/grammar-concepts') },
+    { title: getMenuTitle(t('menu.hiragana')), href: getLangHref('/hiragana') },
+    { title: getMenuTitle(t('menu.katakana')), href: getLangHref('/katakana') },
+    { title: getMenuTitle(t('menu.kana_comparison')), href: getLangHref('/kana-comparison') },
+    { title: getMenuTitle(t('menu.phonetics')), href: getLangHref('/phonetics') },
+    { title: getMenuTitle(t('menu.words_n5')), href: getLangHref('/words/n5') },
+    { title: getMenuTitle(t('menu.kanji_n5')), href: getLangHref('/words/n5-kanji') },
+    { title: getMenuTitle(t('menu.n5_concepts')), href: getLangHref('/n5-concepts') },
+    { title: getMenuTitle(t('menu.grammar_concepts')), href: getLangHref('/grammar-concepts') },
     {
-      title: t('menu.n5_basic_grammar'),
+      title: getMenuTitle(t('menu.n5_basic_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N5_BASIC_GRAMMAR}`),
     },
     {
-      title: t('menu.n5_advance_grammar'),
+      title: getMenuTitle(t('menu.n5_advance_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N5_ADVANCE_GRAMMAR}`),
     },
-    { title: t('menu.n5_chat'), href: getLangHref('/n5chat') },
-    { title: t('menu.story'), href: getLangHref('/story') },
+    { title: getMenuTitle(t('menu.n5_chat')), href: getLangHref('/n5chat') },
+    { title: getMenuTitle(t('menu.story')), href: getLangHref('/story') },
   ];
 
+  // Comment: Define N4 menu items with processed titles
   const secondMenuItems: MenuItem[] = [
-    { title: t('menu.words_n4'), href: getLangHref('/words/n4') },
+    { title: getMenuTitle(t('menu.words_n4')), href: getLangHref('/words/n4') },
     {
-      title: t('menu.n4_basic_grammar'),
+      title: getMenuTitle(t('menu.n4_basic_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N4_BASIC_GRAMMAR}`),
     },
     {
-      title: t('menu.n4_advance_grammar'),
+      title: getMenuTitle(t('menu.n4_advance_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N4_ADVANCE_GRAMMAR}`),
     },
   ];
 
+  // Comment: Define N3 menu items with processed titles
   const thirdMenuItems: MenuItem[] = [
-    { title: t('menu.words_n3'), href: getLangHref('/words/n3') },
+    { title: getMenuTitle(t('menu.words_n3')), href: getLangHref('/words/n3') },
     {
-      title: t('menu.n3_basic_grammar'),
+      title: getMenuTitle(t('menu.n3_basic_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N3_BASIC_GRAMMAR}`),
     },
     {
-      title: t('menu.n3_advance_grammar'),
+      title: getMenuTitle(t('menu.n3_advance_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N3_ADVANCE_GRAMMAR}`),
     },
   ];
 
+  // Comment: Define N2 menu items with processed titles
   const fourthMenuItems: MenuItem[] = [
-    { title: t('menu.words_n2'), href: getLangHref('/words/n2') },
+    { title: getMenuTitle(t('menu.words_n2')), href: getLangHref('/words/n2') },
     {
-      title: t('menu.n2_basic_grammar'),
+      title: getMenuTitle(t('menu.n2_basic_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N2_BASIC_GRAMMAR}`),
     },
     {
-      title: t('menu.n2_advance_grammar'),
+      title: getMenuTitle(t('menu.n2_advance_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N2_ADVANCE_GRAMMAR}`),
     },
   ];
 
+  // Comment: Define N1 menu items with processed titles
   const fifthMenuItems: MenuItem[] = [
-    { title: t('menu.words_n1'), href: getLangHref('/words/n1') },
+    { title: getMenuTitle(t('menu.words_n1')), href: getLangHref('/words/n1') },
     {
-      title: t('menu.n1_basic_one_grammar'),
+      title: getMenuTitle(t('menu.n1_basic_one_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N1_BASIC_ONE_GRAMMAR}`),
     },
     {
-      title: t('menu.n1_basic_two_grammar'),
+      title: getMenuTitle(t('menu.n1_basic_two_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N1_BASIC_TWO_GRAMMAR}`),
     },
     {
-      title: t('menu.n1_advance_one_grammar'),
+      title: getMenuTitle(t('menu.n1_advance_one_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N1_ADVANCE_ONE_GRAMMAR}`),
     },
     {
-      title: t('menu.n1_advance_two_grammar'),
+      title: getMenuTitle(t('menu.n1_advance_two_grammar')),
       href: getLangHref(`/grammar/${GRAMMAR_LEVELS.N1_ADVANCE_TWO_GRAMMAR}`),
     },
   ];
 
-  // Debounced language change to prevent rapid toggling
+  // Comment: Debounced language change to prevent rapid toggling
   const changeLanguage = useCallback(
     debounce(async (lang: 'zh-TW' | 'zh-CN') => {
       console.log('Changing language to:', lang);
       await i18n.changeLanguage(lang);
       const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
       await AsyncStorage.setItem(LANGUAGE_KEY, newLangPath);
-      // 僅在首頁或必要時重新導向
+      // Comment: Only redirect on home page or when necessary
       if (window.location.pathname === `/${effectiveLang}/(tabs)`) {
         router.replace(`/${newLangPath}/(tabs)`);
       }
@@ -139,7 +149,7 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* SEO metadata for web */}
+      {/* Comment: SEO metadata for web */}
       {isWeb && (
         <Head>
           <title>{`${t('title')} - ${t('app_name')}`}</title>
@@ -252,7 +262,6 @@ export default function HomeScreen() {
             </Link>
           ))}
 
-
         </ScrollView>
       </View>
     </SafeAreaView>
@@ -311,7 +320,7 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 8,
     marginBottom: 16,
-    // Platform-specific shadow styles
+    // Comment: Platform-specific shadow styles
     ...(Platform.OS === 'web'
       ? { boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }
       : {

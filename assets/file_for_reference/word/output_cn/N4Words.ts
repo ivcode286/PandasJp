@@ -1,14 +1,14 @@
 import { WordData } from "../../types/translation";
 
-const n5KanjiWordsZhTW: WordData[] = [
+const n4WordsZhCN: WordData[] = [
   {
     wordId: 1,
     words: "上がる",
     pron: "あがる",
     letterOrder: 1,
     letter: "あ",
-    type: "自五，輔助",
-    meaning: "上、登、升；提高、長進；（謙語）去；結束、完成；怯場；（敬語）吃、喝；（接動詞連"
+    type: "自五，辅助",
+    meaning: "上、登、升；提高、长进；（谦语）去；结束、完成；怯场；（敬语）吃、喝；（接动词连"
   },
   {
     wordId: 2,
@@ -17,7 +17,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "形",
-    meaning: "明亮的；開朗的、活潑的"
+    meaning: "明亮的；开朗的、活泼的"
   },
   {
     wordId: 3,
@@ -26,7 +26,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "自五",
-    meaning: "開"
+    meaning: "开"
   },
   {
     wordId: 4,
@@ -35,7 +35,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "自五",
-    meaning: "有空隙；閑著；缺編"
+    meaning: "有空隙；闲著；缺编"
   },
   {
     wordId: 5,
@@ -44,7 +44,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "他下一",
-    meaning: "天明；過年；期滿、結束"
+    meaning: "天明；过年；期满、结束"
   },
   {
     wordId: 6,
@@ -53,7 +53,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "他下一",
-    meaning: "空出；騰出；不在家"
+    meaning: "空出；腾出；不在家"
   },
   {
     wordId: 7,
@@ -62,7 +62,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "他下一",
-    meaning: "舉起、拎起；進房間；升學；進步、提高；增加數量、加深程度；得益；完成；顯效；送給"
+    meaning: "举起、拎起；进房间；升学；进步、提高；增加数量、加深程度；得益；完成；显效；送给"
   },
   {
     wordId: 8,
@@ -71,7 +71,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "他下一",
-    meaning: "舉起；油炸；起（貨）"
+    meaning: "举起；油炸；起（货）"
   },
   {
     wordId: 9,
@@ -80,7 +80,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "形",
-    meaning: "淺；（時間等）短；膚淺、少的；顏色淺"
+    meaning: "浅；（时间等）短；肤浅、少的；颜色浅"
   },
   {
     wordId: 10,
@@ -89,7 +89,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "他下一",
-    meaning: "授予；給予；使蒙受"
+    meaning: "授予；给予；使蒙受"
   },
   {
     wordId: 11,
@@ -98,7 +98,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "形",
-    meaning: "溫暖；和睦；富足"
+    meaning: "温暖；和睦；富足"
   },
   {
     wordId: 12,
@@ -107,7 +107,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "名",
-    meaning: "周圍；大約；之類的"
+    meaning: "周围；大约；之类的"
   },
   {
     wordId: 13,
@@ -116,7 +116,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "形動",
-    meaning: "當然；普通"
+    meaning: "当然；普通"
   },
   {
     wordId: 14,
@@ -125,7 +125,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "自五",
-    meaning: "曬（太陽）、吹（風）等；順利、成功；擊中、命中、猜中；粗暴對待；承擔、擔任；被指"
+    meaning: "晒（太阳）、吹（风）等；顺利、成功；击中、命中、猜中；粗暴对待；承担、担任；被指"
   },
   {
     wordId: 15,
@@ -134,7 +134,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "代",
-    meaning: "到處；順序亂"
+    meaning: "到处；顺序乱"
   },
   {
     wordId: 16,
@@ -143,7 +143,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "形",
-    meaning: "溫度高；體溫高；熱烈的"
+    meaning: "温度高；体温高；热烈的"
   },
   {
     wordId: 17,
@@ -152,7 +152,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "形",
-    meaning: "氣溫高"
+    meaning: "气温高"
   },
   {
     wordId: 18,
@@ -179,7 +179,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "他下一",
-    meaning: "使集合；收集、徵集；集中、吸引"
+    meaning: "使集合；收集、征集；集中、吸引"
   },
   {
     wordId: 21,
@@ -188,7 +188,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "他下一",
-    meaning: "碰撞；命中；曬；緊靠；中（獎）；猜對、預測正確；指名、委派"
+    meaning: "碰撞；命中；晒；紧靠；中（奖）；猜对、预测正确；指名、委派"
   },
   {
     wordId: 22,
@@ -197,7 +197,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "他上一",
-    meaning: "洗、淋浴、潑；沐浴；受到（非難、質問、讚揚等）"
+    meaning: "洗、淋浴、泼；沐浴；受到（非难、质问、赞扬等）"
   },
   {
     wordId: 23,
@@ -206,7 +206,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "形",
-    meaning: "危險的；垂危；不穩定、不確定；靠不住；危急、千鈞一髮"
+    meaning: "危险的；垂危；不稳定、不确定；靠不住；危急、千钧一发"
   },
   {
     wordId: 24,
@@ -215,7 +215,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "形",
-    meaning: "甜；淡、鹹味不足；指聲音甜；不嚴格、寬鬆；考慮簡單、淺薄、天真；男女間關係好；松"
+    meaning: "甜；淡、咸味不足；指声音甜；不严格、宽松；考虑简单、浅薄、天真；男女间关系好；松"
   },
   {
     wordId: 25,
@@ -224,7 +224,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "自五",
-    meaning: "剩、餘；勝過"
+    meaning: "剩、余；胜过"
   },
   {
     wordId: 26,
@@ -233,7 +233,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "他五",
-    meaning: "編織；編纂"
+    meaning: "编织；编纂"
   },
   {
     wordId: 27,
@@ -242,7 +242,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "他五",
-    meaning: "認錯"
+    meaning: "认错"
   },
   {
     wordId: 28,
@@ -251,7 +251,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "自下一",
-    meaning: "顯露；出現；來"
+    meaning: "显露；出现；来"
   },
   {
     wordId: 29,
@@ -260,7 +260,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "自五",
-    meaning: "存在、活著；位於"
+    meaning: "存在、活著；位于"
   },
   {
     wordId: 30,
@@ -278,7 +278,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "他下一",
-    meaning: "合併；相加、合計；調整（機械、樂器）；適應；切合；核對；使一致、配合；混合"
+    meaning: "合并；相加、合计；调整（机械、乐器）；适应；切合；核对；使一致、配合；混合"
   },
   {
     wordId: 32,
@@ -287,7 +287,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "名，サ変",
-    meaning: "背誦"
+    meaning: "背诵"
   },
   {
     wordId: 33,
@@ -314,7 +314,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "名，サ変",
-    meaning: "引導、通知；知道、瞭解"
+    meaning: "引导、通知；知道、了解"
   },
   {
     wordId: 36,
@@ -323,7 +323,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "名，サ変",
-    meaning: "想法；忠告、建議"
+    meaning: "想法；忠告、建议"
   },
   {
     wordId: 37,
@@ -332,7 +332,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "名",
-    meaning: "上述；完、終；以上；既然"
+    meaning: "上述；完、终；以上；既然"
   },
   {
     wordId: 38,
@@ -350,7 +350,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "自他五",
-    meaning: "著急、趕緊；急、忙"
+    meaning: "著急、赶紧；急、忙"
   },
   {
     wordId: 40,
@@ -359,7 +359,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "他五",
-    meaning: "頂、戴、頂在上面；領受、蒙……賜給；“食う、飮む”的謙恭說法；請、給"
+    meaning: "顶、戴、顶在上面；领受、蒙……赐给；“食う、飮む”的谦恭说法；请、给"
   },
   {
     wordId: 41,
@@ -368,7 +368,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "自五",
-    meaning: "（身體）疼痛；心痛、傷心；損壞"
+    meaning: "（身体）疼痛；心痛、伤心；损坏"
   },
   {
     wordId: 42,
@@ -377,7 +377,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "名，副助，接",
-    meaning: "一方面；（立場不同的雙方中的）其中一方；一個勁兒地、一直；另一方面"
+    meaning: "一方面；（立场不同的双方中的）其中一方；一个劲儿地、一直；另一方面"
   },
   {
     wordId: 43,
@@ -395,7 +395,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "名",
-    meaning: "鄉下、地方上的；故鄉"
+    meaning: "乡下、地方上的；故乡"
   },
   {
     wordId: 45,
@@ -404,7 +404,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "他五",
-    meaning: "（向神佛）祈禱；祝願、希望"
+    meaning: "（向神佛）祈祷；祝愿、希望"
   },
   {
     wordId: 46,
@@ -413,7 +413,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "名，副，形動",
-    meaning: "各種各樣"
+    meaning: "各种各样"
   },
   {
     wordId: 47,
@@ -422,7 +422,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "他五",
-    meaning: "慶祝；祝賀、賀禮"
+    meaning: "庆祝；祝贺、贺礼"
   },
   {
     wordId: 48,
@@ -431,7 +431,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "他下一",
-    meaning: "種、植；嵌入；打疫苗"
+    meaning: "种、植；嵌入；打疫苗"
   },
   {
     wordId: 49,
@@ -440,7 +440,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "自五",
-    meaning: "浮上水面、在空中飄；浮現、顯露；想起"
+    meaning: "浮上水面、在空中飘；浮现、显露；想起"
   },
   {
     wordId: 50,
@@ -449,7 +449,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "自五",
-    meaning: "浮、飄、現；結餘、剩餘；高興"
+    meaning: "浮、飘、现；结余、剩余；高兴"
   },
   {
     wordId: 51,
@@ -458,7 +458,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "他五",
-    meaning: "接、收、領；理解"
+    meaning: "接、收、领；理解"
   },
   {
     wordId: 52,
@@ -467,7 +467,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "自，他下一",
-    meaning: "獲得；接住、擋住；接收（邀請、要求）；接收；上課、接收考試；遭到；相應、接受；繼"
+    meaning: "获得；接住、挡住；接收（邀请、要求）；接收；上课、接收考试；遭到；相应、接受；继"
   },
   {
     wordId: 53,
@@ -476,7 +476,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "他五",
-    meaning: "使活動、開動、移動；變更；使感動、施加影響；使行動；影響"
+    meaning: "使活动、开动、移动；变更；使感动、施加影响；使行动；影响"
   },
   {
     wordId: 54,
@@ -485,7 +485,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "他五",
-    meaning: "失去、喪失；錯過；喪、亡"
+    meaning: "失去、丧失；错过；丧、亡"
   },
   {
     wordId: 55,
@@ -494,7 +494,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "形",
-    meaning: "薄的；色、味淡；（濃度、密度）低；程度低、缺乏"
+    meaning: "薄的；色、味淡；（浓度、密度）低；程度低、缺乏"
   },
   {
     wordId: 56,
@@ -503,7 +503,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "自他五",
-    meaning: "打、敲響；敲打；擊（球）；擊（鍵盤）；注射；撒；（圍棋等）下子；令人感動、打動"
+    meaning: "打、敲响；敲打；击（球）；击（键盘）；注射；撒；（围棋等）下子；令人感动、打动"
   },
   {
     wordId: 57,
@@ -512,7 +512,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "形",
-    meaning: "美好的、優美的；高尚的"
+    meaning: "美好的、优美的；高尚的"
   },
   {
     wordId: 58,
@@ -521,7 +521,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "他五",
-    meaning: "謄寫、抄寫；拍照；描寫"
+    meaning: "誊写、抄写；拍照；描写"
   },
   {
     wordId: 59,
@@ -530,7 +530,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "自五",
-    meaning: "遷移、搬動；（地位等）發生變化；變遷；（話題、興趣發生）變化；傳染；熏上、染上"
+    meaning: "迁移、搬动；（地位等）发生变化；变迁；（话题、兴趣发生）变化；传染；熏上、染上"
   },
   {
     wordId: 60,
@@ -539,7 +539,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "自五",
-    meaning: "映、照；被拍攝；照相"
+    meaning: "映、照；被拍摄；照相"
   },
   {
     wordId: 61,
@@ -548,7 +548,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "他五",
-    meaning: "生、產；產生、產出"
+    meaning: "生、产；产生、产出"
   },
   {
     wordId: 62,
@@ -557,7 +557,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "他下一",
-    meaning: "埋入；填滿；滿滿的；填補；（往熱水裡）兌涼水"
+    meaning: "埋入；填满；满满的；填补；（往热水里）兑凉水"
   },
   {
     wordId: 63,
@@ -566,7 +566,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "名",
-    meaning: "裡面；反面、背面；貨幣的背面；衣服等的裡子；鞋底；後面；內幕；幕後"
+    meaning: "里面；反面、背面；货币的背面；衣服等的里子；鞋底；后面；内幕；幕后"
   },
   {
     wordId: 64,
@@ -575,7 +575,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "形",
-    meaning: "高興、快活"
+    meaning: "高兴、快活"
   },
   {
     wordId: 65,
@@ -584,7 +584,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "名，サ変",
-    meaning: "駕駛；操縱、運轉；周轉"
+    meaning: "驾驶；操纵、运转；周转"
   },
   {
     wordId: 66,
@@ -593,7 +593,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 3,
     letter: "う",
     type: "名，サ変",
-    meaning: "運動"
+    meaning: "运动"
   },
   {
     wordId: 67,
@@ -602,7 +602,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "他五",
-    meaning: "畫、描繪；造型；表現；想像"
+    meaning: "画、描绘；造型；表现；想像"
   },
   {
     wordId: 68,
@@ -611,7 +611,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "他五",
-    meaning: "挑選；看中；選拔；選舉"
+    meaning: "挑选；看中；选拔；选举"
   },
   {
     wordId: 69,
@@ -620,7 +620,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "他下一",
-    meaning: "（通過努力、手段等）得到；能、可能"
+    meaning: "（通过努力、手段等）得到；能、可能"
   },
   {
     wordId: 70,
@@ -629,7 +629,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "名，自サ",
-    meaning: "遠慮；禮讓、謙虛；客氣；謝絕"
+    meaning: "远虑；礼让、谦虚；客气；谢绝"
   },
   {
     wordId: 71,
@@ -647,7 +647,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "他五",
-    meaning: "追趕犯人、獵物等；驅趕；轟走；驅逐、清除；追求；按照順序、隨著時間"
+    meaning: "追赶犯人、猎物等；驱赶；轰走；驱逐、清除；追求；按照顺序、随著时间"
   },
   {
     wordId: 73,
@@ -656,7 +656,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "名",
-    meaning: "人數多"
+    meaning: "人数多"
   },
   {
     wordId: 74,
@@ -674,7 +674,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "名",
-    meaning: "億"
+    meaning: "亿"
   },
   {
     wordId: 76,
@@ -683,7 +683,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "他五",
-    meaning: "贈送；授予（稱號等）；報以、致以"
+    meaning: "赠送；授予（称号等）；报以、致以"
   },
   {
     wordId: 77,
@@ -692,7 +692,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "自下一",
-    meaning: "遲到、趕不上；比預定晚；鐘、表慢了"
+    meaning: "迟到、赶不上；比预定晚；钟、表慢了"
   },
   {
     wordId: 78,
@@ -701,7 +701,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "他五",
-    meaning: "扶起；叫醒；翻起、弄起；開始；發動；生病；（思想、感情等）引起、惹起；發熱、發電"
+    meaning: "扶起；叫醒；翻起、弄起；开始；发动；生病；（思想、感情等）引起、惹起；发热、发电"
   },
   {
     wordId: 79,
@@ -710,7 +710,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "他五",
-    meaning: "做、辦；實施、舉行"
+    meaning: "做、办；实施、举行"
   },
   {
     wordId: 80,
@@ -719,7 +719,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "自五",
-    meaning: "發生、產生；起因；興起、起源；發熱、發電；發病"
+    meaning: "发生、产生；起因；兴起、起源；发热、发电；发病"
   },
   {
     wordId: 81,
@@ -737,7 +737,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "他下一",
-    meaning: "教、傳授；告訴、指點"
+    meaning: "教、传授；告诉、指点"
   },
   {
     wordId: 83,
@@ -746,7 +746,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "形動，名，サ変",
-    meaning: "閒聊、聊天；多嘴多舌、健談（的人）；議論、傳言、風言風語"
+    meaning: "闲聊、聊天；多嘴多舌、健谈（的人）；议论、传言、风言风语"
   },
   {
     wordId: 84,
@@ -755,7 +755,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "他五",
-    meaning: "推、擠；壓、碰；蓋章；強行；壓倒；頂住、不顧"
+    meaning: "推、挤；压、碰；盖章；强行；压倒；顶住、不顾"
   },
   {
     wordId: 85,
@@ -764,7 +764,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "形",
-    meaning: "速度慢、遲緩；夜深；時間晚、遲"
+    meaning: "速度慢、迟缓；夜深；时间晚、迟"
   },
   {
     wordId: 86,
@@ -773,7 +773,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "自下一",
-    meaning: "害怕、畏懼；擔心；敬畏"
+    meaning: "害怕、畏惧；担心；敬畏"
   },
   {
     wordId: 87,
@@ -782,7 +782,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "形",
-    meaning: "可怕的；驚人的、非常的"
+    meaning: "可怕的；惊人的、非常的"
   },
   {
     wordId: 88,
@@ -791,7 +791,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "他五",
-    meaning: "收教、跟……學習"
+    meaning: "收教、跟……学习"
   },
   {
     wordId: 89,
@@ -800,7 +800,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "自五",
-    meaning: "鎮靜、平心靜氣；穩定、安定；坐得穩；有頭緒、有結果；（顏色、衣服等）淡雅"
+    meaning: "镇静、平心静气；稳定、安定；坐得稳；有头绪、有结果；（颜色、衣服等）淡雅"
   },
   {
     wordId: 90,
@@ -809,7 +809,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "自上一",
-    meaning: "落下；崩潰、陷沒；下、降；西沉、下山；脫落、褪色；漏掉；錢被用掉；落榜、落選；程"
+    meaning: "落下；崩溃、陷没；下、降；西沉、下山；脱落、褪色；漏掉；钱被用掉；落榜、落选；程"
   },
   {
     wordId: 91,
@@ -818,7 +818,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "他五",
-    meaning: "投下、扔下；弄掉、除掉；丟失、遺漏；減弱、降低；是陷入不好的狀態；花錢；使落第；"
+    meaning: "投下、扔下；弄掉、除掉；丢失、遗漏；减弱、降低；是陷入不好的状态；花钱；使落第；"
   },
   {
     wordId: 92,
@@ -827,7 +827,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "自下一",
-    meaning: "拜訪；到來"
+    meaning: "拜访；到来"
   },
   {
     wordId: 93,
@@ -845,7 +845,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "形",
-    meaning: "老實、溫順；（顏色）等素氣"
+    meaning: "老实、温顺；（颜色）等素气"
   },
   {
     wordId: 95,
@@ -854,7 +854,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "自五",
-    meaning: "驚訝、驚歎；吃驚、驚惶"
+    meaning: "惊讶、惊叹；吃惊、惊惶"
   },
   {
     wordId: 96,
@@ -863,7 +863,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "他五",
-    meaning: "讓人下來；卸下；降旗；退位"
+    meaning: "让人下来；卸下；降旗；退位"
   },
   {
     wordId: 97,
@@ -872,7 +872,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "他五",
-    meaning: "放下、取下；風從高處刮下；落（發）；上鎖；切魚肉；擦絲；使用新產品；取出；打胎"
+    meaning: "放下、取下；风从高处刮下；落（发）；上锁；切鱼肉；擦丝；使用新产品；取出；打胎"
   },
   {
     wordId: 98,
@@ -881,7 +881,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名",
-    meaning: "海外、外國"
+    meaning: "海外、外国"
   },
   {
     wordId: 99,
@@ -890,7 +890,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名",
-    meaning: "會議"
+    meaning: "会议"
   },
   {
     wordId: 100,
@@ -899,7 +899,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名",
-    meaning: "會計；付款、結帳"
+    meaning: "会计；付款、结帐"
   },
   {
     wordId: 101,
@@ -908,7 +908,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名，サ変",
-    meaning: "開始"
+    meaning: "开始"
   },
   {
     wordId: 102,
@@ -926,7 +926,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名，サ変",
-    meaning: "會話"
+    meaning: "会话"
   },
   {
     wordId: 104,
@@ -935,7 +935,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "自五",
-    meaning: "復原；複歸"
+    meaning: "复原；复归"
   },
   {
     wordId: 105,
@@ -953,7 +953,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "他下一",
-    meaning: "交換"
+    meaning: "交换"
   },
   {
     wordId: 107,
@@ -962,7 +962,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "他下一",
-    meaning: "替換"
+    meaning: "替换"
   },
   {
     wordId: 108,
@@ -971,7 +971,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "他下一",
-    meaning: "改變；移到別的地方"
+    meaning: "改变；移到别的地方"
   },
   {
     wordId: 109,
@@ -980,7 +980,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名",
-    meaning: "科學"
+    meaning: "科学"
   },
   {
     wordId: 110,
@@ -989,7 +989,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "自五",
-    meaning: "懸、垂、吊；放在火上；降臨、落到（身上）；鎖著；放在上面；掛住、陷入；設置；靠著"
+    meaning: "悬、垂、吊；放在火上；降临、落到（身上）；锁著；放在上面；挂住、陷入；设置；靠著"
   },
   {
     wordId: 111,
@@ -998,16 +998,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "他五",
-    meaning: "掩蓋；隱藏、隱瞞"
+    meaning: "掩盖；隐藏、隐瞒"
   },
   {
     wordId: 112,
     words: "学費",
     pron: "がくひ",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名",
-    meaning: "學費"
+    meaning: "学费"
   },
   {
     wordId: 113,
@@ -1016,7 +1016,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "自下一",
-    meaning: "隱藏；躲藏；隱遁；作為藉口"
+    meaning: "隐藏；躲藏；隐遁；作为借口"
   },
   {
     wordId: 114,
@@ -1025,7 +1025,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名",
-    meaning: "光；月光；倒影、影像；蹤影、行蹤；暗面"
+    meaning: "光；月光；倒影、影像；踪影、行踪；暗面"
   },
   {
     wordId: 115,
@@ -1034,7 +1034,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "他下一",
-    meaning: "垂下、懸、掛；放置火上；覆蓋；灑；鎖上、扣上；輕輕握住、搭著等；鉤、釣；捆（箱子"
+    meaning: "垂下、悬、挂；放置火上；覆盖；洒；锁上、扣上；轻轻握住、搭著等；钩、钓；捆（箱子"
   },
   {
     wordId: 116,
@@ -1043,7 +1043,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名",
-    meaning: "過去；（人的）經歷"
+    meaning: "过去；（人的）经历"
   },
   {
     wordId: 117,
@@ -1052,7 +1052,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "他五",
-    meaning: "圍繞、環繞；包圍"
+    meaning: "围绕、环绕；包围"
   },
   {
     wordId: 118,
@@ -1061,7 +1061,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "他五",
-    meaning: "裝飾；陳列；登載；修飾文章"
+    meaning: "装饰；陈列；登载；修饰文章"
   },
   {
     wordId: 119,
@@ -1070,7 +1070,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "形",
-    meaning: "堅硬的；緊的；堅定的；嚴重的；確實的；頑固的"
+    meaning: "坚硬的；紧的；坚定的；严重的；确实的；顽固的"
   },
   {
     wordId: 120,
@@ -1079,25 +1079,25 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "他下一",
-    meaning: "收拾；解決；嫁出去；除去妨礙者"
+    meaning: "收拾；解决；嫁出去；除去妨碍者"
   },
   {
     wordId: 121,
     words: "学科",
     pron: "がっか",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名",
-    meaning: "學科"
+    meaning: "学科"
   },
   {
     wordId: 122,
     words: "がっかり",
     pron: "がっかり",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "副，サ変",
-    meaning: "失望的樣子；非常疲勞的樣子"
+    meaning: "失望的样子；非常疲劳的样子"
   },
   {
     wordId: 123,
@@ -1106,7 +1106,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名，形動",
-    meaning: "廚房；生活狀況；情形；樣子、狀況；任性、隨便"
+    meaning: "厨房；生活状况；情形；样子、状况；任性、随便"
   },
   {
     wordId: 124,
@@ -1115,7 +1115,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "形",
-    meaning: "悲傷的、可悲的"
+    meaning: "悲伤的、可悲的"
   },
   {
     wordId: 125,
@@ -1130,8 +1130,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 126,
     words: "我慢",
     pron: "がまん",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名，サ変",
     meaning: "忍耐"
   },
@@ -1142,7 +1142,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "他五",
-    meaning: "咬、嚼；齒輪咬合；簡易地說；（水）猛烈衝擊；有關係的"
+    meaning: "咬、嚼；齿轮咬合；简易地说；（水）猛烈冲击；有关系的"
   },
   {
     wordId: 128,
@@ -1151,7 +1151,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "形",
-    meaning: "癢"
+    meaning: "痒"
   },
   {
     wordId: 129,
@@ -1160,7 +1160,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "形",
-    meaning: "辣的；鹹的；嚴格的；嚴酷的"
+    meaning: "辣的；咸的；严格的；严酷的"
   },
   {
     wordId: 130,
@@ -1169,7 +1169,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "形",
-    meaning: "輕的；輕快的；輕微的；輕鬆的；清淡、少量；容易的；輕率的"
+    meaning: "轻的；轻快的；轻微的；轻松的；清淡、少量；容易的；轻率的"
   },
   {
     wordId: 131,
@@ -1178,16 +1178,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "自下一",
-    meaning: "枯萎；技藝等造詣精深、成熟"
+    meaning: "枯萎；技艺等造诣精深、成熟"
   },
   {
     wordId: 132,
     words: "側",
     pron: "がわ",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名",
-    meaning: "一側、一方面"
+    meaning: "一侧、一方面"
   },
   {
     wordId: 133,
@@ -1196,7 +1196,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "形",
-    meaning: "可愛的；討人喜歡的；小巧的"
+    meaning: "可爱的；讨人喜欢的；小巧的"
   },
   {
     wordId: 134,
@@ -1205,7 +1205,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "形動",
-    meaning: "可憐的"
+    meaning: "可怜的"
   },
   {
     wordId: 135,
@@ -1223,7 +1223,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "自五",
-    meaning: "變化；變更、轉移；區別；特殊"
+    meaning: "变化；变更、转移；区别；特殊"
   },
   {
     wordId: 137,
@@ -1232,14 +1232,14 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名",
-    meaning: "關係、有關；性關係"
+    meaning: "关系、有关；性关系"
   },
   {
     wordId: 138,
     words: "元日",
     pron: "がんじつ",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名",
     meaning: "元旦"
   },
@@ -1250,7 +1250,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名，サ変",
-    meaning: "感謝"
+    meaning: "感谢"
   },
   {
     wordId: 140,
@@ -1259,7 +1259,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "自他上一",
-    meaning: "感覺；感動；感觸"
+    meaning: "感觉；感动；感触"
   },
   {
     wordId: 141,
@@ -1286,7 +1286,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名，形動",
-    meaning: "簡單；簡短"
+    meaning: "简单；简短"
   },
   {
     wordId: 144,
@@ -1295,16 +1295,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名，サ変",
-    meaning: "乾杯"
+    meaning: "干杯"
   },
   {
     wordId: 145,
     words: "頑張る",
     pron: "がんばる",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "自五",
-    meaning: "努力、全力以赴；主張、固守不動"
+    meaning: "努力、全力以赴；主张、固守不动"
   },
   {
     wordId: 146,
@@ -1313,7 +1313,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "自下一",
-    meaning: "火熄滅、光消失等；消失；雪融化；感情、記憶等消失"
+    meaning: "火熄灭、光消失等；消失；雪融化；感情、记忆等消失"
   },
   {
     wordId: 147,
@@ -1322,7 +1322,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名，サ変",
-    meaning: "記憶"
+    meaning: "记忆"
   },
   {
     wordId: 148,
@@ -1331,7 +1331,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名",
-    meaning: "機械"
+    meaning: "机械"
   },
   {
     wordId: 149,
@@ -1340,7 +1340,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名，形動",
-    meaning: "危險"
+    meaning: "危险"
   },
   {
     wordId: 150,
@@ -1349,7 +1349,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名",
-    meaning: "氣候、氣象"
+    meaning: "气候、气象"
   },
   {
     wordId: 151,
@@ -1358,7 +1358,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "自下一",
-    meaning: "聽得見；聽起來似乎是……；有名；理解、同意"
+    meaning: "听得见；听起来似乎是……；有名；理解、同意"
   },
   {
     wordId: 152,
@@ -1367,7 +1367,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名",
-    meaning: "記者"
+    meaning: "记者"
   },
   {
     wordId: 153,
@@ -1376,7 +1376,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名",
-    meaning: "傷；瑕疵；有損於、缺點、汙點"
+    meaning: "伤；瑕疵；有损于、缺点、污点"
   },
   {
     wordId: 154,
@@ -1385,7 +1385,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名",
-    meaning: "規則"
+    meaning: "规则"
   },
   {
     wordId: 155,
@@ -1394,7 +1394,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "形",
-    meaning: "髒的、不乾淨的；卑劣；卑鄙的；吝嗇的"
+    meaning: "脏的、不干净的；卑劣；卑鄙的；吝啬的"
   },
   {
     wordId: 156,
@@ -1403,7 +1403,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "副",
-    meaning: "乾淨、整潔地；正確地；如期地；恰當地、妥切地"
+    meaning: "干净、整洁地；正确地；如期地；恰当地、妥切地"
   },
   {
     wordId: 157,
@@ -1412,7 +1412,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "形",
-    meaning: "嚴厲、苛刻的；強烈的；嚴厲；緊的、瘦小的"
+    meaning: "严厉、苛刻的；强烈的；严厉；紧的、瘦小的"
   },
   {
     wordId: 158,
@@ -1421,7 +1421,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "副",
-    meaning: "一定、毫無疑問地；嚴厲地、嚴肅地"
+    meaning: "一定、毫无疑问地；严厉地、严肃地"
   },
   {
     wordId: 159,
@@ -1430,7 +1430,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名，形動",
-    meaning: "可憐的；對不起，抱歉"
+    meaning: "可怜的；对不起，抱歉"
   },
   {
     wordId: 160,
@@ -1439,7 +1439,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "形",
-    meaning: "嚴格的；嚴酷的；厲害的；嚴峻的"
+    meaning: "严格的；严酷的；厉害的；严峻的"
   },
   {
     wordId: 161,
@@ -1457,7 +1457,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "自五",
-    meaning: "決定；當然、必定"
+    meaning: "决定；当然、必定"
   },
   {
     wordId: 163,
@@ -1466,7 +1466,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "他下一",
-    meaning: "決定；決心；定局；做好；以……為習慣"
+    meaning: "决定；决心；定局；做好；以……为习惯"
   },
   {
     wordId: 164,
@@ -1475,7 +1475,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名",
-    meaning: "感情；情緒；心境；感覺；一點點"
+    meaning: "感情；情绪；心境；感觉；一点点"
   },
   {
     wordId: 165,
@@ -1520,7 +1520,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名",
-    meaning: "報酬、薪水"
+    meaning: "报酬、薪水"
   },
   {
     wordId: 170,
@@ -1529,16 +1529,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名",
-    meaning: "教科書"
+    meaning: "教科书"
   },
   {
     wordId: 171,
     words: "行事",
     pron: "ぎょうじ",
-    letterOrder: 48,
-    letter: "ぎ",
+    letterOrder: 7,
+    letter: "き",
     type: "名",
-    meaning: "儀式；活動"
+    meaning: "仪式；活动"
   },
   {
     wordId: 172,
@@ -1547,7 +1547,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名",
-    meaning: "兄弟、姐妹；把兄弟、哥兒們"
+    meaning: "兄弟、姐妹；把兄弟、哥儿们"
   },
   {
     wordId: 173,
@@ -1556,7 +1556,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名",
-    meaning: "興趣"
+    meaning: "兴趣"
   },
   {
     wordId: 174,
@@ -1565,7 +1565,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名，サ変",
-    meaning: "許可"
+    meaning: "许可"
   },
   {
     wordId: 175,
@@ -1583,7 +1583,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "自五",
-    meaning: "憎惡；敬而遠之、回避；（用否定式表示）不論、不分"
+    meaning: "憎恶；敬而远之、回避；（用否定式表示）不论、不分"
   },
   {
     wordId: 177,
@@ -1592,7 +1592,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "名",
-    meaning: "霧"
+    meaning: "雾"
   },
   {
     wordId: 178,
@@ -1601,7 +1601,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "形動",
-    meaning: "美麗；乾淨；手腳麻利；沒有汙點；完全"
+    meaning: "美丽；干净；手脚麻利；没有污点；完全"
   },
   {
     wordId: 179,
@@ -1610,25 +1610,25 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 7,
     letter: "き",
     type: "自下一",
-    meaning: "被切斷；鋒利；斷絕關係；中斷；終結、完了；結束；低於；反應敏捷"
+    meaning: "被切断；锋利；断绝关系；中断；终结、完了；结束；低于；反应敏捷"
   },
   {
     wordId: 180,
     words: "銀行",
     pron: "ぎんこう",
-    letterOrder: 48,
-    letter: "ぎ",
+    letterOrder: 7,
+    letter: "き",
     type: "名",
-    meaning: "銀行"
+    meaning: "银行"
   },
   {
     wordId: 181,
     words: "具合",
     pron: "ぐあい",
-    letterOrder: 49,
-    letter: "ぐ",
+    letterOrder: 8,
+    letter: "く",
     type: "名",
-    meaning: "健康狀態；事態、情況；做法；方便；合適"
+    meaning: "健康状态；事态、情况；做法；方便；合适"
   },
   {
     wordId: 182,
@@ -1637,7 +1637,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "名",
-    meaning: "大氣；氣氛"
+    meaning: "大气；气氛"
   },
   {
     wordId: 183,
@@ -1646,7 +1646,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "自五",
-    meaning: "從下麵穿過；趁不注意逃走"
+    meaning: "从下面穿过；趁不注意逃走"
   },
   {
     wordId: 184,
@@ -1655,7 +1655,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "形",
-    meaning: "臭；可疑；造作、故意；有氣味；派頭、樣子"
+    meaning: "臭；可疑；造作、故意；有气味；派头、样子"
   },
   {
     wordId: 185,
@@ -1664,7 +1664,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "自五",
-    meaning: "腐爛；金屬受腐蝕；墮落；情緒低落"
+    meaning: "腐烂；金属受腐蚀；堕落；情绪低落"
   },
   {
     wordId: 186,
@@ -1673,7 +1673,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "他五",
-    meaning: "敲壞、折毀；使淩亂、散亂；換成零錢、破開；歡顏"
+    meaning: "敲坏、折毁；使凌乱、散乱；换成零钱、破开；欢颜"
   },
   {
     wordId: 187,
@@ -1682,7 +1682,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "自下一",
-    meaning: "崩潰、倒塌；紊亂；走形、淩亂；天氣變壞；換成零錢；行情急劇下落"
+    meaning: "崩溃、倒塌；紊乱；走形、凌乱；天气变坏；换成零钱；行情急剧下落"
   },
   {
     wordId: 188,
@@ -1691,7 +1691,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "名",
-    meaning: "癖性；特徵；（頭髮）卷兒、（衣服）褶兒"
+    meaning: "癖性；特征；（头发）卷儿、（衣服）褶儿"
   },
   {
     wordId: 189,
@@ -1700,7 +1700,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "他五",
-    meaning: "“與える”的尊敬語；“してくれる”的尊敬語"
+    meaning: "“与える”的尊敬语；“してくれる”的尊敬语"
   },
   {
     wordId: 190,
@@ -1709,7 +1709,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "自五",
-    meaning: "往低處移動；低於；從中心地朝四周去；下（命令、判決等）；時代變遷；拉肚子；投降"
+    meaning: "往低处移动；低于；从中心地朝四周去；下（命令、判决等）；时代变迁；拉肚子；投降"
   },
   {
     wordId: 191,
@@ -1727,7 +1727,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "他五",
-    meaning: "舀起液體；攝取；體諒"
+    meaning: "舀起液体；摄取；体谅"
   },
   {
     wordId: 193,
@@ -1736,7 +1736,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "自他五",
-    meaning: "組裝；交叉；成為朋友、合夥；對戰"
+    meaning: "组装；交叉；成为朋友、合伙；对战"
   },
   {
     wordId: 194,
@@ -1745,7 +1745,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "自五",
-    meaning: "天空多雲；模糊；發愁"
+    meaning: "天空多云；模糊；发愁"
   },
   {
     wordId: 195,
@@ -1754,7 +1754,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "形",
-    meaning: "後悔；窩囊"
+    meaning: "后悔；窝囊"
   },
   {
     wordId: 196,
@@ -1763,7 +1763,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "副助",
-    meaning: "大致的數量；（帶輕蔑的語氣）至少；差不多"
+    meaning: "大致的数量；（带轻蔑的语气）至少；差不多"
   },
   {
     wordId: 197,
@@ -1772,7 +1772,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "自五",
-    meaning: "生活；維持生活；度過時光"
+    meaning: "生活；维持生活；度过时光"
   },
   {
     wordId: 198,
@@ -1781,7 +1781,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "自他下一",
-    meaning: "比較；比高低"
+    meaning: "比较；比高低"
   },
   {
     wordId: 199,
@@ -1790,7 +1790,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "形",
-    meaning: "痛苦；辛苦；艱難；困惑；勉強"
+    meaning: "痛苦；辛苦；艰难；困惑；勉强"
   },
   {
     wordId: 200,
@@ -1799,7 +1799,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "自五",
-    meaning: "痛苦；煩惱；難於；費盡周折"
+    meaning: "痛苦；烦恼；难于；费尽周折"
   },
   {
     wordId: 201,
@@ -1808,7 +1808,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "自下一",
-    meaning: "天晚；季節過去；想不出、不知如何"
+    meaning: "天晚；季节过去；想不出、不知如何"
   },
   {
     wordId: 202,
@@ -1817,7 +1817,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 8,
     letter: "く",
     type: "他下一",
-    meaning: "別人給自己；別人幫助自己做某事"
+    meaning: "别人给自己；别人帮助自己做某事"
   },
   {
     wordId: 203,
@@ -1826,7 +1826,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "名",
-    meaning: "經濟狀況；活躍"
+    meaning: "经济状况；活跃"
   },
   {
     wordId: 204,
@@ -1835,7 +1835,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "名",
-    meaning: "傾向、趨勢；性格、趨向"
+    meaning: "倾向、趋势；性格、趋向"
   },
   {
     wordId: 205,
@@ -1844,7 +1844,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "名",
-    meaning: "員警"
+    meaning: "员警"
   },
   {
     wordId: 206,
@@ -1853,7 +1853,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "名，サ変",
-    meaning: "受傷；過失"
+    meaning: "受伤；过失"
   },
   {
     wordId: 207,
@@ -1862,7 +1862,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "名，形動",
-    meaning: "構造；非常好的、無懈可擊的；足夠的、滿足的；不需要"
+    meaning: "构造；非常好的、无懈可击的；足够的、满足的；不需要"
   },
   {
     wordId: 208,
@@ -1871,7 +1871,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "名，サ変",
-    meaning: "結婚"
+    meaning: "结婚"
   },
   {
     wordId: 209,
@@ -1880,7 +1880,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "名",
-    meaning: "煙；像煙似的"
+    meaning: "烟；像烟似的"
   },
   {
     wordId: 210,
@@ -1889,7 +1889,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "他五",
-    meaning: "用腳踢；不滿地從座位上站起來；拒絕要求"
+    meaning: "用脚踢；不满地从座位上站起来；拒绝要求"
   },
   {
     wordId: 211,
@@ -1898,7 +1898,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "接続，助",
-    meaning: "表示轉折關係；沒有特別的意義、僅僅表示前後話題的連接；作為終助詞、用於表示謙虛地"
+    meaning: "表示转折关系；没有特别的意义、仅仅表示前后话题的连接；作为终助词、用于表示谦虚地"
   },
   {
     wordId: 212,
@@ -1907,7 +1907,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "形",
-    meaning: "險峻的；可怕的、險惡的；有危險的、艱險的"
+    meaning: "险峻的；可怕的、险恶的；有危险的、艰险的"
   },
   {
     wordId: 213,
@@ -1916,7 +1916,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "名，サ変",
-    meaning: "爭吵；打假"
+    meaning: "争吵；打假"
   },
   {
     wordId: 214,
@@ -1925,25 +1925,25 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "名，サ変",
-    meaning: "實地參觀"
+    meaning: "实地参观"
   },
   {
     wordId: 215,
     words: "玄関",
     pron: "げんかん",
-    letterOrder: 50,
-    letter: "げ",
+    letterOrder: 9,
+    letter: "け",
     type: "名",
-    meaning: "大門"
+    meaning: "大门"
   },
   {
     wordId: 216,
     words: "現金",
     pron: "げんきん",
-    letterOrder: 50,
-    letter: "げ",
+    letterOrder: 9,
+    letter: "け",
     type: "名，形動",
-    meaning: "現金；貪圖眼前利益、勢力眼"
+    meaning: "现金；贪图眼前利益、势力眼"
   },
   {
     wordId: 217,
@@ -1952,7 +1952,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "名",
-    meaning: "鯉魚"
+    meaning: "鲤鱼"
   },
   {
     wordId: 218,
@@ -1961,14 +1961,14 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "形",
-    meaning: "顏色深；深度、密度高；味道濃；關係深"
+    meaning: "颜色深；深度、密度高；味道浓；关系深"
   },
   {
     wordId: 219,
     words: "合格",
     pron: "ごうかく",
-    letterOrder: 51,
-    letter: "ご",
+    letterOrder: 10,
+    letter: "こ",
     type: "名，サ変",
     meaning: "合格"
   },
@@ -1979,7 +1979,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "名，サ変",
-    meaning: "交換"
+    meaning: "交换"
   },
   {
     wordId: 221,
@@ -1988,7 +1988,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "名",
-    meaning: "工業"
+    meaning: "工业"
   },
   {
     wordId: 222,
@@ -2006,7 +2006,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "他五",
-    meaning: "遭受損害、屈辱；得到恩惠；承蒙"
+    meaning: "遭受损害、屈辱；得到恩惠；承蒙"
   },
   {
     wordId: 224,
@@ -2015,7 +2015,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "自下一",
-    meaning: "超過；超越；穿越"
+    meaning: "超过；超越；穿越"
   },
   {
     wordId: 225,
@@ -2033,7 +2033,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "自五",
-    meaning: "結冰"
+    meaning: "结冰"
   },
   {
     wordId: 227,
@@ -2042,7 +2042,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "名",
-    meaning: "故鄉"
+    meaning: "故乡"
   },
   {
     wordId: 228,
@@ -2051,7 +2051,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "名",
-    meaning: "國語、語文"
+    meaning: "国语、语文"
   },
   {
     wordId: 229,
@@ -2060,7 +2060,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "名",
-    meaning: "腰；彈力、粘度"
+    meaning: "腰；弹力、粘度"
   },
   {
     wordId: 230,
@@ -2078,7 +2078,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "他五",
-    meaning: "穿過、通過；度過時光；越過高峰；經過；追趕；搬家；來、去的敬語"
+    meaning: "穿过、通过；度过时光；越过高峰；经过；追赶；搬家；来、去的敬语"
   },
   {
     wordId: 232,
@@ -2087,7 +2087,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "代",
-    meaning: "這裡；這個；自己"
+    meaning: "这里；这个；自己"
   },
   {
     wordId: 233,
@@ -2096,7 +2096,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "名",
-    meaning: "語言；單詞、語句、表達；說法、講法；所說的話"
+    meaning: "语言；单词、语句、表达；说法、讲法；所说的话"
   },
   {
     wordId: 234,
@@ -2105,7 +2105,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "他五",
-    meaning: "謝絕、拒絕；預先通知；道歉、解釋"
+    meaning: "谢绝、拒绝；预先通知；道歉、解释"
   },
   {
     wordId: 235,
@@ -2132,7 +2132,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "他五",
-    meaning: "愛好、喜歡"
+    meaning: "爱好、喜欢"
   },
   {
     wordId: 238,
@@ -2150,7 +2150,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "形",
-    meaning: "細微；嚴密的、詳細的；會打算、小氣"
+    meaning: "细微；严密的、详细的；会打算、小气"
   },
   {
     wordId: 240,
@@ -2159,7 +2159,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "自五",
-    meaning: "處於困境、倒楣；不知所措"
+    meaning: "处于困境、倒楣；不知所措"
   },
   {
     wordId: 241,
@@ -2168,7 +2168,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "自五",
-    meaning: "擁擠；複雜、精雕細刻"
+    meaning: "拥挤；复杂、精雕细刻"
   },
   {
     wordId: 242,
@@ -2183,10 +2183,10 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 243,
     words: "御免",
     pron: "ごめん",
-    letterOrder: 51,
-    letter: "ご",
+    letterOrder: 10,
+    letter: "こ",
     type: "名",
-    meaning: "原諒；拒絕；免職"
+    meaning: "原谅；拒绝；免职"
   },
   {
     wordId: 244,
@@ -2195,7 +2195,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "名",
-    meaning: "時期；時機"
+    meaning: "时期；时机"
   },
   {
     wordId: 245,
@@ -2204,7 +2204,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "他五",
-    meaning: "滾動；推倒；放置"
+    meaning: "滚动；推倒；放置"
   },
   {
     wordId: 246,
@@ -2213,16 +2213,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "自五",
-    meaning: "滾動；倒下；橫躺；隨意擱置著"
+    meaning: "滚动；倒下；横躺；随意搁置著"
   },
   {
     wordId: 247,
     words: "ごろごろ",
     pron: "ごろごろ",
-    letterOrder: 51,
-    letter: "ご",
+    letterOrder: 10,
+    letter: "こ",
     type: "副，サ変",
-    meaning: "汽車、地震等聲音；滾動的樣子；隨處可見；混入異物、沙子等；懶洋洋"
+    meaning: "汽车、地震等声音；滚动的样子；随处可见；混入异物、沙子等；懒洋洋"
   },
   {
     wordId: 248,
@@ -2231,7 +2231,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "他五",
-    meaning: "殺害；壓抑；埋沒"
+    meaning: "杀害；压抑；埋没"
   },
   {
     wordId: 249,
@@ -2240,7 +2240,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "自五",
-    meaning: "跌倒；滾轉"
+    meaning: "跌倒；滚转"
   },
   {
     wordId: 250,
@@ -2249,7 +2249,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "他五",
-    meaning: "破壞、損壞；損害、損傷；破壞、砸鍋"
+    meaning: "破坏、损坏；损害、损伤；破坏、砸锅"
   },
   {
     wordId: 251,
@@ -2258,7 +2258,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "自下一",
-    meaning: "亂七八糟、支離破碎；失敗、流產；出故障"
+    meaning: "乱七八糟、支离破碎；失败、流产；出故障"
   },
   {
     wordId: 252,
@@ -2267,7 +2267,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "名",
-    meaning: "本月、這個月"
+    meaning: "本月、这个月"
   },
   {
     wordId: 253,
@@ -2276,7 +2276,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "名",
-    meaning: "本周、這一周"
+    meaning: "本周、这一周"
   },
   {
     wordId: 254,
@@ -2285,7 +2285,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "名",
-    meaning: "這次、這回；最近、上次；下次"
+    meaning: "这次、这回；最近、上次；下次"
   },
   {
     wordId: 255,
@@ -2303,7 +2303,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "名",
-    meaning: "錢包"
+    meaning: "钱包"
   },
   {
     wordId: 257,
@@ -2312,7 +2312,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "名，形動，サ変",
-    meaning: "幸福、榮幸；合適、方便"
+    meaning: "幸福、荣幸；合适、方便"
   },
   {
     wordId: 258,
@@ -2321,7 +2321,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "名",
-    meaning: "斜坡；年齡、氣勢的高低"
+    meaning: "斜坡；年龄、气势的高低"
   },
   {
     wordId: 259,
@@ -2330,7 +2330,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "名",
-    meaning: "下酒菜、佳餚；飲酒時的助興"
+    meaning: "下酒菜、佳肴；饮酒时的助兴"
   },
   {
     wordId: 260,
@@ -2348,7 +2348,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "名",
-    meaning: "最盛時期；壯年、精力充沛的時期"
+    meaning: "最盛时期；壮年、精力充沛的时期"
   },
   {
     wordId: 262,
@@ -2357,7 +2357,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "自五",
-    meaning: "下降；向後移、向後退；推移、進展；（階段、程度、數值等）變低"
+    meaning: "下降；向后移、向后退；推移、进展；（阶段、程度、数值等）变低"
   },
   {
     wordId: 263,
@@ -2366,7 +2366,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "自五",
-    meaning: "開花；說話投機"
+    meaning: "开花；说话投机"
   },
   {
     wordId: 264,
@@ -2384,7 +2384,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "名",
-    meaning: "櫻花"
+    meaning: "樱花"
   },
   {
     wordId: 266,
@@ -2393,7 +2393,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "他五",
-    meaning: "摸、找；調查；探訪風景等"
+    meaning: "摸、找；调查；探访风景等"
   },
   {
     wordId: 267,
@@ -2402,7 +2402,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "自五",
-    meaning: "大聲叫喊；主張"
+    meaning: "大声叫喊；主张"
   },
   {
     wordId: 268,
@@ -2411,7 +2411,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "他下一",
-    meaning: "避免、逃避；逃避責任；回避、避開；忌諱"
+    meaning: "避免、逃避；逃避责任；回避、避开；忌讳"
   },
   {
     wordId: 269,
@@ -2420,7 +2420,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "他下一",
-    meaning: "降低；下垂、下掛；收拾、打烊；往後退；取錢；降低（階段、程度、數值等）"
+    meaning: "降低；下垂、下挂；收拾、打烊；往后退；取钱；降低（阶段、程度、数值等）"
   },
   {
     wordId: 270,
@@ -2429,7 +2429,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "他下一",
-    meaning: "舉起、抬起；（敬）給"
+    meaning: "举起、抬起；（敬）给"
   },
   {
     wordId: 271,
@@ -2438,7 +2438,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "他五",
-    meaning: "指給人看；叫名字、點名；朝著、以……為目標；下象棋"
+    meaning: "指给人看；叫名字、点名；朝著、以……为目标；下象棋"
   },
   {
     wordId: 272,
@@ -2447,7 +2447,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "自他五",
-    meaning: "倒水；添加；擦、塗；舉到頭上；插、夾帶；撐（船）；勸酒、敬酒；呈現出；漲潮"
+    meaning: "倒水；添加；擦、涂；举到头上；插、夹带；撑（船）；劝酒、敬酒；呈现出；涨潮"
   },
   {
     wordId: 273,
@@ -2456,16 +2456,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "他五",
-    meaning: "邀請；相約；加快、催促；誘惑"
+    meaning: "邀请；相约；加快、催促；诱惑"
   },
   {
     wordId: 274,
     words: "雑誌",
     pron: "ざっし",
-    letterOrder: 52,
-    letter: "ざ",
+    letterOrder: 11,
+    letter: "さ",
     type: "名",
-    meaning: "雜誌"
+    meaning: "杂志"
   },
   {
     wordId: 275,
@@ -2474,7 +2474,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "形",
-    meaning: "寂寞、悲哀；寂靜；令人不滿的、令人遺憾的"
+    meaning: "寂寞、悲哀；寂静；令人不满的、令人遗憾的"
   },
   {
     wordId: 276,
@@ -2483,7 +2483,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "名，代",
-    meaning: "敬稱；表示敬意、客氣的說法；樣子、情景"
+    meaning: "敬称；表示敬意、客气的说法；样子、情景"
   },
   {
     wordId: 277,
@@ -2492,7 +2492,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "自他五",
-    meaning: "離去；時間流逝；死去；消失；相隔、相距；過去的；除去、消除；辭職；遠離、疏遠"
+    meaning: "离去；时间流逝；死去；消失；相隔、相距；过去的；除去、消除；辞职；远离、疏远"
   },
   {
     wordId: 278,
@@ -2501,7 +2501,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "自五",
-    meaning: "大聲叫喊；大肆喧嘩；嘩嘩擺動；起哄、鬧事；心裡亂糟糟"
+    meaning: "大声叫喊；大肆喧哗；哗哗摆动；起哄、闹事；心里乱糟糟"
   },
   {
     wordId: 279,
@@ -2510,16 +2510,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "自五",
-    meaning: "輕輕地接觸、觸摸"
+    meaning: "轻轻地接触、触摸"
   },
   {
     wordId: 280,
     words: "残念",
     pron: "ざんねん",
-    letterOrder: 52,
-    letter: "ざ",
+    letterOrder: 11,
+    letter: "さ",
     type: "形動",
-    meaning: "遺憾、可惜"
+    meaning: "遗憾、可惜"
   },
   {
     wordId: 281,
@@ -2537,7 +2537,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名，サ変",
-    meaning: "比賽、競爭"
+    meaning: "比赛、竞争"
   },
   {
     wordId: 283,
@@ -2546,7 +2546,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "形動",
-    meaning: "幸福；幸運"
+    meaning: "幸福；幸运"
   },
   {
     wordId: 284,
@@ -2555,7 +2555,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "自下一",
-    meaning: "（植物）枯萎、蔫；氣餒、洩氣"
+    meaning: "（植物）枯萎、蔫；气馁、泄气"
   },
   {
     wordId: 285,
@@ -2582,16 +2582,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名，サ変",
-    meaning: "考試；試驗"
+    meaning: "考试；试验"
   },
   {
     wordId: 288,
     words: "時刻",
     pron: "じこく",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名",
-    meaning: "時刻"
+    meaning: "时刻"
   },
   {
     wordId: 289,
@@ -2600,16 +2600,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名",
-    meaning: "工作；職務、業務"
+    meaning: "工作；职务、业务"
   },
   {
     wordId: 290,
     words: "辞書",
     pron: "じしょ",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名",
-    meaning: "辭書、辭典"
+    meaning: "辞书、辞典"
   },
   {
     wordId: 291,
@@ -2618,7 +2618,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "形動",
-    meaning: "安靜；平靜、安穩；寧靜"
+    meaning: "安静；平静、安稳；宁静"
   },
   {
     wordId: 292,
@@ -2627,7 +2627,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "自五",
-    meaning: "沉沒；落山；變低；變得陰鬱、憂鬱；陷入、淪落"
+    meaning: "沉没；落山；变低；变得阴郁、忧郁；陷入、沦落"
   },
   {
     wordId: 293,
@@ -2636,7 +2636,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名",
-    meaning: "舌頭；味覺"
+    meaning: "舌头；味觉"
   },
   {
     wordId: 294,
@@ -2645,7 +2645,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名，サ変",
-    meaning: "準備；裝備；打扮、整裝"
+    meaning: "准备；装备；打扮、整装"
   },
   {
     wordId: 295,
@@ -2654,7 +2654,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "形",
-    meaning: "親密、關係好；熟悉"
+    meaning: "亲密、关系好；熟悉"
   },
   {
     wordId: 296,
@@ -2663,16 +2663,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "副，サ変",
-    meaning: "牢固地；結實；值得信賴的；清醒、不糊塗；認真、紮實；確實、的確；很多、足夠"
+    meaning: "牢固地；结实；值得信赖的；清醒、不糊涂；认真、扎实；确实、的确；很多、足够"
   },
   {
     wordId: 297,
     words: "じっと",
     pron: "じっと",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "副，サ変",
-    meaning: "一動不動、安靜地；專心致志地；耐心地"
+    meaning: "一动不动、安静地；专心致志地；耐心地"
   },
   {
     wordId: 298,
@@ -2681,7 +2681,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名，サ変",
-    meaning: "錯誤、失敗"
+    meaning: "错误、失败"
   },
   {
     wordId: 299,
@@ -2690,7 +2690,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "形動，サ変",
-    meaning: "失禮、無禮；對不起、勞駕；失陪了"
+    meaning: "失礼、无礼；对不起、劳驾；失陪了"
   },
   {
     wordId: 300,
@@ -2708,7 +2708,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "自五",
-    meaning: "死亡；失去生氣；閒置著、不起作用"
+    meaning: "死亡；失去生气；闲置著、不起作用"
   },
   {
     wordId: 302,
@@ -2717,7 +2717,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "副",
-    meaning: "一會兒；暫時、目前；一段時間"
+    meaning: "一会儿；暂时、目前；一段时间"
   },
   {
     wordId: 303,
@@ -2726,7 +2726,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "形",
-    meaning: "（味道）苦澀；（表情等）苦澀；古樸的、高雅的；小氣的"
+    meaning: "（味道）苦涩；（表情等）苦涩；古朴的、高雅的；小气的"
   },
   {
     wordId: 304,
@@ -2735,7 +2735,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "他五",
-    meaning: "擠、榨；紮起來；縮小；把聲音調小；縮小範圍；絞盡腦汁；嚴厲責備、批評"
+    meaning: "挤、榨；扎起来；缩小；把声音调小；缩小范围；绞尽脑汁；严厉责备、批评"
   },
   {
     wordId: 305,
@@ -2744,7 +2744,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名",
-    meaning: "島嶼"
+    meaning: "岛屿"
   },
   {
     wordId: 306,
@@ -2753,7 +2753,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "自他五",
-    meaning: "收拾、整理；保存；關門、倒閉"
+    meaning: "收拾、整理；保存；关门、倒闭"
   },
   {
     wordId: 307,
@@ -2762,7 +2762,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "自五",
-    meaning: "關門"
+    meaning: "关门"
   },
   {
     wordId: 308,
@@ -2771,16 +2771,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "自五",
-    meaning: "不寬鬆、緊"
+    meaning: "不宽松、紧"
   },
   {
     wordId: 309,
     words: "自慢",
     pron: "じまん",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名，サ変",
-    meaning: "驕傲、自豪、豪言"
+    meaning: "骄傲、自豪、豪言"
   },
   {
     wordId: 310,
@@ -2789,7 +2789,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "他下一",
-    meaning: "關閉；倒閉"
+    meaning: "关闭；倒闭"
   },
   {
     wordId: 311,
@@ -2807,16 +2807,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "他五",
-    meaning: "聊天、嘮叨"
+    meaning: "聊天、唠叨"
   },
   {
     wordId: 313,
     words: "邪魔",
     pron: "じゃま",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名，サ変",
-    meaning: "障礙物、妨礙；拜訪、串門"
+    meaning: "障碍物、妨碍；拜访、串门"
   },
   {
     wordId: 314,
@@ -2831,19 +2831,19 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 315,
     words: "十分",
     pron: "じゅうぶん",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "形動，副",
-    meaning: "許多；完全地"
+    meaning: "许多；完全地"
   },
   {
     wordId: 316,
     words: "授業",
     pron: "じゅぎょう",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名，サ変",
-    meaning: "傳授知識、技術、手藝"
+    meaning: "传授知识、技术、手艺"
   },
   {
     wordId: 317,
@@ -2852,7 +2852,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名",
-    meaning: "作業；研究中的問題"
+    meaning: "作业；研究中的问题"
   },
   {
     wordId: 318,
@@ -2870,16 +2870,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名",
-    meaning: "興趣、愛好；樂趣、喜好"
+    meaning: "兴趣、爱好；乐趣、喜好"
   },
   {
     wordId: 320,
     words: "順調",
     pron: "じゅんちょう",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名，形動",
-    meaning: "順利、一帆風順"
+    meaning: "顺利、一帆风顺"
   },
   {
     wordId: 321,
@@ -2894,37 +2894,37 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 322,
     words: "上手",
     pron: "じょうず",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名，形動",
-    meaning: "嫺熟；客套"
+    meaning: "娴熟；客套"
   },
   {
     wordId: 323,
     words: "上達",
     pron: "じょうたつ",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名，形動",
-    meaning: "學習、技能長進、進步"
+    meaning: "学习、技能长进、进步"
   },
   {
     wordId: 324,
     words: "冗談",
     pron: "じょうだん",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名",
-    meaning: "玩笑、笑話"
+    meaning: "玩笑、笑话"
   },
   {
     wordId: 325,
     words: "丈夫",
     pron: "じょうぶ",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "形動",
-    meaning: "健康的；結實的"
+    meaning: "健康的；结实的"
   },
   {
     wordId: 326,
@@ -2933,7 +2933,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名，サ変",
-    meaning: "證明"
+    meaning: "证明"
   },
   {
     wordId: 327,
@@ -2942,7 +2942,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名，サ変",
-    meaning: "吃飯、飲食、飯菜"
+    meaning: "吃饭、饮食、饭菜"
   },
   {
     wordId: 328,
@@ -2960,7 +2960,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "他下一",
-    meaning: "通知、告訴；通報、預告"
+    meaning: "通知、告诉；通报、预告"
   },
   {
     wordId: 330,
@@ -2969,7 +2969,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "他下一",
-    meaning: "調查、研究；查閱（辭書等）；搜索、檢查；審訊"
+    meaning: "调查、研究；查阅（辞书等）；搜索、检查；审讯"
   },
   {
     wordId: 331,
@@ -2978,16 +2978,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名",
-    meaning: "臀部；後頭；末尾；（器物的）底兒"
+    meaning: "臀部；后头；末尾；（器物的）底儿"
   },
   {
     wordId: 332,
     words: "じりじり",
     pron: "じりじり",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "副",
-    meaning: "鈴聲等；油炸的吱吱音；一步一步地移動；（太陽光）灼熱；坐立不安"
+    meaning: "铃声等；油炸的吱吱音；一步一步地移动；（太阳光）灼热；坐立不安"
   },
   {
     wordId: 333,
@@ -2996,7 +2996,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "自五",
-    meaning: "後退；回避；隱退、辭職；讓步"
+    meaning: "后退；回避；隐退、辞职；让步"
   },
   {
     wordId: 334,
@@ -3005,7 +3005,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名",
-    meaning: "果汁；草木的汁；菜湯；（占的）便宜、好處"
+    meaning: "果汁；草木的汁；菜汤；（占的）便宜、好处"
   },
   {
     wordId: 335,
@@ -3014,7 +3014,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名",
-    meaning: "記號、符號；標誌；憑證"
+    meaning: "记号、符号；标志；凭证"
   },
   {
     wordId: 336,
@@ -3023,7 +3023,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "他上一",
-    meaning: "信仰；相信；信賴"
+    meaning: "信仰；相信；信赖"
   },
   {
     wordId: 337,
@@ -3032,7 +3032,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名，形動",
-    meaning: "體貼、關懷、熱情"
+    meaning: "体贴、关怀、热情"
   },
   {
     wordId: 338,
@@ -3041,7 +3041,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名，サ変",
-    meaning: "擔心；照顧、張羅"
+    meaning: "担心；照顾、张罗"
   },
   {
     wordId: 339,
@@ -3050,7 +3050,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "名",
-    meaning: "報刊"
+    meaning: "报刊"
   },
   {
     wordId: 340,
@@ -3068,7 +3068,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "他五",
-    meaning: "呼吸；吸煙；吸收"
+    meaning: "呼吸；吸烟；吸收"
   },
   {
     wordId: 342,
@@ -3077,7 +3077,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "名",
-    meaning: "數學"
+    meaning: "数学"
   },
   {
     wordId: 343,
@@ -3086,7 +3086,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "名",
-    meaning: "末尾；結果；將來；排行最後；末世；無足輕重之事"
+    meaning: "末尾；结果；将来；排行最后；末世；无足轻重之事"
   },
   {
     wordId: 344,
@@ -3095,7 +3095,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "他下一",
-    meaning: "擺放；穩定下來；安置；讓……坐下"
+    meaning: "摆放；稳定下来；安置；让……坐下"
   },
   {
     wordId: 345,
@@ -3104,7 +3104,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "名",
-    meaning: "姿勢；外觀、打扮；狀況、情況；物體的形狀；身影"
+    meaning: "姿势；外观、打扮；状况、情况；物体的形状；身影"
   },
   {
     wordId: 346,
@@ -3113,7 +3113,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "自上一",
-    meaning: "通過、穿過；超過；經過、經歷；結束、過去；過期；過度、過分；勝於"
+    meaning: "通过、穿过；超过；经过、经历；结束、过去；过期；过度、过分；胜于"
   },
   {
     wordId: 347,
@@ -3122,7 +3122,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "自五",
-    meaning: "空；閑下來、手空出來"
+    meaning: "空；闲下来、手空出来"
   },
   {
     wordId: 348,
@@ -3149,7 +3149,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "形",
-    meaning: "可怕、嚇人；非常、特別；表示驚訝、驚歎的心情"
+    meaning: "可怕、吓人；非常、特别；表示惊讶、惊叹的心情"
   },
   {
     wordId: 351,
@@ -3158,7 +3158,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "他五",
-    meaning: "度過；過分、過度"
+    meaning: "度过；过分、过度"
   },
   {
     wordId: 352,
@@ -3167,7 +3167,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "形",
-    meaning: "涼快；清爽、爽快"
+    meaning: "凉快；清爽、爽快"
   },
   {
     wordId: 353,
@@ -3176,7 +3176,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "自五",
-    meaning: "前進；進展；進入；進步；惡化；願意、積極；旺盛；鐘錶快"
+    meaning: "前进；进展；进入；进步；恶化；愿意、积极；旺盛；钟表快"
   },
   {
     wordId: 354,
@@ -3203,16 +3203,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "副",
-    meaning: "心情爽快；整潔、清爽；明瞭"
+    meaning: "心情爽快；整洁、清爽；明了"
   },
   {
     wordId: 357,
     words: "ずっと",
     pron: "ずっと",
-    letterOrder: 54,
-    letter: "ず",
+    letterOrder: 13,
+    letter: "す",
     type: "副",
-    meaning: "時間、距離相隔閡；一直、不停地；筆直；……得多"
+    meaning: "时间、距离相隔阂；一直、不停地；笔直；……得多"
   },
   {
     wordId: 358,
@@ -3230,7 +3230,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "他下一",
-    meaning: "扔掉；放棄；拋棄、遺棄"
+    meaning: "扔掉；放弃；抛弃、遗弃"
   },
   {
     wordId: 360,
@@ -3248,7 +3248,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "形動",
-    meaning: "正直、誠實；坦率"
+    meaning: "正直、诚实；坦率"
   },
   {
     wordId: 362,
@@ -3257,7 +3257,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "形",
-    meaning: "出色；非常、特別"
+    meaning: "出色；非常、特别"
   },
   {
     wordId: 363,
@@ -3266,7 +3266,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "自五",
-    meaning: "下滑；滑溜；打滑；考試落第；地位下降；說溜嘴"
+    meaning: "下滑；滑溜；打滑；考试落第；地位下降；说溜嘴"
   },
   {
     wordId: 364,
@@ -3275,7 +3275,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "他五",
-    meaning: "結束；償還；對付、將就；解決"
+    meaning: "结束；偿还；对付、将就；解决"
   },
   {
     wordId: 365,
@@ -3293,7 +3293,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "自五",
-    meaning: "結束；足夠、可以；解決"
+    meaning: "结束；足够、可以；解决"
   },
   {
     wordId: 367,
@@ -3302,7 +3302,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "自五",
-    meaning: "清澈；天空無雲；聲音清亮；沒有邪念"
+    meaning: "清澈；天空无云；声音清亮；没有邪念"
   },
   {
     wordId: 368,
@@ -3311,7 +3311,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 13,
     letter: "す",
     type: "名",
-    meaning: "相撲"
+    meaning: "相扑"
   },
   {
     wordId: 369,
@@ -3320,7 +3320,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "名",
-    meaning: "脊背；後防；身高"
+    meaning: "脊背；后防；身高"
   },
   {
     wordId: 370,
@@ -3329,7 +3329,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "名",
-    meaning: "中學生、高中生等"
+    meaning: "中学生、高中生等"
   },
   {
     wordId: 371,
@@ -3338,7 +3338,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "形",
-    meaning: "空間狹小、幅度狹窄；看法、觀點貧乏"
+    meaning: "空间狭小、幅度狭窄；看法、观点贫乏"
   },
   {
     wordId: 372,
@@ -3347,7 +3347,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "名，サ変",
-    meaning: "照看、照顧；棘手、麻煩；介紹、斡旋"
+    meaning: "照看、照顾；棘手、麻烦；介绍、斡旋"
   },
   {
     wordId: 373,
@@ -3356,7 +3356,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "名",
-    meaning: "線；鐵路線；電線、電話線；方針"
+    meaning: "线；铁路线；电线、电话线；方针"
   },
   {
     wordId: 374,
@@ -3365,16 +3365,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "名",
-    meaning: "上個月"
+    meaning: "上个月"
   },
   {
     wordId: 375,
     words: "全然",
     pron: "ぜんぜん",
-    letterOrder: 55,
-    letter: "ぜ",
+    letterOrder: 14,
+    letter: "せ",
     type: "副",
-    meaning: "（後接否定）一點、完全、根本"
+    meaning: "（后接否定）一点、完全、根本"
   },
   {
     wordId: 376,
@@ -3383,7 +3383,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "名，サ変",
-    meaning: "洗滌"
+    meaning: "洗涤"
   },
   {
     wordId: 377,
@@ -3392,16 +3392,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 14,
     letter: "せ",
     type: "名",
-    meaning: "先輩、前輩、老資格；先入學或畢業的人、先參加工作的人"
+    meaning: "先辈、前辈、老资格；先入学或毕业的人、先参加工作的人"
   },
   {
     wordId: 378,
     words: "全部",
     pron: "ぜんぶ",
-    letterOrder: 55,
-    letter: "ぜ",
+    letterOrder: 14,
+    letter: "せ",
     type: "名",
-    meaning: "全部、整體上"
+    meaning: "全部、整体上"
   },
   {
     wordId: 379,
@@ -3410,7 +3410,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "自五",
-    meaning: "陪伴；結為夫婦；吻合、能實現"
+    meaning: "陪伴；结为夫妇；吻合、能实现"
   },
   {
     wordId: 380,
@@ -3428,7 +3428,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "名",
-    meaning: "底部、底下；心底、內心；降到最低的物價或行情等"
+    meaning: "底部、底下；心底、内心；降到最低的物价或行情等"
   },
   {
     wordId: 382,
@@ -3437,7 +3437,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "接続",
-    meaning: "於是、因此；那麼"
+    meaning: "于是、因此；那么"
   },
   {
     wordId: 383,
@@ -3446,7 +3446,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "自他五",
-    meaning: "流入、匯入；落下、降下；澆、灑；灌、注入；灌溉；集中"
+    meaning: "流入、汇入；落下、降下；浇、洒；灌、注入；灌溉；集中"
   },
   {
     wordId: 384,
@@ -3455,7 +3455,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "他五",
-    meaning: "使……成長；促進發育、培養"
+    meaning: "使……成长；促进发育、培养"
   },
   {
     wordId: 385,
@@ -3464,7 +3464,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "代",
-    meaning: "那邊；你；那個；那一位"
+    meaning: "那边；你；那个；那一位"
   },
   {
     wordId: 386,
@@ -3473,7 +3473,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "名，サ変",
-    meaning: "從學校畢業"
+    meaning: "从学校毕业"
   },
   {
     wordId: 387,
@@ -3482,7 +3482,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "副",
-    meaning: "原原本本、原封不動的；就那樣地；一模一樣"
+    meaning: "原原本本、原封不动的；就那样地；一模一样"
   },
   {
     wordId: 388,
@@ -3491,7 +3491,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "名",
-    meaning: "祖父、爺爺、外公"
+    meaning: "祖父、爷爷、外公"
   },
   {
     wordId: 389,
@@ -3509,7 +3509,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "副",
-    meaning: "那些、那麼多；唯獨那個；只有那些、只限於那些"
+    meaning: "那些、那么多；唯独那个；只有那些、只限于那些"
   },
   {
     wordId: 391,
@@ -3518,7 +3518,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "接続",
-    meaning: "那麼；因此；後來"
+    meaning: "那么；因此；后来"
   },
   {
     wordId: 392,
@@ -3527,7 +3527,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "自五",
-    meaning: "彙集、聚集；齊全、成套；整齊、一致"
+    meaning: "汇集、聚集；齐全、成套；整齐、一致"
   },
   {
     wordId: 393,
@@ -3536,7 +3536,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "他下一",
-    meaning: "使……彙集、聚集；使齊備、湊齊；擺整齊；使……一致、整齊"
+    meaning: "使……汇集、聚集；使齐备、凑齐；摆整齐；使……一致、整齐"
   },
   {
     wordId: 394,
@@ -3545,7 +3545,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "副",
-    meaning: "慢慢地、靜悄悄地；漸漸地、一點點地"
+    meaning: "慢慢地、静悄悄地；渐渐地、一点点地"
   },
   {
     wordId: 395,
@@ -3554,25 +3554,25 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "體育"
+    meaning: "体育"
   },
   {
     wordId: 396,
     words: "大学",
     pron: "だいがく",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "名",
-    meaning: "大學"
+    meaning: "大学"
   },
   {
     wordId: 397,
     words: "大事",
     pron: "だいじ",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "名，形動",
-    meaning: "大事；重要、關鍵；貴重的、珍貴的"
+    meaning: "大事；重要、关键；贵重的、珍贵的"
   },
   {
     wordId: 398,
@@ -3580,17 +3580,17 @@ const n5KanjiWordsZhTW: WordData[] = [
     pron: "たいした",
     letterOrder: 16,
     letter: "た",
-    type: "連體",
-    meaning: "了不起；不算什麼、不要緊"
+    type: "連体",
+    meaning: "了不起；不算什么、不要紧"
   },
   {
     wordId: 399,
     words: "大丈夫",
     pron: "だいじょうぶ",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "形動",
-    meaning: "安全、放心；沒關係、不要緊"
+    meaning: "安全、放心；没关系、不要紧"
   },
   {
     wordId: 400,
@@ -3599,7 +3599,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "形動",
-    meaning: "貴重、心愛、謹慎"
+    meaning: "贵重、心爱、谨慎"
   },
   {
     wordId: 401,
@@ -3608,16 +3608,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "體操；活動、運動"
+    meaning: "体操；活动、运动"
   },
   {
     wordId: 402,
     words: "大体",
     pron: "だいたい",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "名，副",
-    meaning: "大體上、大概、概略；基本上、差不多；全部；本來、原來"
+    meaning: "大体上、大概、概略；基本上、差不多；全部；本来、原来"
   },
   {
     wordId: 403,
@@ -3626,16 +3626,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "副",
-    meaning: "通常；大概、也許；適度、適當；普通"
+    meaning: "通常；大概、也许；适度、适当；普通"
   },
   {
     wordId: 404,
     words: "大分",
     pron: "だいぶ",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "副",
-    meaning: "數量多、很、頗、相當地"
+    meaning: "数量多、很、颇、相当地"
   },
   {
     wordId: 405,
@@ -3644,7 +3644,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "形動",
-    meaning: "夠受的、不得了、不簡單；重大、嚴重；非常"
+    meaning: "够受的、不得了、不简单；重大、严重；非常"
   },
   {
     wordId: 406,
@@ -3653,7 +3653,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "太陽"
+    meaning: "太阳"
   },
   {
     wordId: 407,
@@ -3662,7 +3662,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "形動",
-    meaning: "平、平坦；平穩、安靜、心平氣和"
+    meaning: "平、平坦；平稳、安静、心平气和"
   },
   {
     wordId: 408,
@@ -3671,7 +3671,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他五",
-    meaning: "打倒、推倒；打敗；打倒、推翻"
+    meaning: "打倒、推倒；打败；打倒、推翻"
   },
   {
     wordId: 409,
@@ -3680,7 +3680,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "自下一",
-    meaning: "倒塌；病倒、死；倒臺；倒閉、破產"
+    meaning: "倒塌；病倒、死；倒台；倒闭、破产"
   },
   {
     wordId: 410,
@@ -3689,7 +3689,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "財寶、寶貝"
+    meaning: "财宝、宝贝"
   },
   {
     wordId: 411,
@@ -3698,7 +3698,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他五",
-    meaning: "煮飯"
+    meaning: "煮饭"
   },
   {
     wordId: 412,
@@ -3707,16 +3707,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他五",
-    meaning: "燒；薰香"
+    meaning: "烧；薰香"
   },
   {
     wordId: 413,
     words: "抱く",
     pron: "だく",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "他五",
-    meaning: "抱；心懷"
+    meaning: "抱；心怀"
   },
   {
     wordId: 414,
@@ -3725,7 +3725,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "副",
-    meaning: "眾多、很多、許多；足夠、夠了"
+    meaning: "众多、很多、许多；足够、够了"
   },
   {
     wordId: 415,
@@ -3734,7 +3734,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "竹；以松竹梅分等級時的第二"
+    meaning: "竹；以松竹梅分等级时的第二"
   },
   {
     wordId: 416,
@@ -3743,7 +3743,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "副，形動",
-    meaning: "確實；可靠的；正常的；大概、或許"
+    meaning: "确实；可靠的；正常的；大概、或许"
   },
   {
     wordId: 417,
@@ -3752,7 +3752,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他下一",
-    meaning: "確認、核實"
+    meaning: "确认、核实"
   },
   {
     wordId: 418,
@@ -3761,7 +3761,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "自五",
-    meaning: "被救、脫險；省錢、省事；有幫助"
+    meaning: "被救、脱险；省钱、省事；有帮助"
   },
   {
     wordId: 419,
@@ -3770,7 +3770,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他下一",
-    meaning: "救助；幫助；促進"
+    meaning: "救助；帮助；促进"
   },
   {
     wordId: 420,
@@ -3779,7 +3779,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他下一",
-    meaning: "尋找、尋求；詢問、打聽"
+    meaning: "寻找、寻求；询问、打听"
   },
   {
     wordId: 421,
@@ -3788,7 +3788,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他下一",
-    meaning: "訪問、拜訪"
+    meaning: "访问、拜访"
   },
   {
     wordId: 422,
@@ -3797,7 +3797,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "普通的、一般的；不在乎、不計較；免費"
+    meaning: "普通的、一般的；不在乎、不计较；免费"
   },
   {
     wordId: 423,
@@ -3806,7 +3806,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "副，接続",
-    meaning: "唯、只；僅；但是、然而"
+    meaning: "唯、只；仅；但是、然而"
   },
   {
     wordId: 424,
@@ -3815,7 +3815,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "副，感",
-    meaning: "現在；剛剛；馬上；（外出回來的應酬話）我回來了"
+    meaning: "现在；刚刚；马上；（外出回来的应酬话）我回来了"
   },
   {
     wordId: 425,
@@ -3824,7 +3824,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "自五",
-    meaning: "打仗、戰鬥；競爭"
+    meaning: "打仗、战斗；竞争"
   },
   {
     wordId: 426,
@@ -3833,7 +3833,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他五",
-    meaning: "拍、敲、擂；拍鬆軟；非難、攻擊；試探、探問；殺價"
+    meaning: "拍、敲、擂；拍松软；非难、攻击；试探、探问；杀价"
   },
   {
     wordId: 427,
@@ -3842,7 +3842,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "形",
-    meaning: "正確的、對的；正當、正統；端正；正式的"
+    meaning: "正确的、对的；正当、正统；端正；正式的"
   },
   {
     wordId: 428,
@@ -3860,7 +3860,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他五",
-    meaning: "折疊；關閉、收拾；藏在心裡；殺、幹掉"
+    meaning: "折叠；关闭、收拾；藏在心里；杀、干掉"
   },
   {
     wordId: 430,
@@ -3869,7 +3869,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "豎、縱；上下關係"
+    meaning: "竖、纵；上下关系"
   },
   {
     wordId: 431,
@@ -3878,7 +3878,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他下一",
-    meaning: "豎立起來；刺、紮；揚起波浪、使冒煙；關閉；設立；決定；讓人當；尊敬、給面子；傳播"
+    meaning: "竖立起来；刺、扎；扬起波浪、使冒烟；关闭；设立；决定；让人当；尊敬、给面子；传播"
   },
   {
     wordId: 432,
@@ -3887,7 +3887,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "副",
-    meaning: "例如、比方說"
+    meaning: "例如、比方说"
   },
   {
     wordId: 433,
@@ -3896,7 +3896,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "架；大陸架"
+    meaning: "架；大陆架"
   },
   {
     wordId: 434,
@@ -3914,7 +3914,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "種子；血統、種；原因、材料；做菜的材料；戲法、魔術等的招數"
+    meaning: "种子；血统、种；原因、材料；做菜的材料；戏法、魔术等的招数"
   },
   {
     wordId: 436,
@@ -3923,7 +3923,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "自他五",
-    meaning: "享受、欣賞；期待、盼望"
+    meaning: "享受、欣赏；期待、盼望"
   },
   {
     wordId: 437,
@@ -3932,7 +3932,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他五",
-    meaning: "享受、欣賞；期待、盼望"
+    meaning: "享受、欣赏；期待、盼望"
   },
   {
     wordId: 438,
@@ -3941,7 +3941,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "旅行、觀光"
+    meaning: "旅行、观光"
   },
   {
     wordId: 439,
@@ -3950,7 +3950,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "時候；每次……；回、次"
+    meaning: "时候；每次……；回、次"
   },
   {
     wordId: 440,
@@ -3968,7 +3968,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "副",
-    meaning: "也許、或許、可能；許多、很多"
+    meaning: "也许、或许、可能；许多、很多"
   },
   {
     wordId: 442,
@@ -3977,7 +3977,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "球、硬幣"
+    meaning: "球、硬币"
   },
   {
     wordId: 443,
@@ -3986,16 +3986,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "雞蛋、鳥蛋等；未出師或未畢業的人、初出茅廬者"
+    meaning: "鸡蛋、鸟蛋等；未出师或未毕业的人、初出茅庐者"
   },
   {
     wordId: 444,
     words: "騙す",
     pron: "だます",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "他五",
-    meaning: "欺騙；使平靜、使平息"
+    meaning: "欺骗；使平静、使平息"
   },
   {
     wordId: 445,
@@ -4004,7 +4004,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "副",
-    meaning: "偶爾"
+    meaning: "偶尔"
   },
   {
     wordId: 446,
@@ -4013,7 +4013,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "自五",
-    meaning: "聚集、彙集；積壓、停滯"
+    meaning: "聚集、汇集；积压、停滞"
   },
   {
     wordId: 447,
@@ -4022,25 +4022,25 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "自五",
-    meaning: "積攢、積存"
+    meaning: "积攒、积存"
   },
   {
     wordId: 448,
     words: "黙る",
     pron: "だまる",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "自五",
-    meaning: "沉默、不吱聲；不打招呼、不征得同意；不反駁"
+    meaning: "沉默、不吱声；不打招呼、不征得同意；不反驳"
   },
   {
     wordId: 449,
     words: "駄目",
     pron: "だめ",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "形動",
-    meaning: "無用；白費；不可挽救；做不到、不可能；不行"
+    meaning: "无用；白费；不可挽救；做不到、不可能；不行"
   },
   {
     wordId: 450,
@@ -4049,7 +4049,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他五",
-    meaning: "試驗、嘗試、考驗"
+    meaning: "试验、尝试、考验"
   },
   {
     wordId: 451,
@@ -4058,7 +4058,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "消息、書信"
+    meaning: "消息、书信"
   },
   {
     wordId: 452,
@@ -4067,16 +4067,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他五",
-    meaning: "投靠；依賴、依靠"
+    meaning: "投靠；依赖、依靠"
   },
   {
     wordId: 453,
     words: "だらしない",
     pron: "だらしない",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "形",
-    meaning: "散漫、馬馬虎虎；沒出息、不爭氣；不檢點、放蕩"
+    meaning: "散漫、马马虎虎；没出息、不争气；不检点、放荡"
   },
   {
     wordId: 454,
@@ -4094,16 +4094,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "自上一",
-    meaning: "足夠；可以、將就"
+    meaning: "足够；可以、将就"
   },
   {
     wordId: 456,
     words: "怠い",
     pron: "だるい",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "形",
-    meaning: "倦怠、渾身無力"
+    meaning: "倦怠、浑身无力"
   },
   {
     wordId: 457,
@@ -4112,7 +4112,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "名",
-    meaning: "單詞、詞彙"
+    meaning: "单词、词汇"
   },
   {
     wordId: 458,
@@ -4121,7 +4121,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "名",
-    meaning: "血液；血脈"
+    meaning: "血液；血脉"
   },
   {
     wordId: 459,
@@ -4130,7 +4130,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "名",
-    meaning: "地下；死後的世界；非法的、秘密的世界"
+    meaning: "地下；死后的世界；非法的、秘密的世界"
   },
   {
     wordId: 460,
@@ -4148,7 +4148,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "名，サ変",
-    meaning: "遲到"
+    meaning: "迟到"
   },
   {
     wordId: 462,
@@ -4157,7 +4157,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "名",
-    meaning: "地圖"
+    meaning: "地图"
   },
   {
     wordId: 463,
@@ -4166,7 +4166,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "名，サ変",
-    meaning: "留神、注意；小心、謹慎；忠告、警告"
+    meaning: "留神、注意；小心、谨慎；忠告、警告"
   },
   {
     wordId: 464,
@@ -4175,7 +4175,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "名",
-    meaning: "中學"
+    meaning: "中学"
   },
   {
     wordId: 465,
@@ -4184,7 +4184,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "名，サ変",
-    meaning: "定做、訂貨、點菜；要求、條件"
+    meaning: "定做、订货、点菜；要求、条件"
   },
   {
     wordId: 466,
@@ -4193,7 +4193,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "名",
-    meaning: "聲調；節奏；語調、筆調；做法；情況、樣子；氣勢"
+    meaning: "声调；节奏；语调、笔调；做法；情况、样子；气势"
   },
   {
     wordId: 467,
@@ -4202,7 +4202,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "副",
-    meaning: "正好、恰好；恰巧、碰巧；簡直"
+    meaning: "正好、恰好；恰巧、碰巧；简直"
   },
   {
     wordId: 468,
@@ -4211,7 +4211,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 17,
     letter: "ち",
     type: "自五",
-    meaning: "凋謝、落；離散、分散；消散；滲；消腫；渙散、不專心"
+    meaning: "凋谢、落；离散、分散；消散；渗；消肿；涣散、不专心"
   },
   {
     wordId: 469,
@@ -4220,7 +4220,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "副",
-    meaning: "一不小心、終於；剛剛"
+    meaning: "一不小心、终于；刚刚"
   },
   {
     wordId: 470,
@@ -4229,7 +4229,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "名，サ変",
-    meaning: "上學、走讀"
+    meaning: "上学、走读"
   },
   {
     wordId: 471,
@@ -4247,7 +4247,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "自他上一",
-    meaning: "通往、通向；通（電）；領會、理解、溝通；精通、熟悉；行得通；通用；男女私通；包括"
+    meaning: "通往、通向；通（电）；领会、理解、沟通；精通、熟悉；行得通；通用；男女私通；包括"
   },
   {
     wordId: 473,
@@ -4265,7 +4265,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "自下一",
-    meaning: "疲勞、勞累；變舊"
+    meaning: "疲劳、劳累；变旧"
   },
   {
     wordId: 475,
@@ -4274,7 +4274,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他五",
-    meaning: "附上、粘附、沾上；留下痕跡；附屬、附帶；具備、設有；帶有；掌握、學會；紮根；跟隨"
+    meaning: "附上、粘附、沾上；留下痕迹；附属、附带；具备、设有；带有；掌握、学会；扎根；跟随"
   },
   {
     wordId: 476,
@@ -4283,7 +4283,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他五",
-    meaning: "紮、刺、戳；撞、頂；扶、把；嚴厲地追究；冒著、頂著；紮心、痛心"
+    meaning: "扎、刺、戳；撞、顶；扶、把；严厉地追究；冒著、顶著；扎心、痛心"
   },
   {
     wordId: 477,
@@ -4292,7 +4292,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他下一",
-    meaning: "靠近、靠緊；貼上、拴上；塗抹；安裝；附上、加上；使陪伴、使跟隨；留下痕跡；著手、"
+    meaning: "靠近、靠紧；贴上、拴上；涂抹；安装；附上、加上；使陪伴、使跟随；留下痕迹；著手、"
   },
   {
     wordId: 478,
@@ -4301,7 +4301,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他下一",
-    meaning: "佩帶、帶傷、系上；抵達、到達；把……靠在、貼在"
+    meaning: "佩带、带伤、系上；抵达、到达；把……靠在、贴在"
   },
   {
     wordId: 479,
@@ -4310,7 +4310,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "名，サ変",
-    meaning: "方便、合適；情況、關係、理由；準備、安排、抽出；合計、總共"
+    meaning: "方便、合适；情况、关系、理由；准备、安排、抽出；合计、总共"
   },
   {
     wordId: 480,
@@ -4319,7 +4319,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他下一",
-    meaning: "通知、傳達；傳授、繼承；從海外引進；傳遞熱、光、聲音等"
+    meaning: "通知、传达；传授、继承；从海外引进；传递热、光、声音等"
   },
   {
     wordId: 481,
@@ -4328,7 +4328,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "自五",
-    meaning: "被傳遞、被傳達；傳播、傳佈；沿著；繼承；傳來"
+    meaning: "被传递、被传达；传播、传布；沿著；继承；传来"
   },
   {
     wordId: 482,
@@ -4337,7 +4337,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "自五",
-    meaning: "繼續、持續；連接不斷；連接著、挨著；緊接著"
+    meaning: "继续、持续；连接不断；连接著、挨著；紧接著"
   },
   {
     wordId: 483,
@@ -4346,7 +4346,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他下一",
-    meaning: "繼續、持續；連接在一起"
+    meaning: "继续、持续；连接在一起"
   },
   {
     wordId: 484,
@@ -4355,7 +4355,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他五",
-    meaning: "包裝；覆蓋、籠罩、沉浸；包紅包奉上；隱瞞、藏在心裡"
+    meaning: "包装；覆盖、笼罩、沉浸；包红包奉上；隐瞒、藏在心里"
   },
   {
     wordId: 485,
@@ -4364,7 +4364,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他下一",
-    meaning: "工作、做事、任職"
+    meaning: "工作、做事、任职"
   },
   {
     wordId: 486,
@@ -4373,7 +4373,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他五",
-    meaning: "連接；相關、牽涉；有血緣關係；接通電話"
+    meaning: "连接；相关、牵涉；有血缘关系；接通电话"
   },
   {
     wordId: 487,
@@ -4382,7 +4382,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他五",
-    meaning: "弄碎、壓碎；宰殺；堵死、賭上；丟臉、損害名譽；消磨時間；敗家、使破產；毀壞"
+    meaning: "弄碎、压碎；宰杀；堵死、赌上；丢脸、损害名誉；消磨时间；败家、使破产；毁坏"
   },
   {
     wordId: 488,
@@ -4391,7 +4391,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "自下一",
-    meaning: "倒塌、擠壞、壓壞；丟人、丟臉；倒閉、破產；壞了、泡湯；痛心、悲痛"
+    meaning: "倒塌、挤坏、压坏；丢人、丢脸；倒闭、破产；坏了、泡汤；痛心、悲痛"
   },
   {
     wordId: 489,
@@ -4418,7 +4418,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "形",
-    meaning: "無趣、無聊；不足掛齒"
+    meaning: "无趣、无聊；不足挂齿"
   },
   {
     wordId: 492,
@@ -4427,7 +4427,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "自五",
-    meaning: "塞滿、擠滿；堵塞；困窘、窘迫；收縮"
+    meaning: "塞满、挤满；堵塞；困窘、窘迫；收缩"
   },
   {
     wordId: 493,
@@ -4436,7 +4436,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他五",
-    meaning: "堆積；裝運、裝載；積累；積蓄、積攢"
+    meaning: "堆积；装运、装载；积累；积蓄、积攒"
   },
   {
     wordId: 494,
@@ -4463,7 +4463,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "自他下一",
-    meaning: "裝放、塞入；擠緊、緊靠；憋緊；縮短；節約、節儉；值班、上班；不停地、持續"
+    meaning: "装放、塞入；挤紧、紧靠；憋紧；缩短；节约、节俭；值班、上班；不停地、持续"
   },
   {
     wordId: 497,
@@ -4472,7 +4472,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "自五",
-    meaning: "積、堆積；累積、積攢"
+    meaning: "积、堆积；累积、积攒"
   },
   {
     wordId: 498,
@@ -4481,7 +4481,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "形",
-    meaning: "難過、難受、難堪；冷酷、刻薄、殘酷"
+    meaning: "难过、难受、难堪；冷酷、刻薄、残酷"
   },
   {
     wordId: 499,
@@ -4490,7 +4490,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "自他五",
-    meaning: "懸掛、掛；吊起；上吊；向上翹；抽筋"
+    meaning: "悬挂、挂；吊起；上吊；向上翘；抽筋"
   },
   {
     wordId: 500,
@@ -4499,7 +4499,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他五",
-    meaning: "垂釣；引誘、誘騙"
+    meaning: "垂钓；引诱、诱骗"
   },
   {
     wordId: 501,
@@ -4508,7 +4508,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他五",
-    meaning: "吊起、掛起"
+    meaning: "吊起、挂起"
   },
   {
     wordId: 502,
@@ -4517,16 +4517,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他下一",
-    meaning: "帶、領"
+    meaning: "带、领"
   },
   {
     wordId: 503,
     words: "出会う",
     pron: "であう",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "自五",
-    meaning: "遇見、碰上"
+    meaning: "遇见、碰上"
   },
   {
     wordId: 504,
@@ -4535,7 +4535,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "名",
-    meaning: "手腳；左右手、俯首貼耳的人"
+    meaning: "手脚；左右手、俯首贴耳的人"
   },
   {
     wordId: 505,
@@ -4544,23 +4544,23 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "形動",
-    meaning: "彬彬有禮、恭恭敬敬；詳細地、細心地"
+    meaning: "彬彬有礼、恭恭敬敬；详细地、细心地"
   },
   {
     wordId: 506,
     words: "出掛ける",
     pron: "でかける",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "自下一",
-    meaning: "外出、出發；訪問、串門"
+    meaning: "外出、出发；访问、串门"
   },
   {
     wordId: 507,
     words: "出口",
     pron: "でぐち",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "名",
     meaning: "出口"
   },
@@ -4571,14 +4571,14 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "自他五",
-    meaning: "幫助；加上"
+    meaning: "帮助；加上"
   },
   {
     wordId: 509,
     words: "出迎える",
     pron: "でむかえる",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "他下一",
     meaning: "出迎、迎接"
   },
@@ -4589,7 +4589,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "名",
-    meaning: "寺廟"
+    meaning: "寺庙"
   },
   {
     wordId: 511,
@@ -4598,7 +4598,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "他五",
-    meaning: "照射、照耀；比較、參觀"
+    meaning: "照射、照耀；比较、参观"
   },
   {
     wordId: 512,
@@ -4616,7 +4616,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "名",
-    meaning: "店員"
+    meaning: "店员"
   },
   {
     wordId: 514,
@@ -4625,16 +4625,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "名",
-    meaning: "油炸食品；鍍金"
+    meaning: "油炸食品；镀金"
   },
   {
     wordId: 515,
     words: "どうか",
     pron: "どうか",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "副",
-    meaning: "請；好歹會、總會；是否；不正常、可笑"
+    meaning: "请；好歹会、总会；是否；不正常、可笑"
   },
   {
     wordId: 516,
@@ -4643,25 +4643,25 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "名",
-    meaning: "山頂；極點、頂點"
+    meaning: "山顶；极点、顶点"
   },
   {
     wordId: 517,
     words: "如何しても",
     pron: "どうしても",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "副",
-    meaning: "務必；怎麼也"
+    meaning: "务必；怎么也"
   },
   {
     wordId: 518,
     words: "動物",
     pron: "どうぶつ",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "名",
-    meaning: "動物"
+    meaning: "动物"
   },
   {
     wordId: 519,
@@ -4670,7 +4670,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "他五",
-    meaning: "使……通行；領進；使……穿過；使……透過；看完；使……合格；一直；通過；經過；堅"
+    meaning: "使……通行；领进；使……穿过；使……透过；看完；使……合格；一直；通过；经过；坚"
   },
   {
     wordId: 520,
@@ -4679,7 +4679,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "名",
-    meaning: "街道；通行；水、空氣的流通；（聲音的）響亮；評價、聲譽；理解、領會；同樣的狀態"
+    meaning: "街道；通行；水、空气的流通；（声音的）响亮；评价、声誉；理解、领会；同样的状态"
   },
   {
     wordId: 521,
@@ -4697,7 +4697,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "副，名",
-    meaning: "時時；各個時期"
+    meaning: "时时；各个时期"
   },
   {
     wordId: 523,
@@ -4706,7 +4706,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "他五",
-    meaning: "解開、解除；解答；消除；廢除"
+    meaning: "解开、解除；解答；消除；废除"
   },
   {
     wordId: 524,
@@ -4715,7 +4715,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "他五",
-    meaning: "融化、化開"
+    meaning: "融化、化开"
   },
   {
     wordId: 525,
@@ -4724,7 +4724,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "自下一",
-    meaning: "松了；怒氣（消了）；答出、解開；解除（禁令等）"
+    meaning: "松了；怒气（消了）；答出、解开；解除（禁令等）"
   },
   {
     wordId: 526,
@@ -4760,7 +4760,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "自他上一",
-    meaning: "關、閉；關、合上；結束、關閉"
+    meaning: "关、闭；关、合上；结束、关闭"
   },
   {
     wordId: 530,
@@ -4769,7 +4769,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "自五",
-    meaning: "送到、到達；及、夠；無遺漏、周到；（心願）得償、（希望）達到"
+    meaning: "送到、到达；及、够；无遗漏、周到；（心愿）得偿、（希望）达到"
   },
   {
     wordId: 531,
@@ -4778,7 +4778,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "他下一",
-    meaning: "報告；送到"
+    meaning: "报告；送到"
   },
   {
     wordId: 532,
@@ -4805,16 +4805,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "名",
-    meaning: "鄰居；鄰近"
+    meaning: "邻居；邻近"
   },
   {
     wordId: 535,
     words: "怒鳴る",
     pron: "どなる",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "自五",
-    meaning: "大聲喊、怒喊"
+    meaning: "大声喊、怒喊"
   },
   {
     wordId: 536,
@@ -4823,7 +4823,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "他五",
-    meaning: "使……飛、放；濺、噴；飛馳、疾馳；跳過；散佈；被降職"
+    meaning: "使……飞、放；溅、喷；飞驰、疾驰；跳过；散布；被降职"
   },
   {
     wordId: 537,
@@ -4841,7 +4841,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "自五",
-    meaning: "飛、飛跑；飛揚、飛濺；斷、脫落；煙消雲散、無影無蹤；（號碼等）不連接；散佈、流傳"
+    meaning: "飞、飞跑；飞扬、飞溅；断、脱落；烟消云散、无影无踪；（号码等）不连接；散布、流传"
   },
   {
     wordId: 539,
@@ -4868,7 +4868,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 20,
     letter: "と",
     type: "他下一",
-    meaning: "固定住；系、扣；留住、記住"
+    meaning: "固定住；系、扣；留住、记住"
   },
   {
     wordId: 542,
@@ -4892,10 +4892,10 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 544,
     words: "どんどん",
     pron: "どんどん",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "副",
-    meaning: "（鼓等的）咚咚聲；接連不斷、一個勁兒的"
+    meaning: "（鼓等的）咚咚声；接连不断、一个劲儿的"
   },
   {
     wordId: 545,
@@ -4904,7 +4904,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "名",
-    meaning: "秘密；生計、生活"
+    meaning: "秘密；生计、生活"
   },
   {
     wordId: 546,
@@ -4913,7 +4913,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "他五",
-    meaning: "修改、訂正；治療；更改、變更；（在動詞的連用形後）重做、改作"
+    meaning: "修改、订正；治疗；更改、变更；（在动词的连用形后）重做、改作"
   },
   {
     wordId: 547,
@@ -4922,7 +4922,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "他五",
-    meaning: "使液體流動；沖；沖洗；播放（聲音、音樂等）；傳播；流放；（藝人、計程車等）串街攬"
+    meaning: "使液体流动；冲；冲洗；播放（声音、音乐等）；传播；流放；（艺人、计程车等）串街揽"
   },
   {
     wordId: 548,
@@ -4931,7 +4931,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "副，形動",
-    meaning: "非常、相當（下接否定）輕易、容易"
+    meaning: "非常、相当（下接否定）轻易、容易"
   },
   {
     wordId: 549,
@@ -4940,7 +4940,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "他下一",
-    meaning: "眺望、凝視"
+    meaning: "眺望、凝视"
   },
   {
     wordId: 550,
@@ -4949,7 +4949,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "自下一",
-    meaning: "流、淌；漂流；（如水流般）流動、飄動；（歲月、時光）流逝；漂泊；（典當東西）當死"
+    meaning: "流、淌；漂流；（如水流般）流动、飘动；（岁月、时光）流逝；漂泊；（典当东西）当死"
   },
   {
     wordId: 551,
@@ -4958,7 +4958,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "自五",
-    meaning: "（鳥等）鳴叫、啼叫"
+    meaning: "（鸟等）鸣叫、啼叫"
   },
   {
     wordId: 552,
@@ -4967,7 +4967,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "他五",
-    meaning: "消失；丟失"
+    meaning: "消失；丢失"
   },
   {
     wordId: 553,
@@ -4976,7 +4976,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "自五",
-    meaning: "完、盡、遺失"
+    meaning: "完、尽、遗失"
   },
   {
     wordId: 554,
@@ -4994,7 +4994,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "他五",
-    meaning: "毆打"
+    meaning: "殴打"
   },
   {
     wordId: 556,
@@ -5003,7 +5003,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "他下一",
-    meaning: "投、扔；跳入；投射；放棄"
+    meaning: "投、扔；跳入；投射；放弃"
   },
   {
     wordId: 557,
@@ -5012,7 +5012,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "形",
-    meaning: "（令人）懷念、眷戀、依戀"
+    meaning: "（令人）怀念、眷恋、依恋"
   },
   {
     wordId: 558,
@@ -5021,7 +5021,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "名",
-    meaning: "鍋；火鍋"
+    meaning: "锅；火锅"
   },
   {
     wordId: 559,
@@ -5030,7 +5030,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "自下一",
-    meaning: "懶惰"
+    meaning: "懒惰"
   },
   {
     wordId: 560,
@@ -5039,7 +5039,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "名",
-    meaning: "波浪；波浪形的聲波、地震波、電波等"
+    meaning: "波浪；波浪形的声波、地震波、电波等"
   },
   {
     wordId: 561,
@@ -5048,7 +5048,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "名，接尾",
-    meaning: "普通、一般、平常排列、並列；每；同樣"
+    meaning: "普通、一般、平常排列、并列；每；同样"
   },
   {
     wordId: 562,
@@ -5057,7 +5057,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "名",
-    meaning: "眼淚；同情"
+    meaning: "眼泪；同情"
   },
   {
     wordId: 563,
@@ -5066,7 +5066,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "自五",
-    meaning: "（肉體的）痛苦；煩惱；（接動詞連用形之後，表示該動作）不能順利進行"
+    meaning: "（肉体的）痛苦；烦恼；（接动词连用形之后，表示该动作）不能顺利进行"
   },
   {
     wordId: 564,
@@ -5075,7 +5075,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "他五",
-    meaning: "鳴響、（使）出聲；出名、馳名；數落、一一陳述"
+    meaning: "鸣响、（使）出声；出名、驰名；数落、一一陈述"
   },
   {
     wordId: 565,
@@ -5084,7 +5084,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "自五",
-    meaning: "排成列；匹敵"
+    meaning: "排成列；匹敌"
   },
   {
     wordId: 566,
@@ -5093,7 +5093,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "他下一",
-    meaning: "排列；（整齊地）擺；比較；一一列舉"
+    meaning: "排列；（整齐地）摆；比较；一一列举"
   },
   {
     wordId: 567,
@@ -5102,7 +5102,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "自五",
-    meaning: "鳴、響；馳名、聞名"
+    meaning: "鸣、响；驰名、闻名"
   },
   {
     wordId: 568,
@@ -5111,7 +5111,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "副",
-    meaning: "盡可能"
+    meaning: "尽可能"
   },
   {
     wordId: 569,
@@ -5120,7 +5120,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "自下一",
-    meaning: "習慣、習以為常；熟練；慣於……"
+    meaning: "习惯、习以为常；熟练；惯于……"
   },
   {
     wordId: 570,
@@ -5129,7 +5129,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "自下一",
-    meaning: "馴熟"
+    meaning: "驯熟"
   },
   {
     wordId: 571,
@@ -5138,7 +5138,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "連語，副",
-    meaning: "不管什麼；不論有什麼；大概；據說是"
+    meaning: "不管什么；不论有什么；大概；据说是"
   },
   {
     wordId: 572,
@@ -5147,7 +5147,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "副",
-    meaning: "總覺得、不由得"
+    meaning: "总觉得、不由得"
   },
   {
     wordId: 573,
@@ -5156,7 +5156,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "自五",
-    meaning: "合適、般配"
+    meaning: "合适、般配"
   },
   {
     wordId: 574,
@@ -5165,7 +5165,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "名",
-    meaning: "香氣；臭味；氣息、情緒"
+    meaning: "香气；臭味；气息、情绪"
   },
   {
     wordId: 575,
@@ -5174,7 +5174,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "自五",
-    meaning: "散發氣味；（顏色）顯得鮮豔；（做壞事的）樣子、跡象"
+    meaning: "散发气味；（颜色）显得鲜艳；（做坏事的）样子、迹象"
   },
   {
     wordId: 576,
@@ -5192,7 +5192,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "名，形動",
-    meaning: "不好對付的人；不擅長、不善於"
+    meaning: "不好对付的人；不擅长、不善于"
   },
   {
     wordId: 578,
@@ -5201,7 +5201,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "形動",
-    meaning: "熱鬧、繁華；鬧哄哄"
+    meaning: "热闹、繁华；闹哄哄"
   },
   {
     wordId: 579,
@@ -5210,7 +5210,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "他五",
-    meaning: "握、攥；攥飯團；掌握"
+    meaning: "握、攥；攥饭团；掌握"
   },
   {
     wordId: 580,
@@ -5219,7 +5219,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "他五",
-    meaning: "憎惡、恨"
+    meaning: "憎恶、恨"
   },
   {
     wordId: 581,
@@ -5228,7 +5228,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "自下一",
-    meaning: "逃跑；逃避（責任等）"
+    meaning: "逃跑；逃避（责任等）"
   },
   {
     wordId: 582,
@@ -5237,7 +5237,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "自五",
-    meaning: "混濁；汙濁、混亂；（聲音）不清晰；發濁音"
+    meaning: "混浊；污浊、混乱；（声音）不清晰；发浊音"
   },
   {
     wordId: 583,
@@ -5246,7 +5246,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "名",
-    meaning: "日記；日記本"
+    meaning: "日记；日记本"
   },
   {
     wordId: 584,
@@ -5255,7 +5255,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "形",
-    meaning: "鈍的；（光、音）弱；（動作、思想）遲鈍、遲緩"
+    meaning: "钝的；（光、音）弱；（动作、思想）迟钝、迟缓"
   },
   {
     wordId: 585,
@@ -5264,7 +5264,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "名",
-    meaning: "貨物、行李；負擔、累贅"
+    meaning: "货物、行李；负担、累赘"
   },
   {
     wordId: 586,
@@ -5273,7 +5273,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "名，サ変",
-    meaning: "入學"
+    meaning: "入学"
   },
   {
     wordId: 587,
@@ -5282,7 +5282,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "他五",
-    meaning: "瞪；估計；監視、盯上"
+    meaning: "瞪；估计；监视、盯上"
   },
   {
     wordId: 588,
@@ -5291,7 +5291,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "自上一",
-    meaning: "像、似；大同小異"
+    meaning: "像、似；大同小异"
   },
   {
     wordId: 589,
@@ -5309,7 +5309,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "名",
-    meaning: "庭院；特定場所"
+    meaning: "庭院；特定场所"
   },
   {
     wordId: 591,
@@ -5318,7 +5318,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 22,
     letter: "に",
     type: "名",
-    meaning: "偶人；傀儡、沒有獨立性的人"
+    meaning: "偶人；傀儡、没有独立性的人"
   },
   {
     wordId: 592,
@@ -5327,7 +5327,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 23,
     letter: "ぬ",
     type: "他五",
-    meaning: "拔出；選出；除掉；竊取；省掉；超過；勝過；（作補助動詞）做到底"
+    meaning: "拔出；选出；除掉；窃取；省掉；超过；胜过；（作补助动词）做到底"
   },
   {
     wordId: 593,
@@ -5336,7 +5336,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 23,
     letter: "ぬ",
     type: "他五",
-    meaning: "脫掉、摘掉；脫下丟開"
+    meaning: "脱掉、摘掉；脱下丢开"
   },
   {
     wordId: 594,
@@ -5354,7 +5354,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 23,
     letter: "ぬ",
     type: "自下一",
-    meaning: "脫落、掉下；溜走；漏掉；穿過；消失；遲鈍"
+    meaning: "脱落、掉下；溜走；漏掉；穿过；消失；迟钝"
   },
   {
     wordId: 596,
@@ -5363,7 +5363,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 23,
     letter: "ぬ",
     type: "他五",
-    meaning: "偷盜；偷閒；背著、偷偷地；剽竊"
+    meaning: "偷盗；偷闲；背著、偷偷地；剽窃"
   },
   {
     wordId: 597,
@@ -5372,7 +5372,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 23,
     letter: "ぬ",
     type: "名",
-    meaning: "布；（接在其他名詞之前表示）平、水準"
+    meaning: "布；（接在其他名词之前表示）平、水准"
   },
   {
     wordId: 598,
@@ -5381,7 +5381,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 23,
     letter: "ぬ",
     type: "他五",
-    meaning: "塗、抹"
+    meaning: "涂、抹"
   },
   {
     wordId: 599,
@@ -5390,7 +5390,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 23,
     letter: "ぬ",
     type: "形",
-    meaning: "半冷不熱、不夠熱；不嚴厲"
+    meaning: "半冷不热、不够热；不严厉"
   },
   {
     wordId: 600,
@@ -5399,7 +5399,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "名",
-    meaning: "根；根底；根源、根據"
+    meaning: "根；根底；根源、根据"
   },
   {
     wordId: 601,
@@ -5408,7 +5408,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "他五",
-    meaning: "期望；請求、要求"
+    meaning: "期望；请求、要求"
   },
   {
     wordId: 602,
@@ -5417,7 +5417,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "名",
-    meaning: "價格"
+    meaning: "价格"
   },
   {
     wordId: 603,
@@ -5426,7 +5426,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "名",
-    meaning: "熱；熱度；熱情"
+    meaning: "热；热度；热情"
   },
   {
     wordId: 604,
@@ -5435,7 +5435,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "自五",
-    meaning: "粘、發粘；堅持不懈"
+    meaning: "粘、发粘；坚持不懈"
   },
   {
     wordId: 605,
@@ -5444,7 +5444,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 24,
     letter: "ね",
     type: "形動，名，サ変",
-    meaning: "睡懶覺的（人）"
+    meaning: "睡懒觉的（人）"
   },
   {
     wordId: 606,
@@ -5462,7 +5462,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "自五",
-    meaning: "留下；剩餘；殘留；流傳後世"
+    meaning: "留下；剩余；残留；流传后世"
   },
   {
     wordId: 608,
@@ -5471,7 +5471,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "他下一",
-    meaning: "放在……上；裝載、裝運；登載"
+    meaning: "放在……上；装载、装运；登载"
   },
   {
     wordId: 609,
@@ -5480,7 +5480,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "他下一",
-    meaning: "使……乘坐；傳播、傳導；和著（節拍、節奏）；騙人、欺騙；吸收參見、讓參加"
+    meaning: "使……乘坐；传播、传导；和著（节拍、节奏）；骗人、欺骗；吸收参见、让参加"
   },
   {
     wordId: 610,
@@ -5489,7 +5489,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "自他五",
-    meaning: "露處（物體的）一部分；從縫隙中看；窺視；粗略地看一下；向下看"
+    meaning: "露处（物体的）一部分；从缝隙中看；窥视；粗略地看一下；向下看"
   },
   {
     wordId: 611,
@@ -5498,7 +5498,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "名",
-    meaning: "喉嚨、咽喉；歌聲"
+    meaning: "喉咙、咽喉；歌声"
   },
   {
     wordId: 612,
@@ -5507,7 +5507,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "他五",
-    meaning: "伸展；伸直、使……平坦；稀釋；打倒、打趴在地；擴展、發展"
+    meaning: "伸展；伸直、使……平坦；稀释；打倒、打趴在地；扩展、发展"
   },
   {
     wordId: 613,
@@ -5516,7 +5516,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "自上一",
-    meaning: "變長、（褶皺等）伸展；失去彈性；增長、發展；筋疲力盡"
+    meaning: "变长、（褶皱等）伸展；失去弹性；增长、发展；筋疲力尽"
   },
   {
     wordId: 614,
@@ -5534,7 +5534,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "自五",
-    meaning: "升騰、升起"
+    meaning: "升腾、升起"
   },
   {
     wordId: 616,
@@ -5543,7 +5543,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "自下一",
-    meaning: "換乘；改變（主張、方針、所屬等）"
+    meaning: "换乘；改变（主张、方针、所属等）"
   },
   {
     wordId: 617,
@@ -5552,7 +5552,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "自五",
-    meaning: "放在上面；刊載、登載"
+    meaning: "放在上面；刊载、登载"
   },
   {
     wordId: 618,
@@ -5561,7 +5561,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "副，サ変",
-    meaning: "悠然自得、逍遙自在"
+    meaning: "悠然自得、逍遥自在"
   },
   {
     wordId: 619,
@@ -5570,7 +5570,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "名",
-    meaning: "樹葉"
+    meaning: "树叶"
   },
   {
     wordId: 620,
@@ -5579,7 +5579,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "自下一",
-    meaning: "生長"
+    meaning: "生长"
   },
   {
     wordId: 621,
@@ -5594,10 +5594,10 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 622,
     words: "馬鹿",
     pron: "ばか",
-    letterOrder: 62,
-    letter: "ば",
+    letterOrder: 26,
+    letter: "は",
     type: "名，形動",
-    meaning: "愚蠢的人；無益的；過分、極端；不好使、不中用；……呆子"
+    meaning: "愚蠢的人；无益的；过分、极端；不好使、不中用；……呆子"
   },
   {
     wordId: 623,
@@ -5624,7 +5624,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "計算；評價、預測；欺騙、詐騙"
+    meaning: "计算；评价、预测；欺骗、诈骗"
   },
   {
     wordId: 626,
@@ -5633,7 +5633,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "測量"
+    meaning: "测量"
   },
   {
     wordId: 627,
@@ -5642,7 +5642,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "測量、計算"
+    meaning: "测量、计算"
   },
   {
     wordId: 628,
@@ -5651,7 +5651,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "打掃；輕塗"
+    meaning: "打扫；轻涂"
   },
   {
     wordId: 629,
@@ -5660,16 +5660,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "噴出；嘔吐、吐出；冒出；說出、吐露；招供"
+    meaning: "喷出；呕吐、吐出；冒出；说出、吐露；招供"
   },
   {
     wordId: 630,
     words: "化ける",
     pron: "ばける",
-    letterOrder: 62,
-    letter: "ば",
+    letterOrder: 26,
+    letter: "は",
     type: "自下一",
-    meaning: "化身為；喬裝、冒充；驟變"
+    meaning: "化身为；乔装、冒充；骤变"
   },
   {
     wordId: 631,
@@ -5678,7 +5678,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "自他五",
-    meaning: "進展；運送；前往；推進"
+    meaning: "进展；运送；前往；推进"
   },
   {
     wordId: 632,
@@ -5687,7 +5687,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "夾進、插進；夾；心生……"
+    meaning: "夹进、插进；夹；心生……"
   },
   {
     wordId: 633,
@@ -5696,7 +5696,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "名",
-    meaning: "橋"
+    meaning: "桥"
   },
   {
     wordId: 634,
@@ -5705,7 +5705,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "彈跳、彈力；不沾水；彈；打算盤"
+    meaning: "弹跳、弹力；不沾水；弹；打算盘"
   },
   {
     wordId: 635,
@@ -5732,7 +5732,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "取下、解下；離席；避開；錯過"
+    meaning: "取下、解下；离席；避开；错过"
   },
   {
     wordId: 638,
@@ -5741,7 +5741,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "自他五",
-    meaning: "彈、反彈；氣息變粗；情緒高漲、起勁；（一狠心）拿出很多錢"
+    meaning: "弹、反弹；气息变粗；情绪高涨、起劲；（一狠心）拿出很多钱"
   },
   {
     wordId: 639,
@@ -5750,7 +5750,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "自下一",
-    meaning: "脫落、掉下；脫離、不合；未中、落空；相悖、不合（道理等）"
+    meaning: "脱落、掉下；脱离、不合；未中、落空；相悖、不合（道理等）"
   },
   {
     wordId: 640,
@@ -5759,7 +5759,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "名",
-    meaning: "旗幟"
+    meaning: "旗帜"
   },
   {
     wordId: 641,
@@ -5768,7 +5768,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "名",
-    meaning: "皮膚；物體表面；氣質"
+    meaning: "皮肤；物体表面；气质"
   },
   {
     wordId: 642,
@@ -5777,7 +5777,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "名",
-    meaning: "裸體；身無分文；毫不隱瞞、坦誠"
+    meaning: "裸体；身无分文；毫不隐瞒、坦诚"
   },
   {
     wordId: 643,
@@ -5786,7 +5786,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "名",
-    meaning: "田地、旱田；專業領域"
+    meaning: "田地、旱田；专业领域"
   },
   {
     wordId: 644,
@@ -5795,7 +5795,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "副，サ変",
-    meaning: "清楚；明確；清晰、明瞭；乾脆、斷然"
+    meaning: "清楚；明确；清晰、明了；干脆、断然"
   },
   {
     wordId: 645,
@@ -5804,7 +5804,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "形動",
-    meaning: "鮮豔、華美；鋪張、顯眼"
+    meaning: "鲜艳、华美；铺张、显眼"
   },
   {
     wordId: 646,
@@ -5813,7 +5813,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "放開、撒開；放掉、放走"
+    meaning: "放开、撒开；放掉、放走"
   },
   {
     wordId: 647,
@@ -5822,7 +5822,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "分離、離開；間隔、隔開"
+    meaning: "分离、离开；间隔、隔开"
   },
   {
     wordId: 648,
@@ -5831,7 +5831,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "派遣；射箭；放；防（火）；放開、解放"
+    meaning: "派遣；射箭；放；防（火）；放开、解放"
   },
   {
     wordId: 649,
@@ -5840,7 +5840,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "名",
-    meaning: "賞（櫻）花"
+    meaning: "赏（樱）花"
   },
   {
     wordId: 650,
@@ -5849,7 +5849,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "自下一",
-    meaning: "有距離、有差距；離開；分離、分開；脫離、背離"
+    meaning: "有距离、有差距；离开；分离、分开；脱离、背离"
   },
   {
     wordId: 651,
@@ -5858,7 +5858,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "自下一",
-    meaning: "跳；飛濺；散戲、散場；（行情）飛漲"
+    meaning: "跳；飞溅；散戏、散场；（行情）飞涨"
   },
   {
     wordId: 652,
@@ -5867,7 +5867,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "名",
-    meaning: "寬度；勢力、威力；伸縮餘地、靈活性；差價、幅度"
+    meaning: "宽度；势力、威力；伸缩余地、灵活性；差价、幅度"
   },
   {
     wordId: 653,
@@ -5876,7 +5876,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他下一",
-    meaning: "鑲、嵌；戴上；欺騙"
+    meaning: "镶、嵌；戴上；欺骗"
   },
   {
     wordId: 654,
@@ -5885,7 +5885,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "名",
-    meaning: "樹林"
+    meaning: "树林"
   },
   {
     wordId: 655,
@@ -5894,7 +5894,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "自五",
-    meaning: "流行、盛行；（疾病等）流行、蔓延；興旺"
+    meaning: "流行、盛行；（疾病等）流行、蔓延；兴旺"
   },
   {
     wordId: 656,
@@ -5903,16 +5903,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "拂、撣；橫掃、橫砍；支付；傾注、表示"
+    meaning: "拂、掸；横扫、横砍；支付；倾注、表示"
   },
   {
     wordId: 657,
     words: "ばらばら",
     pron: "ばらばら",
-    letterOrder: 62,
-    letter: "ば",
+    letterOrder: 26,
+    letter: "は",
     type: "副，形動",
-    meaning: "（雨點等）連續降落聲；支離破碎"
+    meaning: "（雨点等）连续降落声；支离破碎"
   },
   {
     wordId: 658,
@@ -5921,7 +5921,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "名",
-    meaning: "縫衣針；刺、鉤子"
+    meaning: "缝衣针；刺、钩子"
   },
   {
     wordId: 659,
@@ -5930,7 +5930,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "自他五",
-    meaning: "拉、張開；（將液體）裝滿；設置、擺；固執、堅持（己見）；打（頭、臉）、毆打；脹、"
+    meaning: "拉、张开；（将液体）装满；设置、摆；固执、坚持（己见）；打（头、脸）、殴打；胀、"
   },
   {
     wordId: 660,
@@ -5939,7 +5939,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "他五",
-    meaning: "粘貼"
+    meaning: "粘贴"
   },
   {
     wordId: 661,
@@ -5948,7 +5948,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "名",
-    meaning: "晴、晴天；隆重、正式、公開；（嫌疑）消除"
+    meaning: "晴、晴天；隆重、正式、公开；（嫌疑）消除"
   },
   {
     wordId: 662,
@@ -5957,7 +5957,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "自下一",
-    meaning: "腫"
+    meaning: "肿"
   },
   {
     wordId: 663,
@@ -5966,25 +5966,25 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 26,
     letter: "は",
     type: "自下一",
-    meaning: "晴；（心情）舒暢；（嫌疑、疑惑）消除"
+    meaning: "晴；（心情）舒畅；（嫌疑、疑惑）消除"
   },
   {
     wordId: 664,
     words: "番号",
     pron: "ばんごう",
-    letterOrder: 62,
-    letter: "ば",
+    letterOrder: 26,
+    letter: "は",
     type: "名",
-    meaning: "號碼"
+    meaning: "号码"
   },
   {
     wordId: 665,
     words: "万歳",
     pron: "ばんざい",
-    letterOrder: 62,
-    letter: "ば",
+    letterOrder: 26,
+    letter: "は",
     type: "名，サ変",
-    meaning: "萬歲；可喜、可賀；無可奈何"
+    meaning: "万岁；可喜、可贺；无可奈何"
   },
   {
     wordId: 666,
@@ -5993,7 +5993,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "自下一",
-    meaning: "變冷、變涼；（感情等）變冷淡"
+    meaning: "变冷、变凉；（感情等）变冷淡"
   },
   {
     wordId: 667,
@@ -6002,7 +6002,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "名",
-    meaning: "光、光亮；勢力、威力；光明、希望"
+    meaning: "光、光亮；势力、威力；光明、希望"
   },
   {
     wordId: 668,
@@ -6011,7 +6011,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "自五",
-    meaning: "發光、閃光；出眾、顯眼"
+    meaning: "发光、闪光；出众、显眼"
   },
   {
     wordId: 669,
@@ -6029,7 +6029,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "他五",
-    meaning: "彈奏、拉"
+    meaning: "弹奏、拉"
   },
   {
     wordId: 671,
@@ -6038,7 +6038,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "名，副",
-    meaning: "平素、平時"
+    meaning: "平素、平时"
   },
   {
     wordId: 672,
@@ -6047,7 +6047,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "名",
-    meaning: "膝蓋；大腿"
+    meaning: "膝盖；大腿"
   },
   {
     wordId: 673,
@@ -6065,16 +6065,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "自五",
-    meaning: "掛住；牽連；上當；掛心"
+    meaning: "挂住；牵连；上当；挂心"
   },
   {
     wordId: 675,
     words: "びっくり",
     pron: "びっくり",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "副，サ変",
-    meaning: "吃驚"
+    meaning: "吃惊"
   },
   {
     wordId: 676,
@@ -6083,7 +6083,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "名",
-    meaning: "（記載檔等製成、提出的）年月日、日期"
+    meaning: "（记载档等制成、提出的）年月日、日期"
   },
   {
     wordId: 677,
@@ -6092,16 +6092,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "他五",
-    meaning: "搬家、遷居"
+    meaning: "搬家、迁居"
   },
   {
     wordId: 678,
     words: "ぴったり",
     pron: "ぴったり",
-    letterOrder: 68,
-    letter: "ぴ",
+    letterOrder: 27,
+    letter: "ひ",
     type: "副，形動",
-    meaning: "緊緊地；恰好、正合適；說中、猜中"
+    meaning: "紧紧地；恰好、正合适；说中、猜中"
   },
   {
     wordId: 679,
@@ -6119,7 +6119,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "形",
-    meaning: "殘酷、無情；厲害、嚴重"
+    meaning: "残酷、无情；厉害、严重"
   },
   {
     wordId: 681,
@@ -6128,7 +6128,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "自五",
-    meaning: "發出回音、有迴響；震動；影響；揚名、聞名"
+    meaning: "发出回音、有回响；震动；影响；扬名、闻名"
   },
   {
     wordId: 682,
@@ -6137,7 +6137,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "名",
-    meaning: "皮膚"
+    meaning: "皮肤"
   },
   {
     wordId: 683,
@@ -6146,7 +6146,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "名，形動",
-    meaning: "時間；閒暇、閒工夫；休假；解雇；離婚"
+    meaning: "时间；闲暇、闲工夫；休假；解雇；离婚"
   },
   {
     wordId: 684,
@@ -6164,7 +6164,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "他五",
-    meaning: "挖苦、嘲弄、奚落；只問價不買"
+    meaning: "挖苦、嘲弄、奚落；只问价不买"
   },
   {
     wordId: 686,
@@ -6173,25 +6173,25 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "他五",
-    meaning: "涼一涼、（用冰）鎮、使冷靜"
+    meaning: "凉一凉、（用冰）镇、使冷静"
   },
   {
     wordId: 687,
     words: "病院",
     pron: "びょういん",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "名",
-    meaning: "醫院"
+    meaning: "医院"
   },
   {
     wordId: 688,
     words: "病気",
     pron: "びょうき",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "名",
-    meaning: "病；老毛病、惡習"
+    meaning: "病；老毛病、恶习"
   },
   {
     wordId: 689,
@@ -6200,7 +6200,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "形",
-    meaning: "遼闊；淵博的、廣泛的；（心胸）寬廣"
+    meaning: "辽阔；渊博的、广泛的；（心胸）宽广"
   },
   {
     wordId: 690,
@@ -6209,7 +6209,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "他五",
-    meaning: "拾、撿；挑、選；意外得到；在路上雇（汽車等）"
+    meaning: "拾、捡；挑、选；意外得到；在路上雇（汽车等）"
   },
   {
     wordId: 691,
@@ -6218,7 +6218,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "自五",
-    meaning: "（面積、範圍）擴大、蔓延；拡大、拡展"
+    meaning: "（面积、范围）扩大、蔓延；拡大、拡展"
   },
   {
     wordId: 692,
@@ -6227,7 +6227,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "他下一",
-    meaning: "打開、展開；擴大、擴展"
+    meaning: "打开、展开；扩大、扩展"
   },
   {
     wordId: 693,
@@ -6236,16 +6236,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "名",
-    meaning: "廣場；（喻）場所"
+    meaning: "广场；（喻）场所"
   },
   {
     wordId: 694,
     words: "貧乏",
     pron: "びんぼう",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "名，形動，サ変",
-    meaning: "貧窮、貧困"
+    meaning: "贫穷、贫困"
   },
   {
     wordId: 695,
@@ -6263,7 +6263,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "名",
-    meaning: "夫婦"
+    meaning: "夫妇"
   },
   {
     wordId: 697,
@@ -6281,7 +6281,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "形",
-    meaning: "深；深刻、深遠；深厚；（色、香）濃、深"
+    meaning: "深；深刻、深远；深厚；（色、香）浓、深"
   },
   {
     wordId: 699,
@@ -6308,7 +6308,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "自他五",
-    meaning: "刮；吹；吹（笛等）；吹牛；鑄造"
+    meaning: "刮；吹；吹（笛等）；吹牛；铸造"
   },
   {
     wordId: 702,
@@ -6317,7 +6317,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "自五",
-    meaning: "（水蒸氣等）噴出；（向外部）現出、冒出"
+    meaning: "（水蒸气等）喷出；（向外部）现出、冒出"
   },
   {
     wordId: 703,
@@ -6326,7 +6326,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "自五",
-    meaning: "鼓起、膨脹；（想法、計畫的規模）拡大"
+    meaning: "鼓起、膨胀；（想法、计划的规模）拡大"
   },
   {
     wordId: 704,
@@ -6335,7 +6335,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "自下一",
-    meaning: "腫、脹、鼓出；生氣、不高興"
+    meaning: "肿、胀、鼓出；生气、不高兴"
   },
   {
     wordId: 705,
@@ -6344,7 +6344,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "自下一",
-    meaning: "老、上年紀"
+    meaning: "老、上年纪"
   },
   {
     wordId: 706,
@@ -6353,7 +6353,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "自五",
-    meaning: "塞滿、占滿；關、閉；占著、用著"
+    meaning: "塞满、占满；关、闭；占著、用著"
   },
   {
     wordId: 707,
@@ -6362,7 +6362,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "自他五",
-    meaning: "擋、阻擋；（耳朵）堵、塞；鬱悶、不舒暢"
+    meaning: "挡、阻挡；（耳朵）堵、塞；郁闷、不舒畅"
   },
   {
     wordId: 708,
@@ -6371,7 +6371,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "自下一",
-    meaning: "歡鬧、歡蹦亂跳；開玩笑；愚弄、戲弄；（男女間）調情"
+    meaning: "欢闹、欢蹦乱跳；开玩笑；愚弄、戏弄；（男女间）调情"
   },
   {
     wordId: 709,
@@ -6380,7 +6380,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "名，形動",
-    meaning: "不可思議、奇怪"
+    meaning: "不可思议、奇怪"
   },
   {
     wordId: 710,
@@ -6389,7 +6389,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "他下一",
-    meaning: "翻（過來）、扣（過來）；向下、伏下；隱藏、埋伏、不張揚"
+    meaning: "翻（过来）、扣（过来）；向下、伏下；隐藏、埋伏、不张扬"
   },
   {
     wordId: 711,
@@ -6398,7 +6398,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "名",
-    meaning: "蓋子；揭曉"
+    meaning: "盖子；揭晓"
   },
   {
     wordId: 712,
@@ -6407,7 +6407,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "名",
-    meaning: "牌子；條子；告示牌"
+    meaning: "牌子；条子；告示牌"
   },
   {
     wordId: 713,
@@ -6422,10 +6422,10 @@ const n5KanjiWordsZhTW: WordData[] = [
     wordId: 714,
     words: "ぶつかる",
     pron: "ぶつかる",
-    letterOrder: 64,
-    letter: "ぶ",
+    letterOrder: 28,
+    letter: "ふ",
     type: "自五",
-    meaning: "撞、碰；遇到、碰到；適逢、趕到一起；交涉、直接談判；衝突、爭吵"
+    meaning: "撞、碰；遇到、碰到；适逢、赶到一起；交涉、直接谈判；冲突、争吵"
   },
   {
     wordId: 715,
@@ -6434,7 +6434,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "名",
-    meaning: "毛筆；寫的字、畫的畫、筆跡"
+    meaning: "毛笔；写的字、画的画、笔迹"
   },
   {
     wordId: 716,
@@ -6443,7 +6443,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "名",
-    meaning: "懷、胸；被環抱的地方；腰包（身上）帶的錢；心事、想法"
+    meaning: "怀、胸；被环抱的地方；腰包（身上）带的钱；心事、想法"
   },
   {
     wordId: 717,
@@ -6461,7 +6461,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "名",
-    meaning: "蒲團、被褥、座墊的總稱"
+    meaning: "蒲团、被褥、座垫的总称"
   },
   {
     wordId: 719,
@@ -6470,7 +6470,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "他五",
-    meaning: "踏、踩；履行；經歷過、經驗過；評價、估價；押（韻）"
+    meaning: "踏、踩；履行；经历过、经验过；评价、估价；押（韵）"
   },
   {
     wordId: 720,
@@ -6488,16 +6488,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "副，形動，サ変",
-    meaning: "搖晃、晃蕩；糊裡糊塗；猶豫不定；累得東倒西歪的樣子"
+    meaning: "摇晃、晃荡；糊里糊涂；犹豫不定；累得东倒西歪的样子"
   },
   {
     wordId: 722,
     words: "ぶらぶら",
     pron: "ぶらぶら",
-    letterOrder: 64,
-    letter: "ぶ",
+    letterOrder: 28,
+    letter: "ふ",
     type: "副，サ変",
-    meaning: "晃蕩、搖晃；溜達；賦閑、閑呆著"
+    meaning: "晃荡、摇晃；溜达；赋闲、闲呆著"
   },
   {
     wordId: 723,
@@ -6506,7 +6506,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "名，接尾",
-    meaning: "樣子、打扮；假裝；陌生、不速（之客）；（舞蹈的）動作、姿勢；掄（棒球的球棒、高爾"
+    meaning: "样子、打扮；假装；陌生、不速（之客）；（舞蹈的）动作、姿势；抡（棒球的球棒、高尔"
   },
   {
     wordId: 724,
@@ -6524,7 +6524,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "他五",
-    meaning: "揮、搖；撒；分配、分派、附上；拒絕；甩、拋棄、不參加；放棄、丟掉；開（匯票、支票"
+    meaning: "挥、摇；撒；分配、分派、附上；拒绝；甩、抛弃、不参加；放弃、丢掉；开（汇票、支票"
   },
   {
     wordId: 726,
@@ -6533,7 +6533,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "自下一",
-    meaning: "震動；發抖、哆嗦、顫抖"
+    meaning: "震动；发抖、哆嗦、颤抖"
   },
   {
     wordId: 727,
@@ -6542,7 +6542,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "名",
-    meaning: "故鄉"
+    meaning: "故乡"
   },
   {
     wordId: 728,
@@ -6560,7 +6560,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "名，形動",
-    meaning: "沉著、鎮靜；不在乎、無動於衷"
+    meaning: "沉著、镇静；不在乎、无动于衷"
   },
   {
     wordId: 730,
@@ -6569,16 +6569,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "名，形動",
-    meaning: "拙劣、不擅長；不慎重、馬虎"
+    meaning: "拙劣、不擅长；不慎重、马虎"
   },
   {
     wordId: 731,
     words: "別に",
     pron: "べつに",
-    letterOrder: 65,
-    letter: "べ",
+    letterOrder: 29,
+    letter: "へ",
     type: "副",
-    meaning: "特別（下接否定式）"
+    meaning: "特别（下接否定式）"
   },
   {
     wordId: 732,
@@ -6596,7 +6596,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "他五",
-    meaning: "減少"
+    meaning: "减少"
   },
   {
     wordId: 734,
@@ -6605,7 +6605,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "自五",
-    meaning: "減少；（後接否定）畏怯；肚子餓"
+    meaning: "减少；（后接否定）畏怯；肚子饿"
   },
   {
     wordId: 735,
@@ -6614,7 +6614,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "名，形動",
-    meaning: "（突發的）事變；（音）將半音符號；異常；形跡可疑"
+    meaning: "（突发的）事变；（音）将半音符号；异常；形迹可疑"
   },
   {
     wordId: 736,
@@ -6623,14 +6623,14 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 29,
     letter: "へ",
     type: "名，サ変",
-    meaning: "回復、回信；答應、回答"
+    meaning: "回复、回信；答应、回答"
   },
   {
     wordId: 737,
     words: "便利",
     pron: "べんり",
-    letterOrder: 65,
-    letter: "べ",
+    letterOrder: 29,
+    letter: "へ",
     type: "名，形動",
     meaning: "方便"
   },
@@ -6641,7 +6641,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "名，サ変",
-    meaning: "訪問"
+    meaning: "访问"
   },
   {
     wordId: 739,
@@ -6650,16 +6650,16 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "自下一",
-    meaning: "（狗、野獸）吠、吼；哭喊、叫嚷"
+    meaning: "（狗、野兽）吠、吼；哭喊、叫嚷"
   },
   {
     wordId: 740,
     words: "僕",
     pron: "ぼく",
-    letterOrder: 66,
-    letter: "ぼ",
+    letterOrder: 30,
+    letter: "ほ",
     type: "代",
-    meaning: "（男子對晚輩或同輩的自稱）我"
+    meaning: "（男子对晚辈或同辈的自称）我"
   },
   {
     wordId: 741,
@@ -6668,7 +6668,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "名",
-    meaning: "塵埃"
+    meaning: "尘埃"
   },
   {
     wordId: 742,
@@ -6677,7 +6677,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "他五",
-    meaning: "曬、晾、烤；把（水池等的）水放掉；喝幹；不給工作"
+    meaning: "晒、晾、烤；把（水池等的）水放掉；喝干；不给工作"
   },
   {
     wordId: 743,
@@ -6686,7 +6686,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "形",
-    meaning: "細、狹窄；（力量、數目等）少、微弱；飯量少；聲音低而細"
+    meaning: "细、狭窄；（力量、数目等）少、微弱；饭量少；声音低而细"
   },
   {
     wordId: 744,
@@ -6695,7 +6695,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "副，名",
-    meaning: "幾乎；大概、大體上"
+    meaning: "几乎；大概、大体上"
   },
   {
     wordId: 745,
@@ -6704,7 +6704,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "名",
-    meaning: "火；強烈的情感"
+    meaning: "火；强烈的情感"
   },
   {
     wordId: 746,
@@ -6713,7 +6713,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "他下一",
-    meaning: "稱讚"
+    meaning: "称赞"
   },
   {
     wordId: 747,
@@ -6722,7 +6722,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "他五",
-    meaning: "挖、掘；挖出、發掘"
+    meaning: "挖、掘；挖出、发掘"
   },
   {
     wordId: 748,
@@ -6731,7 +6731,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 30,
     letter: "ほ",
     type: "名，形動",
-    meaning: "認真、正經"
+    meaning: "认真、正经"
   },
   {
     wordId: 749,
@@ -6740,7 +6740,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "自五",
-    meaning: "（謙遜語）來、去；參拜；投降、折服；變弱、累垮；迷戀"
+    meaning: "（谦逊语）来、去；参拜；投降、折服；变弱、累垮；迷恋"
   },
   {
     wordId: 750,
@@ -6749,7 +6749,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "自五",
-    meaning: "舞蹈；飛舞"
+    meaning: "舞蹈；飞舞"
   },
   {
     wordId: 751,
@@ -6758,7 +6758,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "他下一",
-    meaning: "委託、託付；任憑、聽由"
+    meaning: "委托、托付；任凭、听由"
   },
   {
     wordId: 752,
@@ -6767,7 +6767,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "自五",
-    meaning: "彎曲、傾斜；拐彎；（心眼、行為）不正"
+    meaning: "弯曲、倾斜；拐弯；（心眼、行为）不正"
   },
   {
     wordId: 753,
@@ -6776,7 +6776,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "自他五",
-    meaning: "繞上，包上；圍起；卷起；使打漩兒；擰、上（發條）；打卷兒"
+    meaning: "绕上，包上；围起；卷起；使打漩儿；拧、上（发条）；打卷儿"
   },
   {
     wordId: 754,
@@ -6785,7 +6785,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "他五",
-    meaning: "撒、散佈；甩掉（跟蹤者等）"
+    meaning: "撒、散布；甩掉（跟踪者等）"
   },
   {
     wordId: 755,
@@ -6794,7 +6794,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "他五",
-    meaning: "播（種）"
+    meaning: "播（种）"
   },
   {
     wordId: 756,
@@ -6803,7 +6803,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名",
-    meaning: "枕頭"
+    meaning: "枕头"
   },
   {
     wordId: 757,
@@ -6812,7 +6812,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "自他下一",
-    meaning: "輸、敗；屈服於、敗愈；（對漆、藥物等）過敏、起斑疹；讓價、減價"
+    meaning: "输、败；屈服于、败愈；（对漆、药物等）过敏、起斑疹；让价、减价"
   },
   {
     wordId: 758,
@@ -6821,7 +6821,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "他下一",
-    meaning: "彎曲；歪曲；押當；放棄、改變"
+    meaning: "弯曲；歪曲；押当；放弃、改变"
   },
   {
     wordId: 759,
@@ -6830,7 +6830,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名",
-    meaning: "孫子；隔輩、間接"
+    meaning: "孙子；隔辈、间接"
   },
   {
     wordId: 760,
@@ -6839,7 +6839,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "形",
-    meaning: "難吃的；笨拙；難看的、醜；不妙、不合適"
+    meaning: "难吃的；笨拙；难看的、丑；不妙、不合适"
   },
   {
     wordId: 761,
@@ -6848,7 +6848,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "形",
-    meaning: "貧窮；貧乏"
+    meaning: "贫穷；贫乏"
   },
   {
     wordId: 762,
@@ -6857,7 +6857,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "他下一",
-    meaning: "摻入；攪拌；加入"
+    meaning: "掺入；搅拌；加入"
   },
   {
     wordId: 763,
@@ -6866,7 +6866,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名",
-    meaning: "錯誤；差錯、事故"
+    meaning: "错误；差错、事故"
   },
   {
     wordId: 764,
@@ -6875,7 +6875,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "自他五",
-    meaning: "弄錯"
+    meaning: "弄错"
   },
   {
     wordId: 765,
@@ -6884,7 +6884,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "他下一",
-    meaning: "弄錯、搞錯"
+    meaning: "弄错、搞错"
   },
   {
     wordId: 766,
@@ -6893,7 +6893,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名",
-    meaning: "松（樹）；新年裝飾正門的松枝；新年期間（指元旦至正月七日）；用松、竹、梅排序時的"
+    meaning: "松（树）；新年装饰正门的松枝；新年期间（指元旦至正月七日）；用松、竹、梅排序时的"
   },
   {
     wordId: 767,
@@ -6902,7 +6902,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名，形動",
-    meaning: "筆直；照直；正直"
+    meaning: "笔直；照直；正直"
   },
   {
     wordId: 768,
@@ -6911,7 +6911,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "副",
-    meaning: "完全；一點兒也（不）；實在"
+    meaning: "完全；一点儿也（不）；实在"
   },
   {
     wordId: 769,
@@ -6929,7 +6929,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名",
-    meaning: "窗口；與外部聯繫的人、部門"
+    meaning: "窗口；与外部联系的人、部门"
   },
   {
     wordId: 771,
@@ -6938,7 +6938,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "他五",
-    meaning: "學習（技能等）；向某人學習"
+    meaning: "学习（技能等）；向某人学习"
   },
   {
     wordId: 772,
@@ -6947,7 +6947,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "自五",
-    meaning: "趕上、來得及；夠用、足夠"
+    meaning: "赶上、来得及；够用、足够"
   },
   {
     wordId: 773,
@@ -6956,7 +6956,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "他五",
-    meaning: "招呼；邀請；招致、引起"
+    meaning: "招呼；邀请；招致、引起"
   },
   {
     wordId: 774,
@@ -6974,7 +6974,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "形",
-    meaning: "晃眼；光彩奪目"
+    meaning: "晃眼；光彩夺目"
   },
   {
     wordId: 776,
@@ -6983,7 +6983,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名",
-    meaning: "原封不動、照舊；任由、隨心所欲、任憑"
+    meaning: "原封不动、照旧；任由、随心所欲、任凭"
   },
   {
     wordId: 777,
@@ -7001,7 +7001,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "他五",
-    meaning: "保衛、守備；保守、保持；遵守"
+    meaning: "保卫、守备；保守、保持；遵守"
   },
   {
     wordId: 779,
@@ -7019,7 +7019,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "自五",
-    meaning: "迷失（方向）；困惑；迷戀、沉迷；（佛教用語）執迷、（死者）沒能成佛"
+    meaning: "迷失（方向）；困惑；迷恋、沉迷；（佛教用语）执迷、（死者）没能成佛"
   },
   {
     wordId: 781,
@@ -7028,7 +7028,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名，接頭",
-    meaning: "圓；打圈兒（表示正確）；全部；整、滿；全部、整個兒"
+    meaning: "圆；打圈儿（表示正确）；全部；整、满；全部、整个儿"
   },
   {
     wordId: 782,
@@ -7037,7 +7037,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "副",
-    meaning: "整個兒、全部"
+    meaning: "整个儿、全部"
   },
   {
     wordId: 783,
@@ -7046,7 +7046,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "他五",
-    meaning: "旋轉；圍繞；（依次）傳遞；想盡辦法；轉、調職"
+    meaning: "旋转；围绕；（依次）传递；想尽办法；转、调职"
   },
   {
     wordId: 784,
@@ -7055,7 +7055,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名，接尾",
-    meaning: "旋轉；周圍；巡迴、巡訪；蔓延、擴展；繞過、經過；圈數；（比較大小、容量的）圈"
+    meaning: "旋转；周围；巡回、巡访；蔓延、扩展；绕过、经过；圈数；（比较大小、容量的）圈"
   },
   {
     wordId: 785,
@@ -7064,7 +7064,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "自五",
-    meaning: "轉、旋轉；繞著、沿著；巡視；（依次）傳遞；繞彎；迂回；（在體內）發作；（動作等）"
+    meaning: "转、旋转；绕著、沿著；巡视；（依次）传递；绕弯；迂回；（在体内）发作；（动作等）"
   },
   {
     wordId: 786,
@@ -7073,7 +7073,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名",
-    meaning: "客滿、滿座；擠滿、載滿"
+    meaning: "客满、满座；挤满、载满"
   },
   {
     wordId: 787,
@@ -7082,7 +7082,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名",
-    meaning: "漫畫"
+    meaning: "漫画"
   },
   {
     wordId: 788,
@@ -7091,7 +7091,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名",
-    meaning: "滿分；最好、絕佳"
+    meaning: "满分；最好、绝佳"
   },
   {
     wordId: 789,
@@ -7100,7 +7100,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "名",
-    meaning: "當中"
+    meaning: "当中"
   },
   {
     wordId: 790,
@@ -7109,7 +7109,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "名",
-    meaning: "果實；加在湯裡的菜；內容"
+    meaning: "果实；加在汤里的菜；内容"
   },
   {
     wordId: 791,
@@ -7118,7 +7118,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "名",
-    meaning: "身體；自身；身份、處境；（動物等的）肉；地位；容器、盒體"
+    meaning: "身体；自身；身份、处境；（动物等的）肉；地位；容器、盒体"
   },
   {
     wordId: 792,
@@ -7127,7 +7127,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "他五",
-    meaning: "送行；靜觀、等待下次（機會）"
+    meaning: "送行；静观、等待下次（机会）"
   },
   {
     wordId: 793,
@@ -7136,7 +7136,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "他五",
-    meaning: "磨光；苦練、提高（修養）"
+    meaning: "磨光；苦练、提高（修养）"
   },
   {
     wordId: 794,
@@ -7154,7 +7154,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "他下一",
-    meaning: "出示、給看；呈現；裝扮；讓……看病；做給別人看（表示）決心和意志"
+    meaning: "出示、给看；呈现；装扮；让……看病；做给别人看（表示）决心和意志"
   },
   {
     wordId: 796,
@@ -7163,7 +7163,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "名",
-    meaning: "豆醬；得意之處"
+    meaning: "豆酱；得意之处"
   },
   {
     wordId: 797,
@@ -7172,7 +7172,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "名",
-    meaning: "水溝；槽、紋；隔閡"
+    meaning: "水沟；槽、纹；隔阂"
   },
   {
     wordId: 798,
@@ -7181,7 +7181,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "他五",
-    meaning: "攪亂、弄亂；擾亂"
+    meaning: "搅乱、弄乱；扰乱"
   },
   {
     wordId: 799,
@@ -7190,7 +7190,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "自下一",
-    meaning: "混亂；不平靜、不安定"
+    meaning: "混乱；不平静、不安定"
   },
   {
     wordId: 800,
@@ -7199,7 +7199,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "自五",
-    meaning: "被發現；找到、看見"
+    meaning: "被发现；找到、看见"
   },
   {
     wordId: 801,
@@ -7208,7 +7208,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "他下一",
-    meaning: "看慣；找到"
+    meaning: "看惯；找到"
   },
   {
     wordId: 802,
@@ -7217,7 +7217,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "形",
-    meaning: "醜陋的、丟人的"
+    meaning: "丑陋的、丢人的"
   },
   {
     wordId: 803,
@@ -7226,7 +7226,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "名",
-    meaning: "綠；嫩芽；綠樹"
+    meaning: "绿；嫩芽；绿树"
   },
   {
     wordId: 804,
@@ -7253,7 +7253,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 32,
     letter: "み",
     type: "名",
-    meaning: "紀念品；禮物"
+    meaning: "纪念品；礼物"
   },
   {
     wordId: 807,
@@ -7271,7 +7271,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "自五",
-    meaning: "面向、朝著；對、向；往、去；趨向、接近；對抗、反抗"
+    meaning: "面向、朝著；对、向；往、去；趋向、接近；对抗、反抗"
   },
   {
     wordId: 809,
@@ -7280,7 +7280,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "他下一",
-    meaning: "迎接；（時期）來臨、迎來；接、邀請；迎合"
+    meaning: "迎接；（时期）来临、迎来；接、邀请；迎合"
   },
   {
     wordId: 810,
@@ -7289,7 +7289,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "自五",
-    meaning: "反胃、噁心、要吐；升起、發怒"
+    meaning: "反胃、恶心、要吐；升起、发怒"
   },
   {
     wordId: 811,
@@ -7298,7 +7298,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "名",
-    meaning: "方向；核實；某一方面的人、人們"
+    meaning: "方向；核实；某一方面的人、人们"
   },
   {
     wordId: 812,
@@ -7307,7 +7307,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "自五",
-    meaning: "向、朝；面向；合適；趨向"
+    meaning: "向、朝；面向；合适；趋向"
   },
   {
     wordId: 813,
@@ -7316,7 +7316,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "他五",
-    meaning: "剝、削"
+    meaning: "剥、削"
   },
   {
     wordId: 814,
@@ -7325,7 +7325,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "他下一",
-    meaning: "朝、向；為了；派遣、打發；挪用、撥為、用於"
+    meaning: "朝、向；为了；派遣、打发；挪用、拨为、用于"
   },
   {
     wordId: 815,
@@ -7334,7 +7334,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "名",
-    meaning: "那邊、前方；目的地；對面、；另一邊；今後、從現在起；對方"
+    meaning: "那边、前方；目的地；对面、；另一边；今后、从现在起；对方"
   },
   {
     wordId: 816,
@@ -7343,7 +7343,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "自他五",
-    meaning: "悶熱；蒸"
+    meaning: "闷热；蒸"
   },
   {
     wordId: 817,
@@ -7352,7 +7352,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "他五",
-    meaning: "系、連接、締結；產生（結果）、凝結"
+    meaning: "系、连接、缔结；产生（结果）、凝结"
   },
   {
     wordId: 818,
@@ -7361,7 +7361,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "名",
-    meaning: "胸、肺；心裡、內心"
+    meaning: "胸、肺；心里、内心"
   },
   {
     wordId: 819,
@@ -7379,7 +7379,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "名",
-    meaning: "眼睛；眼力、判斷力"
+    meaning: "眼睛；眼力、判断力"
   },
   {
     wordId: 821,
@@ -7388,7 +7388,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "自下一",
-    meaning: "睡醒、睜眼；覺悟、醒悟；認識到"
+    meaning: "睡醒、睁眼；觉悟、醒悟；认识到"
   },
   {
     wordId: 822,
@@ -7397,7 +7397,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "名",
-    meaning: "米飯；用餐，食物；生活"
+    meaning: "米饭；用餐，食物；生活"
   },
   {
     wordId: 823,
@@ -7406,7 +7406,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "他五",
-    meaning: "（敬）請吃、請喝"
+    meaning: "（敬）请吃、请喝"
   },
   {
     wordId: 824,
@@ -7415,7 +7415,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "形",
-    meaning: "罕見；珍奇；新穎、新奇；珍貴"
+    meaning: "罕见；珍奇；新颖、新奇；珍贵"
   },
   {
     wordId: 825,
@@ -7424,7 +7424,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 34,
     letter: "め",
     type: "自五",
-    meaning: "顯眼、顯著；超群的"
+    meaning: "显眼、显著；超群的"
   },
   {
     wordId: 826,
@@ -7433,7 +7433,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "自五",
-    meaning: "得到、賺錢；得便宜、撿便宜"
+    meaning: "得到、赚钱；得便宜、捡便宜"
   },
   {
     wordId: 827,
@@ -7442,7 +7442,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "他下一",
-    meaning: "“說”的謙讓語；“做”的謙讓語"
+    meaning: "“说”的谦让语；“做”的谦让语"
   },
   {
     wordId: 828,
@@ -7451,7 +7451,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "他五",
-    meaning: "提議、提出；預約；申請、報名"
+    meaning: "提议、提出；预约；申请、报名"
   },
   {
     wordId: 829,
@@ -7460,7 +7460,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "他五",
-    meaning: "（謙讓語）說、講、告訴、叫做"
+    meaning: "（谦让语）说、讲、告诉、叫做"
   },
   {
     wordId: 830,
@@ -7469,7 +7469,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "自下一",
-    meaning: "燃燒、著火；火紅；熱情洋溢"
+    meaning: "燃烧、著火；火红；热情洋溢"
   },
   {
     wordId: 831,
@@ -7478,7 +7478,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "自五",
-    meaning: "潛入水中；鑽進、鑽入；隱藏"
+    meaning: "潜入水中；钻进、钻入；隐藏"
   },
   {
     wordId: 832,
@@ -7505,7 +7505,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "形",
-    meaning: "可惜、浪費；過分的；不勝惶恐"
+    meaning: "可惜、浪费；过分的；不胜惶恐"
   },
   {
     wordId: 835,
@@ -7514,7 +7514,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "他五",
-    meaning: "歸還、退回；嘔吐"
+    meaning: "归还、退回；呕吐"
   },
   {
     wordId: 836,
@@ -7523,7 +7523,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "自五",
-    meaning: "返回、折回；回到；退回、歸還；恢復到原狀態；回家"
+    meaning: "返回、折回；回到；退回、归还；恢复到原状态；回家"
   },
   {
     wordId: 837,
@@ -7532,7 +7532,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "他五",
-    meaning: "揉、搓、撚；按摩、推拿；爭辯、爭論"
+    meaning: "揉、搓、撚；按摩、推拿；争辩、争论"
   },
   {
     wordId: 838,
@@ -7541,7 +7541,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "自下一",
-    meaning: "發生爭執、起糾紛"
+    meaning: "发生争执、起纠纷"
   },
   {
     wordId: 839,
@@ -7550,7 +7550,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "他五",
-    meaning: "燃燒、燒；情緒高漲、燃氣、激起"
+    meaning: "燃烧、烧；情绪高涨、燃气、激起"
   },
   {
     wordId: 840,
@@ -7559,7 +7559,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "他五",
-    meaning: "露處、灑；掉落；洩密、透露；流露、發洩；遺漏；逃逸"
+    meaning: "露处、洒；掉落；泄密、透露；流露、发泄；遗漏；逃逸"
   },
   {
     wordId: 841,
@@ -7568,7 +7568,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "他五",
-    meaning: "遺漏、漏掉；洩露、走漏"
+    meaning: "遗漏、漏掉；泄露、走漏"
   },
   {
     wordId: 842,
@@ -7577,7 +7577,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "他五",
-    meaning: "盛滿、堆起；盛、裝入器皿；配藥"
+    meaning: "盛满、堆起；盛、装入器皿；配药"
   },
   {
     wordId: 843,
@@ -7586,7 +7586,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "自下一",
-    meaning: "漏出、透出；走漏、洩露；被淘汰、被除外；流露、說出"
+    meaning: "漏出、透出；走漏、泄露；被淘汰、被除外；流露、说出"
   },
   {
     wordId: 844,
@@ -7595,7 +7595,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "名",
-    meaning: "蔬菜店；賣菜的人"
+    meaning: "蔬菜店；卖菜的人"
   },
   {
     wordId: 845,
@@ -7604,7 +7604,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "形",
-    meaning: "吵鬧、嘈雜；囉嗦，嘮叨；嚴厲、嚴格；挑剔；議論紛紛"
+    meaning: "吵闹、嘈杂；啰嗦，唠叨；严厉、严格；挑剔；议论纷纷"
   },
   {
     wordId: 846,
@@ -7622,7 +7622,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "他五",
-    meaning: "燃燒、焚；加熱、燒紅；烤制；烤；日光浴、曬黑；印相片；妒忌"
+    meaning: "燃烧、焚；加热、烧红；烤制；烤；日光浴、晒黑；印相片；妒忌"
   },
   {
     wordId: 848,
@@ -7631,7 +7631,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "名",
-    meaning: "政府機關、官廳"
+    meaning: "政府机关、官厅"
   },
   {
     wordId: 849,
@@ -7640,7 +7640,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "名，サ変",
-    meaning: "商定、約定；約會；契約；規則；宿命；指望"
+    meaning: "商定、约定；约会；契约；规则；宿命；指望"
   },
   {
     wordId: 850,
@@ -7649,7 +7649,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "自下一",
-    meaning: "燃燒、著火；烤制、燒成；曬、日光浴；變色；熾熱；紅霞；燒心"
+    meaning: "燃烧、著火；烤制、烧成；晒、日光浴；变色；炽热；红霞；烧心"
   },
   {
     wordId: 851,
@@ -7667,7 +7667,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "形",
-    meaning: "容易、簡單、易懂"
+    meaning: "容易、简单、易懂"
   },
   {
     wordId: 853,
@@ -7676,7 +7676,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "形",
-    meaning: "溫柔、柔和；和藹、嫻淑；殷切"
+    meaning: "温柔、柔和；和蔼、娴淑；殷切"
   },
   {
     wordId: 854,
@@ -7685,7 +7685,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "形，接尾",
-    meaning: "容易、簡單；易……、容易……"
+    meaning: "容易、简单；易……、容易……"
   },
   {
     wordId: 855,
@@ -7694,7 +7694,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "自下一",
-    meaning: "消瘦；土地貧瘠"
+    meaning: "消瘦；土地贫瘠"
   },
   {
     wordId: 856,
@@ -7703,7 +7703,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "副",
-    meaning: "終於、好容易；勉強、好歹"
+    meaning: "终于、好容易；勉强、好歹"
   },
   {
     wordId: 857,
@@ -7712,7 +7712,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "副",
-    meaning: "同樣、也；依舊、依然；果然；畢竟還是、終歸還是"
+    meaning: "同样、也；依旧、依然；果然；毕竟还是、终归还是"
   },
   {
     wordId: 858,
@@ -7721,7 +7721,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "他五",
-    meaning: "撕破、弄破；搞壞、破壞；違反；打破、突破；打敗"
+    meaning: "撕破、弄破；搞坏、破坏；违反；打破、突破；打败"
   },
   {
     wordId: 859,
@@ -7730,7 +7730,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "自五",
-    meaning: "停止、結束；停、甘休"
+    meaning: "停止、结束；停、甘休"
   },
   {
     wordId: 860,
@@ -7739,7 +7739,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "他五",
-    meaning: "送、派去；挪至、放在；面向；進行；給與；發生、做；舉辦、上演；經營、從事；喝、吃"
+    meaning: "送、派去；挪至、放在；面向；进行；给与；发生、做；举办、上演；经营、从事；喝、吃"
   },
   {
     wordId: 861,
@@ -7748,7 +7748,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "形",
-    meaning: "不硬的；柔軟的；溫和、平易的；輕鬆、通俗；融通的"
+    meaning: "不硬的；柔软的；温和、平易的；轻松、通俗；融通的"
   },
   {
     wordId: 862,
@@ -7757,7 +7757,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "名",
-    meaning: "熱水；澡堂、浴室；溫泉"
+    meaning: "热水；澡堂、浴室；温泉"
   },
   {
     wordId: 863,
@@ -7775,7 +7775,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "名",
-    meaning: "郵政；郵件"
+    meaning: "邮政；邮件"
   },
   {
     wordId: 865,
@@ -7784,7 +7784,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "形動",
-    meaning: "有名、著名、聞名"
+    meaning: "有名、著名、闻名"
   },
   {
     wordId: 866,
@@ -7793,7 +7793,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "形動",
-    meaning: "有利可圖；有優勢、有利"
+    meaning: "有利可图；有优势、有利"
   },
   {
     wordId: 867,
@@ -7802,7 +7802,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "自五",
-    meaning: "歪斜；行為不正、歪"
+    meaning: "歪斜；行为不正、歪"
   },
   {
     wordId: 868,
@@ -7820,7 +7820,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "他五",
-    meaning: "轉讓；出讓；謙讓、尊讓；讓步；延期"
+    meaning: "转让；出让；谦让、尊让；让步；延期"
   },
   {
     wordId: 870,
@@ -7829,7 +7829,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "副，サ変",
-    meaning: "慢慢；悠閒、充裕；遲遲；寬敞、舒服"
+    meaning: "慢慢；悠闲、充裕；迟迟；宽敞、舒服"
   },
   {
     wordId: 871,
@@ -7838,7 +7838,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "他下一",
-    meaning: "燙、煮、蒸"
+    meaning: "烫、煮、蒸"
   },
   {
     wordId: 872,
@@ -7856,7 +7856,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "名",
-    meaning: "夢、夢想；虛幻、渺茫；希望、思想；猶豫、迷茫"
+    meaning: "梦、梦想；虚幻、渺茫；希望、思想；犹豫、迷茫"
   },
   {
     wordId: 874,
@@ -7865,7 +7865,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "形",
-    meaning: "不緊、鬆弛；緩、不陡；不急、緩慢；不堅硬；不嚴厲"
+    meaning: "不紧、松弛；缓、不陡；不急、缓慢；不坚硬；不严厉"
   },
   {
     wordId: 875,
@@ -7874,7 +7874,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "他五",
-    meaning: "豁免、饒恕；允許、准許；條件允許、容許；接受；信賴、託付；放鬆、鬆弛；讓、放；公"
+    meaning: "豁免、饶恕；允许、准许；条件允许、容许；接受；信赖、托付；放松、松弛；让、放；公"
   },
   {
     wordId: 876,
@@ -7883,7 +7883,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "自五",
-    meaning: "鬆懈；減緩；坡度緩的；解凍；鬆懈、緩和；行情跌價"
+    meaning: "松懈；减缓；坡度缓的；解冻；松懈、缓和；行情跌价"
   },
   {
     wordId: 877,
@@ -7892,7 +7892,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "他下一",
-    meaning: "放鬆、鬆懈；放慢、減慢；坡度小；緩和、放寬"
+    meaning: "放松、松懈；放慢、减慢；坡度小；缓和、放宽"
   },
   {
     wordId: 878,
@@ -7901,7 +7901,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 37,
     letter: "ゆ",
     type: "自下一",
-    meaning: "搖晃、搖動；動盪；動搖"
+    meaning: "摇晃、摇动；动荡；动摇"
   },
   {
     wordId: 879,
@@ -7910,7 +7910,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "自五",
-    meaning: "喝醉；暈車或船等；陶醉、入神"
+    meaning: "喝醉；晕车或船等；陶醉、入神"
   },
   {
     wordId: 880,
@@ -7919,7 +7919,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "名，サ変",
-    meaning: "準備、預備；注意、警惕"
+    meaning: "准备、预备；注意、警惕"
   },
   {
     wordId: 881,
@@ -7937,7 +7937,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "名",
-    meaning: "情況、情形；舉止、態度；光景、徵兆；緣故"
+    meaning: "情况、情形；举止、态度；光景、征兆；缘故"
   },
   {
     wordId: 883,
@@ -7955,7 +7955,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "名，形動，副",
-    meaning: "多、更多；多餘的；無用、白費；格外、越發"
+    meaning: "多、更多；多余的；无用、白费；格外、越发"
   },
   {
     wordId: 885,
@@ -7964,7 +7964,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "自五",
-    meaning: "穿過、橫穿"
+    meaning: "穿过、横穿"
   },
   {
     wordId: 886,
@@ -7973,7 +7973,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "他五",
-    meaning: "弄髒；污染；貶低、侮辱"
+    meaning: "弄脏；污染；贬低、侮辱"
   },
   {
     wordId: 887,
@@ -7982,7 +7982,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "自下一",
-    meaning: "弄髒；污染；不乾淨、玷污"
+    meaning: "弄脏；污染；不干净、玷污"
   },
   {
     wordId: 888,
@@ -7991,7 +7991,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "名，サ変",
-    meaning: "預習"
+    meaning: "预习"
   },
   {
     wordId: 889,
@@ -8000,7 +8000,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "他下一",
-    meaning: "使靠近；集中；加；贈送；接近、逼近；依靠；訪問、拜訪；藉口、托故；寄予、寄託"
+    meaning: "使靠近；集中；加；赠送；接近、逼近；依靠；访问、拜访；借口、托故；寄予、寄托"
   },
   {
     wordId: 890,
@@ -8009,7 +8009,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "名，サ変",
-    meaning: "預定、計畫"
+    meaning: "预定、计划"
   },
   {
     wordId: 891,
@@ -8027,7 +8027,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "自五",
-    meaning: "接近；偏向；聚集；順路到；重疊、增多；依靠、憑藉"
+    meaning: "接近；偏向；聚集；顺路到；重叠、增多；依靠、凭借"
   },
   {
     wordId: 893,
@@ -8036,7 +8036,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "名",
-    meaning: "歡喜、高興；喜事、喜慶事；道喜、賀喜"
+    meaning: "欢喜、高兴；喜事、喜庆事；道喜、贺喜"
   },
   {
     wordId: 894,
@@ -8045,7 +8045,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "他五",
-    meaning: "高興、歡喜；欣然接受"
+    meaning: "高兴、欢喜；欣然接受"
   },
   {
     wordId: 895,
@@ -8054,7 +8054,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "形",
-    meaning: "方便、適宜；好"
+    meaning: "方便、适宜；好"
   },
   {
     wordId: 896,
@@ -8063,7 +8063,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "副",
-    meaning: "好好地、適當地；請問好、請致意；請關照；活象"
+    meaning: "好好地、适当地；请问好、请致意；请关照；活象"
   },
   {
     wordId: 897,
@@ -8072,7 +8072,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "自五",
-    meaning: "衰弱；困窘、為難、尷尬"
+    meaning: "衰弱；困窘、为难、尴尬"
   },
   {
     wordId: 898,
@@ -8081,7 +8081,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 39,
     letter: "ら",
     type: "名",
-    meaning: "下個月"
+    meaning: "下个月"
   },
   {
     wordId: 899,
@@ -8099,7 +8099,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 39,
     letter: "ら",
     type: "名",
-    meaning: "來年、明年"
+    meaning: "来年、明年"
   },
   {
     wordId: 901,
@@ -8108,7 +8108,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 39,
     letter: "ら",
     type: "名，形動",
-    meaning: "舒服、舒適、快樂；富裕；容易、輕鬆"
+    meaning: "舒服、舒适、快乐；富裕；容易、轻松"
   },
   {
     wordId: 902,
@@ -8126,7 +8126,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "形動",
-    meaning: "優秀、出色；崇高、（儀錶）堂堂；正派、充足；漂亮、美觀；偉大、了不起"
+    meaning: "优秀、出色；崇高、（仪表）堂堂；正派、充足；漂亮、美观；伟大、了不起"
   },
   {
     wordId: 904,
@@ -8135,7 +8135,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "名，サ変",
-    meaning: "流行、時尚、時髦；疾病流行"
+    meaning: "流行、时尚、时髦；疾病流行"
   },
   {
     wordId: 905,
@@ -8153,7 +8153,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "名，サ変",
-    meaning: "兌、兌換"
+    meaning: "兑、兑换"
   },
   {
     wordId: 907,
@@ -8162,7 +8162,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "名",
-    meaning: "費用、手續費"
+    meaning: "费用、手续费"
   },
   {
     wordId: 908,
@@ -8171,7 +8171,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "名",
-    meaning: "雙親"
+    meaning: "双亲"
   },
   {
     wordId: 909,
@@ -8180,7 +8180,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "名",
-    meaning: "兩邊、兩側；雙方"
+    meaning: "两边、两侧；双方"
   },
   {
     wordId: 910,
@@ -8189,7 +8189,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 40,
     letter: "り",
     type: "名，サ変",
-    meaning: "菜肴；處理"
+    meaning: "菜肴；处理"
   },
   {
     wordId: 911,
@@ -8216,7 +8216,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 41,
     letter: "る",
     type: "名",
-    meaning: "看家、看門"
+    meaning: "看家、看门"
   },
   {
     wordId: 914,
@@ -8225,7 +8225,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "名",
-    meaning: "禮儀；致禮；感謝；謝禮；返禮"
+    meaning: "礼仪；致礼；感谢；谢礼；返礼"
   },
   {
     wordId: 915,
@@ -8234,7 +8234,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "名",
-    meaning: "列車"
+    meaning: "列车"
   },
   {
     wordId: 916,
@@ -8243,7 +8243,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "名，サ変",
-    meaning: "練習"
+    meaning: "练习"
   },
   {
     wordId: 917,
@@ -8252,7 +8252,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 42,
     letter: "れ",
     type: "名，サ変",
-    meaning: "聯絡；接連；通知、告訴"
+    meaning: "联络；接连；通知、告诉"
   },
   {
     wordId: 918,
@@ -8279,7 +8279,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "名",
-    meaning: "圈、環；車輪；箍"
+    meaning: "圈、环；车轮；箍"
   },
   {
     wordId: 921,
@@ -8288,7 +8288,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "他五",
-    meaning: "燒開、燒熱、加熱；使情緒高漲"
+    meaning: "烧开、烧热、加热；使情绪高涨"
   },
   {
     wordId: 922,
@@ -8297,7 +8297,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "名",
-    meaning: "年輕人、青年"
+    meaning: "年轻人、青年"
   },
   {
     wordId: 923,
@@ -8306,7 +8306,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "自下一",
-    meaning: "分歧；分開、分裂；區分；解散"
+    meaning: "分歧；分开、分裂；区分；解散"
   },
   {
     wordId: 924,
@@ -8315,7 +8315,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "自下一",
-    meaning: "分別、分離；離婚"
+    meaning: "分别、分离；离婚"
   },
   {
     wordId: 925,
@@ -8324,7 +8324,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "自五",
-    meaning: "煮開、燒熱；激動、興奮；熔化；哄鬧、叫嚷"
+    meaning: "煮开、烧热；激动、兴奋；熔化；哄闹、叫嚷"
   },
   {
     wordId: 926,
@@ -8333,7 +8333,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "自五",
-    meaning: "湧出、冒出；發生、孽生；突然出現、湧起；產生"
+    meaning: "涌出、冒出；发生、孽生；突然出现、涌起；产生"
   },
   {
     wordId: 927,
@@ -8342,7 +8342,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "名",
-    meaning: "框、框子；邊線、輪廓；界限、範圍"
+    meaning: "框、框子；边线、轮廓；界限、范围"
   },
   {
     wordId: 928,
@@ -8351,7 +8351,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "名",
-    meaning: "意思；道理；理由；事由；當然；費事、麻煩；否定、斷定的委婉說法；（用否定式表示）"
+    meaning: "意思；道理；理由；事由；当然；费事、麻烦；否定、断定的委婉说法；（用否定式表示）"
   },
   {
     wordId: 929,
@@ -8360,7 +8360,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "他下一",
-    meaning: "分割、劃分；分離、分開；分別、區別；分配；分讓；撥開、置之不理；辨明是非"
+    meaning: "分割、划分；分离、分开；分别、区别；分配；分让；拨开、置之不理；辨明是非"
   },
   {
     wordId: 930,
@@ -8378,7 +8378,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "副",
-    meaning: "特別、特意；故意"
+    meaning: "特别、特意；故意"
   },
   {
     wordId: 932,
@@ -8387,7 +8387,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "名",
-    meaning: "遺忘的東西、遺失的東西"
+    meaning: "遗忘的东西、遗失的东西"
   },
   {
     wordId: 933,
@@ -8396,7 +8396,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "自他下一",
-    meaning: "忘記；沒注意；遺落、丟下；忘卻、忘懷"
+    meaning: "忘记；没注意；遗落、丢下；忘却、忘怀"
   },
   {
     wordId: 934,
@@ -8414,7 +8414,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "他五",
-    meaning: "架、跨越；渡河；交、遞；給；讓給"
+    meaning: "架、跨越；渡河；交、递；给；让给"
   },
   {
     wordId: 936,
@@ -8423,7 +8423,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "自五",
-    meaning: "過河、過；渡；吹過、掠過；度日、過活；交給、歸誰所有；分發到"
+    meaning: "过河、过；渡；吹过、掠过；度日、过活；交给、归谁所有；分发到"
   },
   {
     wordId: 937,
@@ -8450,7 +8450,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "名",
-    meaning: "比例；百分比；比較、比；兌水、加水；分派"
+    meaning: "比例；百分比；比较、比；兑水、加水；分派"
   },
   {
     wordId: 940,
@@ -8459,7 +8459,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "名，サ変",
-    meaning: "減價、打折；貼現票據；（聽話）打折扣"
+    meaning: "减价、打折；贴现票据；（听话）打折扣"
   },
   {
     wordId: 941,
@@ -8468,7 +8468,7 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "自他五",
-    meaning: "破壞；分、切、割；弄破；擠進、撥開；分配；除；分裂、離間；介入；低於、少於；對、"
+    meaning: "破坏；分、切、割；弄破；挤进、拨开；分配；除；分裂、离间；介入；低于、少于；对、"
   },
   {
     wordId: 942,
@@ -8477,18 +8477,8 @@ const n5KanjiWordsZhTW: WordData[] = [
     letterOrder: 44,
     letter: "わ",
     type: "自下一",
-    meaning: "碎、壞了；裂開；整除；分裂；暴露、敗露；聲音難聽、刺耳"
+    meaning: "碎、坏了；裂开；整除；分裂；暴露、败露；声音难听、刺耳"
   }
 ];
 
-export interface WordData {
-  wordId: number;
-  words: string;
-  pron: string;
-  letterOrder: number;
-  letter: string;
-  type: string;
-  meaning: string;
-}
-
-export default n5KanjiWordsZhTW;
+export default n4WordsZhCN;

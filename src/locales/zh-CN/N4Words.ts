@@ -35,7 +35,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "自五",
-    meaning: "有空隙；闲着；缺编"
+    meaning: "有空隙；闲著；缺编"
   },
   {
     wordId: 5,
@@ -115,7 +115,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "あたりまえ",
     letterOrder: 1,
     letter: "あ",
-    type: "形动",
+    type: "形動",
     meaning: "当然；普通"
   },
   {
@@ -260,7 +260,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 1,
     letter: "あ",
     type: "自五",
-    meaning: "存在、活着；位于"
+    meaning: "存在、活著；位于"
   },
   {
     wordId: 30,
@@ -295,7 +295,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "あんしん",
     letterOrder: 1,
     letter: "あ",
-    type: "名，サ変，行动",
+    type: "名，サ変，行動",
     meaning: "安心、放心"
   },
   {
@@ -304,7 +304,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "あんぜん",
     letterOrder: 1,
     letter: "あ",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "安全"
   },
   {
@@ -350,7 +350,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 2,
     letter: "い",
     type: "自他五",
-    meaning: "着急、赶紧；急、忙"
+    meaning: "著急、赶紧；急、忙"
   },
   {
     wordId: 40,
@@ -412,7 +412,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "いろいろ",
     letterOrder: 2,
     letter: "い",
-    type: "名，副，形动",
+    type: "名，副，形動",
     meaning: "各种各样"
   },
   {
@@ -602,7 +602,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 4,
     letter: "え",
     type: "他五",
-    meaning: "画、描绘；造型；表现；想象"
+    meaning: "画、描绘；造型；表现；想像"
   },
   {
     wordId: 68,
@@ -647,7 +647,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 5,
     letter: "お",
     type: "他五",
-    meaning: "追赶犯人、猎物等；驱赶；轰走；驱逐、清除；追求；按照顺序、随着时间"
+    meaning: "追赶犯人、猎物等；驱赶；轰走；驱逐、清除；追求；按照顺序、随著时间"
   },
   {
     wordId: 73,
@@ -745,7 +745,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "おしゃべり",
     letterOrder: 5,
     letter: "お",
-    type: "形动，名，サ変",
+    type: "形動，名，サ変",
     meaning: "闲聊、聊天；多嘴多舌、健谈（的人）；议论、传言、风言风语"
   },
   {
@@ -899,7 +899,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "名",
-    meaning: "会计；付款、结账"
+    meaning: "会计；付款、结帐"
   },
   {
     wordId: 101,
@@ -989,7 +989,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "自五",
-    meaning: "悬、垂、吊；放在火上；降临、落到（身上）；锁着；放在上面；挂住、陷入；设置；靠着"
+    meaning: "悬、垂、吊；放在火上；降临、落到（身上）；锁著；放在上面；挂住、陷入；设置；靠著"
   },
   {
     wordId: 111,
@@ -1004,8 +1004,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 112,
     words: "学費",
     pron: "がくひ",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名",
     meaning: "学费"
   },
@@ -1034,7 +1034,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 6,
     letter: "か",
     type: "他下一",
-    meaning: "垂下、悬、挂；放置火上；覆盖；洒；锁上、扣上；轻轻握住、搭着等；钩、钓；捆（箱子"
+    meaning: "垂下、悬、挂；放置火上；覆盖；洒；锁上、扣上；轻轻握住、搭著等；钩、钓；捆（箱子"
   },
   {
     wordId: 116,
@@ -1085,8 +1085,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 121,
     words: "学科",
     pron: "がっか",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名",
     meaning: "学科"
   },
@@ -1094,8 +1094,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 122,
     words: "がっかり",
     pron: "がっかり",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "副，サ変",
     meaning: "失望的样子；非常疲劳的样子"
   },
@@ -1105,7 +1105,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "かって",
     letterOrder: 6,
     letter: "か",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "厨房；生活状况；情形；样子、状况；任性、随便"
   },
   {
@@ -1130,8 +1130,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 126,
     words: "我慢",
     pron: "がまん",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名，サ変",
     meaning: "忍耐"
   },
@@ -1184,8 +1184,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 132,
     words: "側",
     pron: "がわ",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名",
     meaning: "一侧、一方面"
   },
@@ -1204,7 +1204,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "かわいそう",
     letterOrder: 6,
     letter: "か",
-    type: "形动",
+    type: "形動",
     meaning: "可怜的"
   },
   {
@@ -1238,8 +1238,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 138,
     words: "元日",
     pron: "がんじつ",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "名",
     meaning: "元旦"
   },
@@ -1267,7 +1267,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "かんぜん",
     letterOrder: 6,
     letter: "か",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "完全"
   },
   {
@@ -1285,7 +1285,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "かんたん",
     letterOrder: 6,
     letter: "か",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "简单；简短"
   },
   {
@@ -1301,8 +1301,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 145,
     words: "頑張る",
     pron: "がんばる",
-    letterOrder: 47,
-    letter: "が",
+    letterOrder: 6,
+    letter: "か",
     type: "自五",
     meaning: "努力、全力以赴；主张、固守不动"
   },
@@ -1339,7 +1339,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "きけん",
     letterOrder: 7,
     letter: "き",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "危险"
   },
   {
@@ -1429,7 +1429,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "きのどく",
     letterOrder: 7,
     letter: "き",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "可怜的；对不起，抱歉"
   },
   {
@@ -1535,8 +1535,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 171,
     words: "行事",
     pron: "ぎょうじ",
-    letterOrder: 48,
-    letter: "ぎ",
+    letterOrder: 7,
+    letter: "き",
     type: "名",
     meaning: "仪式；活动"
   },
@@ -1600,7 +1600,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "きれい",
     letterOrder: 7,
     letter: "き",
-    type: "形动",
+    type: "形動",
     meaning: "美丽；干净；手脚麻利；没有污点；完全"
   },
   {
@@ -1616,8 +1616,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 180,
     words: "銀行",
     pron: "ぎんこう",
-    letterOrder: 48,
-    letter: "ぎ",
+    letterOrder: 7,
+    letter: "き",
     type: "名",
     meaning: "银行"
   },
@@ -1625,8 +1625,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 181,
     words: "具合",
     pron: "ぐあい",
-    letterOrder: 49,
-    letter: "ぐ",
+    letterOrder: 8,
+    letter: "く",
     type: "名",
     meaning: "健康状态；事态、情况；做法；方便；合适"
   },
@@ -1844,7 +1844,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 9,
     letter: "け",
     type: "名",
-    meaning: "警察"
+    meaning: "员警"
   },
   {
     wordId: 206,
@@ -1861,7 +1861,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "けっこう",
     letterOrder: 9,
     letter: "け",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "构造；非常好的、无懈可击的；足够的、满足的；不需要"
   },
   {
@@ -1931,8 +1931,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 215,
     words: "玄関",
     pron: "げんかん",
-    letterOrder: 50,
-    letter: "げ",
+    letterOrder: 9,
+    letter: "け",
     type: "名",
     meaning: "大门"
   },
@@ -1940,9 +1940,9 @@ const n4WordsZhCN: WordData[] = [
     wordId: 216,
     words: "現金",
     pron: "げんきん",
-    letterOrder: 50,
-    letter: "げ",
-    type: "名，形动",
+    letterOrder: 9,
+    letter: "け",
+    type: "名，形動",
     meaning: "现金；贪图眼前利益、势力眼"
   },
   {
@@ -1967,8 +1967,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 219,
     words: "合格",
     pron: "ごうかく",
-    letterOrder: 51,
-    letter: "ご",
+    letterOrder: 10,
+    letter: "こ",
     type: "名，サ変",
     meaning: "合格"
   },
@@ -2159,7 +2159,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "自五",
-    meaning: "处于困境、倒霉；不知所措"
+    meaning: "处于困境、倒楣；不知所措"
   },
   {
     wordId: 241,
@@ -2183,8 +2183,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 243,
     words: "御免",
     pron: "ごめん",
-    letterOrder: 51,
-    letter: "ご",
+    letterOrder: 10,
+    letter: "こ",
     type: "名",
     meaning: "原谅；拒绝；免职"
   },
@@ -2213,14 +2213,14 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 10,
     letter: "こ",
     type: "自五",
-    meaning: "滚动；倒下；横躺；随意搁置着"
+    meaning: "滚动；倒下；横躺；随意搁置著"
   },
   {
     wordId: 247,
     words: "ごろごろ",
     pron: "ごろごろ",
-    letterOrder: 51,
-    letter: "ご",
+    letterOrder: 10,
+    letter: "こ",
     type: "副，サ変",
     meaning: "汽车、地震等声音；滚动的样子；随处可见；混入异物、沙子等；懒洋洋"
   },
@@ -2311,7 +2311,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "さいわい",
     letterOrder: 11,
     letter: "さ",
-    type: "名，形动，サ変",
+    type: "名，形動，サ変",
     meaning: "幸福、荣幸；合适、方便"
   },
   {
@@ -2438,7 +2438,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 11,
     letter: "さ",
     type: "他五",
-    meaning: "指给人看；叫名字、点名；朝着、以……为目标；下象棋"
+    meaning: "指给人看；叫名字、点名；朝著、以……为目标；下象棋"
   },
   {
     wordId: 272,
@@ -2462,8 +2462,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 274,
     words: "雑誌",
     pron: "ざっし",
-    letterOrder: 52,
-    letter: "ざ",
+    letterOrder: 11,
+    letter: "さ",
     type: "名",
     meaning: "杂志"
   },
@@ -2516,9 +2516,9 @@ const n4WordsZhCN: WordData[] = [
     wordId: 280,
     words: "残念",
     pron: "ざんねん",
-    letterOrder: 52,
-    letter: "ざ",
-    type: "形动",
+    letterOrder: 11,
+    letter: "さ",
+    type: "形動",
     meaning: "遗憾、可惜"
   },
   {
@@ -2545,7 +2545,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "しあわせ",
     letterOrder: 12,
     letter: "し",
-    type: "形动",
+    type: "形動",
     meaning: "幸福；幸运"
   },
   {
@@ -2588,8 +2588,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 288,
     words: "時刻",
     pron: "じこく",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名",
     meaning: "时刻"
   },
@@ -2606,8 +2606,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 290,
     words: "辞書",
     pron: "じしょ",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名",
     meaning: "辞书、辞典"
   },
@@ -2617,7 +2617,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "しずか",
     letterOrder: 12,
     letter: "し",
-    type: "形动",
+    type: "形動",
     meaning: "安静；平静、安稳；宁静"
   },
   {
@@ -2663,14 +2663,14 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "副，サ変",
-    meaning: "牢固地；结实；值得信赖的；清醒、不胡涂；认真、扎实；确实、的确；很多、足够"
+    meaning: "牢固地；结实；值得信赖的；清醒、不糊涂；认真、扎实；确实、的确；很多、足够"
   },
   {
     wordId: 297,
     words: "じっと",
     pron: "じっと",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "副，サ変",
     meaning: "一动不动、安静地；专心致志地；耐心地"
   },
@@ -2689,7 +2689,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "しつれい",
     letterOrder: 12,
     letter: "し",
-    type: "形动，サ変",
+    type: "形動，サ変",
     meaning: "失礼、无礼；对不起、劳驾；失陪了"
   },
   {
@@ -2708,7 +2708,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 12,
     letter: "し",
     type: "自五",
-    meaning: "死亡；失去生气；闲置着、不起作用"
+    meaning: "死亡；失去生气；闲置著、不起作用"
   },
   {
     wordId: 302,
@@ -2777,8 +2777,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 309,
     words: "自慢",
     pron: "じまん",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名，サ変",
     meaning: "骄傲、自豪、豪言"
   },
@@ -2813,8 +2813,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 313,
     words: "邪魔",
     pron: "じゃま",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名，サ変",
     meaning: "障碍物、妨碍；拜访、串门"
   },
@@ -2831,17 +2831,17 @@ const n4WordsZhCN: WordData[] = [
     wordId: 315,
     words: "十分",
     pron: "じゅうぶん",
-    letterOrder: 53,
-    letter: "じ",
-    type: "形动，副",
+    letterOrder: 12,
+    letter: "し",
+    type: "形動，副",
     meaning: "许多；完全地"
   },
   {
     wordId: 316,
     words: "授業",
     pron: "じゅぎょう",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名，サ変",
     meaning: "传授知识、技术、手艺"
   },
@@ -2876,9 +2876,9 @@ const n4WordsZhCN: WordData[] = [
     wordId: 320,
     words: "順調",
     pron: "じゅんちょう",
-    letterOrder: 53,
-    letter: "じ",
-    type: "名，形动",
+    letterOrder: 12,
+    letter: "し",
+    type: "名，形動",
     meaning: "顺利、一帆风顺"
   },
   {
@@ -2894,26 +2894,26 @@ const n4WordsZhCN: WordData[] = [
     wordId: 322,
     words: "上手",
     pron: "じょうず",
-    letterOrder: 53,
-    letter: "じ",
-    type: "名，形动",
+    letterOrder: 12,
+    letter: "し",
+    type: "名，形動",
     meaning: "娴熟；客套"
   },
   {
     wordId: 323,
     words: "上達",
     pron: "じょうたつ",
-    letterOrder: 53,
-    letter: "じ",
-    type: "名，形动",
+    letterOrder: 12,
+    letter: "し",
+    type: "名，形動",
     meaning: "学习、技能长进、进步"
   },
   {
     wordId: 324,
     words: "冗談",
     pron: "じょうだん",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "名",
     meaning: "玩笑、笑话"
   },
@@ -2921,9 +2921,9 @@ const n4WordsZhCN: WordData[] = [
     wordId: 325,
     words: "丈夫",
     pron: "じょうぶ",
-    letterOrder: 53,
-    letter: "じ",
-    type: "形动",
+    letterOrder: 12,
+    letter: "し",
+    type: "形動",
     meaning: "健康的；结实的"
   },
   {
@@ -2984,8 +2984,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 332,
     words: "じりじり",
     pron: "じりじり",
-    letterOrder: 53,
-    letter: "じ",
+    letterOrder: 12,
+    letter: "し",
     type: "副",
     meaning: "铃声等；油炸的吱吱音；一步一步地移动；（太阳光）灼热；坐立不安"
   },
@@ -3031,7 +3031,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "しんせつ",
     letterOrder: 12,
     letter: "し",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "体贴、关怀、热情"
   },
   {
@@ -3209,8 +3209,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 357,
     words: "ずっと",
     pron: "ずっと",
-    letterOrder: 54,
-    letter: "ず",
+    letterOrder: 13,
+    letter: "す",
     type: "副",
     meaning: "时间、距离相隔阂；一直、不停地；笔直；……得多"
   },
@@ -3247,7 +3247,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "すなお",
     letterOrder: 13,
     letter: "す",
-    type: "形动",
+    type: "形動",
     meaning: "正直、诚实；坦率"
   },
   {
@@ -3371,8 +3371,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 375,
     words: "全然",
     pron: "ぜんぜん",
-    letterOrder: 55,
-    letter: "ぜ",
+    letterOrder: 14,
+    letter: "せ",
     type: "副",
     meaning: "（后接否定）一点、完全、根本"
   },
@@ -3398,8 +3398,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 378,
     words: "全部",
     pron: "ぜんぶ",
-    letterOrder: 55,
-    letter: "ぜ",
+    letterOrder: 14,
+    letter: "せ",
     type: "名",
     meaning: "全部、整体上"
   },
@@ -3419,7 +3419,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 15,
     letter: "そ",
     type: "自五",
-    meaning: "沿着；遵照、按照"
+    meaning: "沿著；遵照、按照"
   },
   {
     wordId: 381,
@@ -3560,8 +3560,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 396,
     words: "大学",
     pron: "だいがく",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "名",
     meaning: "大学"
   },
@@ -3569,9 +3569,9 @@ const n4WordsZhCN: WordData[] = [
     wordId: 397,
     words: "大事",
     pron: "だいじ",
-    letterOrder: 57,
-    letter: "だ",
-    type: "名，形动",
+    letterOrder: 16,
+    letter: "た",
+    type: "名，形動",
     meaning: "大事；重要、关键；贵重的、珍贵的"
   },
   {
@@ -3580,16 +3580,16 @@ const n4WordsZhCN: WordData[] = [
     pron: "たいした",
     letterOrder: 16,
     letter: "た",
-    type: "连体",
+    type: "連体",
     meaning: "了不起；不算什么、不要紧"
   },
   {
     wordId: 399,
     words: "大丈夫",
     pron: "だいじょうぶ",
-    letterOrder: 57,
-    letter: "だ",
-    type: "形动",
+    letterOrder: 16,
+    letter: "た",
+    type: "形動",
     meaning: "安全、放心；没关系、不要紧"
   },
   {
@@ -3598,7 +3598,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "たいせつ",
     letterOrder: 16,
     letter: "た",
-    type: "形动",
+    type: "形動",
     meaning: "贵重、心爱、谨慎"
   },
   {
@@ -3614,8 +3614,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 402,
     words: "大体",
     pron: "だいたい",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "名，副",
     meaning: "大体上、大概、概略；基本上、差不多；全部；本来、原来"
   },
@@ -3632,8 +3632,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 404,
     words: "大分",
     pron: "だいぶ",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "副",
     meaning: "数量多、很、颇、相当地"
   },
@@ -3643,7 +3643,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "たいへん",
     letterOrder: 16,
     letter: "た",
-    type: "形动",
+    type: "形動",
     meaning: "够受的、不得了、不简单；重大、严重；非常"
   },
   {
@@ -3661,7 +3661,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "たいら",
     letterOrder: 16,
     letter: "た",
-    type: "形动",
+    type: "形動",
     meaning: "平、平坦；平稳、安静、心平气和"
   },
   {
@@ -3707,14 +3707,14 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他五",
-    meaning: "烧；熏香"
+    meaning: "烧；薰香"
   },
   {
     wordId: 413,
     words: "抱く",
     pron: "だく",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "他五",
     meaning: "抱；心怀"
   },
@@ -3742,7 +3742,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "たしか",
     letterOrder: 16,
     letter: "た",
-    type: "副，形动",
+    type: "副，形動",
     meaning: "确实；可靠的；正常的；大概、或许"
   },
   {
@@ -3860,7 +3860,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 16,
     letter: "た",
     type: "他五",
-    meaning: "折迭；关闭、收拾；藏在心里；杀、干掉"
+    meaning: "折叠；关闭、收拾；藏在心里；杀、干掉"
   },
   {
     wordId: 430,
@@ -3992,8 +3992,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 444,
     words: "騙す",
     pron: "だます",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "他五",
     meaning: "欺骗；使平静、使平息"
   },
@@ -4028,8 +4028,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 448,
     words: "黙る",
     pron: "だまる",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "自五",
     meaning: "沉默、不吱声；不打招呼、不征得同意；不反驳"
   },
@@ -4037,9 +4037,9 @@ const n4WordsZhCN: WordData[] = [
     wordId: 449,
     words: "駄目",
     pron: "だめ",
-    letterOrder: 57,
-    letter: "だ",
-    type: "形动",
+    letterOrder: 16,
+    letter: "た",
+    type: "形動",
     meaning: "无用；白费；不可挽救；做不到、不可能；不行"
   },
   {
@@ -4073,8 +4073,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 453,
     words: "だらしない",
     pron: "だらしない",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "形",
     meaning: "散漫、马马虎虎；没出息、不争气；不检点、放荡"
   },
@@ -4100,8 +4100,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 456,
     words: "怠い",
     pron: "だるい",
-    letterOrder: 57,
-    letter: "だ",
+    letterOrder: 16,
+    letter: "た",
     type: "形",
     meaning: "倦怠、浑身无力"
   },
@@ -4283,7 +4283,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他五",
-    meaning: "扎、刺、戳；撞、顶；扶、把；严厉地追究；冒着、顶着；扎心、痛心"
+    meaning: "扎、刺、戳；撞、顶；扶、把；严厉地追究；冒著、顶著；扎心、痛心"
   },
   {
     wordId: 477,
@@ -4292,7 +4292,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "他下一",
-    meaning: "靠近、靠紧；贴上、拴上；涂抹；安装；附上、加上；使陪伴、使跟随；留下痕迹；着手、"
+    meaning: "靠近、靠紧；贴上、拴上；涂抹；安装；附上、加上；使陪伴、使跟随；留下痕迹；著手、"
   },
   {
     wordId: 478,
@@ -4328,7 +4328,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "自五",
-    meaning: "被传递、被传达；传播、传布；沿着；继承；传来"
+    meaning: "被传递、被传达；传播、传布；沿著；继承；传来"
   },
   {
     wordId: 482,
@@ -4337,7 +4337,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 18,
     letter: "つ",
     type: "自五",
-    meaning: "继续、持续；连接不断；连接着、挨着；紧接着"
+    meaning: "继续、持续；连接不断；连接著、挨著；紧接著"
   },
   {
     wordId: 483,
@@ -4523,8 +4523,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 503,
     words: "出会う",
     pron: "であう",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "自五",
     meaning: "遇见、碰上"
   },
@@ -4535,7 +4535,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 19,
     letter: "て",
     type: "名",
-    meaning: "手脚；左右手、俯首帖耳的人"
+    meaning: "手脚；左右手、俯首贴耳的人"
   },
   {
     wordId: 505,
@@ -4543,15 +4543,15 @@ const n4WordsZhCN: WordData[] = [
     pron: "ていねい",
     letterOrder: 19,
     letter: "て",
-    type: "形动",
+    type: "形動",
     meaning: "彬彬有礼、恭恭敬敬；详细地、细心地"
   },
   {
     wordId: 506,
     words: "出掛ける",
     pron: "でかける",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "自下一",
     meaning: "外出、出发；访问、串门"
   },
@@ -4559,8 +4559,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 507,
     words: "出口",
     pron: "でぐち",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "名",
     meaning: "出口"
   },
@@ -4577,8 +4577,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 509,
     words: "出迎える",
     pron: "でむかえる",
-    letterOrder: 60,
-    letter: "で",
+    letterOrder: 19,
+    letter: "て",
     type: "他下一",
     meaning: "出迎、迎接"
   },
@@ -4631,8 +4631,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 515,
     words: "どうか",
     pron: "どうか",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "副",
     meaning: "请；好歹会、总会；是否；不正常、可笑"
   },
@@ -4649,8 +4649,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 517,
     words: "如何しても",
     pron: "どうしても",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "副",
     meaning: "务必；怎么也"
   },
@@ -4658,8 +4658,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 518,
     words: "動物",
     pron: "どうぶつ",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "名",
     meaning: "动物"
   },
@@ -4811,8 +4811,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 535,
     words: "怒鳴る",
     pron: "どなる",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "自五",
     meaning: "大声喊、怒喊"
   },
@@ -4892,8 +4892,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 544,
     words: "どんどん",
     pron: "どんどん",
-    letterOrder: 61,
-    letter: "ど",
+    letterOrder: 20,
+    letter: "と",
     type: "副",
     meaning: "（鼓等的）咚咚声；接连不断、一个劲儿的"
   },
@@ -4922,7 +4922,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 21,
     letter: "な",
     type: "他五",
-    meaning: "使液体流动；冲；冲洗；播放（声音、音乐等）；传播；流放；（艺人、出租车等）串街揽"
+    meaning: "使液体流动；冲；冲洗；播放（声音、音乐等）；传播；流放；（艺人、计程车等）串街揽"
   },
   {
     wordId: 548,
@@ -4930,7 +4930,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "なかなか",
     letterOrder: 21,
     letter: "な",
-    type: "副，形动",
+    type: "副，形動",
     meaning: "非常、相当（下接否定）轻易、容易"
   },
   {
@@ -5137,7 +5137,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "なんでも",
     letterOrder: 21,
     letter: "な",
-    type: "连语，副",
+    type: "連語，副",
     meaning: "不管什么；不论有什么；大概；据说是"
   },
   {
@@ -5191,7 +5191,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "にがて",
     letterOrder: 22,
     letter: "に",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "不好对付的人；不擅长、不善于"
   },
   {
@@ -5200,7 +5200,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "にぎやか",
     letterOrder: 22,
     letter: "に",
-    type: "形动",
+    type: "形動",
     meaning: "热闹、繁华；闹哄哄"
   },
   {
@@ -5363,7 +5363,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 23,
     letter: "ぬ",
     type: "他五",
-    meaning: "偷盗；偷闲；背着、偷偷地；剽窃"
+    meaning: "偷盗；偷闲；背著、偷偷地；剽窃"
   },
   {
     wordId: 597,
@@ -5372,7 +5372,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 23,
     letter: "ぬ",
     type: "名",
-    meaning: "布；（接在其他名词之前表示）平、水平"
+    meaning: "布；（接在其他名词之前表示）平、水准"
   },
   {
     wordId: 598,
@@ -5443,7 +5443,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "ねぼう",
     letterOrder: 24,
     letter: "ね",
-    type: "形动，名，サ変",
+    type: "形動，名，サ変",
     meaning: "睡懒觉的（人）"
   },
   {
@@ -5480,7 +5480,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 25,
     letter: "の",
     type: "他下一",
-    meaning: "使……乘坐；传播、传导；和着（节拍、节奏）；骗人、欺骗；吸收参见、让参加"
+    meaning: "使……乘坐；传播、传导；和著（节拍、节奏）；骗人、欺骗；吸收参见、让参加"
   },
   {
     wordId: 610,
@@ -5594,9 +5594,9 @@ const n4WordsZhCN: WordData[] = [
     wordId: 622,
     words: "馬鹿",
     pron: "ばか",
-    letterOrder: 62,
-    letter: "ば",
-    type: "名，形动",
+    letterOrder: 26,
+    letter: "は",
+    type: "名，形動",
     meaning: "愚蠢的人；无益的；过分、极端；不好使、不中用；……呆子"
   },
   {
@@ -5666,8 +5666,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 630,
     words: "化ける",
     pron: "ばける",
-    letterOrder: 62,
-    letter: "ば",
+    letterOrder: 26,
+    letter: "は",
     type: "自下一",
     meaning: "化身为；乔装、冒充；骤变"
   },
@@ -5803,7 +5803,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "はで",
     letterOrder: 26,
     letter: "は",
-    type: "形动",
+    type: "形動",
     meaning: "鲜艳、华美；铺张、显眼"
   },
   {
@@ -5909,9 +5909,9 @@ const n4WordsZhCN: WordData[] = [
     wordId: 657,
     words: "ばらばら",
     pron: "ばらばら",
-    letterOrder: 62,
-    letter: "ば",
-    type: "副，形动",
+    letterOrder: 26,
+    letter: "は",
+    type: "副，形動",
     meaning: "（雨点等）连续降落声；支离破碎"
   },
   {
@@ -5972,8 +5972,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 664,
     words: "番号",
     pron: "ばんごう",
-    letterOrder: 62,
-    letter: "ば",
+    letterOrder: 26,
+    letter: "は",
     type: "名",
     meaning: "号码"
   },
@@ -5981,8 +5981,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 665,
     words: "万歳",
     pron: "ばんざい",
-    letterOrder: 62,
-    letter: "ば",
+    letterOrder: 26,
+    letter: "は",
     type: "名，サ変",
     meaning: "万岁；可喜、可贺；无可奈何"
   },
@@ -6055,7 +6055,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "ひさしぶり",
     letterOrder: 27,
     letter: "ひ",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "（隔了）好久"
   },
   {
@@ -6071,8 +6071,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 675,
     words: "びっくり",
     pron: "びっくり",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "副，サ変",
     meaning: "吃惊"
   },
@@ -6083,7 +6083,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 27,
     letter: "ひ",
     type: "名",
-    meaning: "（记载文件等制成、提出的）年月日、日期"
+    meaning: "（记载档等制成、提出的）年月日、日期"
   },
   {
     wordId: 677,
@@ -6098,9 +6098,9 @@ const n4WordsZhCN: WordData[] = [
     wordId: 678,
     words: "ぴったり",
     pron: "ぴったり",
-    letterOrder: 68,
-    letter: "ぴ",
-    type: "副，形动",
+    letterOrder: 27,
+    letter: "ひ",
+    type: "副，形動",
     meaning: "紧紧地；恰好、正合适；说中、猜中"
   },
   {
@@ -6145,7 +6145,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "ひま",
     letterOrder: 27,
     letter: "ひ",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "时间；闲暇、闲工夫；休假；解雇；离婚"
   },
   {
@@ -6179,8 +6179,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 687,
     words: "病院",
     pron: "びょういん",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "名",
     meaning: "医院"
   },
@@ -6188,8 +6188,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 688,
     words: "病気",
     pron: "びょうき",
-    letterOrder: 63,
-    letter: "び",
+    letterOrder: 27,
+    letter: "ひ",
     type: "名",
     meaning: "病；老毛病、恶习"
   },
@@ -6242,9 +6242,9 @@ const n4WordsZhCN: WordData[] = [
     wordId: 694,
     words: "貧乏",
     pron: "びんぼう",
-    letterOrder: 63,
-    letter: "び",
-    type: "名，形动，サ変",
+    letterOrder: 27,
+    letter: "ひ",
+    type: "名，形動，サ変",
     meaning: "贫穷、贫困"
   },
   {
@@ -6353,7 +6353,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 28,
     letter: "ふ",
     type: "自五",
-    meaning: "塞满、占满；关、闭；占着、用着"
+    meaning: "塞满、占满；关、闭；占著、用著"
   },
   {
     wordId: 707,
@@ -6379,7 +6379,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "ふしぎ",
     letterOrder: 28,
     letter: "ふ",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "不可思议、奇怪"
   },
   {
@@ -6422,8 +6422,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 714,
     words: "ぶつかる",
     pron: "ぶつかる",
-    letterOrder: 64,
-    letter: "ぶ",
+    letterOrder: 28,
+    letter: "ふ",
     type: "自五",
     meaning: "撞、碰；遇到、碰到；适逢、赶到一起；交涉、直接谈判；冲突、争吵"
   },
@@ -6487,17 +6487,17 @@ const n4WordsZhCN: WordData[] = [
     pron: "ふらふら",
     letterOrder: 28,
     letter: "ふ",
-    type: "副，形动，サ変",
-    meaning: "摇晃、晃荡；胡里胡涂；犹豫不定；累得东倒西歪的样子"
+    type: "副，形動，サ変",
+    meaning: "摇晃、晃荡；糊里糊涂；犹豫不定；累得东倒西歪的样子"
   },
   {
     wordId: 722,
     words: "ぶらぶら",
     pron: "ぶらぶら",
-    letterOrder: 64,
-    letter: "ぶ",
+    letterOrder: 28,
+    letter: "ふ",
     type: "副，サ変",
-    meaning: "晃荡、摇晃；溜达；赋闲、闲呆着"
+    meaning: "晃荡、摇晃；溜达；赋闲、闲呆著"
   },
   {
     wordId: 723,
@@ -6559,8 +6559,8 @@ const n4WordsZhCN: WordData[] = [
     pron: "へいき",
     letterOrder: 29,
     letter: "へ",
-    type: "名，形动",
-    meaning: "沉着、镇静；不在乎、无动于衷"
+    type: "名，形動",
+    meaning: "沉著、镇静；不在乎、无动于衷"
   },
   {
     wordId: 730,
@@ -6568,15 +6568,15 @@ const n4WordsZhCN: WordData[] = [
     pron: "へた",
     letterOrder: 29,
     letter: "へ",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "拙劣、不擅长；不慎重、马虎"
   },
   {
     wordId: 731,
     words: "別に",
     pron: "べつに",
-    letterOrder: 65,
-    letter: "べ",
+    letterOrder: 29,
+    letter: "へ",
     type: "副",
     meaning: "特别（下接否定式）"
   },
@@ -6613,7 +6613,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "へん",
     letterOrder: 29,
     letter: "へ",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "（突发的）事变；（音）将半音符号；异常；形迹可疑"
   },
   {
@@ -6629,9 +6629,9 @@ const n4WordsZhCN: WordData[] = [
     wordId: 737,
     words: "便利",
     pron: "べんり",
-    letterOrder: 65,
-    letter: "べ",
-    type: "名，形动",
+    letterOrder: 29,
+    letter: "へ",
+    type: "名，形動",
     meaning: "方便"
   },
   {
@@ -6656,8 +6656,8 @@ const n4WordsZhCN: WordData[] = [
     wordId: 740,
     words: "僕",
     pron: "ぼく",
-    letterOrder: 66,
-    letter: "ぼ",
+    letterOrder: 30,
+    letter: "ほ",
     type: "代",
     meaning: "（男子对晚辈或同辈的自称）我"
   },
@@ -6730,7 +6730,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "ほんき",
     letterOrder: 30,
     letter: "ほ",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "认真、正经"
   },
   {
@@ -6901,7 +6901,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "まっすぐ",
     letterOrder: 31,
     letter: "ま",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "笔直；照直；正直"
   },
   {
@@ -7027,7 +7027,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "まる",
     letterOrder: 31,
     letter: "ま",
-    type: "名，接头",
+    type: "名，接頭",
     meaning: "圆；打圈儿（表示正确）；全部；整、满；全部、整个儿"
   },
   {
@@ -7064,7 +7064,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 31,
     letter: "ま",
     type: "自五",
-    meaning: "转、旋转；绕着、沿着；巡视；（依次）传递；绕弯；迂回；（在体内）发作；（动作等）"
+    meaning: "转、旋转；绕著、沿著；巡视；（依次）传递；绕弯；迂回；（在体内）发作；（动作等）"
   },
   {
     wordId: 786,
@@ -7271,7 +7271,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 33,
     letter: "む",
     type: "自五",
-    meaning: "面向、朝着；对、向；往、去；趋向、接近；对抗、反抗"
+    meaning: "面向、朝著；对、向；往、去；趋向、接近；对抗、反抗"
   },
   {
     wordId: 809,
@@ -7469,7 +7469,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "自下一",
-    meaning: "燃烧、着火；火红；热情洋溢"
+    meaning: "燃烧、著火；火红；热情洋溢"
   },
   {
     wordId: 831,
@@ -7532,7 +7532,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 35,
     letter: "も",
     type: "他五",
-    meaning: "揉、搓、捻；按摩、推拿；争辩、争论"
+    meaning: "揉、搓、撚；按摩、推拿；争辩、争论"
   },
   {
     wordId: 838,
@@ -7649,7 +7649,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "自下一",
-    meaning: "燃烧、着火；烤制、烧成；晒、日光浴；变色；炽热；红霞；烧心"
+    meaning: "燃烧、著火；烤制、烧成；晒、日光浴；变色；炽热；红霞；烧心"
   },
   {
     wordId: 851,
@@ -7730,7 +7730,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 36,
     letter: "や",
     type: "自五",
-    meaning: "停止、结束；停、罢休"
+    meaning: "停止、结束；停、甘休"
   },
   {
     wordId: 860,
@@ -7783,7 +7783,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "ゆうめい",
     letterOrder: 37,
     letter: "ゆ",
-    type: "形动",
+    type: "形動",
     meaning: "有名、著名、闻名"
   },
   {
@@ -7792,7 +7792,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "ゆうり",
     letterOrder: 37,
     letter: "ゆ",
-    type: "形动",
+    type: "形動",
     meaning: "有利可图；有优势、有利"
   },
   {
@@ -7954,7 +7954,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "よけい",
     letterOrder: 38,
     letter: "よ",
-    type: "名，形动，副",
+    type: "名，形動，副",
     meaning: "多、更多；多余的；无用、白费；格外、越发"
   },
   {
@@ -8027,7 +8027,7 @@ const n4WordsZhCN: WordData[] = [
     letterOrder: 38,
     letter: "よ",
     type: "自五",
-    meaning: "接近；偏向；聚集；顺路到；重迭、增多；依靠、凭借"
+    meaning: "接近；偏向；聚集；顺路到；重叠、增多；依靠、凭借"
   },
   {
     wordId: 893,
@@ -8107,7 +8107,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "らく",
     letterOrder: 39,
     letter: "ら",
-    type: "名，形动",
+    type: "名，形動",
     meaning: "舒服、舒适、快乐；富裕；容易、轻松"
   },
   {
@@ -8125,7 +8125,7 @@ const n4WordsZhCN: WordData[] = [
     pron: "りっぱ",
     letterOrder: 40,
     letter: "り",
-    type: "形动",
+    type: "形動",
     meaning: "优秀、出色；崇高、（仪表）堂堂；正派、充足；漂亮、美观；伟大、了不起"
   },
   {
