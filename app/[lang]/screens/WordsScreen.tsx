@@ -2,7 +2,8 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import WordsScreenWithDrawer from './WordsScreenWithDrawer';
-import WordsScreenWithoutDrawer from './WordsScreenWithoutDrawer';
+import WordsScreenWithLodash from './WordsScreenWithLodash';
+
 
 // Define props interface
 interface WordsScreenProps {
@@ -26,7 +27,7 @@ interface WordsScreenProps {
 export default function WordsScreen(props: WordsScreenProps) {
   // Render platform-specific component
   return Platform.OS === 'android' ? (
-    <WordsScreenWithoutDrawer {...props} />
+    <WordsScreenWithLodash {...props} />
   ) : (
     <WordsScreenWithDrawer {...props} />
   );

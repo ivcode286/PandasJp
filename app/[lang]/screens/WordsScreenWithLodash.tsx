@@ -1,5 +1,5 @@
-// WordsScreenWithoutDrawer.tsx - Screen component for displaying words grouped by letter without drawer
-import React, { useEffect, useState } from 'react';
+// WordsScreenWithLodash.tsx - Screen component for displaying words grouped by letter with alphabet index bar
+import React, { useEffect, useState, useCallback, memo } from 'react';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import {
     StyleSheet,
@@ -9,7 +9,8 @@ import {
     StatusBar,
     TouchableOpacity,
     Platform,
-    Alert,
+    ScrollView,
+    Dimensions,
 } from 'react-native';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
@@ -17,6 +18,7 @@ import sectionListGetItemLayout from 'react-native-section-list-get-item-layout'
 import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
+import debounce from 'lodash.debounce';
 
 // Define Word interface
 interface Word {
@@ -45,6 +47,7 @@ export let globalSections: Section[] = [];
 const SECTION_HEADER_HEIGHT = 40;
 const ITEM_HEIGHT = 140;
 const ITEM_MARGIN = 8;
+const INDEX_BAR_WIDTH = 40;
 
 // Group words by letter
 const groupWordsByLetter = (words: Word[]): Section[] => {
@@ -87,8 +90,35 @@ export const scrollToSection = (title: string): void => {
     }
 };
 
-// WordsScreenWithoutDrawer component
-export default function WordsScreenWithoutDrawer({
+// Memoized Word Item component
+const WordItem = memo(({ item, onSpeak }: { item: Word; onSpeak: (pron: string) => void }) => {
+    return (
+        <View style={[styles.item, { pointerEvents: 'box-none' }]}>
+            <View style={styles.wordRow}>
+                <Text style={styles.wordId}>{item.wordId}</Text>
+                <Text style={styles.words}>{item.words}</Text>
+            </View>
+            <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
+            <View style={[styles.row, { pointerEvents: 'box-none' }]}>
+                <Text style={styles.reading}>{item.pron}</Text>
+                <TouchableOpacity
+                    onPress={() => {
+                        console.log(`Speaker button pressed for wordId: ${item.wordId}, pron: ${item.pron}, platform: ${Platform.OS}`);
+                        onSpeak(item.pron);
+                    }}
+                    style={[styles.speakerIcon, { zIndex: 12 }]}
+                    hitSlop={{ top: 30, bottom: 30, left: 30, right: 30 }}
+                    activeOpacity={0.7}
+                >
+                    <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
+                </TouchableOpacity>
+            </View>
+        </View>
+    );
+});
+
+// WordsScreenWithLodash component
+export default function WordsScreenWithLodash({
     level: staticLevel,
     sections: staticSections,
 }: {
@@ -101,6 +131,8 @@ export default function WordsScreenWithoutDrawer({
     const { t } = useTranslation(['words', 'common', 'home']);
     const { speak } = useTextToSpeech();
     const [sections, setSections] = useState<Section[]>(staticSections || []);
+    const [isSpeaking, setIsSpeaking] = useState(false);
+    const [retryCount, setRetryCount] = useState(0);
 
     // Determine level
     const level = staticLevel || paramLevel || '';
@@ -122,6 +154,52 @@ export default function WordsScreenWithoutDrawer({
         ? t(`home:menu.${levelToTranslationKey[levelString]}`, 'Words')
         : 'Words';
 
+    // Debounced speak function with retry logic
+    const debouncedSpeak = useCallback(
+        debounce((text: string) => {
+            if (isSpeaking && retryCount < 2) {
+                console.log(`TTS skipped: already speaking, text: ${text}, retryCount: ${retryCount}`);
+                setTimeout(() => {
+                    setRetryCount((prev) => prev + 1);
+                    debouncedSpeak(text);
+                }, 1000);
+                return;
+            }
+            if (isSpeaking && retryCount >= 2) {
+                console.log(`TTS max retries reached for text: ${text}`);
+                setRetryCount(0);
+                setIsSpeaking(false);
+                return;
+            }
+            setIsSpeaking(true);
+            setRetryCount(0);
+            console.log(`Debounced speak called with: ${text}`);
+            try {
+                speak(text);
+                console.log(`TTS initiated for: ${text}`);
+                // Simulate completion for non-Promise speak
+                setTimeout(() => {
+                    console.log(`TTS assumed completed for: ${text}`);
+                    setIsSpeaking(false);
+                }, 2000); // Adjust based on typical speech duration
+            } catch (error) {
+                console.error(`TTS error for text: ${text}`, error);
+                setIsSpeaking(false);
+                if (retryCount < 2) {
+                    console.log(`Retrying TTS for text: ${text}, retryCount: ${retryCount + 1}`);
+                    setTimeout(() => {
+                        setRetryCount((prev) => prev + 1);
+                        debouncedSpeak(text);
+                    }, 1000);
+                } else {
+                    console.log(`TTS max retries reached for text: ${text}`);
+                    setRetryCount(0);
+                }
+            }
+        }, 500, { leading: true, trailing: false }),
+        [speak, isSpeaking, retryCount]
+    );
+
     // Handle back navigation
     const handleBackPress = () => {
         if (Platform.OS === 'web' && !router.canGoBack()) {
@@ -133,7 +211,7 @@ export default function WordsScreenWithoutDrawer({
 
     // Load words data
     useEffect(() => {
-        console.log(`Current Level in WordsScreenWithoutDrawer: ${level}, Platform: ${Platform.OS}`);
+        console.log(`Current Level in WordsScreenWithLodash: ${level}, Platform: ${Platform.OS}`);
         if (!staticSections) {
             const loadWords = () => {
                 if (!level || typeof level !== 'string') {
@@ -173,6 +251,9 @@ export default function WordsScreenWithoutDrawer({
         }
     }, [level, t, staticSections]);
 
+    // Get alphabet index items
+    const indexItems = sections.map((section) => section.title);
+
     // Render component
     return (
         <SafeAreaProvider>
@@ -190,50 +271,48 @@ export default function WordsScreenWithoutDrawer({
 
                 <View style={styles.contentWrapper}>
                     {sections.length === 0 ? (
-                        <Text style={styles.errorText}>No data available for level: {levelString || 'undefined'}</Text>
+                        <Text style={styles.errorText}>
+                            {t('common:noData', { level: levelString || 'undefined' })}
+                        </Text>
                     ) : (
-                        <SectionList<Word>
-                            ref={sectionListRef}
-                            sections={sections}
-                            keyExtractor={(item, index) => item.wordId + index.toString()}
-                            renderItem={({ item }) => (
-                                <View style={[styles.item, { pointerEvents: 'box-none' }]}>
-                                    <View style={styles.wordRow}>
-                                        <Text style={styles.wordId}>{item.wordId}</Text>
-                                        <Text style={styles.words}>{item.words}</Text>
+                        <>
+                            <SectionList<Word>
+                                ref={sectionListRef}
+                                sections={sections}
+                                keyExtractor={(item, index) => item.wordId + index.toString()}
+                                renderItem={({ item }) => (
+                                    <WordItem item={item} onSpeak={debouncedSpeak} />
+                                )}
+                                renderSectionHeader={({ section: { title } }) => (
+                                    <View style={styles.headerContainer}>
+                                        <Text style={styles.sectionHeader}>{title || 'No Header'}</Text>
                                     </View>
-                                    <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
-                                    <View style={[styles.row, { pointerEvents: 'box-none' }]}>
-                                        <Text style={styles.reading}>{item.pron}</Text>
-                                        <TouchableOpacity
-                                            onPress={() => {
-                                                console.log(`Speaker button pressed for wordId: ${item.wordId}, pron: ${item.pron}`);
-                                                Alert.alert(
-                                                    'Speaker Icon Pressed',
-                                                    `wordId: ${item.wordId}\nPron: ${item.pron}`,
-                                                    [{ text: 'OK' }],
-                                                );
-                                                speak(item.pron);
-                                            }}
-                                            style={[styles.speakerIcon, Platform.OS === 'web' && { pointerEvents: 'auto' }]}
-                                            hitSlop={{ top: 25, bottom: 25, left: 25, right: 25 }}
-                                            activeOpacity={0.7}
-                                        >
-                                            <IoniconsWeb name="volume-high" size={24} color="#ffcc00" />
-                                        </TouchableOpacity>
-                                    </View>
-                                </View>
-                            )}
-                            renderSectionHeader={({ section: { title } }) => (
-                                <View style={styles.headerContainer}>
-                                    <Text style={styles.sectionHeader}>{title || 'No Header'}</Text>
-                                </View>
-                            )}
-                            stickySectionHeadersEnabled={false}
-                            getItemLayout={getItemLayout}
-                            contentContainerStyle={styles.sectionListContent}
-                            style={styles.sectionList}
-                        />
+                                )}
+                                stickySectionHeadersEnabled={false}
+                                //@ts-ignore
+                                getItemLayout={getItemLayout}
+                                contentContainerStyle={styles.sectionListContent}
+                                style={styles.sectionList}
+                                extraData={sections}
+                                initialNumToRender={200} // Increased for large dataset
+                                maxToRenderPerBatch={100} // Increased batch size
+                                windowSize={61} // Increased render window
+                                removeClippedSubviews={false} // Ensure touch stability
+                                onEndReached={() => console.log('Reached end of list')}
+                                onEndReachedThreshold={0.5}
+                            />
+                            <ScrollView style={styles.indexBar} contentContainerStyle={styles.indexBarContent}>
+                                {indexItems.map((letter) => (
+                                    <TouchableOpacity
+                                        key={letter}
+                                        style={styles.indexItem}
+                                        onPress={() => scrollToSection(letter)}
+                                    >
+                                        <Text style={styles.indexLetter}>{letter}</Text>
+                                    </TouchableOpacity>
+                                ))}
+                            </ScrollView>
+                        </>
                     )}
                 </View>
             </SafeAreaView>
@@ -270,16 +349,39 @@ const styles = StyleSheet.create({
     },
     contentWrapper: {
         flex: 1,
+        position: 'relative',
     },
     sectionList: {
         flex: 1,
+        marginRight: INDEX_BAR_WIDTH,
     },
     sectionListContent: {
         paddingBottom: 80,
         backgroundColor: '#121212',
     },
-    item: {
+    indexBar: {
+        position: 'absolute',
+        right: 0,
+        top: 0,
+        width: INDEX_BAR_WIDTH,
+        height: '100%',
         backgroundColor: '#1e1e1e',
+    },
+    indexBarContent: {
+        alignItems: 'center',
+        paddingVertical: 10,
+    },
+    indexItem: {
+        paddingVertical: 5,
+        paddingHorizontal: 10,
+    },
+    indexLetter: {
+        fontSize: 16,
+        color: '#ffcc00',
+        fontWeight: 'bold',
+    },
+    item: {
+        backgroundColor: 'rgba(30, 30, 30, 1)',
         paddingVertical: 16,
         paddingHorizontal: 12,
         height: ITEM_HEIGHT,
@@ -334,7 +436,7 @@ const styles = StyleSheet.create({
     },
     speakerIcon: {
         padding: 10,
-        zIndex: 11,
+        zIndex: 12,
     },
     errorText: {
         color: '#ff5555',
