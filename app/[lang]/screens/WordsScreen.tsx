@@ -29,6 +29,7 @@ export default function WordsScreen(props: WordsScreenProps) {
   return Platform.OS === 'android' ? (
     <WordsScreenWithLodash {...props} />
   ) : (
-    <WordsScreenWithDrawer {...props} />
+    // <WordsScreenWithDrawer {...props} />
+     <WordsScreenWithLodash {...props} />
   );
 }

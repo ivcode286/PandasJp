@@ -28,7 +28,6 @@ interface Word {
     words: string;
     pron: string;
     meaning: string;
-    meaning_zh?: string;
 }
 
 // Define Section interface
@@ -98,7 +97,7 @@ const WordItem = memo(({ item, onSpeak }: { item: Word; onSpeak: (pron: string) 
                 <Text style={styles.wordId}>{item.wordId}</Text>
                 <Text style={styles.words}>{item.words}</Text>
             </View>
-            <Text style={styles.meaning}>{item.meaning_zh || 'No Translation'}</Text>
+            <Text style={styles.meaning}>{item.meaning}</Text>
             <View style={[styles.row, { pointerEvents: 'box-none' }]}>
                 <Text style={styles.reading}>{item.pron}</Text>
                 <TouchableOpacity
@@ -237,11 +236,7 @@ export default function WordsScreenWithLodash({
                     setSections([]);
                     return;
                 }
-                const transformedWords = words.map((word) => ({
-                    ...word,
-                    meaning_zh: word.meaning,
-                }));
-                const groupedSections = groupWordsByLetter(transformedWords);
+                const groupedSections = groupWordsByLetter(words);
                 setSections(groupedSections);
                 globalSections = groupedSections;
             };
@@ -407,9 +402,7 @@ const styles = StyleSheet.create({
     wordId: {
         fontSize: 16,
         color: '#b0b0b0',
-        marginRight: 8,
-        textAlign: 'right',
-        width: 40,
+        marginRight: 4,
     },
     words: {
         fontSize: 22,
