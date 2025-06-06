@@ -213,7 +213,7 @@ export default function HomeScreen() {
             </View>
           </View>
 
-          <Text style={styles.introText}>{isWeb ? t('intro') : t('intro_mobile')}</Text>
+          {isWeb && <Text style={styles.introText}>{t('intro')}</Text>}  
 
           <Text style={styles.n5Header}>{t('n5title')}</Text>
 
@@ -288,7 +288,7 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   header: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#ffffff',
     textAlign: 'center',

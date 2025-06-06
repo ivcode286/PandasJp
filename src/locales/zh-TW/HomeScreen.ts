@@ -9,7 +9,6 @@ const homeZhTW = {
     '熊貓日語學習(PandasJP)提供免費日語N5-N1資源，含平假名、文法、單詞與漢字，助您快速學日語！立即體驗！', // Refined to 60 chars, includes PandasJP, adds CTA
   intro:
     '歡迎體驗熊貓日語學習(PandasJP)！免費提供JLPT N5-N1資源，涵蓋平假名、片假名、文法、單詞及漢字，助您從入門到精通日語。立即開始學習！', // Added PandasJP, strengthened CTA
-  intro_mobile: '熊貓日語學習 - 免費日語N5-N1',
   app_name: '熊貓日語學習APP',
   language: {
     traditional_chinese: '繁',
