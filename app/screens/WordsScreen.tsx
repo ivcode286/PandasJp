@@ -1,6 +1,5 @@
 // WordsScreen.tsx - Screen component for displaying words grouped by letter with alphabet index bar
 import React, { useEffect, useState, useCallback, memo } from 'react';
-import { useLocalSearchParams } from 'expo-router';
 import {
   StyleSheet,
   SectionList,
@@ -17,6 +16,12 @@ import { LEVELS } from '@/src/utils/constants';
 import { IoniconsWeb } from '@/components/ui/IoniconsWeb';
 import useTextToSpeech from '@/hooks/useTextToSpeech';
 import _ from 'lodash';
+
+// Define Props type
+type WordsScreenProps = {
+  level: string;
+  lang: string;
+};
 
 // Define Word interface
 interface Word {
@@ -38,10 +43,8 @@ interface Section {
 
 // Create ref for SectionList
 export const sectionListRef = React.createRef<SectionList<Word>>();
-// Global sections array
 export let globalSections: Section[] = [];
 
-// Constants for layout
 const SECTION_HEADER_HEIGHT = 40;
 const ITEM_HEIGHT = 140;
 const ITEM_MARGIN = 8;
@@ -49,17 +52,12 @@ const INDEX_BAR_WIDTH = 40;
 
 // Group words by letter using lodash
 const groupWordsByLetter = (words: Word[]): Section[] => {
-  // Group words by letter
   const groups = _.groupBy(words, 'letter');
-
-  // Transform groups into sorted sections
   const sortedGroups = _.map(groups, (wordGroup, letter) => ({
     title: letter,
-    data: _.sortBy(wordGroup, 'wordId'), // Sort words by wordId
-    letterOrder: wordGroup[0].letterOrder, // Use letterOrder from first word
+    data: _.sortBy(wordGroup, 'wordId'),
+    letterOrder: wordGroup[0].letterOrder,
   }));
-
-  // Sort sections by letterOrder
   return _.sortBy(sortedGroups, 'letterOrder');
 };
 
@@ -103,17 +101,12 @@ const WordItem = memo(({ item, onSpeak }: { item: Word; onSpeak: (pron: string) 
 });
 
 // WordsScreen component
-export default function WordsScreen() {
+export default function WordsScreen({ level = 'n5', lang = 'zh' }: WordsScreenProps) {
   // Hooks
-  const { level: paramLevel, lang } = useLocalSearchParams();
   const { t } = useTranslation(['words', 'common']);
   const { speak } = useTextToSpeech();
   const [sections, setSections] = useState<Section[]>([]);
   const [isSpeaking, setIsSpeaking] = useState(false);
-
-  // Determine level
-  const level = paramLevel || '';
-  const levelString = Array.isArray(level) ? level[0] : level;
 
   // Debounced speak function
   const debouncedSpeak = useCallback(
@@ -126,7 +119,6 @@ export default function WordsScreen() {
       console.log(`Debounced speak called with: ${text}`);
       try {
         speak(text);
-        // Simulate completion for non-Promise speak
         setTimeout(() => {
           setIsSpeaking(false);
         }, 2000); // Adjust based on typical speech duration
@@ -140,12 +132,12 @@ export default function WordsScreen() {
 
   // Load words data
   useEffect(() => {
-    console.log(`Current Level: ${levelString}`);
+    console.log(`Current Level: ${level}`);
     const loadWords = () => {
       let key: string;
-      if (levelString === LEVELS.N5) {
+      if (level === LEVELS.N5) {
         key = 'n5';
-      } else if (levelString === LEVELS.N5_KANJI) {
+      } else if (level === LEVELS.N5_KANJI) {
         key = 'n5_kanji';
       } else {
         key = 'n4n3';
@@ -160,7 +152,7 @@ export default function WordsScreen() {
 
       const transformedWords = words.map((word) => ({
         ...word,
-        meaning_zh: word.meaning, // Directly use meaning
+        meaning_zh: word.meaning,
       }));
 
       const groupedSections = groupWordsByLetter(transformedWords);
@@ -169,7 +161,7 @@ export default function WordsScreen() {
     };
 
     loadWords();
-  }, [levelString, t]);
+  }, [level, t]);
 
   // Get alphabet index items
   const indexItems = sections.map((section) => section.title);
