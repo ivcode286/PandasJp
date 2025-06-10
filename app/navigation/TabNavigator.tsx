@@ -177,14 +177,14 @@ export default function MyTabs() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color || 'white'} />,
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="Words"
         component={WordsNavigator}
         options={{
           title: 'Words',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="character.square.fill" color={color} />,
         }}
-      />
+      /> */}
       <Tabs.Screen
         name="Story"
         component={TabStoryStack}
