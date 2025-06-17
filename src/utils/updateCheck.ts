@@ -5,7 +5,7 @@ import semver from 'semver';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/%E7%86%8A%E8%B2%93%E6%97%A5%E8%AA%9E%E5%AD%B8%E7%BF%92/id6743336983';
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.yourapp'; // 需替換為實際的 Google Play URL
-const DEFAULT_VERSION = '1.3.2';
+const DEFAULT_VERSION = '1.3.3';
 const STOP_UPDATE_VERSION = '0.0.0';
 const TEMP_STOP_VERSION = '1.2.3';
 let hasChecked = false; // Temporary flag, valid only for the current app lifecycle
