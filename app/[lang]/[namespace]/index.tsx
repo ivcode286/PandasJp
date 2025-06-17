@@ -1,125 +1,142 @@
 // app/[lang]/[namespace]/index.tsx      storyMenu
-import React from 'react';
-import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { Link, useLocalSearchParams } from 'expo-router';
+import React, { useEffect } from 'react';
+import { Stack, useLocalSearchParams, useRouter, usePathname } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { getImage } from '../../../src/utils/imageLoader';
-import { COVERPAGE_CARD_WIDTH } from '@/src/utils/constants';
+import i18n from '@/src/locales/i18n';
+import HeaderBackButton from '@/components/HeaderBackButton';
+import { Platform } from 'react-native';
 
-// Define props interface
-interface ContentMenuProps {
-  lang?: string;
-  namespace?: 'story' | 'n5chat' | 'travelchat';
+const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'] as const;
+
+// Comment: Hard-coded base URL for development
+const BASE_URL = 'http://localhost:8081'; // Change to 'https://pandasapps.com' for production
+
+export async function generateStaticParams() {
+  return SUPPORTED_LANGUAGES.map((lang) => ({ lang }));
 }
 
-export default function ContentMenu({ lang: propLang, namespace: propNamespace }: ContentMenuProps) {
-  const params = useLocalSearchParams<{
-    lang?: string;
-    namespace?: 'story' | 'n5chat' | 'travelchat';
-  }>();
+export default function LangLayout() {
+  const { lang: rawLang } = useLocalSearchParams<{ lang: string }>();
+  const lang = rawLang && SUPPORTED_LANGUAGES.includes(rawLang.toLowerCase() as "zh-tw" | "zh-cn") ? rawLang.toLowerCase() : 'zh-tw';
+  const router = useRouter();
+  const pathname = usePathname();
+  const { t } = useTranslation('home');
 
-  // Use propNamespace if provided, otherwise fall back to params.namespace, then 'story'
-  const effectiveNamespace = propNamespace || params.namespace || 'story';
-  const effectiveLang = propLang || params.lang || 'zh-tw';
-  const langPrefix = `/${effectiveLang.toLowerCase()}`;
+  // Comment: Sync i18n language
+  useEffect(() => {
+    const normalized = lang === 'zh-cn' ? 'zh-CN' : 'zh-TW';
+    if (i18n.language !== normalized) {
+      console.log(`Changing i18n language to ${normalized}`);
+      i18n.changeLanguage(normalized);
+    }
+    // Comment: Handle invalid language
+    if (!SUPPORTED_LANGUAGES.includes(rawLang?.toLowerCase() as any)) {
+      router.replace(`/${lang}/(tabs)`);
+    }
+  }, [lang, rawLang, router]);
 
-  console.log(`Rendering ContentMenu for ${effectiveNamespace}`);
+  // Comment: Dynamic headerLeft for web
+  const getHeaderLeft = () => {
+    if (Platform.OS === 'web' && !router.canGoBack()) {
+      const p = window.location.pathname.toLowerCase();
+      if (!p.includes('/(tabs)')) {
+        return () => (
+          <HeaderBackButton onPress={() => router.replace(`/${lang}/(tabs)`)} />
+        );
+      }
+    }
+    return () => <HeaderBackButton />;
+  };
 
-  const { t } = useTranslation(effectiveNamespace);
-  const itemsRaw = t('stories', { returnObjects: true });
-  const items = Array.isArray(itemsRaw)
-    ? (itemsRaw as Array<{ title: string; imageName: string }>)
-    : [];
+  // Comment: Generate canonical and hreflang URLs
+  const getCanonicalUrl = () => {
+    const relativePath = pathname.startsWith(`/${lang}`)
+      ? pathname.replace(`/${lang}`, '')
+      : pathname;
+    const canonicalPath = relativePath.includes('(tabs)') ? '' : relativePath;
+    return `${BASE_URL}/${lang}${canonicalPath}`;
+  };
 
-  console.log(`${effectiveNamespace} items:`, items);
-
-  if (!items.length) {
-    console.log(`No items available for ${effectiveNamespace}`);
-    return (
-      <View style={styles.container}>
-        <Text style={styles.errorText}>No {effectiveNamespace} data available</Text>
-      </View>
-    );
-  }
+  // Comment: Universal header for SEO metadata
+  const getUniversalHeader = () => {
+    if (Platform.OS === 'web') {
+      const canonicalUrl = getCanonicalUrl();
+      const zhTwUrl = canonicalUrl.replace(`/${lang}/`, '/zh-tw/');
+      const zhCnUrl = canonicalUrl.replace(`/${lang}/`, '/zh-cn/');
+      return () => (
+        <>
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href={canonicalUrl} />
+          <link rel="alternate" hrefLang="zh-Hant" href={zhTwUrl} />
+          <link rel="alternate" hrefLang="zh-Hans" href={zhCnUrl} />
+          <link rel="alternate" hrefLang="x-default" href={zhTwUrl} />
+        </>
+      );
+    }
+    return undefined;
+  };
 
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={items}
-        keyExtractor={(item) => item.imageName || `${effectiveNamespace}-${Math.random()}`}
-        renderItem={({ item }) => (
-          item.imageName ? (
-            <Link
-            //@ts-ignore
-              href={`${langPrefix}/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`}
-              asChild
-            >
-              <TouchableOpacity
-                style={styles.cardContainer}
-                onPress={() =>
-                  console.log(
-                    `Navigating to ${langPrefix}/${effectiveNamespace}/${item.imageName.replace('.jpg', '')}`
-                  )
-                }
-              >
-                <Image source={getImage(item.imageName)} style={styles.coverImage} />
-                <View style={styles.textContainer}>
-                  <Text style={styles.itemText}>{item.title}</Text>
-                </View>
-              </TouchableOpacity>
-            </Link>
-          ) : (
-            <Text style={styles.errorText}>Invalid item: {item.title || 'Unknown'}</Text>
-          )
-        )}
+    <Stack
+      screenOptions={{
+        headerStyle: { backgroundColor: '#121212' },
+        headerTintColor: '#ffffff',
+        headerLeft: getHeaderLeft(),
+        header: getUniversalHeader(),
+      }}
+    >
+      <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />
+      <Stack.Screen name="phonetics" options={{ headerTitle: t('menu.phonetics') }} />
+      <Stack.Screen name="hiragana" options={{ headerTitle: t('menu.hiragana') }} />
+      <Stack.Screen name="katakana" options={{ headerTitle: t('menu.katakana') }} />
+      <Stack.Screen name="n5-concepts" options={{ headerTitle: t('menu.n5_concepts') }} />
+      <Stack.Screen name="grammar-concepts" options={{ headerTitle: t('menu.grammar_concepts') }} />
+      <Stack.Screen
+        name="grammar"
+        options={({ route }) => {
+          const level =
+            typeof route.params === 'object' && 'level' in route.params
+              ? String(route.params.level)
+              : undefined;
+          const levelToTranslationKey: { [key: string]: string } = {
+            'n5-basic-grammar': 'n5_basic_grammar',
+            'n5-advance-grammar': 'n5_advance_grammar',
+            'n4-basic-grammar': 'n4_basic_grammar',
+            'n4-advance-grammar': 'n4_advance_grammar',
+            'n3-basic-grammar': 'n3_basic_grammar',
+            'n3-advance-grammar': 'n3_advance_grammar',
+            'n2-basic-grammar': 'n2_basic_grammar',
+            'n2-advance-grammar': 'n2_advance_grammar',
+            'n1-basic-one-grammar': 'n1_basic_one_grammar',
+            'n1-basic-two-grammar': 'n1_basic_two_grammar',
+            'n1-advance-one-grammar': 'n1_advance_one_grammar',
+            'n1-advance-two-grammar': 'n1_advance_two_grammar',
+          };
+          const headerTitle = level && levelToTranslationKey[level]
+            ? t(`menu.${levelToTranslationKey[level]}`, 'Grammar')
+            : 'Grammar';
+          return {
+            headerShown: true,
+            headerTitle,
+          };
+        }}
       />
-    </View>
+      <Stack.Screen name="words" options={{ headerShown: false }} />
+      <Stack.Screen name="privacy-policy" options={{ headerTitle: 'Privacy Policy' }} />
+      <Stack.Screen
+        name="[namespace]"
+        options={({ route }) => {
+          const namespace =
+            typeof route.params === 'object' && 'namespace' in route.params
+              ? String(route.params.namespace)
+              : undefined;
+          return {
+            headerShown: namespace === 'travelchat' ? true : false,
+            headerTitle: t('headerTitle.travelMenu'),
+          };
+        }}
+      />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    </Stack>
   );
 }
-
-// Styles remain unchanged
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#121212',
-    padding: 10,
-    paddingBottom: 80,
-    minHeight: '100%',
-  },
-  cardContainer: {
-    width: COVERPAGE_CARD_WIDTH,
-    alignSelf: 'center',
-    backgroundColor: '#ffffff',
-    borderRadius: 12,
-    marginVertical: 10,
-    overflow: 'hidden',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-    elevation: 3,
-  },
-  coverImage: {
-    width: '100%',
-    resizeMode: 'cover',
-    height: 350,
-  },
-  textContainer: {
-    padding: 15,
-    alignItems: 'center',
-  },
-  itemText: {
-    fontSize: 18,
-    fontWeight: '500',
-    color: '#333',
-    textAlign: 'center',
-    flexWrap: 'wrap',
-    maxWidth: '90%',
-  },
-  errorText: {
-    fontSize: 18,
-    color: '#ff5555',
-    textAlign: 'center',
-    marginVertical: 10,
-  },
-});

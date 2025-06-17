@@ -1,6 +1,6 @@
 // app/_layout.tsx
-import React, { useEffect } from 'react';
-import { Slot, Redirect } from 'expo-router';
+import React, { useEffect, useState } from 'react';
+import { Slot } from 'expo-router';
 import {
   GestureHandlerRootView,
   PanGestureHandler,
@@ -14,6 +14,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const LANGUAGE_KEY = 'app_language';
 const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'];
+
+// Comment: Hard-coded base URL for development
+const BASE_URL = 'http://localhost:8081'; // Change to 'https://pandasapps.com' for production
 
 function GestureBackWrapper({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -47,18 +50,22 @@ function GestureBackWrapper({ children }: { children: React.ReactNode }) {
 export default function RootLayout() {
   const router = useRouter();
   const pathname = usePathname();
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Comment: Set mounted state after initial render
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const checkLanguageAndRedirect = async () => {
       const savedLang = await AsyncStorage.getItem(LANGUAGE_KEY);
       const defaultLang = savedLang && SUPPORTED_LANGUAGES.includes(savedLang) ? savedLang : 'zh-tw';
 
-      if (pathname === '/' || !SUPPORTED_LANGUAGES.some(lang => pathname.startsWith(`/${lang}`))) {
-        if (Platform.OS === 'web') {
-          window.location.replace(`https://pandasapps.com/${defaultLang}/(tabs)`);
-        } else {
-          router.replace(`/${defaultLang}/(tabs)`);
-        }
+      // Comment: Redirect only after layout is mounted
+      if (isMounted && (pathname === '/' || !SUPPORTED_LANGUAGES.some(lang => pathname.startsWith(`/${lang}`)))) {
+        console.log('Redirecting to:', `/${defaultLang}/(tabs)`);
+        router.replace(`/${defaultLang}/(tabs)`);
       }
 
       if (Platform.OS !== 'web') {
@@ -73,7 +80,7 @@ export default function RootLayout() {
     };
 
     checkLanguageAndRedirect();
-  }, [pathname, router]);
+  }, [pathname, router, isMounted]);
 
   const content = <Slot />;
   return (
