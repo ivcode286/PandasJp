@@ -1,4 +1,8 @@
 User-agent: *
+Disallow: /*
 Allow: /
-Disallow: /api/             # Prevent crawling of API endpoints
+Allow: /zh-tw/
+Allow: /zh-cn/
+Allow: /app-ads.txt
+Disallow: /api/
 Sitemap: https://pandasapps.com/sitemap.xml
