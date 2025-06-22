@@ -1,4 +1,4 @@
-// app/[lang]/[namespace]/index.tsx      storyMenu
+// app/[lang]/[namespace]/index.tsx
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Link, useLocalSearchParams } from 'expo-router';

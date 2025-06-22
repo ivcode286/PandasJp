@@ -26,7 +26,7 @@ type MenuItem = {
 type HomeContentProps = {
     lang: string;
     langPrefix: string;
-    isRoot?: boolean; // is homescreen or not  (/)
+    isRoot?: boolean;
 };
 
 export default function HomeContent({ lang, langPrefix, isRoot = false }: HomeContentProps) {
@@ -34,14 +34,12 @@ export default function HomeContent({ lang, langPrefix, isRoot = false }: HomeCo
     const router = useRouter();
     const isWeb = Platform.OS === 'web';
 
-    // Comment: Memoize getLangHref to avoid recreating function on every render
     const getLangHref = useCallback(
         (path: string): Href =>
             `${langPrefix}${path.startsWith('/') ? path : `/${path}`}` as Href,
         [langPrefix]
     );
 
-    // Comment: Process menu titles to remove text after ' - ' on mobile
     const getMenuTitle = (title: string) => {
         if (Platform.OS !== 'web') {
             return title.split(' - ')[0];
@@ -49,7 +47,6 @@ export default function HomeContent({ lang, langPrefix, isRoot = false }: HomeCo
         return title;
     };
 
-    // Comment: Define menu items (N5, N4, N3, N2, N1)
     const menuItems: MenuItem[] = [
         { title: getMenuTitle(t('menu.hiragana')), href: getLangHref('/hiragana') },
         { title: getMenuTitle(t('menu.katakana')), href: getLangHref('/katakana') },
@@ -127,21 +124,17 @@ export default function HomeContent({ lang, langPrefix, isRoot = false }: HomeCo
         },
     ];
 
-    // Comment: Debounced language change to prevent rapid toggling
     const changeLanguage = useCallback(
         debounce(async (lang: 'zh-TW' | 'zh-CN') => {
             console.log('Changing language to:', lang);
             await i18n.changeLanguage(lang);
             const newLangPath = lang === 'zh-CN' ? 'zh-cn' : 'zh-tw';
             await AsyncStorage.setItem(LANGUAGE_KEY, newLangPath);
-            if (isRoot) {
-                router.replace(`/${newLangPath}/(tabs)`);
-            }
+            router.replace(`/${newLangPath}/(tabs)`);
         }, 300),
-        [router, i18n, isRoot]
+        [router, i18n]
     );
 
-    // Comment: SEO metadata
     const canonicalUrl = isRoot ? 'https://pandasapps.com/' : `https://pandasapps.com/${lang}/`;
     const zhTwUrl = 'https://pandasapps.com/zh-tw/';
     const zhCnUrl = 'https://pandasapps.com/zh-cn/';

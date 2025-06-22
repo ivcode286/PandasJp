@@ -1,5 +1,5 @@
 // app/_layout.tsx
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Slot } from 'expo-router';
 import {
   GestureHandlerRootView,
@@ -7,9 +7,16 @@ import {
   State as GestureState,
 } from 'react-native-gesture-handler';
 import { View, Platform } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useRouter, usePathname } from 'expo-router';
 import { checkForUpdates } from '@/src/utils/updateCheck';
 import { handleIOSPrompt } from '@/src/utils/deviceCheck';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const LANGUAGE_KEY = 'app_language';
+const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'];
+
+// Comment: Hard-coded base URL for development
+const BASE_URL = 'http://localhost:8081'; // Change to 'https://pandasapps.com' for production
 
 function GestureBackWrapper({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -41,19 +48,39 @@ function GestureBackWrapper({ children }: { children: React.ReactNode }) {
 }
 
 export default function RootLayout() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Comment: Set mounted state after initial render
   useEffect(() => {
-    // Perform version check for native platforms
-    if (Platform.OS !== 'web') {
-      checkForUpdates()
-        .then(() => console.log('Version check completed'))
-        .catch((error) => console.error('Version check failed:', error));
-    } else {
-      // Perform iOS device check for web platform
-      handleIOSPrompt()
-        .then(() => console.log('iOS device check completed'))
-        .catch((error) => console.error('iOS device check failed:', error));
-    }
-  }, []); // Empty dependency array to run only once on mount
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const checkLanguageAndRedirect = async () => {
+      const savedLang = await AsyncStorage.getItem(LANGUAGE_KEY);
+      const defaultLang = savedLang && SUPPORTED_LANGUAGES.includes(savedLang) ? savedLang : 'zh-tw';
+
+      // Comment: Redirect only after layout is mounted
+      if (isMounted && (pathname === '/' || !SUPPORTED_LANGUAGES.some(lang => pathname.startsWith(`/${lang}`)))) {
+        console.log('Redirecting to:', `/${defaultLang}/(tabs)`);
+        router.replace(`/${defaultLang}/(tabs)`);
+      }
+
+      if (Platform.OS !== 'web') {
+        checkForUpdates()
+          .then(() => console.log('Version check completed'))
+          .catch((error) => console.error('Version check failed:', error));
+      } else {
+        handleIOSPrompt()
+          .then(() => console.log('iOS device check completed'))
+          .catch((error) => console.error('iOS device check failed:', error));
+      }
+    };
+
+    checkLanguageAndRedirect();
+  }, [pathname, router, isMounted]);
 
   const content = <Slot />;
   return (

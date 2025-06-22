@@ -8,9 +8,11 @@ import HomeContent from '@/components/HomeContent';
 const LANGUAGE_KEY = 'app_language';
 const SUPPORTED_LANGUAGES = ['zh-tw', 'zh-cn'];
 
+// Comment: Hard-coded base URL for development
+const BASE_URL = 'http://localhost:8081'; // Change to 'https://pandasapps.com' for production
+
 export default function RootIndex() {
   const { lang: rawLang } = useLocalSearchParams();
-  // Handle both string and string[] cases
   const lang = (
     typeof rawLang === 'string' 
       ? rawLang 
@@ -19,7 +21,6 @@ export default function RootIndex() {
         : 'zh-tw'
   ).toLowerCase();
 
-  // Validate language
   const validatedLang = SUPPORTED_LANGUAGES.includes(lang) ? lang : 'zh-tw';
 
   // Comment: Sync i18n language and AsyncStorage

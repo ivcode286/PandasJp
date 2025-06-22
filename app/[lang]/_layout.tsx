@@ -19,17 +19,16 @@ export default function LangLayout() {
   const pathname = usePathname();
   const { t } = useTranslation('home');
 
-  // Sync i18n language
+  // Comment: Sync i18n language
   useEffect(() => {
     const normalized = lang === 'zh-cn' ? 'zh-CN' : 'zh-TW';
     if (i18n.language !== normalized) {
       console.log(`Changing i18n language to ${normalized}`);
       i18n.changeLanguage(normalized);
     }
-    // Handle invalid language
+    // Comment: Handle invalid language
     if (!SUPPORTED_LANGUAGES.includes(rawLang?.toLowerCase() as any)) {
       if (Platform.OS === 'web') {
-        // Use 301 redirect
         window.location.replace(`https://pandasapps.com/zh-tw/(tabs)`);
       } else {
         router.replace('/zh-tw/(tabs)');
@@ -37,7 +36,7 @@ export default function LangLayout() {
     }
   }, [lang, rawLang, router]);
 
-  // Dynamic headerLeft for web
+  // Comment: Dynamic headerLeft for web
   const getHeaderLeft = () => {
     if (Platform.OS === 'web' && !router.canGoBack()) {
       const p = window.location.pathname.toLowerCase();
@@ -50,19 +49,16 @@ export default function LangLayout() {
     return () => <HeaderBackButton />;
   };
 
-  // Generate canonical and hreflang URLs
-  // Comment: Dynamically create canonical URL based on current pathname
+  // Comment: Generate canonical and hreflang URLs
   const getCanonicalUrl = () => {
-    // Remove leading '/[lang]' from pathname to get relative path
     const relativePath = pathname.startsWith(`/${lang}`)
       ? pathname.replace(`/${lang}`, '')
       : pathname;
-    // Handle '(tabs)' by mapping to root
     const canonicalPath = relativePath.includes('(tabs)') ? '' : relativePath;
     return `https://pandasapps.com/${lang}${canonicalPath}`;
   };
 
-  // Comment: Universal header for SEO metadata applied to all sub-routes
+  // Comment: Universal header for SEO metadata
   const getUniversalHeader = () => {
     if (Platform.OS === 'web') {
       const canonicalUrl = getCanonicalUrl();
@@ -87,7 +83,7 @@ export default function LangLayout() {
         headerStyle: { backgroundColor: '#121212' },
         headerTintColor: '#ffffff',
         headerLeft: getHeaderLeft(),
-        header: getUniversalHeader(), // Apply universal SEO header
+        header: getUniversalHeader(),
       }}
     >
       <Stack.Screen name="kana-comparison" options={{ headerTitle: t('menu.kana_comparison') }} />

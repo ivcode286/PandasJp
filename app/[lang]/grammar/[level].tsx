@@ -34,7 +34,7 @@ interface TransformedChapter {
 
 const SECTION_HEADER_HEIGHT = 70;
 const ITEM_MARGIN = 12;
-const ITEMS_BETWEEN_ADS = 6;              // 每隔幾個文法條目後插一則廣告
+const ITEMS_BETWEEN_ADS = 5;              // 每隔5個文法條目後插一則廣告
 const AD_PERIOD = ITEMS_BETWEEN_ADS + 1;  // grammar + ad 週期長度
 const ITEM_HEIGHT = 140 + ITEM_MARGIN;    // 一般文法條目的行高
 const AD_HEIGHT = 80;                     // 廣告條目的行高
@@ -93,7 +93,8 @@ export async function getStaticProps({
             analysis: ex.analysis || ''
           }))
         } as GrammarSection);
-        if ((idx + 1) % ITEMS_BETWEEN_ADS === 0) {
+        // 在第2個文法條目後（idx=1）和每隔5個文法條目後插入廣告
+        if (idx === 1 || (idx + 1) % ITEMS_BETWEEN_ADS === 0) {
           items.push({ ad: true });
         }
       });
@@ -148,7 +149,8 @@ export default function GrammarScreen({
                 analysis: ex.analysis || ''
               }))
             } as GrammarSection);
-            if ((idx + 1) % ITEMS_BETWEEN_ADS === 0) {
+            // 在第2個文法條目後（idx=1）和每隔5個文法條目後插入廣告
+            if (idx === 1 || (idx + 1) % ITEMS_BETWEEN_ADS === 0) {
               items.push({ ad: true });
             }
           });
